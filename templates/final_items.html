@@ -3,6 +3,10 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Spider</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main.css') }}"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
@@ -10,22 +14,28 @@
       <input type="text" name="t" placeholder="Search.." />
       <input type="submit" placeholder="submit" value="submit" />
     </form>
-    <img src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_name}}_hphover.png?v=5926546'>
+    <img
+      src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_name}}_hphover.png?v=5926546"
+    />
     <table>
       <tbody class="item-table">
-        {% for dict_item in data %} {% for item in dict_item['items'] %} {%set
-        img_name = item.key %} {% set time = item.time%}
         <tr>
-          <td>{{ time }}</td>
-          <td>
+          {% for dict_item in data %} {% for item in dict_item['final_items'] %}
+          {%set img_name = item.key %} {%set time = item.time%}
+          <td class="cell">
             <img
               src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
                 img_name
               }}_lg.png"
+              width="40"
+              height="32"
             />
+            <div class="overlay">{{time}}</div>
           </td>
+
+          {% endfor %}
         </tr>
-        {%endfor%} {% endfor %}
+        {%endfor%}
       </tbody>
     </table>
   </body>

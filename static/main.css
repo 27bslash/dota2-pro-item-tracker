@@ -1,3 +1,27 @@
-/* .item-table {
-  display: flex;
-} */
+body {
+  background-color: #fff;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  margin-top: 20px;
+}
+
+td {
+  font-size: 13px;
+  text-align: left;
+  height: 100px;
+  /* padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 5px;
+  padding-bottom: 5px; */
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+.cell {
+  min-height: 1px;
+  display: inline-block;
+}
