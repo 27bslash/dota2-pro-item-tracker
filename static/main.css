@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: rgb(41, 38, 38);
 }
 tr {
   display: table-row;
@@ -7,11 +7,14 @@ tr {
   border-color: inherit;
   margin-top: 20px;
 }
-
+th {
+  color: white;
+  font-size: 40px;
+}
 td {
   font-size: 13px;
   text-align: left;
-  height: 100px;
+  height: 150px;
   /* padding-left: 24px;
   padding-right: 24px;
   padding-top: 5px;
@@ -25,3 +28,11 @@ table {
   min-height: 1px;
   display: inline-block;
 }
+.overlay {
+  color: white;
+  background-color: black;
+  text-align: center;
+}
+/* .hidden { */
+  /* display: none; */
+/* } */
