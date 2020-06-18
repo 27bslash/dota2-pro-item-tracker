@@ -8,14 +8,21 @@ import time
 import string
 app = Flask(__name__)
 cache = Cache(config={
-    # 'CACHE_TYPE': 'NULL'
+    'CACHE_TYPE': 'simple'
 })
 cache.init_app(app)
 
 
 @app.route('/', methods=['GET'])
 def hello():
-    return render_template('index.html')
+    query = request.args.get('query')
+    print(query)
+    with open('hero_ids.json', 'r') as f:
+        data = json.load(f)
+        img_names = []
+        for i in data['heroes']:
+            img_names.append(switcher(i['name']))
+    return render_template('index.html', hero_imgs=img_names, links=data['heroes'])
 
 
 @app.route('/', methods=['POST'])
@@ -25,7 +32,7 @@ def post_req():
         vale = request.form.get('toggle_start')
         print(text, get_id(text))
         if get_id(text):
-            print('hero', get_id(text))
+            # print('hero', get_id(text))
             return redirect('/hero/'+text)
         else:
             print('invalid hero')
@@ -35,65 +42,109 @@ def post_req():
 @app.route('/hero/<hero_name>')
 @cache.cached(timeout=60)
 def show_items(hero_name):
-    print('g')
     do_everything(hero_name)
-    print('afsdg')
-    entries = []
     with open('opendota_output.json', 'r') as f:
         data = json.load(f)
-        hero_name = hero_name.replace(' ', '_')
-        hero_name = hero_name.lower()
-        print('show-items', hero_name)
-        for data_i in data:
-            entries.append(data_i['hero'])
-        return render_template('final_items.html', hero_name=hero_name, data=data, time=90)
+        h_name = clean_name(hero_name)
+        # print('show-items', hero_name, h_name)
+        return render_template('final_items.html', hero_img=h_name, hero_name=hero_name, data=data, time=90)
 
 
+@app.route('/hero/<hero_name>/starter_items')
+@cache.cached(timeout=60)
+def show_starter_items(hero_name):
+    # print('starter_naem', hero_name)
+    with open('opendota_output.json', 'r') as f:
+        data = json.load(f)
+        h_name = clean_name(hero_name)
+        # print('starter-items', h_name)
+        return render_template('starter_items.html', hero_img=h_name, hero_name=hero_name, data=data)
+
+
+@app.route('/hero/<hero_name>/starter_items', methods=['POST', 'GET'])
 @app.route('/hero/<hero_name>', methods=['POST', 'GET'])
 def redirect_page(hero_name):
     if request.method == 'POST':
         text = request.form.get('t')
         vlaue = request.form
-        print('id test', hero_name, get_id(text), False >= 0)
-        return redirect('/hero/'+text)
+        end = ''
+        # print('s', request.url, type(request.url))
+        if 'starter' in request.url:
+            end = '/starter_items'
+        if get_id(text):
+            # print('hero', get_id(text))
+            return redirect('/hero/'+text)
+        else:
+            # print('invalid hero')
+            return redirect('/hero/'+hero_name+end)
 
 
-@app.route('/test')
-def re():
-    return 'sdfakl'
+@app.route('/files/hero_ids')
+def returnJson():
+    with open('hero_ids.json', 'r') as f:
+        data = json.load(f)
+        return data
 
 
 def do_everything(hero_name):
     output = []
     amount = 10
-    start = time.time()
     asyncio.run(pro_request(hero_name, output, amount))
+    start = time.time()
     asyncio.run(main(get_urls(amount), hero_name))
-    delete_output()
     end = time.time()
+    delete_output()
     print("Took {} seconds to pull {} websites.".format(end - start, amount))
 
 
-def is_num(s):
-    try:
-        float(s)
-        return True
-    except ValueError:
-        return False
+def clean_name(h_name):
+    h_name = h_name.replace(' ', '_')
+    h_name = h_name.lower()
+    h_name = switcher(h_name)
+    # print('ty', h_name)
+    return h_name
+
+
+def switcher(h):
+    switch = {
+        'necrophos': 'necrolyte',
+        'clockwerk': 'rattletrap',
+        "nature's_prophet": 'furion',
+        'timbersaw': 'shredder',
+        'io': 'wisp',
+        'queen_of_pain': 'queenofpain',
+        'doom': 'doom_bringer',
+        'shadow_fiend': 'nevermore',
+        'wraith_king': 'skeleton_king',
+        'magnus': 'magnataur',
+        'underlord': 'abyssal_underlord',
+        'anti-mage': 'antimage',
+        'outworld_devourer': 'obsidian_destroyer',
+        'windranger': 'windrunner',
+        'zeus': 'zuus',
+        'vengeful_spirit': 'vengefulspirit'
+    }
+    # print(h, switch.get(h))
+    if switch.get(h):
+        return switch.get(h)
+    else:
+        return h
 
 
 async def request_shit(hero_name, output, amount):
     start = time.time()
-    hero_name = hero_name.title()
-    hero_name = hero_name.replace(' ', '%20')
+    hero_name = " ".join(w.capitalize() for w in hero_name.split())
+    # hero_name = hero_name.replace(' ', '%20')
+    print(hero_name)
+    if 'Anti' in hero_name:
+        hero_name = 'Anti-Mage'
+    if 'Queen' in hero_name:
+        hero_name = "Queen%20of%20Pain"
     url = 'http://www.dota2protracker.com/hero/'+hero_name
     async with aiohttp.ClientSession() as session:
         async with session.get(url=url) as response:
             req = await response.text()
             text = req
-            # f = open('test.html', 'w')
-            # f.write(text)
-            # f.close()
             selector = Selector(text=text)
             table = selector.xpath('//*[@class="display compact"]//tbody//tr')
             for row in table:
@@ -106,8 +157,7 @@ async def request_shit(hero_name, output, amount):
                 with open('test.json', 'w') as outfile:
                     json.dump(output, outfile)
             end = time.time()
-            print(end-start, 'seconds')
-            
+            print('protracker', end-start, 'seconds')
 
 
 async def pro_request(hero_name, output, amount):

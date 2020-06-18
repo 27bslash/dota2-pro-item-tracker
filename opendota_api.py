@@ -6,11 +6,7 @@ import datetime
 import traceback
 from collections import OrderedDict
 from operator import itemgetter
-# def get_hero_name(name):
-#     global hero_name
-#     hero_name = name
-#     print(hero_name)
-
+from app import switcher
 
 output = []
 
@@ -23,17 +19,22 @@ async def async_get(url, hero_name):
                 print("Successfully got url {}.".format(url))
                 with open('opendota_output.json', 'w') as outfile:
                     match_id = str(resp['match_id'])
+                    final_items = []
+                    backpack = []
+                    starting_items = []
+                    main_items = []
+                    bp_items = []
+                    purchase_log = []
                     for i in range(10):
                         # 10 players
                         p = resp['players'][i]
                         hero_id = p['hero_id']
+                        # print(hero_id)
                         if hero_id == get_id(hero_name):
+                            # print('id-check', hero_id, get_id(hero_name))
                             # check if one of the players matches search
                             purchase_log = p['purchase_log']
                             if purchase_log:
-                                final_items = []
-                                backpack = []
-                                starting_items = []
                                 for purchase in purchase_log:
                                     if purchase['time'] <= 0:
                                         starting_items.append(
@@ -118,11 +119,11 @@ def get_urls(amount):
 
 def get_id(name):
     if name:
+        name = name.lower()
+        name = name.replace(' ', '_')
         with open('hero_ids.json') as json_file:
             data = json.load(json_file)
             for i in range(len(data['heroes'])):
-                name = name.lower()
-                name = name.replace(' ', '_')
                 if name in data['heroes'][i]['name']:
                     return data['heroes'][i]['id']
             return False
