@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main.css') }}"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <form method="POST" action="">
+        <div class="search-container">
+          <input
+            id="search"
+            type="text"
+            name="t"
+            placeholder="Search.."
+            autocomplete="off"
+          />
+        </div>
+        <div class="suggestions">
+          <ul></ul>
+        </div>
+      </form>
+    </div>
+    {%block content%} {%endblock%}
+    <script src="{{ url_for('static', filename='autocomplete.js') }}"></script>
+  </body>
+</html>

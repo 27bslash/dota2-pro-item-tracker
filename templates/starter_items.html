@@ -1,48 +1,26 @@
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Spider</title>
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='main.css') }}"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body>
-    <form method="POST" action="">
-      <input type="text" name="t" placeholder="Search.." />
-      <input type="submit" placeholder="submit" value="submit" />
-    </form>
-    <img
-      src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
-    />
-    <a href="/hero/{{hero_name}}">
-      <input type="button" value="Final Items"
-    /></a>
-    <table class="hidden">
-      <tbody class="item-table">
-        <tr>
-          {% for dict_item in data %} {% set match_id = dict_item['id'] %} {%
-          for item in dict_item['starting_items'] %} {%set img_name = item.key
-          %}
-          <td colspan="6" class="cell">
-            <a
-              href="https://www.opendota.com/matches/{{match_id}}"
-              target="_blank"
-            >
-              <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+{%extends 'search.html'%} {%block content%}
+<img
+  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
+/>
+<a href="/hero/{{hero_name}}"> <input type="button" value="Final Items" /></a>
+<table class="hidden">
+  <tbody class="item-table">
+    <tr>
+      {% for dict_item in data %} {% set match_id = dict_item['id'] %} {% for
+      item in dict_item['starting_items'] %} {%set img_name = item.key %}
+      <td colspan="6" class="cell">
+        <a href="https://www.opendota.com/matches/{{match_id}}" target="_blank">
+          <img
+            src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
                 img_name
               }}_lg.png"
-                width="100"
-                height="80"
-            /></a>
-          </td>
-          {% endfor %}
-        </tr>
-        {%endfor%}
-      </tbody>
-    </table>
-  </body>
-</html>
+            width="100"
+            height="80"
+        /></a>
+      </td>
+      {% endfor %}
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+{%endblock%}
