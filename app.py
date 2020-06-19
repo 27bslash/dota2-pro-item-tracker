@@ -133,9 +133,9 @@ def switcher(h):
 
 async def request_shit(hero_name, output, amount):
     start = time.time()
+    hero_name = hero_name.replace('_', ' ')
     hero_name = " ".join(w.capitalize() for w in hero_name.split())
-    # hero_name = hero_name.replace(' ', '%20')
-    print(hero_name)
+    print('initial name', hero_name)
     if 'Anti' in hero_name:
         hero_name = 'Anti-Mage'
     if 'Queen' in hero_name:

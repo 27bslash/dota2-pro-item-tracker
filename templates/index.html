@@ -12,26 +12,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.26/jquery.autocomplete.min.js"></script>
   </head>
   <body>
-    <form method="POST" action="">
-      <input
-        id="search"
-        type="text"
-        list="hero-suggestions"
-        data-list="myList"
-        name="t"
-        placeholder="Search.."
-        autocomplete="off"
-      />
-      <div class="suggestions">
-        <h1 style="color: white;"></h1>
-      </div>
-      <input type="submit" placeholder="submit" value="submit" />
-    </form>
-    <datalist id="hero-suggestions" style="height: 5.1em;">
-      {%for link in links%}
-      <option>{{link['name']}}</option>
-      {%endfor%}
-    </datalist>
+    <div class="form-container">
+      <form method="POST" action="">
+        <div class="search-container">
+          <input
+            id="search"
+            type="text"
+            name="t"
+            placeholder="Search.."
+            autocomplete="off"
+          />
+        </div>
+        <div class="suggestions">
+          <ul></ul>
+        </div>
+      </form>
+    </div>
     <div class="hero-grid">
       {%for i in range(119)%}
       <a href="/hero/{{links[i]['name']}}">

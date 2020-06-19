@@ -1,6 +1,8 @@
 body {
   background-color: rgb(41, 38, 38);
+  font-family: monospace;
 }
+
 tr {
   display: table-row;
   vertical-align: inherit;
@@ -36,6 +38,49 @@ table {
 /* .hidden { */
 /* display: none; */
 /* } */
+ul {
+  margin: 0;
+  padding: 0;
+}
 .suggestions {
-  background-color: rgb(255, 41, 41);
+  color: white;
+  cursor: pointer;
+}
+.hero-suggestion {
+  color: "green";
+  text-transform: capitalize;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.hero-suggestion:hover {
+  background-color: rgb(53, 53, 53);
+}
+.form-container {
+  justify-content: center;
+  width: 300px;
+}
+#search {
+  background-color: rgb(41, 38, 38);
+  color: white;
+  width: 300px;
+  height: 50px;
+  font-family: inherit;
+  border: 1px solid white;
+  padding: 15px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+#submit {
+  font-family: inherit;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  cursor: pointer;
+  height: 50px;
+  width: 100px;
+  border: none;
+}
+.search-container {
+  display: flex;
 }
