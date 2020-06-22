@@ -5,39 +5,68 @@
 <a href="/hero/{{hero_name}}/starter_items">
   <input type="button" value="Starter items"
 /></a>
-<table class="hidden">
-  <tbody class="item-table">
-    <tr>
-      {% for dict_item in data %} {% set match_id = dict_item['id'] %} {% for
-      item in dict_item['final_items'] %} {%set img_name = item.key %} {%set
-      time = item.time%}
-      <td colspan="6" class="cell">
-        <a href="https://www.opendota.com/matches/{{match_id}}" target="_blank">
+<table class="item-table">
+  {% for dict_item in data %}
+  <tbody class="item-table-body">
+    <tr class="items">
+      {% for item in dict_item['final_items'] %}
+
+      <td class="cell">
+        <a
+          href="https://www.opendota.com/matches/{{dict_item['id']}}"
+          target="_blank"
+        >
           <img
             src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-                img_name
+                item.key
               }}_lg.png"
             width="100"
             height="80"
         /></a>
-        <div class="overlay">{{time}}</div>
+        <div class="overlay">{{item.time}}</div>
       </td>
-      {% endfor %} {% for item in dict_item['backpack'] %} {%set img_name =
-      item.key %} {%set time = item.time%}
+      {% endfor %} {% for item in dict_item['backpack'] %}
       <td class="bp cell">
-        <a href="https://www.opendota.com/matches/{{match_id}}" target="_blank">
+        <a
+          href="https://www.opendota.com/matches/{{dict_item['id']}}"
+          target="_blank"
+        >
           <img
             src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-                img_name
+                item.key
               }}_lg.png"
             width="100"
             height="80"
         /></a>
-        <div class="overlay">{{time}}</div>
+        <div class="overlay">{{item.time}}</div>
       </td>
       {% endfor %}
     </tr>
-    {%endfor%}
+    <tr class="abilities">
+      <td>
+        <table class="ability-table">
+          <tbody>
+            <tr class="abilities">
+              {% for item in dict_item['abilities'] %}
+              <td>
+                <img
+                  class="ability"
+                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
+                  width="60"
+                  height="60"
+                  data-tooltip="{{item.key}}"
+                  title="{{item.key}}"
+                  onerror="this.onerror=null;this.src='https://www.opendota.com/assets/images/dota2/talent_tree.svg';"
+                />
+              </td>
+              {% endfor %}
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
   </tbody>
+  {%endfor%}
 </table>
+
 {%endblock%}

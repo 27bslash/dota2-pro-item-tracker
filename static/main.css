@@ -16,28 +16,32 @@ th {
 td {
   font-size: 13px;
   text-align: left;
-  height: 150px;
   /* padding-left: 24px;
   padding-right: 24px;
   padding-top: 5px;
   padding-bottom: 5px; */
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0px;
+  border-collapse: separate;
 }
+.item-table {
+  border-spacing: 0px 20px;
+}
+.item-table-body {
+  border-spacing: 0px 0px;
+}
+
 .cell {
-  min-height: 1px;
   display: inline-block;
+}
+.items {
+  margin-bottom: 100px;
 }
 .overlay {
   color: white;
   background-color: black;
   text-align: center;
 }
-/* .hidden { */
-/* display: none; */
-/* } */
 ul {
   margin: 0;
   padding: 0;
@@ -45,28 +49,48 @@ ul {
 .suggestions {
   color: white;
   cursor: pointer;
+  position: absolute;
+  background-color: rgb(19, 18, 18);
+  width: 300px;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
 }
 .hero-suggestion {
-  color: "green";
   text-transform: capitalize;
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 15px;
 }
 .hero-suggestion:hover {
   background-color: rgb(53, 53, 53);
 }
 .form-container {
   justify-content: center;
-  width: 300px;
+  width: 100%;
+  background-color: rgb(19, 18, 18);
 }
 #search {
-  background-color: rgb(41, 38, 38);
+  background-color: inherit;
   color: white;
-  width: 300px;
+  width: 285px;
   height: 50px;
+  padding-left: 15px;
   font-family: inherit;
-  border: 1px solid white;
-  padding: 15px;
+  border: none;
+}
+#search:focus {
+  outline: none;
+}
+input:focus {
+  outline-offset: 0px;
+  outline: none;
+}
+input:not([type="image" i]) {
+  box-sizing: content-box;
+}
+input[type="text" i] {
+  padding: 0px;
 }
 a {
   color: white;
@@ -83,4 +107,28 @@ a {
 }
 .search-container {
   display: flex;
+}
+.grid-container {
+  width: 100%;
+  display: flex;
+}
+.hero-grid {
+  margin-left: 45px;
+}
+.hide {
+  display: none;
+}
+.right {
+  margin-left: 310px;
+}
+.ability-img {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.ability[title]:after {
+  content: attr(title);
+  position: absolute;
+  background-color: blue;
 }
