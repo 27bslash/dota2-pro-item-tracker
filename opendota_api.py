@@ -40,10 +40,17 @@ async def async_get(url, hero_name):
                                     rev, 6, p)
                                 bp_items = get_most_recent_items(
                                     rev, 4, p)
+                                if p['duration'] > 0:
+                                    p['duration'] = str(datetime.timedelta(
+                                        seconds=p['duration']))
+                                else:
+                                    p['duration'] = 0
                                 output.append(
-                                    {'hero': hero_name, 'duration': p['duration'], 'name': p['personaname'], 'role': p['lane'], 'win': p['win'], 'id': resp['match_id'],
+                                    {'hero': hero_name, 'duration': p['duration'], 'name': get_info('name', resp['match_id']), 'mmr': get_info('mmr', resp['match_id']),
+                                     'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'],
+                                     'role': p['lane'], 'win': p['win'], 'id': resp['match_id'],
                                      'starting_items': starting_items,
-                                     'final_items': main_items, 'backpack': bp_items,
+                                     'final_items': main_items, 'backpack': bp_items, 'item_neutral': get_item_name(p['item_neutral']),
                                         'abilities': get_ability_name(abilities), 'items': purchase_log})
                     json.dump(output, outfile, indent=4)
     except Exception as e:
@@ -53,6 +60,16 @@ async def async_get(url, hero_name):
 
 async def main(urls, hero_name):
     ret = await asyncio.gather(*[async_get(url, hero_name) for url in urls])
+
+
+def get_info(x, m_id):
+    output = []
+    with open('json_files/urls.json', 'r') as f:
+        data = json.load(f)
+        for i in data:
+            for j in i:
+                if str(m_id) in j['id']:
+                    return(j[x])
 
 
 def delete_output():

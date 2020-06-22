@@ -11,7 +11,8 @@ tr {
 }
 th {
   color: white;
-  font-size: 40px;
+  font-size: 20px;
+  text-align: left;
 }
 td {
   font-size: 13px;
@@ -21,16 +22,18 @@ td {
   padding-top: 5px;
   padding-bottom: 5px; */
 }
-table {
-  border-collapse: separate;
-}
 .item-table {
+  border-collapse: separate;
   border-spacing: 0px 20px;
 }
 .item-table-body {
   border-spacing: 0px 0px;
 }
-
+/* .item-table-body-0{
+  background-color: red;
+}.item-table-body-0{
+  background-color: red;
+} */
 .cell {
   display: inline-block;
 }
@@ -41,6 +44,8 @@ table {
   color: white;
   background-color: black;
   text-align: center;
+  position: relative;
+  top:-20%;
 }
 ul {
   margin: 0;
@@ -131,4 +136,8 @@ a {
   content: attr(title);
   position: absolute;
   background-color: blue;
+}
+.stats {
+  color: white;
+  padding: 10px;
 }

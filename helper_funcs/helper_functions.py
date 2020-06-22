@@ -4,6 +4,7 @@ from collections import OrderedDict
 from operator import itemgetter
 import datetime
 
+
 def sort_dict(items):
     newlist = sorted(
         items, key=itemgetter('time'))
@@ -11,7 +12,6 @@ def sort_dict(items):
         if item['time'] > 0:
             item['time'] = str(datetime.timedelta(
                 seconds=item['time']))
-            item['time'] == ['time']
         else:
             item['time'] = 0
     return newlist
@@ -33,9 +33,6 @@ def get_most_recent_items(arr, l,  p):
                     output.append(
                         {'key': item, 'time': purchase['time']})
     return sort_dict(output)
-
-
-
 
 
 def delete_dupes(d):
@@ -92,6 +89,8 @@ def get_ability_name(arr):
 
 
 def get_item_name(item_id):
+    if item_id == None:
+        print(item_id)
     with open('json_files/items.json')as json_file:
         data = json.load(json_file)
         for item in data['items']:

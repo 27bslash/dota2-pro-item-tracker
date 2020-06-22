@@ -50,7 +50,6 @@ def show_items(hero_name):
     print(referralStr)
     if referralStr not in request.referrer:
         do_everything(hero_name)
-        # pass
     with open('json_files/opendota_output.json', 'r') as f:
         data = json.load(f)
         h_name = clean_name(hero_name)
@@ -76,7 +75,7 @@ def returnJson():
 
 def do_everything(hero_name):
     output = []
-    amount = 5
+    amount = 10
     asyncio.run(pro_request(hero_name, output, amount))
     start = time.time()
     asyncio.run(main(get_urls(amount), hero_name))
@@ -135,12 +134,15 @@ async def request_shit(hero_name, output, amount):
             text = req
             selector = Selector(text=text)
             table = selector.xpath('//*[@class="display compact"]//tbody//tr')
-            for row in table:
+            print(type(table), len(table))
+            for i in reversed(range(len(table))):
+                row = table[i]
                 match_id = row.css('a::attr(href)').re(r".*opendota.*")[0]
                 mmr = row.xpath('td')[4].css('::text').extract()[0]
-                if match_id and len(output) < amount:
+                name = row.xpath('td')[1].css('::text').extract()[1]
+                if match_id:
                     print(match_id, mmr)
-                    o = [{'id': match_id}, {'mmr': mmr}]
+                    o = [{'id': match_id, 'name': name, 'mmr': mmr}]
                     output.append(o)
                 with open('json_files/urls.json', 'w') as outfile:
                     json.dump(output, outfile)
