@@ -6,6 +6,7 @@ from opendota_api import *
 from parsel import Selector
 import time
 from operator import itemgetter
+from helper_funcs.helper_functions import *
 
 app = Flask(__name__)
 cache = Cache(config={
@@ -25,6 +26,7 @@ def hello():
             data['heroes'], key=itemgetter('name'))
         for i in d:
             img_names.append(switcher(i['name']))
+    # return render_template('index.html', hero_imgs=img_names, links=d)
     return render_template('index.html', hero_imgs=img_names, links=d)
 
 
@@ -47,8 +49,12 @@ def post_req():
 def show_items(hero_name):
     print('shw', hero_name, request.referrer)
     referralStr = hero_name+'/'+'start'
-    print(referralStr)
-    if referralStr not in request.referrer:
+    if request.referrer:
+        print(referralStr)
+        if referralStr not in request.referrer:
+            do_everything(hero_name)
+            pass
+    else:
         do_everything(hero_name)
     with open('json_files/opendota_output.json', 'r') as f:
         data = json.load(f)
@@ -76,11 +82,11 @@ def returnJson():
 def do_everything(hero_name):
     output = []
     amount = 10
-    asyncio.run(pro_request(hero_name, output, amount))
+    # asyncio.run(pro_request(hero_name, output, amount))
     start = time.time()
-    asyncio.run(main(get_urls(amount), hero_name))
-    end = time.time()
+    asyncio.run(main(get_urls(amount, hero_name), hero_name))
     delete_output()
+    end = time.time()
     print("Took {} seconds to pull {} websites.".format(end - start, amount))
 
 
@@ -109,7 +115,8 @@ def switcher(h):
         'windranger': 'windrunner',
         'zeus': 'zuus',
         'vengeful_spirit': 'vengefulspirit',
-        'treant_protector': 'treant'
+        'treant_protector': 'treant',
+        'centaur_warrunner': 'centaur'
     }
     # print(h, switch.get(h))
     if switch.get(h):
@@ -120,38 +127,44 @@ def switcher(h):
 
 async def request_shit(hero_name, output, amount):
     start = time.time()
-    hero_name = hero_name.replace('_', ' ')
-    hero_name = " ".join(w.capitalize() for w in hero_name.split())
-    print('initial name', hero_name)
-    if 'Anti' in hero_name:
-        hero_name = 'Anti-Mage'
-    if 'Queen' in hero_name:
-        hero_name = "Queen%20of%20Pain"
+    output = []
+    print(output)
+    names = ['Anti-Mage', 'timbersaw']
+    base = 'http://www.dota2protracker.com/hero/'
+    hero_name = pro_name(hero_name)
     url = 'http://www.dota2protracker.com/hero/'+hero_name
     async with aiohttp.ClientSession() as session:
         async with session.get(url=url) as response:
-            req = await response.text()
-            text = req
-            selector = Selector(text=text)
-            table = selector.xpath('//*[@class="display compact"]//tbody//tr')
-            print(type(table), len(table))
-            for i in reversed(range(len(table))):
-                row = table[i]
-                match_id = row.css('a::attr(href)').re(r".*opendota.*")[0]
-                mmr = row.xpath('td')[4].css('::text').extract()[0]
-                name = row.xpath('td')[1].css('::text').extract()[1]
-                if match_id:
-                    print(match_id, mmr)
-                    o = [{'id': match_id, 'name': name, 'mmr': mmr}]
-                    output.append(o)
-                with open('json_files/urls.json', 'w') as outfile:
-                    json.dump(output, outfile)
-            end = time.time()
-            print('protracker', end-start, 'seconds')
+            with open(f'json_files/hero_urls/{hero_name}.json', 'w') as outfile:
+                req = await response.text()
+                text = req
+                selector = Selector(text=text)
+                table = selector.xpath(
+                    '//*[@class="display compact"]//tbody//tr')
+                for i in reversed(range(len(table))):
+                    row = table[i]
+                    match_id = row.css('a::attr(href)').re(
+                        r".*opendota.*")[0]
+                    mmr = row.xpath('td')[4].css('::text').extract()[0]
+                    name = row.xpath('td')[1].css('::text').extract()[1]
+                    if match_id:
+                        print(hero_name, match_id, mmr)
+                        o = {'id': match_id, 'name': name, 'mmr': mmr}
+                        output.append(o)
+                end = time.time()
+                print('protracker', end-start, 'seconds')
+                json.dump(output, outfile, indent=4)
+                output = []
 
 
 async def pro_request(hero_name, output, amount):
-    ret = await asyncio.gather(request_shit(hero_name, output, amount))
+    # ret = await asyncio.gather(request_shit(hero_name, output, amount))
+    names = []
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for i in data['heroes']:
+            names.append(i['name'])
+        await asyncio.gather(*[request_shit(h, output, amount) for h in names])
 
 
 if __name__ == '__main__':

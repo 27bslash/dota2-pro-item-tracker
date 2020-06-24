@@ -1,4 +1,12 @@
 {% extends 'search.html' %} {%block content%}
+<script>
+  $(document).ready(function () {
+    $(".item-table").DataTable({
+      aaSorting: [[4, "desc"]],
+    });
+  });
+</script>
+
 <img
   src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
 />
@@ -19,96 +27,100 @@
   {% for dict_item in data %}
   <tbody class="item-table-body-{{dict_item['win']}}">
     <tr class="items">
-      {% for item in dict_item['final_items'] %}
-      <td class="cell">
-        <a
-          href="https://www.opendota.com/matches/{{dict_item['id']}}"
-          target="_blank"
-        >
-          <img
-            src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-                item.key
-              }}_lg.png"
-            width="100"
-            height="80"
-        /></a>
-        <div class="overlay">{{item.time}}</div>
-      </td>
-      {% endfor %} {% for item in dict_item['backpack'] %}
-      <td class="cell">
-        <a
-          href="https://www.opendota.com/matches/{{dict_item['id']}}"
-          target="_blank"
-        >
-          <img
-            src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-                item.key
-              }}_lg.png"
-            width="100"
-            height="80"
-        /></a>
-        <div class="overlay">{{item.time}}</div>
-      </td>
-      {% endfor %}
-      <td class="cell" id="neutral">
-        {%if dict_item['item_neutral'] != None%}
-        <a
-          href="https://www.opendota.com/matches/{{dict_item['id']}}"
-          target="_blank"
-        >
-          <img
-            src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{dict_item['item_neutral']}}_lg.png"
-            width="100"
-            height="80"
-        /></a>
-        <div class="overlay">0</div>
-        {%endif%}
-      </td>
-      <td class="stats" id="player-name">
-        <a href='http://www.dota2protracker.com/player/{{dict_item["name"]}}'>
-          <h3>{{dict_item['name']}}</h3></a
-        >
-      </td>
-      <td class="stats" id="kills">
-        <h3 style="color: green;">{{dict_item['kills']}}</h3>
-      </td>
-      <td class="stats" id="deaths">
-        <h3 style="color: red;">{{dict_item['deaths']}}</h3>
-      </td>
-      <td class="stats" id="assists">
-        <h3 style="color: grey;">{{dict_item['assists']}}</h3>
-      </td>
-      <td class="stats" id="last-hits">
-        <h3>{{dict_item['last_hits']}}</h3>
-      </td>
-      <td class="stats" id="last-hits">
-        <h3>{{dict_item['duration']}}</h3>
-      </td>
-      <td class="stats" id="last-hits">
-        <h3>{{dict_item['mmr']}}</h3>
-      </td>
-    </tr>
-    <tr class="abilities">
       <td>
-        <table class="ability-table">
+        <table>
           <tbody>
-            <tr class="abilities">
-              {% for item in dict_item['abilities'] %}
-              <td>
+            {% for item in dict_item['final_items'] %}
+            <td class="cell">
+              <a
+                href="https://www.opendota.com/matches/{{dict_item['id']}}"
+                target="_blank"
+              >
                 <img
-                  class="ability"
-                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
-                  width="55"
-                  height="55"
-                  data-tooltip="{{item.key}}"
-                  title="{{item.key}}"
-                  onerror="this.onerror=null;this.src='https://www.opendota.com/assets/images/dota2/talent_tree.svg';"
-                />
+                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+                item.key
+              }}_lg.png"
+                  width="100"
+                  height="80"
+              /></a>
+              <div class="overlay">{{item.time}}</div>
+            </td>
+            {% endfor %} {% for item in dict_item['backpack'] %}
+            <td class="cell">
+              <a
+                href="https://www.opendota.com/matches/{{dict_item['id']}}"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+                item.key
+              }}_lg.png"
+                  width="100"
+                  height="80"
+              /></a>
+              <div class="overlay">{{item.time}}</div>
+            </td>
+            {% endfor %}
+            <td class="cell" id="neutral">
+              {%if dict_item['item_neutral'] != None%}
+              <a
+                href="https://www.opendota.com/matches/{{dict_item['id']}}"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{dict_item['item_neutral']}}_lg.png"
+                  width="100"
+                  height="80"
+              /></a>
+              <div class="overlay">0</div>
+              {%endif%}
+            </td>
+            <tr class="abilities">
+              <td>
+                <table class="ability-table">
+                  <tbody>
+                    {% for item in dict_item['abilities'] %}
+                    <td>
+                      <img
+                        class="ability"
+                        src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
+                        width="55"
+                        height="55"
+                        data-tooltip="{{item.key}}"
+                        title="{{item.key}}"
+                        onerror="this.onerror=null;this.src='https://www.opendota.com/assets/images/dota2/talent_tree.svg';"
+                      />
+                    </td>
+                    {% endfor %}
+                  </tbody>
+                </table>
               </td>
-              {% endfor %}
             </tr>
           </tbody>
         </table>
+      </td>
+      <td class="stats" id="player-name">
+        <a href='http://www.dota2protracker.com/player/{{dict_item["name"]}}'>
+          {{dict_item['name']}}</a
+        >
+      </td>
+      <td class="stats" id="kills">
+        {{dict_item['kills']}}
+      </td>
+      <td class="stats" id="deaths">
+        {{dict_item['deaths']}}
+      </td>
+      <td class="stats" id="assists">
+        {{dict_item['assists']}}
+      </td>
+      <td class="stats" id="last-hits">
+        {{dict_item['last_hits']}}
+      </td>
+      <td class="stats" id="duration">
+        {{dict_item['duration']}}
+      </td>
+      <td class="stats" id="mmr">
+        {{dict_item['mmr']}}
       </td>
     </tr>
   </tbody>

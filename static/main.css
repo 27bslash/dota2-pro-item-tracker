@@ -9,6 +9,9 @@ tr {
   border-color: inherit;
   margin-top: 20px;
 }
+table.dataTable tbody tr {
+  background-color: rgb(41, 38, 38);
+}
 th {
   color: white;
   font-size: 20px;
@@ -17,23 +20,19 @@ th {
 td {
   font-size: 13px;
   text-align: left;
-  /* padding-left: 24px;
-  padding-right: 24px;
-  padding-top: 5px;
-  padding-bottom: 5px; */
+  color: black;
 }
 .item-table {
   border-collapse: separate;
   border-spacing: 0px 20px;
+  background-color: rgb(41, 38, 38);
 }
 .item-table-body {
   border-spacing: 0px 0px;
 }
-/* .item-table-body-0{
-  background-color: red;
-}.item-table-body-0{
-  background-color: red;
-} */
+.stats {
+  color: white;
+}
 .cell {
   display: inline-block;
 }
@@ -45,7 +44,7 @@ td {
   background-color: black;
   text-align: center;
   position: relative;
-  top:-20%;
+  top: -20%;
 }
 ul {
   margin: 0;
@@ -66,6 +65,9 @@ ul {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
+}
+.suggestion-link {
+  color: white;
 }
 .hero-suggestion:hover {
   background-color: rgb(53, 53, 53);
@@ -137,7 +139,11 @@ a {
   position: absolute;
   background-color: blue;
 }
-.stats {
-  color: white;
-  padding: 10px;
+
+tr.even td.sorting_1 {
+  background-color: gray;
+}
+
+tr.odd td.sorting_1 {
+  background-color: red;
 }

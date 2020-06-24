@@ -8,13 +8,17 @@ import datetime
 def sort_dict(items):
     newlist = sorted(
         items, key=itemgetter('time'))
-    for item in newlist:
+    return newlist
+
+
+def convert_time(lst):
+    for item in lst:
         if item['time'] > 0:
             item['time'] = str(datetime.timedelta(
                 seconds=item['time']))
         else:
             item['time'] = 0
-    return newlist
+    return lst
 
 
 def get_most_recent_items(arr, l,  p):
@@ -32,7 +36,7 @@ def get_most_recent_items(arr, l,  p):
                     done.add(purchase['key'])
                     output.append(
                         {'key': item, 'time': purchase['time']})
-    return sort_dict(output)
+    return convert_time(sort_dict(output))
 
 
 def delete_dupes(d):
@@ -45,20 +49,36 @@ def delete_dupes(d):
     return result
 
 
-def get_urls(amount):
+def get_urls(amount, hero_name):
     urls = []
-    with open("json_files/urls.json") as json_file:
+    hero_name = pro_name(hero_name)
+    print(hero_name)
+    with open(f"json_files/hero_urls/{hero_name}.json", 'r') as json_file:
         data = json.load(json_file)
+        data = sorted(data, key=lambda i: i['mmr'],reverse=True)
         for i in range(amount):
             try:
-                m_id = data[i][0]['id']
+                print(data[i]['id'])
+                m_id = data[i]['id']
                 m_id = re.sub(r"www", 'api', m_id)
                 m_id = re.sub(r"/matches/", '/api/matches/', m_id)
                 urls.append(m_id)
                 urls.reverse()
             except Exception as e:
                 print(e, e.__class__)
+        print(urls)
         return urls
+
+
+def pro_name(hero_name):
+    hero_name = hero_name.replace('_', ' ')
+    hero_name = " ".join(w.capitalize() for w in hero_name.split())
+    print('initial name', hero_name)
+    if 'Anti' in hero_name:
+        hero_name = 'Anti-Mage'
+    if 'Queen' in hero_name:
+        hero_name = "Queen%20of%20Pain"
+    return hero_name
 
 
 def get_id(name):
@@ -89,9 +109,7 @@ def get_ability_name(arr):
 
 
 def get_item_name(item_id):
-    if item_id == None:
-        print(item_id)
-    with open('json_files/items.json')as json_file:
+    with open('json_files/items.json') as json_file:
         data = json.load(json_file)
         for item in data['items']:
             if item_id == item['id']:
