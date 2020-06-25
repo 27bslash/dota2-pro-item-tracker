@@ -1,6 +1,7 @@
 body {
   background-color: rgb(41, 38, 38);
-  font-family: monospace;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 tr {
@@ -10,28 +11,53 @@ tr {
   margin-top: 20px;
 }
 table.dataTable tbody tr {
-  background-color: rgb(41, 38, 38);
+  background-color: #2a3235;
+}
+thead {
+  display: table-header-group;
 }
 th {
   color: white;
-  font-size: 20px;
-  text-align: left;
+  font-size: 1rem;
+  padding: 0;
 }
 td {
   font-size: 13px;
   text-align: left;
   color: black;
+  border-top: 1px solid grey;
 }
 .item-table {
   border-collapse: separate;
   border-spacing: 0px 20px;
-  background-color: rgb(41, 38, 38);
 }
 .item-table-body {
   border-spacing: 0px 0px;
 }
 .stats {
   color: white;
+  padding: 10px;
+}
+#kills {
+  color: green;
+}
+#deaths {
+  color: red;
+}
+#assists {
+  color: grey;
+}
+#gold {
+  color: gold;
+}
+#gpm {
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: right !important;
+}
+#xpm {
+  padding-left: 0px;
+  text-align: left;
 }
 .cell {
   display: inline-block;
@@ -42,9 +68,12 @@ td {
 .overlay {
   color: white;
   background-color: black;
+  opacity: 0.9;
   text-align: center;
   position: relative;
   top: -20%;
+  height: 20px;
+  font-size: 15px;
 }
 ul {
   margin: 0;
@@ -103,6 +132,12 @@ a {
   color: white;
   text-decoration: none;
 }
+.purchases {
+  display: flex;
+}
+.abilities {
+  display: flex;
+}
 #submit {
   font-family: inherit;
   background-color: rgb(53, 53, 53);
@@ -140,10 +175,42 @@ a {
   background-color: blue;
 }
 
-tr.even td.sorting_1 {
+table.dataTable thead .sorting {
+  background-image: none;
+}
+table.dataTable thead .sorting_asc {
+  background-image: none;
+}
+table.dataTable thead .sorting_desc {
+  background-image: none;
+}
+table.dataTable.stripe tbody tr.odd,
+table.dataTable.display tbody tr.odd {
+  background-color: #212729;
+}
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  color: white;
+}
+table.dataTable thead th {
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  text-align: left;
+}
+#item-header {
+  text-align: center;
+}
+td.sorting:hover {
+  background-color: white;
+}
+tr.even td.sorting_1:hover {
   background-color: gray;
 }
-
-tr.odd td.sorting_1 {
-  background-color: red;
+td.sorting_1:hover {
+  background-color: gray;
 }

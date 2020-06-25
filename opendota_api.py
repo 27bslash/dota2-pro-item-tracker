@@ -49,6 +49,8 @@ async def async_get(url, hero_name):
                                     p['duration'] = 0
                                 output.append(
                                     {'hero': hero_name, 'duration': p['duration'], 'name': get_info('name', resp['match_id'], hero_name), 'mmr': get_info('mmr', resp['match_id'], hero_name),
+                                     'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
+                                     'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
                                      'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'],
                                      'role': p['lane'], 'win': p['win'], 'id': resp['match_id'],
                                      'starting_items': starting_items,

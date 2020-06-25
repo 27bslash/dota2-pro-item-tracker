@@ -81,7 +81,7 @@ def returnJson():
 
 def do_everything(hero_name):
     output = []
-    amount = 10
+    amount = 100
     # asyncio.run(pro_request(hero_name, output, amount))
     start = time.time()
     asyncio.run(main(get_urls(amount, hero_name), hero_name))
