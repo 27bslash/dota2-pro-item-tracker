@@ -46,7 +46,7 @@ def post_req():
 
 @app.route('/hero/<hero_name>')
 @app.route('/hero/<hero_name>', methods=['POST', 'GET'])
-@cache.cached(timeout=5)
+@cache.cached(timeout=600)
 def show_items(hero_name):
     f_name = hero_name.replace(' ', '_').replace('-', '_')
     f_name = hero_name.lower()
@@ -62,6 +62,7 @@ def show_items(hero_name):
 
 
 @app.route('/hero/<hero_name>/starter_items', methods=['POST', 'GET'])
+# @cache.cached(timeout=600)
 def redirect_page(hero_name):
     print('get', request.referrer)
     if request.method == 'POST':
@@ -160,23 +161,23 @@ async def request_shit(hero_name, output, amount):
 
 
 async def pro_request(hero_name, output, amount):
-    # ret = await asyncio.gather(request_shit(hero_name, output, amount))
+    ret = await asyncio.gather(request_shit(hero_name, output, amount))
+
+
+def opendota_call():
     names = []
+    out = []
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for i in data['heroes']:
             names.append(i['name'])
-        await asyncio.gather(*[request_shit(h, output, amount) for h in names])
-
-
-def opendota_call():
-    with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
+        asyncio.gather(*[request_shit(h, out, 100) for h in names])
         for i, e in enumerate(data['heroes']):
             asyncio.run(main(get_urls(20, e['name']), e['name']))
             delete_output()
             print(i)
             time.sleep(60)
+    time.sleep(604800)
 
 # opendota_call()
 
@@ -187,5 +188,5 @@ def run1():
 
 if __name__ == '__main__':
     thread1 = threading.Thread(target=opendota_call)
-    # thread1.start()
+    thread1.start()
     app.run(debug=True)

@@ -13,10 +13,11 @@
 <img
   src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
 />
-<a href='/hero/{{hero_name}}'>
-  <img src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png' 
-  height="50px"
-  title="Final Items"
+<a href="/hero/{{hero_name}}">
+  <img
+    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
+    height="50px"
+    title="Final Items"
   />
 </a>
 <table class="item-table stripe">
@@ -49,14 +50,16 @@
             >
               <img
                 src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-                item.key
-              }}_lg.png"
+              item.key
+            }}_lg.png"
                 width="100"
                 height="80"
               />
+              <div class="overlay" style='background-color: inherit'></div>
+            </a>
+          </div>
+          {%endfor%}
         </div>
-        {%endfor%}
-      </div>
         <div class="abilities">
           {% for item in dict_item['abilities'] %}
           <div class="ability-img-wrapper">
