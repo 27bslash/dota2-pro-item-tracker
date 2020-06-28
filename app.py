@@ -7,6 +7,7 @@ from parsel import Selector
 import time
 from operator import itemgetter
 from helper_funcs.helper_functions import *
+import threading
 
 app = Flask(__name__)
 cache = Cache(config={
@@ -47,19 +48,17 @@ def post_req():
 @app.route('/hero/<hero_name>', methods=['POST', 'GET'])
 @cache.cached(timeout=5)
 def show_items(hero_name):
-    print('shw', hero_name, request.referrer)
-    referralStr = hero_name+'/'+'start'
-    if request.referrer:
-        print(referralStr)
-        if referralStr not in request.referrer:
-            do_everything(hero_name)
-            pass
-    else:
-        do_everything(hero_name)
-    with open('json_files/opendota_output.json', 'r') as f:
-        data = json.load(f)
+    f_name = hero_name.replace(' ', '_').replace('-', '_')
+    f_name = hero_name.lower()
+    file = f"json_files/hero_output/{f_name}.json"
+    with open(file, 'r') as f:
+        d = json.load(f)
         h_name = clean_name(hero_name)
-        return render_template('final_items.html', hero_img=h_name, hero_name=hero_name, data=data, time=90)
+        if len(d) < 1 or os.stat(file).st_size == 0:
+            do_everything(hero_name)
+        with open(file, 'r') as f:
+            data = json.load(f)
+            return render_template('final_items.html', hero_img=h_name, hero_name=hero_name, data=data, time=90)
 
 
 @app.route('/hero/<hero_name>/starter_items', methods=['POST', 'GET'])
@@ -67,7 +66,9 @@ def redirect_page(hero_name):
     print('get', request.referrer)
     if request.method == 'POST':
         text = request.form.get('t')
-    with open('json_files/opendota_output.json', 'r') as f:
+        f_name = hero_name.replace(' ', '_').replace('-', '_')
+        f_name = hero_name.lower()
+    with open(f'json_files/hero_output/{hero_name}.json', 'r') as f:
         data = json.load(f)
         return render_template('starter_items.html', hero_img=clean_name(hero_name), hero_name=hero_name, data=data)
 
@@ -83,9 +84,10 @@ def do_everything(hero_name):
     output = []
     amount = 100
     # asyncio.run(pro_request(hero_name, output, amount))
-    start = time.time()
-    asyncio.run(main(get_urls(amount, hero_name), hero_name))
+    asyncio.run(main(get_urls(20, hero_name), hero_name))
     delete_output()
+    start = time.time()
+    names = []
     end = time.time()
     print("Took {} seconds to pull {} websites.".format(end - start, amount))
 
@@ -167,5 +169,23 @@ async def pro_request(hero_name, output, amount):
         await asyncio.gather(*[request_shit(h, output, amount) for h in names])
 
 
+def opendota_call():
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for i, e in enumerate(data['heroes']):
+            asyncio.run(main(get_urls(20, e['name']), e['name']))
+            delete_output()
+            print(i)
+            time.sleep(60)
+
+# opendota_call()
+
+
+def run1():
+    return 't'
+
+
 if __name__ == '__main__':
+    thread1 = threading.Thread(target=opendota_call)
+    # thread1.start()
     app.run(debug=True)

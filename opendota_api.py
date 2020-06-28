@@ -12,8 +12,8 @@ async def async_get(url, hero_name):
         async with aiohttp.ClientSession() as session:
             async with session.get(url=url) as response:
                 resp = await response.json()
-                with open('json_files/opendota_output.json', 'w') as outfile:
-                    print(f"Successfully got url {url}.")
+                with open(f'json_files/hero_output/{hero_name}.json', 'w') as outfile:
+                    print(f"Successfully got url {url}.",outfile)
                     match_id = str(resp['match_id'])
                     starting_items = []
                     main_items = []
@@ -25,10 +25,10 @@ async def async_get(url, hero_name):
                         p = resp['players'][i]
                         hero_id = p['hero_id']
                         # print(hero_id)
-                        # print(hero_id)
+                        print(hero_id,get_id(hero_name))
                         if hero_id == get_id(hero_name):
                             abilities = p['ability_upgrades_arr']
-                            # print('id-check', hero_id, get_id(hero_name))
+                            print('id-check', hero_id, get_id(hero_name))
                             # check if one of the players matches search
                             purchase_log = p['purchase_log']
                             if purchase_log:
@@ -64,6 +64,11 @@ async def async_get(url, hero_name):
 
 async def main(urls, hero_name):
     ret = await asyncio.gather(*[async_get(url, hero_name) for url in urls])
+
+
+async def test(urls, hero_name):
+    urls = get_urls_from()
+    await asyncio.gather(*[async_get(url, hero_name) for url in urls])
 
 
 def get_info(x, m_id, hero_name):

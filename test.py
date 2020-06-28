@@ -1,4 +1,6 @@
 import json
+from helper_funcs.helper_functions import *
+import time
 
 
 def test():
@@ -8,4 +10,36 @@ def test():
             print(item['key'], item['time'])
 
 
-test()
+# test()
+
+def flen():
+    with open('json_files/hero_output/io.json', 'r') as f:
+        data = json.load(f)
+        print(len(data))
+
+flen()
+def get_urls_from():
+    names = []
+    urls = []
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for i in data['heroes']:
+            names.append(i['name'])
+    for name in names:
+        name = pro_name(name)
+        with open(f"json_files/hero_urls/{name}.json") as f:
+            data = json.load(f)
+            data = sorted(data, key=lambda i: i['mmr'], reverse=True)
+            for i in range(6):
+                try:
+                    m_id = data[i]['id']
+                    m_id = re.sub(r"www", 'api', m_id)
+                    m_id = re.sub(r"/matches/", '/api/matches/', m_id)
+                    urls.append(m_id)
+                    urls.reverse()
+                except Exception as e:
+                    print(e, e.__class__)
+            print(name, urls)
+            urls = []
+
+

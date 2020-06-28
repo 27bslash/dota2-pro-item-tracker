@@ -1,6 +1,8 @@
+<title>{{hero_name}}</title>
 {% extends 'search.html' %} {%block content%}
 <script>
   $(document).ready(function () {
+    document.getElementsByTagName("html")[0].style.visibility = "visible";
     $(".item-table").DataTable({
       aaSorting: [[4, "desc"]],
       bfilter: false,
@@ -8,14 +10,15 @@
     });
   });
 </script>
-
 <img
   src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
 />
-<title>{{hero_name}}</title>
-<a href="/hero/{{hero_name}}">
-  <input type="button" value="final items"
-/></a>
+<a href='/hero/{{hero_name}}'>
+  <img src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png' 
+  height="50px"
+  title="Final Items"
+  />
+</a>
 <table class="item-table stripe">
   <thead>
     <th class="stats" id="item-header">ITEMS</th>

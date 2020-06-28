@@ -1,11 +1,25 @@
 {% extends 'search.html' %} {%block content%}
 <script>
   $(document).ready(function () {
-    $(".item-table").DataTable({
+    document.getElementsByTagName("html")[0].style.visibility = "visible";
+    let table = $(".item-table").DataTable({
       aaSorting: [[4, "desc"]],
       bfilter: false,
-      searching: false
+      searching: false,
     });
+    var lastIdx = null;
+    $(".item-table tbody")
+      .on("mouseover", ".stats", function () {
+        var colIdx = table.cell(this).index().column;
+        console.log(colIdx);
+        if (colIdx !== lastIdx) {
+          $(table.cells().nodes()).removeClass("highlight");
+          $(table.column(colIdx).nodes()).addClass("highlight");
+        }
+      })
+      .on("mouseleave", function () {
+        $(table.cells().nodes()).removeClass("highlight");
+      });
   });
 </script>
 <title>{{hero_name}}</title>
@@ -13,9 +27,12 @@
   src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
 />
 <a href="/hero/{{hero_name}}/starter_items">
-  <input type="button" value="Starter items"
+  <img
+    title="Starter Items"
+    height="50px"
+    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/tango_lg.png"
 /></a>
-<table class="item-table hover order-column stripe">
+<table class="item-table stripe">
   <thead>
     <th class="stats" id="item-header">ITEMS</th>
     <th class="stats">Player</th>

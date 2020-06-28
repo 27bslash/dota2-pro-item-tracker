@@ -66,14 +66,13 @@ def get_urls(amount, hero_name):
                 urls.reverse()
             except Exception as e:
                 print(e, e.__class__)
-        print(urls)
         return urls
 
 
 def pro_name(hero_name):
     hero_name = hero_name.replace('_', ' ')
     hero_name = " ".join(w.capitalize() for w in hero_name.split())
-    print('initial name', hero_name)
+    # print('initial name', hero_name)
     if 'Anti' in hero_name:
         hero_name = 'Anti-Mage'
     if 'Queen' in hero_name:
@@ -88,7 +87,7 @@ def get_id(name):
         with open('json_files/hero_ids.json') as json_file:
             data = json.load(json_file)
             for i in range(len(data['heroes'])):
-                if name in data['heroes'][i]['name']:
+                if name == data['heroes'][i]['name']:
                     return data['heroes'][i]['id']
             return False
     else:
