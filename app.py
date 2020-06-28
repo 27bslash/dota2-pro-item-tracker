@@ -136,7 +136,7 @@ async def pro_request(hero_name, output, amount):
     ret = await asyncio.gather(request_shit(hero_name, output, amount))
 
 
-def opendota_call():
+def async opendota_call():
     names = []
     out = []
     print('input')
@@ -144,9 +144,9 @@ def opendota_call():
         data = json.load(f)
         for i in data['heroes']:
             names.append(i['name'])
-        asyncio.gather(*[request_shit(h, out, 100) for h in names])
+        await asyncio.gather(*[request_shit(h, out, 100) for h in names])
         for i, e in enumerate(data['heroes']):
-            asyncio.run(main(get_urls(20, e['name']), e['name']))
+            await asyncio.run(main(get_urls(20, e['name']), e['name']))
             delete_output()
             print(i)
             time.sleep(60)
