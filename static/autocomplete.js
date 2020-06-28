@@ -35,6 +35,7 @@ const display = () => {
   for (let h of arr) {
     linkArr.push(h.name);
     displayArr.push(h.name.replace(/_/g, " "));
+    displayArr.sort();
   }
   for (let i = 0; i < displayArr.length; i++) {
     const div = document.createElement("div");
