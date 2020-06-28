@@ -1,6 +1,6 @@
 // sort out this fetch request
 async function t() {
-  let url = new URL("http://127.0.0.1:5000/files/hero_ids");
+  let url = `${window.location.origin}/files/hero_ids`;
   let res = await fetch(url);
   let data = await res.json();
   return data;
