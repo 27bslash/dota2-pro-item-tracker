@@ -139,6 +139,7 @@ async def pro_request(hero_name, output, amount):
 def opendota_call():
     names = []
     out = []
+    print('input')
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for i in data['heroes']:
@@ -149,6 +150,7 @@ def opendota_call():
             delete_output()
             print(i)
             time.sleep(60)
+    print('output')
     time.sleep(604800)
 
 # opendota_call()
@@ -161,4 +163,4 @@ def run1():
 if __name__ == '__main__':
     thread1 = threading.Thread(target=opendota_call)
     thread1.start()
-    app.run(debug=False)
+    app.run(debug=True)

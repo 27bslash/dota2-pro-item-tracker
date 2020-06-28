@@ -3,6 +3,24 @@
 <script>
   $(document).ready(function () {
     document.getElementsByTagName("html")[0].style.visibility = "visible";
+    let table = $(".item-table").DataTable({
+      aaSorting: [[4, "desc"]],
+      bfilter: false,
+      searching: false,
+    });
+    var lastIdx = null;
+    $(".item-table tbody")
+      .on("mouseover", ".stats", function () {
+        var colIdx = table.cell(this).index().column;
+        if (colIdx !== lastIdx) {
+          $(table.cells().nodes()).removeClass("highlight");
+          $(table.column(colIdx).nodes()).addClass("highlight");
+        }
+      })
+      .on("mouseleave", function () {
+        $(table.cells().nodes()).removeClass("highlight");
+      });
+    document.getElementsByTagName("html")[0].style.visibility = "visible";
     $(".item-table").DataTable({
       aaSorting: [[4, "desc"]],
       bfilter: false,
@@ -55,7 +73,7 @@
                 width="100"
                 height="80"
               />
-              <div class="overlay" style='background-color: inherit'></div>
+              <div class="overlay" style="background-color: inherit;"></div>
             </a>
           </div>
           {%endfor%}

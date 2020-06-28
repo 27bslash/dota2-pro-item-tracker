@@ -11,7 +11,6 @@
     $(".item-table tbody")
       .on("mouseover", ".stats", function () {
         var colIdx = table.cell(this).index().column;
-        console.log(colIdx);
         if (colIdx !== lastIdx) {
           $(table.cells().nodes()).removeClass("highlight");
           $(table.column(colIdx).nodes()).addClass("highlight");
