@@ -144,20 +144,21 @@ def opendota_call():
         data = json.load(f)
         for i in data['heroes']:
             names.append(i['name'])
-        for name in names:
-            asyncio.run(pro_request(name, out, 100))
+        # for name in names:
+        #     pass
+            # asyncio.run(pro_request(name, out, 100))
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for name in names:
-            asyncio.run(main(get_urls(20, name, name)))
+            # asyncio.run(main(get_urls(20, name, name)))
             delete_output()
-            time.sleep(60)
+            # time.sleep(60)
             print('second')
-    time.sleep(604800)
+    time.sleep(3)
     print('end')
 
 
 if __name__ == '__main__':
     thread1 = threading.Thread(target=opendota_call)
     thread1.start()
-    app.run(debug=False)
+    app.run(debug=True)
