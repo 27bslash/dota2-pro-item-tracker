@@ -136,7 +136,7 @@ async def pro_request(hero_name, output, amount):
     ret = await asyncio.gather(request_shit(hero_name, output, amount))
 
 
-def async opendota_call():
+async def opendota_call():
     names = []
     out = []
     print('input')
