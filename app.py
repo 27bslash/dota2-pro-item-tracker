@@ -136,7 +136,7 @@ async def pro_request(hero_name, output, amount):
     ret = await asyncio.gather(request_shit(hero_name, output, amount))
 
 
-async def opendota_call():
+def opendota_call():
     names = []
     out = []
     print('input')
@@ -144,20 +144,17 @@ async def opendota_call():
         data = json.load(f)
         for i in data['heroes']:
             names.append(i['name'])
-        await asyncio.gather(*[request_shit(h, out, 100) for h in names])
-        for i, e in enumerate(data['heroes']):
-            await asyncio.run(main(get_urls(20, e['name']), e['name']))
+        for name in names:
+            asyncio.run(pro_request(name, out, 100))
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for name in names:
+            asyncio.run(main(get_urls(20, name,name))
             delete_output()
-            print(i)
             time.sleep(60)
-    print('output')
+            print('second')
     time.sleep(604800)
-
-# opendota_call()
-
-
-def run1():
-    return 't'
+    print('end')
 
 
 if __name__ == '__main__':

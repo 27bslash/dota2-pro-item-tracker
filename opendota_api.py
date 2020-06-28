@@ -24,10 +24,8 @@ async def async_get(url, hero_name):
                         p = resp['players'][i]
                         hero_id = p['hero_id']
                         # print(hero_id)
-                        print(hero_id,get_id(hero_name))
                         if hero_id == get_id(hero_name):
                             abilities = p['ability_upgrades_arr']
-                            print('id-check', hero_id, get_id(hero_name))
                             # check if one of the players matches search
                             purchase_log = p['purchase_log']
                             if purchase_log:
