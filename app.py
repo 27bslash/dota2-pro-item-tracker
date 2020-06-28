@@ -188,5 +188,5 @@ def run1():
 
 if __name__ == '__main__':
     thread1 = threading.Thread(target=opendota_call)
-    # thread1.start()
+    thread1.start()
     app.run(debug=False)
