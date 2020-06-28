@@ -11,6 +11,34 @@ def sort_dict(items):
     return newlist
 
 
+def switcher(h):
+    switch = {
+        'necrophos': 'necrolyte',
+        'clockwerk': 'rattletrap',
+        "nature's_prophet": 'furion',
+        'timbersaw': 'shredder',
+        'io': 'wisp',
+        'queen_of_pain': 'queenofpain',
+        'doom': 'doom_bringer',
+        'shadow_fiend': 'nevermore',
+        'wraith_king': 'skeleton_king',
+        'magnus': 'magnataur',
+        'underlord': 'abyssal_underlord',
+        'anti-mage': 'antimage',
+        'outworld_devourer': 'obsidian_destroyer',
+        'windranger': 'windrunner',
+        'zeus': 'zuus',
+        'vengeful_spirit': 'vengefulspirit',
+        'treant_protector': 'treant',
+        'centaur_warrunner': 'centaur'
+    }
+    # print(h, switch.get(h))
+    if switch.get(h):
+        return switch.get(h)
+    else:
+        return h
+
+
 def convert_time(lst):
     for item in lst:
         if item['time'] > 0:
@@ -55,7 +83,7 @@ def get_urls(amount, hero_name):
     print(hero_name)
     with open(f"json_files/hero_urls/{hero_name}.json", 'r') as json_file:
         data = json.load(json_file)
-        data = sorted(data, key=lambda i: i['mmr'],reverse=True)
+        data = sorted(data, key=lambda i: i['mmr'], reverse=True)
         for i in range(amount):
             try:
                 print(data[i]['id'])

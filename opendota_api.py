@@ -2,7 +2,6 @@ import json
 import asyncio
 import aiohttp
 import traceback
-from app import switcher
 from helper_funcs.helper_functions import *
 output = []
 

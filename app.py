@@ -2,7 +2,7 @@ import os
 import requests
 from flask import Flask, render_template, request, url_for, redirect
 from flask_caching import Cache
-from opendota_api import *
+from .opendota_api import *
 from parsel import Selector
 import time
 from operator import itemgetter
@@ -100,32 +100,7 @@ def clean_name(h_name):
     return h_name
 
 
-def switcher(h):
-    switch = {
-        'necrophos': 'necrolyte',
-        'clockwerk': 'rattletrap',
-        "nature's_prophet": 'furion',
-        'timbersaw': 'shredder',
-        'io': 'wisp',
-        'queen_of_pain': 'queenofpain',
-        'doom': 'doom_bringer',
-        'shadow_fiend': 'nevermore',
-        'wraith_king': 'skeleton_king',
-        'magnus': 'magnataur',
-        'underlord': 'abyssal_underlord',
-        'anti-mage': 'antimage',
-        'outworld_devourer': 'obsidian_destroyer',
-        'windranger': 'windrunner',
-        'zeus': 'zuus',
-        'vengeful_spirit': 'vengefulspirit',
-        'treant_protector': 'treant',
-        'centaur_warrunner': 'centaur'
-    }
-    # print(h, switch.get(h))
-    if switch.get(h):
-        return switch.get(h)
-    else:
-        return h
+
 
 
 async def request_shit(hero_name, output, amount):
