@@ -2,12 +2,12 @@ import os
 import requests
 from flask import Flask, render_template, request, url_for, redirect
 from flask_caching import Cache
-from .opendota_api import *
 from parsel import Selector
 import time
 from operator import itemgetter
-from helper_funcs.helper_functions import *
 import threading
+from helper_funcs.helper_functions import *
+from opendota_api import *
 
 app = Flask(__name__)
 cache = Cache(config={
@@ -98,9 +98,6 @@ def clean_name(h_name):
     h_name = h_name.lower()
     h_name = switcher(h_name)
     return h_name
-
-
-
 
 
 async def request_shit(hero_name, output, amount):
