@@ -40,7 +40,7 @@ const display = () => {
     const div = document.createElement("div");
     div.innerHTML = displayArr[i];
     let a = document.createElement("a");
-    a.href = `http://127.0.0.1:5000/hero/${linkArr[i]}`;
+    a.href = `${window.location.origin}/hero/${linkArr[i]}`;
     div.setAttribute("class", "hero-suggestion");
     a.setAttribute("class", "suggestion-link");
     document.querySelector("ul").appendChild(a).appendChild(div);
