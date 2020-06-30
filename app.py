@@ -10,6 +10,14 @@ from helper_funcs.helper_functions import *
 from opendota_api import *
 from apscheduler.schedulers.background import BackgroundScheduler
 import datetime
+import pymongo
+from pymongo import MongoClient
+
+cluster = MongoClient(
+    'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
+db = cluster['pro-item-tracker']
+hero_urls = db['urls']
+hero_output = db['heroes']
 
 
 app = Flask(__name__)
@@ -53,6 +61,7 @@ def show_items(hero_name):
     f_name = hero_name.replace(' ', '_').replace('-', '_')
     f_name = hero_name.lower()
     file = f"json_files/hero_output/{f_name}.json"
+    do_everything(hero_name)
     if os.stat(file).st_size <= 2:
         do_everything(hero_name)
     with open(file, 'r') as f:
@@ -87,7 +96,7 @@ def do_everything(hero_name):
     output = []
     amount = 100
     asyncio.run(pro_request(hero_name, output, amount))
-    asyncio.run(main(get_urls(100, hero_name), hero_name))
+    # asyncio.run(main(get_urls(100, hero_name), hero_name))
     delete_output()
     start = time.time()
     names = []
@@ -106,7 +115,6 @@ async def request_shit(hero_name, output, amount):
     start = time.time()
     output = []
     print(output)
-    names = ['Anti-Mage', 'timbersaw']
     base = 'http://www.dota2protracker.com/hero/'
     hero_name = pro_name(hero_name)
     url = 'http://www.dota2protracker.com/hero/'+hero_name
@@ -126,11 +134,11 @@ async def request_shit(hero_name, output, amount):
                     name = row.xpath('td')[1].css('::text').extract()[1]
                     if match_id:
                         print(hero_name, match_id, mmr)
-                        o = {'id': match_id, 'name': name, 'mmr': mmr}
+                        o = {'id': match_id, 'hero_name': hero_name,'name': name, 'mmr': mmr}
                         output.append(o)
+                        hero_urls.insert_one(o)
                 end = time.time()
                 print('protracker', end-start, 'seconds')
-                json.dump(output, outfile, indent=4)
                 output = []
 
 
@@ -163,4 +171,4 @@ if __name__ == '__main__':
     # scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
     #                   start_date=datetime.datetime.now(), hour='16', minute='16', day_of_week='tue')
     # scheduler.start()
-    app.run(debug=False)
+    app.run(debug=True)
