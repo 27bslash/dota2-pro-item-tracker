@@ -162,6 +162,6 @@ def opendota_call():
 scheduler = BackgroundScheduler()
 if __name__ == '__main__':
     scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
-                      atart_date=datetime.datetime.now(), hour='16', minute='0', day_of_week='tue')
+                      start_date=datetime.datetime.now(), hour='16', minute='3', day_of_week='tue')
     scheduler.start()
     app.run(debug=False)
