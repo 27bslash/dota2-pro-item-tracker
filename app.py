@@ -18,6 +18,7 @@ cache = Cache(config={
 })
 cache.init_app(app)
 
+
 @app.route('/', methods=['GET'])
 def hello():
     query = request.args.get('query')
@@ -136,6 +137,7 @@ async def request_shit(hero_name, output, amount):
 async def pro_request(hero_name, output, amount):
     ret = await asyncio.gather(request_shit(hero_name, output, amount))
 
+
 def opendota_call():
     names = []
     out = []
@@ -156,8 +158,10 @@ def opendota_call():
             print('second')
     print('end', datetime.datetime.now())
 
-scheduler = BackgroundScheduler()   
+
+scheduler = BackgroundScheduler()
 if __name__ == '__main__':
-    scheduler.add_job(opendota_call, 'cron',start_date=datetime.datetime.now(),hour='15',minute='40' ,day_of_week = 'tue')
+    scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
+                      atart_date=datetime.datetime.now(), hour='16', minute='00', day_of_week='tue')
     scheduler.start()
     app.run(debug=False)
