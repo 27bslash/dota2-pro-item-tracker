@@ -4,7 +4,7 @@ from app import *
 scheduler = BackgroundScheduler()
 
 scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
-                  start_date=datetime.datetime.now(), hour='16', minute='16', day_of_week='tue')
+                  start_date=datetime.datetime.now(), hour='16', minute='40', day_of_week='tue')
 scheduler.start()
 
 
