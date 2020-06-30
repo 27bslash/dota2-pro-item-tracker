@@ -17,7 +17,10 @@ def flen():
         data = json.load(f)
         print(len(data))
 
+
 flen()
+
+
 def get_urls_from():
     names = []
     urls = []
@@ -43,3 +46,42 @@ def get_urls_from():
             urls = []
 
 
+def opendota_call():
+    names = []
+    out = []
+    print('input')
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for i in data['heroes']:
+            names.append(i['name'])
+        for i, e in enumerate(names):
+            print('first', i)
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for i, e in enumerate(names):
+            # delete_output()
+            print('second')
+    print('end')
+
+
+# opendota_call()
+def opendota_call():
+    names = []
+    out = []
+    print('input')
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for i in data['heroes']:
+            names.append(i['name'])
+        # for name in names:
+        #     pass
+            # asyncio.run(pro_request(name, out, 100))
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for name in names:
+            # asyncio.run(main(get_urls(20, name, name)))
+            delete_output()
+            # time.sleep(60)
+            print('second')
+    time.sleep(3)
+    print('end')

@@ -8,13 +8,14 @@ from operator import itemgetter
 import threading
 from helper_funcs.helper_functions import *
 from opendota_api import *
+from apscheduler.schedulers.background import BackgroundScheduler
+
 
 app = Flask(__name__)
 cache = Cache(config={
     'CACHE_TYPE': 'simple'
 })
 cache.init_app(app)
-
 
 @app.route('/', methods=['GET'])
 def hello():
@@ -27,7 +28,6 @@ def hello():
             data['heroes'], key=itemgetter('name'))
         for i in d:
             img_names.append(switcher(i['name']))
-    # return render_template('index.html', hero_imgs=img_names, links=d)
     return render_template('index.html', hero_imgs=img_names, links=d)
 
 
@@ -51,11 +51,11 @@ def show_items(hero_name):
     f_name = hero_name.replace(' ', '_').replace('-', '_')
     f_name = hero_name.lower()
     file = f"json_files/hero_output/{f_name}.json"
+    if os.stat(file).st_size <= 2:
+        do_everything(hero_name)
     with open(file, 'r') as f:
         d = json.load(f)
         h_name = clean_name(hero_name)
-        if len(d) < 1 or os.stat(file).st_size == 0:
-            do_everything(hero_name)
         with open(file, 'r') as f:
             data = json.load(f)
             return render_template('final_items.html', hero_img=h_name, hero_name=hero_name, data=data, time=90)
@@ -85,7 +85,7 @@ def do_everything(hero_name):
     output = []
     amount = 100
     # asyncio.run(pro_request(hero_name, output, amount))
-    asyncio.run(main(get_urls(20, hero_name), hero_name))
+    asyncio.run(main(get_urls(100, hero_name), hero_name))
     delete_output()
     start = time.time()
     names = []
@@ -135,7 +135,6 @@ async def request_shit(hero_name, output, amount):
 async def pro_request(hero_name, output, amount):
     ret = await asyncio.gather(request_shit(hero_name, output, amount))
 
-
 def opendota_call():
     names = []
     out = []
@@ -144,21 +143,20 @@ def opendota_call():
         data = json.load(f)
         for i in data['heroes']:
             names.append(i['name'])
-        # for name in names:
-        #     pass
-            # asyncio.run(pro_request(name, out, 100))
+        for name in names:
+            asyncio.run(pro_request(name, out, 100))
+            print('1st')
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for name in names:
-            # asyncio.run(main(get_urls(20, name, name)))
+            asyncio.run(main(get_urls(100, name), name))
             delete_output()
-            # time.sleep(60)
+            time.sleep(60)
             print('second')
-    time.sleep(3)
-    print('end')
+    print('end', datetime.datetime.now())
 
-
+scheduler = BackgroundScheduler()   
 if __name__ == '__main__':
-    thread1 = threading.Thread(target=opendota_call)
-    thread1.start()
-    app.run(debug=True)
+    scheduler.add_job(opendota_call, 'cron',start_date=datetime.datetime.now(),hour='15',minute='40' ,day_of_week = 'tue')
+    scheduler.start()
+    app.run(debug=False)

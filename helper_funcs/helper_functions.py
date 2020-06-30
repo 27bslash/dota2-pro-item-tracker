@@ -3,6 +3,8 @@ import re
 from collections import OrderedDict
 from operator import itemgetter
 import datetime
+import time
+import math
 
 
 def sort_dict(items):
@@ -108,6 +110,25 @@ def pro_name(hero_name):
     return hero_name
 
 
+def get_time(x):
+    print(x)
+    seconds = time.time() - x  # seconds
+    minutes = seconds / 60  # mins
+    hours = minutes / 60  # hours
+    days = hours / 24  # days
+    time_since = ''
+    if math.floor(hours) <= 24 and math.floor(hours) > 1:
+        return f"{math.floor(hours)} hours ago"
+    if math.floor(hours) == 1:
+        return f"{math.floor(hours)} hour ago"
+    elif math.floor(days) > 1:
+        return f"{math.floor(days)} days ago"
+    elif math.floor(days) == 1:
+        return f"{math.floor(days)} day ago"
+    else:
+        return 'Just Now'
+
+
 def get_id(name):
     if name:
         name = name.lower()
@@ -132,6 +153,8 @@ def get_ability_name(arr):
                 mData = json.load(f)
             abilityArr.append(
                 {'key': mData[data[key]], 'img': data[key]})
+            sli = slice(0, 19)
+            abilityArr = abilityArr[sli]
     return abilityArr
 
 
