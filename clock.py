@@ -1,13 +1,10 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 import datetime
+import time
 from app import *
 from opendota_api import *
 from helper_funcs.helper_functions import *
-
-scheduler = BackgroundScheduler()
-scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
-                  start_date=datetime.datetime.now(), hour='16', minute='40', day_of_week='tue')
-scheduler.start()
+import asyncio
 
 
 def opendota_call():
@@ -29,3 +26,8 @@ def opendota_call():
             time.sleep(60)
             print('second')
     print('end', datetime.datetime.now())
+
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
+                      start_date=datetime.datetime.now(), hour='16', minute='48', day_of_week='tue')
+    scheduler.start()
