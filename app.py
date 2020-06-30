@@ -86,7 +86,7 @@ def returnJson():
 def do_everything(hero_name):
     output = []
     amount = 100
-    # asyncio.run(pro_request(hero_name, output, amount))
+    asyncio.run(pro_request(hero_name, output, amount))
     asyncio.run(main(get_urls(100, hero_name), hero_name))
     delete_output()
     start = time.time()
@@ -147,21 +147,21 @@ def opendota_call():
         for i in data['heroes']:
             names.append(i['name'])
         for name in names:
-            asyncio.run(pro_request(name, out, 100))
+            # asyncio.run(pro_request(name, out, 100))
             print('1st')
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for name in names:
-            asyncio.run(main(get_urls(100, name), name))
+            # asyncio.run(main(get_urls(100, name), name))
             delete_output()
-            time.sleep(60)
+            # time.sleep(60)
             print('second')
     print('end', datetime.datetime.now())
 
 
 scheduler = BackgroundScheduler()
 if __name__ == '__main__':
-    scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
-                      start_date=datetime.datetime.now(), hour='16', minute='10', day_of_week='tue')
-    scheduler.start()
+    # scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
+    #                   start_date=datetime.datetime.now(), hour='16', minute='16', day_of_week='tue')
+    # scheduler.start()
     app.run(debug=False)
