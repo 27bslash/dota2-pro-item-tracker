@@ -124,7 +124,7 @@
             {% endfor %}
           </div>
         </td>
-        <td class="stats" id="start_time">
+        <td data-sort ="{{dict_item['unix_time']}}" class="stats" id="start_time">
           {{dict_item['time_started']}}
         </td>
         <td class="stats" id="player-name">

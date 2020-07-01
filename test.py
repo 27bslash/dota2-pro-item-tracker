@@ -18,9 +18,6 @@ def flen():
         print(len(data))
 
 
-flen()
-
-
 def get_urls_from():
     names = []
     urls = []
@@ -85,3 +82,12 @@ def opendota_call():
             print('second')
     time.sleep(3)
     print('end')
+
+
+def get_info(m_id):
+    output = []
+    data = hero_urls.find_one({'id': m_id})
+    print(data['id'])
+
+
+get_info('https://www.opendota.com/matches/5493328261')

@@ -1,4 +1,3 @@
-<title>{{hero_name}}</title>
 {% extends 'search.html' %} {%block content%}
 <script>
   $(document).ready(function () {
@@ -20,129 +19,132 @@
       .on("mouseleave", function () {
         $(table.cells().nodes()).removeClass("highlight");
       });
-    document.getElementsByTagName("html")[0].style.visibility = "visible";
-    $(".item-table").DataTable({
-      aaSorting: [[4, "desc"]],
-      bfilter: false,
-      searching: false,
-    });
   });
 </script>
-<img
-  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
-/>
-<a href="/hero/{{hero_name}}">
+<title>{{hero_name}}</title>
+<div class="content" style="margin-top: 40px;">
   <img
-    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
-    height="50px"
-    title="Final Items"
+    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
   />
-</a>
-<table class="item-table stripe">
-  <thead>
-    <th class="stats" id="item-header">ITEMS</th>
-    <th class="stats">Player</th>
-    <th class="stats">LVL</th>
-    <th class="stats" id="kills">K</th>
-    <th class="stats" id="deaths">D</th>
-    <th class="stats" id="assists">A</th>
-    <th class="stats">CS</th>
-    <th class="stats" id="gold">NET</th>
-    <th class="stats" id="gpm">gpm</th>
-    <th class="stats" id="xpm">/xpm</th>
-    <th class="stats">HD</th>
-    <th class="stats">TD</th>
-    <th class="stats">Duration</th>
-    <th class="stats">mmr</th>
-  </thead>
-  <tbody class="item-table-body">
-    {% for dict_item in data %}
-    <tr class="item-row">
-      <td>
-        <div class="purchases">
-          {% for item in dict_item['starting_items'] %}
-          <div class="item-cell">
-            <a
-              href="https://www.opendota.com/matches/{{dict_item['id']}}"
-              target="_blank"
-            >
+  <a href="/hero/{{hero_name}}">
+    <img
+      title="Starter Items"
+      height="50px"
+      src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
+  /></a>
+  <table class="item-table stripe">
+    <thead>
+      <th class="stats" id="item-header">ITEMS</th>
+      <th class="stats"></th>
+      <th class="stats">Player</th>
+      <th class="stats">LVL</th>
+      <th class="stats" id="kills">K</th>
+      <th class="stats" id="deaths">D</th>
+      <th class="stats" id="assists">A</th>
+      <th class="stats">CS</th>
+      <th class="stats" id="gold">NET</th>
+      <th class="stats" id="gpm">gpm</th>
+      <th class="stats" id="xpm">/xpm</th>
+      <th class="stats">HD</th>
+      <th class="stats">TD</th>
+      <th class="stats">Duration</th>
+      <th class="stats">mmr</th>
+    </thead>
+    <tbody class="item-table-body">
+      {% for dict_item in data %}
+      <tr class="item-row">
+        <td>
+          <div class="purchases">
+            {% for item in dict_item['starting_items'] %}
+            <div class="item-cell">
+              <a
+                href="https://www.opendota.com/matches/{{dict_item['id']}}"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+                item.key
+              }}_lg.png"
+                  width="100"
+                  height="80"
+                />
+                <div class="overlay" style='background-color:inherit'></div></a
+              >
+            </div>
+            {% endfor %}
+          </div>
+          <div class="abilities">
+            {% for item in dict_item['abilities'] %}
+            <div class="ability-img-wrapper">
+              <strong
+                ><p style="color: white; text-align: center;">
+                  {{loop.index}}
+                </p></strong
+              >
               <img
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-              item.key
-            }}_lg.png"
-                width="100"
-                height="80"
+                class="ability"
+                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
+                width="55"
+                height="55"
+                data-tooltip="{{item.key}}"
+                title="{{item.key}}"
+                onerror="this.onerror=null;this.src='https://www.dotabuff.com/assets/skills/talent-4de3b26139290418b6d5c15d06719860a08d04d57a5ebc6c0ef30fce86cc8efb.jpg';"
               />
-              <div class="overlay" style="background-color: inherit;"></div>
-            </a>
+            </div>
+            {% endfor %}
           </div>
-          {%endfor%}
-        </div>
-        <div class="abilities">
-          {% for item in dict_item['abilities'] %}
-          <div class="ability-img-wrapper">
-            <strong
-              ><p style="color: white; text-align: center;">
-                {{loop.index}}
-              </p></strong
-            >
-            <img
-              class="ability"
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
-              width="55"
-              height="55"
-              data-tooltip="{{item.key}}"
-              title="{{item.key}}"
-              onerror="this.onerror=null;this.src='https://www.dotabuff.com/assets/skills/talent-4de3b26139290418b6d5c15d06719860a08d04d57a5ebc6c0ef30fce86cc8efb.jpg';"
-            />
-          </div>
-          {% endfor %}
-        </div>
-      </td>
-      <td class="stats" id="player-name">
-        <a href='http://www.dota2protracker.com/player/{{dict_item["name"]}}'>
-          {{dict_item['name']}}</a
+        </td>
+        <td
+          data-sort="{{dict_item['unix_time']}}"
+          class="stats"
+          id="start_time"
         >
-      </td>
-      <td class="stats" id="level">
-        {{dict_item['lvl']}}
-      </td>
-      <td class="stats" id="kills">
-        {{dict_item['kills']}}
-      </td>
-      <td class="stats" id="deaths">
-        {{dict_item['deaths']}}
-      </td>
-      <td class="stats" id="assists">
-        {{dict_item['assists']}}
-      </td>
-      <td class="stats" id="last-hits">
-        {{dict_item['last_hits']}}
-      </td>
-      <td class="stats" id="gold">
-        {{dict_item['gold']}}
-      </td>
-      <td class="stats" id="gpm">
-        {{dict_item['gpm']}}
-      </td>
-      <td class="stats" id="xpm">
-        /{{dict_item['xpm']}}
-      </td>
-      <td class="stats" id="hero-d">
-        {{dict_item['hero_damage']}}
-      </td>
-      <td class="stats" id="tower-d">
-        {{dict_item['tower_damage']}}
-      </td>
-      <td class="stats" id="duration">
-        {{dict_item['duration']}}
-      </td>
-      <td class="stats" id="mmr">
-        {{dict_item['mmr']}}
-      </td>
-    </tr>
-    {%endfor%}
-  </tbody>
-</table>
-
+          {{dict_item['time_started']}}
+        </td>
+        <td class="stats" id="player-name">
+          <a href='http://www.dota2protracker.com/player/{{dict_item["name"]}}'>
+            {{dict_item['name']}}</a
+          >
+        </td>
+        <td class="stats" id="level">
+          {{dict_item['lvl']}}
+        </td>
+        <td class="stats" id="kills">
+          {{dict_item['kills']}}
+        </td>
+        <td class="stats" id="deaths">
+          {{dict_item['deaths']}}
+        </td>
+        <td class="stats" id="assists">
+          {{dict_item['assists']}}
+        </td>
+        <td class="stats" id="last-hits">
+          {{dict_item['last_hits']}}
+        </td>
+        <td class="stats" id="gold">
+          {{dict_item['gold']}}
+        </td>
+        <td class="stats" id="gpm">
+          {{dict_item['gpm']}}
+        </td>
+        <td class="stats" id="xpm">
+          /{{dict_item['xpm']}}
+        </td>
+        <td class="stats" id="hero-d">
+          {{dict_item['hero_damage']}}
+        </td>
+        <td class="stats" id="tower-d">
+          {{dict_item['tower_damage']}}
+        </td>
+        <td class="stats" id="duration">
+          {{dict_item['duration']}}
+        </td>
+        <td class="stats" id="mmr">
+          {{dict_item['mmr']}}
+        </td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</div>
 {%endblock%}

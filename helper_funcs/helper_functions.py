@@ -5,6 +5,12 @@ from operator import itemgetter
 import datetime
 import time
 import math
+import pymongo
+import traceback
+cluster = pymongo.MongoClient(
+    'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
+db = cluster['pro-item-tracker']
+hero_urls = db['urls']
 
 
 def sort_dict(items):
@@ -81,22 +87,22 @@ def delete_dupes(d):
 
 def get_urls(amount, hero_name):
     urls = []
-    hero_name = pro_name(hero_name)
     print(hero_name)
-    with open(f"json_files/hero_urls/{hero_name}.json", 'r') as json_file:
-        data = json.load(json_file)
-        data = sorted(data, key=lambda i: i['mmr'], reverse=True)
+    try:
+        data = hero_urls.find({'hero': hero_name})
+    except Exception as e:
+        print('err', e)
+    # data = sorted(data, key=lambda i: i['mmr'], reverse=True)
+    with open('test.json', 'w') as f:
         for i in range(amount):
             try:
-                print(data[i]['id'])
                 m_id = data[i]['id']
-                m_id = re.sub(r"www", 'api', m_id)
-                m_id = re.sub(r"/matches/", '/api/matches/', m_id)
-                urls.append(m_id)
+                url = f'https://api.opendota.com/api/matches/{m_id}'
+                urls.append(url)
                 urls.reverse()
             except Exception as e:
-                print(e, e.__class__)
-        return urls
+                print(traceback.format_exc())
+    return urls
 
 
 def pro_name(hero_name):
