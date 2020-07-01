@@ -54,6 +54,7 @@ def post_req():
             print('invalid hero')
             return render_template('index.html')
 
+
 @app.route('/hero/<hero_name>')
 @app.route('/hero/<hero_name>', methods=['POST', 'GET'])
 @cache.cached(timeout=600)
@@ -134,10 +135,10 @@ def clean_name(h_name):
 
 async def request_shit(hero_name, output, amount):
     db_hero_name = hero_name.replace(' ', '_').lower()
-    try:
-        res = hero_urls.delete_many({'hero': db_hero_name})
-    except Exception as e:
-        print(traceback.format_exc())
+    # try:
+    #     res = hero_urls.delete_many({'hero': db_hero_name})
+    # except Exception as e:
+    #     print(traceback.format_exc())
     start = time.time()
     output = []
     print(output)
@@ -146,28 +147,25 @@ async def request_shit(hero_name, output, amount):
     url = 'http://www.dota2protracker.com/hero/'+hero_name
     async with aiohttp.ClientSession() as session:
         async with session.get(url=url) as response:
-            with open(f'json_files/hero_urls/{hero_name}.json', 'w') as outfile:
-                req = await response.text()
-                text = req
-                selector = Selector(text=text)
-                table = selector.xpath(
-                    '//*[@class="display compact"]//tbody//tr')
-                for i in reversed(range(len(table))):
-                    row = table[i]
-                    match_id = row.css('a::attr(href)').re(
-                        r".*opendota.*")[0]
-                    m_id = re.sub(r"\D", '', match_id)
-                    mmr = row.xpath('td')[4].css('::text').extract()[0]
-                    name = row.xpath('td')[1].css('::text').extract()[1]
-                    if match_id:
-                        print(hero_name, match_id, mmr)
-                        o = {'id': m_id, 'hero': db_hero_name,
-                             'name': name, 'mmr': mmr}
-                        output.append(o)
-                        hero_urls.insert_one(o)
-                end = time.time()
-                print('protracker', end-start, 'seconds')
-                output = []
+            req = await response.text()
+            text = req
+            selector = Selector(text=text)
+            table = selector.xpath(
+                '//*[@class="display compact"]//tbody//tr')
+            for i in reversed(range(len(table))):
+                row = table[i]
+                match_id = row.css('a::attr(href)').re(
+                    r".*opendota.*")[0]
+                m_id = re.sub(r"\D", '', match_id)
+                mmr = row.xpath('td')[4].css('::text').extract()[0]
+                name = row.xpath('td')[1].css('::text').extract()[1]
+                if match_id:
+                    print(hero_name, match_id, mmr)
+                    o = {'id': m_id, 'hero': db_hero_name,
+                         'name': name, 'mmr': mmr}
+                    hero_urls.insert_one(o)
+            end = time.time()
+            print('protracker', end-start, 'seconds')
 
 
 async def pro_request(hero_name, output, amount):

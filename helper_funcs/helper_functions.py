@@ -92,16 +92,15 @@ def get_urls(amount, hero_name):
         data = hero_urls.find({'hero': hero_name})
     except Exception as e:
         print('err', e)
-    # data = sorted(data, key=lambda i: i['mmr'], reverse=True)
-    with open('test.json', 'w') as f:
-        for i in range(amount):
-            try:
-                m_id = data[i]['id']
-                url = f'https://api.opendota.com/api/matches/{m_id}'
-                urls.append(url)
-                urls.reverse()
-            except Exception as e:
-                print(traceback.format_exc())
+    data = sorted(data, key=lambda i: i['mmr'], reverse=True)
+    for i in range(amount):
+        try:
+            m_id = data[i]['id']
+            url = f'https://api.opendota.com/api/matches/{m_id}'
+            urls.append(url)
+            urls.reverse()
+        except Exception as e:
+            print(e, e.__class__)
     return urls
 
 

@@ -12,7 +12,7 @@ scheduler = BlockingScheduler()
 if __name__ == '__main__':
     try:
         scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
-                          start_date=datetime.datetime.now(), hour='15', minute='45', day_of_week='wed')
+                          start_date=datetime.datetime.now(), hour='16', minute='35', day_of_week='wed')
         scheduler.start()
     except Exception as e:
         print(e, e.__class__)
