@@ -90,4 +90,16 @@ def get_info(m_id):
     print(data['id'])
 
 
-get_info('https://www.opendota.com/matches/5493328261')
+# get_info('https://www.opendota.com/matches/5493328261')
+
+
+def srt():
+    with open('test.json', 'r') as f:
+        data = json.load(f)
+        data.sort(key=itemgetter('unix_time'), reverse=False)
+        # print(data)
+        with open('out.json', 'w') as o:
+            json.dump(data, o, indent=4)
+
+
+srt()

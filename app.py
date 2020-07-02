@@ -13,7 +13,7 @@ import datetime
 import re
 import pymongo
 from pymongo import MongoClient
-
+from bson.json_util import dumps
 cluster = MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
 db = cluster['pro-item-tracker']
@@ -61,22 +61,20 @@ def post_req():
 def show_items(hero_name):
     f_name = hero_name.replace(' ', '_').replace('-', '_')
     f_name = hero_name.lower()
-    match_data = []
     time = []
-    data = hero_output.find({'hero': f_name})
     check_response = hero_output.find_one({'hero': f_name})
-    print(check_response)
     if check_response:
         match_data = find_hero(f_name)
     else:
         do_everything(hero_name)
         match_data = find_hero(f_name)
-    print(time)
+    # print(type(match_data), match_data[0]['unix_time'])
     # try:
     #     newlist = sorted(
     #         match_data, key=itemgetter('unix_time'))
     # except Exception as e:
     #     print(traceback.format_exc())
+    print('shw', time)
     return render_template('final_items.html', hero_img=clean_name(hero_name), hero_name=hero_name, data=match_data, time=90)
 
 
@@ -98,10 +96,9 @@ def redirect_page(hero_name):
 
 
 def find_hero(hero):
-    data = hero_output.find({'hero': hero})
+    data = hero_output.find({'hero': hero}).sort('unix_time', -1)
     check_response = hero_output.find_one({'hero': hero})
     match_data = []
-    print(check_response)
     for hero in data:
         match_data.append(hero)
     return match_data
@@ -135,10 +132,10 @@ def clean_name(h_name):
 
 async def request_shit(hero_name, output, amount):
     db_hero_name = hero_name.replace(' ', '_').lower()
-    # try:
-    #     res = hero_urls.delete_many({'hero': db_hero_name})
-    # except Exception as e:
-    #     print(traceback.format_exc())
+    try:
+        res = hero_urls.delete_many({'hero': db_hero_name})
+    except Exception as e:
+        print(traceback.format_exc())
     start = time.time()
     output = []
     print(output)

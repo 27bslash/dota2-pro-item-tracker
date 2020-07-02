@@ -83,7 +83,6 @@ def get_info(m_id, search, hero):
     print('get_info', m_id, type(m_id))
     try:
         data = hero_urls.find_one({'id': str(m_id), 'hero': hero})
-        print(data)
     except Exception as e:
         print(traceback.format_exc())
     return data[search]

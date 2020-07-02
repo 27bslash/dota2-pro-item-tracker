@@ -3,7 +3,24 @@
   $(document).ready(function () {
     document.getElementsByTagName("html")[0].style.visibility = "visible";
     let table = $(".item-table").DataTable({
-      aaSorting: [[4, "desc"]],
+      aoColumns: [
+        { bSortable: false },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+      ],
+      order: [[1, "desc"]],
       bfilter: false,
       searching: false,
     });
@@ -51,7 +68,7 @@
       <th class="stats">mmr</th>
     </thead>
     <tbody class="item-table-body">
-      {% for dict_item in data %}
+      {% for dict_item in data %} {{loop.index}}
       <tr class="item-row">
         <td>
           <div class="purchases">
@@ -124,7 +141,11 @@
             {% endfor %}
           </div>
         </td>
-        <td data-sort ="{{dict_item['unix_time']}}" class="stats" id="start_time">
+        <td
+          data-sort="{{dict_item['unix_time']}}"
+          class="stats"
+          id="start_time"
+        >
           {{dict_item['time_started']}}
         </td>
         <td class="stats" id="player-name">
