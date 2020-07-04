@@ -11,6 +11,7 @@ cluster = pymongo.MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
 db = cluster['pro-item-tracker']
 hero_urls = db['urls']
+hero_output = db['heroes']
 
 
 def sort_dict(items):
@@ -85,23 +86,31 @@ def delete_dupes(d):
     return result
 
 
+
 def get_urls(amount, hero_name):
     urls = []
-    print(hero_name)
-    try:
-        data = hero_urls.find({'hero': hero_name})
-    except Exception as e:
-        print('err', e)
-    data = sorted(data, key=lambda i: i['mmr'], reverse=True)
+    data = hero_urls.find({'hero': hero_name})
     for i in range(amount):
         try:
             m_id = data[i]['id']
-            url = f'https://api.opendota.com/api/matches/{m_id}'
-            urls.append(url)
+            urls.append(m_id)
             urls.reverse()
         except Exception as e:
             print(e, e.__class__)
     return urls
+
+
+def delete_old_urls():
+    data = hero_output.find().sort("unix_time")
+    for d in data:
+        time_since = time.time() - d["unix_time"]
+        # 8 days old
+        if time_since > 690000:
+            hero_output.find_one_and_delete({"id": d["id"]})
+            hero_urls.find_one_and_delete({"id": d["id"]})
+            print(f"Deleted {d['id']}")
+        else:
+            break
 
 
 def pro_name(hero_name):
@@ -140,12 +149,26 @@ def get_id(name):
         name = name.replace(' ', '_')
         with open('json_files/hero_ids.json') as json_file:
             data = json.load(json_file)
-            for i in range(len(data['heroes'])):
-                if name == data['heroes'][i]['name']:
-                    return data['heroes'][i]['id']
+            for hero in data['heroes']:
+                if name == hero['name']:
+                    return hero['id']
             return False
-    else:
-        return False
+    return False
+
+
+def get_hero_name(name):
+    heroes = []
+    if name:
+        name = name.lower()
+        name = name.replace(' ', '_')
+        with open('json_files/hero_ids.json') as json_file:
+            data = json.load(json_file)
+            for hero in data['heroes']:
+                if name in hero['name']:
+                    heroes.append(hero['name'])
+            print(heroes)
+            return heroes
+    return False
 
 
 def get_ability_name(arr):

@@ -65,3 +65,4 @@ const hideHeroes = () => {
     hero.classList.add("hide");
   }
 };
+

@@ -1,46 +1,15 @@
 import json
 from helper_funcs.helper_functions import *
 import time
+import pymongo
+from pymongo import MongoClient
 
 
-def test():
-    with open('opendota_output.json', 'r') as f:
-        data = json.load(f)
-        for item in data[0]['items']:
-            print(item['key'], item['time'])
-
-
-# test()
-
-def flen():
-    with open('json_files/hero_output/io.json', 'r') as f:
-        data = json.load(f)
-        print(len(data))
-
-
-def get_urls_from():
-    names = []
-    urls = []
-    with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
-        for i in data['heroes']:
-            names.append(i['name'])
-    for name in names:
-        name = pro_name(name)
-        with open(f"json_files/hero_urls/{name}.json") as f:
-            data = json.load(f)
-            data = sorted(data, key=lambda i: i['mmr'], reverse=True)
-            for i in range(6):
-                try:
-                    m_id = data[i]['id']
-                    m_id = re.sub(r"www", 'api', m_id)
-                    m_id = re.sub(r"/matches/", '/api/matches/', m_id)
-                    urls.append(m_id)
-                    urls.reverse()
-                except Exception as e:
-                    print(e, e.__class__)
-            print(name, urls)
-            urls = []
+cluster = pymongo.MongoClient(
+    'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
+db = cluster['pro-item-tracker']
+hero_urls = db['urls']
+hero_output = db['heroes']
 
 
 def opendota_call():
@@ -93,13 +62,41 @@ def get_info(m_id):
 # get_info('https://www.opendota.com/matches/5493328261')
 
 
-def srt():
-    with open('test.json', 'r') as f:
-        data = json.load(f)
-        data.sort(key=itemgetter('unix_time'), reverse=False)
-        # print(data)
-        with open('out.json', 'w') as o:
-            json.dump(data, o, indent=4)
+def t():
+    arr = [{'id': "5491385955"}, {'id': "5493042226"}, {
+        'id': "5492841514"}, {'id': "5492071872"}, {'id': "0"}]
+    for x in arr:
+        if hero_output.find_one(x):
+            print('hero')
 
 
-srt()
+def delete_py_dupes():
+    done = set()
+    result = []
+    d = hero_urls.find({'hero': 'mars'})
+    pipeline = [
+        {
+            "$group": {
+                "_id": {"hero": "$hero", 'id': '$id'},
+                "uniqueIds": {"$addToSet": "$_id"},
+                "count": {"$sum": 1}
+            }
+        },
+        {"$match": {"count": {"$gt": 1}}}
+    ]
+    ret = hero_urls.aggregate(pipeline)
+    result = list(ret)
+    lst = []
+    ids = []
+    for x in result:
+        o = {'hero': x['_id']['hero'], 'id': x['_id']
+             ['id'], 'count': x['count']}
+        lst.append(o)
+    for x in lst:
+        limit_test = hero_urls.find(
+            {'hero': x['hero'], 'id': x['id']}).limit(x['count'])
+        for l in limit_test:
+            ids.append(l)
+            hero_urls.delete_one({'_id': l['_id']})
+
+delete_py_dupes()

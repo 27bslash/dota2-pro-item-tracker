@@ -99,7 +99,23 @@
           class="stats"
           id="start_time"
         >
-          {{dict_item['time_started']}}
+        {%set seconds = time - dict_item['unix_time']%}
+        {%set hours = seconds/60/60 %}
+        {%if hours <= 1%}
+        {%set output = 'just now'%}
+        {%endif%}
+        {%if hours < 24 and hours > 1%}
+        {%set f = hours|round(0,'floor')|int%}
+        {%set output = f|string + ' hours ago'%}
+        {%endif%}
+        {%if hours < 48 and hours > 24%}
+        {%set output = '1 day ago'%}
+        {%endif%}
+        {%if hours >= 48%}
+        {%set t = hours/24%}
+        {%set round = t|round(0, 'floor')|int%} {%set output = round|string +' days ago'%}
+        {%endif%}
+        {{output}}
         </td>
         <td class="stats" id="player-name">
           <a href='http://www.dota2protracker.com/player/{{dict_item["name"]}}'>

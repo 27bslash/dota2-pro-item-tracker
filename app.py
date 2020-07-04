@@ -31,7 +31,6 @@ cache.init_app(app)
 @app.route('/', methods=['GET'])
 def hello():
     query = request.args.get('query')
-    print(query)
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         img_names = []
@@ -46,41 +45,46 @@ def hello():
 def post_req():
     if request.method == 'POST':
         text = request.form.get('t')
-        print(text, get_id(text))
-        if get_id(text):
-            # print('hero', get_id(text))
-            return redirect('/hero/'+text)
-        else:
-            print('invalid hero')
-            return render_template('index.html')
+        if get_hero_name(text):
+            suggestion = get_hero_name(text)
+            print('yuii', suggestion)
+            suggestion = sorted(suggestion)
+            print('yu', suggestion)
+            return redirect('/hero/'+suggestion[0])
 
 
 @app.route('/hero/<hero_name>')
-@app.route('/hero/<hero_name>', methods=['POST', 'GET'])
+@app.route('/hero/<hero_name>', methods=['GET'])
 @cache.cached(timeout=600)
 def show_items(hero_name):
     f_name = hero_name.replace(' ', '_').replace('-', '_')
     f_name = hero_name.lower()
-    time = []
     check_response = hero_output.find_one({'hero': f_name})
     if check_response:
         match_data = find_hero(f_name)
     else:
         do_everything(hero_name)
         match_data = find_hero(f_name)
-    # print(type(match_data), match_data[0]['unix_time'])
-    # try:
-    #     newlist = sorted(
-    #         match_data, key=itemgetter('unix_time'))
-    # except Exception as e:
-    #     print(traceback.format_exc())
-    print('shw', time)
-    return render_template('final_items.html', hero_img=clean_name(hero_name), hero_name=hero_name, data=match_data, time=90)
+    return render_template('final_items.html', hero_img=clean_name(hero_name), hero_name=hero_name, data=match_data, time=time.time())
 
 
-@app.route('/hero/<hero_name>/starter_items', methods=['POST', 'GET'])
+@app.route('/hero/<hero_name>/starter_items', methods=['POST'])
+@app.route('/hero/<hero_name>', methods=['POST'])
+def item_post(hero_name):
+    if request.method == 'POST':
+        text = request.form.get('t')
+        if get_hero_name(text):
+            suggestion = get_hero_name(text)
+            suggestion = sorted(suggestion)
+            print('shw-items', suggestion)
+            return redirect('/hero/'+suggestion[0])
+        else:
+            starter_items(hero_name)
+
+
+@app.route('/hero/<hero_name>/starter_items', methods=['GET'])
 @cache.cached(timeout=600)
-def redirect_page(hero_name):
+def starter_items(hero_name):
     print('get', request.referrer)
     f_name = hero_name.replace(' ', '_').replace('-', '_')
     f_name = hero_name.lower()
@@ -97,14 +101,13 @@ def redirect_page(hero_name):
 
 def find_hero(hero):
     data = hero_output.find({'hero': hero}).sort('unix_time', -1)
-    check_response = hero_output.find_one({'hero': hero})
     match_data = []
     for hero in data:
         match_data.append(hero)
     return match_data
 
 
-@app.route('/files/hero_ids')
+@ app.route('/files/hero_ids')
 def returnJson():
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
@@ -116,7 +119,7 @@ def do_everything(hero_name):
     amount = 100
     start = time.time()
     asyncio.run(pro_request(hero_name, output, amount))
-    asyncio.run(main(get_urls(20, hero_name), hero_name))
+    asyncio.run(main(get_urls(amount, hero_name), hero_name))
     delete_output()
     names = []
     end = time.time()
@@ -132,13 +135,8 @@ def clean_name(h_name):
 
 async def request_shit(hero_name, output, amount):
     db_hero_name = hero_name.replace(' ', '_').lower()
-    try:
-        res = hero_urls.delete_many({'hero': db_hero_name})
-    except Exception as e:
-        print(traceback.format_exc())
     start = time.time()
     output = []
-    print(output)
     base = 'http://www.dota2protracker.com/hero/'
     hero_name = pro_name(hero_name)
     url = 'http://www.dota2protracker.com/hero/'+hero_name
@@ -160,7 +158,8 @@ async def request_shit(hero_name, output, amount):
                     print(hero_name, match_id, mmr)
                     o = {'id': m_id, 'hero': db_hero_name,
                          'name': name, 'mmr': mmr}
-                    hero_urls.insert_one(o)
+                    if hero_urls.find_one({'hero': db_hero_name, 'id': m_id}) is None:
+                        hero_urls.insert_one(o)
             end = time.time()
             print('protracker', end-start, 'seconds')
 
@@ -172,6 +171,7 @@ async def pro_request(hero_name, output, amount):
 def opendota_call():
     names = []
     out = []
+    delete_old_urls()
     print('input')
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
@@ -185,13 +185,14 @@ def opendota_call():
         for name in names:
             asyncio.run(main(get_urls(100, name), name))
             delete_output()
-            time.sleep(60)
+            time.sleep(30)
             print('second')
     print('end', datetime.datetime.now())
 
 
+scheduler = BackgroundScheduler()
 if __name__ == '__main__':
-    # scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
-    #                   start_date=datetime.datetime.now(), hour='16', minute='16', day_of_week='tue')
-    # scheduler.start()
-    app.run(debug=True)
+    scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
+                      start_date=datetime.datetime.now(), hour='20', minute='16', second='40', day_of_week='mon-sun')
+    scheduler.start()
+    app.run(debug=False)
