@@ -71,12 +71,8 @@ async def main(urls, hero_name):
     ret = await asyncio.gather(*[async_get(url, hero_name) for url in urls])
 
 
-
 def get_info(m_id, search, hero):
-    try:
-        data = hero_urls.find_one({'id': str(m_id), 'hero': hero})
-    except Exception as e:
-        print(traceback.format_exc())
+    data = hero_urls.find_one({'id': str(m_id), 'hero': hero})
     return data[search]
 
 

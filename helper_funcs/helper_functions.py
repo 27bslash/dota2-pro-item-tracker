@@ -96,7 +96,7 @@ def get_urls(amount, hero_name):
             urls.append(m_id)
             urls.reverse()
         except Exception as e:
-            print(e, e.__class__)
+            pass
     return urls
 
 

@@ -60,6 +60,9 @@ def show_items(hero_name):
     f_name = hero_name.replace(' ', '_').replace('-', '_')
     f_name = hero_name.lower()
     check_response = hero_output.find_one({'hero': f_name})
+    # hero_output.delete_many({'hero': f_name})
+    # hero_urls.delete_many({'hero': f_name})
+    # do_everything(hero_name)
     if check_response:
         match_data = find_hero(f_name)
     else:
@@ -96,7 +99,7 @@ def starter_items(hero_name):
     else:
         do_everything(hero_name)
         match_data = find_hero(f_name)
-    return render_template('starter_items.html', hero_img=clean_name(hero_name), hero_name=hero_name, data=match_data)
+    return render_template('starter_items.html', hero_img=clean_name(hero_name), hero_name=hero_name, data=match_data, time=time.time())
 
 
 def find_hero(hero):
@@ -152,13 +155,16 @@ async def request_shit(hero_name, output, amount):
                 match_id = row.css('a::attr(href)').re(
                     r".*opendota.*")[0]
                 m_id = re.sub(r"\D", '', match_id)
-                mmr = row.xpath('td')[4].css('::text').extract()[0]
+                mmr = row.xpath('td')[5].css('::text').extract()[0]
                 name = row.xpath('td')[1].css('::text').extract()[1]
+                # print(mmr)
                 if match_id:
-                    print(hero_name, match_id, mmr)
+                    # print(hero_name, match_id, mmr)
                     o = {'id': m_id, 'hero': db_hero_name,
                          'name': name, 'mmr': mmr}
+                    # print(o)
                     if hero_urls.find_one({'hero': db_hero_name, 'id': m_id}) is None:
+                        # print(o)
                         hero_urls.insert_one(o)
             end = time.time()
             print('protracker', end-start, 'seconds')
@@ -171,6 +177,7 @@ async def pro_request(hero_name, output, amount):
 def opendota_call():
     names = []
     out = []
+    start = time.time()
     delete_old_urls()
     print('input')
     with open('json_files/hero_ids.json', 'r') as f:
@@ -187,12 +194,13 @@ def opendota_call():
             delete_output()
             time.sleep(30)
             print('second')
-    print('end', datetime.datetime.now())
+    end = time.time()
+    print('end', (end-start)/60, 'minutes')
 
 
-scheduler = BackgroundScheduler()
+# scheduler = BackgroundScheduler()
 if __name__ == '__main__':
-    scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
-                      start_date=datetime.datetime.now(), hour='20', minute='16', second='40', day_of_week='mon-sun')
-    scheduler.start()
+    # scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
+    #                   start_date=datetime.datetime.now(), hour='20', minute='16', second='40', day_of_week='mon-sun')
+    # scheduler.start()
     app.run(debug=False)
