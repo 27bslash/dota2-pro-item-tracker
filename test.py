@@ -73,7 +73,6 @@ def t():
 def delete_py_dupes():
     done = set()
     result = []
-    d = hero_urls.find({'hero': 'mars'})
     pipeline = [
         {
             "$group": {
@@ -99,4 +98,10 @@ def delete_py_dupes():
             ids.append(l)
             hero_urls.delete_one({'_id': l['_id']})
 
-delete_py_dupes()
+
+def update_mmr():
+    urls = hero_urls.find()
+    for item in urls:
+        hero_output.find_one_and_update({'hero': item['hero'], 'id': item['id']}, {
+                                        '$set': {'mmr': item['mmr']}})
+

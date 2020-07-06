@@ -14,6 +14,8 @@ import re
 import pymongo
 from pymongo import MongoClient
 from bson.json_util import dumps
+
+
 cluster = MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
 db = cluster['pro-item-tracker']
@@ -62,7 +64,7 @@ def show_items(hero_name):
     check_response = hero_output.find_one({'hero': f_name})
     # hero_output.delete_many({'hero': f_name})
     # hero_urls.delete_many({'hero': f_name})
-    # do_everything(hero_name)
+    # opendota_call()
     if check_response:
         match_data = find_hero(f_name)
     else:
