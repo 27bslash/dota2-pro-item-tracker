@@ -5,8 +5,8 @@ import traceback
 from helper_funcs.helper_functions import *
 import pymongo
 from pymongo import MongoClient
-output = []
 
+output = []
 cluster = MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
 db = cluster['pro-item-tracker']
@@ -16,6 +16,7 @@ hero_output = db['heroes']
 async def async_get(m_id, hero_name):
     url = f'https://api.opendota.com/api/matches/{m_id}'
     check = hero_output.find_one({'hero': hero_name, 'id': m_id})
+    print(check, url)
     if check is None:
         try:
             async with aiohttp.ClientSession() as session:

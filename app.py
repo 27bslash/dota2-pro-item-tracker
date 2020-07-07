@@ -55,23 +55,6 @@ def post_req():
             return redirect('/hero/'+suggestion[0])
 
 
-@app.route('/hero/<hero_name>')
-@app.route('/hero/<hero_name>', methods=['GET'])
-@cache.cached(timeout=600)
-def show_items(hero_name):
-    f_name = hero_name.replace(' ', '_').replace('-', '_')
-    f_name = hero_name.lower()
-    check_response = hero_output.find_one({'hero': f_name})
-    # hero_output.delete_many({'hero': f_name})
-    # hero_urls.delete_many({'hero': f_name})
-    # opendota_call()
-    if check_response:
-        match_data = find_hero(f_name)
-    else:
-        do_everything(hero_name)
-        match_data = find_hero(f_name)
-    return render_template('final_items.html', hero_img=clean_name(hero_name), hero_name=hero_name, data=match_data, time=time.time())
-
 
 @app.route('/hero/<hero_name>/starter_items', methods=['POST'])
 @app.route('/hero/<hero_name>', methods=['POST'])
@@ -88,9 +71,13 @@ def item_post(hero_name):
 
 
 @app.route('/hero/<hero_name>/starter_items', methods=['GET'])
+@app.route('/hero/<hero_name>', methods=['GET'])
 @cache.cached(timeout=600)
 def starter_items(hero_name):
-    print('get', request.referrer)
+    print('get', request.url)
+    template = 'final_items.html'
+    if 'starter_items' in request.url:
+        template = 'starter_items.html'
     f_name = hero_name.replace(' ', '_').replace('-', '_')
     f_name = hero_name.lower()
     match_data = []
@@ -101,7 +88,7 @@ def starter_items(hero_name):
     else:
         do_everything(hero_name)
         match_data = find_hero(f_name)
-    return render_template('starter_items.html', hero_img=clean_name(hero_name), hero_name=hero_name, data=match_data, time=time.time())
+    return render_template(template, hero_img=clean_name(hero_name), hero_name=hero_name, data=match_data, time=time.time())
 
 
 def find_hero(hero):
@@ -112,7 +99,7 @@ def find_hero(hero):
     return match_data
 
 
-@ app.route('/files/hero_ids')
+@app.route('/files/hero_ids')
 def returnJson():
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
@@ -123,7 +110,7 @@ def do_everything(hero_name):
     output = []
     amount = 100
     start = time.time()
-    asyncio.run(pro_request(hero_name, output, amount))
+    asyncio.run(pro_request(hero_name))
     asyncio.run(main(get_urls(amount, hero_name), hero_name))
     delete_output()
     names = []
@@ -138,10 +125,9 @@ def clean_name(h_name):
     return h_name
 
 
-async def request_shit(hero_name, output, amount):
+async def request_shit(hero_name):
     db_hero_name = hero_name.replace(' ', '_').lower()
     start = time.time()
-    output = []
     base = 'http://www.dota2protracker.com/hero/'
     hero_name = pro_name(hero_name)
     url = 'http://www.dota2protracker.com/hero/'+hero_name
@@ -161,7 +147,7 @@ async def request_shit(hero_name, output, amount):
                 name = row.xpath('td')[1].css('::text').extract()[1]
                 # print(mmr)
                 if match_id:
-                    # print(hero_name, match_id, mmr)
+                    print(hero_name, match_id, mmr)
                     o = {'id': m_id, 'hero': db_hero_name,
                          'name': name, 'mmr': mmr}
                     # print(o)
@@ -172,13 +158,12 @@ async def request_shit(hero_name, output, amount):
             print('protracker', end-start, 'seconds')
 
 
-async def pro_request(hero_name, output, amount):
-    ret = await asyncio.gather(request_shit(hero_name, output, amount))
+async def pro_request(names):
+    ret = await asyncio.gather(*[request_shit(hero_name, output, amount) for hero_name in names])
 
 
 def opendota_call():
     names = []
-    out = []
     start = time.time()
     delete_old_urls()
     print('input')
@@ -186,9 +171,9 @@ def opendota_call():
         data = json.load(f)
         for i in data['heroes']:
             names.append(i['name'])
-        for name in names:
-            asyncio.run(pro_request(name, out, 100))
-            print('1st')
+        strt = time.perf_counter()
+        asyncio.run(pro_request(names))
+        print('1st', time.perf_counter() - strt)
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for name in names:
@@ -203,6 +188,6 @@ def opendota_call():
 # scheduler = BackgroundScheduler()
 if __name__ == '__main__':
     # scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
-    #                   start_date=datetime.datetime.now(), hour='20', minute='16', second='40', day_of_week='mon-sun')
+    #                   start_date=datetime.datetime.now(), hour='15', minute='55', second='40', day_of_week='mon-sun')
     # scheduler.start()
-    app.run(debug=False)
+    app.run(debug=True)
