@@ -1,5 +1,4 @@
 import os
-import requests
 from flask import Flask, render_template, request, url_for, redirect
 from flask_caching import Cache
 from parsel import Selector
@@ -13,7 +12,6 @@ import datetime
 import re
 import pymongo
 from pymongo import MongoClient
-from bson.json_util import dumps
 
 
 cluster = MongoClient(
@@ -31,7 +29,7 @@ cache.init_app(app)
 
 
 @app.route('/', methods=['GET'])
-def hello():
+def index():
     query = request.args.get('query')
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
@@ -44,7 +42,7 @@ def hello():
 
 
 @app.route('/', methods=['POST'])
-def post_req():
+def ind_post():
     if request.method == 'POST':
         text = request.form.get('t')
         if get_hero_name(text):
@@ -53,13 +51,17 @@ def post_req():
             suggestion = sorted(suggestion)
             print('yu', suggestion)
             return redirect('/hero/'+suggestion[0])
-
+        else:
+            return redirect('/')
 
 
 @app.route('/hero/<hero_name>/starter_items', methods=['POST'])
 @app.route('/hero/<hero_name>', methods=['POST'])
 def item_post(hero_name):
     if request.method == 'POST':
+        starter = ''
+        if 'starter_items' in request.url:
+            starter = '/starter_items'
         text = request.form.get('t')
         if get_hero_name(text):
             suggestion = get_hero_name(text)
@@ -67,13 +69,13 @@ def item_post(hero_name):
             print('shw-items', suggestion)
             return redirect('/hero/'+suggestion[0])
         else:
-            starter_items(hero_name)
+            return redirect(f'/hero/{hero_name}{starter}')
 
 
 @app.route('/hero/<hero_name>/starter_items', methods=['GET'])
 @app.route('/hero/<hero_name>', methods=['GET'])
 @cache.cached(timeout=600)
-def starter_items(hero_name):
+def item_get(hero_name):
     print('get', request.url)
     template = 'final_items.html'
     if 'starter_items' in request.url:
@@ -180,7 +182,6 @@ def opendota_call():
             asyncio.run(main(get_urls(100, name), name))
             delete_output()
             time.sleep(30)
-            print('second')
     end = time.time()
     print('end', (end-start)/60, 'minutes')
 
@@ -190,4 +191,4 @@ if __name__ == '__main__':
     # scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
     #                   start_date=datetime.datetime.now(), hour='15', minute='55', second='40', day_of_week='mon-sun')
     # scheduler.start()
-    app.run(debug=True)
+    app.run(debug=False)
