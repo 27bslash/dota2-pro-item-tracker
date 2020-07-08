@@ -55,11 +55,11 @@ async def async_get(m_id, hero_name):
                                     p['duration'] = 0
                                 hero_output.insert_one(
                                     {'time_started': get_time(p['start_time']), 'unix_time': p['start_time'], 'hero': hero_name, 'duration': p['duration'],
-                                     'name': get_info(match_id, 'name', hero_name), 'mmr': get_info(match_id, 'mmr', hero_name),
+                                     'name': get_info(match_id, 'name', hero_name), 'role': get_info(match_id, 'role', hero_name), 'mmr': get_info(match_id, 'mmr', hero_name),
                                      'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
                                      'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
                                      'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'],
-                                     'role': p['lane'], 'win': p['win'], 'id': match_id,
+                                     'win': p['win'], 'id': match_id,
                                      'starting_items': starting_items,
                                      'final_items': main_items, 'backpack': bp_items, 'item_neutral': get_item_name(p['item_neutral']),
                                      'abilities': get_ability_name(abilities), 'items': purchase_log})

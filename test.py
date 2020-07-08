@@ -99,9 +99,9 @@ def delete_py_dupes():
             hero_urls.delete_one({'_id': l['_id']})
 
 
-def update_mmr():
+def update_db():
     urls = hero_urls.find()
     for item in urls:
         hero_output.find_one_and_update({'hero': item['hero'], 'id': item['id']}, {
-                                        '$set': {'mmr': item['mmr']}})
+                                        '$set': {'role': item['role']}})
 
