@@ -235,9 +235,9 @@ def opendota_call():
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for name in names:
-        asyncio.run(main(get_urls(100, name), name))
-        delete_output()
-        time.sleep(30)
+            asyncio.run(main(get_urls(100, name), name))
+            delete_output()
+            time.sleep(30)
     print('end', (time.time()-start)/60, 'minutes')
 
 
