@@ -49,6 +49,20 @@
       height="50px"
       src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
   /></a>
+  <div class="pick-counter" style="display: flex;">
+    <p id="hero-name">
+      <strong style="text-transform: capitalize;">{{hero_name}}</strong>
+    </p>
+    <p style="color: white;">
+      was picked {{total}} times. It's mostly played:
+    </p>
+    {%for k,v in roles.items()%} {% if v > 0%}
+    <a href="/hero/{{hero_name}}?role={{k}}">
+      <p class="total-picks">{{k}} ({{v}}){{"," if not loop.last else "." }}</p>
+    </a>
+    {%endif%} {%endfor%}
+  </div>
+  </div>
   <table class="item-table stripe">
     <thead>
       <th class="stats" id="item-header">ITEMS</th>
