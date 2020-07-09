@@ -57,7 +57,7 @@
       was picked {{total}} times. It's mostly played:
     </p>
     {%for k,v in roles.items()%} {% if v > 0%}
-    <a href="/hero/{{hero_name}}?role={{k}}">
+    <a href="/hero/{{hero_name}}/starter_items?role={{k}}">
       <p class="total-picks">{{k}} ({{v}}){{"," if not loop.last else "." }}</p>
     </a>
     {%endif%} {%endfor%}
