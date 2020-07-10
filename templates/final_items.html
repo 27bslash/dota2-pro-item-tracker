@@ -43,7 +43,9 @@
   <img
     src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
   />
-  <a href="/hero/{{hero_name}}/starter_items">
+  <a
+    onclick="window.location = '/hero/{{hero_name}}/starter_items'+window.location.search;"
+  >
     <img
       title="Starter Items"
       height="50px"
