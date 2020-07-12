@@ -1,18 +1,17 @@
+import datetime
 import os
-from flask import Flask, render_template, request, url_for, redirect
-from flask_caching import Cache
-from parsel import Selector
+import re
+import threading
 import time
 from operator import itemgetter
-import threading
+import pymongo
+from apscheduler.schedulers.background import BackgroundScheduler
+from flask import Flask, redirect, render_template, request, url_for
+from flask_caching import Cache
+from parsel import Selector
+from pymongo import MongoClient
 from helper_funcs.helper_functions import *
 from opendota_api import *
-from apscheduler.schedulers.background import BackgroundScheduler
-import datetime
-import re
-import pymongo
-from pymongo import MongoClient
-
 
 cluster = MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
@@ -79,6 +78,7 @@ def item_get(hero_name):
     match_data = []
     f_name = hero_name.replace(' ', '_').replace('-', '_')
     f_name = hero_name.lower()
+    display_name = hero_name.replace('_', ' ').capitalize()
     total = 0
     template = 'final_items.html'
     if 'starter_items' in request.url:
@@ -112,61 +112,71 @@ def item_get(hero_name):
     for k in list(roles.keys()):
         if roles[k] <= 0:
             del roles[k]
-    return render_template(template, hero_img=clean_name(hero_name), hero_name=hero_name, data=match_data, time=time.time(), total=total, roles=roles)
+    get_hero_name_colour(hero_name)
+    return render_template(template, hero_img = clean_name(hero_name), display_name = display_name, hero_name = hero_name, data = match_data,
+                           time = time.time(), total = total, hero_colour = get_hero_name_colour(hero_name), roles = roles)
 
 
 def find_hero(hero):
-    data = hero_output.find({'hero': hero}).sort('unix_time', -1)
-    match_data = []
+    data=hero_output.find({'hero': hero}).sort('unix_time', -1)
+    match_data=[]
     for hero in data:
         match_data.append(hero)
     return match_data
 
 
-@app.route('/cron')
+def get_hero_name_colour(hero_name):
+    with open('json_files/hero_colours.json', 'r') as f:
+        data=json.load(f)
+        for item in data:
+            if item['hero'] == hero_name:
+                return tuple(item['color'])
+
+
+@ app.route('/cron')
 def cron():
     return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
 
-@app.route('/files/hero_ids')
+@ app.route('/files/hero_ids')
 def returnJson():
     with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
+        data=json.load(f)
         return data
 
 
 def do_everything(hero_name):
-    output = []
-    amount = 100
-    start = time.time()
+    output=[]
+    amount=100
+    start=time.time()
     asyncio.run(single_request(hero_name))
     asyncio.run(main(get_urls(amount, hero_name), hero_name))
     delete_output()
-    names = []
-    end = time.time()
+    names=[]
+    end=time.time()
     print("Took {} seconds to pull {} websites.".format(end - start, amount))
 
 
 def clean_name(h_name):
-    h_name = h_name.replace(' ', '_')
-    h_name = h_name.lower()
-    h_name = switcher(h_name)
+    h_name=h_name.replace(' ', '_')
+    h_name=h_name.lower()
+    h_name=switcher(h_name)
     return h_name
 
 
 async def request_shit(hero_name):
-    db_hero_name = hero_name.replace(' ', '_').lower()
-    start = time.time()
-    base = 'http://www.dota2protracker.com/hero/'
-    hero_name = pro_name(hero_name)
-    url = 'http://www.dota2protracker.com/hero/'+hero_name
+    db_hero_name=hero_name.replace(' ', '_').lower()
+    start=time.time()
+    base='http://www.dota2protracker.com/hero/'
+    hero_name=pro_name(hero_name)
+    url='http://www.dota2protracker.com/hero/'+hero_name
     print(url)
     async with aiohttp.ClientSession() as session:
-        async with session.get(url=url) as response:
-            req = await response.text()
-            text = req
-            selector = Selector(text=text)
-            table = selector.xpath(
+        async with session.get(url = url) as response:
+            req=await response.text()
+            text=req
+            selector=Selector(text = text)
+            table=selector.xpath(
                 '//*[@class="display compact"]//tbody//tr')
             for i in reversed(range(len(table))):
                 row = table[i]
@@ -237,7 +247,7 @@ def opendota_call():
         for name in names:
             asyncio.run(main(get_urls(100, name), name))
             delete_output()
-            time.sleep(30)
+            time.sleep(60)
     print('end', (time.time()-start)/60, 'minutes')
 
 
