@@ -7,11 +7,15 @@ import time
 import math
 import pymongo
 import traceback
+import requests
+
+
 cluster = pymongo.MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
 db = cluster['pro-item-tracker']
 hero_urls = db['urls']
 hero_output = db['heroes']
+parse = db['parse']
 
 
 def sort_dict(items):
@@ -86,7 +90,6 @@ def delete_dupes(d):
     return result
 
 
-
 def get_urls(amount, hero_name):
     urls = []
     data = hero_urls.find({'hero': hero_name})
@@ -97,7 +100,26 @@ def get_urls(amount, hero_name):
             urls.reverse()
         except Exception as e:
             pass
+    print(urls)
     return urls
+
+
+def parse_request():
+    print('run')
+    data = parse.find({})
+    for match in data:
+        print(match)
+        url = f"https://api.opendota.com/api/request/{match['id']}"
+        try:
+            requests.post(url)
+            print('hero')
+        except Exception as e:
+            print(e)
+        print('delete', match['id'])
+        parse.delete_one({'id': match['id']})
+
+
+parse_request()
 
 
 def delete_old_urls():
@@ -107,7 +129,7 @@ def delete_old_urls():
         # 8 days old
         if time_since > 690000:
             hero_output.find_one_and_delete({"id": d["id"]})
-            hero_urls.find_one_and_delete({"id": d["id"]})
+            hero_urls.delete_many({"id": d["id"]})
             print(f"Deleted {d['id']}")
         else:
             break
@@ -171,6 +193,21 @@ def get_hero_name(name):
     return False
 
 
+# def get_ability_name(arr):
+#     abilityArr = []
+#     for a_id in arr:
+#         with open('json_files/ability_ids.json', 'r')as f:
+#             data = json.load(f)
+#             key = str(a_id)
+#             with open('json_files/final.json', 'r') as f:
+#                 mData = json.load(f)
+#             abilityArr.append(
+#                 {'key': mData[data[key]], 'img': data[key]})
+#             sli = slice(0, 19)
+#             abilityArr = abilityArr[sli]
+#         return abilityArr
+
+
 def get_ability_name(arr):
     abilityArr = []
     for a_id in arr:
@@ -179,8 +216,15 @@ def get_ability_name(arr):
             key = str(a_id)
             with open('json_files/final.json', 'r') as f:
                 mData = json.load(f)
-            abilityArr.append(
-                {'key': mData[data[key]], 'img': data[key]})
+                if key in data.keys():
+                    ability_name = mData[data[key]]
+                    ability_img = data[key]
+                    o = {'key': ability_name, 'img': ability_img}
+                    abilityArr.append(
+                        {'key': mData[data[key]], 'img': data[key]})
+                else:
+                    abilityArr.append(
+                        {'key': '', 'img': 'null'})
             sli = slice(0, 19)
             abilityArr = abilityArr[sli]
     return abilityArr
