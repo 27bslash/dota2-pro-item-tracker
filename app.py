@@ -266,6 +266,7 @@ def manual_hero_update(name):
 
 # scheduler = BackgroundScheduler()
 if __name__ == '__main__':
+    pass
     # opendota_call()
     # manual_hero_update('venomancer')
     # scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',

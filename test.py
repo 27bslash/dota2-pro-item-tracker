@@ -8,7 +8,7 @@ from app import *
 from colorthief import ColorThief
 from opendota_api import *
 from parsel import Selector
-
+from collections import Counter, OrderedDict
 
 cluster = pymongo.MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
@@ -223,3 +223,80 @@ def rename_id():
 
 def fix_roles():
     data = hero_output.delete_many({'role': None})
+
+
+black_lst = ['ward_sentry', 'ward_observer', 'clarity', 'tpscroll',
+             'enchanted_mango', 'smoke_of_deceit', 'tango', 'faerie_fire', 'tome_of_knowledge', 'healing_salve', None]
+
+
+def count_occurences():
+    item_lst = []
+    data = hero_output.find({'hero': 'undying'})
+    for d in data:
+        # dic = [k['key'] for k in d['items'] if k.get('key')]
+        for item in d['final_items']:
+            if item['key'] not in consumable_lst:
+                item_lst.append(item['key'])
+    print(Counter(item_lst))
+
+
+# count_occurences()
+def steam_api_test(name):
+    non_pro = db['non-pro']
+    data = non_pro.find({'hero': name})
+    urls = []
+    for d in data:
+        url = f'https://api.steampowered.com/IDOTA2Match_570/GetMatchDetails/V001/?match_id={d["id"]}&key=7AB24C983C1696305C8D6CF64EF4EB43'
+        urls.append(url)
+    return urls
+
+
+final_items = []
+
+
+async def get_steam(url, hero_name):
+    most_common = db['most-common-items']
+    check = most_common.find_one({'hero': hero_name})
+    print(url)
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url=url) as response:
+                resp = await response.json()
+                print(response.status)
+                m_id = resp['result']['match_id']
+                print(m_id)
+                if m_id:
+                    players = resp['result']['players']
+                    for player in players:
+                        hero_id = player['hero_id']
+                        # print(hero_id,get_id(hero_name))
+                        if hero_id == get_id(hero_name):
+                            final_items.append(get_item_name(player['item_0']))
+                            final_items.append(get_item_name(player['item_1']))
+                            final_items.append(get_item_name(player['item_2']))
+                            final_items.append(get_item_name(player['item_3']))
+                            final_items.append(get_item_name(player['item_4']))
+                            final_items.append(get_item_name(player['item_5']))
+                            sd = list(filter(
+                                lambda x: x not in black_lst, final_items))
+        if check:
+            # print(final_items)
+            counter = dict(Counter(sd))
+            srt = dict(sorted(counter.items(), reverse=True))
+            sd = dict(sorted(counter.items(), key = itemgetter(1), reverse=True))
+            most_common.find_one_and_update(
+                {'hero': hero_name}, {'$set': {'final_items': sd}})
+        else:
+            most_common.insert_one(
+                {'hero': hero_name, 'final_items': final_items})
+    except Exception as e:
+        print(traceback.format_exc())
+        pass
+
+
+async def test(urls, name):
+    print(len(urls))
+    await asyncio.gather(*[get_steam(url, name) for url in urls])
+
+
+# asyncio.run(test(steam_api_test('sniper'), 'sniper'))

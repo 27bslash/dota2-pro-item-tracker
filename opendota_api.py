@@ -119,9 +119,8 @@ async def async_get(m_id, hero_name):
 def roles(s, p_slot):
     # use lane_role with lane
     # radiant safe lane is always lane 1 for dire it's lane 3
-    # just compare efficiency of
-    # or take eff arr top 3 are core then label according to lane
-    # convert dire lanes 1 to 3 fuck this while fucntion is fucked lul
+    # take eff arr top 3 are core then label according to lane
+    # convert dire lanes 1 to 3
     sen_count = [0, 0]
     start = 5
     end = 10
@@ -154,8 +153,6 @@ def roles(s, p_slot):
     # print('side',is_radiant,side)
     eff = sorted(side[0], key=lambda x: x[2], reverse=True)
     sen = sorted(side[0], key=lambda x: x[3], reverse=True)
-    print(eff)
-
     for i, player in enumerate(eff):
         # print('pro_player slot: ', p_slot, player[4], 'lane: ',player[0], i)
         # print('p', player[0], i)
@@ -166,23 +163,17 @@ def roles(s, p_slot):
         lane_eff = player[2]
         if i < 3:
             role = 'core'
-            print(lane_eff, role)
         if p_slot == sen[0][4]:
-            print('hard')
             return 'Hard Support'
         elif p_slot == slot and is_roaming:
             return 'Roaming'
         elif p_slot == slot and lane == 2 and role == 'core':
-            print('mid')
             return 'Midlane'
         elif lane == 3 and p_slot == slot and role == 'core':
-            print('retard gaming', lane_eff)
             return 'Offlane'
         elif p_slot == slot and lane == 1 and role == 'core':
-            print('safe')
             return 'Safelane'
         elif lane == 3 and p_slot == player[4] and role is not 'core':
-            print(4)
             return 'Support'
 
 

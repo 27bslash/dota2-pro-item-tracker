@@ -4,23 +4,25 @@
     document.getElementsByTagName("html")[0].style.visibility = "visible";
     let table = $(".item-table").DataTable({
       aoColumns: [
+        { orderSequence: ["desc", "asc"] },
         { bSortable: false },
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["asc", "desc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["asc", "desc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
       ],
-      order: [[1, "desc"]],
+      order: [[0, "asc"]],
+      order: [[2, "desc"]],
       bfilter: false,
       searching: false,
     });
@@ -40,19 +42,25 @@
 </script>
 <title>{{hero_name}}</title>
 <div class="content" style="margin-top: 40px;">
-  <img
-    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
-  />
-  <a onclick="window.location = '/hero/{{hero_name}}'+window.location.search;">
+  <a href="/hero/{{hero_name}}">
+    <img
+      src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
+  /></a>
+  <a
+    class="view-changer"
+    onclick="window.location = '/hero/{{hero_name}}'+window.location.search;"
+  >
     <img
       title="Starter Items"
       height="50px"
       src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
   /></a>
   <div class="pick-counter" style="display: flex;">
-    <p id="hero-name" style="color: rgb{{hero_colour}}; ">
-      <strong style="text-transform: capitalize;">{{hero_name}}</strong>
-    </p>
+    <a href="/hero/{{hero_name}}">
+      <p id="hero-name" style="color: rgb{{hero_colour}};">
+        <strong style="text-transform: capitalize;">{{display_name}}</strong>
+      </p></a
+    >
     <p style="color: white;">
       was picked {{total}} times. It's mostly played:
     </p>
@@ -62,9 +70,9 @@
     </a>
     {%endif%} {%endfor%}
   </div>
-  </div>
   <table class="item-table stripe">
     <thead>
+      <th class="stats" id="win"></th>
       <th class="stats" id="item-header">ITEMS</th>
       <th class="stats"></th>
       <th class="stats">Player</th>
@@ -84,6 +92,11 @@
     <tbody class="item-table-body">
       {% for dict_item in data %}
       <tr class="item-row">
+        {%if dict_item['win'] == 1%}
+        <td data-sort="{{dict_item['win']}}" id="win-cell"></td>
+        {%endif%} {%if dict_item['win'] == 0%}
+        <td data-sort="{{dict_item['win']}}" id="loss-cell"></td>
+        {%endif%}
         <td>
           <div class="purchases">
             {% for item in dict_item['starting_items'] %}
@@ -93,6 +106,7 @@
                 target="_blank"
               >
                 <img
+                  class="table-img"
                   src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
                 item.key
               }}_lg.png"
@@ -112,13 +126,14 @@
                 </p></strong
               >
               <img
-                class="ability"
+                class="table-img"
+                id="ability-img"
                 src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
                 width="55"
                 height="55"
                 data-tooltip="{{item.key}}"
                 title="{{item.key}}"
-                onerror="this.onerror=null;this.src='https://www.dotabuff.com/assets/skills/talent-4de3b26139290418b6d5c15d06719860a08d04d57a5ebc6c0ef30fce86cc8efb.jpg';"
+                onerror="this.onerror=null;this.src='../../static/talent_img.png';"
               />
             </div>
             {% endfor %}

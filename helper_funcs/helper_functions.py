@@ -119,20 +119,21 @@ def parse_request():
         parse.delete_one({'id': match['id']})
 
 
-parse_request()
-
-
 def delete_old_urls():
     data = hero_output.find().sort("unix_time")
     for d in data:
         time_since = time.time() - d["unix_time"]
         # 8 days old
         if time_since > 690000:
-            hero_output.find_one_and_delete({"id": d["id"]})
-            hero_urls.delete_many({"id": d["id"]})
+            hero_output.delete_many({"id": {"$lt": d["id"]}})
+            hero_urls.delete_many({"id": {"$lt": d["id"]}})
+            db['non-pro'].delete_many({'id': {"$lt": d["id"]}})
             print(f"Deleted {d['id']}")
         else:
             break
+
+
+delete_old_urls()
 
 
 def pro_name(hero_name):

@@ -19,14 +19,36 @@ import json
 #         json.dump(arr, outfile, indent=4)
 
 arr = []
-with open('mega-abilities.json', 'r') as f:
+d = {}
+with open('json_files/mega-abilities.json', 'r') as f:
     data = json.load(f)
     for key in data:
+        # print(key)
         try:
-            print(data[key]['dname'])
-            arr.append({key: data[key]['dname']})
+            # print(data[key]['language']['displayName'])
+            arr.append({data[key]['name']: data[key]
+                        ['language']['displayName']})
+            d.update({data[key]['name']: data[key]['language']['displayName']})
         except Exception as e:
             print(e, e.__class__)
 print(arr)
-with open('final.json', 'w') as output:
+with open('json_files/stratz.json', 'w') as output:
     json.dump(arr, output, indent=4)
+    
+#stratz version
+# arr = []
+# d = {}
+# with open('json_files/stratz-abilities.json', 'r') as f:
+#     data = json.load(f)
+#     for key in data:
+#         # print(key)
+#         try:
+#             # print(data[key]['language']['displayName'])
+#             arr.append({data[key]['name']: data[key]
+#                         ['language']['displayName']})
+#             d.update({data[key]['name']: data[key]['language']['displayName']})
+#         except Exception as e:
+#             print(e, e.__class__)
+# print(arr)
+# with open('json_files/stratz.json', 'w') as output:
+#     json.dump(arr, output, indent=4)
