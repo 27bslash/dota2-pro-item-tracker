@@ -125,15 +125,16 @@ def delete_old_urls():
         time_since = time.time() - d["unix_time"]
         # 8 days old
         if time_since > 690000:
-            hero_output.delete_many({"id": {"$lt": d["id"]}})
-            hero_urls.delete_many({"id": {"$lt": d["id"]}})
-            db['non-pro'].delete_many({'id': {"$lt": d["id"]}})
+            try:
+                hero_output.delete_many({'id': {"$lte": int(d["id"])}})
+                hero_urls.delete_many({'id': {"$lte": int(d["id"])}})
+                db['non-pro'].delete_many({'id': {"$lte": int(d["id"])}})
+            except Exception as e:
+                print(traceback.format_exc())
             print(f"Deleted {d['id']}")
         else:
             break
 
-
-delete_old_urls()
 
 
 def pro_name(hero_name):
@@ -211,24 +212,27 @@ def get_hero_name(name):
 
 def get_ability_name(arr):
     abilityArr = []
-    for a_id in arr:
-        with open('json_files/ability_ids.json', 'r')as f:
-            data = json.load(f)
-            key = str(a_id)
-            with open('json_files/final.json', 'r') as f:
-                mData = json.load(f)
-                if key in data.keys():
-                    ability_name = mData[data[key]]
-                    ability_img = data[key]
-                    o = {'key': ability_name, 'img': ability_img}
-                    abilityArr.append(
-                        {'key': mData[data[key]], 'img': data[key]})
-                else:
-                    abilityArr.append(
-                        {'key': '', 'img': 'null'})
-            sli = slice(0, 19)
-            abilityArr = abilityArr[sli]
-    return abilityArr
+    try:
+        for a_id in arr:
+            with open('json_files/ability_ids.json', 'r')as f:
+                data = json.load(f)
+                key = str(a_id)
+                with open('json_files/final.json', 'r') as f:
+                    mData = json.load(f)
+                    if key in data.keys():
+                        ability_name = mData[data[key]]
+                        ability_img = data[key]
+                        o = {'key': ability_name, 'img': ability_img}
+                        abilityArr.append(
+                            {'key': mData[data[key]], 'img': data[key]})
+                    else:
+                        abilityArr.append(
+                            {'key': '', 'img': 'null'})
+                sli = slice(0, 19)
+                abilityArr = abilityArr[sli]
+        return abilityArr
+    except Exception as e:
+        print(arr)
 
 
 def get_item_name(item_id):

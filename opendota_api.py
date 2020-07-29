@@ -50,7 +50,7 @@ async def async_get(m_id, hero_name):
             async with aiohttp.ClientSession() as session:
                 async with session.get(url=url) as response:
                     resp = await response.json()
-                    match_id = str(resp['match_id'])
+                    match_id = int(resp['match_id']))
                     print(f"successfully got {match_id}")
                     starting_items = []
                     main_items = []
@@ -147,7 +147,7 @@ def roles(s, p_slot):
         lane_eff = s[i][2]
         sen_placed = s[i][3]
         slot = s[i][4]
-        roles = [lane, gpm, lane_eff, sen_placed, slot,s[i][5]]
+        roles = [lane, gpm, lane_eff, sen_placed, slot, s[i][5]]
         p_roles.append(roles)
     side.append(p_roles)
     # print('side',is_radiant,side)
@@ -194,7 +194,9 @@ def get_info(m_id, search, hero):
 
 def delete_output():
     global output
+    global final_items
     output = []
+    final_items = []
 
 
 # asyncio.run(main('x', 'zeus'))
