@@ -50,7 +50,7 @@ async def async_get(m_id, hero_name):
             async with aiohttp.ClientSession() as session:
                 async with session.get(url=url) as response:
                     resp = await response.json()
-                    match_id = int(resp['match_id']))
+                    match_id = int(resp['match_id'])
                     print(f"successfully got {match_id}")
                     starting_items = []
                     main_items = []
