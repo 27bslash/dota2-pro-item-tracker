@@ -188,15 +188,11 @@ async def get_acc_ids(urls, hero_name):
 
 def get_info(m_id, search, hero):
     print(m_id, search, hero)
-    data = hero_urls.find_one({'id': str(m_id), 'hero': hero})
+    data = hero_urls.find_one({'id': m_id, 'hero': hero})
     return data[search]
 
 
-def delete_output():
-    global output
-    global final_items
-    output = []
-    final_items = []
+
 
 
 # asyncio.run(main('x', 'zeus'))
