@@ -12,6 +12,8 @@ from parsel import Selector
 from pymongo import MongoClient
 from helper_funcs.helper_functions import *
 from opendota_api import *
+from test import *
+import itertools
 
 cluster = MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
@@ -25,7 +27,6 @@ cache = Cache(config={
     'CACHE_TYPE': 'simple'
 })
 cache.init_app(app)
-
 
 
 @app.route('/', methods=['GET'])
@@ -47,9 +48,7 @@ def ind_post():
         text = request.form.get('t')
         if get_hero_name(text):
             suggestion = get_hero_name(text)
-            print('yuii', suggestion)
             suggestion = sorted(suggestion)
-            print('yu', suggestion)
             return redirect('/hero/'+suggestion[0])
         else:
             return redirect('/')
@@ -62,11 +61,10 @@ def item_post(hero_name):
         starter = ''
         if 'starter_items' in request.url:
             starter = '/starter_items'
-        text = request.form.get('t')
+        text = request.form.get('search')
         if get_hero_name(text):
             suggestion = get_hero_name(text)
             suggestion = sorted(suggestion)
-            print('shw-items', suggestion)
             return redirect('/hero/'+suggestion[0])
         else:
             return redirect(f'/hero/{hero_name}{starter}')
@@ -97,27 +95,30 @@ def item_get(hero_name):
     if check_response:
         match_data = find_hero(f_name)
         total = len(match_data)
+        if request.args:
+            match_data = []
+            role = request.args.get('role').replace('%20', ' ').title()
+            data = hero_output.find(
+                {'hero': f_name, 'role': role}).sort('unix_time', -1)
+            for hero in data:
+                print(hero['role'])
+                match_data.append(hero)
+        roles = {k: v for k, v in sorted(
+            roles.items(), key=lambda item: item[1], reverse=True)}
+        for k in list(roles.keys()):
+            if roles[k] <= 0:
+                del roles[k]
+        get_hero_name_colour(hero_name)
+        common = time.perf_counter()
+        final_items = []
+        # most_used = most_common.find_one({'hero': hero_name})
+        most_used = pro_items(match_data)
+        most_used = dict(itertools.islice(most_used.items(), 10))
+        max_val = list(most_used.values())[0]
+        return render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
+                               time=time.time(), total=total, hero_colour=get_hero_name_colour(hero_name), roles=roles)
     else:
-        do_everything(hero_name)
-        match_data = find_hero(f_name)
-        total = len(match_data)
-    if request.args:
-        match_data = []
-        role = request.args.get('role').replace('%20', ' ').title()
-        data = hero_output.find(
-            {'hero': f_name, 'role': role}).sort('unix_time', -1)
-        for hero in data:
-            print(hero['role'])
-            match_data.append(hero)
-    roles = {k: v for k, v in sorted(
-        roles.items(), key=lambda item: item[1], reverse=True)}
-    print(roles)
-    for k in list(roles.keys()):
-        if roles[k] <= 0:
-            del roles[k]
-    get_hero_name_colour(hero_name)
-    return render_template(template, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
-                           time=time.time(), total=total, hero_colour=get_hero_name_colour(hero_name), roles=roles)
+        return render_template(template, hero_name=hero_name, hero_img=clean_name(hero_name),display_name=display_name ,data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
 
 
 def find_hero(hero):
@@ -129,10 +130,13 @@ def find_hero(hero):
 
 
 def get_hero_name_colour(hero_name):
+    colours = []
     with open('json_files/hero_colours.json', 'r') as f:
         data = json.load(f)
         for item in data:
             if item['hero'] == hero_name:
+                # colours.append(tuple(item['color']))
+
                 return tuple(item['color'])
 
 
@@ -153,8 +157,7 @@ def do_everything(hero_name):
     amount = 100
     start = time.time()
     asyncio.run(single_request(hero_name))
-    asyncio.run(main(get_urls(amount, hero_name), hero_name))
-    delete_output()
+    asyncio.run(main(get_urls(hero_name), hero_name))
     names = []
     end = time.time()
     print("Took {} seconds to pull {} websites.".format(end - start, amount))
@@ -237,6 +240,8 @@ def opendota_call():
     names = []
     start = time.time()
     delete_old_urls()
+    # loop = asyncio.get_event_loop()
+    db['most-common-items'].delete_many({'hero': 'anti-mage'})
     print('input')
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
@@ -248,27 +253,27 @@ def opendota_call():
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for name in names:
-            asyncio.run(main(get_urls(100, name), name))
+            asyncio.run(main(get_urls(name), name))
+            # loop.run_until_complete(
+            #     test(steam_api_test(name), name))
+            # sync(steam_api_test(name),name)
             time.sleep(60)
+            # delete_output()
             pass
     parse_request()
     print('end', (time.time()-start)/60, 'minutes')
-    
 
 
 def manual_hero_update(name):
     hero_output.delete_many({'hero': name})
     # hero_urls.delete_many({'hero': name})
     # asyncio.run(single_request(name))
-    asyncio.run(main(get_urls(100, name), name))
-
+    asyncio.run(main(get_urls(name), name))
 
 
 # scheduler = BackgroundScheduler()
 if __name__ == '__main__':
-    pass
     # opendota_call()
-    # manual_hero_update('venomancer')
     # scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
     #                   start_date=datetime.datetime.now(), hour='15', minute='55', second='40', day_of_week='mon-sun')
     # scheduler.start()

@@ -8,7 +8,7 @@ import math
 import pymongo
 import traceback
 import requests
-
+from collections import Counter
 
 cluster = pymongo.MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
@@ -90,18 +90,37 @@ def delete_dupes(d):
     return result
 
 
-def get_urls(amount, hero_name):
+def get_urls(hero_name):
     urls = []
     data = hero_urls.find({'hero': hero_name})
-    for i in range(amount):
+    for match in data:
         try:
-            m_id = data[i]['id']
+            m_id = match['id']
             urls.append(m_id)
             urls.reverse()
         except Exception as e:
             pass
     print(urls)
     return urls
+
+
+def pro_items(match_data):
+    item_lst = []
+    sd = []
+    data = match_data
+    black_lst = ['ward_sentry', 'ward_observer', 'clarity', 'tpscroll',
+                 'enchanted_mango', 'smoke_of_deceit', 'tango', 'faerie_fire', 'tome_of_knowledge', 'healing_salve', None]
+    print('smoke_of_deceit' in black_lst)
+    for i, x in enumerate(data):
+        # print(i,x)
+        for item in x['final_items']:
+            if item not in black_lst:
+                item_lst.append(item['key'])
+                counter = dict(Counter(item_lst))
+                sd = dict(sorted(counter.items(),
+                                 key=itemgetter(1), reverse=True))
+    print('pro', sd)
+    return sd
 
 
 def parse_request():
@@ -134,7 +153,6 @@ def delete_old_urls():
             print(f"Deleted {d['id']}")
         else:
             break
-
 
 
 def pro_name(hero_name):

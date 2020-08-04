@@ -16,6 +16,7 @@ db = cluster['pro-item-tracker']
 hero_urls = db['urls']
 hero_output = db['heroes']
 account_ids = db['account_ids']
+most_common = db['most-common-items']
 
 
 def get_imgs():
@@ -172,7 +173,7 @@ def delete_py_dupes():
         },
         {"$match": {"count": {"$gt": 1}}}
     ]
-    ret = hero_urls.aggregate(pipeline)
+    ret = hero_output.aggregate(pipeline)
     result = list(ret)
     lst = []
     ids = []
@@ -181,11 +182,11 @@ def delete_py_dupes():
              ['id'], 'count': x['count']}
         lst.append(o)
     for x in lst:
-        limit_test = hero_urls.find(
+        limit_test = hero_output.find(
             {'hero': x['hero'], 'id': x['id']}).limit(x['count'])
         for l in limit_test:
             ids.append(l)
-            hero_urls.delete_one({'_id': l['_id']})
+            hero_output.delete_one({'_id': l['_id']})
 
 
 def update_db():
@@ -222,11 +223,10 @@ def rename_id():
 
 
 def fix_roles():
-    data = hero_output.delete_many({'role': None})
+    data = hero_urls.delete_many({'mmr': "0"})
 
 
-black_lst = ['ward_sentry', 'ward_observer', 'clarity', 'tpscroll',
-             'enchanted_mango', 'smoke_of_deceit', 'tango', 'faerie_fire', 'tome_of_knowledge', 'healing_salve', None]
+
 
 
 def count_occurences():
@@ -251,52 +251,102 @@ def steam_api_test(name):
     return urls
 
 
-final_items = []
+sem = asyncio.Semaphore(64)
 
 
-async def get_steam(url, hero_name):
-    most_common = db['most-common-items']
-    check = most_common.find_one({'hero': hero_name})
-    print(url)
+async def get_steam(url, hero_name, final_items, total):
+    # print(url,hero_name)
     try:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(url=url) as response:
-                resp = await response.json()
-                print(response.status)
-                m_id = resp['result']['match_id']
-                print(m_id)
-                if m_id:
-                    players = resp['result']['players']
-                    for player in players:
-                        hero_id = player['hero_id']
-                        # print(hero_id,get_id(hero_name))
-                        if hero_id == get_id(hero_name):
-                            final_items.append(get_item_name(player['item_0']))
-                            final_items.append(get_item_name(player['item_1']))
-                            final_items.append(get_item_name(player['item_2']))
-                            final_items.append(get_item_name(player['item_3']))
-                            final_items.append(get_item_name(player['item_4']))
-                            final_items.append(get_item_name(player['item_5']))
-                            sd = list(filter(
-                                lambda x: x not in black_lst, final_items))
-        if check:
-            # print(final_items)
-            counter = dict(Counter(sd))
-            srt = dict(sorted(counter.items(), reverse=True))
-            sd = dict(sorted(counter.items(), key = itemgetter(1), reverse=True))
-            most_common.find_one_and_update(
-                {'hero': hero_name}, {'$set': {'final_items': sd}})
-        else:
-            most_common.insert_one(
-                {'hero': hero_name, 'final_items': final_items})
+        if most_common.find_one({'hero': hero_name}) is None:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(url=url) as response:
+                    resp = await response.json()
+                    m_id = resp['result']['match_id']
+                    # print(response.status)
+                    if m_id:
+                        players = resp['result']['players']
+                        for player in players:
+                            hero_id = player['hero_id']
+                            # print(hero_id,get_id(hero_name))
+                            if hero_id == get_id(hero_name):
+                                final_items.append(
+                                    get_item_name(player['item_0']))
+                                final_items.append(
+                                    get_item_name(player['item_1']))
+                                final_items.append(
+                                    get_item_name(player['item_2']))
+                                final_items.append(
+                                    get_item_name(player['item_3']))
+                                final_items.append(
+                                    get_item_name(player['item_4']))
+                                final_items.append(
+                                    get_item_name(player['item_5']))
+                                sd = list(filter(
+                                    lambda x: x not in black_lst, final_items))
+            if most_common.find_one({'hero': hero_name}):
+                counter = dict(Counter(sd))
+                srt = dict(sorted(counter.items(), reverse=True))
+                sd = dict(sorted(counter.items(),
+                                 key=itemgetter(1), reverse=True))
+                most_common.find_one_and_update(
+                    {'hero': hero_name}, {'$set': {'total': total, 'final_items': sd}})
+            else:
+                print('insert')
+                try:
+                    most_common.insert_one(
+                        {'hero': hero_name, 'total': total, 'final_items': sd})
+                    print('inserted')
+                except Exception as e:
+                    print(e, 'insertion err')
     except Exception as e:
-        print(traceback.format_exc())
+        # print(traceback.format_exc())
         pass
 
 
+async def limit_download(url, hero_name, final_items, total):
+    async with sem:
+        return await get_steam(url, hero_name, final_items, total)
+
+
 async def test(urls, name):
+    print('urllen', len(urls))
+    final_items = []
+    # await asyncio.gather(*tasks)
+    await asyncio.gather(*[limit_download(url, name, final_items, len(urls))for url in urls])
+
+
+def convert_to_int():
+    data = hero_urls.find({})
+    for x in data:
+        hero_urls.find_one_and_update(
+            {'id': x['id']}, {"$set": {'id': int(x['id'])}})
+
+
+def sync(urls, name):
     print(len(urls))
-    await asyncio.gather(*[get_steam(url, name) for url in urls])
+    for i, url in enumerate(urls):
+        res = requests.get(url)
+        print(res.status_code, i)
 
 
-# asyncio.run(test(steam_api_test('sniper'), 'sniper'))
+
+
+def uptime_tester():
+    names = []
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for hero in data['heroes']:
+            names.append(hero['name'])
+    for name in names:
+        try:
+            res = requests.get(f'https://dota2-item-tracker.herokuapp.com/hero/{name}')
+            if res.status_code != 200:
+                print(res.status_code, name)
+        except Exception as e:
+            print(e, 'err')
+
+
+if __name__ == '__main__':
+    # pro_items()
+    fix_roles()
+    # uptime_tester()

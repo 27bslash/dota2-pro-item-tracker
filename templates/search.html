@@ -1,5 +1,10 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <html lang="en">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
       ;
@@ -20,19 +25,21 @@
     />
   </head>
   <body>
-    <div class="navbar">
+    <nav>
+    <div class="navbar" role='navigation'>
       <div id="home">
         <a href="/"><button class="home-button">HOME</button></a>
       </div>
       <div class="form-container">
-        <form method="POST" action="">
+        <form aria-label="search-bar" method="POST" action="">
           <div class="search-container">
             <input
               id="search"
               type="text"
-              name="t"
+              name="search"
               placeholder="Search.."
               autocomplete="off"
+              role='search'
             />
           </div>
           <div class="suggestions">
@@ -41,6 +48,7 @@
         </form>
       </div>
     </div>
+  </nav>
     {%block content%} {%endblock%}
     <script src="{{ url_for('static', filename='autocomplete.js') }}"></script>
   </body>

@@ -41,195 +41,227 @@
   });
 </script>
 <title>{{hero_name}}</title>
-<div class="content" style="margin-top: 40px;">
-  <a href="/hero/{{hero_name}}">
-    <img
-      src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
-  /></a>
-  <a
-    class="view-changer"
-    onclick="window.location = '/hero/{{hero_name}}/starter_items'+window.location.search;"
-  >
-    <img
-      title="Starter Items"
-      height="50px"
-      src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/tango_lg.png"
-  /></a>
-  <div class="pick-counter" style="display: flex;">
+<main>
+  <div class="content" style="margin-top: 40px;">
     <a href="/hero/{{hero_name}}">
-      <p id="hero-name" style="color: rgb{{hero_colour}};">
-        <strong style="text-transform: capitalize;">{{display_name}}</strong>
-      </p></a
+      <img
+        src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
+        alt='main {{hero_name}}'
+    /></a>
+    <a
+      class="view-changer"
+      onclick="window.location = '/hero/{{hero_name}}/starter_items'+window.location.search;"
     >
-    <p style="color: white;">
-      was picked {{total}} times. It's mostly played:
-    </p>
-    {%for k,v in roles.items()%} {% if v > 0%}
-    <a href="/hero/{{hero_name}}?role={{k}}">
-      <p class="total-picks">{{k}} ({{v}}){{"," if not loop.last else "." }}</p>
-    </a>
-    {%endif%} {%endfor%}
-  </div>
-  <table class="item-table stripe">
-    <thead>
-      <th class="stats" id="win"></th>
-      <th class="stats" id="item-header">ITEMS</th>
-      <th class="stats"></th>
-      <th class="stats">Player</th>
-      <th class="stats">LVL</th>
-      <th class="stats" id="kills">K</th>
-      <th class="stats" id="deaths">D</th>
-      <th class="stats" id="assists">A</th>
-      <th class="stats">CS</th>
-      <th class="stats" id="gold">NET</th>
-      <th class="stats" id="gpm">gpm</th>
-      <th class="stats" id="xpm">/xpm</th>
-      <th class="stats">HD</th>
-      <th class="stats">TD</th>
-      <th class="stats">Duration</th>
-      <th class="stats">mmr</th>
-    </thead>
-    <tbody class="item-table-body">
-      {% for dict_item in data %}
-      <tr class="item-row">
-        {%if dict_item['win'] == 1%}
-        <td data-sort="{{dict_item['win']}}" id="win-cell"></td>
-        {%endif%} {%if dict_item['win'] == 0%}
-        <td data-sort="{{dict_item['win']}}" id="loss-cell"></td>
-        {%endif%}
-        <td>
-          <div class="purchases">
-            {% for item in dict_item['final_items'] %}
-            <div class="item-cell">
-              <a
-                href="https://www.opendota.com/matches/{{dict_item['id']}}"
-                target="_blank"
-              >
-                <img
-                  class="table-img"
-                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-                item.key
-              }}_lg.png"
-                  width="100"
-                  height="80"
-                />
-                <div class="overlay">{{item.time}}</div></a
-              >
-            </div>
-            {% endfor %} {% for item in dict_item['backpack'] %}
-            <div class="item-cell">
-              <a
-                href="https://www.opendota.com/matches/{{dict_item['id']}}"
-                target="_blank"
-              >
-                <img
-                  class="table-img"
-                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-                item.key
-              }}_lg.png"
-                  width="100"
-                  height="80"
-                />
-                <div class="overlay">{{item.time}}</div></a
-              >
-            </div>
-            {% endfor %}
-            <div class="item-cell">
-              {%if dict_item['item_neutral'] != None%}
-              <a
-                href="https://www.opendota.com/matches/{{dict_item['id']}}"
-                target="_blank"
-              >
-                <img
-                  class="table-img"
-                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{dict_item['item_neutral']}}_lg.png"
-                  width="100"
-                  height="80" />
-                <div class="overlay"></div
-              ></a>
-              {%endif%}
-            </div>
-          </div>
-          <div class="abilities">
-            {% for item in dict_item['abilities'] %}
-            <div class="ability-img-wrapper">
-              <strong
-                ><p style="color: white; text-align: center;">
-                  {{loop.index}}
-                </p></strong
-              >
-              <img
-                class="table-img"
-                id="ability-img"
-                src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
-                width="55"
-                height="55"
-                data-tooltip="{{item.key}}"
-                title="{{item.key}}"
-                onerror="this.onerror=null;this.src='../static/talent_img.png';"
-              />
-            </div>
-            {% endfor %}
-          </div>
-        </td>
-        <td
-          data-sort="{{dict_item['unix_time']}}"
-          class="stats"
-          id="start_time"
-        >
-          {%set seconds = time - dict_item['unix_time']%} {%set hours =
-          seconds/60/60 %} {%if hours <= 1%} {%set output = 'just now'%}
-          {%endif%} {%if hours < 24 and hours > 1%} {%set f =
-          hours|round(0,'floor')|int%} {%set output = f|string + ' hours ago'%}
-          {%endif%} {%if hours < 48 and hours > 24%} {%set output = '1 day
-          ago'%} {%endif%} {%if hours >= 48%} {%set t = hours/24%} {%set round =
-          t|round(0, 'floor')|int%} {%set output = round|string +' days ago'%}
-          {%endif%} {{output}}
-        </td>
-        <td class="stats" id="player-name">
-          <a href='http://www.dota2protracker.com/player/{{dict_item["name"]}}'>
-            {{dict_item['name']}}</a
-          >
-        </td>
-        <td class="stats" id="level">
-          {{dict_item['lvl']}}
-        </td>
-        <td class="stats" id="kills">
-          {{dict_item['kills']}}
-        </td>
-        <td class="stats" id="deaths">
-          {{dict_item['deaths']}}
-        </td>
-        <td class="stats" id="assists">
-          {{dict_item['assists']}}
-        </td>
-        <td class="stats" id="last-hits">
-          {{dict_item['last_hits']}}
-        </td>
-        <td class="stats" id="gold">
-          {{dict_item['gold']}}
-        </td>
-        <td class="stats" id="gpm">
-          {{dict_item['gpm']}}
-        </td>
-        <td class="stats" id="xpm">
-          /{{dict_item['xpm']}}
-        </td>
-        <td class="stats" id="hero-d">
-          {{dict_item['hero_damage']}}
-        </td>
-        <td class="stats" id="tower-d">
-          {{dict_item['tower_damage']}}
-        </td>
-        <td class="stats" id="duration">
-          {{dict_item['duration']}}
-        </td>
-        <td class="stats" id="mmr">
-          {{dict_item['mmr']}}
-        </td>
-      </tr>
+      <img
+        title="Starter Items"
+        height="50px"
+        src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/tango_lg.png"
+        alt='show starter items'
+    /></a>
+    {%if most_used%}
+    <div class="most-used-wrapper">
+      {%for key,value in most_used.items()%} {%set hue = 360/value/max*100%} {%
+      set s = value/max*100%} {% set saturation = s|round(0,'ceil')|int %} {%
+      set round = hue|round(0, 'ceil')|int%}
+      <div class="most-used-row">
+        <img
+          class="most-used-item"
+          src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+            key
+          }}_lg.png"
+          width="50"
+          height="40"
+          alt='{{key}}'
+        />
+        <div class="bar" style= "background-color: hsl(120, 100%,25%, {{saturation}}%);width:{{value/max * 80}}%;">
+          <p class="bar-value">{{value}}</p>
+        </div>
+      </div>
       {%endfor%}
-    </tbody>
-  </table>
-</div>
+    </div>{%endif%}
+    <div class="pick-counter" style="display: flex;">
+      <a href="/hero/{{hero_name}}">
+        <p id="hero-name" style="color: rgb{{hero_colour}};">
+          <strong style="text-transform: capitalize;">{{display_name}}</strong>
+        </p></a
+      >
+      <p style="color: white;">
+        was picked {{total}} times. It's mostly played:
+      </p>
+      {%for k,v in roles.items()%} {% if v > 0%}
+      <a href="/hero/{{hero_name}}?role={{k}}">
+        <p class="total-picks">
+          {{k}} ({{v}}){{"," if not loop.last else "." }}
+        </p>
+      </a>
+      {%endif%} {%endfor%}
+    </div>
+    <table role="main" class="item-table stripe">
+      <thead>
+        <th class="stats" id="win"></th>
+        <th class="stats" id="item-header">ITEMS</th>
+        <th class="stats">PLAYED</th>
+        <th class="stats">PLAYER</th>
+        <th class="stats">LVL</th>
+        <th class="stats" id="kills">K</th>
+        <th class="stats" id="deaths">D</th>
+        <th class="stats" id="assists">A</th>
+        <th class="stats">CS</th>
+        <th class="stats" id="gold">NET</th>
+        <th class="stats" id="gpm">GPM</th>
+        <th class="stats" id="xpm">/XPM</th>
+        <th class="stats">HD</th>
+        <th class="stats">TD</th>
+        <th class="stats">LENGTH</th>
+        <th class="stats">MMR</th>
+      </thead>
+      <tbody class="item-table-body">
+        {% for dict_item in data %}
+        <tr class="item-row">
+          {%if dict_item['win'] == 1%}
+          <td data-sort="{{dict_item['win']}}" id="win-cell"></td>
+          {%endif%} {%if dict_item['win'] == 0%}
+          <td data-sort="{{dict_item['win']}}" id="loss-cell"></td>
+          {%endif%}
+          <td>
+            <a
+              href="https://www.opendota.com/matches/{{data[loop.index0]['id']}}"
+              target="_blank"
+            >
+              <div class="purchases">
+                {% for item in dict_item['final_items'] %}
+                <div class="item-cell">
+                  <img
+                    class="item-img"
+                    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+                item.key
+              }}_lg.png"
+                    width="100"
+                    height="80"
+                    alt="{{item.key}}"
+                  />
+                  <div class="overlay" aria-label="{{item.time}}">
+                    {{item.time}}
+                  </div>
+                </div>
+                {% endfor %} {% for item in dict_item['backpack'] %}
+                <div class="item-cell">
+                  <img
+                    class="item-img"
+                    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+                item.key
+              }}_lg.png"
+                    width="100"
+                    height="80"
+                    alt="{{item.key}}"
+                  />
+                  <div class="overlay" aria-label="{{item.time}}">
+                    {{item.time}}
+                  </div>
+                </div>
+                {% endfor %}
+                <div class="neutral-cell">
+                  {%if dict_item['item_neutral'] != None%}
+                  <div class="circle">
+                    <img
+                    id='neutral-item'
+                      class="item-img"
+                      id="neutral-item"
+                      src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{dict_item['item_neutral']}}_lg.png"
+                      width="100"
+                      height="80"
+                      alt="{{dict_item['item_neutral']}}"
+                    />
+                  </div>
+                </div>
+                  <!-- <div class="overlay" id="neutral-overlay"></div> -->
+                  {%endif%}
+                </div>
+              </div>
+            </a>
+            <div class="abilities">
+              {% for item in dict_item['abilities'] %}
+              <div class="ability-img-wrapper">
+                <strong
+                  ><p style="color: white; text-align: center;">
+                    {{loop.index}}
+                  </p></strong
+                >
+                <img
+                  class="table-img"
+                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
+                  width="55"
+                  height="55"
+                  data-tooltip="{{item.key}}"
+                  title="{{item.key}}"
+                  onerror="this.onerror=null;this.src='../static/talent_img.png';"
+                  alt="{{item.key}}"
+                />
+              </div>
+              {% endfor %}
+            </div>
+          </td>
+          <td
+            data-sort="{{dict_item['unix_time']}}"
+            class="stats"
+            id="start_time"
+          >
+            {%set seconds = time - dict_item['unix_time']%} {%set hours =
+            seconds/60/60 %} {%if hours <= 1%} {%set output = 'Just Now'%}
+            {%endif%} {%if hours < 24 and hours > 1%} {%set f =
+            hours|round(0,'floor')|int%} {%set output = f|string + ' Hours
+            Ago'%} {%endif%} {%if hours < 48 and hours > 24%} {%set output = '1
+            Day Ago'%} {%endif%} {%if hours >= 48%} {%set t = hours/24%} {%set
+            round = t|round(0, 'floor')|int%} {%set output = round|string +'
+            Days Ago'%} {%endif%} {{output}}
+          </td>
+          <td class="stats" id="player-name">
+            <a
+              href='http://www.dota2protracker.com/player/{{dict_item["name"]}}'
+            >
+              {{dict_item['name']}}</a
+            >
+          </td>
+          <td class="stats" id="level">
+            {{dict_item['lvl']}}
+          </td>
+          <td class="stats" id="kills">
+            {{dict_item['kills']}}
+          </td>
+          <td class="stats" id="deaths">
+            {{dict_item['deaths']}}
+          </td>
+          <td class="stats" id="assists">
+            {{dict_item['assists']}}
+          </td>
+          <td class="stats" id="last-hits">
+            {{dict_item['last_hits']}}
+          </td>
+          <td class="stats" id="gold">
+            {{dict_item['gold']}}
+          </td>
+          <td class="stats" id="gpm">
+            {{dict_item['gpm']}}
+          </td>
+          <td class="stats" id="xpm">
+            /{{dict_item['xpm']}}
+          </td>
+          <td class="stats" id="hero-d">
+            {{dict_item['hero_damage']}}
+          </td>
+          <td class="stats" id="tower-d">
+            {{dict_item['tower_damage']}}
+          </td>
+          <td class="stats" id="duration">
+            {{dict_item['duration']}}
+          </td>
+          <td class="stats" id="mmr">
+            {{dict_item['mmr']}}
+          </td>
+        </tr>
+        {%endfor%}
+      </tbody>
+    </table>
+  </div>
+</main>
 {%endblock%}
