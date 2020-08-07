@@ -164,11 +164,20 @@ a {
 }
 .most-used-wrapper {
   width: 20%;
+  display: inline-flexbox;
+}
+.most-used {
   height: 25vh;
   display: grid;
   overflow: auto;
   grid-row-gap: 2px;
-  /* grid-auto-columns: auto; */
+  -webkit-transition: height 0.8s;
+  -moz-transition: height 0.8s;
+  transition: height 0.8s;
+}
+.most-used.closed {
+  /* transform: scaleY(0) !important; */
+  height: 0px;
 }
 .most-used-row {
   display: flex;
@@ -196,6 +205,22 @@ a {
   opacity: 0.8;
   margin: 0;
   margin-right: 2px;
+}
+.arrow-button {
+  background-color: var(--nav-bar);
+  width: 20%;
+  position: relative;
+  left: 40%;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.863);
+  color: white;
+  font-size: 20px;
+}
+.arrow-button:hover {
+  background-color: rgb(48, 146, 125);
+  color: black;
+  cursor: pointer;
 }
 .total-picks {
   margin-left: 10px;

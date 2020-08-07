@@ -60,26 +60,32 @@
     /></a>
     {%if most_used%}
     <div class="most-used-wrapper">
-      {%for key,value in most_used.items()%} {%set hue = 360/value/max*100%} {%
-      set s = value/max*100%} {% set saturation = s|round(0,'ceil')|int %} {%
-      set round = hue|round(0, 'ceil')|int%}
-      <div class="most-used-row">
-        <img
-          class="most-used-item"
-          src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-            key
-          }}_lg.png"
-          width="50"
-          height="40"
-          alt='{{key}}'
-        />
-        <div class="bar" style= "background-color: hsl(120, 100%,25%, {{saturation}}%);width:{{value/max * 80}}%;">
-          <p class="bar-value">{{value}}</p>
+      <div class="most-used closed">
+        {%for key,value in most_used.items()%} {%set hue = 360/value/max*100%} {%
+        set s = value/max*100%} {% set saturation = s|round(0,'ceil')|int %} {%
+        set round = hue|round(0, 'ceil')|int%}
+        <div class="most-used-row">
+          <img
+            class="most-used-item"
+            src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+              key
+            }}_lg.png"
+            width="50"
+            height="40"
+            alt='{{key}}'
+          />
+          <div class="bar" style= "background-color: hsl(120, 100%,25%, {{saturation}}%);width:{{value/max * 80}}%;">
+            <p class="bar-value">{{value}}</p>
+          </div>
         </div>
+        {%endfor%}
       </div>
-      {%endfor%}
-    </div>{%endif%}
-    <div class="pick-counter" style="display: flex;">
+      {%endif%}
+      <div class="arrow-button"onclick="toggleWindow()">
+        <i id="arrow" class="fas fa-caret-down" ></i>
+      </div>
+    </div>
+  <div class="pick-counter" style="display: flex;">
       <a href="/hero/{{hero_name}}">
         <p id="hero-name" style="color: rgb{{hero_colour}};">
           <strong style="text-transform: capitalize;">{{display_name}}</strong>
