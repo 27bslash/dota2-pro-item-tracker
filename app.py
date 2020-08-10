@@ -32,20 +32,32 @@ cache.init_app(app)
 @app.route('/', methods=['GET'])
 def index():
     query = request.args.get('query')
+    hero_winrate = {}
+    wins = []
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         img_names = []
-        d = sorted(
+        # for hero in data['heroes']:
+        #     wins = hero_output.count_documents(
+        #         {'hero': hero['name'], 'win': 1, 'role': 'Offlane'})
+        #     print(hero['name'], wins)
+        links = sorted(
             data['heroes'], key=itemgetter('name'))
-        for i in d:
+        for i in links:
             img_names.append(switcher(i['name']))
-    return render_template('index.html', hero_imgs=img_names, links=d)
+        win_data = db['wins'].find_one({})
+        for item in win_data['stats']:
+            wins.append(item)
+            # print(wins, type(wins))
+        wins = sorted(wins, key=itemgetter('hero'))
+    return render_template('index.html', hero_imgs=img_names, links=links, wins=wins)
 
 
 @app.route('/', methods=['POST'])
 def ind_post():
     if request.method == 'POST':
-        text = request.form.get('t')
+        text = request.form.get('search')
+
         if get_hero_name(text):
             suggestion = get_hero_name(text)
             suggestion = sorted(suggestion)
@@ -101,7 +113,6 @@ def item_get(hero_name):
             data = hero_output.find(
                 {'hero': f_name, 'role': role}).sort('unix_time', -1)
             for hero in data:
-                print(hero['role'])
                 match_data.append(hero)
         roles = {k: v for k, v in sorted(
             roles.items(), key=lambda item: item[1], reverse=True)}
@@ -118,7 +129,7 @@ def item_get(hero_name):
         return render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
                                time=time.time(), total=total, hero_colour=get_hero_name_colour(hero_name), roles=roles)
     else:
-        return render_template(template, hero_name=hero_name, hero_img=clean_name(hero_name),display_name=display_name ,data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
+        return render_template(template, hero_name=hero_name, hero_img=clean_name(hero_name), display_name=display_name, data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
 
 
 def find_hero(hero):
@@ -127,6 +138,35 @@ def find_hero(hero):
     for hero in data:
         match_data.append(hero)
     return match_data
+
+
+def get_winrate():
+    d = {}
+    output = []
+    db['wins'].delete_many({})
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for hero in data['heroes']:
+            picks = hero_output.count_documents({'hero': hero['name']})
+            wins = hero_output.count_documents(
+                {'hero': hero['name'], 'win': 1})
+            hard = hero_output.count_documents(
+                {'hero': hero['name'], 'win': 1, 'role': 'Hard Support'})
+            soft = hero_output.count_documents(
+                {'hero': hero['name'], 'win': 1, 'role': 'Support'})
+            carry = hero_output.count_documents(
+                {'hero': hero['name'], 'win': 1, 'role': 'Safelane'})
+            off = hero_output.count_documents(
+                {'hero': hero['name'], 'win': 1, 'role': 'Offlane'})
+            mid = hero_output.count_documents(
+                {'hero': hero['name'], 'win': 1, 'role': 'Midlane'})
+            roaming = hero_output.count_documents(
+                {'hero': hero['name'], 'win': 1, 'role': 'Roaming'})
+            output.append({'hero': hero['name'], 'picks': picks, 'wins': wins, 'hard': hard, 'soft': soft,
+                           'safe': carry, 'off': off, 'mid': mid, 'roaming': roaming})
+            # print(output)
+    db['wins'].insert_one({'stats': output})
+    return output
 
 
 def get_hero_name_colour(hero_name):
@@ -261,6 +301,7 @@ def opendota_call():
             # delete_output()
             pass
     parse_request()
+    get_winrate()
     print('end', (time.time()-start)/60, 'minutes')
 
 

@@ -33,12 +33,6 @@ th {
   font-size: 1rem;
   padding: 10px;
 }
-td {
-  font-size: 13px;
-  text-align: left;
-  color: black;
-  border-top: 1px solid grey;
-}
 .item-table {
   border-collapse: separate;
   border-spacing: 0px 20px;
@@ -171,9 +165,9 @@ a {
   display: grid;
   overflow: auto;
   grid-row-gap: 2px;
-  -webkit-transition: height 0.8s;
-  -moz-transition: height 0.8s;
-  transition: height 0.8s;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  transition: height 0.5s;
 }
 .most-used.closed {
   /* transform: scaleY(0) !important; */
@@ -225,6 +219,15 @@ a {
 .total-picks {
   margin-left: 10px;
 }
+.picks {
+  color: white;
+}
+.wins {
+  color: green;
+}
+.losses {
+  color: red;
+}
 .total-picks:hover {
   cursor: pointer;
   filter: brightness(80%);
@@ -253,17 +256,27 @@ a {
 }
 .grid-container {
   width: 100%;
-  display: flex;
 }
 .hero-grid {
-  margin-top: 30px;
   margin-left: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+.col {
+  text-align: center;
+  margin-right: 6px;
+}
+.col.first {
+  grid-row: 1;
+  grid-column: 1;
 }
 .hide {
   display: none;
 }
 .right {
   margin-left: 385px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
 }
 .view-changer {
   cursor: pointer;
@@ -365,4 +378,7 @@ table.dataTable tbody td {
   padding-bottom: 10px;
   padding-left: 5px;
   text-align: left;
+  font-size: 13px;
+  color: white;
+  border-top: 1px solid grey;
 }

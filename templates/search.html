@@ -47,14 +47,14 @@
             />
           </div>
           <div class="suggestions">
-            <ul></ul>
+            <ul id = 'suggestion-list'></ul>
           </div>
         </form>
       </div>
     </div>
   </nav>
     {%block content%} {%endblock%}
-    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script src="{{ url_for('static', filename='item_window_toggle.js') }}"></script>
     <script src="{{ url_for('static', filename='autocomplete.js') }}"></script>
   </body>
 </html>

@@ -1,19 +1,26 @@
 {% extends 'search.html' %} {%block content %}
-
 <main>
   <div class="grid-container">
     <div class="hero-grid">
-      {%for i in range(119)%}
-      <a href="/hero/{{links[i]['name']}}">
-        <img
-          class="hero-img"
-          id="{{links[i]['name']}}"
-          src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_imgs[i]}}_hphover.png?v=5926546"
-          width="100"
-          height="80"
-          alt="{{hero_imgs[i]}}"
-      /></a>
-      {%endfor%}
+      {%set x = 0%} {%for j in range(119)%} {%if j < 119%}
+      <div class="col">
+        <a href="/hero/{{links[j]['name']}}">
+          <img
+            class="hero-img"
+            id="{{links[j]['name']}}"
+            src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_imgs[j]}}_hphover.png?v=5926546"
+            width="100"
+            height="80"
+            alt="{{hero_imgs[j]}}"
+        /></a>
+        {%set hero = links[j]['name']%}
+        <p class="win-stats">
+          <span class="picks">{{wins[j]['picks']}}</span>
+          <span class="wins">{{wins[j]['wins']}}</span>
+          <span class="losses">{{wins[j]['picks'] - wins[j]['wins']}}</span>
+        </p>
+      </div>
+      {%endif%} {%endfor%}
     </div>
   </div>
 </main>
