@@ -44,7 +44,6 @@ async def account_id(m_id, hero_name):
 async def async_get(m_id, hero_name):
     url = f'https://api.opendota.com/api/matches/{m_id}'
     check = hero_output.find_one({'hero': hero_name, 'id': m_id})
-    print(url)
     if check is None:
         try:
             async with aiohttp.ClientSession() as session:
@@ -110,7 +109,6 @@ async def async_get(m_id, hero_name):
                                      'final_items': main_items, 'backpack': bp_items, 'item_neutral': get_item_name(p['item_neutral']),
                                      'abilities': get_ability_name(abilities), 'items': purchase_log})
                             else:
-                                print('else statemetn')
                                 parse.insert_one({'id': m_id})
         except Exception as e:
             print("Unable to get url", traceback.format_exc())
