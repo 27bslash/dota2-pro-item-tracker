@@ -100,6 +100,7 @@ const display = () => {
 };
 
 const hideHeroes = () => {
+  pickSort(null);
   for (let hero of cells) {
     hero.classList.add("hide");
   }
@@ -166,6 +167,7 @@ const reset = () => {
       heroGrid.classList.remove("right");
       heroGrid.classList.remove("hide");
       hero.classList.remove("first");
+      document.querySelector(".buttons").style.display = "flex";
     }
     for (let stat of statText) {
       stat.classList.remove("hide");

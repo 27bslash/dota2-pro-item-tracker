@@ -1,6 +1,11 @@
 {% extends 'search.html' %} {%block content %}
 <main>
   <div class="grid-container">
+    <div class="buttons">
+      <button class="sort-button" onclick="pickSort(0)">PICKS</button>
+      <button class="sort-button" onclick="pickSort(1)">WINS</button>
+      <button class="sort-button" onclick="pickSort(2)">WINRATE</button>
+    </div>
     <div class="hero-grid">
       {%set x = 0%} {%for j in range(119)%} {%if j < 119%}
       <div class="col">
@@ -10,14 +15,20 @@
             id="{{links[j]['name']}}"
             src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_imgs[j]}}_hphover.png?v=5926546"
             width="100"
-            height="80"
+            height="60"
             alt="{{hero_imgs[j]}}"
         /></a>
         {%set hero = links[j]['name']%}
         <p class="win-stats">
           <span class="picks">{{wins[j]['picks']}}</span>
           <span class="wins">{{wins[j]['wins']}}</span>
-          <span class="losses">{{wins[j]['picks'] - wins[j]['wins']}}</span>
+          {%set win = wins[j]['wins']%} {%if wins[j]['picks'] > 0%} {%set
+          winrate = win/wins[j]['picks'] * 100%} {%set round = winrate|round(2,
+          'ceil')%}
+          <span class="winrate">{{round}}%</span>
+          {%endif%} {%if wins[j]['picks'] == 0%}
+          <span class="winrate">0%</span>
+          {%endif%}
         </p>
       </div>
       {%endif%} {%endfor%}

@@ -219,14 +219,35 @@ a {
 .total-picks {
   margin-left: 10px;
 }
+.buttons {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+.sort-button {
+  height: 100%;
+  margin: 10px;
+  background-color: var(--nav-bar);
+  margin-right: 10px;
+  outline: none;
+  border: none;
+  color: rgb(136, 136, 136);
+  width: 70px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.win-stats {
+  font-size: 14px;
+}
 .picks {
   color: white;
 }
 .wins {
   color: green;
 }
-.losses {
-  color: red;
+.winrate {
+  color: rgb(14, 211, 14);
 }
 .total-picks:hover {
   cursor: pointer;
