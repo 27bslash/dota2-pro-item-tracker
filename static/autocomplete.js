@@ -4,7 +4,7 @@ let cells = document.querySelectorAll(".col"),
   heroGrid = document.querySelector(".hero-grid"),
   statText = document.querySelectorAll(".win-stats"),
   ul = document.querySelector("ul");
-  
+
 async function get_hero_data() {
   const url = `${window.location.origin}/files/hero_ids`;
   const res = await fetch(url);
@@ -172,8 +172,24 @@ const reset = () => {
     stat.classList.remove("hide");
   }
 };
-
+const closeAllTooltips = () => {
+  document.querySelectorAll(".tooltip").forEach((x, i) => {
+      x.style.display = "none";
+  });
+};
 window.addEventListener("mouseover", (event) => {
-  // console.log(event.target);
+  // console.log(event.target.className);
+  closeAllTooltips()
+  if (event.target.className === "table-img") {
+    console.log(event.target.parentNode.children[2]);
+    event.target.parentNode.children[2].style.display = "block";
+  }
 });
+closeAllTooltips()
 autocomplete();
+// ability_img = document.querySelectorAll(".table-img");
+// for (let img in ability_img) {
+//   img.addEventListener("mouseover", (e) => {
+//     console.log(e);
+//   });
+// }

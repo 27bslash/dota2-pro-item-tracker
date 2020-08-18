@@ -160,19 +160,95 @@
                     {{loop.index}}
                   </p></strong
                 >
+                {%if item.type == 'talent'%}
+                <img
+                  class="table-img"
+                  src="{{ url_for('static', filename='talent_img.png') }}"
+                  width="55"
+                  height="55"
+                  data-tooltip="{{item.key}}"
+                  alt="{{item.key}}"
+                  onerror="this.onerror=null;this.src='../static/talent_img.png';"
+                />
+                <div
+                  class="tooltip"
+                  style="background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto; padding: 10px;"
+                >
+                  <h3>{{item.key}}</h3>
+                </div>
+                {%endif%}
+                {%if item.type != 'talent'%}
                 <img
                   class="table-img"
                   src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
                   width="55"
                   height="55"
                   data-tooltip="{{item.key}}"
+                  alt="{{item.key}}"
                   title="{{item.key}}"
-                  onerror="this.onerror=null;this.src='../../static/talent_img.png';"
-                  alt="item.key"
+                  onerror="this.onerror=null;this.src='../../static/talent_img.png'"
                 />
-              </div>
-              {% endfor %}
+                <div
+                  class="tooltip"
+                  style="background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 37%);"
+                >
+                  <div class="tooltip-line-one">
+                  <img
+                    class="tooltip-img"
+                    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
+                    width="40"
+                    height="40"
+                    title="{{item.key}}"
+                    onerror="this.onerror=null;this.src='../../static/talent_img.png';"
+                  />
+                  <h3>{{item.key}}</h3>
+                </div>
+                <div class="tooltip-content">
+                  {%if item.description%}
+                  <div class="tooltip-description">
+                    <p>{{item.description|join(',')}}</p>
+                    <p></p>
+                  </div>
+                  {%endif%}
+                  {%if item.attributes%}
+                  <div class="attributes">
+                  {%for attribute in item.attributes%}
+                  <div class="attribute">
+                    <p>{{attribute}}</p>
+                  </div>
+                  {%endfor%}
+                  </div>
+                  {%endif%}
+                    {%if item.aghanimDescription%}
+                      <p>{{item.aghanimDescription}}</p>
+                    {%endif%}
+                    {%for note in item.notes%}
+                      <p>{{note}}</p>
+                    {%endfor%}
+                    <div class="tooltip-footer">
+                      {%if item.manacost%}
+                      <div class="mana-costs">
+                        <img src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/mana.png'
+                        height='13'
+                        width="13">
+                        <p class='footer-text'>{{item.manacost|join('/ ')}}</p>
+                      </div>
+                      {%endif%}
+                      {%if item.cooldown%}
+                      <div class="cooldowns">
+                        <img 
+                        src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/cooldown.png'
+                        height='13'
+                        width="13">
+                        <p class='footer-text'>{{item.cooldown|join('/ ')}}</p>
+                      </div>
+                      {%endif%}
+                    </div>
+                  </div>
+                </div>
+                {%endif%}
             </div>
+            {%endfor%}
           </td>
           <td
             data-sort="{{dict_item['unix_time']}}"

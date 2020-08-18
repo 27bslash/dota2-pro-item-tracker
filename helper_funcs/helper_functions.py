@@ -259,3 +259,63 @@ def get_item_name(item_id):
         for item in data['items']:
             if item_id == item['id']:
                 return item['name']
+
+
+def stratz_abillity_test(arr):
+    output = []
+    start = time.time()
+    count = 0
+    with open('json_files/stratz_abilities.json', 'r') as f:
+        data = json.load(f)
+        for _id in arr:
+            _id = str(_id)
+            if _id in data:
+                print(_id)
+                try:
+                    d = {}
+                    d['img'] = data[_id]['name']
+                    d['key'] = data[_id]['language']['displayName']
+                    d['description'] = data[_id]['language']['description']
+                    d['attributes'] = data[_id]['language']['attributes']
+                    d['notes'] = data[_id]['language']['notes']
+                    d['cooldown'] = []
+                    d['manacost'] = []
+                    d['damgae'] = []
+                    if 'cooldown' in data[_id]['stat']:
+                        print('cd')
+                        d['cooldown'] = data[_id]['stat']['cooldown']
+                    if 'manaCost' in data[_id]['stat']:
+                        print('mc')
+                        d['manacost'] = data[_id]['stat']['manaCost']
+                    if 'damage' in data[_id]['stat']:
+                        print('damage')
+                        d['damage'] = data[_id]['stat']['damage']
+                    if 'aghanimDescription' in data[_id]['language']:
+                        aghanimDescription = data[_id]['language']['aghanimDescription']
+                        d['aghanimDescription'] = aghanimDescription
+                    if 'special_bonus' in data[_id]['name']:
+                        d['type'] = 'talent'
+                        
+                    else:
+                        d['type'] = 'ability'
+                    output.append(d)
+                except Exception as e:
+                    print('err', _id, e, e.__class__)
+    end = time.time()
+    # print(end-start)
+    # print(output)
+    return output
+
+
+def loop_test():
+    output = [0, 1, 2, 3, 4, 5, 6, 7, 5, 9]
+    for i in range(10):
+        output[i] = i
+        print(output[i], i)
+    print(output)
+
+
+if __name__ == "__main__":
+    # stratz_abillity_test()
+    # loop_test()
+    pass

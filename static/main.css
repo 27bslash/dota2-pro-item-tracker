@@ -202,9 +202,9 @@ a {
 }
 .arrow-button {
   background-color: var(--nav-bar);
-  width: 18.5%;
+  width: 70px;
   position: relative;
-  left: 34%;
+  left: 128px;
   text-align: center;
   border-radius: 5px;
   border: 1px solid rgba(128, 128, 128, 0.863);
@@ -246,9 +246,7 @@ a {
 .wins {
   color: green;
 }
-.winrate {
-  color: rgb(14, 211, 14);
-}
+
 .total-picks:hover {
   cursor: pointer;
   filter: brightness(80%);
@@ -299,6 +297,7 @@ a {
   margin-left: 385px;
   display: grid;
   grid-template-columns: repeat(4, 100px);
+  grid-gap: 2px;
 }
 .view-changer {
   cursor: pointer;
@@ -343,7 +342,63 @@ a {
   min-height: 20px;
   max-width: 55px;
 }
-
+.tooltip {
+  z-index: 3;
+  position: absolute;
+  width: 300px;
+}
+.tooltip > div {
+}
+.tooltip-line-one {
+  padding: 20px;
+  display: flex;
+  text-align: end;
+  align-items: center;
+  /* background: inherit; */
+  border-bottom: solid 1px grey;
+}
+.tooltip-img {
+  justify-self: start;
+}
+.tooltip-line-one h3 {
+  margin: 0;
+  justify-self: end;
+  font-size: 20px;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+.tooltip-content {
+  padding: 20px;
+}
+.tooltip-content > div {
+  border-bottom: solid 1px grey;
+}
+.attribute > p {
+  margin: 0;
+  margin-top: 2px;
+}
+.tooltip-footer {
+  display: flex;
+  align-items: center;
+  border-bottom: none !important;
+}
+.footer-text {
+  margin: 0;
+}
+.tooltip-footer > div {
+  display: flex;
+  margin-right: 2px;
+  align-items: flex-start;
+}
+.cooldowns {
+  margin-left: auto;
+}
+.tooltip-footer > div > img {
+  margin-right: 4px;
+  margin-top: 2px;
+  width: 15px;
+  height: 15px;
+}
 .ability[title]:after {
   content: attr(title);
   position: absolute;

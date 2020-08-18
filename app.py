@@ -144,29 +144,40 @@ def get_winrate():
     d = {}
     output = []
     db['wins'].delete_many({})
+    roles = ['Hard Support', 'Support', 'Safelane',
+             'Offlane', 'Midlane', 'Roaming']
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
-        for hero in data['heroes']:
+        for i, hero in enumerate(data['heroes']):
             picks = hero_output.count_documents({'hero': hero['name']})
-            wins = hero_output.count_documents(
+            total_wins = hero_output.count_documents(
                 {'hero': hero['name'], 'win': 1})
-            hard = hero_output.count_documents(
-                {'hero': hero['name'], 'win': 1, 'role': 'Hard Support'})
-            soft = hero_output.count_documents(
-                {'hero': hero['name'], 'win': 1, 'role': 'Support'})
-            carry = hero_output.count_documents(
-                {'hero': hero['name'], 'win': 1, 'role': 'Safelane'})
-            off = hero_output.count_documents(
-                {'hero': hero['name'], 'win': 1, 'role': 'Offlane'})
-            mid = hero_output.count_documents(
-                {'hero': hero['name'], 'win': 1, 'role': 'Midlane'})
-            roaming = hero_output.count_documents(
-                {'hero': hero['name'], 'win': 1, 'role': 'Roaming'})
-            output.append({'hero': hero['name'], 'picks': picks, 'wins': wins, 'hard': hard, 'soft': soft,
-                           'safe': carry, 'off': off, 'mid': mid, 'roaming': roaming})
-            # print(output)
+            if total_wins == 0 or picks == 0:
+                print('hero')
+                total_winrate = 0
+            else:
+                total_winrate = (total_wins / picks) * 100
+
+            role_dict = {'hero': hero['name'],
+                         'picks': picks, 'wins': total_wins, 'winrate': total_winrate}
+            for role in roles:
+                wins = hero_output.count_documents(
+                    {'hero': hero['name'], 'win': 1, 'role': role})
+                losses = hero_output.count_documents(
+                    {'hero': hero['name'], 'win': 0, 'role': role})
+                picks = wins+losses
+                if picks > 0:
+                    winrate = math.floor(wins/picks*100)
+                else:
+                    winrate = 0
+                role_dict[f"{role}_picks"] = picks
+                role_dict[f"{role}_wins"] = wins
+                role_dict[f"{role}_losses"] = losses
+                role_dict[f"{role}_winrate"] = winrate
+            output.append(role_dict)
     db['wins'].insert_one({'stats': output})
-    return output
+    # print(json.dumps(output, indent=2))
+    # return output
 
 
 def get_hero_name_colour(hero_name):
@@ -315,6 +326,7 @@ def manual_hero_update(name):
 # scheduler = BackgroundScheduler()
 if __name__ == '__main__':
     # opendota_call()
+    # manual_hero_update('razor')
     # scheduler.add_job(opendota_call, 'cron', timezone='Europe/London',
     #                   start_date=datetime.datetime.now(), hour='15', minute='55', second='40', day_of_week='mon-sun')
     # scheduler.start()

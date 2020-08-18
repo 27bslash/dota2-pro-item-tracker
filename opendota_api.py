@@ -107,7 +107,7 @@ async def async_get(m_id, hero_name):
                                      'win': p['win'], 'id': match_id,
                                      'starting_items': starting_items,
                                      'final_items': main_items, 'backpack': bp_items, 'item_neutral': get_item_name(p['item_neutral']),
-                                     'abilities': get_ability_name(abilities), 'items': purchase_log})
+                                     'abilities': stratz_abillity_test(abilities), 'items': purchase_log})
                             else:
                                 parse.insert_one({'id': m_id})
         except Exception as e:
