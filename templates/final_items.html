@@ -89,7 +89,7 @@
     {%if talents%}
     <div class="talent-wrapper">
     <img id='main-talent-img' height='70' src= "{{ url_for('static', filename='talent_img.png') }}"/>
-    <div class="talents" style='display: none'>
+    <div class="tooltip" id='talents' style='display: none'>
       {%for talent in talents%}
       {%if talent.slot % 2 == 0 or talent.slot == 0 %}
       {%set col = 3%}
@@ -111,7 +111,6 @@
       </div>
       {%endif%}
       <div class="{{class}}" style = 'grid-column: {{col}}'>
-        
         {%set width = 0%}
         {%if talent.total_pick_count > 0%}
         {%set width = talent.talent_count/talent.total_pick_count*100%}
