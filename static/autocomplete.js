@@ -98,7 +98,13 @@ const display = () => {
 };
 
 const hideHeroes = () => {
-  document.querySelector(".buttons").style.display = "none";
+  // check if homepage
+  if (
+    (window.location.pathname.indexOf("/") + 1) %
+      (window.location.pathname.lastIndexOf("/") + 1) ===
+    0
+  )
+    document.querySelector(".buttons").style.display = "none";
   for (let hero of cells) {
     hero.classList.add("hide");
     hero.style.gridArea = null;
@@ -173,19 +179,23 @@ const reset = () => {
   }
 };
 const closeAllTooltips = () => {
+  document.querySelector(".talents").style.display = "none";
   document.querySelectorAll(".tooltip").forEach((x, i) => {
-      x.style.display = "none";
+    x.style.display = "none";
   });
 };
 window.addEventListener("mouseover", (event) => {
   // console.log(event.target.className);
-  closeAllTooltips()
+  closeAllTooltips();
+  if (event.target.id === "main-talent-img") {
+    document.querySelector(".talents").style.display = "grid";
+  }
   if (event.target.className === "table-img") {
     console.log(event.target.parentNode.children[2]);
     event.target.parentNode.children[2].style.display = "block";
   }
 });
-closeAllTooltips()
+closeAllTooltips();
 autocomplete();
 // ability_img = document.querySelectorAll(".table-img");
 // for (let img in ability_img) {

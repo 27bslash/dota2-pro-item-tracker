@@ -93,15 +93,11 @@ def delete_dupes(d):
 def get_urls(hero_name):
     urls = []
     data = hero_urls.find({'hero': hero_name})
-    for match in data:
-        try:
-            m_id = match['id']
-            urls.append(m_id)
-            urls.reverse()
-        except Exception as e:
-            pass
-    print(urls)
-    return urls
+    try:
+        urls = [match['id'] for match in data]
+    except Exception as e:
+        pass
+    return list(reversed(urls))
 
 
 def pro_items(match_data):
@@ -110,16 +106,11 @@ def pro_items(match_data):
     data = match_data
     black_lst = ['ward_sentry', 'ward_observer', 'clarity', 'tpscroll',
                  'enchanted_mango', 'smoke_of_deceit', 'tango', 'faerie_fire', 'tome_of_knowledge', 'healing_salve', None]
-    print('smoke_of_deceit' in black_lst)
-    for i, x in enumerate(data):
-        # print(i,x)
-        for item in x['final_items']:
-            if item not in black_lst:
-                item_lst.append(item['key'])
-                counter = dict(Counter(item_lst))
-                sd = dict(sorted(counter.items(),
-                                 key=itemgetter(1), reverse=True))
-    print('pro', sd)
+    item_lst = [item['key']
+                for x in data for item in x['final_items'] if item not in black_lst]
+    counter = dict(Counter(item_lst))
+    sd = dict(sorted(counter.items(),
+                     key=itemgetter(1), reverse=True))
     return sd
 
 
@@ -187,15 +178,17 @@ def get_time(x):
 
 def get_id(name):
     if name:
+        # print(name)
         name = name.lower()
         name = name.replace(' ', '_')
         with open('json_files/hero_ids.json') as json_file:
             data = json.load(json_file)
-            for hero in data['heroes']:
-                if name == hero['name']:
-                    return hero['id']
-            return False
-    return False
+            try:
+                return [hero['id']
+                        for hero in data['heroes'] if name == hero['name']][0]
+            except Exception as e:
+                return False
+        return False
 
 
 def get_hero_name(name):
@@ -205,10 +198,8 @@ def get_hero_name(name):
         name = name.replace(' ', '_')
         with open('json_files/hero_ids.json') as json_file:
             data = json.load(json_file)
-            for hero in data['heroes']:
-                if name in hero['name']:
-                    heroes.append(hero['name'])
-            print(heroes)
+            heroes = [hero['name']
+                      for hero in data['heroes'] if name in hero['name']]
             return heroes
     return False
 
@@ -254,23 +245,28 @@ def get_ability_name(arr):
 
 
 def get_item_name(item_id):
+    # print(item_id)
+    if not item_id:
+        return
     with open('json_files/items.json') as json_file:
         data = json.load(json_file)
-        for item in data['items']:
-            if item_id == item['id']:
-                return item['name']
+        item = [item['name']
+                for item in data['items'] if item_id == item['id']]
+        return item[0]
 
 
-def stratz_abillity_test(arr):
+def stratz_abillity_test(arr, h_id):
     output = []
+    talents = []
     start = time.time()
     count = 0
+    # print(arr)
     with open('json_files/stratz_abilities.json', 'r') as f:
         data = json.load(f)
-        for _id in arr:
+        for i, _id in enumerate(arr):
             _id = str(_id)
             if _id in data:
-                print(_id)
+                # print(_id)
                 try:
                     d = {}
                     d['img'] = data[_id]['name']
@@ -280,42 +276,238 @@ def stratz_abillity_test(arr):
                     d['notes'] = data[_id]['language']['notes']
                     d['cooldown'] = []
                     d['manacost'] = []
-                    d['damgae'] = []
+                    d['damage'] = []
                     if 'cooldown' in data[_id]['stat']:
-                        print('cd')
+                        # print('cd')
                         d['cooldown'] = data[_id]['stat']['cooldown']
                     if 'manaCost' in data[_id]['stat']:
-                        print('mc')
+                        # print('mc')
                         d['manacost'] = data[_id]['stat']['manaCost']
                     if 'damage' in data[_id]['stat']:
-                        print('damage')
+                        # print('damage')
                         d['damage'] = data[_id]['stat']['damage']
                     if 'aghanimDescription' in data[_id]['language']:
                         aghanimDescription = data[_id]['language']['aghanimDescription']
                         d['aghanimDescription'] = aghanimDescription
+                    gap = 0
+                    level = i+1
+                    if data[_id]['uri'] != 'invoker':
+                        if level > 16:
+                            gap += 1
+                        if level > 17:
+                            gap += 1
+                        if level > 18:
+                            gap += 4
+                        # talents.append(i+1+gap)
+                        # talents.append(data[_id]['language']['displayName'])
+                        d['level'] = i+1+gap
+                    else:
+                        # invoker edge case
+                        level = i+1
+                        # talents.append(level)
+                        # talents.append(data[_id]['language']['displayName'])
+                        d['level'] = i+1+gap
                     if 'special_bonus' in data[_id]['name']:
                         d['type'] = 'talent'
-                        
+                        with open('json_files/stratz_talents.json', 'r', encoding='utf') as f:
+                            talent_data = json.load(f)
+                            # slot = [talent['slot']
+                            #         for hero_id in talent_data if hero_id == str(hero_id)
+                            #         for talent in talent_data[hero_id]['talents'] if int(_id) in talent.values()][0]
+                            # d['slot'] = slot
+                            # d['slot'] = [talent['slot']
+                            #              for talent in talents if int(_id) in talent.values()][0]
+                            # print(slot)
+                            for hero_id in talent_data:
+                                if hero_id == str(h_id):
+                                    talents = talent_data[hero_id]['talents']
+                                    for talent in talents:
+                                        # print(talent)
+                                        if int(_id) in talent.values():
+                                            # print(talent['slot'])
+                                            d['slot'] = talent['slot']
                     else:
                         d['type'] = 'ability'
                     output.append(d)
+                    sli = slice(0, 19)
+                    output = output[sli]
                 except Exception as e:
-                    print('err', _id, e, e.__class__)
+                    print(traceback.format_exc())
     end = time.time()
     # print(end-start)
     # print(output)
     return output
 
 
-def loop_test():
-    output = [0, 1, 2, 3, 4, 5, 6, 7, 5, 9]
-    for i in range(10):
-        output[i] = i
-        print(output[i], i)
+def get_talent_order(match_data, hero):
+    talents = []
+    count = count_talents(match_data)
+    # print('coutn', count)
+    if count is None:
+        return False
+    with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
+        data = json.load(f)
+        for item in data:
+            # print(item)
+            _id = str(get_id(hero))
+            if item == _id:
+                # print(data[item]['talents'])
+                for x in data[item]['talents']:
+                    d = {}
+                    # print(type(x),x['abilityId'])
+                    try:
+                        talent = stratz_abillity_test(
+                            [x['abilityId']], get_id(hero))[0]
+                        print(talent)
+                    except Exception as e:
+                        print('list_err', traceback.format_exc())
+
+                    d['img'] = talent['img']
+                    d['key'] = talent['key']
+                    d['slot'] = talent['slot']
+                    if d['key'] in count:
+                        d['talent_count'] = count[d['key']]
+                    else:
+                        d['talent_count'] = 0
+                    # total picks for talents is both choices added together, this can be done easily if you're not retarded
+                    talents.append(d)
+        # print(talents)
+        c = []
+        level = 10
+        for i in range(0, 8, 2):
+            # print(i)
+            if i < 8:
+                picks = talents[i]['talent_count'] + \
+                    talents[i+1]['talent_count']
+                talents[i]['total_pick_count'] = picks
+                talents[i+1]['total_pick_count'] = picks
+                talents[i]['level'] = level
+                talents[i+1]['level'] = level
+                print('lvl',level)
+                level += 5
+        print(talents)
+        return reversed(talents)
+
+
+def count_talents(data):
+    try:
+        talents = [ability['key']
+                   for item in data for ability in item['abilities'] if 'special_bonus' in ability['img']]
+        # print('counter',talents,dict(Counter(talents)))
+        return dict(Counter(talents))
+    except Exception as e:
+        print('y', traceback.format_exc())
+
+
+def get_talets():
+    output = []
+    ids = []
+    ten = []
+    fifteen = []
+    twenty = []
+    twenty_five = []
+    data = hero_output.find({'hero': 'jakiro'})
+    for i, item in enumerate(data):
+        temp = {}
+        ids.append(item['id'])
+        for ability in item['abilities']:
+            if ability['type'] == 'talent':
+                if ability['level'] >= 10 and ability['level'] < 15:
+                    temp['id'] = item['id']
+                    temp['name'] = ability['key']
+                    temp['level'] = 10
+                    # m.append(item['id'])
+                    ten.append(ability['key'])
+                    # m.append(10)
+                    # print(item['id'], 10, i, ability['level'], ability['key'])
+                elif ability['level'] >= 15 and ability['level'] < 20:
+                    temp['id'] = item['id']
+                    temp['name'] = ability['key']
+                    temp['level'] = 15
+                    # m.append(item['id'])
+                    if ability['key'] not in ten:
+                        # print(ability['key'], ten)
+                        fifteen.append(ability['key'])
+                    # m.append(15)
+                elif ability['level'] >= 20 and ability['level'] < 25:
+                    temp['id'] = item['id']
+                    temp['name'] = ability['key']
+                    temp['level'] = 20
+                    # m.append(item['id'])
+                    twenty.append(ability['key'])
+                    # m.append(20)
+                elif ability['level'] >= 25:
+                    # print(25, ability['level'], ability['key'])
+                    temp['id'] = item['id']
+                    temp['name'] = ability['key']
+                    temp['level'] = 25
+                    # m.append(item['id'])
+                    twenty_five.append(ability['key'])
+                    # m.append(25)
+                    # print(20, i, ability['level'], ability['key'])
+                    # print(15, i, ability['level'], ability['key'])
+                # print(ten, fifteen, twenty, twenty_five)
+    output.append(dict(Counter(ten)))
+    output.append(dict(Counter(fifteen)))
+    output.append(dict(Counter(twenty)))
+    output.append(dict(Counter(twenty_five)))
     print(output)
+    for i, item in enumerate(reversed(output)):
+        # print('y',i, output[i])
+        if i < 3:
+            for x in output[i+1]:
+                print(x, item)
+                if x in item:
+                    pass
+                    # print('test', i, x)
+                    # print(output)
+    return output
+
+    # print(m)
+    # print(json.dumps(output, indent=2))
 
 
+def t(lst):
+    rev = list(reversed(lst))
+    for i, e in enumerate(rev):
+        print(i)
+        if i < len(rev) - 1:
+            for spell in e:
+                # print('spell',spell)
+                # print('testing: ', i, rev[i], rev[i+1])
+                if spell in rev[i+1]:
+                    print('ninenene', spell, i+1)
+                    rev[i] = None
+    # print(rev)
+    test = [x for x in rev if x]
+    print(test)
+
+
+ab_arr = [5239,
+          5237,
+          5237,
+          5238,
+          5237,
+          5240,
+          5237,
+          5239,
+          5239,
+          5931,
+          5239,
+          5240,
+          5238,
+          5238,
+          502,
+          5238,
+          5240,
+          6364,
+          5977
+          ]
 if __name__ == "__main__":
-    # stratz_abillity_test()
+    get_talents()
+    # get_hero_name('jakiro')
+    # get_id('lih')
+    # get_talent_order('jakiro')
+    # stratz_abillity_test(ab_arr, 'clockwerk')
     # loop_test()
     pass

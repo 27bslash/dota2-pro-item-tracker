@@ -44,74 +44,55 @@ async def account_id(m_id, hero_name):
 async def async_get(m_id, hero_name):
     url = f'https://api.opendota.com/api/matches/{m_id}'
     check = hero_output.find_one({'hero': hero_name, 'id': m_id})
-    if check is None:
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get(url=url) as response:
-                    resp = await response.json()
-                    match_id = int(resp['match_id'])
-                    print(f"successfully got {match_id}")
-                    starting_items = []
-                    main_items = []
-                    bp_items = []
-                    purchase_log = []
-                    abilities = []
-                    roles_arr = []
-                    all_roles = []
-                    for i in range(10):
-                        try:
-                            p = resp['players'][i]
-                            lane = p['lane']
-                            gpm = p['gold_per_min']
-                            lane_eff = p['lane_efficiency']
-                            sen_placed = p['sen_placed']
-                            slot = p['player_slot']
-                            arr = [lane, gpm,
-                                   lane_eff, sen_placed, slot, p['is_roaming']]
-                            roles_arr.append(arr)
-                        except Exception as e:
-                            print(m_id, traceback.format_exc())
-                            pass
-                    all_roles.append(roles_arr)
-                    for i in range(10):
-                        # 10 players
-                        p = resp['players'][i]
-                        hero_id = p['hero_id']
-                        if hero_id == get_id(hero_name):
-                            abilities = p['ability_upgrades_arr']
-                            # check if one of the players matches search
-                            purchase_log = p['purchase_log']
-                            if purchase_log:
-                                role = roles(all_roles[0], p['player_slot'])
-                                print(f"{hero_name} should reach here.")
-                                for purchase in purchase_log:
-                                    if purchase['time'] <= 0:
-                                        starting_items.append(
-                                            {'key': purchase['key'], 'time': 0})
-                                rev = purchase_log.copy()[::-1]
-                                main_items = get_most_recent_items(
-                                    rev, 6, p)
-                                bp_items = get_most_recent_items(
-                                    rev, 4, p)
-                                if p['duration'] > 0:
-                                    p['duration'] = str(datetime.timedelta(
-                                        seconds=p['duration']))
-                                else:
-                                    p['duration'] = 0
-                                hero_output.insert_one(
-                                    {'time_started': get_time(p['start_time']), 'unix_time': p['start_time'], 'hero': hero_name, 'duration': p['duration'],
-                                     'name': get_info(match_id, 'name', hero_name), 'account_id': p['account_id'], 'role': role, 'mmr': get_info(match_id, 'mmr', hero_name),
-                                     'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
-                                     'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
-                                     'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'],
-                                     'win': p['win'], 'id': match_id,
-                                     'starting_items': starting_items,
-                                     'final_items': main_items, 'backpack': bp_items, 'item_neutral': get_item_name(p['item_neutral']),
-                                     'abilities': stratz_abillity_test(abilities), 'items': purchase_log})
+    if check is not None:
+        return
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url=url) as response:
+                resp = await response.json()
+                match_id = int(resp['match_id'])
+                print(f"successfully got {match_id}")
+                roles_arr = [(p['lane'], p['gold_per_min'],  p['lane_efficiency'], p['sen_placed'],
+                              p['player_slot'], p['is_roaming']) for p in resp['players']]
+                # print(all_roles)
+                for i in range(10):
+                    # 10 players
+                    p = resp['players'][i]
+                    hero_id = p['hero_id']
+                    # print(hero_id, get_id(hero_name))
+                    if hero_id == get_id(hero_name):
+                        abilities = p['ability_upgrades_arr']
+                        # check if one of the players matches search
+                        purchase_log = p['purchase_log']
+                        if purchase_log:
+                            role = roles(roles_arr, p['player_slot'])
+                            print(f"{hero_name} should reach here.")
+                            starting_items = [{'key': purchase['key'], 'time':0}
+                                              for purchase in purchase_log if purchase['time'] <= 0]
+                            rev = purchase_log.copy()[::-1]
+                            main_items = get_most_recent_items(
+                                rev, 6, p)
+                            bp_items = get_most_recent_items(
+                                rev, 4, p)
+                            if p['duration'] > 0:
+                                p['duration'] = str(datetime.timedelta(
+                                    seconds=p['duration']))
                             else:
-                                parse.insert_one({'id': m_id})
-        except Exception as e:
-            print("Unable to get url", traceback.format_exc())
+                                p['duration'] = 0
+                            hero_output.insert_one(
+                                {'time_started': get_time(p['start_time']), 'unix_time': p['start_time'], 'hero': hero_name, 'duration': p['duration'],
+                                 'name': get_info(match_id, 'name', hero_name), 'account_id': p['account_id'], 'role': role, 'mmr': get_info(match_id, 'mmr', hero_name),
+                                 'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
+                                 'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
+                                 'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'],
+                                 'win': p['win'], 'id': match_id,
+                                 'starting_items': starting_items,
+                                 'final_items': main_items, 'backpack': bp_items, 'item_neutral': get_item_name(p['item_neutral']),
+                                 'abilities': stratz_abillity_test(abilities, hero_id), 'items': purchase_log})
+                        else:
+                            parse.insert_one({'id': m_id})
+    except Exception as e:
+        print("Unable to get url", traceback.format_exc())
 
 
 def roles(s, p_slot):
@@ -119,6 +100,7 @@ def roles(s, p_slot):
     # radiant safe lane is always lane 1 for dire it's lane 3
     # take eff arr top 3 are core then label according to lane
     # convert dire lanes 1 to 3
+    # print('sssssss',s,p_slot)
     sen_count = [0, 0]
     start = 5
     end = 10
@@ -151,6 +133,7 @@ def roles(s, p_slot):
     # print('side',is_radiant,side)
     eff = sorted(side[0], key=lambda x: x[2], reverse=True)
     sen = sorted(side[0], key=lambda x: x[3], reverse=True)
+    # print(sen[0][4])
     for i, player in enumerate(eff):
         # print('pro_player slot: ', p_slot, player[4], 'lane: ',player[0], i)
         # print('p', player[0], i)
@@ -177,6 +160,7 @@ def roles(s, p_slot):
 
 async def main(urls, hero_name):
     # urls = ['5527705678']
+    print(urls, hero_name)
     ret = await asyncio.gather(*[async_get(url, hero_name) for url in urls])
 
 
@@ -185,12 +169,9 @@ async def get_acc_ids(urls, hero_name):
 
 
 def get_info(m_id, search, hero):
-    print(m_id, search, hero)
+    # print(m_id, search, hero)
     data = hero_urls.find_one({'id': m_id, 'hero': hero})
     return data[search]
-
-
-
 
 
 # asyncio.run(main('x', 'zeus'))

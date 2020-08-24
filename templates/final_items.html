@@ -58,6 +58,7 @@
         src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/tango_lg.png"
         alt='show starter items'
     /></a>
+    <div class="most-used-container">
     {%if most_used%}
     <div class="most-used-wrapper">
       <div class="most-used closed">
@@ -85,6 +86,45 @@
         <i id="arrow" class="fas fa-caret-down" ></i>
       </div>
     </div>
+    {%if talents%}
+    <div class="talent-wrapper">
+    <img id='main-talent-img' height='70' src= "{{ url_for('static', filename='talent_img.png') }}"/>
+    <div class="talents" style='display: none'>
+      {%for talent in talents%}
+      {%if talent.slot % 2 == 0 or talent.slot == 0 %}
+      {%set col = 3%}
+      {%set class = 'talent-right'%}
+      {%endif%}
+      {%if talent.slot % 2 != 0 or talent.slot == 1 %}
+      {%set col = 1%}
+      {%set class = 'talent-left'%}
+      {%endif%}
+      {%set level = 25%}
+      {%if loop.index % 2 == 0%}
+      <div class="talent-center">
+        <div class="talent-level">
+          <p>{{talent.level}}</p>
+        </div>
+        <div class="talent-picks">
+          <p>Pick</p>
+        </div>
+      </div>
+      {%endif%}
+      <div class="{{class}}" style = 'grid-column: {{col}}'>
+        
+        {%set width = 0%}
+        {%if talent.total_pick_count > 0%}
+        {%set width = talent.talent_count/talent.total_pick_count*100%}
+        {%endif%}
+        <p class='talent-text'>{{talent.key}}</p>
+        <div class="talent-bar" style='width: {{width}}%;'></div>
+        <p style='z-index: 99'>{{width|round(0, 'floor')|int}}%</p>
+      </div>
+      {%endfor%}
+    {%endif%}
+  </div>
+  </div>
+</div>
   <div class="pick-counter" style="display: flex;">
       <a href="/hero/{{hero_name}}">
         <p id="hero-name" style="color: rgb{{hero_colour}};">
@@ -190,7 +230,12 @@
               <div class="ability-img-wrapper">
                 <strong
                   ><p style="color: white; text-align: center;">
+                    {%if item.level%}
+                    {{item.level}}
+                    {%endif%}
+                    {%if not item.level%}
                     {{loop.index}}
+                    {%endif%}
                   </p></strong
                 >
                 {%if item.type == 'talent'%}
@@ -201,11 +246,11 @@
                 height="55"
                 data-tooltip="{{item.key}}"
                 alt="{{item.key}}"
-              />
-              <div class="tooltip" style='background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto; padding: 10px;'>
-                <h3>{{item.key}}</h3>
-              </div>
-              {%endif%}
+                />
+                <div class="tooltip" style='background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto; padding: 10px;'>
+                  <h3>{{item.key}}</h3>
+                </div>
+                {%endif%}
                 {%if item.type != 'talent'%}
                 <img
                   class="table-img"
@@ -215,13 +260,12 @@
                   data-tooltip="{{item.key}}"
                   alt="{{item.key}}"
                   title="{{item.key}}"
-                  onerror="this.onerror=null;this.src='../static/talent_img.png';"
                 />
                 <div class="tooltip"style='background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 37%);'>
                   <div class="tooltip-line-one"'>
                     <img 
                     class='tooltip-img'
-                    src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967'
+                    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
                     width ='40'
                     height="40"
                     title="{{item.key}}"
@@ -245,30 +289,38 @@
                     </div>
                     {%endif%}
                     {%if item.aghanimDescription%}
-                      <p>{{item.aghanimDescription}}</p>
+                    <div class="aghanimDescription" style='display:flex'>
+                      <img src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/ultimate_scepter_lg.png'
+                      width='26.5'
+                      height="20"
+                      />
+                      <p style='margin: 0'>{{item.aghanimDescription}}</p>
+                    </div>
                     {%endif%}
+                    <div class="notes">
                     {%for note in item.notes%}
                       <p>{{note}}</p>
                     {%endfor%}
-                    <div class="tooltip-footer">
-                      {%if item.manacost%}
-                      <div class="mana-costs">
-                        <img src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/mana.png'
-                        height='13'
-                        width="13">
-                        <p class='footer-text'>{{item.manacost|join('/ ')}}</p>
-                      </div>
-                      {%endif%}
-                      {%if item.cooldown%}
-                      <div class="cooldowns">
-                        <img 
-                        src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/cooldown.png'
-                        height='13'
-                        width="13">
-                        <p class='footer-text'>{{item.cooldown|join('/ ')}}</p>
-                      </div>
-                      {%endif%}
                     </div>
+                  </div>
+                  <div class="tooltip-footer">
+                    {%if item.manacost%}
+                    <div class="mana-costs">
+                      <img src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/mana.png'
+                      height='13'
+                      width="13">
+                      <p class='footer-text'>{{item.manacost|join('/ ')}}</p>
+                    </div>
+                    {%endif%}
+                    {%if item.cooldown%}
+                    <div class="cooldowns">
+                      <img 
+                      src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/cooldown.png'
+                      height='13'
+                      width="13">
+                      <p class='footer-text'>{{item.cooldown|join('/ ')}}</p>
+                    </div>
+                    {%endif%}
                   </div>
                 </div>
                 {%endif%}
