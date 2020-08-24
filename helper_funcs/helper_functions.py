@@ -130,7 +130,7 @@ def parse_request():
 
 
 def delete_old_urls():
-    data = hero_output.find().sort("unix_time")
+    data = hero_output.find()
     for d in data:
         time_since = time.time() - d["unix_time"]
         # 8 days old
