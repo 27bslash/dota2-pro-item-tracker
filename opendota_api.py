@@ -52,14 +52,14 @@ async def async_get(m_id, hero_name):
                 resp = await response.json()
                 match_id = int(resp['match_id'])
                 print(f"successfully got {match_id}")
-                roles_arr = [(p['lane'], p['gold_per_min'],  p['lane_efficiency'], p['sen_placed'],
-                              p['player_slot'], p['is_roaming']) for p in resp['players']]
                 # print(all_roles)
                 for i in range(10):
                     # 10 players
                     p = resp['players'][i]
                     hero_id = p['hero_id']
                     # print(hero_id, get_id(hero_name))
+                    roles_arr = [(p['lane'], p['gold_per_min'],  p['lane_efficiency'], p['sen_placed'],
+                                  p['player_slot'], p['is_roaming']) for p in resp['players'] if 'lane_efficiency' in p]
                     if hero_id == get_id(hero_name):
                         abilities = p['ability_upgrades_arr']
                         # check if one of the players matches search
@@ -89,6 +89,7 @@ async def async_get(m_id, hero_name):
                                  'starting_items': starting_items,
                                  'final_items': main_items, 'backpack': bp_items, 'item_neutral': get_item_name(p['item_neutral']),
                                  'abilities': stratz_abillity_test(abilities, hero_id), 'items': purchase_log})
+
                         else:
                             parse.insert_one({'id': m_id})
     except Exception as e:

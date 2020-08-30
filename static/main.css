@@ -212,7 +212,7 @@ a {
   cursor: help;
   margin-right: 100px;
 }
-.talents {
+#talents {
   width: 400px;
   display: grid;
   padding: 10px;
@@ -228,7 +228,7 @@ a {
   right: 150px;
   top: -100px;
 }
-.talents > div {
+#talents > div {
   font-size: 13px;
   color: white;
   height: 80px;
@@ -394,7 +394,7 @@ a {
   grid-column: 1;
 }
 .hide {
-  display: none;
+  display: none !important;
 }
 .right {
   margin-left: 385px;

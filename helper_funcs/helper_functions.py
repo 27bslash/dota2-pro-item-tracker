@@ -94,7 +94,9 @@ def get_urls(hero_name):
     urls = []
     data = hero_urls.find({'hero': hero_name})
     try:
-        urls = [match['id'] for match in data]
+        urls = [match['id'] for match in data if hero_output.find_one(
+            {'hero': hero_name, 'id': match['id']}) is None and parse.find_one(
+            {'hero': hero_name, 'id': match['id']}) is None]
     except Exception as e:
         pass
     return list(reversed(urls))
@@ -142,8 +144,6 @@ def delete_old_urls():
             except Exception as e:
                 print(traceback.format_exc())
             print(f"Deleted {d['id']}")
-        else:
-            break
 
 
 def pro_name(hero_name):
@@ -268,27 +268,11 @@ def stratz_abillity_test(arr, h_id):
             if _id in data:
                 # print(_id)
                 try:
+                    start = time.perf_counter()
                     d = {}
                     d['img'] = data[_id]['name']
                     d['key'] = data[_id]['language']['displayName']
-                    d['description'] = data[_id]['language']['description']
-                    d['attributes'] = data[_id]['language']['attributes']
-                    d['notes'] = data[_id]['language']['notes']
-                    d['cooldown'] = []
-                    d['manacost'] = []
-                    d['damage'] = []
-                    if 'cooldown' in data[_id]['stat']:
-                        # print('cd')
-                        d['cooldown'] = data[_id]['stat']['cooldown']
-                    if 'manaCost' in data[_id]['stat']:
-                        # print('mc')
-                        d['manacost'] = data[_id]['stat']['manaCost']
-                    if 'damage' in data[_id]['stat']:
-                        # print('damage')
-                        d['damage'] = data[_id]['stat']['damage']
-                    if 'aghanimDescription' in data[_id]['language']:
-                        aghanimDescription = data[_id]['language']['aghanimDescription']
-                        d['aghanimDescription'] = aghanimDescription
+                    d['id'] = _id
                     gap = 0
                     level = i+1
                     if data[_id]['uri'] != 'invoker':
@@ -298,34 +282,22 @@ def stratz_abillity_test(arr, h_id):
                             gap += 1
                         if level > 18:
                             gap += 4
-                        # talents.append(i+1+gap)
-                        # talents.append(data[_id]['language']['displayName'])
                         d['level'] = i+1+gap
                     else:
                         # invoker edge case
                         level = i+1
-                        # talents.append(level)
-                        # talents.append(data[_id]['language']['displayName'])
                         d['level'] = i+1+gap
                     if 'special_bonus' in data[_id]['name']:
                         d['type'] = 'talent'
                         with open('json_files/stratz_talents.json', 'r', encoding='utf') as f:
                             talent_data = json.load(f)
-                            # slot = [talent['slot']
-                            #         for hero_id in talent_data if hero_id == str(hero_id)
-                            #         for talent in talent_data[hero_id]['talents'] if int(_id) in talent.values()][0]
-                            # d['slot'] = slot
-                            # d['slot'] = [talent['slot']
-                            #              for talent in talents if int(_id) in talent.values()][0]
-                            # print(slot)
-                            for hero_id in talent_data:
-                                if hero_id == str(h_id):
-                                    talents = talent_data[hero_id]['talents']
-                                    for talent in talents:
-                                        # print(talent)
-                                        if int(_id) in talent.values():
-                                            # print(talent['slot'])
-                                            d['slot'] = talent['slot']
+                            talents = talent_data[str(h_id)]['talents']
+                            for t in talents:
+                                # print(t)
+                                if int(_id) in t.values():
+                                    # print(talent['slot'])
+                                    d['slot'] = t['slot']
+
                     else:
                         d['type'] = 'ability'
                     output.append(d)
@@ -339,54 +311,54 @@ def stratz_abillity_test(arr, h_id):
     return output
 
 
+def talent_order(hero):
+    with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
+        data = json.load(f)
+        data_talents = data[str(get_id(hero))]['talents']
+        start = time.perf_counter()
+        talents = [stratz_abillity_test(
+            [x['abilityId']], get_id(hero))[0] for x in data_talents]
+        if db['talents'].find_one({'hero': hero}) is None:
+            db['talents'].insert_one({'hero': hero, 'talents': talents})
+
+
 def get_talent_order(match_data, hero):
     talents = []
     count = count_talents(match_data)
     # print('coutn', count)
     if count is None:
         return False
-    with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
-        data = json.load(f)
-        for item in data:
-            # print(item)
-            _id = str(get_id(hero))
-            if item == _id:
-                # print(data[item]['talents'])
-                for x in data[item]['talents']:
-                    d = {}
-                    # print(type(x),x['abilityId'])
-                    try:
-                        talent = stratz_abillity_test(
-                            [x['abilityId']], get_id(hero))[0]
-                        print(talent)
-                    except Exception as e:
-                        print('list_err', traceback.format_exc())
-
-                    d['img'] = talent['img']
-                    d['key'] = talent['key']
-                    d['slot'] = talent['slot']
-                    if d['key'] in count:
-                        d['talent_count'] = count[d['key']]
-                    else:
-                        d['talent_count'] = 0
-                    # total picks for talents is both choices added together, this can be done easily if you're not retarded
-                    talents.append(d)
-        # print(talents)
-        c = []
-        level = 10
-        for i in range(0, 8, 2):
-            # print(i)
-            if i < 8:
-                picks = talents[i]['talent_count'] + \
-                    talents[i+1]['talent_count']
-                talents[i]['total_pick_count'] = picks
-                talents[i+1]['total_pick_count'] = picks
-                talents[i]['level'] = level
-                talents[i+1]['level'] = level
-                print('lvl',level)
-                level += 5
-        print(talents)
-        return reversed(talents)
+    talents = db['talents'].find_one({'hero': hero})
+    start = time.perf_counter()
+    # talents = [stratz_abillity_test(
+    #     [x['abilityId']], get_id(hero))[0] for x in data_talents]
+    # print(item)
+    # print(data[str(get_id(hero))])
+    # print(data[item]['talents'])
+    d = {}
+    # print('time.ti/,', time.perf_counter() - start, talents)
+    # print('copmprehe', talents)
+    for x in talents['talents']:
+        if x['key'] in count:
+            x['talent_count'] = count[x['key']]
+        else:
+            x['talent_count'] = 0
+    # total picks for talents is both choices added together, this can be done easily if you're not retarded
+    # print(talents)
+    c = []
+    level = 10
+    for i in range(0, 8, 2):
+        # print(i)
+        if i < 8:
+            picks = talents['talents'][i]['talent_count'] + \
+                talents['talents'][i+1]['talent_count']
+            talents['talents'][i]['total_pick_count'] = picks
+            talents['talents'][i+1]['total_pick_count'] = picks
+            talents['talents'][i]['level'] = level
+            talents['talents'][i+1]['level'] = level
+            level += 5
+    print('Get_talent_order: ', time.perf_counter()-start)
+    return reversed(talents['talents'])
 
 
 def count_talents(data):
@@ -504,7 +476,7 @@ ab_arr = [5239,
           5977
           ]
 if __name__ == "__main__":
-    get_talents()
+
     # get_hero_name('jakiro')
     # get_id('lih')
     # get_talent_order('jakiro')

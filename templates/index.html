@@ -2,9 +2,54 @@
 <main>
   <div class="grid-container">
     <div class="buttons">
-      <button class="sort-button" onclick="pickSort(0)">PICKS</button>
-      <button class="sort-button" onclick="pickSort(1)">WINS</button>
-      <button class="sort-button" onclick="pickSort(2)">WINRATE</button>
+      <button class="sort-button" onclick="pickSort(null,'picks',{{wins}})">
+        PICKS
+      </button>
+      <button class="sort-button" onclick="pickSort(null,'wins',{{wins}})">
+        WINS
+      </button>
+      <button class="sort-button" onclick="pickSort(null,'winrate',{{wins}})">
+        WINRATE
+      </button>
+      <button
+        class="sort-button"
+        onclick="pickSort('Safelane','wins',{{wins}})"
+      >
+        SAFELANE
+      </button>
+      <button
+        class="sort-button"
+        onclick="pickSort('Midlane','wins',{{wins}})"
+      >
+        MIDLANE
+      </button>
+      <button
+        class="sort-button"
+        onclick="pickSort('Offlane','wins',{{wins}})"
+      >
+        OFFLANE
+      </button>
+      <button
+        class="sort-button"
+        onclick="pickSort('Roaming','wins',{{wins}})"
+      >
+        ROAMING
+      </button>
+      <button
+        class="sort-button"
+        onclick="pickSort('Support','wins',{{wins}})"
+      >
+        SUPPORT
+      </button>
+      <button
+        class="sort-button"
+        onclick="pickSort('Hard Support','wins',{{wins}})"
+      >
+        HARD SUPPORT
+      </button>
+      <input type="checkbox" id="pick-box" />p
+      <input type="checkbox" id="win-box" />win
+      <input type="checkbox" id="win-rate-box" />wr
     </div>
     <div class="hero-grid">
       {%set x = 0%} {%for j in range(119)%} {%if j < 119%}

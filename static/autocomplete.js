@@ -71,6 +71,7 @@ const display = () => {
     linkArr.push(h.name);
     displayArr.push(h.name.replace(/_/g, " "));
   }
+  console.log(displayArr.length);
   if (displayArr.length > 20) {
     displayArr = displayArr.slice(0, 15);
     linkArr = linkArr.slice(0, 15);
@@ -88,10 +89,10 @@ const display = () => {
     link = document.getElementById(linkArr[i]);
     if (link && search.value.length > 1) {
       link.classList.remove("hide");
-      if (i == 0) {
-        link.parentNode.parentNode.classList.add("first");
-      }
-      link.parentNode.parentNode.classList.remove("hide");
+      linkContainer = link.parentNode.parentNode;
+      linkContainer.style.order = i;
+      linkContainer.classList.remove("hide");
+      linkContainer.style.display = "block";
       heroGrid.classList.add("right");
     }
   }
@@ -103,8 +104,16 @@ const hideHeroes = () => {
     (window.location.pathname.indexOf("/") + 1) %
       (window.location.pathname.lastIndexOf("/") + 1) ===
     0
-  )
+  ) {
     document.querySelector(".buttons").style.display = "none";
+  }
+  const imgWidth = document.querySelectorAll(".hero-img")[0].offsetWidth;
+  gridComputedStyle = window.getComputedStyle(heroGrid);
+  const gridGap = +gridComputedStyle
+    .getPropertyValue("grid-gap")
+    .split(" ")[0]
+    .replace("px", "");
+  const cols = Math.floor(screen.width / (gridGap + imgWidth) - 1);
   for (let hero of cells) {
     hero.classList.add("hide");
     hero.style.gridArea = null;
@@ -155,9 +164,9 @@ window.addEventListener("keydown", (event) => {
     default:
       break;
   }
-
-  suggestionList.children[x].children[0].style.backgroundColor =
-    "rgb(65, 65, 65)";
+  if (suggestionList.length > 0)
+    suggestionList.children[x].children[0].style.backgroundColor =
+      "rgb(65, 65, 65)";
   for (let i = 0; i < suggestionList.children.length; i++) {
     if (i != x)
       suggestionList.children[i].children[0].style.backgroundColor = "inherit";
@@ -167,11 +176,10 @@ window.addEventListener("keydown", (event) => {
 const reset = () => {
   ul.innerHTML = "";
   search.value = "";
+  heroGrid.classList.remove("right");
+  heroGrid.classList.remove("hide");
   for (let hero of cells) {
-    heroGrid.classList.remove("right");
-    heroGrid.classList.remove("hide");
     hero.classList.remove("hide");
-    hero.classList.remove("first");
     document.querySelector(".buttons").style.display = "flex";
   }
   for (let stat of statText) {
@@ -179,7 +187,7 @@ const reset = () => {
   }
 };
 const closeAllTooltips = () => {
-  document.querySelector(".talents").style.display = "none";
+  // document.querySelector(".talents").style.display = "none";
   document.querySelectorAll(".tooltip").forEach((x, i) => {
     x.style.display = "none";
   });
@@ -188,18 +196,11 @@ window.addEventListener("mouseover", (event) => {
   // console.log(event.target.className);
   closeAllTooltips();
   if (event.target.id === "main-talent-img") {
-    document.querySelector(".talents").style.display = "grid";
+    document.getElementById("talents").style.display = "grid";
   }
   if (event.target.className === "table-img") {
-    console.log(event.target.parentNode.children[2]);
     event.target.parentNode.children[2].style.display = "block";
   }
 });
 closeAllTooltips();
 autocomplete();
-// ability_img = document.querySelectorAll(".table-img");
-// for (let img in ability_img) {
-//   img.addEventListener("mouseover", (e) => {
-//     console.log(e);
-//   });
-// }
