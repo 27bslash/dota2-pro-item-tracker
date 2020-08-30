@@ -296,8 +296,7 @@ a {
   text-shadow: 0 0 1px rgb(233, 255, 108), 0 0 3px gold;
   /* text-shadow:1px 1px 10px #fff, 1px 1px 10px rgb(255, 187, 0) */
 }
-.talent-level > p {
-}
+
 .talent-picks {
   color: white;
   width: 100%;
@@ -450,18 +449,18 @@ a {
   position: absolute;
   width: 300px;
 }
-.tooltip > div {
-}
+
 .tooltip-line-one {
   padding: 20px;
   display: flex;
   text-align: end;
   align-items: center;
-  /* background: inherit; */
+  background-color: rgba(255, 255, 255, 0.11);
   border-bottom: solid 1px grey;
 }
 .tooltip-img {
   justify-self: start;
+  width: 55px;
 }
 .tooltip-line-one h3 {
   margin: 0;
@@ -473,8 +472,7 @@ a {
 .tooltip-content {
   padding: 20px;
 }
-.tooltip-content:not(:last-child) {
-}
+
 .tooltip.content:last-child {
   background-color: red;
 }
@@ -486,6 +484,7 @@ a {
   display: flex;
   align-items: center;
   padding: 20px;
+  border-top: solid grey 1px;
 }
 .footer-text {
   margin: 0;
