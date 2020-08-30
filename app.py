@@ -394,7 +394,7 @@ def opendota_call():
             # delete_output()
             pass
     parse_request()
-    # get_winrate()
+    get_winrate()
     print('end', (time.time()-start)/60, 'minutes')
 
 

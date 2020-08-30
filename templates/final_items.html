@@ -45,7 +45,7 @@
   <div class="content" style="margin-top: 40px;">
     <a href="/hero/{{hero_name}}">
       <img
-        src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
+        src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
         alt='main {{hero_name}}'
     /></a>
     <a
@@ -55,7 +55,7 @@
       <img
         title="Starter Items"
         height="50px"
-        src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/tango_lg.png"
+        src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/tango_lg.png"
         alt='show starter items'
     /></a>
     <div class="most-used-container">
@@ -68,7 +68,7 @@
         <div class="most-used-row">
           <img
             class="most-used-item"
-            src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+            src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
               key
             }}_lg.png"
             width="50"
@@ -178,7 +178,7 @@
                 <div class="item-cell">
                   <img
                     class="item-img"
-                    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+                    src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
                 item.key
               }}_lg.png"
                     width="100"
@@ -193,7 +193,7 @@
                 <div class="item-cell">
                   <img
                     class="item-img"
-                    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+                    src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
                 item.key
               }}_lg.png"
                     width="100"
@@ -212,7 +212,7 @@
                     id='neutral-item'
                       class="item-img"
                       id="neutral-item"
-                      src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{dict_item['item_neutral']}}_lg.png"
+                      src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{dict_item['item_neutral']}}_lg.png"
                       width="100"
                       height="80"
                       alt="{{dict_item['item_neutral']}}"
@@ -246,14 +246,20 @@
                 data-tooltip="{{item.key}}"
                 alt="{{item.key}}"
                 />
-                <div class="tooltip" style='background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto; padding: 10px;'>
-                  <h3>{{item.key}}</h3>
+                <div class="tooltip" style='display: flex; background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto;'>
+                  <div class="tooltip-line-one">
+                    <img 
+                    src = "{{ url_for('static', filename='talent_img.png') }}"
+                    width='55'
+                    />
+                    <h3>{{item.key}}</h3>
+                  </div>
                 </div>
                 {%endif%}
                 {%if item.type != 'talent'%}
                 <img
                   class="table-img"
-                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
+                  src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
                   width="55"
                   height="55"
                   data_id = "{{item.id}}"

@@ -45,7 +45,7 @@
   <div class="content" style="margin-top: 40px;">
     <a href="/hero/{{hero_name}}">
       <img
-        src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
+        src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
     /></a>
     <a
       class="view-changer"
@@ -54,7 +54,7 @@
       <img
         title="Starter Items"
         height="50px"
-        src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
+        src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
         alt="final items"
     /></a>
     <div class="most-used-container">
@@ -67,7 +67,7 @@
           <div class="most-used-row">
             <img
               class="most-used-item"
-              src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+              src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
                 key
               }}_lg.png"
               width="50"
@@ -87,7 +87,7 @@
       </div>
       {%if talents%}
       <div class="talent-wrapper">
-      <img id='main-talent-img' height='70' src= "{{ url_for('static', filename='talent_img.png') }}"/>
+      <img id='main-talent-img' height='70' src="{{ url_for('static', filename='talent_img.png') }}"/>
       <div class='tooltip' id="talents" style='display: none'>
         {%for talent in talents%}
         {%if talent.slot % 2 == 0 or talent.slot == 0 %}
@@ -178,7 +178,7 @@
                 >
                   <img
                     class="item-img"
-                    src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+                    src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
                 item.key
               }}_lg.png"
                     width="100"
@@ -205,26 +205,29 @@
                   height="55"
                   data-tooltip="{{item.key}}"
                   alt="{{item.key}}"
-                  onerror="this.onerror=null;this.src='../static/talent_img.png';"
+                  onerror="this.onerror=null;this.src='//ailhumfakp.cloudimg.io/v7/../static/talent_img.png';"
                 />
-                <div
-                  class="tooltip"
-                  style="background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto; padding: 10px;"
-                >
-                  <h3>{{item.key}}</h3>
+                <div class="tooltip" style='display: flex; background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto;'>
+                  <div class="tooltip-line-one">
+                    <img 
+                    src = "{{ url_for('static', filename='talent_img.png') }}"
+                    width='55'
+                    />
+                    <h3>{{item.key}}</h3>
+                  </div>
                 </div>
                 {%endif%}
                 {%if item.type != 'talent'%}
                 <img
                   class="table-img"
-                  src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
+                  src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
                   width="55"
                   height="55"
                   data-tooltip="{{item.key}}"
                   data_id="{{item.id}}"
                   alt="{{item.key}}"
                   title="{{item.key}}"
-                  onerror="this.onerror=null;this.src='../../static/talent_img.png'"
+                  onerror="this.onerror=null;this.src='//ailhumfakp.cloudimg.io/v7/../../static/talent_img.png'"
                 />
                 <div
                   class="tooltip"
