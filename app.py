@@ -204,6 +204,7 @@ def ability_json():
 @app.after_request
 def add_header(response):
     response.cache_control.max_age = 43200
+    response.add_etag()
     print(response.cache_control)
     return response
 
