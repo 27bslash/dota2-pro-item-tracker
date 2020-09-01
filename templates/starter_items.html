@@ -85,6 +85,17 @@
           <i id="arrow" class="fas fa-caret-down" ></i>
         </div>
       </div>
+      <script>
+        itemWindow = document.querySelector(".most-used");
+        const toggleWindow = () => {
+          itemWindow.classList.toggle("closed");
+          if (itemWindow.classList.contains("closed")) {
+            document.getElementById("arrow").className = "fas fa-caret-down";
+          } else {
+            document.getElementById("arrow").className = "fas fa-caret-up";
+          }
+        };
+      </script>
       {%if talents%}
       <div class="talent-wrapper">
       <img id='main-talent-img' height='70' src="{{ url_for('static', filename='talent_img.png') }}"/>

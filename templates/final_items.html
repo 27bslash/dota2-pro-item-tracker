@@ -4,15 +4,13 @@
     document.getElementsByTagName("html")[0].style.visibility = "visible";
     let table = $(".item-table").DataTable({
       aoColumns: [
-        { orderSequence: ["desc", "asc"] },
-        { bSortable: false },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
+      { orderSequence: ["desc", "asc"] },
+      { bSortable: false },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["asc", "desc"] },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["asc", "desc"] },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["desc", "asc"] },
@@ -20,26 +18,29 @@
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["desc", "asc"] },
-      ],
-      order: [[0, "asc"]],
-      order: [[2, "desc"]],
-      bfilter: false,
-      searching: false,
-    });
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        ],
+        order: [[0, "asc"]],
+        order: [[2, "desc"]],
+        bfilter: false,
+        searching: false,
+      });
     var lastIdx = null;
     $(".item-table tbody")
-      .on("mouseover", ".stats", function () {
-        var colIdx = table.cell(this).index().column;
-        if (colIdx !== lastIdx) {
-          $(table.cells().nodes()).removeClass("highlight");
-          $(table.column(colIdx).nodes()).addClass("highlight");
-        }
-      })
-      .on("mouseleave", function () {
+    .on("mouseover", ".stats", function () {
+      var colIdx = table.cell(this).index().column;
+      if (colIdx !== lastIdx) {
         $(table.cells().nodes()).removeClass("highlight");
-      });
+        $(table.column(colIdx).nodes()).addClass("highlight");
+      }
+    })
+    .on("mouseleave", function () {
+      $(table.cells().nodes()).removeClass("highlight");
+    });
   });
 </script>
+
 <title>{{hero_name}}</title>
 <main>
   <div class="content" style="margin-top: 40px;">
@@ -86,6 +87,17 @@
         <i id="arrow" class="fas fa-caret-down" ></i>
       </div>
     </div>
+    <script>
+      itemWindow = document.querySelector(".most-used");
+      const toggleWindow = () => {
+        itemWindow.classList.toggle("closed");
+        if (itemWindow.classList.contains("closed")) {
+          document.getElementById("arrow").className = "fas fa-caret-down";
+        } else {
+          document.getElementById("arrow").className = "fas fa-caret-up";
+        }
+      };
+    </script>
     {%if talents%}
     <div class="talent-wrapper">
     <img id='main-talent-img' height='70' src= "{{ url_for('static', filename='talent_img.png') }}"/>
