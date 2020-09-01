@@ -3,16 +3,19 @@ let cells = document.querySelectorAll(".col"),
   search = document.getElementById("search"),
   heroGrid = document.querySelector(".hero-grid"),
   statText = document.querySelectorAll(".win-stats"),
-  ul = document.querySelector("ul");
+  ul = document.querySelector("ul"),
+  suggestionList = document.querySelector("#suggestion-list");
 
+const data = get_hero_data();
 async function get_hero_data() {
+  console.time();
   const url = `${window.location.origin}/files/hero_ids`;
   const res = await fetch(url);
   const data = await res.json();
+  console.timeEnd;
   return data;
 }
 const autocomplete = () => {
-  data = get_hero_data();
   data.then((result) => {
     search.addEventListener("input", (e) => {
       if (e.target.value.length < 2) return;
@@ -107,13 +110,6 @@ const hideHeroes = () => {
   ) {
     document.querySelector(".buttons").style.display = "none";
   }
-  const imgWidth = document.querySelectorAll(".hero-img")[0].offsetWidth;
-  gridComputedStyle = window.getComputedStyle(heroGrid);
-  const gridGap = +gridComputedStyle
-    .getPropertyValue("grid-gap")
-    .split(" ")[0]
-    .replace("px", "");
-  const cols = Math.floor(screen.width / (gridGap + imgWidth) - 1);
   for (let hero of cells) {
     hero.classList.add("hide");
     hero.style.gridArea = null;
@@ -141,7 +137,6 @@ const autoFocus = (event) => {
 let x = 0,
   count = 0;
 window.addEventListener("keydown", (event) => {
-  let suggestionList = document.querySelector("#suggestion-list");
   autoFocus(event);
   if (!suggestionList.children.length) return;
   if (event.keyCode == 27 || search.value.length < 1) {
@@ -164,7 +159,7 @@ window.addEventListener("keydown", (event) => {
     default:
       break;
   }
-  if (suggestionList.length > 0)
+  if (suggestionList.children.length > 0)
     suggestionList.children[x].children[0].style.backgroundColor =
       "rgb(65, 65, 65)";
   for (let i = 0; i < suggestionList.children.length; i++) {
@@ -176,8 +171,10 @@ window.addEventListener("keydown", (event) => {
 const reset = () => {
   ul.innerHTML = "";
   search.value = "";
-  heroGrid.classList.remove("right");
-  heroGrid.classList.remove("hide");
+  if (heroGrid) {
+    heroGrid.classList.remove("right");
+    heroGrid.classList.remove("hide");
+  }
   for (let hero of cells) {
     hero.classList.remove("hide");
     document.querySelector(".buttons").style.display = "flex";
@@ -187,19 +184,29 @@ const reset = () => {
   }
 };
 const closeAllTooltips = () => {
-  // document.querySelector(".talents").style.display = "none";
   document.querySelectorAll(".tooltip").forEach((x, i) => {
     x.style.display = "none";
   });
 };
 window.addEventListener("mouseover", (event) => {
-  // console.log(event.target.className);
   closeAllTooltips();
   if (event.target.id === "main-talent-img") {
     document.getElementById("talents").style.display = "grid";
   }
   if (event.target.className === "table-img") {
     event.target.parentNode.children[2].style.display = "block";
+  }
+  if (event.target.className === "hero-suggestion") {
+    event.target.style.backgroundColor = "rgb(65, 65, 65)";
+    for (let suggestion of suggestionList.children) {
+      if (suggestion.children[0] != event.target) {
+        suggestion.children[0].style.backgroundColor = "inherit";
+        // start keypress listener from wher the mouse is
+        x = [...event.target.parentElement.parentElement.childNodes].indexOf(
+          event.target.parentNode
+        );
+      }
+    }
   }
 });
 closeAllTooltips();
