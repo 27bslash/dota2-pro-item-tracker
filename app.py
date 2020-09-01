@@ -297,6 +297,7 @@ def opendota_call():
     names = []
     start = time.time()
     db['most-common-items'].delete_many({'hero': 'anti-mage'})
+    delete_old_urls()
     print('input')
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
