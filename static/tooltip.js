@@ -63,6 +63,7 @@
 //                 {%endif%}
 //               </div> -->
 //               <!-- {% endfor %} --></div>
+
 async function stratz_abilities() {
   console.time();
   const url = `${window.location.origin}/files/abilities`;
@@ -98,7 +99,7 @@ window.addEventListener("mouseover", (event) => {
       // tooltip = div;
       // tooltip.setAttribute("class", "tooltip");
       //tHeader
-      if ("language" in result[a_id]) {
+      if (a_id && "language" in result[a_id]) {
         let base = result[a_id]["language"];
         tooltipHeader = document.createElement("div");
         tooltipHeader.setAttribute("class", "tooltip-line-one");
