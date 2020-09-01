@@ -331,7 +331,6 @@ def insert_hero_picks(hero):
     for k in list(roles.keys()):
         if roles[k] <= 0:
             del roles[k]
-    print(roles)
     db['hero_picks'].insert_one(
         {'hero': hero, 'total_picks': hero_output.count_documents({'hero': hero}), 'roles': roles})
 

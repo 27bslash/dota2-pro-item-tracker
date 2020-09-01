@@ -38,31 +38,19 @@ cache = Cache(config={
 })
 cache.init_app(app)
 compress.init_app(app)
-# minify(app=app, html=True, js=True, cssless=True)
+minify(app=app, html=True, js=True, cssless=True)
 
 
 @app.route('/', methods=['GET'])
 @cache.cached(timeout=600)
 def index():
-    query = request.args.get('query')
-    hero_winrate = {}
-    wins = []
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
-        img_names = []
-        # for hero in data['heroes']:
-        #     wins = hero_output.count_documents(
-        #         {'hero': hero['name'], 'win': 1, 'role': 'Offlane'})
-        #     print(hero['name'], wins)
         links = sorted(
             data['heroes'], key=itemgetter('name'))
-        for i in links:
-            img_names.append(switcher(i['name']))
+        img_names = [switcher(i['name']) for i in links]
         win_data = db['wins'].find_one({})
-        for item in win_data['stats']:
-            wins.append(item)
-            # print(wins, type(wins))
-        wins = sorted(wins, key=itemgetter('hero'))
+        wins = [item for item in win_data['stats']]
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins)
 
 
@@ -70,7 +58,6 @@ def index():
 def ind_post():
     if request.method == 'POST':
         text = request.form.get('search')
-
         if get_hero_name(text):
             suggestion = get_hero_name(text)
             suggestion = sorted(suggestion)
@@ -103,35 +90,25 @@ def item_get(hero_name):
     display_name = hero_name.replace('_', ' ').capitalize()
     total = 0
     template = 'final_items.html'
-    r_start = time.perf_counter()
     if 'starter_items' in request.url:
         template = 'starter_items.html'
-    roles = {'Safelane': hero_output.count_documents(
-        {'hero': hero_name, 'role': 'Safelane'}),
-        'Midlane': hero_output.count_documents({'hero': hero_name, 'role': 'Midlane'}),
-        'Offlane': hero_output.count_documents({'hero': hero_name, 'role': 'Offlane'}),
-        'Support': hero_output.count_documents({'hero': hero_name, 'role': 'Support'}),
-        'Roaming': hero_output.count_documents({'hero': hero_name, 'role': 'Roaming'}),
-        'Hard Support': hero_output.count_documents({'hero': hero_name, 'role': 'Hard Support'})
-    }
+    r_start = time.perf_counter()
+    roles_db = db['hero_picks'].find_one({'hero': hero_name})
+    roles = roles_db['roles']
     print('roles: ', time.perf_counter() - r_start)
+    # print('roloe', roles, hero_name)
     check_response_time = time.perf_counter()
     check_response = hero_output.find_one({'hero': hero_name})
+    print('chk_time: ', time.perf_counter() - check_response_time)
     if check_response:
         if request.args:
             role = request.args.get('role').replace('%20', ' ').title()
             data = hero_output.find(
                 {'hero': hero_name, 'role': role}).sort('unix_time', -1)
             match_data = [hero for hero in data]
-            roles = {k: v for k, v in sorted(
-                roles.items(), key=lambda item: item[1], reverse=True)}
         else:
             match_data = find_hero(hero_name)
-        for k in list(roles.keys()):
-            if roles[k] <= 0:
-                del roles[k]
-        total = hero_output.count_documents({'hero': hero_name})
-        print('chk_response: ', time.perf_counter() - check_response_time)
+        total = roles_db['total_picks']
         most_used = pro_items(match_data)
         most_used = dict(itertools.islice(most_used.items(), 10))
         max_val = list(most_used.values())[0]
@@ -146,9 +123,9 @@ def item_get(hero_name):
 
 def find_hero(hero):
     data = hero_output.find({'hero': hero}).sort('unix_time', -1)
-    match_data = []
-    for hero in data:
-        match_data.append(hero)
+    s = time.perf_counter()
+    match_data = [hero for hero in data]
+    print('data time', time.perf_counter() - s)
     return match_data
 
 
@@ -156,9 +133,9 @@ def get_winrate():
     print('running....')
     d = {}
     output = []
-    db['wins'].delete_many({})
     roles = ['Hard Support', 'Support', 'Safelane',
              'Offlane', 'Midlane', 'Roaming']
+    db['wins'].delete_many({})
     try:
         with open('json_files/hero_ids.json', 'r') as f:
             data = json.load(f)
@@ -190,12 +167,10 @@ def get_winrate():
                     role_dict[f"{role}_losses"] = losses
                     role_dict[f"{role}_winrate"] = winrate
                 output.append(role_dict)
-        # print(output)
-        db['wins'].insert_one({'stats': output})
+                wins = sorted(output, key=itemgetter('hero'))
+            db['wins'].insert_one({'stats': wins})
     except Exception as e:
         print(traceback.format_exc())
-    # print(json.dumps(output, indent=2))
-    # return output
 
 
 def get_hero_name_colour(hero_name):
@@ -204,8 +179,6 @@ def get_hero_name_colour(hero_name):
         data = json.load(f)
         for item in data:
             if item['hero'] == hero_name:
-                # colours.append(tuple(item['color']))
-
                 return tuple(item['color'])
 
 
@@ -230,52 +203,8 @@ def ability_json():
 
 @app.after_request
 def add_header(response):
-    # response.cache_control.no_store = True
+    response.cache_control.max_age = 43200
     print(response.cache_control)
-    response.cache_control.max_age = 300
-    return response
-
-
-def gzipped(f):
-    print(f)
-
-    @functools.wraps(f)
-    def view_func(*args, **kwargs):
-        print('test')
-
-        @after_this_request
-        def zipper(response):
-            accept_encoding = request.headers.get('Accept-Encoding', '')
-            print('3rd')
-            if 'gzip' not in accept_encoding.lower():
-                return response
-            print(accept_encoding)
-            response.direct_passthrough = False
-
-            if (response.status_code < 200 or
-                response.status_code >= 300 or
-                    'Content-Encoding' in response.headers):
-                return response
-            gzip_buffer = IO()
-            gzip_file = gzip.GzipFile(mode='wb',
-                                      fileobj=gzip_buffer)
-            gzip_file.write(response.data)
-            gzip_file.close()
-
-            response.data = gzip_buffer.getvalue()
-            response.headers['Content-Encoding'] = 'gzip'
-            response.headers['Vary'] = 'Accept-Encoding'
-            response.headers['Content-Length'] = len(response.data)
-
-            return response
-
-        return f(*args, **kwargs)
-
-    return view_func
-
-
-@gzipped
-def get_data():
     return response
 
 
@@ -366,15 +295,13 @@ async def single_request(name):
 def opendota_call():
     names = []
     start = time.time()
-    # delete_old_urls()
-    # loop = asyncio.get_event_loop()
     db['most-common-items'].delete_many({'hero': 'anti-mage'})
     print('input')
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for i in data['heroes']:
             names.append(i['name'])
-            # talent_order(i['name'])
+            insert_talent_order(i['name'])
         strt = time.perf_counter()
         # asyncio.run(pro_request(names))
         print('1st', time.perf_counter() - strt)
@@ -383,6 +310,7 @@ def opendota_call():
         for name in names:
             sleep = len(get_urls(name))
             asyncio.run(main(get_urls(name), name))
+            insert_hero_picks(name)
             # loop.run_until_complete(
             #     test(steam_api_test(name), name))
             # sync(steam_api_test(name),name)
@@ -403,10 +331,9 @@ def manual_hero_update(name):
     # hero_urls.delete_many({'hero': name})
     # asyncio.run(single_request(name))
     asyncio.run(main(get_urls(name), name))
-    # get_winrate()
+    get_winrate()
 
 
-# scheduler = BackgroundScheduler()
 if __name__ == '__main__':
     # opendota_call()
     # delete_old_urls()

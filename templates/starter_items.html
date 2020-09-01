@@ -133,13 +133,13 @@
       <p style="color: white;">
         was picked {{total}} times. It's mostly played:
       </p>
-      {%for k,v in roles.items()%} {% if v > 0%}
+      {%for k,v in roles.items()%}
       <a href="/hero/{{hero_name}}?role={{k}}">
         <p class="total-picks">
           {{k}} ({{v}}){{"," if not loop.last else "." }}
         </p>
       </a>
-      {%endif%} {%endfor%}
+      {%endfor%}
     </div>
     <table role='main' class="item-table stripe">
       <thead>
