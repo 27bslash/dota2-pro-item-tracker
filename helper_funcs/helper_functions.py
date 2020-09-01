@@ -311,7 +311,32 @@ def stratz_abillity_test(arr, h_id):
     return output
 
 
-def talent_order(hero):
+def insert_hero_picks(hero):
+    db['hero_picks'].delete_many({'hero': hero})
+    roles = {'Safelane': hero_output.count_documents(
+            {'hero': hero, 'role': 'Safelane'}),
+        'Midlane': hero_output.count_documents(
+        {'hero': hero, 'role': 'Midlane'}),
+        'Offlane': hero_output.count_documents(
+        {'hero': hero, 'role': 'Offlane'}),
+        'Support': hero_output.count_documents(
+        {'hero': hero, 'role': 'Support'}),
+        'Roaming': hero_output.count_documents(
+        {'hero': hero, 'role': 'Roaming'}),
+        'Hard Support': hero_output.count_documents(
+        {'hero': hero, 'role': 'Hard Support'}),
+    }
+    roles = {k: v for k, v in sorted(
+        roles.items(), key=lambda item: item[1], reverse=True)}
+    for k in list(roles.keys()):
+        if roles[k] <= 0:
+            del roles[k]
+    print(roles)
+    db['hero_picks'].insert_one(
+        {'hero': hero, 'total_picks': hero_output.count_documents({'hero': hero}), 'roles': roles})
+
+
+def insert_talent_order(hero):
     with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
         data = json.load(f)
         data_talents = data[str(get_id(hero))]['talents']
@@ -325,30 +350,19 @@ def talent_order(hero):
 def get_talent_order(match_data, hero):
     talents = []
     count = count_talents(match_data)
-    # print('coutn', count)
     if count is None:
         return False
     talents = db['talents'].find_one({'hero': hero})
     start = time.perf_counter()
-    # talents = [stratz_abillity_test(
-    #     [x['abilityId']], get_id(hero))[0] for x in data_talents]
-    # print(item)
-    # print(data[str(get_id(hero))])
-    # print(data[item]['talents'])
     d = {}
-    # print('time.ti/,', time.perf_counter() - start, talents)
-    # print('copmprehe', talents)
     for x in talents['talents']:
         if x['key'] in count:
             x['talent_count'] = count[x['key']]
         else:
             x['talent_count'] = 0
-    # total picks for talents is both choices added together, this can be done easily if you're not retarded
-    # print(talents)
     c = []
     level = 10
     for i in range(0, 8, 2):
-        # print(i)
         if i < 8:
             picks = talents['talents'][i]['talent_count'] + \
                 talents['talents'][i+1]['talent_count']
@@ -476,7 +490,7 @@ ab_arr = [5239,
           5977
           ]
 if __name__ == "__main__":
-
+    hero_picks()
     # get_hero_name('jakiro')
     # get_id('lih')
     # get_talent_order('jakiro')
