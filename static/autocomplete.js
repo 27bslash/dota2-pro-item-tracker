@@ -221,7 +221,7 @@ window.addEventListener("keydown", (event) => {
     x = 0;
   }
   if (currList.children.length > 0) {
-    console.log(currList.children[x].children[0]);
+    // console.log('hero,',currList.children[x].children[0]);
     currList.children[x].children[0].style.backgroundColor = "rgb(65, 65, 65)";
   }
   for (let i = 0; i < currList.children.length; i++) {

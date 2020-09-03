@@ -38,7 +38,7 @@ cache = Cache(config={
 })
 cache.init_app(app)
 compress.init_app(app)
-minify(app=app, html=True, js=True, cssless=True)
+minify(app=app, html=True, js=False, cssless=False)
 
 
 @app.route('/', methods=['GET'])
@@ -58,12 +58,12 @@ def index():
 def ind_post():
     if request.method == 'POST':
         text = request.form.get('search')
+        if db['account_ids'].find_one({'name': text}):
+            return redirect('/player/'+text)
         if get_hero_name(text):
             suggestion = get_hero_name(text)
             suggestion = sorted(suggestion)
             return redirect('/hero/'+suggestion[0])
-        if db['account_ids'].find_one({'name': text}):
-            return redirect('/player/'+text)
         else:
             return redirect('/')
 
@@ -76,12 +76,12 @@ def item_post(hero_name):
         if 'starter_items' in request.url:
             starter = '/starter_items'
         text = request.form.get('search')
+        if db['account_ids'].find_one({'name': text}):
+            return redirect('/player/'+text)
         if get_hero_name(text):
             suggestion = get_hero_name(text)
             suggestion = sorted(suggestion)
             return redirect('/hero/'+suggestion[0])
-        if db['account_ids'].find_one({'name': text}):
-            return redirect('/player/'+text)
         else:
             return redirect(f'/hero/{hero_name}{starter}')
 
@@ -89,19 +89,18 @@ def item_post(hero_name):
 @app.route('/player/<player_name>/starter_items', methods=['POST'])
 @app.route('/player/<player_name>', methods=['POST'])
 def player_post(player_name):
-    print(player_name)
+    print('p',player_name)
     if request.method == 'POST':
         starter = ''
         if 'starter_items' in request.url:
             starter = '/starter_items'
         text = request.form.get('search')
+        if db['account_ids'].find_one({'name': text}):
+            return redirect('/player/'+text)
         if get_hero_name(text):
             suggestion = get_hero_name(text)
             suggestion = sorted(suggestion)
             return redirect('/hero/'+suggestion[0])
-        if db['account_ids'].find_one({'name': text}):
-            print('heroalsdk;fja;sdlf')
-            return redirect('/player/'+text)
         else:
             return redirect(f'/hero/{hero_name}{starter}')
 
@@ -158,7 +157,6 @@ def player_get(player_name):
     roles_db = db['player_picks'].find_one({'name': display_name})
     roles = roles_db['roles']
     check_response = hero_output.find_one({'name': display_name})
-    print(check_response)
     print('chk_time: ', time.perf_counter() - check_response_time) 
     if check_response:
         if request.args:
@@ -258,7 +256,6 @@ def ability_json():
 def color_json():
     with open('json_files/hero_colours.json', 'r') as f:
         data = json.load(f)
-        print(data)
         return data
 
 
@@ -321,7 +318,7 @@ async def request_shit(hero_name):
                     'img::attr(src)').extract()[0]
                 lane = clean_img(lane_select)
                 role = clean_img(role_select)
-                # print(mmr)
+                # print(mmr) 
                 lanes = {'safelane': '1', 'mid': '2', 'roaming': '4',
                          'offlane': '3', 'unknown': '0', 'jungle': 'jungle'}
                 roles = {'1': 'Safelane', '2': 'Midlane',
