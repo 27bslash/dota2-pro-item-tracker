@@ -4,19 +4,22 @@ let cells = document.querySelectorAll(".col"),
   heroGrid = document.querySelector(".hero-grid"),
   statText = document.querySelectorAll(".win-stats"),
   ul = document.querySelector("ul"),
-  suggestionList = document.querySelector("#suggestion-list");
+  heroSuggestionList = document.querySelector("#hero-suggestion-list"),
+  playerSuggestionList = document.querySelector("#player-suggestion-list");
 
-const data = get_hero_data();
-async function get_hero_data() {
-  console.time();
-  const url = `${window.location.origin}/files/hero_ids`;
+document.querySelector(".suggestions").style.display = "none";
+async function get_json(search) {
+  const url = `${window.location.origin}/files/${search}`;
   const res = await fetch(url);
   const data = await res.json();
-  console.timeEnd;
   return data;
 }
-const autocomplete = () => {
-  data.then((result) => {
+
+const hero_data = get_json("hero_ids");
+const player_data = get_json("accounts");
+
+const hero_autocomplete = () => {
+  hero_data.then((result) => {
     search.addEventListener("input", (e) => {
       if (e.target.value.length < 2) return;
       hideHeroes();
@@ -27,9 +30,21 @@ const autocomplete = () => {
           .replace(/_/g, " ")
           .includes(e.target.value.toLowerCase())
       );
-
       abbreviations(e.target.value, result.heroes.sort(compWrap(0)));
-      display();
+      hero_name_display();
+    });
+  });
+};
+const player_autocomplete = () => {
+  player_data.then((result) => {
+    search.addEventListener("input", (e) => {
+      if (e.target.value.length < 2) return;
+      document.querySelector(".suggestions").style.display = "grid";
+      sort = result.sort();
+      player_arr = sort.filter((x) => {
+        return x.toLowerCase().includes(e.target.value.toLowerCase());
+      });
+      player_name_display(player_arr);
     });
   });
 };
@@ -61,12 +76,31 @@ const abbreviations = (e, result) => {
   }
 };
 
-const display = () => {
+const player_name_display = (player_arr) => {
+  playerSuggestionList.innerHTML = "";
+  console.log(player_arr);
+  if (player_arr.length > 20) {
+    player_arr = player_arr.slice(0, 15);
+  }
+  for (let player of player_arr) {
+    let div = document.createElement("div"),
+      a = document.createElement("a"),
+      p = document.createElement("p");
+    a.href = `${window.location.origin}/player/${player}`;
+    a.setAttribute("class", "suggestion-link");
+    div.setAttribute("class", "suggestion");
+    div.setAttribute("id", player);
+    p.innerHTML = player;
+    playerSuggestionList.appendChild(a).appendChild(div).appendChild(p);
+    document.querySelector(".suggestions").classList.remove("hide");
+  }
+};
+
+const hero_name_display = () => {
   let suggestions = document.querySelector(".suggestions"),
     displayArr = [],
     linkArr = [];
   ul.innerHTML = "";
-  suggestions.classList.add("hide");
   for (let stat of statText) {
     stat.classList.add("hide");
   }
@@ -74,20 +108,20 @@ const display = () => {
     linkArr.push(h.name);
     displayArr.push(h.name.replace(/_/g, " "));
   }
-  console.log(displayArr.length);
   if (displayArr.length > 20) {
     displayArr = displayArr.slice(0, 15);
     linkArr = linkArr.slice(0, 15);
   }
   for (let i = 0; i < displayArr.length; i++) {
     let div = document.createElement("div"),
-      a = document.createElement("a");
-    div.innerHTML = displayArr[i];
+      a = document.createElement("a"),
+      p = document.createElement("p");
+    p.innerHTML = displayArr[i];
     a.href = `${window.location.origin}/hero/${linkArr[i]}`;
-    div.setAttribute("class", "hero-suggestion");
+    div.setAttribute("class", "suggestion");
     div.setAttribute("id", `suggestion-${linkArr[i]}`);
     a.setAttribute("class", "suggestion-link");
-    ul.appendChild(a).appendChild(div);
+    ul.appendChild(a).appendChild(div).appendChild(p);
     suggestions.classList.remove("hide");
     link = document.getElementById(linkArr[i]);
     if (link && search.value.length > 1) {
@@ -115,6 +149,7 @@ const hideHeroes = () => {
     hero.style.gridArea = null;
   }
 };
+
 const compWrap = (n) => {
   return function compare(a, b) {
     let heroA = a.name,
@@ -128,49 +163,78 @@ const compWrap = (n) => {
     return n == 1 ? comparison : (comparison *= -1);
   };
 };
+
 const autoFocus = (event) => {
   let keyCodes = [13, 27, 40, 38, 39, 37, 9];
   // focus search on keypress
-  if (!keyCodes.includes(event.keyCode)) search.focus();
+  if (
+    (window.location.pathname.indexOf("/") + 1) %
+      (window.location.pathname.lastIndexOf("/") + 1) ===
+    0
+  ) {
+    if (!keyCodes.includes(event.keyCode)) {
+      search.focus();
+      document.querySelector(".suggestions").classList.add("hide");
+    }
+  }
 };
 
 let x = 0,
-  count = 0;
+  count = 0,
+  currList = heroSuggestionList;
 window.addEventListener("keydown", (event) => {
   autoFocus(event);
-  if (!suggestionList.children.length) return;
+  if (!heroSuggestionList.children.length) return;
   if (event.keyCode == 27 || search.value.length < 1) {
     // esc clears search
     reset();
   }
   // arrow key selection of autocomplete suggestions
   switch (event.keyCode) {
+    case 37:
+      currList = heroSuggestionList;
+      for (let i of playerSuggestionList.children) {
+        i.children[0].style.backgroundColor = "inherit";
+      }
+      break;
+    case 39:
+      currList = playerSuggestionList;
+      for (let i of heroSuggestionList.children) {
+        i.children[0].style.backgroundColor = "inherit";
+      }
+      break;
     case 40:
       count++;
-      x = x < suggestionList.children.length - 1 && count > 1 ? x + 1 : 0;
+      x = x < currList.children.length - 1 && count > 1 ? x + 1 : 0;
       break;
     case 38:
       count++;
-      x = x > 0 && count > 1 ? x - 1 : suggestionList.children.length - 1;
+      x = x > 0 && count > 1 ? x - 1 : currList.children.length - 1;
       break;
     case 13:
-      search.value = suggestionList.children[x].children[0].textContent;
+      search.value = currList.children[x].children[0].textContent;
       break;
     default:
       break;
   }
-  if (suggestionList.children.length > 0)
-    suggestionList.children[x].children[0].style.backgroundColor =
-      "rgb(65, 65, 65)";
-  for (let i = 0; i < suggestionList.children.length; i++) {
+  if (currList.children.length <= x) {
+    x = 0;
+  }
+  if (currList.children.length > 0) {
+    console.log(currList.children[x].children[0]);
+    currList.children[x].children[0].style.backgroundColor = "rgb(65, 65, 65)";
+  }
+  for (let i = 0; i < currList.children.length; i++) {
     if (i != x)
-      suggestionList.children[i].children[0].style.backgroundColor = "inherit";
+      currList.children[i].children[0].style.backgroundColor = "inherit";
   }
 });
 
 const reset = () => {
   ul.innerHTML = "";
+  playerSuggestionList.innerHTML = "";
   search.value = "";
+  document.querySelector(".suggestions").style.display = "none";
   if (heroGrid) {
     heroGrid.classList.remove("right");
     heroGrid.classList.remove("hide");
@@ -196,12 +260,20 @@ window.addEventListener("mouseover", (event) => {
   if (event.target.className === "table-img") {
     event.target.parentNode.children[2].style.display = "block";
   }
-  if (event.target.className === "hero-suggestion") {
+  if (event.target.className === "suggestion") {
     event.target.style.backgroundColor = "rgb(65, 65, 65)";
-    for (let suggestion of suggestionList.children) {
+    for (let suggestion of heroSuggestionList.children) {
       if (suggestion.children[0] != event.target) {
         suggestion.children[0].style.backgroundColor = "inherit";
-        // start keypress listener from wher the mouse is
+        // start keypress listener from whers the mouse is
+        x = [...event.target.parentElement.parentElement.childNodes].indexOf(
+          event.target.parentNode
+        );
+      }
+    }
+    for (let suggestion of playerSuggestionList.children) {
+      if (suggestion.children[0] != event.target) {
+        suggestion.children[0].style.backgroundColor = "inherit";
         x = [...event.target.parentElement.parentElement.childNodes].indexOf(
           event.target.parentNode
         );
@@ -210,4 +282,5 @@ window.addEventListener("mouseover", (event) => {
   }
 });
 closeAllTooltips();
-autocomplete();
+hero_autocomplete();
+player_autocomplete();

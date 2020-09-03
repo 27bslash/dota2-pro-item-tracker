@@ -44,7 +44,7 @@
   <div class="content" style="margin-top: 40px;">
     <a
     class="view-changer"
-    onclick="window.location = '/player/{{player_name}}/starter_items'+window.location.search;"
+    onclick="window.location = '/player/{{display_name}}/starter_items'+window.location.search;"
   >
     <img
       height="50px"
@@ -52,16 +52,16 @@
       alt="starter items"
   /></a>
   <div class="pick-counter" style="display: flex;">
-      <a href="/player/{{player_name}}">
+      <a href="/player/{{display_name}}">
         <p class='bold-name'id="player-name" style="color: white">
-          <strong style="text-transform: capitalize;">{{player_name}}</strong>
+          <strong style="text-transform: capitalize;">{{display_name}}</strong>
         </p></a
       >
       <p style="color: white;">
         has played {{total}} times. He mostly plays:
       </p>
       {%for k,v in roles.items()%}
-      <a href="/player/{{player_name}}?role={{k}}">
+      <a href="/player/{{display_name}}?role={{k}}">
         <p class="total-picks">
           {{k}} ({{v}}){{"," if not loop.last else "." }}
         </p>
@@ -73,7 +73,7 @@
       <th class="stats" id="win"></th>
       <th class="stats" id="item-header">ITEMS</th>
       <th class="stats">PLAYED</th>
-      <th class="stats">PLAYER</th>
+      <th class="stats">HERO</th>
       <th class="stats">LVL</th>
       <th class="stats" id="kills">K</th>
       <th class="stats" id="deaths">D</th>
@@ -219,12 +219,13 @@
           round = t|round(0, 'floor')|int%} {%set output = round|string +'
           Days Ago'%} {%endif%} {{output}}
         </td>
-        <td class="stats" id="hero-name">
+        <td class="stats" id="hero-name"
+        data-search="{{dict_item['hero']}}">
           <a
             href='http://www.dota2protracker.com/hero/{{dict_item["hero"]}}'
           >
-            {{dict_item['hero']}}</a
-          >
+           <i class="d2mh {{dict_item['hero']}}"></i>
+          </a>
         </td>
         <td class="stats" id="level">
           {{dict_item['lvl']}}

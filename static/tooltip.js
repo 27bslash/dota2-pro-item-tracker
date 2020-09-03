@@ -1,25 +1,11 @@
-async function stratz_abilities() {
-  console.time();
-  const url = `${window.location.origin}/files/abilities`;
-  const res = await fetch(url);
-  const data = await res.json();
-  console.timeEnd();
-  return data;
-}
-async function hero_color() {
-  console.time();
-  const url = `${window.location.origin}/files/colors`;
-  const res = await fetch(url);
-  const data = await res.json();
-  console.timeEnd();
-  return data;
-}
-const hero_ids = get_hero_data();
+
+
+const hero_ids = get_json("hero_ids");
+const abilities = get_json("abilities");
+const hero_colors = get_json("colors");
 const hero_name = window.location.href.split("/").pop();
 let h_id;
 
-const abilities = stratz_abilities();
-const hero_colors = hero_color();
 window.addEventListener("mouseover", (event) => {
   if (event.target.className === "table-img") {
     abilities.then((result) => {
@@ -36,10 +22,6 @@ window.addEventListener("mouseover", (event) => {
       });
       skillImage = parent.children[1].src;
       skillText = parent.children[1].alt;
-      // div = document.createElement("div");
-      // tooltip = div;
-      // tooltip.setAttribute("class", "tooltip");
-
       //tHeader
       if (a_id && "language" in result[a_id]) {
         let base = result[a_id]["language"];

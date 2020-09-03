@@ -62,6 +62,8 @@ def ind_post():
             suggestion = get_hero_name(text)
             suggestion = sorted(suggestion)
             return redirect('/hero/'+suggestion[0])
+        if db['account_ids'].find_one({'name': text}):
+            return redirect('/player/'+text)
         else:
             return redirect('/')
 
@@ -78,9 +80,30 @@ def item_post(hero_name):
             suggestion = get_hero_name(text)
             suggestion = sorted(suggestion)
             return redirect('/hero/'+suggestion[0])
+        if db['account_ids'].find_one({'name': text}):
+            return redirect('/player/'+text)
         else:
             return redirect(f'/hero/{hero_name}{starter}')
 
+
+@app.route('/player/<player_name>/starter_items', methods=['POST'])
+@app.route('/player/<player_name>', methods=['POST'])
+def player_post(player_name):
+    print(player_name)
+    if request.method == 'POST':
+        starter = ''
+        if 'starter_items' in request.url:
+            starter = '/starter_items'
+        text = request.form.get('search')
+        if get_hero_name(text):
+            suggestion = get_hero_name(text)
+            suggestion = sorted(suggestion)
+            return redirect('/hero/'+suggestion[0])
+        if db['account_ids'].find_one({'name': text}):
+            print('heroalsdk;fja;sdlf')
+            return redirect('/player/'+text)
+        else:
+            return redirect(f'/hero/{hero_name}{starter}')
 
 @app.route('/hero/<hero_name>/starter_items', methods=['GET'])
 @app.route('/hero/<hero_name>', methods=['GET'])
@@ -129,22 +152,27 @@ def player_get(player_name):
     template = 'player_final_items.html'
     if 'starter_items' in request.url:
         template = 'player_starter_items.html'
+    display_name = player_name.replace('%20', ' ')
+    print(display_name)
     check_response_time = time.perf_counter()
-    roles_db = db['player_picks'].find_one({'name': player_name})
+    roles_db = db['player_picks'].find_one({'name': display_name})
     roles = roles_db['roles']
-    check_response = hero_output.find_one({'name': player_name})
-    print('chk_time: ', time.perf_counter() - check_response_time)
+    check_response = hero_output.find_one({'name': display_name})
+    print(check_response)
+    print('chk_time: ', time.perf_counter() - check_response_time) 
     if check_response:
         if request.args:
             role = request.args.get('role').replace('%20', ' ').title()
             data = hero_output.find(
-                {'name': player_name, 'role': role}).sort('unix_time', -1)
+                {'name': display_name, 'role': role}).sort('unix_time', -1)
             match_data = [hero for hero in data]
         else:
-            match_data = find_hero('name', player_name)
+            match_data = find_hero('name', display_name)
         total = len(match_data)
         print('total Time: ', time.perf_counter()-start)
-        return render_template(template, player_name=player_name, data=match_data, time=time.time(), total=total, role_total=len(match_data), roles=roles)
+        return render_template(template, display_name=display_name, data=match_data, time=time.time(), total=total, role_total=len(match_data), roles=roles)
+    else:
+        return render_template(template, display_name=display_name, data=[], time=time, roles=roles, total=0)
 
 
 def find_hero(query, hero):
@@ -226,7 +254,7 @@ def ability_json():
         return data
 
 
-@app.route('/files/colors')
+@ app.route('/files/colors')
 def color_json():
     with open('json_files/hero_colours.json', 'r') as f:
         data = json.load(f)
@@ -234,11 +262,17 @@ def color_json():
         return data
 
 
-@app.after_request
+@ app.route('/files/accounts')
+def acc_json():
+    data = db['account_ids'].find({})
+    players = [player['name'] for player in data]
+    return json.dumps(players)
+
+
+@ app.after_request
 def add_header(response):
     response.cache_control.max_age = 43200
     response.add_etag()
-    print(response.cache_control)
     return response
 
 

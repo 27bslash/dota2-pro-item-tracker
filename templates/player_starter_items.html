@@ -44,7 +44,7 @@
   <div class="content" style="margin-top: 40px;">
     <a
     class="view-changer"
-    onclick="window.location = '/player/{{player_name}}'+window.location.search;"
+    onclick="window.location = '/player/{{display_name}}'+window.location.search;"
   >
     <img
       height="50px"
@@ -52,7 +52,7 @@
       alt="final items"
   /></a>
   <div class="pick-counter" style="display: flex;">
-    <a href="/player/{{player_name}}">
+    <a href="/player/{{display_name}}">
       <p class='bold-name'id="player-name" style="color: white">
         <strong style="text-transform: capitalize;">{{player_name}}</strong>
       </p></a
@@ -73,7 +73,7 @@
         <th class="stats" id="win"></th>
         <th class="stats" id="item-header">ITEMS</th>
         <th class="stats">PLAYED</th>
-        <th class="stats">PLAYER</th>
+        <th class="stats">HERO</th>
         <th class="stats">LVL</th>
         <th class="stats" id="kills">K</th>
         <th class="stats" id="deaths">D</th>
@@ -181,12 +181,13 @@
             round = t|round(0, 'floor')|int%} {%set output = round|string +'
             days ago'%} {%endif%} {{output}}
           </td>
-          <td class="stats" id="hero-name">
+          <td class="stats" class="hero-name"
+          data-search="{{dict_item['hero']}}">
             <a
               href='http://www.dota2protracker.com/hero/{{dict_item["hero"]}}'
             >
-              {{dict_item['hero']}}</a
-            >
+             <i class="d2mh {{dict_item['hero']}}"></i>
+            </a>
           </td>
           <td class="stats" id="level">
             {{dict_item['lvl']}}
