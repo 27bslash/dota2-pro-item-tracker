@@ -24,7 +24,6 @@
       order: [[0, "asc"]],
       order: [[2, "desc"]],
       bfilter: false,
-      searching: false,
     });
     var lastIdx = null;
     $(".item-table tbody")
@@ -40,118 +39,35 @@
       });
   });
 </script>
-<title>{{hero_name}}</title>
+<title>{{player_name}}</title>
 <main>
   <div class="content" style="margin-top: 40px;">
-    <a href="/hero/{{hero_name}}">
-      <img
-        src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
-    /></a>
     <a
-      class="view-changer"
-      onclick="window.location = '/hero/{{hero_name}}'+window.location.search;"
+    class="view-changer"
+    onclick="window.location = '/player/{{player_name}}'+window.location.search;"
+  >
+    <img
+      height="50px"
+      src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
+      alt="final items"
+  /></a>
+  <div class="pick-counter" style="display: flex;">
+    <a href="/player/{{player_name}}">
+      <p class='bold-name'id="player-name" style="color: white">
+        <strong style="text-transform: capitalize;">{{player_name}}</strong>
+      </p></a
     >
-      <img
-        title="Starter Items"
-        height="50px"
-        src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
-        alt="final items"
-    /></a>
-    <div class="most-used-container">
-      {%if most_used%}
-      <div class="most-used-wrapper">
-        <div class="most-used closed">
-          {%for key,value in most_used.items()%} {%set hue = 360/value/max*100%} {%
-          set s = value/max*100%} {% set saturation = s|round(0,'ceil')|int %} {%
-          set round = hue|round(0, 'ceil')|int%}
-          <div class="most-used-row">
-            <img
-              class="most-used-item"
-              src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-                key
-              }}_lg.png"
-              width="50"
-              height="40"
-              alt='{{key}}'
-            />
-            <div class="bar" style= "background-color: hsl(120, 100%,25%, {{saturation}}%);width:{{value/max * 80}}%;">
-              <p class="bar-value">{{value}}</p>
-            </div>
-          </div>
-          {%endfor%}
-        </div>
-        {%endif%}
-        <div class="arrow-button"onclick="toggleWindow()">
-          <i id="arrow" class="fas fa-caret-down" ></i>
-        </div>
-      </div>
-      <script>
-        itemWindow = document.querySelector(".most-used");
-        const toggleWindow = () => {
-          itemWindow.classList.toggle("closed");
-          if (itemWindow.classList.contains("closed")) {
-            document.getElementById("arrow").className = "fas fa-caret-down";
-          } else {
-            document.getElementById("arrow").className = "fas fa-caret-up";
-          }
-        };
-      </script>
-      {%if talents%}
-      <div class="talent-wrapper">
-      <img id='main-talent-img' height='70' src="{{ url_for('static', filename='talent_img.png') }}"/>
-      <div class='tooltip' id="talents" style='display: none'>
-        {%for talent in talents%}
-        {%if talent.slot % 2 == 0 or talent.slot == 0 %}
-        {%set col = 3%}
-        {%set class = 'talent-right'%}
-        {%endif%}
-        {%if talent.slot % 2 != 0 or talent.slot == 1 %}
-        {%set col = 1%}
-        {%set class = 'talent-left'%}
-        {%endif%}
-        {%set level = 25%}
-        {%if loop.index % 2 == 0%}
-        <div class="talent-center">
-          <div class="talent-level">
-            <p>{{talent.level}}</p>
-          </div>
-          <div class="talent-picks">
-            <p>Pick</p>
-          </div>
-        </div>
-        {%endif%}
-        <div class="{{class}}" style = 'grid-column: {{col}}'>
-          
-          {%set width = 0%}
-          {%if talent.total_pick_count > 0%}
-          {%set width = talent.talent_count/talent.total_pick_count*100%}
-          {%endif%}
-          <p class='talent-text'>{{talent.key}}</p>
-          <div class="talent-bar" style='width: {{width}}%;'></div>
-          <p style='z-index: 99'>{{width|round(0, 'floor')|int}}%</p>
-        </div>
-        {%endfor%}
-      {%endif%}
-    </div>
-    </div>
-  </div>
-    <div class="pick-counter" style="display: flex;">
-      <a href="/hero/{{hero_name}}">
-        <p class='bold-name' id="hero-name" style="color: rgb{{hero_colour}};">
-          <strong style="text-transform: capitalize;">{{display_name}}</strong>
-        </p></a
-      >
-      <p style="color: white;">
-        was picked {{total}} times. It's mostly played:
+    <p style="color: white;">
+      has played {{total}} times. He mostly plays:
+    </p>
+    {%for k,v in roles.items()%}
+    <a href="/player/{{player_name}}/starter_items?role={{k}}">
+      <p class="total-picks">
+        {{k}} ({{v}}){{"," if not loop.last else "." }}
       </p>
-      {%for k,v in roles.items()%}
-      <a href="/hero/{{hero_name}}?role={{k}}">
-        <p class="total-picks">
-          {{k}} ({{v}}){{"," if not loop.last else "." }}
-        </p>
-      </a>
-      {%endfor%}
-    </div>
+    </a>
+    {%endfor%}
+  </div>
     <table role='main' class="item-table stripe">
       <thead>
         <th class="stats" id="win"></th>
@@ -215,10 +131,12 @@
                   width="55"
                   height="55"
                   data-tooltip="{{item.key}}"
+                  data_id="{{item.id}}"
+                  data-hero="{{dict_item.hero}}"
                   alt="{{item.key}}"
                   onerror="this.onerror=null;this.src='//ailhumfakp.cloudimg.io/v7/../static/talent_img.png';"
                 />
-                <div class="tooltip" style='display: flex; background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto;'>
+                <div class="tooltip" style='margin-left: auto;'>
                   <div class="tooltip-line-one">
                     <img 
                     src = "{{ url_for('static', filename='talent_img.png') }}"
@@ -236,13 +154,14 @@
                   height="55"
                   data-tooltip="{{item.key}}"
                   data_id="{{item.id}}"
+                  data-hero="{{dict_item.hero}}"
                   alt="{{item.key}}"
                   title="{{item.key}}"
                   onerror="this.onerror=null;this.src='//ailhumfakp.cloudimg.io/v7/../../static/talent_img.png'"
                 />
                 <div
                   class="tooltip"
-                  style="background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 37%);"
+                  style="background: radial-gradient(circle at top left, red 0%, rgba(19,18,18,1) 37%);"
                 ></div>
                 {%endif%}
             </div>
@@ -262,11 +181,11 @@
             round = t|round(0, 'floor')|int%} {%set output = round|string +'
             days ago'%} {%endif%} {{output}}
           </td>
-          <td class="stats" id="player-name">
+          <td class="stats" id="hero-name">
             <a
-              href='http://www.dota2protracker.com/player/{{dict_item["name"]}}'
+              href='http://www.dota2protracker.com/hero/{{dict_item["hero"]}}'
             >
-              {{dict_item['name']}}</a
+              {{dict_item['hero']}}</a
             >
           </td>
           <td class="stats" id="level">

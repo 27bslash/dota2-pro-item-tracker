@@ -1,69 +1,3 @@
-// <!-- <div class="tooltip"style='background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 37%);'>
-//                   <div class="tooltip-line-one"'>
-//                     <img
-//                     class='tooltip-img'
-//                     src="https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
-//                     width ='40'
-//                     height="40"
-//                     title="{{item.key}}"
-//                     onerror="this.onerror=null;this.src='../static/talent_img.png';"
-//                     />
-//                     <h3>{{item.key}}</h3>
-//                   </div>
-//                   <div class="tooltip-content">
-//                     {%if item.description%}
-//                     <div class="tooltip-description">
-//                       <p>{{item.description|join(',')}}<p>
-//                     </div>
-//                     {%endif%}
-//                     {%if item.attributes%}
-//                     <div class="attributes">
-//                     {%for attribute in item.attributes%}
-//                     <div class="attribute">
-//                       <p>{{attribute}}</p>
-//                     </div>
-//                     {%endfor%}
-//                     </div>
-//                     {%endif%}
-//                     {%if item.aghanimDescription%}
-//                     <div class="aghanimDescription" style='display:flex'>
-//                       <img src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/ultimate_scepter_lg.png'
-//                       width='26.5'
-//                       height="20"
-//                       />
-//                       <p style='margin: 0'>{{item.aghanimDescription}}</p>
-//                     </div>
-//                     {%endif%}
-//                     <div class="notes">
-//                     {%for note in item.notes%}
-//                       <p>{{note}}</p>
-//                     {%endfor%}
-//                     </div>
-//                   </div>
-//                   <div class="tooltip-footer">
-//                     {%if item.manacost%}
-//                     <div class="mana-costs">
-//                       <img src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/mana.png'
-//                       height='13'
-//                       width="13">
-//                       <p class='footer-text'>{{item.manacost|join('/ ')}}</p>
-//                     </div>
-//                     {%endif%}
-//                     {%if item.cooldown%}
-//                     <div class="cooldowns">
-//                       <img
-//                       src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/cooldown.png'
-//                       height='13'
-//                       width="13">
-//                       <p class='footer-text'>{{item.cooldown|join('/ ')}}</p>
-//                     </div>
-//                     {%endif%}
-//                   </div>
-//                 </div>
-//                 {%endif%}
-//               </div> -->
-//               <!-- {% endfor %} --></div>
-
 async function stratz_abilities() {
   console.time();
   const url = `${window.location.origin}/files/abilities`;
@@ -72,32 +6,40 @@ async function stratz_abilities() {
   console.timeEnd();
   return data;
 }
+async function hero_color() {
+  console.time();
+  const url = `${window.location.origin}/files/colors`;
+  const res = await fetch(url);
+  const data = await res.json();
+  console.timeEnd();
+  return data;
+}
 const hero_ids = get_hero_data();
 const hero_name = window.location.href.split("/").pop();
 let h_id;
-// hero_ids.then((result) => {
-//   console.log(result.heroes);
-//   for (let hero of result.heroes) {
-//     if (hero.name == hero_name) {
-//       console.log(hero.id);
-//       h_id = hero.id;
-//       return h_id;
-//     }
-//   }
-// });
 
 const abilities = stratz_abilities();
+const hero_colors = hero_color();
 window.addEventListener("mouseover", (event) => {
   if (event.target.className === "table-img") {
     abilities.then((result) => {
       parent = event.target.parentNode;
       a_id = parent.children[1].getAttribute("data_id");
+      hero = parent.children[1].getAttribute("data-hero");
       tooltip = parent.children[2];
+      hero_colors.then((res) => {
+        for (let i of res.colors) {
+          if (i.hero == hero) {
+            tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, rgba(19,18,18,1) 37%)`;
+          }
+        }
+      });
       skillImage = parent.children[1].src;
       skillText = parent.children[1].alt;
       // div = document.createElement("div");
       // tooltip = div;
       // tooltip.setAttribute("class", "tooltip");
+
       //tHeader
       if (a_id && "language" in result[a_id]) {
         let base = result[a_id]["language"];

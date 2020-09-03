@@ -311,28 +311,35 @@ def stratz_abillity_test(arr, h_id):
     return output
 
 
-def insert_hero_picks(hero):
-    db['hero_picks'].delete_many({'hero': hero})
+def insert_player_picks():
+    data = db['account_ids'].find({})
+    for player in data:
+        print(player['name'])
+        insert_hero_picks('name', player['name'], 'player_picks')
+
+
+def insert_hero_picks(key, val, collection):
+    db[collection].delete_many({key: val})
     roles = {'Safelane': hero_output.count_documents(
-            {'hero': hero, 'role': 'Safelane'}),
+            {key: val, 'role': 'Safelane'}),
         'Midlane': hero_output.count_documents(
-        {'hero': hero, 'role': 'Midlane'}),
+        {key: val, 'role': 'Midlane'}),
         'Offlane': hero_output.count_documents(
-        {'hero': hero, 'role': 'Offlane'}),
+        {key: val, 'role': 'Offlane'}),
         'Support': hero_output.count_documents(
-        {'hero': hero, 'role': 'Support'}),
+        {key: val, 'role': 'Support'}),
         'Roaming': hero_output.count_documents(
-        {'hero': hero, 'role': 'Roaming'}),
+        {key: val, 'role': 'Roaming'}),
         'Hard Support': hero_output.count_documents(
-        {'hero': hero, 'role': 'Hard Support'}),
+        {key: val, 'role': 'Hard Support'}),
     }
     roles = {k: v for k, v in sorted(
         roles.items(), key=lambda item: item[1], reverse=True)}
     for k in list(roles.keys()):
         if roles[k] <= 0:
             del roles[k]
-    db['hero_picks'].insert_one(
-        {'hero': hero, 'total_picks': hero_output.count_documents({'hero': hero}), 'roles': roles})
+    db[collection].insert_one(
+        {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles})
 
 
 def insert_talent_order(hero):
@@ -489,7 +496,7 @@ ab_arr = [5239,
           5977
           ]
 if __name__ == "__main__":
-    hero_picks()
+    insert_player_picks()
     # get_hero_name('jakiro')
     # get_id('lih')
     # get_talent_order('jakiro')

@@ -84,7 +84,7 @@ def item_post(hero_name):
 
 @app.route('/hero/<hero_name>/starter_items', methods=['GET'])
 @app.route('/hero/<hero_name>', methods=['GET'])
-def item_get(hero_name):
+def hero_get(hero_name):
     start = time.perf_counter()
     match_data = []
     display_name = hero_name.replace('_', ' ').capitalize()
@@ -107,7 +107,7 @@ def item_get(hero_name):
                 {'hero': hero_name, 'role': role}).sort('unix_time', -1)
             match_data = [hero for hero in data]
         else:
-            match_data = find_hero(hero_name)
+            match_data = find_hero('hero', hero_name)
         total = roles_db['total_picks']
         most_used = pro_items(match_data)
         most_used = dict(itertools.islice(most_used.items(), 10))
@@ -116,13 +116,39 @@ def item_get(hero_name):
         hero_colour = get_hero_name_colour(hero_name)
         print('total Time: ', time.perf_counter()-start)
         return render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
-                               time=time.time(), total=total, role_total=len(match_data), talents=talents, hero_colour=hero_colour, roles=roles)
+                               time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles)
     else:
         return render_template(template, hero_name=hero_name, hero_img=clean_name(hero_name), display_name=display_name, data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
 
 
-def find_hero(hero):
-    data = hero_output.find({'hero': hero}).sort('unix_time', -1)
+@app.route('/player/<player_name>/starter_items', methods=['GET'])
+@app.route('/player/<player_name>', methods=['GET'])
+def player_get(player_name):
+    start = time.perf_counter()
+    total = 0
+    template = 'player_final_items.html'
+    if 'starter_items' in request.url:
+        template = 'player_starter_items.html'
+    check_response_time = time.perf_counter()
+    roles_db = db['player_picks'].find_one({'name': player_name})
+    roles = roles_db['roles']
+    check_response = hero_output.find_one({'name': player_name})
+    print('chk_time: ', time.perf_counter() - check_response_time)
+    if check_response:
+        if request.args:
+            role = request.args.get('role').replace('%20', ' ').title()
+            data = hero_output.find(
+                {'name': player_name, 'role': role}).sort('unix_time', -1)
+            match_data = [hero for hero in data]
+        else:
+            match_data = find_hero('name', player_name)
+        total = len(match_data)
+        print('total Time: ', time.perf_counter()-start)
+        return render_template(template, player_name=player_name, data=match_data, time=time.time(), total=total, role_total=len(match_data), roles=roles)
+
+
+def find_hero(query, hero):
+    data = hero_output.find({query: hero}).sort('unix_time', -1)
     s = time.perf_counter()
     match_data = [hero for hero in data]
     print('data time', time.perf_counter() - s)
@@ -174,10 +200,9 @@ def get_winrate():
 
 
 def get_hero_name_colour(hero_name):
-    colours = []
     with open('json_files/hero_colours.json', 'r') as f:
         data = json.load(f)
-        for item in data:
+        for item in data['colors']:
             if item['hero'] == hero_name:
                 return tuple(item['color'])
 
@@ -198,6 +223,14 @@ def hero_json():
 def ability_json():
     with open('json_files/stratz_abilities.json', 'r') as f:
         data = json.load(f)
+        return data
+
+
+@app.route('/files/colors')
+def color_json():
+    with open('json_files/hero_colours.json', 'r') as f:
+        data = json.load(f)
+        print(data)
         return data
 
 
@@ -325,6 +358,7 @@ def opendota_call():
             pass
     parse_request()
     get_winrate()
+    insert_player_picks()
     print('end', (time.time()-start)/60, 'minutes')
 
 
