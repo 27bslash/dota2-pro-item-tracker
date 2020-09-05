@@ -166,6 +166,20 @@
                 {%endif%}
             </div>
             {%endfor%}
+            <div class="draft">
+              <div class="radiant_draft">
+                {%for draft_pick in dict_item['radiant_draft']%}
+                {%set draft_pick = draft_pick|replace("'", '')%}
+                <i class="d2mh {{draft_pick}}"></i>
+                {%endfor%}
+              </div>
+              <div class="dire_draft">
+                {%for draft_pick in dict_item['dire_draft']%}
+                {%set draft_pick = draft_pick|replace("'", '')%}
+                <i class="d2mh {{draft_pick}}"></i>
+                {%endfor%}
+                </div>
+              </div>
           </td>
           <td
             data-sort="{{dict_item['unix_time']}}"

@@ -286,6 +286,20 @@
               </div>
               {% endfor %}
             </div>
+            <div class="draft">
+              <div class="radiant_draft">
+                {%for draft_pick in dict_item['radiant_draft']%}
+                {%set draft_pick = draft_pick|replace("'", '')%}
+                <i class="d2mh {{draft_pick}}"></i>
+                {%endfor%}
+              </div>
+              <div class="dire_draft">
+                {%for draft_pick in dict_item['dire_draft']%}
+                {%set draft_pick = draft_pick|replace("'", '')%}
+                <i class="d2mh {{draft_pick}}"></i>
+                {%endfor%}
+                </div>
+              </div>
           </td>
           <td
             data-sort="{{dict_item['unix_time']}}"
@@ -294,7 +308,7 @@
           >
             {%set seconds = time - dict_item['unix_time']%} {%set hours =
             seconds/60/60 %} {%if hours <= 1%} {%set output = 'Just Now'%}
-            {%endif%} {%if hours < 24 and hours > 1%} {%set f =
+            {%endif%} {%if hours < 24 and hours > 2%} {%set f =
             hours|round(0,'floor')|int%} {%set output = f|string + ' Hours
             Ago'%} {%endif%} {%if hours < 48 and hours > 24%} {%set output = '1
             Day Ago'%} {%endif%} {%if hours >= 48%} {%set t = hours/24%} {%set

@@ -376,7 +376,7 @@ def opendota_call():
         for name in names:
             sleep = len(get_urls(name))
             asyncio.run(main(get_urls(name), name))
-            insert_hero_picks(name)
+            insert_hero_picks('hero', name, 'hero_picks')
             # loop.run_until_complete(
             #     test(steam_api_test(name), name))
             # sync(steam_api_test(name),name)
@@ -398,12 +398,12 @@ def manual_hero_update(name):
     # hero_urls.delete_many({'hero': name})
     # asyncio.run(single_request(name))
     asyncio.run(main(get_urls(name), name))
-    get_winrate()
-
+    # get_winrate()
+ 
 
 if __name__ == '__main__':
     # opendota_call()
     # delete_old_urls()
-    # manual_hero_update('anti-mage')
+    # manual_hero_update('lich')
     # get_winrate()
     app.run(debug=False)

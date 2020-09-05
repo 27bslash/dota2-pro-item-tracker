@@ -199,10 +199,17 @@ def get_hero_name(name):
         with open('json_files/hero_ids.json') as json_file:
             data = json.load(json_file)
             heroes = [hero['name']
-                      for hero in data['heroes'] if name in hero['name']]
+                      for hero in data['heroes'] if name == hero['name']]
             return heroes
     return False
 
+
+def hero_name_from_hero_id(name):
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        for hero in data['heroes']:
+            if hero['id'] == name:
+                return hero['name']
 
 # def get_ability_name(arr):
 #     abilityArr = []

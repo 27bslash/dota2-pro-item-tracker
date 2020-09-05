@@ -52,6 +52,10 @@ async def async_get(m_id, hero_name):
                 resp = await response.json()
                 match_id = int(resp['match_id'])
                 print(f"successfully got {match_id}")
+                rad_draft = [hero_name_from_hero_id(
+                    player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 0]
+                dire_draft = [hero_name_from_hero_id(
+                    player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 1]
                 # print(all_roles)
                 for i in range(10):
                     # 10 players
@@ -59,7 +63,7 @@ async def async_get(m_id, hero_name):
                     hero_id = p['hero_id']
                     # print(hero_id, get_id(hero_name))
                     roles_arr = [(p['lane'], p['gold_per_min'],  p['lane_efficiency'], p['sen_placed'],
-                                  p['player_slot'], p['is_roaming']) for p in resp['players'] if 'lane_efficiency' in p]
+                                  p['player_slot'], p['is_roaming']) for p in resp['players'] if 'lane_efficiency' in p and 'lane' in p]
                     if hero_id == get_id(hero_name):
                         abilities = p['ability_upgrades_arr']
                         # check if one of the players matches search
@@ -81,6 +85,7 @@ async def async_get(m_id, hero_name):
                                 p['duration'] = 0
                             hero_output.insert_one(
                                 {'time_started': get_time(p['start_time']), 'unix_time': p['start_time'], 'hero': hero_name, 'duration': p['duration'],
+                                 'radiant_draft': rad_draft, 'dire_draft': dire_draft,
                                  'name': get_info(match_id, 'name', hero_name), 'account_id': p['account_id'], 'role': role, 'mmr': get_info(match_id, 'mmr', hero_name),
                                  'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
                                  'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
