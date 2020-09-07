@@ -288,15 +288,21 @@
             </div>
             <div class="draft">
               <div class="radiant_draft">
-                {%for draft_pick in dict_item['radiant_draft']%}
-                {%set draft_pick = draft_pick|replace("'", '')%}
-                <i class="d2mh {{draft_pick}}"></i>
+                {%for d_pick in dict_item['radiant_draft']%}
+                {%set draft_pick = d_pick|replace("'", '')%}
+                {%if hero_name == d_pick%}
+                {%set class = 'icon-highlight'%}
+                {%endif%}
+                <i class="d2mh {{draft_pick}} {{class}}"></i>
                 {%endfor%}
               </div>
               <div class="dire_draft">
-                {%for draft_pick in dict_item['dire_draft']%}
-                {%set draft_pick = draft_pick|replace("'", '')%}
-                <i class="d2mh {{draft_pick}}"></i>
+                {%for d_pick in dict_item['dire_draft']%}
+                {%set draft_pick = d_pick|replace("'", '')%}
+                {%if hero_name == d_pick%}
+                {%set class = 'icon-highlight'%}
+                {%endif%}
+                <i class="d2mh {{draft_pick}} {{class}}"></i>
                 {%endfor%}
                 </div>
               </div>
@@ -317,7 +323,7 @@
           </td>
           <td class="stats" id="player-name">
             <a
-              href='http://www.dota2protracker.com/player/{{dict_item["name"]}}'
+              href="{{url_for('player_get', player_name=dict_item['name'])}}"
             >
               {{dict_item['name']}}</a
             >

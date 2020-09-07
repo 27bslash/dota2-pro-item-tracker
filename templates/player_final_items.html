@@ -206,15 +206,21 @@
           </div>
           <div class="draft">
             <div class="radiant_draft">
-              {%for draft_pick in dict_item['radiant_draft']%}
-              {%set draft_pick = draft_pick|replace("'", '')%}
-              <i class="d2mh {{draft_pick}}"></i>
+              {%for d_pick in dict_item['radiant_draft']%}
+              {%set draft_pick = d_pick|replace("'", '')%}
+              {%if dict_item['hero'] == d_pick%}
+              {%set class = 'icon-highlight'%}
+              {%endif%}
+              <i class="d2mh {{draft_pick}} {{class}}"></i>
               {%endfor%}
             </div>
             <div class="dire_draft">
-              {%for draft_pick in dict_item['dire_draft']%}
-              {%set draft_pick = draft_pick|replace("'", '')%}
-              <i class="d2mh {{draft_pick}}"></i>
+              {%for d_pick in dict_item['dire_draft']%}
+              {%set draft_pick = d_pick|replace("'", '')%}
+              {%if dict_item['hero'] == d_pick%}
+              {%set class = 'icon-highlight'%}
+              {%endif%}
+              <i class="d2mh {{draft_pick}} {{class}}"></i>
               {%endfor%}
               </div>
             </div>
@@ -236,7 +242,7 @@
         <td class="stats" id="hero-name"
         data-search="{{dict_item['hero']}}">
           <a
-            href='http://www.dota2protracker.com/hero/{{dict_item["hero"]}}'
+            href="{{url_for('hero_get', hero_name=dict_item['hero'])}}"
           >
            <i class="d2mh {{dict_item['hero']}}"></i>
           </a>
