@@ -19,37 +19,13 @@ const pickSort = (role, x, data) => {
   if (role) {
     console.log(`${role}_${x}`);
     let filtered = data.filter((item) => item[`${role}_${x}`] > 0);
-    // console.log(filtered);
     data = filtered.sort((a, b) => b[`${role}_${x}`] - a[`${role}_${x}`]);
   } else {
     console.log("false");
     data.sort((a, b) => b[`${x}`] - a[`${x}`]);
   }
   heroCounter = 0;
-  // console.log(data);
   grid_position(data, role);
-  // document.querySelectorAll(".col").forEach((x) => {
-  //   x.style.display = "None";
-  //   x.style.gridRow = null;
-  //   x.style.gridColumn = null;
-  // });
-  // console.log(cols);
-  // for (let i = 1; i < 2000; i++) {
-  //   for (let j = 1; j < cols; j++) {
-  //     if (heroCounter < data.length) {
-  //       // console.log(data, heroCounter);
-  //       currCell = document.getElementById(data[heroCounter].hero).parentNode
-  //         .parentNode;
-  //       // console.log(i, j);
-  //       change_stat_text(data, currCell, role, heroCounter);
-  //       currCell.style.display = "block";
-  //       currCell.style.gridRow = i;
-  //       currCell.style.gridColumn = j;
-  //       colour_wins();
-  //       heroCounter++;
-  //     }
-  //   }
-  // }
 };
 
 function grid_position(data, role) {
@@ -66,7 +42,14 @@ function grid_position(data, role) {
     }
   }
 }
-
+function uncheck(x) {
+  const check_boxes = document.querySelector(".control-right");
+  for (let chk of check_boxes.children) {
+    if (chk.children[1].textContent != x) {
+      chk.children[0].checked = false;
+    }
+  }
+}
 function change_stat_text(data, currCell, role, heroCounter) {
   stats = currCell.children[1];
   picks = stats.children[0];

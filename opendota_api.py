@@ -52,16 +52,18 @@ async def async_get(m_id, hero_name):
                 resp = await response.json()
                 match_id = int(resp['match_id'])
                 print(f"successfully got {match_id}")
+                hero_ids = [player['hero_id'] for player in resp['players']]
                 rad_draft = [hero_name_from_hero_id(
-                    player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 0]
+                    player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 0 and player['hero_id'] in hero_ids]
                 dire_draft = [hero_name_from_hero_id(
-                    player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 1]
-                # print(all_roles)
+                    player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 1 and player['hero_id'] in hero_ids]
                 for i in range(10):
-                    # 10 players
                     p = resp['players'][i]
                     hero_id = p['hero_id']
-                    # print(hero_id, get_id(hero_name))
+                    if p['randomed'] and p['isRadiant']:
+                        rad_draft.append(hero_name_from_hero_id(hero_id))
+                    if p['randomed'] and not p['isRadiant']:
+                        dire_draft.append(hero_name_from_hero_id(hero_id))
                     roles_arr = [(p['lane'], p['gold_per_min'],  p['lane_efficiency'], p['sen_placed'],
                                   p['player_slot'], p['is_roaming']) for p in resp['players'] if 'lane_efficiency' in p and 'lane' in p]
                     if hero_id == get_id(hero_name):
@@ -73,7 +75,7 @@ async def async_get(m_id, hero_name):
                             print(f"{hero_name} should reach here.")
                             starting_items = [{'key': purchase['key'], 'time':0}
                                               for purchase in purchase_log if purchase['time'] <= 0]
-                            rev = purchase_log.copy()[::-1]
+                            rev = purchase_log.copy()[:: -1]
                             main_items = get_most_recent_items(
                                 rev, 6, p)
                             bp_items = get_most_recent_items(
