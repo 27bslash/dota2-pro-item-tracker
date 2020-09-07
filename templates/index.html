@@ -1,56 +1,88 @@
 {% extends 'search.html' %} {%block content %}
 <main>
-  <div class="grid-container">
-    <div class="buttons">
-      <button class="sort-button" onclick="pickSort(null,'picks',{{wins}})">
-        PICKS
-      </button>
-      <button class="sort-button" onclick="pickSort(null,'wins',{{wins}})">
-        WINS
-      </button>
-      <button class="sort-button" onclick="pickSort(null,'winrate',{{wins}})">
-        WINRATE
-      </button>
-      <button
-        class="sort-button"
-        onclick="pickSort('Safelane','wins',{{wins}})"
-      >
-        SAFELANE
-      </button>
-      <button
-        class="sort-button"
-        onclick="pickSort('Midlane','wins',{{wins}})"
-      >
-        MIDLANE
-      </button>
-      <button
-        class="sort-button"
-        onclick="pickSort('Offlane','wins',{{wins}})"
-      >
-        OFFLANE
-      </button>
-      <button
-        class="sort-button"
-        onclick="pickSort('Roaming','wins',{{wins}})"
-      >
-        ROAMING
-      </button>
-      <button
-        class="sort-button"
-        onclick="pickSort('Support','wins',{{wins}})"
-      >
-        SUPPORT
-      </button>
-      <button
-        class="sort-button"
-        onclick="pickSort('Hard Support','wins',{{wins}})"
-      >
-        HARD SUPPORT
-      </button>
-      <input type="checkbox" id="pick-box" />p
-      <input type="checkbox" id="win-box" />win
-      <input type="checkbox" id="win-rate-box" />wr
+  <div class="controls-wrapper">
+    <div class="controls-container">
+      <div class="advanced-controls hide">
+        <div class="control-left">
+          <button
+            class="sort-button"
+            onclick="pickSort('Safelane','picks',{{wins}})"
+          >
+            SAFELANE
+          </button>
+          <button
+            class="sort-button"
+            onclick="pickSort('Midlane','picks',{{wins}})"
+          >
+            MIDLANE
+          </button>
+          <button
+            class="sort-button"
+            onclick="pickSort('Offlane','picks',{{wins}})"
+          >
+            OFFLANE
+          </button>
+        </div>
+        <div class="control-center">
+          <button
+            class="sort-button"
+            onclick="pickSort('Roaming','picks',{{wins}})"
+          >
+            ROAMING
+          </button>
+          <button
+            class="sort-button"
+            onclick="pickSort('Support','picks',{{wins}})"
+          >
+            SUPPORT
+          </button>
+          <button
+            class="sort-button"
+            onclick="pickSort('Hard Support','picks',{{wins}})"
+          >
+            HARD SUPPORT
+          </button>
+        </div>
+        <div class="control-right">
+          <div class="check-wrapper">
+            <input type="checkbox" id="pick-box" onclick="uncheck('Picks')" />
+            <label>Picks</label>
+          </div>
+          <div class="check-wrapper">
+            <input type="checkbox" id="win-box" onclick="uncheck('Wins')" />
+            <label>Wins</label>
+          </div>
+          <div class="check-wrapper">
+            <input
+              type="checkbox"
+              id="win-rate-box"
+              onclick="uncheck('Win-Rate')"
+            />
+            <label>Win-Rate</label>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div
+    class="arrow-button"
+    id="controls-arrow"
+    onclick="toggleWindow()"
+  >
+    <i id="arrow" class="fas fa-caret-down"></i>
+  </div>
+  <script>
+    itemWindow = document.querySelector(".advanced-controls");
+    const toggleWindow = () => {
+      itemWindow.classList.toggle("hide");
+      if (itemWindow.classList.contains("hide")) {
+        document.getElementById("arrow").className = "fas fa-caret-down";
+      } else {
+        document.getElementById("arrow").className = "fas fa-caret-up";
+      }
+    };
+  </script>
+  <div class="grid-container">
     <div class="hero-grid">
       {%set x = 0%} {%for j in range(119)%} {%if j < 119%}
       <div class="col">
