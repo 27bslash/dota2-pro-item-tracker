@@ -1,35 +1,35 @@
 let winData;
 
-const pickSort = (role, x, data) => {
+const pickSort = (role, x) => {
   picksArr = [];
   amountOfHeroes = 119;
   pickBox = document.getElementById("pick-box");
   winBox = document.getElementById("win-box");
   winrateBox = document.getElementById("win-rate-box");
-
-  // console.log(pickBox.checked, winBox.checked, winrateBox.checked);
-  if (pickBox.checked) {
-    x = "picks";
-  } else if (winBox.checked) {
-    x = "wins";
-  } else if (winrateBox.checked) {
-    x = "winrate";
-  }
-
-  if (role) {
-    console.log(`${role}_${x}`);
-    let filtered = data.filter((item) => item[`${role}_${x}`] > 0);
-    data = filtered.sort((a, b) => b[`${role}_${x}`] - a[`${role}_${x}`]);
-  } else {
-    console.log("false");
-    data.sort((a, b) => b[`${x}`] - a[`${x}`]);
-  }
-  heroCounter = 0;
-  grid_position(data, role);
+  stats = get_json("win-stats");
+  stats.then((data) => {
+    if (pickBox.checked) {
+      x = "picks";
+    } else if (winBox.checked) {
+      x = "wins";
+    } else if (winrateBox.checked) {
+      x = "winrate";
+    }
+    if (role) {
+      console.log(`${role}_${x}`);
+      let filtered = data.filter((item) => item[`${role}_${x}`] > 0);
+      data = filtered.sort((a, b) => b[`${role}_${x}`] - a[`${role}_${x}`]);
+    } else {
+      console.log("false");
+      data.sort((a, b) => b[`${x}`] - a[`${x}`]);
+    }
+    heroCounter = 0;
+    grid_position(data, role);
+  });
 };
 
 function grid_position(data, role) {
-  document.querySelectorAll(".col").forEach((x) => {
+  document.querySelectorAll(".hero-cell").forEach((x) => {
     x.style.display = "None";
   });
   for (let i = 0; i < data.length; i++) {
@@ -73,6 +73,7 @@ function change_stat_text(data, currCell, role, heroCounter) {
   }
 }
 const colour_wins = () => {
+  statText = document.querySelectorAll(".win-stats");
   for (let stat of statText) {
     // console.log(stat.children[2].innerHTML);
     let winrate = stat.children[2].innerHTML.replace("%", "");

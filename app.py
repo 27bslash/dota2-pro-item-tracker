@@ -20,6 +20,7 @@ import functools
 from io import BytesIO as IO
 from flask_minify import minify, decorators
 
+
 cluster = MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
 db = cluster['pro-item-tracker']
@@ -29,7 +30,7 @@ hero_output = db['heroes']
 
 COMPRESS_MIMETYPES = ['text/html', 'text/css', 'text/xml',
                       'application/json', 'application/javascript']
-COMPRESS_LEVEL = 6
+COMPRESS_LEVEL = 6 
 COMPRESS_MIN_SIZE = 500
 compress = Compress()
 app = Flask(__name__)
@@ -89,7 +90,7 @@ def item_post(hero_name):
 @app.route('/player/<player_name>/starter_items', methods=['POST'])
 @app.route('/player/<player_name>', methods=['POST'])
 def player_post(player_name):
-    print('p',player_name)
+    print('p', player_name)
     if request.method == 'POST':
         starter = ''
         if 'starter_items' in request.url:
@@ -103,6 +104,7 @@ def player_post(player_name):
             return redirect('/hero/'+suggestion[0])
         else:
             return redirect(f'/hero/{hero_name}{starter}')
+
 
 @app.route('/hero/<hero_name>/starter_items', methods=['GET'])
 @app.route('/hero/<hero_name>', methods=['GET'])
@@ -128,10 +130,10 @@ def hero_get(hero_name):
             data = hero_output.find(
                 {'hero': hero_name, 'role': role}).sort('unix_time', -1)
             match_data = [hero for hero in data]
-        else:
-            match_data = find_hero('hero', hero_name)
+        else: 
+            match_data = find_hero('hero', hero_name) 
         total = roles_db['total_picks']
-        most_used = pro_items(match_data)
+        most_used = pro_items(match_data) 
         most_used = dict(itertools.islice(most_used.items(), 10))
         max_val = list(most_used.values())[0]
         talents = get_talent_order(match_data, hero_name)
@@ -157,7 +159,7 @@ def player_get(player_name):
     roles_db = db['player_picks'].find_one({'name': display_name})
     roles = roles_db['roles']
     check_response = hero_output.find_one({'name': display_name})
-    print('chk_time: ', time.perf_counter() - check_response_time) 
+    print('chk_time: ', time.perf_counter() - check_response_time)
     if check_response:
         if request.args:
             role = request.args.get('role').replace('%20', ' ').title()
@@ -265,6 +267,10 @@ def acc_json():
     players = [player['name'] for player in data]
     return json.dumps(players)
 
+@ app.route('/files/win-stats')
+def wins_json():
+    data = db['wins'].find_one({})
+    return json.dumps(data['stats'])
 
 @ app.after_request
 def add_header(response):
@@ -318,7 +324,7 @@ async def request_shit(hero_name):
                     'img::attr(src)').extract()[0]
                 lane = clean_img(lane_select)
                 role = clean_img(role_select)
-                # print(mmr) 
+                # print(mmr)
                 lanes = {'safelane': '1', 'mid': '2', 'roaming': '4',
                          'offlane': '3', 'unknown': '0', 'jungle': 'jungle'}
                 roles = {'1': 'Safelane', '2': 'Midlane',
@@ -394,16 +400,17 @@ def opendota_call():
 
 
 def manual_hero_update(name):
-    hero_output.delete_many({'hero': name})
+    # hero_output.delete_many({'hero': name})
     # hero_urls.delete_many({'hero': name})
     # asyncio.run(single_request(name))
     asyncio.run(main(get_urls(name), name))
     # get_winrate()
- 
+
 
 if __name__ == '__main__':
     # opendota_call()
     # delete_old_urls()
-    # manual_hero_update('lich')
-    # get_winrate()
+    # manual_hero_update('windranger')
+    # get_winrate() 
     app.run(debug=False)
+ 

@@ -4,41 +4,26 @@
     <div class="controls-container">
       <div class="advanced-controls hide">
         <div class="control-left">
-          <button
-            class="sort-button"
-            onclick="pickSort('Safelane','picks',{{wins}})"
-          >
+          <button class="sort-button" onclick="pickSort('Safelane','picks')">
             SAFELANE
           </button>
-          <button
-            class="sort-button"
-            onclick="pickSort('Midlane','picks',{{wins}})"
-          >
+          <button class="sort-button" onclick="pickSort('Midlane','picks')">
             MIDLANE
           </button>
-          <button
-            class="sort-button"
-            onclick="pickSort('Offlane','picks',{{wins}})"
-          >
+          <button class="sort-button" onclick="pickSort('Offlane','picks')">
             OFFLANE
           </button>
         </div>
         <div class="control-center">
-          <button
-            class="sort-button"
-            onclick="pickSort('Roaming','picks',{{wins}})"
-          >
+          <button class="sort-button" onclick="pickSort('Roaming','picks')">
             ROAMING
           </button>
-          <button
-            class="sort-button"
-            onclick="pickSort('Support','picks',{{wins}})"
-          >
+          <button class="sort-button" onclick="pickSort('Support','picks')">
             SUPPORT
           </button>
           <button
             class="sort-button"
-            onclick="pickSort('Hard Support','picks',{{wins}})"
+            onclick="pickSort('Hard Support','picks')"
           >
             HARD SUPPORT
           </button>
@@ -61,14 +46,26 @@
             <label>Win-Rate</label>
           </div>
         </div>
+        <div class="control-footer">
+          <button
+            class="sort-button"
+            id="picks"
+            onclick="pickSort(null,'picks')"
+          >
+            PICKS
+          </button>
+          <button
+            class="sort-button"
+            id="winrate"
+            onclick="pickSort(null,'winrate')"
+          >
+            WINRATE
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <div
-    class="arrow-button"
-    id="controls-arrow"
-    onclick="toggleWindow()"
-  >
+  <div class="arrow-button" id="controls-arrow" onclick="toggleWindow()">
     <i id="arrow" class="fas fa-caret-down"></i>
   </div>
   <script>
@@ -85,7 +82,7 @@
   <div class="grid-container">
     <div class="hero-grid">
       {%set x = 0%} {%for j in range(119)%} {%if j < 119%}
-      <div class="col">
+      <div class="hero-cell">
         <a href="/hero/{{links[j]['name']}}">
           <img
             class="hero-img"

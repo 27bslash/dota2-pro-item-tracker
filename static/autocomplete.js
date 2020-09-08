@@ -1,4 +1,4 @@
-let cells = document.querySelectorAll(".col"),
+let cells = document.querySelectorAll(".hero-cell"),
   arr = [],
   search = document.getElementById("search"),
   heroGrid = document.querySelector(".hero-grid"),
@@ -6,6 +6,7 @@ let cells = document.querySelectorAll(".col"),
   ul = document.querySelector("ul"),
   heroSuggestionList = document.querySelector("#hero-suggestion-list"),
   playerSuggestionList = document.querySelector("#player-suggestion-list");
+
 
 document.querySelector(".suggestions").style.display = "none";
 async function get_json(search) {
@@ -142,7 +143,6 @@ const hideHeroes = () => {
       (window.location.pathname.lastIndexOf("/") + 1) ===
     0
   ) {
-    document.querySelector(".buttons").style.display = "none";
   }
   for (let hero of cells) {
     hero.classList.add("hide");
@@ -241,7 +241,6 @@ const reset = () => {
   }
   for (let hero of cells) {
     hero.classList.remove("hide");
-    document.querySelector(".buttons").style.display = "flex";
   }
   for (let stat of statText) {
     stat.classList.remove("hide");

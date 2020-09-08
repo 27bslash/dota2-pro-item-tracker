@@ -146,6 +146,10 @@ ul {
   cursor: pointer;
   border-radius: 5px;
 }
+.home-button:hover {
+  background-color: rgb(0, 0, 0);
+  color:rgb(187, 187, 187);
+}
 #search {
   background-color: inherit;
   color: white;
@@ -344,7 +348,7 @@ a {
   margin: 0;
   transform: rotate(-90deg);
   position: absolute;
-  left: -1.1%;
+  left: -20px;
   top: 17%;
 }
 
@@ -359,7 +363,11 @@ a {
   z-index: 5;
   display: grid;
   margin-left: 20px;
+  grid-template-areas:
+    "l c r"
+    "footer footer footer";
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 0.3fr;
   border-radius: 5px;
   background-color: rgb(58, 61, 61);
 }
@@ -375,15 +383,29 @@ a {
   cursor: pointer;
   border-radius: 5px;
 }
+.sort-button:hover {
+  background-color: rgb(37, 37, 37);
+}
 .control-left {
-  grid-column: 1;
+  grid-area: l;
 }
 .control-center {
-  grid-column: 2;
+  grid-area: c;
   border-right: solid black 3px;
 }
 .control-right {
-  grid-column: 3;
+  grid-area: r;
+}
+.control-footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+}
+#picks {
+  justify-self: center;
+}
+#winrate {
+  justify-self: center;
 }
 label {
   color: white;
