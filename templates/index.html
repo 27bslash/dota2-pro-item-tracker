@@ -4,25 +4,46 @@
     <div class="controls-container">
       <div class="advanced-controls hide">
         <div class="control-left">
-          <button class="sort-button" onclick="pickSort('Safelane','picks')">
+          <button
+            class="sort-button"
+            id="Safelane"
+            onclick="pickSort('Safelane','picks')"
+          >
             SAFELANE
           </button>
-          <button class="sort-button" onclick="pickSort('Midlane','picks')">
+          <button
+            class="sort-button"
+            id="Midlane"
+            onclick="pickSort('Midlane','picks')"
+          >
             MIDLANE
           </button>
-          <button class="sort-button" onclick="pickSort('Offlane','picks')">
+          <button
+            class="sort-button"
+            id="Offlane"
+            onclick="pickSort('Offlane','picks')"
+          >
             OFFLANE
           </button>
         </div>
         <div class="control-center">
-          <button class="sort-button" onclick="pickSort('Roaming','picks')">
+          <button
+            class="sort-button"
+            id="Roaming"
+            onclick="pickSort('Roaming','picks')"
+          >
             ROAMING
           </button>
-          <button class="sort-button" onclick="pickSort('Support','picks')">
+          <button
+            class="sort-button"
+            id="Support"
+            onclick="pickSort('Support','picks')"
+          >
             SUPPORT
           </button>
           <button
             class="sort-button"
+            id="Hard Support"
             onclick="pickSort('Hard Support','picks')"
           >
             HARD SUPPORT
@@ -49,14 +70,12 @@
         <div class="control-footer">
           <button
             class="sort-button"
-            id="picks"
             onclick="pickSort(null,'picks')"
           >
             PICKS
           </button>
           <button
             class="sort-button"
-            id="winrate"
             onclick="pickSort(null,'winrate')"
           >
             WINRATE

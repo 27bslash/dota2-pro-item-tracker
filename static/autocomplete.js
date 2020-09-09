@@ -7,7 +7,6 @@ let cells = document.querySelectorAll(".hero-cell"),
   heroSuggestionList = document.querySelector("#hero-suggestion-list"),
   playerSuggestionList = document.querySelector("#player-suggestion-list");
 
-
 document.querySelector(".suggestions").style.display = "none";
 async function get_json(search) {
   const url = `${window.location.origin}/files/${search}`;
@@ -280,6 +279,17 @@ window.addEventListener("mouseover", (event) => {
     }
   }
 });
+document.querySelectorAll(".sort-button").forEach((x) => {
+  x.addEventListener("click", (event) => {
+    console.log(event.target.id);
+    cells.forEach((i) => {
+      base = i.children[0].href.split("?")[0];
+      i.children[0].href = base;
+      if (event.target.id) i.children[0].href = `${base}?role=${event.target.id}`;
+    });
+  });
+});
+
 closeAllTooltips();
 hero_autocomplete();
 player_autocomplete();

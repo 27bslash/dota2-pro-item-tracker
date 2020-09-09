@@ -280,10 +280,6 @@ a {
 .talent-bar {
   height: 45px;
   background-color: rgb(55, 67, 71);
-
-  /* margin-top: -30px; */
-  /* display: inline-block;
-  vertical-align: top; */
 }
 .talent-left > .talent-bar {
   border-top-left-radius: 5px;
@@ -401,12 +397,7 @@ a {
   display: flex;
   justify-content: center;
 }
-#picks {
-  justify-self: center;
-}
-#winrate {
-  justify-self: center;
-}
+
 label {
   color: white;
 }
@@ -530,7 +521,6 @@ label {
   text-align: end;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.11);
-  border-bottom: solid 1px grey;
 }
 .tooltip-img {
   justify-self: start;
@@ -547,9 +537,6 @@ label {
   padding: 20px;
 }
 
-.tooltip.content:last-child {
-  background-color: red;
-}
 .attribute > p {
   margin: 0;
   margin-top: 2px;
@@ -576,11 +563,6 @@ label {
   margin-top: 2px;
   width: 15px;
   height: 15px;
-}
-.ability[title]:after {
-  content: attr(title);
-  position: absolute;
-  background-color: blue;
 }
 
 table.dataTable thead .sorting {

@@ -1,5 +1,3 @@
-
-
 const hero_ids = get_json("hero_ids");
 const abilities = get_json("abilities");
 const hero_colors = get_json("colors");
@@ -75,6 +73,8 @@ window.addEventListener("mouseover", (event) => {
         tooltipFooter = document.createElement("div");
         tooltipFooter.setAttribute("class", "tooltip-footer");
         stat = result[a_id]["stat"];
+        if (!"manaCost" in stat && !"cooldown" in stat) {
+        }
         if ("manaCost" in stat) {
           mcWrapper = document.createElement("div");
           mcWrapper.setAttribute("class", "mana-costs");
@@ -106,6 +106,11 @@ window.addEventListener("mouseover", (event) => {
           cdWrapper.appendChild(cooldowns);
           cdWrapper.appendChild(cdText);
           tooltipFooter.appendChild(cdWrapper);
+        }
+        console.log(tooltipFooter.children.length);
+        if (tooltipFooter.children.length == 0) {
+          tooltipFooter.style.padding = "0px";
+          tooltipFooter.style.borderTop = "0px";
         }
         if (!tooltip.children[0]) {
           tooltip.appendChild(tooltipHeader);
