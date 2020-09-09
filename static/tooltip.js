@@ -107,7 +107,6 @@ window.addEventListener("mouseover", (event) => {
           cdWrapper.appendChild(cdText);
           tooltipFooter.appendChild(cdWrapper);
         }
-        console.log(tooltipFooter.children.length);
         if (tooltipFooter.children.length == 0) {
           tooltipFooter.style.padding = "0px";
           tooltipFooter.style.borderTop = "0px";
