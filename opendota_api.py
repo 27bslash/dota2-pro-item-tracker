@@ -49,24 +49,26 @@ async def async_get(m_id, hero_name):
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(url=url) as response:
+                hero_methods = Hero()
+                item_methods = Items()
                 resp = await response.json()
                 match_id = int(resp['match_id'])
                 print(f"successfully got {match_id}")
                 hero_ids = [player['hero_id'] for player in resp['players']]
-                rad_draft = [hero_name_from_hero_id(
+                rad_draft = [hero_methods.hero_name_from_hero_id(
                     player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 0 and player['hero_id'] in hero_ids]
-                dire_draft = [hero_name_from_hero_id(
+                dire_draft = [hero_methods.hero_name_from_hero_id(
                     player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 1 and player['hero_id'] in hero_ids]
                 for i in range(10):
                     p = resp['players'][i]
                     hero_id = p['hero_id']
                     if p['randomed'] and p['isRadiant']:
-                        rad_draft.append(hero_name_from_hero_id(hero_id))
+                        rad_draft.append(hero_methods.hero_name_from_hero_id(hero_id))
                     if p['randomed'] and not p['isRadiant']:
-                        dire_draft.append(hero_name_from_hero_id(hero_id))
+                        dire_draft.append(hero_methods.hero_name_from_hero_id(hero_id))
                     roles_arr = [(p['lane'], p['gold_per_min'],  p['lane_efficiency'], p['sen_placed'],
                                   p['player_slot'], p['is_roaming']) for p in resp['players'] if 'lane_efficiency' in p and 'lane' in p]
-                    if hero_id == get_id(hero_name):
+                    if hero_id == hero_methods.get_id(hero_name):
                         abilities = p['ability_upgrades_arr']
                         # check if one of the players matches search
                         purchase_log = p['purchase_log']
@@ -75,10 +77,11 @@ async def async_get(m_id, hero_name):
                             print(f"{hero_name} should reach here.")
                             starting_items = [{'key': purchase['key'], 'time':0}
                                               for purchase in purchase_log if purchase['time'] <= 0]
+                            starting_items = item_methods.remove_buildup_items(starting_items)
                             rev = purchase_log.copy()[:: -1]
-                            main_items = get_most_recent_items(
+                            main_items = item_methods.get_most_recent_items(
                                 rev, 6, p)
-                            bp_items = get_most_recent_items(
+                            bp_items = item_methods.get_most_recent_items(
                                 rev, 4, p)
                             if p['duration'] > 0:
                                 p['duration'] = str(datetime.timedelta(
@@ -86,7 +89,7 @@ async def async_get(m_id, hero_name):
                             else:
                                 p['duration'] = 0
                             hero_output.insert_one(
-                                {'time_started': get_time(p['start_time']), 'unix_time': p['start_time'], 'hero': hero_name, 'duration': p['duration'],
+                                {'unix_time': p['start_time'], 'hero': hero_name, 'duration': p['duration'],
                                  'radiant_draft': rad_draft, 'dire_draft': dire_draft,
                                  'name': get_info(match_id, 'name', hero_name), 'account_id': p['account_id'], 'role': role, 'mmr': get_info(match_id, 'mmr', hero_name),
                                  'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
@@ -94,8 +97,8 @@ async def async_get(m_id, hero_name):
                                  'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'],
                                  'win': p['win'], 'id': match_id,
                                  'starting_items': starting_items,
-                                 'final_items': main_items, 'backpack': bp_items, 'item_neutral': get_item_name(p['item_neutral']),
-                                 'abilities': stratz_abillity_test(abilities, hero_id), 'items': purchase_log})
+                                 'final_items': main_items, 'backpack': bp_items, 'item_neutral': item_methods.get_item_name(p['item_neutral']),
+                                 'abilities': detailed_ability_info(abilities, hero_id), 'items': purchase_log})
 
                         else:
                             parse.insert_one({'id': m_id})
