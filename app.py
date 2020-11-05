@@ -20,7 +20,7 @@ import functools
 from io import BytesIO as IO
 from flask_minify import minify, decorators
 
-
+# benchmarks for laning phase instead of networth maybe
 cluster = MongoClient(
     'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
 db = cluster['pro-item-tracker']
@@ -30,7 +30,7 @@ hero_output = db['heroes']
 
 COMPRESS_MIMETYPES = ['text/html', 'text/css', 'text/xml',
                       'application/json', 'application/javascript']
-COMPRESS_LEVEL = 6 
+COMPRESS_LEVEL = 6
 COMPRESS_MIN_SIZE = 500
 compress = Compress()
 app = Flask(__name__)
@@ -40,6 +40,12 @@ cache = Cache(config={
 cache.init_app(app)
 compress.init_app(app)
 minify(app=app, html=True, js=False, cssless=False)
+
+# classes
+hero_methods = Hero()
+item_methods = Items()
+database_methods = Db_insert()
+talent_methods = Talents()
 
 
 @app.route('/', methods=['GET'])
@@ -51,18 +57,18 @@ def index():
             data['heroes'], key=itemgetter('name'))
         img_names = [switcher(i['name']) for i in links]
         win_data = db['wins'].find_one({})
-        wins = [item for item in win_data['stats']]
+        wins = [item for item in win_data['stats'] if 'stats' in win_data]
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins)
 
 
 @app.route('/', methods=['POST'])
-def ind_post():
+def index_post():
     if request.method == 'POST':
         text = request.form.get('search')
         if db['account_ids'].find_one({'name': text}):
             return redirect('/player/'+text)
-        if get_hero_name(text):
-            suggestion = get_hero_name(text)
+        if hero_methods.get_hero_name(text):
+            suggestion = hero_methods.get_hero_name(text)
             suggestion = sorted(suggestion)
             return redirect('/hero/'+suggestion[0])
         else:
@@ -79,8 +85,8 @@ def item_post(hero_name):
         text = request.form.get('search')
         if db['account_ids'].find_one({'name': text}):
             return redirect('/player/'+text)
-        if get_hero_name(text):
-            suggestion = get_hero_name(text)
+        if hero_methods.get_hero_name(text):
+            suggestion = hero_methods.get_hero_name(text)
             suggestion = sorted(suggestion)
             return redirect('/hero/'+suggestion[0])
         else:
@@ -98,8 +104,8 @@ def player_post(player_name):
         text = request.form.get('search')
         if db['account_ids'].find_one({'name': text}):
             return redirect('/player/'+text)
-        if get_hero_name(text):
-            suggestion = get_hero_name(text)
+        if hero_methods.get_hero_name(text):
+            suggestion = hero_methods.get_hero_name(text)
             suggestion = sorted(suggestion)
             return redirect('/hero/'+suggestion[0])
         else:
@@ -122,6 +128,7 @@ def hero_get(hero_name):
     print('roles: ', time.perf_counter() - r_start)
     # print('roloe', roles, hero_name)
     check_response_time = time.perf_counter()
+    # print(hero_output.find({'hero': hero_name}).explain()['executionStats'])
     check_response = hero_output.find_one({'hero': hero_name})
     print('chk_time: ', time.perf_counter() - check_response_time)
     if check_response:
@@ -129,14 +136,16 @@ def hero_get(hero_name):
             role = request.args.get('role').replace('%20', ' ').title()
             data = hero_output.find(
                 {'hero': hero_name, 'role': role}).sort('unix_time', -1)
+            # print(hero_output.find(
+            #     {'hero': hero_name, 'role': role}).sort('unix_time', -1).explain()['executionStats'])
             match_data = [hero for hero in data]
-        else: 
-            match_data = find_hero('hero', hero_name) 
+        else:
+            match_data = find_hero('hero', hero_name)
         total = roles_db['total_picks']
-        most_used = pro_items(match_data) 
+        most_used = item_methods.pro_items(match_data)
         most_used = dict(itertools.islice(most_used.items(), 10))
         max_val = list(most_used.values())[0]
-        talents = get_talent_order(match_data, hero_name)
+        talents = talent_methods.get_talent_order(match_data, hero_name)
         hero_colour = get_hero_name_colour(hero_name)
         print('total Time: ', time.perf_counter()-start)
         return render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
@@ -177,6 +186,7 @@ def player_get(player_name):
 
 def find_hero(query, hero):
     data = hero_output.find({query: hero}).sort('unix_time', -1)
+    print(hero_output.find({query: hero}).sort('unix_time', -1).explain()['executionStats'])
     s = time.perf_counter()
     match_data = [hero for hero in data]
     print('data time', time.perf_counter() - s)
@@ -189,7 +199,6 @@ def get_winrate():
     output = []
     roles = ['Hard Support', 'Support', 'Safelane',
              'Offlane', 'Midlane', 'Roaming']
-    db['wins'].delete_many({})
     try:
         with open('json_files/hero_ids.json', 'r') as f:
             data = json.load(f)
@@ -222,9 +231,40 @@ def get_winrate():
                     role_dict[f"{role}_winrate"] = winrate
                 output.append(role_dict)
                 wins = sorted(output, key=itemgetter('hero'))
-            db['wins'].insert_one({'stats': wins})
+            # db['wins'].insert_one({'stats': wins})
+            print(db['wins'])
+            db['wins'].find_one_and_replace(
+                {}, {'stats': wins}, None, None, True)
     except Exception as e:
         print(traceback.format_exc())
+
+
+def switcher(name):
+    switch = {
+        'necrophos': 'necrolyte',
+        'clockwerk': 'rattletrap',
+        "nature's_prophet": 'furion',
+        'timbersaw': 'shredder',
+        'io': 'wisp',
+        'queen_of_pain': 'queenofpain',
+        'doom': 'doom_bringer',
+        'shadow_fiend': 'nevermore',
+        'wraith_king': 'skeleton_king',
+        'magnus': 'magnataur',
+        'underlord': 'abyssal_underlord',
+        'anti-mage': 'antimage',
+        'outworld_devourer': 'obsidian_destroyer',
+        'windranger': 'windrunner',
+        'zeus': 'zuus',
+        'vengeful_spirit': 'vengefulspirit',
+        'treant_protector': 'treant',
+        'centaur_warrunner': 'centaur'
+    }
+    # print(h, switch.get(h))
+    if switch.get(name):
+        return switch.get(name)
+    else:
+        return name
 
 
 def get_hero_name_colour(hero_name):
@@ -254,6 +294,16 @@ def ability_json():
         return data
 
 
+@app.route('/files/abilities/<hero_name>')
+def hero_ability_json(hero_name):
+    print(hero_name)
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        with open(f"json_files/detailed_ability_info/{hero_name}.json") as f:
+            data = json.load(f)
+            return json.dumps(data)
+
+
 @ app.route('/files/colors')
 def color_json():
     with open('json_files/hero_colours.json', 'r') as f:
@@ -267,10 +317,12 @@ def acc_json():
     players = [player['name'] for player in data]
     return json.dumps(players)
 
+
 @ app.route('/files/win-stats')
 def wins_json():
     data = db['wins'].find_one({})
     return json.dumps(data['stats'])
+
 
 @ app.after_request
 def add_header(response):
@@ -369,11 +421,12 @@ def opendota_call():
     db['most-common-items'].delete_many({'hero': 'anti-mage'})
     delete_old_urls()
     print('input')
+    Database_method = Db_insert()
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for i in data['heroes']:
             names.append(i['name'])
-            insert_talent_order(i['name'])
+            Database_method.insert_talent_order(i['name'])
         strt = time.perf_counter()
         # asyncio.run(pro_request(names))
         print('1st', time.perf_counter() - strt)
@@ -382,7 +435,7 @@ def opendota_call():
         for name in names:
             sleep = len(get_urls(name))
             asyncio.run(main(get_urls(name), name))
-            insert_hero_picks('hero', name, 'hero_picks')
+            Database_method.insert_total_picks('hero', name, 'hero_picks')
             # loop.run_until_complete(
             #     test(steam_api_test(name), name))
             # sync(steam_api_test(name),name)
@@ -395,12 +448,12 @@ def opendota_call():
             pass
     parse_request()
     get_winrate()
-    insert_player_picks()
+    Database_method.insert_player_picks()
     print('end', (time.time()-start)/60, 'minutes')
 
 
 def manual_hero_update(name):
-    # hero_output.delete_many({'hero': name})
+    hero_output.delete_many({'hero': name})
     # hero_urls.delete_many({'hero': name})
     # asyncio.run(single_request(name))
     asyncio.run(main(get_urls(name), name))
@@ -410,7 +463,6 @@ def manual_hero_update(name):
 if __name__ == '__main__':
     # opendota_call()
     # delete_old_urls()
-    # manual_hero_update('windranger')
-    # get_winrate() 
+    # manual_hero_update('timbersaw')
+    # get_winrate()
     app.run(debug=False)
- 
