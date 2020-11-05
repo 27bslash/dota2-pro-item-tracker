@@ -1,4 +1,45 @@
 {% extends 'search.html' %} {%block content%}
+<script>
+  $(document).ready(function () {
+    document.getElementsByTagName("html")[0].style.visibility = "visible";
+    let table = $(".item-table").DataTable({
+      aoColumns: [
+      { orderSequence: ["desc", "asc"] },
+      { bSortable: false },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["asc", "desc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["asc", "desc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        ],
+        order: [[0, "asc"]],
+        order: [[2, "desc"]],
+        bfilter: false,
+        searching: false,
+      });
+    var lastIdx = null;
+    $(".item-table tbody")
+    .on("mouseover", ".stats", function () {
+      var colIdx = table.cell(this).index().column;
+      if (colIdx !== lastIdx) {
+        $(table.cells().nodes()).removeClass("highlight");
+        $(table.column(colIdx).nodes()).addClass("highlight");
+      }
+    })
+    .on("mouseleave", function () {
+      $(table.cells().nodes()).removeClass("highlight");
+    });
+  });
+</script>
 
 <title>{{hero_name}}</title>
 <main>
@@ -46,6 +87,17 @@
         <i id="arrow" class="fas fa-caret-down" ></i>
       </div>
     </div>
+    <script>
+      itemWindow = document.querySelector(".most-used");
+      const toggleWindow = () => {
+        itemWindow.classList.toggle("closed");
+        if (itemWindow.classList.contains("closed")) {
+          document.getElementById("arrow").className = "fas fa-caret-down";
+        } else {
+          document.getElementById("arrow").className = "fas fa-caret-up";
+        }
+      };
+    </script>
     {%if talents%}
     <div class="talent-wrapper">
     <img id='main-talent-img' height='70' src= "{{ url_for('static', filename='talent_img.png') }}"/>
@@ -322,77 +374,4 @@
     </table>
   </div>
 </main>
-<script
-  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-></script>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css"
-/>
-<script
-  type="text/javascript"
-  charset="utf8"
-  src="https://cdn.datatables.net/v/dt/dt-1.10.21/r-2.2.5/datatables.min.js"
-></script>
-<link
-  rel="stylesheet"
-  href="{{ url_for('static', filename='main.css') }}"
-/>
-<script
-  src="https://kit.fontawesome.com/452aecdbf8.js"
-  crossorigin="anonymous"
-></script>
-<script>
-  $(document).ready(function () {
-    document.getElementsByTagName("html")[0].style.visibility = "visible";
-    let table = $(".item-table").DataTable({
-      aoColumns: [
-      { orderSequence: ["desc", "asc"] },
-      { bSortable: false },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        ],
-        order: [[0, "asc"]],
-        order: [[2, "desc"]],
-        bfilter: false,
-        searching: false,
-      });
-    var lastIdx = null;
-    $(".item-table tbody")
-    .on("mouseover", ".stats", function () {
-      var colIdx = table.cell(this).index().column;
-      if (colIdx !== lastIdx) {
-        $(table.cells().nodes()).removeClass("highlight");
-        $(table.column(colIdx).nodes()).addClass("highlight");
-      }
-    })
-    .on("mouseleave", function () {
-      $(table.cells().nodes()).removeClass("highlight");
-    });
-  });
-</script>
-<script>
-  itemWindow = document.querySelector(".most-used");
-  const toggleWindow = () => {
-    itemWindow.classList.toggle("closed");
-    if (itemWindow.classList.contains("closed")) {
-      document.getElementById("arrow").className = "fas fa-caret-down";
-    } else {
-      document.getElementById("arrow").className = "fas fa-caret-up";
-    }
-  };
-</script>
 {%endblock%}
