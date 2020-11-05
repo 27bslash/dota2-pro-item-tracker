@@ -1,0 +1,1106 @@
+{
+    "412": {
+        "id": 412,
+        "name": "special_bonus_unique_techies_5",
+        "uri": "techies",
+        "language": {
+            "abilityId": 412,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-22s Blast Off! Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 412,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5599": {
+        "id": 5599,
+        "name": "techies_land_mines",
+        "uri": "techies",
+        "language": {
+            "abilityId": 5599,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Proximity Mines",
+            "description": [
+                "Plant an invisible mine that cannot be detected by True Sight, but is visible if an enemy is within the active 400 AoE of the mine. Mines detonate if an enemy is standing within the active AoE for 1.6 seconds. The explosion deals full damage in the blast radius, and deals 25% damage to buildings."
+            ],
+            "attributes": [
+                "DAMAGE: 200 / 400 / 600 / 800",
+                "RADIUS: 400",
+                "BUILDING DAMAGE: 25%",
+                "ACTIVATION DELAY: 1.75",
+                "BONUS SCEPTER CAST RANGE: 300"
+            ],
+            "lore": "The bane of Toterin!",
+            "aghanimDescription": "Increases cast range.",
+            "notes": [
+                "Cannot be placed within active AoE of another Proximity Mine.",
+                "Proximity Mines do not block neutral creep camps from spawning.",
+                "Mines last until they explode or are destroyed.",
+                "Mines are triggered by invisible units.",
+                "Mines will not be triggered by some flying units.",
+                "Grants 30 gold if destroyed by an enemy hero.",
+                "Mines are triggered by, but do not damage spell-immune units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5599,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                100
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                110,
+                130,
+                150,
+                170
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "3",
+            "chargeRestoreTime": "23"
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5600": {
+        "id": 5600,
+        "name": "techies_stasis_trap",
+        "uri": "techies",
+        "language": {
+            "abilityId": 5600,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Stasis Trap",
+            "description": [
+                "Plant an invisible trap that roots nearby enemy units instantly when triggered."
+            ],
+            "attributes": [
+                "TRIGGER RADIUS: 400",
+                "ROOT DURATION: 2 / 3 / 4 / 5",
+                "ROOT RADIUS: 600",
+                "TRAP FADE TIME: 2.0",
+                "BONUS SCEPTER CAST RANGE: 300"
+            ],
+            "lore": "The scourge of Trapper Town!",
+            "aghanimDescription": "Increases cast range.",
+            "notes": [
+                "Stasis Traps destroy all other Stasis Traps in their area of effect when they detonate.",
+                "Stasis Traps are not triggered by invisible units.",
+                "Stasis Traps do not block neutral creep camps from spawning."
+            ]
+        },
+        "stat": {
+            "abilityId": 5600,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2097200,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                150
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                1
+            ],
+            "cooldown": [
+                20,
+                16,
+                13,
+                10
+            ],
+            "manaCost": [
+                80,
+                110,
+                140,
+                160
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5601": {
+        "id": 5601,
+        "name": "techies_suicide",
+        "uri": "techies",
+        "language": {
+            "abilityId": 5601,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Blast Off!",
+            "description": [
+                "Techies hurtle themselves into the enemy's midst, detonating charges upon impact which deal massive area of effect damage and silence enemies. Upon landing, the assault deals Techies damage equal to 50% of their max health."
+            ],
+            "attributes": [
+                "FULL DAMAGE: 300 / 400 / 500 / 600",
+                "RADIUS: 400",
+                "SILENCE DURATION: 4 / 5 / 6 / 7",
+                "MAX HP SELF DAMAGE: 50%"
+            ],
+            "lore": "Where we going?",
+            "notes": [
+                "Dying from this ability counts as suicide, and does not award gold or experience to the enemy team.",
+                "Techies still earn experience for suicide kills made with this ability.",
+                "This ability destroys trees."
+            ]
+        },
+        "stat": {
+            "abilityId": 5601,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2097200,
+            "unitTargetType": 0,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                1
+            ],
+            "cooldown": [
+                35
+            ],
+            "manaCost": [
+                100,
+                125,
+                150,
+                175
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5602": {
+        "id": 5602,
+        "name": "techies_remote_mines",
+        "uri": "techies",
+        "language": {
+            "abilityId": 5602,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Remote Mines",
+            "description": [
+                "Plant an invisible explosive that will only detonate after a brief delay when triggered.  Does not damage buildings."
+            ],
+            "attributes": [
+                "EXPLOSION RADIUS: 425",
+                "DAMAGE: 300 / 450 / 600",
+                "FADE TIME: 2.0",
+                "MINE DURATION: 600.0",
+                "BONUS SCEPTER CAST RANGE: 300",
+                "SCEPTER DAMAGE: 450 / 600 / 750"
+            ],
+            "lore": "The downfall of Dredger's Bight!",
+            "aghanimDescription": "Increases damage and cast range.",
+            "notes": [
+                "Grants 10 gold if destroyed by an enemy hero."
+            ]
+        },
+        "stat": {
+            "abilityId": 5602,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2097168,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                1
+            ],
+            "cooldown": [
+                8
+            ],
+            "manaCost": [
+                120,
+                180,
+                240
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5635": {
+        "id": 5635,
+        "name": "techies_focused_detonate",
+        "uri": "techies",
+        "language": {
+            "abilityId": 5635,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Focused Detonate",
+            "description": [
+                "Detonate all remote mines in the target area."
+            ],
+            "attributes": [
+                "RADIUS: 700"
+            ],
+            "lore": "Why light one fuse when you can light them all?",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5635,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                1,
+                1,
+                1
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5644": {
+        "id": 5644,
+        "name": "techies_minefield_sign",
+        "uri": "techies",
+        "language": {
+            "abilityId": 5644,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Minefield Sign",
+            "description": [
+                "Plant a warning sign to remind enemies to step lightly. Only one sign can exist at a time. Lasts 180 seconds."
+            ],
+            "attributes": [
+                "SIGN DURATION: 180",
+                "EFFECT RADIUS: 125"
+            ],
+            "lore": "Watch your step!",
+            "aghanimDescription": "Allows Minefield Sign to hide any Proximity Mines, Stasis Traps, and Remote Mines in an area around the sign from True Sight.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5644,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                10
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                360
+            ],
+            "manaCost": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5957": {
+        "id": 5957,
+        "name": "special_bonus_gold_income_150",
+        "uri": "techies",
+        "language": {
+            "abilityId": 5957,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+150 Gold/Min",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5957,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "5980": {
+        "id": 5980,
+        "name": "special_bonus_mp_regen_6",
+        "uri": "techies",
+        "language": {
+            "abilityId": 5980,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+6 Mana Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5980,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6000": {
+        "id": 6000,
+        "name": "special_bonus_magic_resistance_20",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6000,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20% Magic Resistance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6000,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6017": {
+        "id": 6017,
+        "name": "special_bonus_exp_boost_20",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6017,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20% XP Gain",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6017,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6059": {
+        "id": 6059,
+        "name": "special_bonus_respawn_reduction_60",
+        "uri": "Techies",
+        "language": {
+            "abilityId": 6059,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-60s Respawn Time",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6059,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6091": {
+        "id": 6091,
+        "name": "special_bonus_magic_resistance_25",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6091,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+25% Magic Resistance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6091,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6093": {
+        "id": 6093,
+        "name": "special_bonus_movement_speed_40",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6093,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40 Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6093,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6282": {
+        "id": 6282,
+        "name": "special_bonus_unique_techies",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6282,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+240 Blast Off! Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6282,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6306": {
+        "id": 6306,
+        "name": "special_bonus_movement_speed_50",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6306,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50 Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6306,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6317": {
+        "id": 6317,
+        "name": "special_bonus_exp_boost_30",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6317,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30% XP Gain",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6317,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6410": {
+        "id": 6410,
+        "name": "special_bonus_mp_regen_5",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6410,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5 Mana Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6410,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6997": {
+        "id": 6997,
+        "name": "special_bonus_unique_techies_3",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6997,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-3s Proximity Mines Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6997,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6998": {
+        "id": 6998,
+        "name": "special_bonus_unique_techies_4",
+        "uri": "techies",
+        "language": {
+            "abilityId": 6998,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+60 Mines Movement Speed",
+            "description": [
+                "All mines, including Stasis Traps, can be ordered to move to a location once placed."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6998,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7039": {
+        "id": 7039,
+        "name": "special_bonus_attack_damage_251",
+        "uri": "techies",
+        "language": {
+            "abilityId": 7039,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+251 Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7039,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

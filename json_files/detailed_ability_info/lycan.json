@@ -1,0 +1,575 @@
+{
+    "5395": {
+        "id": 5395,
+        "name": "lycan_summon_wolves",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 5395,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Summon Wolves",
+            "description": [
+                "Summons two wolves to fight for Lycan.  Level 3-4 wolves have Cripple, and level 4 wolves have permanent invisibility."
+            ],
+            "attributes": [
+                "DURATION: 55.0 / 55.0 / 55.0 / 55.0",
+                "BASE ATTACK TIME: 1.2 / 1.1 / 1.0 / 0.9",
+                "DAMAGE: 26 / 34 / 42 / 50",
+                "HP: 300 / 350 / 400 / 450",
+                "WOLF COUNT: 2 / 2 / 2 / 2"
+            ],
+            "lore": "The very enchantment that twisted his being also summons canine familiars.",
+            "notes": [
+                "Spirit Wolves have 70% magic damage resistance.",
+                "Using this spell will replace currently active Spirit Wolves."
+            ]
+        },
+        "stat": {
+            "abilityId": 5395,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                30,
+                30,
+                30,
+                30
+            ],
+            "manaCost": [
+                145
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5396": {
+        "id": 5396,
+        "name": "lycan_howl",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 5396,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Howl",
+            "description": [
+                "Strikes fear into enemies, reducing armor and attack damage to all enemies within 2000 range of Lycan and his wolves."
+            ],
+            "attributes": [
+                "DURATION: 5 / 6 / 7 / 8",
+                "ATTACK DAMAGE REDUCTION: 25% / 30% / 35% / 40%",
+                "ARMOR REDUCTION: 5 / 6 / 7 / 8"
+            ],
+            "lore": "Blood-curdling wolf cries signal to opponents that Banehallow is among them.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5396,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16388,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 5,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                24,
+                22,
+                20,
+                18
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5397": {
+        "id": 5397,
+        "name": "lycan_feral_impulse",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 5397,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Feral Impulse",
+            "description": [
+                "Increases the HP regeneration and damage of Lycan and all units under his control."
+            ],
+            "attributes": [
+                "RADIUS: 1200",
+                "BONUS DAMAGE: 14% / 26% / 38% / 50%",
+                "BONUS HP REGEN: 2 / 4 / 6 / 8"
+            ],
+            "lore": "His animalistic symbiosis with canine kind gives Banehallow enhanced reflexes and hunting capabilities.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5397,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5398": {
+        "id": 5398,
+        "name": "lycan_shapeshift",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 5398,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shapeshift",
+            "description": [
+                "Lycan assumes his lupine form, granting him and his units critical strikes and added vision at night. During Shapeshift, Lycan and all units under his control move at increased speed, cannot be slowed and have a 40% chance to deal a critical strike doing 150 / 175 / 200% damage."
+            ],
+            "attributes": [
+                "DURATION: 22",
+                "SHAPESHIFT MOVE SPEED: 650",
+                "BONUS NIGHT VISION: 1000",
+                "CRITICAL CHANCE: 40%",
+                "CRITICAL DAMAGE: 150% / 175% / 200%",
+                "TRANSFORM TIME: 1.25"
+            ],
+            "lore": "Forever a slave to his lycanthropy, Banehallow has come to accept his curse, and embrace his own savagery.",
+            "aghanimDescription": "Grants new ability: Wolf Bite. Bite an ally, granting them Shapeshift properties.",
+            "notes": [
+                "Hex doesn't remove Lycan's movement speed.",
+                "Lycan has a smaller collision size in this state."
+            ]
+        },
+        "stat": {
+            "abilityId": 5398,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                125,
+                110,
+                95
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5931": {
+        "id": 5931,
+        "name": "special_bonus_armor_4",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 5931,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+4 Armor",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5931,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6021": {
+        "id": 6021,
+        "name": "special_bonus_cooldown_reduction_10",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 6021,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "10% Cooldown Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6021,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6134": {
+        "id": 6134,
+        "name": "special_bonus_unique_lycan_1",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 6134,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5s Shapeshift Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6134,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6140": {
+        "id": 6140,
+        "name": "special_bonus_unique_lycan_2",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 6140,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+2 Wolves Summoned",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6140,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6519": {
+        "id": 6519,
+        "name": "special_bonus_unique_lycan_3",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 6519,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+10 Feral HP Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6519,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6684": {
+        "id": 6684,
+        "name": "special_bonus_unique_lycan_4",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 6684,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+15% Feral Impulse Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6684,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6685": {
+        "id": 6685,
+        "name": "special_bonus_unique_lycan_5",
+        "uri": "lycan",
+        "language": {
+            "abilityId": 6685,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+32% Chance Shapeshift Critical Strike",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6685,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

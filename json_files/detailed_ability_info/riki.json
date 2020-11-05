@@ -1,0 +1,733 @@
+{
+    "316": {
+        "id": 316,
+        "name": "riki_permanent_invisibility",
+        "uri": "riki",
+        "language": {
+            "abilityId": 316,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Permanent Invisibility",
+            "description": [
+                "Riki fades into the shadows, becoming invisible. When Riki attacks, he becomes visible. Grants bonus movement speed"
+            ],
+            "attributes": [
+                "FADE DELAY: 4 / 3 / 2",
+                "MOVEMENT SPEED: 20 / 40 / 60"
+            ],
+            "lore": "Riki comes for you.",
+            "notes": [
+                "Riki won't auto attack enemies while invisible.",
+                "Illusions of Riki will play Backstab animations, but not deal any bonus damage.",
+                "Bonus damage from Backstab can't be evaded."
+            ]
+        },
+        "stat": {
+            "abilityId": 316,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "347": {
+        "id": 347,
+        "name": "special_bonus_unique_riki_6",
+        "uri": "riki",
+        "language": {
+            "abilityId": 347,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-6 Tricks of the Trade Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 347,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "474": {
+        "id": 474,
+        "name": "special_bonus_unique_riki_7",
+        "uri": "riki",
+        "language": {
+            "abilityId": 474,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+125 Smoke Screen AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 474,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5142": {
+        "id": 5142,
+        "name": "riki_smoke_screen",
+        "uri": "riki",
+        "language": {
+            "abilityId": 5142,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Smoke Screen",
+            "description": [
+                "Throws down a smoke bomb, silencing enemies, and causing them to miss attacks."
+            ],
+            "attributes": [
+                "RADIUS: 280 / 310 / 340 / 370",
+                "MISS RATE: 25% / 35% / 45% / 55%",
+                "DURATION: 6"
+            ],
+            "lore": "Since his escape during the night of his betrayal, Riki has valued the use of a simple smoke screen to confuse his opponents.",
+            "notes": [
+                "Doesn't prevent the use of active items."
+            ]
+        },
+        "stat": {
+            "abilityId": 5142,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16432,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                550
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                20,
+                17,
+                14,
+                11
+            ],
+            "manaCost": [
+                90
+            ],
+            "isUltimate": false,
+            "duration": "6",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5143": {
+        "id": 5143,
+        "name": "riki_blink_strike",
+        "uri": "riki",
+        "language": {
+            "abilityId": 5143,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Blink Strike",
+            "description": [
+                "Teleports behind the target unit, striking for bonus damage if it is an enemy."
+            ],
+            "attributes": [
+                "CAST RANGE: ",
+                "BONUS DAMAGE: 25 / 50 / 75 / 100"
+            ],
+            "lore": "The Stealth Assassin's agile movement makes him impossible to escape.",
+            "notes": [
+                "Riki's first attack after Blink Strike will be a backstab.",
+                "Blink Strike's damage is dealt before the next attack.",
+                "You can Blink Strike to allies, but no damage is dealt."
+            ]
+        },
+        "stat": {
+            "abilityId": 5143,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 20488,
+            "unitTargetType": 8,
+            "unitTargetTeam": 8,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600,
+                700,
+                800,
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                0.1
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "2",
+            "chargeRestoreTime": "25 20 15 10"
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5144": {
+        "id": 5144,
+        "name": "riki_backstab",
+        "uri": "riki",
+        "language": {
+            "abilityId": 5144,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Cloak and Dagger",
+            "description": [
+                "Riki fades into the shadows, becoming invisible. Every time Riki strikes his enemy from behind, he deals bonus damage based on his Agility. When Riki attacks, he becomes visible."
+            ],
+            "attributes": [
+                "AGI DAMAGE MULT: 1.4 / 1.8 / 2.2",
+                "FADE DELAY: 4 / 3 / 2"
+            ],
+            "lore": "Riki comes for you.",
+            "notes": [
+                "Illusions of Riki will play Backstab animations, but not deal any bonus damage.",
+                "Bonus damage from Backstab can't be evaded."
+            ]
+        },
+        "stat": {
+            "abilityId": 5144,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5145": {
+        "id": 5145,
+        "name": "riki_tricks_of_the_trade",
+        "uri": "riki",
+        "language": {
+            "abilityId": 5145,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Tricks of the Trade",
+            "description": [
+                "Riki phases out of the world while striking random enemy units from behind in an area around him."
+            ],
+            "attributes": [
+                "RADIUS: 450",
+                "ATTACK COUNT: 4",
+                "ATTACK DAMAGE: 70% / 80% / 90% / 100%",
+                "SCEPTER DURATION: 3",
+                "SCEPTER ATTACKS: 6",
+                "SCEPTER CAST RANGE: 1000"
+            ],
+            "lore": "The Stealth Assassin is not afraid to fight dirty, and specializes in attacking his opponents from behind.",
+            "aghanimDescription": "Increases duration, attacks, cast range and allows you to target an allied hero, hiding inside them for the duration.",
+            "notes": [
+                "Moving while phased out will cancel the ability."
+            ]
+        },
+        "stat": {
+            "abilityId": 5145,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4272,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 16,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "channelTime": [
+                2
+            ],
+            "cooldown": [
+                21,
+                18,
+                15,
+                12
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5969": {
+        "id": 5969,
+        "name": "special_bonus_hp_regen_6",
+        "uri": "riki",
+        "language": {
+            "abilityId": 5969,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+6 Health Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5969,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6193": {
+        "id": 6193,
+        "name": "special_bonus_unique_riki_2",
+        "uri": "riki",
+        "language": {
+            "abilityId": 6193,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-4s Smoke Screen Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6193,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6330": {
+        "id": 6330,
+        "name": "special_bonus_unique_riki_1",
+        "uri": "riki",
+        "language": {
+            "abilityId": 6330,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.5 Backstab Multiplier",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6330,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6865": {
+        "id": 6865,
+        "name": "special_bonus_unique_riki_3",
+        "uri": "riki",
+        "language": {
+            "abilityId": 6865,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+475 Blink Strike Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6865,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6866": {
+        "id": 6866,
+        "name": "special_bonus_unique_riki_4",
+        "uri": "riki",
+        "language": {
+            "abilityId": 6866,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+300 Tricks of the Trade AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6866,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6867": {
+        "id": 6867,
+        "name": "special_bonus_unique_riki_5",
+        "uri": "riki",
+        "language": {
+            "abilityId": 6867,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Cloak and Dagger Doesn't Reveal",
+            "description": [
+                "No actions take Riki out of invisibility, only revealed by sources of True Sight."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6867,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7045": {
+        "id": 7045,
+        "name": "special_bonus_20_crit_15",
+        "uri": "riki",
+        "language": {
+            "abilityId": 7045,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20% Critical Strike (150%)",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7045,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

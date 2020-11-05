@@ -1,0 +1,685 @@
+{
+    "477": {
+        "id": 477,
+        "name": "special_bonus_unique_wraith_king_9",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 477,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-1s Wraithfire Blast Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 477,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5086": {
+        "id": 5086,
+        "name": "skeleton_king_hellfire_blast",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 5086,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Wraithfire Blast",
+            "description": [
+                "Wraith King sears an enemy unit with spectral fire, dealing damage and stunning, then dealing damage over time and slowing the target."
+            ],
+            "attributes": [
+                "STUN DURATION: 1.1 / 1.4 / 1.7 / 2.0",
+                "SLOW DURATION: 2.0",
+                "MOVEMENT SLOW: -20%",
+                "DAMAGE PER SECOND: 10 / 30 / 50 / 70"
+            ],
+            "lore": "Ostarion calls on his damned lineage, laying waste to his opponents.",
+            "notes": [
+                "If Wraith King has summoned skeletons, casting Wraithfire Blast on a target will order all of the skeletons to attack that target."
+            ]
+        },
+        "stat": {
+            "abilityId": 5086,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.5,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                525
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.35,
+                0.35,
+                0.35,
+                0.35
+            ],
+            "cooldown": [
+                14,
+                12,
+                10,
+                8
+            ],
+            "damage": [
+                70,
+                80,
+                90,
+                100
+            ],
+            "manaCost": [
+                95,
+                110,
+                125,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5087": {
+        "id": 5087,
+        "name": "skeleton_king_vampiric_aura",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 5087,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Vampiric Aura",
+            "description": [
+                "Nearby friendly heroes restore health based on the damage they deal when attacking enemy units. Has 50% effect on ranged allied heroes. Does not affect allied creeps."
+            ],
+            "attributes": [
+                "Vampiric Aura%DOTA_Tooltip_ability_skeleton_king_vampiric_aura%",
+                "Nearby friendly heroes restore health based on the damage they deal when attacking enemy units. Has 50% effect on ranged allied heroes. Does not affect allied creeps.%Description%",
+                "Wraith King's blade drains his enemy's essence to feed his aura.%Lore%",
+                "Vampiric Aura lifesteal has 50% effect on ranged Heroes.%abilitydraft_note%",
+                "Stacks additively with other sources of Lifesteal.%Note0%",
+                "LIFESTEAL: 8% / 16% / 24% / 32%"
+            ],
+            "lore": "Wraith King's blade drains his enemy's essence to feed his aura.",
+            "notes": [
+                "Stacks additively with other sources of Lifesteal."
+            ]
+        },
+        "stat": {
+            "abilityId": 5087,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 1048578,
+            "unitTargetType": 0,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5088": {
+        "id": 5088,
+        "name": "skeleton_king_mortal_strike",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 5088,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Mortal Strike",
+            "description": [
+                "Wraith King passively gains a chance to deal bonus damage on an attack. Every two kills on an enemy unit adds a skeleton charge. Skeletons respawn once when killed. "
+            ],
+            "attributes": [
+                "CRITICAL CHANCE: 9% / 11% / 13% / 15%",
+                "CRITICAL DAMAGE: 300%",
+                "MAX CHARGES: 2 / 4 / 6 / 8",
+                "SKELETON DURATION: 60"
+            ],
+            "lore": "One blow to crush a foe.",
+            "notes": [
+                "Summoned skeletons will automatically attack any unit targeted by Wraithfire Blast."
+            ]
+        },
+        "stat": {
+            "abilityId": 5088,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                50
+            ],
+            "manaCost": [
+                50,
+                60,
+                70,
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5089": {
+        "id": 5089,
+        "name": "skeleton_king_reincarnation",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 5089,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Reincarnation",
+            "description": [
+                "Wraith King's form regroups after death, allowing him to resurrect when killed in battle. Upon death, enemy units in a 900 radius will be slowed."
+            ],
+            "attributes": [
+                "REINCARNATION TIME: 3.0 / 3.0 / 3.0",
+                "MOVEMENT SLOW: -75%",
+                "ATTACK SPEED SLOW: -75",
+                "SLOW DURATION: 5.0",
+                "SCEPTER ALLY DEATH DELAY: 7",
+                "SCEPTER DEATH DELAY RADIUS: 1200"
+            ],
+            "lore": "Conspirators against the Wraith King wonder why he never stays dead.",
+            "aghanimDescription": "If a nearby allied hero is slain, they will be transformed into a wraith and have their death delayed for %scepter_duration% seconds.",
+            "notes": [
+                "Wraith King won't revive if he doesn't have enough mana.",
+                "If Wraith King has an Aegis and Reincarnation off cooldown, Reincarnation will trigger first.",
+                "Revives with full HP and Mana.",
+                "Credit for allies whose death was delayed will go to whoever struck the original killing blow.",
+                "Wraith Delay affects Wraith King's actual deaths, not Reincarnate deaths."
+            ]
+        },
+        "stat": {
+            "abilityId": 5089,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.20000000298023224,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                200,
+                120,
+                40
+            ],
+            "manaCost": [
+                160
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6088": {
+        "id": 6088,
+        "name": "special_bonus_unique_wraith_king_2",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 6088,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20% Vampiric Aura Lifesteal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6088,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6201": {
+        "id": 6201,
+        "name": "special_bonus_unique_wraith_king_1",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 6201,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "No Reincarnation Manacost",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6201,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6414": {
+        "id": 6414,
+        "name": "special_bonus_unique_wraith_king_3",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 6414,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40 Wraithfire Blast DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6414,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6566": {
+        "id": 6566,
+        "name": "special_bonus_unique_wraith_king_4",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 6566,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Reincarnation Casts Wraithfire Blast",
+            "description": [
+                "Instead of being slowed, all enemy units within 900 range have the current level of Wraithfire Blast cast on them when Reincarnation triggers."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6566,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6821": {
+        "id": 6821,
+        "name": "special_bonus_unique_wraith_king_5",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 6821,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+6 Skeletons Spawned",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6821,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6822": {
+        "id": 6822,
+        "name": "special_bonus_unique_wraith_king_6",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 6822,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+24 Skeletons Attack Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6822,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7107": {
+        "id": 7107,
+        "name": "special_bonus_unique_wraith_king_7",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 7107,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.2s Wraithfire Blast Slow Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7107,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7108": {
+        "id": 7108,
+        "name": "special_bonus_unique_wraith_king_8",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 7108,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+80% Skeletons Spawned",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7108,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

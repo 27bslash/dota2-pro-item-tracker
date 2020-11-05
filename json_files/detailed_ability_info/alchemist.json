@@ -1,0 +1,681 @@
+{
+    "351": {
+        "id": 351,
+        "name": "special_bonus_unique_alchemist_6",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 351,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50 Chemical Rage Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 351,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5365": {
+        "id": 5365,
+        "name": "alchemist_acid_spray",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 5365,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Acid Spray",
+            "description": [
+                "Sprays high-pressure acid across a target area. Enemy units who step across the contaminated terrain take damage per second and have their armor reduced."
+            ],
+            "attributes": [
+                "RADIUS: 475 / 525 / 575 / 625",
+                "DURATION: 16",
+                "DAMAGE PER SECOND: 15 / 20 / 25 / 30",
+                "ARMOR REDUCTION: 4 / 5 / 6 / 7"
+            ],
+            "lore": "Using traditional Alchemy from the Darkbrew family, Razzil concocts an acid that dissolves even the toughest metals.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5365,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                22
+            ],
+            "manaCost": [
+                130,
+                140,
+                150,
+                160
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5366": {
+        "id": 5366,
+        "name": "alchemist_unstable_concoction",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 5366,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Unstable Concoction",
+            "description": [
+                "Alchemist brews up an unstable concoction that he can throw at an enemy hero, to stun and deal damage in an area around the explosion. The longer the concoction brews, the more damage it deals and the longer the stun. After 5.0 seconds, the brew reaches its maximum damage and stun time. However, after 5.5 seconds, the concoction will explode on Alchemist himself if not thrown."
+            ],
+            "attributes": [
+                "MAX STUN: 1.75 / 2.5 / 3.25 / 4.0",
+                "MAX DAMAGE: 150 / 220 / 290 / 360",
+                "EXPLOSION RADIUS: 250"
+            ],
+            "lore": "A silver lining to the failure of turning a mountain into gold, this volatile solution has destructive potential.",
+            "notes": [
+                "While brewing, this ability is replaced by Unstable Concoction Throw.  Alchemist can move and act normally while brewing.",
+                "A timer above Alchemist's head will indicate the remaining brew time. This timer is visible to enemies.",
+                "You can deny yourself with this skill.",
+                "Unstable Concoction cannot be disjointed.",
+                "Once thrown, Unstable Concoction stops brewing."
+            ]
+        },
+        "stat": {
+            "abilityId": 5366,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                775
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                22,
+                20,
+                18,
+                16
+            ],
+            "manaCost": [
+                120
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5367": {
+        "id": 5367,
+        "name": "alchemist_unstable_concoction_throw",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 5367,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Unstable Concoction Throw",
+            "description": [
+                "Throw it before it blows up!"
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5367,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 41,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 16,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 120,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                775
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5368": {
+        "id": 5368,
+        "name": "alchemist_goblins_greed",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 5368,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Greevil's Greed",
+            "description": [
+                "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 40 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold."
+            ],
+            "attributes": [
+                "RECENT KILL WINDOW: 40",
+                "BASE BONUS GOLD: 3",
+                "EXTRA BONUS GOLD: 3",
+                "MAX BONUS GOLD PER KILL: 18 / 22 / 26 / 30",
+                "BOUNTY RUNE MULTIPLIER: 1.5 / 2.0 / 2.5 / 3.0"
+            ],
+            "lore": "While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5368,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5369": {
+        "id": 5369,
+        "name": "alchemist_chemical_rage",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 5369,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Chemical Rage",
+            "description": [
+                "Alchemist causes his Ogre to enter a chemically induced rage, reducing base attack cooldown and increasing movement speed and health regeneration.",
+                "",
+                "DISPEL TYPE: Basic Dispel"
+            ],
+            "attributes": [
+                "DURATION: 25.0",
+                "BASE ATTACK TIME: 1.2 / 1.1 / 1.0",
+                "BONUS HEALTH REGEN: 50 / 75 / 100",
+                "BONUS MOVE SPEED: 40 / 50 / 60",
+                "SCEPTER BONUS DAMAGE: 30",
+                "SCEPTER SPELL AMP: 6%"
+            ],
+            "lore": "The brew Razzil gave to the Ogre during their prison bust has become a useful potion in the midst of combat.",
+            "aghanimDescription": "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. When you have a Scepter of your own, you will gain bonus damage and spell amplification for each gifted Scepter.",
+            "notes": [
+                "Has a 0.35 second transformation time, which can be used to dodge projectiles and stuns."
+            ]
+        },
+        "stat": {
+            "abilityId": 5369,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                55
+            ],
+            "manaCost": [
+                50,
+                100,
+                150
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6101": {
+        "id": 6101,
+        "name": "special_bonus_unique_alchemist",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 6101,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-6s Unstable Concoction Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6101,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6195": {
+        "id": 6195,
+        "name": "special_bonus_hp_350",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 6195,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+350 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6195,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6350": {
+        "id": 6350,
+        "name": "special_bonus_unique_alchemist_2",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 6350,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+400 Unstable Concoction Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6350,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6604": {
+        "id": 6604,
+        "name": "special_bonus_unique_alchemist_3",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 6604,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-0.15 Chemical Rage Base Attack Time",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6604,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7054": {
+        "id": 7054,
+        "name": "special_bonus_unique_alchemist_4",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 7054,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50 Chemical Rage Regeneration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7054,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7122": {
+        "id": 7122,
+        "name": "special_bonus_cleave_30",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 7122,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30% Cleave",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7122,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7200": {
+        "id": 7200,
+        "name": "special_bonus_cleave_40",
+        "uri": "alchemist",
+        "language": {
+            "abilityId": 7200,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40% Cleave",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7200,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

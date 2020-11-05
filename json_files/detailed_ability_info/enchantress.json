@@ -1,0 +1,541 @@
+{
+    "5267": {
+        "id": 5267,
+        "name": "enchantress_untouchable",
+        "uri": "enchantress",
+        "language": {
+            "abilityId": 5267,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Untouchable",
+            "description": [
+                "Enchantress beguiles her enemies, slowing their attacks when she is attacked."
+            ],
+            "attributes": [
+                "ATTACK SLOW: -100 / -140 / -180"
+            ],
+            "lore": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty.",
+            "aghanimDescription": "Grants new ability: Sproink. Enchantress leaps backward and dodges incoming projectiles. Also increases your attack range.",
+            "notes": [
+                "All units who directly attack Enchantress will get slowed.",
+                "The slow is applied on the attacking unit when the attack starts, not when damage is applied."
+            ]
+        },
+        "stat": {
+            "abilityId": 5267,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5268": {
+        "id": 5268,
+        "name": "enchantress_enchant",
+        "uri": "enchantress",
+        "language": {
+            "abilityId": 5268,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Enchant",
+            "description": [
+                "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control, increasing it's attack damage and max health.",
+                "",
+                "DISPEL TYPE: Basic Dispel"
+            ],
+            "attributes": [
+                "HERO MOVE SLOW: -55%",
+                "CREEP ENCHANT DURATION: 30 / 60 / 90 / 120",
+                "CREEP MAX HEALTH BONUS: 200 / 400 / 800 / 1200",
+                "CREEP ATTACK DAMAGE BONUS: 10 / 30 / 50 / 70"
+            ],
+            "lore": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
+            "notes": [
+                "Illusions can be converted."
+            ]
+        },
+        "stat": {
+            "abilityId": 5268,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                20
+            ],
+            "manaCost": [
+                40,
+                50,
+                60,
+                70
+            ],
+            "isUltimate": false,
+            "duration": "3.75 4.5 5.25 6",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5269": {
+        "id": 5269,
+        "name": "enchantress_natures_attendants",
+        "uri": "enchantress",
+        "language": {
+            "abilityId": 5269,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Nature's Attendants",
+            "description": [
+                "A cloud of wisps heals Enchantress and any friendly units nearby. Lasts 11 seconds."
+            ],
+            "attributes": [
+                "WISPS: 4 / 6 / 8 / 10",
+                "HEAL PER SECOND: 7 / 9 / 11 / 13",
+                "RADIUS: 275 / 275 / 275 / 275"
+            ],
+            "lore": "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers.",
+            "notes": [
+                "Units with full HP will not be selected for the heal.",
+                "Can heal units with spell immunity."
+            ]
+        },
+        "stat": {
+            "abilityId": 5269,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                35
+            ],
+            "manaCost": [
+                170,
+                160,
+                150,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "11",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5270": {
+        "id": 5270,
+        "name": "enchantress_impetus",
+        "uri": "enchantress",
+        "language": {
+            "abilityId": 5270,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Impetus",
+            "description": [
+                "Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is.  The farther the target, the greater the damage dealt."
+            ],
+            "attributes": [
+                "DISTANCE DAMAGE: 8% / 12% / 16% / 20%"
+            ],
+            "lore": "While Aiushtha favors peaceful means, she is capable of a magical onslaught from a distance, her spears gaining energy from the natural life around her.",
+            "notes": [
+                "The damage is capped at 1750 distance.",
+                "Distance to target is measured when the projectile hits."
+            ]
+        },
+        "stat": {
+            "abilityId": 5270,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 393224,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                575
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                6,
+                4,
+                2,
+                0
+            ],
+            "manaCost": [
+                65
+            ],
+            "isUltimate": false,
+            "duration": "1.5 1.5 1.5",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6050": {
+        "id": 6050,
+        "name": "special_bonus_intelligence_25",
+        "uri": "Enchantress",
+        "language": {
+            "abilityId": 6050,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+25 Intelligence",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6050,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6086": {
+        "id": 6086,
+        "name": "special_bonus_unique_enchantress_2",
+        "uri": "enchantress",
+        "language": {
+            "abilityId": 6086,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+6 Nature's Attendants Wisps",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6086,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6331": {
+        "id": 6331,
+        "name": "special_bonus_unique_enchantress_1",
+        "uri": "enchantress",
+        "language": {
+            "abilityId": 6331,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Enchant Affects Ancients",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6331,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6379": {
+        "id": 6379,
+        "name": "special_bonus_unique_enchantress_3",
+        "uri": "enchantress",
+        "language": {
+            "abilityId": 6379,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-65 Untouchable Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6379,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6515": {
+        "id": 6515,
+        "name": "special_bonus_unique_enchantress_4",
+        "uri": "enchantress",
+        "language": {
+            "abilityId": 6515,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+6.5% Impetus Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6515,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6648": {
+        "id": 6648,
+        "name": "special_bonus_unique_enchantress_5",
+        "uri": "enchantress",
+        "language": {
+            "abilityId": 6648,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Nature's Attendants Heal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6648,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

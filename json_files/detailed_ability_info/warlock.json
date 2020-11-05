@@ -1,0 +1,673 @@
+{
+    "344": {
+        "id": 344,
+        "name": "special_bonus_exp_boost_50",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 344,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50% XP Gain",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 344,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5162": {
+        "id": 5162,
+        "name": "warlock_fatal_bonds",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 5162,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Fatal Bonds",
+            "description": [
+                "Binds several enemy units together, causing a percentage of the damage dealt to one of them to be felt by the others."
+            ],
+            "attributes": [
+                "ENEMIES BOUND: 6",
+                "SHARED DAMAGE: 12% / 16% / 20% / 24%",
+                "DURATION: 25.0"
+            ],
+            "lore": "An ancient incantation that links the vital energies of multiple lifeforms into one collective body.",
+            "notes": [
+                "The shared damage type is the same as the type of damage inflicted."
+            ]
+        },
+        "stat": {
+            "abilityId": 5162,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16392,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                36,
+                30,
+                24,
+                18
+            ],
+            "damage": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "manaCost": [
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5163": {
+        "id": 5163,
+        "name": "warlock_shadow_word",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 5163,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shadow Word",
+            "description": [
+                "Warlock whispers an incantation, healing a friendly unit or damaging an enemy unit over time."
+            ],
+            "attributes": [
+                "DURATION: 12.0"
+            ],
+            "lore": "Demnok's arcane arts have a myriad of uses, allowing them to be powerful friendly enchantments or damaging curses.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5163,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 4,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                450,
+                600,
+                750,
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                14
+            ],
+            "damage": [
+                15,
+                25,
+                35,
+                45
+            ],
+            "manaCost": [
+                120,
+                130,
+                140,
+                150
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5164": {
+        "id": 5164,
+        "name": "warlock_upheaval",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 5164,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Upheaval",
+            "description": [
+                "CHANNELED - A powerful slowing current that grows stronger as it's channelled. Lasts up to 16.0 seconds. Enemies are slowed for 3.0 seconds after leaving the area or the spell ends."
+            ],
+            "attributes": [
+                "MAX SLOW CHANNEL DURATION: 12.5 / 6.5 / 4.5 / 3.5",
+                "MAX SLOW: 84%",
+                "RADIUS: 650 / 650 / 650 / 650"
+            ],
+            "lore": "Demnok manipulates space-time, impairing entire armies.",
+            "notes": [
+                "The slow increase is based on length of the channel, not the duration an enemy was standing in the area."
+            ]
+        },
+        "stat": {
+            "abilityId": 5164,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 176,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.5,
+                0.5,
+                0.5,
+                0.5
+            ],
+            "channelTime": [
+                16
+            ],
+            "cooldown": [
+                50,
+                46,
+                42,
+                38
+            ],
+            "damage": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "manaCost": [
+                70,
+                90,
+                110,
+                130
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5165": {
+        "id": 5165,
+        "name": "warlock_rain_of_chaos",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 5165,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Chaotic Offering",
+            "description": [
+                "Summons a Golem from the depths, stunning enemies for one second. The Golem lives 60 / 60 / 60 seconds, takes reduced damage from spells, has Permanent Immolation and Flaming Fists on attack."
+            ],
+            "attributes": [
+                "SUMMON BLAST RADIUS: 600",
+                "GOLEM HEALTH: 1000 / 2000 / 3000",
+                "GOLEM DAMAGE: 100 / 150 / 200",
+                "GOLEM ARMOR: 6 / 9 / 12",
+                "GOLEM HEALTH REGEN: 25 / 50 / 75",
+                "SCEPTER NUMBER OF GOLEMS: 2",
+                "SCEPTER GOLEM HEALTH: 750 / 1500 / 2250",
+                "SCEPTER GOLEM DAMAGE: 75 / 110 / 150",
+                "SCEPTER BOUNTY REDUCTION: 50%"
+            ],
+            "lore": "Demnok unleashes the captive spirit in his Dreadwood staff, causing destruction in enemy ranks.",
+            "aghanimDescription": "Calls %number_of_golems_scepter% Golems with reduced stats and bounty.",
+            "notes": [
+                "Spell Immune units will be stunned.",
+                "This ability destroys trees in its area of effect."
+            ]
+        },
+        "stat": {
+            "abilityId": 5165,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 0.5,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "cooldown": [
+                170
+            ],
+            "manaCost": [
+                250,
+                375,
+                500
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6053": {
+        "id": 6053,
+        "name": "special_bonus_unique_warlock_1",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 6053,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "80% Magic Resistance for Chaotic Offering Golems",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6053,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6054": {
+        "id": 6054,
+        "name": "special_bonus_unique_warlock_2",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 6054,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Chaotic Offering Golems Armor",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6054,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6412": {
+        "id": 6412,
+        "name": "special_bonus_unique_warlock_3",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 6412,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-5.5s Shadow Word Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6412,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6505": {
+        "id": 6505,
+        "name": "special_bonus_unique_warlock_4",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 6505,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Summons a Golem on death",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6505,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6982": {
+        "id": 6982,
+        "name": "special_bonus_unique_warlock_5",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 6982,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+3% Fatal Bonds Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6982,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6986": {
+        "id": 6986,
+        "name": "special_bonus_unique_warlock_6",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 6986,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "300 Shadow Word AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6986,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7125": {
+        "id": 7125,
+        "name": "special_bonus_exp_boost_60",
+        "uri": "warlock",
+        "language": {
+            "abilityId": 7125,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+60% XP Gain",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7125,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

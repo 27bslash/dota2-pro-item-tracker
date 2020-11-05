@@ -1,0 +1,562 @@
+{
+    "443": {
+        "id": 443,
+        "name": "special_bonus_cast_range_225",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 443,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+225 Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 443,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5110": {
+        "id": 5110,
+        "name": "zuus_arc_lightning",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 5110,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Arc Lightning",
+            "description": [
+                "Hurls a bolt of lightning that leaps through nearby enemy units."
+            ],
+            "attributes": [
+                "JUMPS: 5 / 7 / 9 / 15",
+                "DAMAGE: 75 / 100 / 125 / 150"
+            ],
+            "lore": "Arc Lightning is Zeus' favorite spell to use against puny mortals.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5110,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                850
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                1.6
+            ],
+            "manaCost": [
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5111": {
+        "id": 5111,
+        "name": "zuus_lightning_bolt",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 5111,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Lightning Bolt",
+            "description": [
+                "Calls down a bolt of lightning to strike an enemy unit, causing damage and a mini-stun. When cast, Lightning Bolt briefly provides unobstructed vision and True Sight around the target in a 750 radius. Can be cast on the ground, affecting the closest enemy hero in 325 range."
+            ],
+            "attributes": [
+                "SIGHT RADIUS: 750",
+                "SIGHT DURATION: 4.5"
+            ],
+            "lore": "A shocking punishment for rebellious heathen.",
+            "notes": [
+                "You can interrupt channeling spells and items with this ability."
+            ]
+        },
+        "stat": {
+            "abilityId": 5111,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 24,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.10000000149011612,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700,
+                750,
+                800,
+                850
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                6,
+                6,
+                6,
+                6
+            ],
+            "damage": [
+                125,
+                200,
+                275,
+                350
+            ],
+            "manaCost": [
+                125,
+                130,
+                135,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5112": {
+        "id": 5112,
+        "name": "zuus_static_field",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 5112,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Static Field",
+            "description": [
+                "Zeus shocks any enemy hit by his abilities, causing damage proportional to their current health."
+            ],
+            "attributes": [
+                "HEALTH REDUCTION: 6% / 8% / 10% / 12%"
+            ],
+            "lore": "The air crackles with static when the Thundergod walks the world.",
+            "notes": [
+                "The damage from Static Field is dealt before the damage from the used spell.",
+                "Using items doesn't trigger Static Field."
+            ]
+        },
+        "stat": {
+            "abilityId": 5112,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5113": {
+        "id": 5113,
+        "name": "zuus_thundergods_wrath",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 5113,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Thundergod's Wrath",
+            "description": [
+                "Strikes all enemy heroes with a bolt of lightning, no matter where they may be.  Thundergod's Wrath also provides True Sight around each hero struck.  If an enemy hero is invisible, it takes no damage, but the True Sight is still created at that hero's location."
+            ],
+            "attributes": [
+                "DAMAGE: 300 / 400 / 500",
+                "TRUE SIGHT RADIUS: 500",
+                "DURATION: 3.0 / 3.0 / 3.0 / 3.0"
+            ],
+            "lore": "The Lord of Heaven smites all who oppose him, near or far.",
+            "aghanimDescription": "Grants a new ability, Nimbus, creating a cloud that automatically casts Lightning Bolt on nearby enemies.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5113,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                120
+            ],
+            "manaCost": [
+                250,
+                350,
+                450
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6157": {
+        "id": 6157,
+        "name": "special_bonus_unique_zeus",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 6157,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.2% Static Field Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6157,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6325": {
+        "id": 6325,
+        "name": "zuus_cloud",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 6325,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Nimbus",
+            "description": [
+                "Creates a storm cloud anywhere on the map that automatically casts Lightning Bolt on nearby enemies."
+            ],
+            "attributes": [
+                "DURATION: 35",
+                "LIGHTNING BOLT BASE COOLDOWN: 2.25",
+                "HITS TO DESTROY: 8",
+                "CREEP HITS TO DESTROY: 16"
+            ],
+            "lore": "Where the thunder god's ire grows, storm clouds quickly gather.",
+            "notes": [
+                "Grants 100 gold if destroyed by an enemy hero.",
+                "Affects the closest enemy unit with strikes from Zeus's current level of Lightning Bolt.",
+                "Towers and creeps do half damage to the Nimbus."
+            ]
+        },
+        "stat": {
+            "abilityId": 6325,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.10000000149011612,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                45
+            ],
+            "manaCost": [
+                325
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6501": {
+        "id": 6501,
+        "name": "special_bonus_unique_zeus_2",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 6501,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+115 Arc Lightning Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6501,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6518": {
+        "id": 6518,
+        "name": "special_bonus_unique_zeus_3",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 6518,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.4s Lightning Bolt Ministun",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6518,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7117": {
+        "id": 7117,
+        "name": "special_bonus_cast_range_275",
+        "uri": "zuus",
+        "language": {
+            "abilityId": 7117,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+275 Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7117,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

@@ -1,0 +1,709 @@
+{
+    "418": {
+        "id": 418,
+        "name": "special_bonus_unique_winter_wyvern_5",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 418,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1% Cold Embrace Heal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 418,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5651": {
+        "id": 5651,
+        "name": "winter_wyvern_arctic_burn",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 5651,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Arctic Burn",
+            "description": [
+                "Winter Wyvern soars upon an arctic wind, granting her unobstructed movement and allowing her to exhale a blistering chill into each attack. While soaring, her attacks travel further and faster, and slow enemies with a magical freeze that strips them of 6 / 7 / 8 / 9% of their current health each second. Her sight is also hardened against night's chill, granting her 400 additional vision range at night while soaring."
+            ],
+            "attributes": [
+                "FLIGHT DURATION: 8.0",
+                "BONUS ATTACK RANGE: 350 / 425 / 500 / 575",
+                "HEALTH BURN: 6% / 7% / 8% / 9%",
+                "MOVEMENT SLOW: 22% / 28% / 34% / 40%",
+                "BURN DURATION: 5.0",
+                "ADDED NIGHT VISION RANGE: 400",
+                "SCEPTER MANA PER SECOND: 30"
+            ],
+            "lore": "The same organ where some dragons stoke their inner flame is, in Auroth, a crucible of unimaginable cold. From deep within her frosty gullet, an exhalation sends enemies into burning agony.",
+            "aghanimDescription": "Causes Arctic Burn to be a toggle ability, draining mana every second when active. Removes limit on number of attacks per target.",
+            "notes": [
+                "Enemy units can only receive the Arctic Burn debuff once per cast.",
+                "This ability does not affect Roshan.",
+                "Reduces Winter Wyvern's attack point to 0.1.",
+                "The damage and slow from Arctic Burn can be dispelled."
+            ]
+        },
+        "stat": {
+            "abilityId": 5651,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                50,
+                40,
+                30,
+                20
+            ],
+            "manaCost": [
+                90
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5652": {
+        "id": 5652,
+        "name": "winter_wyvern_splinter_blast",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 5652,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Splinter Blast",
+            "description": [
+                "Launches a ball of brittle ice toward an enemy. The ice shatters on impact, leaving the primary target completely unaffected, while hurling damaging splinters into nearby enemies in a 500 radius. Enemies struck by these splinters are slowed by 30%."
+            ],
+            "attributes": [
+                "SHATTER RADIUS: 500",
+                "MOVEMENT SLOW: 30%",
+                "SLOW DURATION: 4.0"
+            ],
+            "lore": "Produced slowly by specialized vesicles in her frozen gullet, Winter Wyvern blast shards of ice at her enemies.",
+            "notes": [
+                "The primary projectile moves at 650 movement speed, or reaches the target in 1.0 second, whichever is faster.",
+                "The primary projectile cannot be disjointed."
+            ]
+        },
+        "stat": {
+            "abilityId": 5652,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 40,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                7
+            ],
+            "damage": [
+                100,
+                180,
+                260,
+                340
+            ],
+            "manaCost": [
+                105,
+                120,
+                135,
+                150
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5653": {
+        "id": 5653,
+        "name": "winter_wyvern_cold_embrace",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 5653,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Cold Embrace",
+            "description": [
+                "Encases an ally in an icy cocoon, freezing them solid while healing a base amount as well as a percentage of their maximum health each second. The cocoon blocks all physical damage."
+            ],
+            "attributes": [
+                "DURATION: 4.0",
+                "BASE HEAL PER SECOND: 20 / 26 / 32 / 38",
+                "MAX HEAL PER SECOND: 2% / 3% / 4% / 5%"
+            ],
+            "lore": "From winter's heart comes a cold, healing embrace. The ice slows the blood and allows the spell to better work its curative magic.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5653,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 5,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                24,
+                21,
+                18,
+                15
+            ],
+            "manaCost": [
+                50,
+                60,
+                70,
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5654": {
+        "id": 5654,
+        "name": "winter_wyvern_winters_curse",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 5654,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Winter's Curse",
+            "description": [
+                "Winter Wyvern freezes an enemy in place while striking those nearby with a maddening curse which causes them to attack their frozen ally with increased attack speed. The frozen ally and those cursed to attack their ally are immune to all damage from their enemies with the exception of Winter Wyvern or her controlled units."
+            ],
+            "attributes": [
+                "CURSE RADIUS: 500",
+                "CURSE DAMAGE REDUCTION: 100%",
+                "CURSE ATTACK SPEED: 55",
+                "CURSE DURATION: 4.0 / 4.75 / 5.5"
+            ],
+            "lore": "The oldest of the bookwurm\u00e2\u20ac\u2122s spells, this curse lends truth to the old saw: sometimes the enemy of my enemy is my enemy still.",
+            "notes": [
+                "If the target dies to its allies, Winter Wyvern will receive credit for the kill.",
+                "Will only pierce the spell immunity of the primary target, not the target's surrounding allies."
+            ]
+        },
+        "stat": {
+            "abilityId": 5654,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 40,
+            "unitTargetType": 5,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                90
+            ],
+            "manaCost": [
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5927": {
+        "id": 5927,
+        "name": "special_bonus_strength_5",
+        "uri": "Winter_Wyvern",
+        "language": {
+            "abilityId": 5927,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5927,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6038": {
+        "id": 6038,
+        "name": "special_bonus_respawn_reduction_35",
+        "uri": "Winter_Wyvern",
+        "language": {
+            "abilityId": 6038,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-35s Respawn Time",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6038,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6106": {
+        "id": 6106,
+        "name": "special_bonus_unique_winter_wyvern_1",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 6106,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+12% Arctic Burn Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6106,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6297": {
+        "id": 6297,
+        "name": "special_bonus_unique_winter_wyvern_2",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 6297,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-4s Cold Embrace Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6297,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6311": {
+        "id": 6311,
+        "name": "special_bonus_hp_275",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 6311,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+275 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6311,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6523": {
+        "id": 6523,
+        "name": "special_bonus_unique_winter_wyvern_3",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 6523,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.2s Winter's Curse Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6523,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6920": {
+        "id": 6920,
+        "name": "special_bonus_night_vision_400",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 6920,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+400 Night Vision",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6920,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6994": {
+        "id": 6994,
+        "name": "special_bonus_unique_winter_wyvern_4",
+        "uri": "winter_wyvern",
+        "language": {
+            "abilityId": 6994,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Splinter Blast 1.5s Stun",
+            "description": [
+                "The slow is still applied for the same duration."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6994,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

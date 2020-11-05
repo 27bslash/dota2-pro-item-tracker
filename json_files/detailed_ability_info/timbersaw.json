@@ -1,0 +1,788 @@
+{
+    "5524": {
+        "id": 5524,
+        "name": "shredder_whirling_death",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 5524,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Whirling Death",
+            "description": [
+                "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area.  If an enemy hero is affected, it loses some of its primary attribute for a short duration.  Whirling Death will deal bonus damage per tree destroyed."
+            ],
+            "attributes": [
+                "DAMAGE: 90 / 120 / 150 / 180",
+                "TREE BONUS DAMAGE: 12 / 18 / 24 / 30",
+                "RADIUS: 300",
+                "STAT LOSS PERCENT: 13% / 14% / 15% / 16%",
+                "STAT LOSS DURATION: 14.0"
+            ],
+            "lore": "In the case that Rizzrack gets surrounded by the the vines and plants of his nightmares, he has an immediate chainsaw defense.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5524,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 18436,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                300
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                6
+            ],
+            "manaCost": [
+                70
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5525": {
+        "id": 5525,
+        "name": "shredder_timber_chain",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 5525,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Timber Chain",
+            "description": [
+                "Timbersaw fires a chain that embeds itself in the first tree it hits, pulling him towards it.  Any enemy in the path takes damage."
+            ],
+            "attributes": [
+                "DAMAGE: 100 / 140 / 180 / 220",
+                "LATCH RANGE: 850 / 1050 / 1250 / 1450",
+                "RADIUS: 225 / 225 / 225 / 225",
+                "SPEED: 1600 / 2000 / 2400 / 2800"
+            ],
+            "lore": "You never know when you might need to escape from malevolent saplings.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5525,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 20496,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                850,
+                1050,
+                1250,
+                1450
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                4
+            ],
+            "manaCost": [
+                60,
+                70,
+                80,
+                90
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5526": {
+        "id": 5526,
+        "name": "shredder_reactive_armor",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 5526,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Reactive Armor",
+            "description": [
+                "Each time Timbersaw is attacked, he gains increased health regen and armor."
+            ],
+            "attributes": [
+                "BONUS ARMOR: 0.9 / 1 / 1.1 / 1.2",
+                "BONUS HP REGEN: 1 / 1.1 / 1.2 / 1.3",
+                "MAX STACKS: 6 / 12 / 18 / 24",
+                "STACK DURATION: 10 / 13 / 16 / 19"
+            ],
+            "lore": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5526,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5527": {
+        "id": 5527,
+        "name": "shredder_chakram",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 5527,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Chakram",
+            "description": [
+                "Fires your main saw blade at the target location where it will spin in place, dealing damage in an area around it. Enemies caught in the saw blade will move more slowly for every 5% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted. While active the ability costs mana, and you lose the ability to attack."
+            ],
+            "attributes": [
+                "RADIUS: 200",
+                "PASS DAMAGE: 100 / 140 / 180",
+                "DAMAGE PER SECOND: 50 / 75 / 100",
+                "SLOW: 5%",
+                "MANA COST PER SECOND: 16 / 23 / 30",
+                "RADIUS:%2_radius%",
+                "PASS DAMAGE:%2_pass_damage%",
+                "DAMAGE PER SECOND:%2_damage_per_second%",
+                "%SLOW:%2_slow%",
+                "MANA COST PER SECOND:%2_mana_per_second%"
+            ],
+            "lore": "The ultimate in anti-flora weaponry.",
+            "aghanimDescription": "Grants a second Chakram.",
+            "notes": [
+                "The Chakram will return if Timbersaw runs out of mana or moves over 2000.0 distance away."
+            ]
+        },
+        "stat": {
+            "abilityId": 5527,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 16432,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200,
+                1200,
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                8,
+                8,
+                8
+            ],
+            "manaCost": [
+                80,
+                140,
+                200
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5528": {
+        "id": 5528,
+        "name": "shredder_return_chakram",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 5528,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Return Chakram",
+            "description": [
+                "Returns the Chakram to Timbersaw."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5528,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 575557,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                0,
+                0,
+                0
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5645": {
+        "id": 5645,
+        "name": "shredder_chakram_2",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 5645,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Second Chakram",
+            "description": [
+                "Fires a secondary saw blade at the target location where it will spin in place, dealing damage in an area around it.  Additionally, for each 5% of health missing, enemies caught in the saw blade move more slowly. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and you lose the ability to attack."
+            ],
+            "attributes": [
+                "RADIUS: 200",
+                "PASS DAMAGE: 100 / 140 / 180",
+                "DAMAGE PER SECOND: 50 / 75 / 100",
+                "SLOW: 5%",
+                "MANA COST PER SECOND: 16 / 23 / 30"
+            ],
+            "lore": "Cut cut cut cut cut cut cut cut cut cut cut!",
+            "notes": [
+                "The Chakram will return if Timbersaw runs out of mana or moves over 2000.0 distance away.",
+                "Slow effects from two chakrams do not stack."
+            ]
+        },
+        "stat": {
+            "abilityId": 5645,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 3,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200,
+                1200,
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                8,
+                8,
+                8
+            ],
+            "manaCost": [
+                80,
+                140,
+                200
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5646": {
+        "id": 5646,
+        "name": "shredder_return_chakram_2",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 5646,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Return Chakram",
+            "description": [
+                "Returns the Chakram to Timbersaw."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5646,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 575557,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 3,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5913": {
+        "id": 5913,
+        "name": "special_bonus_hp_regen_14",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 5913,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+14 Health Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5913,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6034": {
+        "id": 6034,
+        "name": "special_bonus_hp_175",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 6034,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+175 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6034,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6190": {
+        "id": 6190,
+        "name": "special_bonus_cooldown_reduction_12",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 6190,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "12% Cooldown Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6190,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6223": {
+        "id": 6223,
+        "name": "special_bonus_unique_timbersaw",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 6223,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+10% Whirling Death Attribute Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6223,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6926": {
+        "id": 6926,
+        "name": "special_bonus_mp_regen_175",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 6926,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.75 Mana Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6926,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6948": {
+        "id": 6948,
+        "name": "special_bonus_unique_timbersaw_2",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 6948,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8 Reactive Armor Stacks",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6948,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6949": {
+        "id": 6949,
+        "name": "special_bonus_unique_timbersaw_3",
+        "uri": "shredder",
+        "language": {
+            "abilityId": 6949,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1125 Timber Chain Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6949,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

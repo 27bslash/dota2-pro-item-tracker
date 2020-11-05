@@ -1,0 +1,701 @@
+{
+    "5518": {
+        "id": 5518,
+        "name": "magnataur_shockwave",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 5518,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shockwave",
+            "description": [
+                "Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him and slowing them for 0.9 seconds."
+            ],
+            "attributes": [
+                "DAMAGE: 75 / 150 / 225 / 300",
+                "MOVEMENT SLOW: 75%"
+            ],
+            "lore": "Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5518,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 24,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                13,
+                12,
+                11,
+                10
+            ],
+            "manaCost": [
+                90,
+                100,
+                110,
+                120
+            ],
+            "isUltimate": false,
+            "duration": "0.6875 0.6875 0.6875 0.6875",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5519": {
+        "id": 5519,
+        "name": "magnataur_empower",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 5519,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Empower",
+            "description": [
+                "Gives an allied unit bonus damage and cleave on attack. Magnus receives 2 times the bonus."
+            ],
+            "attributes": [
+                "DURATION: 38 / 42 / 46 / 50",
+                "BONUS DAMAGE: 11% / 18% / 25% / 32%",
+                "CLEAVE DAMAGE: 10% / 20% / 30% / 40%"
+            ],
+            "lore": "With a deep bellow, Magnus displays his true power.",
+            "notes": [
+                "The bonus damage is based only on base damage and damage from primary attributes.",
+                "Cleave damage goes through spell immunity.",
+                "Ranged units cannot Cleave."
+            ]
+        },
+        "stat": {
+            "abilityId": 5519,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 32776,
+            "unitTargetType": 3,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 0.30000001192092896,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                8
+            ],
+            "manaCost": [
+                45,
+                60,
+                75,
+                90
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5520": {
+        "id": 5520,
+        "name": "magnataur_skewer",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 5520,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Skewer",
+            "description": [
+                "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed."
+            ],
+            "attributes": [
+                "DISTANCE: 900 / 1000 / 1100 / 1200",
+                "SPEED: 950",
+                "SLOW DURATION: 3.25",
+                "SLOW: 10% / 20% / 30% / 40%",
+                "DAMAGE: 70 / 140 / 210 / 280",
+                "ATTACK SPEED SLOW: 10 / 20 / 30 / 40",
+                "SCEPTER COOLDOWN: 6",
+                "SCEPTER MANACOST: 40"
+            ],
+            "lore": "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants.",
+            "aghanimDescription": "Lowers cooldown, cast point and manacost.",
+            "notes": [
+                "Doesn't affect Spell Immune units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5520,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4112,
+            "unitTargetType": 1,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                22,
+                20,
+                18,
+                16
+            ],
+            "manaCost": [
+                80,
+                80,
+                80,
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5521": {
+        "id": 5521,
+        "name": "magnataur_reverse_polarity",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 5521,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Reverse Polarity",
+            "description": [
+                "Magnus changes properties of matter, sucking all nearby enemies in front of him and stunning them with a powerful slam and dealing damage."
+            ],
+            "attributes": [
+                "PULL RADIUS: 410",
+                "DAMAGE: 50 / 125 / 200",
+                "STUN DURATION: 2.75 / 3.25 / 3.75"
+            ],
+            "lore": "Magnus fights with the fury of the erupting Mt. Joerlak.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5521,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 0.5,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                410,
+                410,
+                410
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                130
+            ],
+            "manaCost": [
+                200,
+                250,
+                300
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5934": {
+        "id": 5934,
+        "name": "special_bonus_armor_8",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 5934,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8 Armor",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5934,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "5960": {
+        "id": 5960,
+        "name": "special_bonus_attack_damage_20",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 5960,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5960,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6004": {
+        "id": 6004,
+        "name": "special_bonus_armor_10",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 6004,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+10 Armor",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6004,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6137": {
+        "id": 6137,
+        "name": "special_bonus_strength_10",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 6137,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+10 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6137,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6286": {
+        "id": 6286,
+        "name": "special_bonus_armor_12",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 6286,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+12 Armor",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6286,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6390": {
+        "id": 6390,
+        "name": "special_bonus_unique_magnus_2",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 6390,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+12% Empower Damage/Cleave",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6390,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6507": {
+        "id": 6507,
+        "name": "special_bonus_unique_magnus_3",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 6507,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+425 Skewer Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6507,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6690": {
+        "id": 6690,
+        "name": "special_bonus_unique_magnus_4",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 6690,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+140 Shockwave Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6690,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6691": {
+        "id": 6691,
+        "name": "special_bonus_unique_magnus_5",
+        "uri": "magnataur",
+        "language": {
+            "abilityId": 6691,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.8s Reverse Polarity Stun Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6691,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

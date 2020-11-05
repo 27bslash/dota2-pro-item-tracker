@@ -1,0 +1,738 @@
+{
+    "475": {
+        "id": 475,
+        "name": "special_bonus_unique_sand_king_4",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 475,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "40% Sand Storm Slow and Blind",
+            "description": [
+                "Enemy units in range of Sand Storm have their movement speed slowed by 40% and miss 40% of their attacks."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 475,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "497": {
+        "id": 497,
+        "name": "special_bonus_unique_sand_king_6",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 497,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8% Caustic Finale Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 497,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "498": {
+        "id": 498,
+        "name": "special_bonus_unique_sand_king_7",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 498,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-2s Burrowstrike Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 498,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5102": {
+        "id": 5102,
+        "name": "sandking_burrowstrike",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 5102,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Burrowstrike",
+            "description": [
+                "Sand King burrows into the ground and tunnels forward, damaging and stunning enemy units above him as he resurfaces."
+            ],
+            "attributes": [
+                "STUN DURATION: 1.6 / 1.8 / 2.0 / 2.2",
+                "SCEPTER RANGE: 800 / 1000 / 1200 / 1400"
+            ],
+            "lore": "Crixalis often lies in wait, burrowing under the surface to ambush his adversaries.",
+            "aghanimDescription": "Adds Caustic Finale poison to heroes hit by your Burrowstrike and increases its cast range. Does not apply Caustic Finale to illusions.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5102,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4120,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                400,
+                500,
+                600,
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                14,
+                13,
+                12,
+                11
+            ],
+            "damage": [
+                100,
+                160,
+                220,
+                280
+            ],
+            "manaCost": [
+                110,
+                120,
+                130,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5103": {
+        "id": 5103,
+        "name": "sandking_sand_storm",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 5103,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Sand Storm",
+            "description": [
+                "Sand King creates a fearsome sandstorm that damages enemy units while hiding him from vision.  The effect ends when Sand King leaves the area."
+            ],
+            "attributes": [
+                "DURATION: 20 / 25 / 30 / 35",
+                "RADIUS: 425 / 500 / 575 / 650",
+                "SAND STORM DAMAGE: 20 / 45 / 70 / 95"
+            ],
+            "lore": "Some say Crixalis is a mirage; his carapace appearing then vanishing between the whirling sands of the Scintillant Waste.",
+            "notes": [
+                "Sand Storm can be used to dodge projectiles.",
+                "Sand King briefly becomes visible upon attacking or using spells while in Sand Storm. Sand King will become invisible again in 0.7 seconds."
+            ]
+        },
+        "stat": {
+            "abilityId": 5103,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 32772,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                40,
+                34,
+                28,
+                22
+            ],
+            "manaCost": [
+                75
+            ],
+            "isUltimate": false,
+            "duration": "20 25 30 35",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5104": {
+        "id": 5104,
+        "name": "sandking_caustic_finale",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 5104,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Caustic Finale",
+            "description": [
+                "Sand King's attacks inject a venom that causes enemy units to move more slowly and to violently explode when it dies."
+            ],
+            "attributes": [
+                "EXPLODE RADIUS: 500",
+                "BASE DAMAGE: 70 / 90 / 110 / 130",
+                "MAX HEALTH DAMAGE: 10% / 14% / 18% / 22%",
+                "MOVE SLOW: -10% / -15% / -20% / -25%",
+                "DEBUFF DURATION:%caustic_finale_slow_duration%"
+            ],
+            "lore": "An injection from Crixalis makes one brittle and as dry as the arid wastes, subject to implosive demise.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5104,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5105": {
+        "id": 5105,
+        "name": "sandking_epicenter",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 5105,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Epicenter",
+            "description": [
+                "CHANNELED - After channeling for 2.0 seconds, Sand King sends a disturbance into the earth, causing it to shudder violently. All enemies caught within range will take damage and become slowed. Each subsequent pulse increases the radius of damage dealt."
+            ],
+            "attributes": [
+                "PULSES: 6 / 8 / 10",
+                "DAMAGE PER PULSE: 110 / 120 / 130",
+                "MOVEMENT SLOW: -30% / -30% / -30%",
+                "ATTACK SLOW: -30"
+            ],
+            "lore": "Many an explorer was lost to the quicksands of the Scintillant Waste.",
+            "notes": [
+                "The pulses are centered on Sand King, not where he first casted the spell.",
+                "The pulses have gradually inreasing radius: 275 / 325 / 375 / 425 / 475 / 525 / 575 / 650 / 675 / 700."
+            ]
+        },
+        "stat": {
+            "abilityId": 5105,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 16516,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.20000000298023224,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "channelTime": [
+                2
+            ],
+            "cooldown": [
+                120,
+                110,
+                100
+            ],
+            "manaCost": [
+                150,
+                225,
+                300
+            ],
+            "isUltimate": true,
+            "duration": "3.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6022": {
+        "id": 6022,
+        "name": "special_bonus_hp_regen_40",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 6022,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40 Health Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6022,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6207": {
+        "id": 6207,
+        "name": "special_bonus_unique_sand_king",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 6207,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+4 Epicenter Pulses",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6207,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6302": {
+        "id": 6302,
+        "name": "special_bonus_hp_regen_50",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 6302,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50 Health Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6302,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6409": {
+        "id": 6409,
+        "name": "special_bonus_unique_sand_king_2",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 6409,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Sand Storm DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6409,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6530": {
+        "id": 6530,
+        "name": "special_bonus_unique_sand_king_3",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 6530,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-30 Epicenter Attack Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6530,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6872": {
+        "id": 6872,
+        "name": "special_bonus_unique_sand_king_5",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 6872,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Epicenter Damage Per Pulse",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6872,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "8351": {
+        "id": 8351,
+        "name": "special_bonus_hp_regen_35",
+        "uri": "sand_king",
+        "language": {
+            "abilityId": 8351,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+35 Health Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 8351,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

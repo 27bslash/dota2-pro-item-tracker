@@ -1,0 +1,580 @@
+{
+    "5182": {
+        "id": 5182,
+        "name": "faceless_void_time_walk",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 5182,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Time Walk",
+            "description": [
+                "Rushes to a target location while backtracking any damage taken the last 2.0 seconds."
+            ],
+            "attributes": [
+                "RANGE: 675",
+                "BACKTRACK DURATION: 2.0",
+                "SCEPTER TIMELOCK RADIUS: 350"
+            ],
+            "lore": "Darkterror tears a hole in time, passing through Claszureme, and appearing back in an instant.",
+            "aghanimDescription": "Applies a Time Lock proc to all units at the landing destination.",
+            "notes": [
+                "Faceless Void is invulnerable while using Time Walk."
+            ]
+        },
+        "stat": {
+            "abilityId": 5182,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 5136,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 0.25,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                24,
+                18,
+                12,
+                6
+            ],
+            "manaCost": [
+                40
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5184": {
+        "id": 5184,
+        "name": "faceless_void_time_lock",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 5184,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Time Lock",
+            "description": [
+                "Adds the chance for an attack to lock an enemy unit in time while attacking it a second time."
+            ],
+            "attributes": [
+                "CHANCE: 12% / 16% / 20% / 24%",
+                "DURATION: 0.65",
+                "BONUS DAMAGE: 25 / 30 / 35 / 40"
+            ],
+            "lore": "The strike of the Faceless Void lands with dimension shifting force.",
+            "notes": [
+                "Does not stack with Skull Basher."
+            ]
+        },
+        "stat": {
+            "abilityId": 5184,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 25,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5185": {
+        "id": 5185,
+        "name": "faceless_void_chronosphere",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 5185,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Chronosphere",
+            "description": [
+                "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it.  Only Faceless Void and any units he controls are unaffected.  Invisible enemies in the sphere will be revealed."
+            ],
+            "attributes": [
+                "RADIUS: 450",
+                "DURATION: 4.0 / 4.5 / 5.0"
+            ],
+            "lore": "When a rift opens to Claszureme, all poor souls caught within will likely never return.",
+            "notes": [
+                "Pauses all units and buildings, friendly or enemy, except those owned by Faceless Void.",
+                "Faceless Void is never affected by Chronospheres with any owner."
+            ]
+        },
+        "stat": {
+            "abilityId": 5185,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 50,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.35,
+                0.35,
+                0.35
+            ],
+            "cooldown": [
+                160
+            ],
+            "manaCost": [
+                150,
+                225,
+                300
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5691": {
+        "id": 5691,
+        "name": "faceless_void_time_dilation",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 5691,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Time Dilation",
+            "description": [
+                "Faceless Void traps all nearby enemies in a time dilation field for 8 / 10 / 12 / 14 seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended."
+            ],
+            "attributes": [
+                "RADIUS: 775",
+                "DURATION: 8 / 10 / 12 / 14",
+                "SLOW PER COOLDOWN: 10%",
+                "COOLDOWN PROGRESSION SLOW: 75%"
+            ],
+            "lore": "For those facing off against Darkterror, each moment seems to stretch into eternity.",
+            "notes": [
+                "Does not affect item cooldowns."
+            ]
+        },
+        "stat": {
+            "abilityId": 5691,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                40,
+                34,
+                28,
+                22
+            ],
+            "manaCost": [
+                75
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6128": {
+        "id": 6128,
+        "name": "special_bonus_unique_faceless_void",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 6128,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+275 Timewalk Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6128,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6210": {
+        "id": 6210,
+        "name": "special_bonus_attack_speed_40",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 6210,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6210,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6224": {
+        "id": 6224,
+        "name": "special_bonus_attack_speed_45",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 6224,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+45 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6224,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6651": {
+        "id": 6651,
+        "name": "special_bonus_unique_faceless_void_2",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 6651,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+140 Chronosphere AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6651,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6807": {
+        "id": 6807,
+        "name": "special_bonus_unique_faceless_void_3",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 6807,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+55 Time Lock Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6807,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7001": {
+        "id": 7001,
+        "name": "special_bonus_unique_faceless_void_4",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 7001,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20% Backtrack",
+            "description": [
+                "Grants a 20% chance to avoid damage entirely."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7001,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7388": {
+        "id": 7388,
+        "name": "special_bonus_unique_faceless_void_5",
+        "uri": "faceless_void",
+        "language": {
+            "abilityId": 7388,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-1.75s Time Walk",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7388,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

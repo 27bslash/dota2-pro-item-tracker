@@ -1,0 +1,593 @@
+{
+    "502": {
+        "id": 502,
+        "name": "special_bonus_unique_clockwerk_5",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 502,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1 Power Cogs Hit To Kill",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 502,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5237": {
+        "id": 5237,
+        "name": "rattletrap_battery_assault",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 5237,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Battery Assault",
+            "description": [
+                "Discharges high-powered shrapnel at random nearby enemy units, dealing minor magical damage and ministun."
+            ],
+            "attributes": [
+                "RADIUS: 275 / 275 / 275 / 275",
+                "DURATION: 10.5 / 10.5 / 10.5 / 10.5",
+                "INTERVAL: 0.7 / 0.7 / 0.7 / 0.7",
+                "DAMAGE: 20 / 45 / 70 / 95"
+            ],
+            "lore": "Some of Rattletrap's contraptions don't quite work correctly, so detonating them proves useful as an offensive maneuver.",
+            "notes": [
+                "Deals damage every 0.7 / 0.7 / 0.7 / 0.7 seconds.",
+                "Remains active if Clockwerk is disabled."
+            ]
+        },
+        "stat": {
+            "abilityId": 5237,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 18436,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.20000000298023224,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                24,
+                22,
+                20,
+                18
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5238": {
+        "id": 5238,
+        "name": "rattletrap_power_cogs",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 5238,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Power Cogs",
+            "description": [
+                "Forms a barrier of energized cogs around Clockwerk, trapping any units that are near.  Enemies outside the trap that touch a cog are knocked back, losing health and mana. Once a cog has delivered a shock, it will power down.  Cogs can be destroyed by enemy attacks, but Clockwerk can destroy them with just one."
+            ],
+            "attributes": [
+                "DURATION: 5.0 / 6.0 / 7.0 / 8.0",
+                "ATTACKS REQUIRED: 2",
+                "DAMAGE: 50 / 125 / 200 / 275",
+                "MANA BURN: 50 / 80 / 110 / 140"
+            ],
+            "lore": "One of Clockwerk's inventions of which he is most proud is the power cog - though it is sometimes despised by his allies.",
+            "notes": [
+                "Cogs can shock invisible units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5238,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                15
+            ],
+            "manaCost": [
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5239": {
+        "id": 5239,
+        "name": "rattletrap_rocket_flare",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 5239,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Rocket Flare",
+            "description": [
+                "Fires a global range flare that explodes over a given area, damaging enemies and providing vision for 8.0 seconds."
+            ],
+            "attributes": [
+                "RADIUS: 600",
+                "DAMAGE: 80 / 120 / 160 / 200"
+            ],
+            "lore": "What started as a festive display has become a useful scouting and bombardment tool.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5239,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16432,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                20,
+                18,
+                16,
+                14
+            ],
+            "manaCost": [
+                35,
+                40,
+                45,
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5240": {
+        "id": 5240,
+        "name": "rattletrap_hookshot",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 5240,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Hookshot",
+            "description": [
+                "Fires a grappling device rapidly at the target location.  If the hook hits a unit, Clockwerk launches himself into the target, stunning and dealing damage.  Any enemies Clockwerk collides with along the way are damaged and stunned."
+            ],
+            "attributes": [
+                "STUN DURATION: 1.5 / 1.75 / 2.0",
+                "DAMAGE: 75 / 175 / 275"
+            ],
+            "lore": "A somewhat unwieldy device, the Hookshot sends the otherwise clunky Clockwerk armor flying through the air.",
+            "aghanimDescription": "Grants new ability: Overclocking. Resets Clockwerk's ability cooldowns and grants him bonus movement and attack speed for a duration. Clockwerk becomes stunned after the duration runs out.",
+            "notes": [
+                "Hookshot will latch and take Clockwerk to allies, but not damage or disable them."
+            ]
+        },
+        "stat": {
+            "abilityId": 5240,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 16400,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                2000,
+                2500,
+                3000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                60,
+                45,
+                30
+            ],
+            "manaCost": [
+                150,
+                150,
+                150
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5977": {
+        "id": 5977,
+        "name": "special_bonus_unique_clockwerk",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 5977,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-0.25s Battery Assault Interval",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5977,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6364": {
+        "id": 6364,
+        "name": "special_bonus_unique_clockwerk_2",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 6364,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Rocket Flare Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6364,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6512": {
+        "id": 6512,
+        "name": "special_bonus_unique_clockwerk_3",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 6512,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+24 Battery Assault Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6512,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6641": {
+        "id": 6641,
+        "name": "special_bonus_magic_resistance_50",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 6641,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50% Magic Resistance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6641,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6663": {
+        "id": 6663,
+        "name": "special_bonus_magic_resistance_40",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 6663,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40% Magic Resistance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6663,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7028": {
+        "id": 7028,
+        "name": "special_bonus_unique_clockwerk_4",
+        "uri": "rattletrap",
+        "language": {
+            "abilityId": 7028,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Rocket Flare True Sight",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7028,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

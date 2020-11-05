@@ -9,7 +9,11 @@ let cells = document.querySelectorAll(".hero-cell"),
 
 document.querySelector(".suggestions").style.display = "none";
 async function get_json(search) {
-  const url = `${window.location.origin}/files/${search}`;
+  let url = `${window.location.origin}/files/${search}`;
+  if (search == "abilities") {
+    url = `${window.location.origin}/files/${search}/${window.location.href.split("/").pop()}`;
+    console.log(url)
+  }
   const res = await fetch(url);
   const data = await res.json();
   return data;
@@ -285,7 +289,8 @@ document.querySelectorAll(".sort-button").forEach((x) => {
     cells.forEach((i) => {
       base = i.children[0].href.split("?")[0];
       i.children[0].href = base;
-      if (event.target.id) i.children[0].href = `${base}?role=${event.target.id}`;
+      if (event.target.id)
+        i.children[0].href = `${base}?role=${event.target.id}`;
     });
   });
 });

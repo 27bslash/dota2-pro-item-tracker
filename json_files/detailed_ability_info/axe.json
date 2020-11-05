@@ -1,0 +1,509 @@
+{
+    "562": {
+        "id": 562,
+        "name": "special_bonus_unique_axe_5",
+        "uri": "axe",
+        "language": {
+            "abilityId": 562,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+150 Culling Blade Threshold",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 562,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5007": {
+        "id": 5007,
+        "name": "axe_berserkers_call",
+        "uri": "axe",
+        "language": {
+            "abilityId": 5007,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Berserker's Call",
+            "description": [
+                "Axe taunts nearby enemy units, forcing them to attack him, while he gains bonus armor during the duration."
+            ],
+            "attributes": [
+                "RADIUS: 300",
+                "BONUS ARMOR: 30",
+                "DURATION: 2.0 / 2.4 / 2.8 / 3.2"
+            ],
+            "lore": "Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5007,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8196,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                16,
+                14,
+                12,
+                10
+            ],
+            "damage": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "manaCost": [
+                80,
+                90,
+                100,
+                110
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5008": {
+        "id": 5008,
+        "name": "axe_battle_hunger",
+        "uri": "axe",
+        "language": {
+            "abilityId": 5008,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Battle Hunger",
+            "description": [
+                "Enrages an enemy unit, causing it to be slowed and take damage over time until it kills another unit or the duration ends. Axe gains movement speed for each unit affected with Battle Hunger, half speed from creeps."
+            ],
+            "attributes": [
+                "DURATION: 12.0",
+                "MOVEMENT SLOW: -12%",
+                "SPEED BONUS: 12%",
+                "DAMAGE PER SECOND: 16 / 24 / 32 / 40",
+                "SCEPTER DAMAGE REDUCTION: 30%",
+                "SCEPTER AOE: 400"
+            ],
+            "lore": "Ordinary heroes cannot withstand Mogul Khan's rage for battle, such that it injures them until it is satisfied.",
+            "aghanimDescription": "Causes Battle Hunger to be an area of effect ability, and reduces the damage output of affected enemy units.",
+            "notes": [
+                "Destroying buildings will also remove the debuff."
+            ]
+        },
+        "stat": {
+            "abilityId": 5008,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.10000000149011612,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                750
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                20,
+                15,
+                10,
+                5
+            ],
+            "manaCost": [
+                50,
+                60,
+                70,
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5009": {
+        "id": 5009,
+        "name": "axe_counter_helix",
+        "uri": "axe",
+        "language": {
+            "abilityId": 5009,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Counter Helix",
+            "description": [
+                "When attacked, Axe has a chance to perform a helix counter attack, dealing pure damage to all nearby enemies."
+            ],
+            "attributes": [
+                "DAMAGE: 60 / 100 / 140 / 180",
+                "RADIUS: 275",
+                "CHANCE TO HELIX: 17% / 18% / 19% / 20%"
+            ],
+            "lore": "Axe is the only reinforcement this army needs.",
+            "notes": [
+                "Counter Helix triggers when the attack hits."
+            ]
+        },
+        "stat": {
+            "abilityId": 5009,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                0.3
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5010": {
+        "id": 5010,
+        "name": "axe_culling_blade",
+        "uri": "axe",
+        "language": {
+            "abilityId": 5010,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Culling Blade",
+            "description": [
+                "Axe spots a weakness and strikes, instantly killing an enemy unit with low health, or dealing moderate damage otherwise. When an enemy hero is killed with Culling Blade, its cooldown is reset, and Axe and nearby allied units gain bonus movement speed."
+            ],
+            "attributes": [
+                "KILL THRESHOLD: 250 / 350 / 450",
+                "DAMAGE: 150 / 250 / 300",
+                "KILL MOVE SPEED BONUS: 30%",
+                "KILL ATTACK SPEED BONUS: 30",
+                "KILL SPEED RADIUS: 900",
+                "KILL SPEED DURATION: 6"
+            ],
+            "lore": "Mogul Khan is the embodiment of battle and fury, launching into a gruesome fatality against those who dare engage the Axe in combat.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5010,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                150
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                75,
+                65,
+                55
+            ],
+            "manaCost": [
+                60,
+                120,
+                180
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6102": {
+        "id": 6102,
+        "name": "special_bonus_unique_axe",
+        "uri": "axe",
+        "language": {
+            "abilityId": 6102,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Battle Hunger DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6102,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6196": {
+        "id": 6196,
+        "name": "special_bonus_attack_speed_35",
+        "uri": "axe",
+        "language": {
+            "abilityId": 6196,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+35 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6196,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6608": {
+        "id": 6608,
+        "name": "special_bonus_unique_axe_2",
+        "uri": "axe",
+        "language": {
+            "abilityId": 6608,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Berserker's Call AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6608,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6815": {
+        "id": 6815,
+        "name": "special_bonus_unique_axe_3",
+        "uri": "axe",
+        "language": {
+            "abilityId": 6815,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Attacking Procs Counter Helix",
+            "description": [
+                "Your own attacks against enemy units also have a chance to trigger Counter Helix."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6815,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

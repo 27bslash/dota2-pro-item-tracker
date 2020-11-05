@@ -1,0 +1,770 @@
+{
+    "324": {
+        "id": 324,
+        "name": "special_bonus_unique_earth_spirit_4",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 324,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+325 Rolling Boulder Distance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 324,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "456": {
+        "id": 456,
+        "name": "special_bonus_spell_amplify_16",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 456,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+16% Spell Amplification",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 456,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5608": {
+        "id": 5608,
+        "name": "earth_spirit_boulder_smash",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 5608,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Boulder Smash",
+            "description": [
+                "Earth Spirit smashes the target enemy or ally, sending them in the direction he is facing. If Earth Spirit targets an area, he will smash the nearest Stone Remnant in a 200 radius. The travelling unit or Remnant damages all enemy units it hits. If an enemy is hit by a Stone Remnant, they are also slowed. Stone Remnants travel further than other units."
+            ],
+            "attributes": [
+                "REMNANT SMASH RADIUS: 200",
+                "DAMAGE: 105 / 170 / 235 / 300",
+                "SLOW DURATION: 1.25 / 2.5 / 3.25 / 4",
+                "SLOW AMOUNT: 60%",
+                "TRAVEL SPEED: 900",
+                "DISTANCE: 500.0 / 600.0 / 700.0 / 800.0",
+                "DISTANCE (REMNANT): 2000.0"
+            ],
+            "lore": "It is with the power of a mountain that Earth Spirit strikes his enemies.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5608,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16408,
+            "unitTargetType": 5,
+            "unitTargetTeam": 4,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                150
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.01
+            ],
+            "cooldown": [
+                22,
+                18,
+                14,
+                10
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5609": {
+        "id": 5609,
+        "name": "earth_spirit_rolling_boulder",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 5609,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Rolling Boulder",
+            "description": [
+                "Earth Spirit gathers himself into a boulder and, after a 0.6s delay, rolls toward the target location, damaging and stunning enemy units. He will stop if he collides with an enemy hero or is stunned. If he rolls over a Stone Remnant, he will travel further and faster, and stun enemies for longer."
+            ],
+            "attributes": [
+                "SPEED: 800",
+                "SPEED (REMNANT): 1600",
+                "DAMAGE: 70 / 80 / 90 / 100",
+                "DISTANCE: 800.0",
+                "DISTANCE (REMNANT):%rock_distance%",
+                "STUN DURATION: 0.4 / 0.6 / 0.8 / 1.0",
+                "ROCK BONUS STUN DURATION: 0.4 / 0.6 / 0.8 / 1.0"
+            ],
+            "lore": "Calling upon his connection to the land, the Earth Spirit draws loose stone to him, which forms a protective ball that he can use to roll short distances.",
+            "notes": [
+                "Rolling over a Stone Remnant will destroy the Remnant.",
+                "The boulder has a radius of 150."
+            ]
+        },
+        "stat": {
+            "abilityId": 5609,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 20496,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                3000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.01
+            ],
+            "cooldown": [
+                16,
+                12,
+                8,
+                4
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5610": {
+        "id": 5610,
+        "name": "earth_spirit_geomagnetic_grip",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 5610,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Geomagnetic Grip",
+            "description": [
+                "Earth Spirit pulls the target Stone Remnant. Enemies struck by the gripped target will be silenced and take damage."
+            ],
+            "attributes": [
+                "SILENCE DURATION: 2 / 2.5 / 3 / 3.5",
+                "REMNANT DAMAGE: 50 / 100 / 150 / 200",
+                "REMNANT PULL SPEED: 1000",
+                "HERO PULL SPEED: 600"
+            ],
+            "lore": "Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit.",
+            "notes": [
+                "Will not work on a unit inside Chronosphere, Duel, or Black Hole.",
+                "Geomagnetic Grip can also target allied creeps."
+            ]
+        },
+        "stat": {
+            "abilityId": 5610,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16408,
+            "unitTargetType": 5,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 32,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1100
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.01
+            ],
+            "cooldown": [
+                13
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5611": {
+        "id": 5611,
+        "name": "earth_spirit_stone_caller",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 5611,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Stone Remnant",
+            "description": [
+                "Call a Stone Remnant to the target location.  Stone Remnants have no vision and are invulnerable, and can be used with Earth Spirit's abilities.  Calling a Stone Remnant consumes a charge, which recharge over time."
+            ],
+            "attributes": [
+                "DURATION: 120.0"
+            ],
+            "lore": "Earth Spirit calls forth a remnant of his stone army, long buried with him in the dark embrace of the Earth.",
+            "aghanimDescription": "Grants a new ability: Enchant Remnant.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5611,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1100
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "7",
+            "chargeRestoreTime": "25"
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5612": {
+        "id": 5612,
+        "name": "earth_spirit_magnetize",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 5612,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Magnetize",
+            "description": [
+                "Magnetizes units in a small nearby area, causing them to take damage for a short duration. Magnetized heroes cause nearby Stone Remnants to explode, destroying the remnant and refreshing Magnetize's duration on all nearby enemies. This process can repeat multiple times. If an enemy hero is affected by Geomagnetic Grip or Boulder Smash, all magnetized heroes share the effects."
+            ],
+            "attributes": [
+                "RADIUS: 350",
+                "DAMAGE PER SECOND: 40 / 80 / 120",
+                "MAGNETIZE DURATION: 6.0",
+                "REMNANT REFRESH RADIUS: 400",
+                "REMNANT EXPLOSION RADIUS: 600"
+            ],
+            "lore": "At the Earth Spirit's call, the minerals in the blood and bones of his enemies rebel against the bodies they find themselves in.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5612,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 16388,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                350
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.01
+            ],
+            "cooldown": [
+                100,
+                90,
+                80
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5648": {
+        "id": 5648,
+        "name": "earth_spirit_petrify",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 5648,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Enchant Remnant",
+            "description": [
+                "Earth Spirit temporarily enchants a hero, granting them the properties of a Stone Remnant. After a short duration the remnant shatters, releasing the hero and damaging nearby enemies."
+            ],
+            "attributes": [
+                "REMNANT DURATION: 3",
+                "SHATTER DAMAGE: 300",
+                "SHATTER RADIUS: 300"
+            ],
+            "lore": "Kaolin uses the elemental power of the Earth to temporarily petrify living beings, so that they might be conscripted into his stone funerary army.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5648,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 8,
+            "unitTargetTeam": 8,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                125
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                45
+            ],
+            "manaCost": [
+                150
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6142": {
+        "id": 6142,
+        "name": "special_bonus_attack_damage_65",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 6142,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+65 Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6142,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6203": {
+        "id": 6203,
+        "name": "special_bonus_unique_earth_spirit",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 6203,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+120 Rolling Boulder Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6203,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6375": {
+        "id": 6375,
+        "name": "special_bonus_respawn_reduction_45",
+        "uri": "Earth_Spirit",
+        "language": {
+            "abilityId": 6375,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-45s Respawn Time",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6375,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6514": {
+        "id": 6514,
+        "name": "special_bonus_unique_earth_spirit_2",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 6514,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Geomagnetic Grip Targets Allies",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6514,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6640": {
+        "id": 6640,
+        "name": "special_bonus_unique_earth_spirit_3",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 6640,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.6s Rolling Boulder Stun Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6640,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7657": {
+        "id": 7657,
+        "name": "special_bonus_unique_earth_spirit_5",
+        "uri": "earth_spirit",
+        "language": {
+            "abilityId": 7657,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+3 Geomagnetic Grip Silence",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7657,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    }
+}

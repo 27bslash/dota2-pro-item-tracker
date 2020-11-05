@@ -1,0 +1,787 @@
+{
+    "5391": {
+        "id": 5391,
+        "name": "obsidian_destroyer_arcane_orb",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 5391,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Arcane Orb",
+            "description": [
+                "Adds extra pure damage to Outworld Devourer's attacks, based on his remaining mana pool."
+            ],
+            "attributes": [
+                "MANA POOL TO DAMAGE: 6% / 8% / 10% / 12%"
+            ],
+            "lore": "Harbinger's outworldly knowledge allows it to tap into the ebb and flow of all spiritual energy, infusing it into his being.",
+            "notes": [
+                "The damage is calculated after the mana cost is spent."
+            ]
+        },
+        "stat": {
+            "abilityId": 5391,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 393224,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                450
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                80,
+                120,
+                160,
+                200
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5392": {
+        "id": 5392,
+        "name": "obsidian_destroyer_astral_imprisonment",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 5392,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Astral Imprisonment",
+            "description": [
+                "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals damage to the target and nearby enemies with 400 range. Gains a Sanity's Eclipse charge."
+            ],
+            "attributes": [
+                "DAMAGE: 100 / 175 / 250 / 325",
+                "RADIUS: 400",
+                "DURATION: 4.0",
+                "SCEPTER MAX CHARGES: 2",
+                "SCEPTER CAST RANGE BONUS: 300",
+                "SCEPTER CHARGE RESTORE TIME: 12"
+            ],
+            "lore": "Locked away in the pocket between this world and the Outworld, victims realize their infantile knowledge and mortality.",
+            "aghanimDescription": "Grants charges to Astral Imprisonment. Damage areas stack.",
+            "notes": [
+                "Imprisoned units can still be hit by Sanity's Eclipse."
+            ]
+        },
+        "stat": {
+            "abilityId": 5392,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 32808,
+            "unitTargetType": 3,
+            "unitTargetTeam": 3,
+            "unitTargetFlags": 2,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.5,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                300,
+                350,
+                400,
+                450
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+            ],
+            "cooldown": [
+                24,
+                20,
+                16,
+                12
+            ],
+            "manaCost": [
+                140,
+                160,
+                180,
+                200
+            ],
+            "isUltimate": false,
+            "duration": "4.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5393": {
+        "id": 5393,
+        "name": "obsidian_destroyer_essence_aura",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 5393,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Essence Aura",
+            "description": [
+                "Whenever nearby allied Heroes or Outworld Devourer itself casts a spell, it gains a chance to restore a percentage of its mana pool.  Outworld Devourer also passively gains a bonus to its base mana pool.  Several skills with no cooldown and toggled spells cannot trigger Essence Aura."
+            ],
+            "attributes": [
+                "RADIUS: 1200",
+                "BASE MANA: 150 / 250 / 350 / 450",
+                "RESTORED MANA: 10% / 15% / 20% / 25%",
+                "RESTORE CHANCE: 40%"
+            ],
+            "lore": "The crystals of the Outworld produce arcane power, and the Harbinger channels it into the world of mortals.",
+            "notes": [
+                "Other than Arcane Orb, most skills without cooldowns cannot trigger Essence Aura."
+            ]
+        },
+        "stat": {
+            "abilityId": 5393,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 1048578,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5394": {
+        "id": 5394,
+        "name": "obsidian_destroyer_sanity_eclipse",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 5394,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Sanity's Eclipse",
+            "description": [
+                "Unleashes a psychic blast that deals to enemies based on the difference between your mana and the target's mana. Sanity's Eclipse can hit units trapped by Astral Imprisonment.",
+                " <h1>Charge Counter</h1> Eclipse increases Outworld Devourer's max mana with each charge of it's buff. 1 charge is gained per arcane orb hit, and 3 per astral imprisonment, against heroes. Each charge replenishes the existing duration."
+            ],
+            "attributes": [
+                "BASE DAMAGE: 150 / 250 / 350",
+                "MANA DIFFERENCE MULTIPLIER: 0.4",
+                "RADIUS: 375 / 475 / 575",
+                "CAST RANGE: 700",
+                "SANITY ECLIPSE CHARGE DURATION: 35",
+                "MAX MANA PER CHARGE: 40 / 50 / 60"
+            ],
+            "lore": "When an Outworld crystal ruptures, cataclysmic energies are released, and the reverberations of this power are felt interdimensionally.",
+            "notes": [
+                "Does not damage creeps or neutral units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5394,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.25,
+                0.25,
+                0.25
+            ],
+            "cooldown": [
+                160
+            ],
+            "manaCost": [
+                200,
+                325,
+                450
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5684": {
+        "id": 5684,
+        "name": "obsidian_destroyer_equilibrium",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 5684,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Essence Flux",
+            "description": [
+                "Passively grants you a chance to restore a percentage of your max mana each time you cast an ability. When activated, causes all abilities to slow enemies when they deal damage."
+            ],
+            "attributes": [
+                "CHANCE: 25%",
+                "MAX MANA RESTORE: 20% / 30% / 40% / 50%",
+                "MOVEMENT SLOW: 20% / 30% / 40% / 50%",
+                "SLOW DURATION: 2",
+                "BUFF DURATION: 8"
+            ],
+            "lore": "The Outworld is awash in arcane energy, inclined to diffuse through any of Harbinger's rifts.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5684,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                25
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5958": {
+        "id": 5958,
+        "name": "special_bonus_movement_speed_10",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 5958,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+10 Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5958,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6006": {
+        "id": 6006,
+        "name": "special_bonus_mp_250",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 6006,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+250 Mana",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6006,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6080": {
+        "id": 6080,
+        "name": "special_bonus_strength_20",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 6080,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6080,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6119": {
+        "id": 6119,
+        "name": "special_bonus_attack_speed_15",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 6119,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+15 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6119,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6166": {
+        "id": 6166,
+        "name": "special_bonus_spell_lifesteal_20",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 6166,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "20% Spell Lifesteal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6166,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6241": {
+        "id": 6241,
+        "name": "special_bonus_unique_outworld_devourer",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 6241,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.6% Arcane Orb Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6241,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6254": {
+        "id": 6254,
+        "name": "special_bonus_mp_350",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 6254,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+350 Mana",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6254,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6711": {
+        "id": 6711,
+        "name": "special_bonus_unique_outworld_devourer_2",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 6711,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30% Mind Over Matter Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6711,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6712": {
+        "id": 6712,
+        "name": "special_bonus_unique_outworld_devourer_3",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 6712,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+150 Astral Imprisonment Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6712,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7375": {
+        "id": 7375,
+        "name": "special_bonus_unique_outworld_devourer_4",
+        "uri": "obsidian_destroyer",
+        "language": {
+            "abilityId": 7375,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.1 Sanity's Eclipse Mana Difference Multiplier",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7375,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

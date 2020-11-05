@@ -1,0 +1,652 @@
+{
+    "296": {
+        "id": 296,
+        "name": "tiny_craggy_exterior",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 296,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Craggy Exterior",
+            "description": [
+                "Causes damage to bounce back on Tiny's attackers. Melee enemies that attack Tiny have a chance of being stunned. The proc chance improves with each level in Grow."
+            ],
+            "attributes": [
+                "ARMOR: 2 / 4 / 6 / 8",
+                "CHANCE TO STUN: 25%",
+                "STUN DURATION: 0.5 / 1.0 / 1.5 / 2.0",
+                "DAMAGE: 60 / 80 / 100 / 120"
+            ],
+            "lore": "Melee warriors tend to find attacking the Stone Giant largely ineffective.",
+            "notes": [
+                "The damage and stun occur when an attack lands."
+            ]
+        },
+        "stat": {
+            "abilityId": 296,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 35,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "558": {
+        "id": 558,
+        "name": "special_bonus_unique_tiny_6",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 558,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+3 Tree Grab Attack Charges",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 558,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5106": {
+        "id": 5106,
+        "name": "tiny_avalanche",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 5106,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Avalanche",
+            "description": [
+                "Bombards an area with rocks, continously doing small intervals of damage and stun to enemy units. Avalanche does 3x damage to units being tossed."
+            ],
+            "attributes": [
+                "RADIUS: 325 / 350 / 375 / 400",
+                "AVALANCHE DURATION: 1.4",
+                "AVALANCHE DAMAGE: 75 / 150 / 225 / 300"
+            ],
+            "lore": "Inanimate rock becomes animate when called by the Stone Giant.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5106,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                26,
+                22,
+                18,
+                14
+            ],
+            "manaCost": [
+                120,
+                120,
+                120,
+                120
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5107": {
+        "id": 5107,
+        "name": "tiny_toss",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 5107,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Toss",
+            "description": [
+                "Grabs the nearest unit in a 275 radius around Tiny, ally or enemy, and launches it at the target unit or rune to deal damage where they land. If the tossed unit is an enemy, it will take an extra 30% damage."
+            ],
+            "attributes": [
+                "RADIUS: 275",
+                "DAMAGE: 90 / 160 / 230 / 300",
+                "SPLASH RADIUS:%tree_splash_radius%"
+            ],
+            "lore": "Tiny's gargantuan stature allows him to catapult even the sturdiest of warriors.",
+            "notes": [
+                "You can toss allies, but they don't take damage.",
+                "Toss deals 33% of its damage to buildings."
+            ]
+        },
+        "stat": {
+            "abilityId": 5107,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4194344,
+            "unitTargetType": 8,
+            "unitTargetTeam": 8,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 0.25,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                850,
+                1000,
+                1150,
+                1300
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                17,
+                15,
+                13,
+                11
+            ],
+            "manaCost": [
+                90,
+                100,
+                110,
+                120
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5108": {
+        "id": 5108,
+        "name": "tiny_tree_grab",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 5108,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Tree Grab",
+            "description": [
+                "Grabs a tree to whack enemies on the head for a limited number of attacks. Grants bonus attack range. Attacks deal more damage and fully splash on units along the way. The tree can be thrown, to deal your attack to a unit at a distance."
+            ],
+            "attributes": [
+                "ATTACK COUNT: 5",
+                "BONUS UNIT DAMAGE: 25%",
+                "BONUS BUILDING DAMAGE: 90% / 120% / 150% / 180%",
+                "SPLASH DAMAGE: 40% / 60% / 80% / 100%",
+                "ATTACK RANGE: 350",
+                "THROW SPLASH: 150%"
+            ],
+            "lore": "Sticks and stones break all the bones, with structures sure to follow.",
+            "aghanimDescription": "Grants new ability: Tree Volley. Tiny throws random trees within range towards the targeted aoe.",
+            "notes": [
+                "The cooldown begins when the tree is thrown."
+            ]
+        },
+        "stat": {
+            "abilityId": 5108,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 72,
+            "unitTargetTeam": 8,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 35,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                165
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                25,
+                20,
+                15,
+                10
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5109": {
+        "id": 5109,
+        "name": "tiny_grow",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 5109,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Grow",
+            "description": [
+                "Tiny gains craggy mass, increasing his attack damage, and armor, while slowing his attack speed."
+            ],
+            "attributes": [
+                "BONUS ARMOR: 10 / 16 / 22",
+                "BONUS DAMAGE: 25 / 50 / 75",
+                "ATTACK SPEED REDUCTION: 20 / 35 / 50"
+            ],
+            "lore": "Watching a hill become a mountain is awe-inspiring - especially if the mountain begins laying waste to adversaries.",
+            "aghanimDescription": "Grants you a new channeling ability, Tree Volley. Tiny throws a random tree within range towards the targeted aoe. Deals Tiny's attack damage plus a bonus to enemies in that area with each tree thrown.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5109,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6153": {
+        "id": 6153,
+        "name": "special_bonus_unique_tiny",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 6153,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+80 Avalanche Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6153,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6567": {
+        "id": 6567,
+        "name": "special_bonus_intelligence_14",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 6567,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+14 Intelligence",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6567,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6932": {
+        "id": 6932,
+        "name": "special_bonus_unique_tiny_2",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 6932,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "3 Toss Charges",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6932,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6933": {
+        "id": 6933,
+        "name": "special_bonus_unique_tiny_3",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 6933,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-7s Avalanche Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6933,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6934": {
+        "id": 6934,
+        "name": "special_bonus_unique_tiny_4",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 6934,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-7s Tree Grab CD",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6934,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7005": {
+        "id": 7005,
+        "name": "special_bonus_unique_tiny_5",
+        "uri": "tiny",
+        "language": {
+            "abilityId": 7005,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Toss Requires No Target",
+            "description": [
+                "Toss can target the ground as well as enemy units."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7005,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

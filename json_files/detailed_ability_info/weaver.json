@@ -1,0 +1,690 @@
+{
+    "436": {
+        "id": 436,
+        "name": "special_bonus_mana_break_15",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 436,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+15 Mana Break",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 436,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "437": {
+        "id": 437,
+        "name": "special_bonus_strength_11",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 437,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+11 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 437,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5289": {
+        "id": 5289,
+        "name": "weaver_the_swarm",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 5289,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "The Swarm",
+            "description": [
+                "Weaver launches a swarm of 12 / 12 / 12 / 12 young Weavers that latch on any enemy unit in their path, attacking and reducing armor until it is killed."
+            ],
+            "attributes": [
+                "ATTACK DAMAGE: 18 / 20 / 22 / 24",
+                "ATTACK FREQUENCY: 1.15 / 1.0 / 0.85 / 0.7",
+                "DURATION: 16",
+                "COUNT: 12 / 12 / 12 / 12",
+                "ARMOR REDUCTION PER ATTACK: 1 / 1 / 1 / 1",
+                "ATTACKS TO DESTROY: 8 / 8 / 8 / 8"
+            ],
+            "lore": "Skitskurr opens a gap in the space time fabric, allowing young Weavers to slip through and aid him in combat.",
+            "notes": [
+                "When a beetle latches on a target, it will remain there until it is killed or the duration expires.",
+                "Beetles are Spell Immune, but can be killed in 8 / 8 / 8 / 8 attacks from a hero. Other units deal half damage.",
+                "Beetles provide vision of the target unless the target is invisible."
+            ]
+        },
+        "stat": {
+            "abilityId": 5289,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16400,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.20000000298023224,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                3000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                44,
+                36,
+                28,
+                20
+            ],
+            "manaCost": [
+                110
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5290": {
+        "id": 5290,
+        "name": "weaver_shukuchi",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 5290,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shukuchi",
+            "description": [
+                "Weaver shifts out of visibility, gaining bonus movement speed and the ability to ignore the movement speed limit --doing harm to any enemies it passes through."
+            ],
+            "attributes": [
+                "DAMAGE: 100 / 125 / 150 / 175",
+                "MOVEMENT BONUS: 200 / 230 / 260 / 290",
+                "RADIUS: 175 / 175 / 175 / 175",
+                "FADE TIME: 0.25 / 0.25 / 0.25 / 0.25",
+                "DURATION: 4.0 / 4.0 / 4.0 / 4.0"
+            ],
+            "lore": "As the Weavers worked in the fabric of creation, small wormholes allowed them to slip through time to better work their craft.",
+            "notes": [
+                "Can only damage the same unit once per cast."
+            ]
+        },
+        "stat": {
+            "abilityId": 5290,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 526340,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                12,
+                10,
+                8,
+                6
+            ],
+            "manaCost": [
+                70
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5291": {
+        "id": 5291,
+        "name": "weaver_geminate_attack",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 5291,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Geminate Attack",
+            "description": [
+                "Allows Weaver to dispatch two attacks at once."
+            ],
+            "attributes": [
+                "GEMINATE ATTACK COUNT: 1",
+                "GEMINATE ATTACK DAMAGE: 10 / 25 / 40 / 55"
+            ],
+            "lore": "Skitskurr's relationship with time is somewhat variable, causing his actions to be witnessed - and felt - more than once.",
+            "notes": [
+                "Additional attacks leave Weaver 0.25 seconds after the previous one, and have no range limit."
+            ]
+        },
+        "stat": {
+            "abilityId": 5291,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                9,
+                7,
+                5,
+                3
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5292": {
+        "id": 5292,
+        "name": "weaver_time_lapse",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 5292,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Time Lapse",
+            "description": [
+                "Weaver warps backward to whatever position it was in five seconds earlier--regaining the HP and mana from that time. No effect on cooldown, gold or experience.",
+                "",
+                "DISPEL TYPE: Strong Dispel"
+            ],
+            "attributes": [
+                "SCEPTER COOLDOWN: 20",
+                "SCEPTER ALLY CAST RANGE: 600"
+            ],
+            "lore": "If Skitskurr does not deem the current reality of the world to fit his desires, he simply crawls back in time to right what was wronged.",
+            "aghanimDescription": "Reduces cooldown, and allows Weaver to cast Time Lapse on an ally.",
+            "notes": [
+                "Removes most negative buffs from Weaver.",
+                "Time Lapse disjoints projectiles."
+            ]
+        },
+        "stat": {
+            "abilityId": 5292,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 57348,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 16,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                70,
+                55,
+                40
+            ],
+            "manaCost": [
+                150,
+                75,
+                0
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6131": {
+        "id": 6131,
+        "name": "special_bonus_unique_weaver_2",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 6131,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+160 Shukuchi Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6131,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6200": {
+        "id": 6200,
+        "name": "special_bonus_unique_weaver_1",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 6200,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+60 Shukuchi Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6200,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6386": {
+        "id": 6386,
+        "name": "special_bonus_magic_resistance_35",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 6386,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+35% Magic Resistance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6386,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6987": {
+        "id": 6987,
+        "name": "special_bonus_mana_break_20",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 6987,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Mana Break",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6987,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6988": {
+        "id": 6988,
+        "name": "special_bonus_unique_weaver_3",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 6988,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.4 Swarm Armor Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6988,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6989": {
+        "id": 6989,
+        "name": "special_bonus_unique_weaver_4",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 6989,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+4 Swarm Attacks to Kill",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6989,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6990": {
+        "id": 6990,
+        "name": "special_bonus_unique_weaver_5",
+        "uri": "weaver",
+        "language": {
+            "abilityId": 6990,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1 Geminate Attack",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6990,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

@@ -1,0 +1,631 @@
+{
+    "5494": {
+        "id": 5494,
+        "name": "slark_dark_pact",
+        "uri": "slark",
+        "language": {
+            "abilityId": 5494,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Dark Pact",
+            "description": [
+                "After a short delay, Slark sacrifices some of his life blood, purging most negative debuffs and dealing damage to enemy units around him and to himself.  Slark only takes 50% of the damage.",
+                "",
+                "DISPEL TYPE: Strong Dispel"
+            ],
+            "attributes": [
+                "DELAY: 1.5",
+                "RADIUS: 325",
+                "DAMAGE: 75 / 150 / 225 / 300"
+            ],
+            "lore": "Slithereen are capable of quickly regrowing appendages, in case of critical injury, to save their own lives.",
+            "notes": [
+                "1.5% seconds after cast, a series of 10 pulses separated by 0.1 seconds deal the damage.",
+                "Each pulse also removes debuffs from Slark.",
+                "You can't kill yourself with this skill.",
+                "The pulses stop if Slark dies."
+            ]
+        },
+        "stat": {
+            "abilityId": 5494,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                325
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.001,
+                0.001,
+                0.001,
+                0.001
+            ],
+            "cooldown": [
+                9,
+                8,
+                7,
+                6
+            ],
+            "manaCost": [
+                60
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5495": {
+        "id": 5495,
+        "name": "slark_pounce",
+        "uri": "slark",
+        "language": {
+            "abilityId": 5495,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Pounce",
+            "description": [
+                "Slark leaps forward, grabbing the first hero he connects with.  That unit is leashed, and can only move a limited distance away from Slark's landing position."
+            ],
+            "attributes": [
+                "DISTANCE: 700",
+                "SCEPTER DISTANCE: 1100",
+                "LEASH DURATION: 2.5 / 2.75 / 3 / 3.25",
+                "LEASH RADIUS: 400"
+            ],
+            "lore": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless.",
+            "aghanimDescription": "Provides %max_charges% charges and increases pounce range.",
+            "notes": [
+                "On cast, Slark leaps forward at a speed of 933.33, stopping when he latches onto an enemy hero or has traveled 700 distance.",
+                "Spell Immune units cannot be leashed.",
+                "Trees will be destroyed around Slark's landing location."
+            ]
+        },
+        "stat": {
+            "abilityId": 5495,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4100,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                20,
+                16,
+                12,
+                8
+            ],
+            "manaCost": [
+                75,
+                75,
+                75,
+                75
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5496": {
+        "id": 5496,
+        "name": "slark_essence_shift",
+        "uri": "slark",
+        "language": {
+            "abilityId": 5496,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Essence Shift",
+            "description": [
+                "Slark steals the life essence of enemy heroes with his attacks, draining each of their attributes and converting them to bonus Agility. If Slark kills an affected enemy hero, he permanently steals 1 Agility."
+            ],
+            "attributes": [
+                "AGILITY GAINED: 3",
+                "ALL ATTRIBUTE LOSS: 1",
+                "DURATION: 15 / 30 / 60 / 100"
+            ],
+            "lore": "With each strike at his adversaries, Slark's knowledge of their weaknesses improves.",
+            "notes": [
+                "Attributes cannot be dropped below 1.",
+                "Essence Shifted stats are returned to normal on death. The stat return for Slark and for the affected hero are separate.",
+                "To permanently steal Agility, Slark doesn't need to land the killing blow, as long as the enemy hero is killed within 300 range of Slark while having the Essence Shift debuff."
+            ]
+        },
+        "stat": {
+            "abilityId": 5496,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5497": {
+        "id": 5497,
+        "name": "slark_shadow_dance",
+        "uri": "slark",
+        "language": {
+            "abilityId": 5497,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shadow Dance",
+            "description": [
+                "When used, Slark hides himself in a cloud of shadows, becoming immune to detection. Attacking, casting spells, and using items will not reveal Slark.  Passively, when not visible to the enemy team, Slark gains bonus movement speed and health regeneration."
+            ],
+            "attributes": [
+                "DURATION: 4 / 4.25 / 4.5",
+                "BONUS MOVEMENT SPEED: 20% / 35% / 50%",
+                "HEALTH GAINED PER SECOND: 5% / 6% / 7%"
+            ],
+            "lore": "The hidden Thirteenth is a slippery foe.",
+            "aghanimDescription": "Reduces cooldown and causes Shadow Dance active to be an area of effect ability, hiding nearby allied heroes underneath it. Allies do not gain bonus movement speed or health regeneration.",
+            "notes": [
+                "If Slark is damaged by a neutral unit, the passive movement and health regeneration bonuses are lost for 2.0 / 2.0 / 2.0 seconds.",
+                "The passive movement and health regeneration bonuses have a 0.5 / 0.5 / 0.5 second activation and deactivation delay."
+            ]
+        },
+        "stat": {
+            "abilityId": 5497,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                80,
+                70,
+                60
+            ],
+            "manaCost": [
+                120,
+                120,
+                120
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6139": {
+        "id": 6139,
+        "name": "special_bonus_all_stats_12",
+        "uri": "slark",
+        "language": {
+            "abilityId": 6139,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+12 All Stats",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6139,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6147": {
+        "id": 6147,
+        "name": "special_bonus_unique_slark",
+        "uri": "slark",
+        "language": {
+            "abilityId": 6147,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.8s Pounce Leash",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6147,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6250": {
+        "id": 6250,
+        "name": "special_bonus_strength_9",
+        "uri": "slark",
+        "language": {
+            "abilityId": 6250,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+9 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6250,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6289": {
+        "id": 6289,
+        "name": "special_bonus_lifesteal_15",
+        "uri": "slark",
+        "language": {
+            "abilityId": 6289,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "15% Lifesteal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6289,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6892": {
+        "id": 6892,
+        "name": "special_bonus_unique_slark_2",
+        "uri": "slark",
+        "language": {
+            "abilityId": 6892,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+120 Dark Pact Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6892,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6893": {
+        "id": 6893,
+        "name": "special_bonus_unique_slark_3",
+        "uri": "slark",
+        "language": {
+            "abilityId": 6893,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1s Shadow Dance Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6893,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6894": {
+        "id": 6894,
+        "name": "special_bonus_unique_slark_4",
+        "uri": "slark",
+        "language": {
+            "abilityId": 6894,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+65 Essence Shift Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6894,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7384": {
+        "id": 7384,
+        "name": "special_bonus_agility_6",
+        "uri": "slark",
+        "language": {
+            "abilityId": 7384,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+6 Agility",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7384,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

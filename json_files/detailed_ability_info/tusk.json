@@ -1,0 +1,951 @@
+{
+    "414": {
+        "id": 414,
+        "name": "special_bonus_unique_tusk_7",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 414,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.4s Walrus Punch Stun Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 414,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5565": {
+        "id": 5565,
+        "name": "tusk_ice_shards",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 5565,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Ice Shards",
+            "description": [
+                "Tusk compresses shards of ice into a ball of frozen energy that damages all enemies it comes in contact with. When the ball reaches its target destination the shards are released, creating a barrier that lasts for 4 / 5 / 6 / 7 seconds."
+            ],
+            "attributes": [
+                "RADIUS: 200",
+                "SHARD DAMAGE: 70 / 140 / 210 / 280",
+                "SHARD DURATION: 4 / 5 / 6 / 7"
+            ],
+            "lore": "In the frozen tundra near the Barrier, after the last sun of autumn has set, ice can form with alarming speed.",
+            "notes": [
+                "Creates an impassable barrier."
+            ]
+        },
+        "stat": {
+            "abilityId": 5565,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 17424,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                2000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "cooldown": [
+                23,
+                20,
+                17,
+                14
+            ],
+            "manaCost": [
+                100,
+                105,
+                110,
+                115
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5566": {
+        "id": 5566,
+        "name": "tusk_snowball",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 5566,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Snowball",
+            "description": [
+                "Tusk begins rolling into a snowball. Allies within a 350 radius can also be added to the snowball by right-clicking on them, even while the snowball is moving. Once launched, any enemies caught in the snowball's path will be stunned and take damage. Each allied Hero in the snowball will add to its damage."
+            ],
+            "attributes": [
+                "BASE DAMAGE: 80 / 120 / 160 / 200",
+                "BONUS DAMAGE PER ALLY: 20 / 40 / 60 / 80",
+                "SNOWBALL SPEED: 600 / 625 / 650 / 675",
+                "STUN DURATION: 0.5 / 0.75 / 1.0 / 1.25",
+                "GATHER RADIUS: 100",
+                "LAUNCH TIME: 3.0"
+            ],
+            "lore": "Tales are still told of the wild feat that ended the grand brawl at White Fields.",
+            "notes": [
+                "The snowball will break apart a maximum of 3 seconds after launch.",
+                "The snowball can be launched early by pressing using the Launch Snowball ability.",
+                "Doesn't carry illusions, but will carry Meepo clones and other units that Tusk controls.",
+                "Each Meepo clone added to the snowball will add its own bonus damage and speed.",
+                "Allies can click on a snowball to add themselves to it."
+            ]
+        },
+        "stat": {
+            "abilityId": 5566,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4104,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1250
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "cooldown": [
+                21,
+                20,
+                19,
+                18
+            ],
+            "manaCost": [
+                75,
+                75,
+                75,
+                75
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5567": {
+        "id": 5567,
+        "name": "tusk_frozen_sigil",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 5567,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Frozen Sigil",
+            "description": [
+                "Tusk summons a Frozen Sigil by calling upon the deepest cold of winter. The Sigil creates a snowstorm which slows all enemy units within 600 range."
+            ],
+            "attributes": [
+                "AURA RADIUS: 600",
+                "DURATION: 30.0",
+                "MOVEMENT SLOW: 10% / 15% / 20% / 25%",
+                "ATTACK SLOW: 30 / 40 / 50 / 60"
+            ],
+            "lore": "The chill of home!",
+            "notes": [
+                "If no order is given, the Sigil will follow Tusk.",
+                "The Sigil has unobstructed movement, has a 310 movement speed, requires 3/3/4/4 hero attacks to destroy and 12/12/16/16 creep attacks to destroy, provides 400/400 vision, and gives a 90/100/110/120 gold bounty.",
+                "Heroes deal 1 damage to the sigil, while non-hero units deal 0.25 damage."
+            ]
+        },
+        "stat": {
+            "abilityId": 5567,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "cooldown": [
+                50,
+                50,
+                50,
+                50
+            ],
+            "manaCost": [
+                75,
+                75,
+                75,
+                75
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5568": {
+        "id": 5568,
+        "name": "tusk_walrus_punch",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 5568,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Walrus PUNCH!",
+            "description": [
+                "Tusk connects with his mighty Walrus Punch, a critical strike so powerful it launches its victim into the air. The victim is slowed upon landing."
+            ],
+            "attributes": [
+                "CRITICAL DAMAGE: 350%",
+                "AIR TIME: 1.0",
+                "SLOW DURATION: 2.0 / 3.0 / 4.0",
+                "MOVEMENT SLOW: 40%"
+            ],
+            "lore": "It never matters who throws the first punch, only who throws the last.",
+            "aghanimDescription": "Adds new ability: Walrus Kick. Kicks the target unit back, damaging them and slowing their movement speed.",
+            "notes": [
+                "Walrus PUNCH has true strike."
+            ]
+        },
+        "stat": {
+            "abilityId": 5568,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 393224,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                150
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                36,
+                24,
+                12
+            ],
+            "manaCost": [
+                50,
+                75,
+                100
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5641": {
+        "id": 5641,
+        "name": "tusk_launch_snowball",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 5641,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Launch Snowball",
+            "description": [
+                "Launch the snowball toward the target."
+            ],
+            "attributes": [],
+            "lore": "Into the great wide white!",
+            "notes": [
+                "The snowball destroys trees.",
+                "Doesn't carry illusions, but will carry Meepo clones and other units that Tusk controls.",
+                "Each Meepo clone added to the snowball will add its own bonus damage and speed."
+            ]
+        },
+        "stat": {
+            "abilityId": 5641,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 67653,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5672": {
+        "id": 5672,
+        "name": "tusk_walrus_kick",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 5672,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Walrus Kick",
+            "description": [
+                "Kicks the target unit back, damaging them and slowing their movement speed."
+            ],
+            "attributes": [
+                "KICK PUSH DISTANCE: 1400",
+                "MOVE SLOW: 40%",
+                "SLOW DURATION: 4",
+                "DAMAGE: 350"
+            ],
+            "lore": "Tusk may have made his name with his fists, but the wise enemy is wary of any and all limbs.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5672,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                150
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                8
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5911": {
+        "id": 5911,
+        "name": "special_bonus_hp_regen_8",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 5911,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8 Health Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5911,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6194": {
+        "id": 6194,
+        "name": "special_bonus_unique_tusk",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 6194,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+80% Walrus Punch Crit",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6194,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6411": {
+        "id": 6411,
+        "name": "special_bonus_unique_tusk_2",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 6411,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+120 Snowball Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6411,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6423": {
+        "id": 6423,
+        "name": "special_bonus_hp_325",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 6423,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+325 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6423,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6447": {
+        "id": 6447,
+        "name": "special_bonus_exp_boost_40",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 6447,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40% XP Gain",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6447,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6961": {
+        "id": 6961,
+        "name": "special_bonus_unique_tusk_3",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 6961,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+300 Snowball Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6961,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6962": {
+        "id": 6962,
+        "name": "special_bonus_unique_tusk_4",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 6962,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "12% Chance Walrus Punch",
+            "description": [
+                "Walrus Punch gains a chance to be triggered on normal attacks, independent of mana cost or cooldown."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6962,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6963": {
+        "id": 6963,
+        "name": "special_bonus_unique_tusk_5",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 6963,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-6s Ice Shards Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6963,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7322": {
+        "id": 7322,
+        "name": "tusk_tag_team",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 7322,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Tag Team",
+            "description": [
+                "Temporarily applies a negative debuff aura around you, causing enemies that are attacked under it to take bonus physical damage and reduced movement speed. Lasts 5 seconds."
+            ],
+            "attributes": [
+                "BONUS DAMAGE: 25 / 50 / 75 / 100",
+                "MOVEMENT SLOW: 75%",
+                "SLOW DURATION: 0.4",
+                "DEBUFF DURATION: 5"
+            ],
+            "lore": "Even far from Cobalt, Tusk carries the 'Barrier Chill' in his very bones.",
+            "notes": [
+                "Affects attacks from allied heroes, Tusk or any of his units."
+            ]
+        },
+        "stat": {
+            "abilityId": 7322,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                24,
+                21,
+                18,
+                15
+            ],
+            "manaCost": [
+                70
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "7891": {
+        "id": 7891,
+        "name": "special_bonus_unique_tusk_6",
+        "uri": "tusk",
+        "language": {
+            "abilityId": 7891,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-8s Snowball Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7891,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

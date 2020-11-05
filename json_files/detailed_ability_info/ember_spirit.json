@@ -1,0 +1,711 @@
+{
+    "353": {
+        "id": 353,
+        "name": "special_bonus_unique_ember_spirit_6",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 353,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+65 Sleight of Fist Hero Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 353,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5603": {
+        "id": 5603,
+        "name": "ember_spirit_searing_chains",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 5603,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Searing Chains",
+            "description": [
+                "Ember Spirit unleashes fiery bolas that wrap around nearby enemies, anchoring them in place and dealing damage each second."
+            ],
+            "attributes": [
+                "DURATION: 1.5 / 2.0 / 2.5 / 3.0",
+                "RADIUS: 400",
+                "TOTAL DAMAGE: 75 / 150 / 225 / 300",
+                "UNIT COUNT: 2"
+            ],
+            "lore": "Xin's harshest lessons often employed the use of red-hot chains.",
+            "notes": [
+                "Targets are chosen randomly around Xin.",
+                "Does not affect Spell Immune or invisible units.",
+                "Interrupts channeling spells."
+            ]
+        },
+        "stat": {
+            "abilityId": 5603,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                13,
+                12,
+                11,
+                10
+            ],
+            "manaCost": [
+                80,
+                90,
+                100,
+                110
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5604": {
+        "id": 5604,
+        "name": "ember_spirit_sleight_of_fist",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 5604,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Sleight of Fist",
+            "description": [
+                "Ember Spirit dashes around with blazing speed, attacking all enemies in the targeted area of effect, then returning to his start location.  Deals bonus damage to heroes, and less damage to creeps."
+            ],
+            "attributes": [
+                "RADIUS: 250 / 350 / 450 / 550",
+                "BONUS HERO DAMAGE: 40 / 80 / 120 / 160",
+                "ATTACK INTERVAL: 0.2",
+                "CREEP DAMAGE PENALTY: -50%"
+            ],
+            "lore": "The studied warrior must whip and weave through its enemies, burning each without pause.",
+            "notes": [
+                "Targets are determined when the spell is cast.",
+                "A regular attack is done to each target every 0.2 seconds.",
+                "Any attack modifier that Xin has (such as Critical Strike, Bash, Cleave, or Orb effects) will be applied normally on these attacks.",
+                "Abilities and items can be used while Sleight of Fist is active."
+            ]
+        },
+        "stat": {
+            "abilityId": 5604,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4144,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                18,
+                14,
+                10,
+                6
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5605": {
+        "id": 5605,
+        "name": "ember_spirit_flame_guard",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 5605,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Flame Guard",
+            "description": [
+                "Ember Spirit surrounds himself with a ring of fire that consumes incoming magic damage, leaving him unharmed.  Flame Guard deals damage per second in an area around Ember Spirit while Flame Guard is active.  If the shield is broken, the damage is also lost."
+            ],
+            "attributes": [
+                "DURATION: 8 / 12 / 16 / 20",
+                "RADIUS: 400",
+                "MAGIC ABSORB: 80 / 220 / 360 / 500",
+                "DAMAGE PER SECOND: 25 / 35 / 45 / 55"
+            ],
+            "lore": "An enemy should never be allowed to approach without difficulty.",
+            "notes": [
+                "Magic damage reduction is calculated before any reductions."
+            ]
+        },
+        "stat": {
+            "abilityId": 5605,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                35
+            ],
+            "manaCost": [
+                80,
+                90,
+                100,
+                110
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5606": {
+        "id": 5606,
+        "name": "ember_spirit_fire_remnant",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 5606,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Fire Remnant",
+            "description": [
+                "Ember Spirit generates Fire Remnant charges every %charge_restore_time% seconds, with a max of %max_charges% charges. Releasing a charge sends a Fire Remnant that runs to the target location at 250% Ember Spirit's speed. Using Activate Fire Remnant, Ember Spirit can dash out to his Remnants, dealing damage along the way and exploding them upon arrival. The targeted Remnant will be arrived at last."
+            ],
+            "attributes": [
+                "DAMAGE: 100 / 200 / 300",
+                "RADIUS: 450",
+                "DURATION: 45.0",
+                "SCEPTER MAX CHARGES: 5",
+                "SCEPTER RANGE MULTIPLIER: 3",
+                "SCEPTER SPEED MULTIPLIER: 2",
+                "SCEPTER MANA COST: 25"
+            ],
+            "lore": "By the spirit's power are Xin's teachings spread anew.",
+            "aghanimDescription": "Increases cast range, initial remnant speed, and maximum charges. Activate Fire Remnant costs less mana.",
+            "notes": [
+                "Starts with 3 charges (maximum)."
+            ]
+        },
+        "stat": {
+            "abilityId": 5606,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 16,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                0
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "3",
+            "chargeRestoreTime": "38.0"
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5607": {
+        "id": 5607,
+        "name": "ember_spirit_activate_fire_remnant",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 5607,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Activate Fire Remnant",
+            "description": [
+                "Select the Fire Remnant to arrive at."
+            ],
+            "attributes": [],
+            "lore": "With blazing speed does a spirit fly!",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5607,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 3,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                99999
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                150
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5949": {
+        "id": 5949,
+        "name": "special_bonus_spell_amplify_8",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 5949,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8% Spell Amplification",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5949,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6172": {
+        "id": 6172,
+        "name": "special_bonus_unique_ember_spirit_1",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 6172,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+280 Flame Guard Absorption",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6172,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6176": {
+        "id": 6176,
+        "name": "special_bonus_unique_ember_spirit_2",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 6176,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.8s Searing Chains",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6176,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6647": {
+        "id": 6647,
+        "name": "special_bonus_unique_ember_spirit_3",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 6647,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50 Flame Guard DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6647,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6922": {
+        "id": 6922,
+        "name": "special_bonus_truestrike",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 6922,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "True Strike",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6922,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7050": {
+        "id": 7050,
+        "name": "special_bonus_unique_ember_spirit_4",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 7050,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "2 Sleight of Fist Charges",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7050,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7051": {
+        "id": 7051,
+        "name": "special_bonus_unique_ember_spirit_5",
+        "uri": "ember_spirit",
+        "language": {
+            "abilityId": 7051,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-12 Remnant Charge Restore Time",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7051,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

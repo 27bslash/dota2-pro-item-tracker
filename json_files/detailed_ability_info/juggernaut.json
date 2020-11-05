@@ -1,0 +1,593 @@
+{
+    "429": {
+        "id": 429,
+        "name": "special_bonus_hp_475",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 429,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+475 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 429,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5027": {
+        "id": 5027,
+        "name": "juggernaut_blade_dance",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 5027,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Blade Dance",
+            "description": [
+                "Gives Juggernaut a chance to deal critical damage on each attack."
+            ],
+            "attributes": [
+                "CRITICAL DAMAGE: 180%",
+                "CRITICAL CHANCE: 20% / 25% / 30% / 35%"
+            ],
+            "lore": "The last remnant of his heritage's commitment to bladework, Yurnero ensures that the style is remembered.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5027,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5028": {
+        "id": 5028,
+        "name": "juggernaut_blade_fury",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 5028,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Blade Fury",
+            "description": [
+                "Causes a bladestorm of destructive force around Juggernaut, rendering him immune to magic and dealing damage to nearby enemy units. ",
+                "",
+                "DISPEL TYPE: Basic Dispel"
+            ],
+            "attributes": [
+                "RADIUS: 250",
+                "DAMAGE: 85 / 110 / 135 / 160",
+                "DURATION: 5.0"
+            ],
+            "lore": "Yurnero's renowned katana techniques are feared by warriors and sorcerors alike.",
+            "notes": [
+                "You can use items during Blade Fury.",
+                "Juggernaut can still perform attacks while in Blade Fury. However, only units that are not affected by Blade Fury, such as wards or structures, will take damage from these attacks."
+            ]
+        },
+        "stat": {
+            "abilityId": 5028,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 526340,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                42,
+                34,
+                26,
+                18
+            ],
+            "manaCost": [
+                120,
+                110,
+                100,
+                90
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5029": {
+        "id": 5029,
+        "name": "juggernaut_healing_ward",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 5029,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Healing Ward",
+            "description": [
+                "Summons a Healing Ward which heals all nearby allied units, based on their max health. The Healing Ward moves at 350 movement speed after being summoned. Lasts 25.0 seconds."
+            ],
+            "attributes": [
+                "MAX HEALTH PER SECOND: 2% / 3% / 4% / 5%"
+            ],
+            "lore": "Of the rituals learned at the Isle of Masks, tending wounds with a bit of voodoo magic has proven to be quite useful.",
+            "notes": [
+                "The healing ward can be controlled.",
+                "Multiple healing wards do not stack."
+            ]
+        },
+        "stat": {
+            "abilityId": 5029,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                350
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                60,
+                60,
+                60,
+                60
+            ],
+            "manaCost": [
+                140
+            ],
+            "isUltimate": false,
+            "duration": "25.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5030": {
+        "id": 5030,
+        "name": "juggernaut_omni_slash",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 5030,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Omnislash",
+            "description": [
+                "Juggernaut leaps towards the target enemy units, and then slashes the target and other nearby enemy units at an increased attack rate. Juggernaut is invulnerable for the duration."
+            ],
+            "attributes": [
+                "SLASHES RATE MULTIPLIER: 1.6",
+                "BONUS DAMAGE: 30 / 40 / 50",
+                "BONUS ATTACK SPEED: 40",
+                "DURATION: 3 / 3.25 / 3.5",
+                "SLASH JUMP RADIUS: 425",
+                "SCEPTER DURATION:%duration_scepter%"
+            ],
+            "lore": "'The fruits of discipline; with practice comes strength.'",
+            "aghanimDescription": "Adds a new ability: Swift Slash. Performs a mini omnislash for a short duration.",
+            "notes": [
+                "You can use items during Omnislash.",
+                "Can target Spell Immune units.",
+                "Omnislash applies a basic dispel to Juggernaut on cast."
+            ]
+        },
+        "stat": {
+            "abilityId": 5030,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 32776,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 5,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                350
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                140
+            ],
+            "manaCost": [
+                200,
+                275,
+                350
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5922": {
+        "id": 5922,
+        "name": "special_bonus_all_stats_6",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 5922,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+6 All Stats",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5922,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6105": {
+        "id": 6105,
+        "name": "special_bonus_unique_juggernaut",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 6105,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1s Blade Fury",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6105,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6377": {
+        "id": 6377,
+        "name": "special_bonus_hp_600",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 6377,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+600 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6377,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6662": {
+        "id": 6662,
+        "name": "special_bonus_unique_juggernaut_2",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 6662,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.0s Omnislash Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6662,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7021": {
+        "id": 7021,
+        "name": "special_bonus_unique_juggernaut_3",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 7021,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+140 Blade Fury DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7021,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7394": {
+        "id": 7394,
+        "name": "special_bonus_unique_juggernaut_4",
+        "uri": "juggernaut",
+        "language": {
+            "abilityId": 7394,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Blade Fury Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7394,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

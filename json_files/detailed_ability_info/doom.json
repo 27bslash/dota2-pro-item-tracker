@@ -1,0 +1,754 @@
+{
+    "459": {
+        "id": 459,
+        "name": "special_bonus_unique_doom_7",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 459,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+2 Doom Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 459,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5339": {
+        "id": 5339,
+        "name": "doom_bringer_devour",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 5339,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Devour",
+            "description": [
+                "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If autocast is deactivated, Doom will not acquire the creep's abilities. Provides bonus health regeneration for the duration of the spell. Duration is equal to the cooldown."
+            ],
+            "attributes": [
+                "CREEP MAX LEVEL: 4 / 5 / 6 / 6",
+                "BONUS GOLD: 50 / 100 / 150 / 200",
+                "HEALTH REGEN: 2 / 6 / 10 / 14"
+            ],
+            "lore": "Lucifer's appetite and greed are never sated.",
+            "notes": [
+                "Gives Doom the original bounty of the creep, along with the bonus gold.",
+                "If you devour a creep without abilities, you'll keep the abilities you had previously."
+            ]
+        },
+        "stat": {
+            "abilityId": 5339,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 163848,
+            "unitTargetType": 8,
+            "unitTargetTeam": 8,
+            "unitTargetFlags": 16,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                300,
+                300,
+                300,
+                300
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                70
+            ],
+            "manaCost": [
+                40,
+                50,
+                60,
+                70
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5340": {
+        "id": 5340,
+        "name": "doom_bringer_scorched_earth",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 5340,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Scorched Earth",
+            "description": [
+                "Carpets the nearby earth in flames which damage enemies, while also granting him increased movement speed."
+            ],
+            "attributes": [
+                "DAMAGE: 15 / 30 / 45 / 60",
+                "RADIUS: 600 / 600 / 600 / 600",
+                "BONUS MOVE SPEED: 9% / 11% / 13% / 15%",
+                "DURATION: 16.0"
+            ],
+            "lore": "The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him.",
+            "notes": [
+                "Scorched Earth follows Doom, centered on his location."
+            ]
+        },
+        "stat": {
+            "abilityId": 5340,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600,
+                600,
+                600,
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                50,
+                45,
+                40,
+                35
+            ],
+            "manaCost": [
+                60,
+                70,
+                80,
+                90
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5341": {
+        "id": 5341,
+        "name": "doom_bringer_infernal_blade",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 5341,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Infernal Blade",
+            "description": [
+                "Doom swings his burning sword, igniting the enemy. Stuns for 0.6 seconds and applies a 4.0 second burn that deals a base damage plus a percentage of the target's Max HP as damage per second."
+            ],
+            "attributes": [
+                "BASE BURN DAMAGE: 16 / 20 / 24 / 28",
+                "MAX HP AS DAMAGE: 1.25% / 2.5% / 3.75% / 5%",
+                "BURN DURATION: 4.0",
+                "STUN DURATION: 0.6",
+                "BURN DURATION SCEPTER: 6.0",
+                "STUN DURATION SCEPTER: 1.75"
+            ],
+            "lore": "Lucifer shares the fire branding bestowed upon him at the time of his exile.",
+            "aghanimDescription": "Increases stun duration, burn duration and applies Break.",
+            "notes": [
+                "Interrupts channeling abilities."
+            ]
+        },
+        "stat": {
+            "abilityId": 5341,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 393224,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                16,
+                12,
+                8,
+                4
+            ],
+            "manaCost": [
+                40
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5342": {
+        "id": 5342,
+        "name": "doom_bringer_doom",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 5342,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Doom",
+            "description": [
+                "Inflicts a curse that dispels an enemy Hero and prevents an them from casting spells or using items, while taking damage over time.",
+                "",
+                "DISPEL TYPE: Basic Dispel"
+            ],
+            "attributes": [
+                "DURATION: 16.0",
+                "DAMAGE PER SECOND: 25 / 40 / 55"
+            ],
+            "lore": "When a name is tolled from the bell of Vashundol, doom is sure to follow.",
+            "notes": [
+                "Units afflicted by Doom can be denied when their HP drops below 25%."
+            ]
+        },
+        "stat": {
+            "abilityId": 5342,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 5,
+            "unitDamageType": 2,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                550,
+                550,
+                550
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.5
+            ],
+            "cooldown": [
+                145
+            ],
+            "manaCost": [
+                150,
+                200,
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6073": {
+        "id": 6073,
+        "name": "special_bonus_unique_doom_1",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 6073,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+2.4% Infernal Blade Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6073,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6314": {
+        "id": 6314,
+        "name": "special_bonus_unique_doom_2",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 6314,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Devour Can Target Ancients",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6314,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6369": {
+        "id": 6369,
+        "name": "special_bonus_unique_doom_3",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 6369,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+120 Devour Bonus Gold",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6369,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6370": {
+        "id": 6370,
+        "name": "special_bonus_unique_doom_4",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 6370,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Scorched Earth Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6370,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6371": {
+        "id": 6371,
+        "name": "special_bonus_unique_doom_5",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 6371,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Doom DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6371,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7123": {
+        "id": 7123,
+        "name": "special_bonus_unique_doom_6",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 7123,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+13% Scorched Earth Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7123,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7124": {
+        "id": 7124,
+        "name": "special_bonus_cleave_150",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 7124,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+150% Cleave",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7124,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7201": {
+        "id": 7201,
+        "name": "special_bonus_cleave_130",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 7201,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+130% Cleave",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7201,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7670": {
+        "id": 7670,
+        "name": "special_bonus_cleave_175",
+        "uri": "doom_bringer",
+        "language": {
+            "abilityId": 7670,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+175% Cleave",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7670,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

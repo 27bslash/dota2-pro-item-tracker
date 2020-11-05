@@ -1,0 +1,494 @@
+{
+    "5279": {
+        "id": 5279,
+        "name": "broodmother_spawn_spiderlings",
+        "uri": "broodmother",
+        "language": {
+            "abilityId": 5279,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Spawn Spiderlings",
+            "description": [
+                "Broodmother injects her young into an enemy unit, dealing damage. The spiderlings will hatch if the target is killed while under this influence."
+            ],
+            "attributes": [
+                "LIFETIME: 60.0 / 60.0 / 60.0 / 60.0",
+                "DAMAGE: 70 / 140 / 210 / 280",
+                "COUNT: 1 / 2 / 3 / 4"
+            ],
+            "lore": "Black Arachnia continues to raise her young, even amidst the field of combat.  The brood quickly learns how to support their mother.",
+            "notes": [
+                "If the target is killed within 2.0 / 2.0 / 2.0 / 2.0 seconds of being hit with this skill, the Spiderlings will spawn.",
+                "Units killed by Spiderlings will then give birth to Spiderites, smaller and less powerful versions of the Spiderlings."
+            ]
+        },
+        "stat": {
+            "abilityId": 5279,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2,
+                0.2,
+                0.2,
+                0.2
+            ],
+            "cooldown": [
+                11,
+                10,
+                9,
+                8
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5280": {
+        "id": 5280,
+        "name": "broodmother_spin_web",
+        "uri": "broodmother",
+        "language": {
+            "abilityId": 5280,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Spin Web",
+            "description": [
+                "Spins a large web that grants Broodmother a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. Spin Web charges restore every %charge_restore_time% seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears."
+            ],
+            "attributes": [
+                "MAX WEBS: 2 / 4 / 6 / 8",
+                "HEALTH REGEN: 3 / 5 / 7 / 9",
+                "MOVE INCREASE: 20% / 35% / 50% / 65%",
+                "SCEPTER MAX WEBS: 6 / 10 / 14 / 18",
+                "SCEPTER MAX WEB CHARGES: 6 / 10 / 14 / 18",
+                "SCEPTER MOVE SPEED: 30% / 50% / 70% / 90%"
+            ],
+            "lore": "Weaving a bed of silken fibers, Arachnia's web both protects her and her offspring, as well as giving advancing opponents a sense of forboding.",
+            "aghanimDescription": "Increases movement speed, removes movement speed limit, and increases Spin Web max count",
+            "notes": [
+                "Also affects Spiderling and Spiderites.",
+                "If free movement is disabled, you will destroy nearby trees."
+            ]
+        },
+        "stat": {
+            "abilityId": 5280,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "2 4 6 8",
+            "chargeRestoreTime": "45.0"
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5281": {
+        "id": 5281,
+        "name": "broodmother_incapacitating_bite",
+        "uri": "broodmother",
+        "language": {
+            "abilityId": 5281,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Incapacitating Bite",
+            "description": [
+                "Broodmother's venom cripples enemy units, causing her attacks to slow and giving the affected unit a chance to miss its attacks."
+            ],
+            "attributes": [
+                "MISS CHANCE: 30% / 40% / 50% / 60%",
+                "MOVE SLOW: -20% / -30% / -40% / -50%",
+                "DURATION: 2.0 / 2.0 / 2.0 / 2.0"
+            ],
+            "lore": "Paralytic toxins come from Black Arachnia's fangs, causing a slow and painful death to those who intrude on her webs.",
+            "notes": [
+                "The miss chance stacks with evasion and terrain dodge chance."
+            ]
+        },
+        "stat": {
+            "abilityId": 5281,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5282": {
+        "id": 5282,
+        "name": "broodmother_insatiable_hunger",
+        "uri": "broodmother",
+        "language": {
+            "abilityId": 5282,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Insatiable Hunger",
+            "description": [
+                "A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack."
+            ],
+            "attributes": [
+                "BONUS DAMAGE: 60 / 100 / 140",
+                "LIFESTEAL: 60% / 100% / 140%",
+                "DURATION: 14.0 / 14.0 / 14.0"
+            ],
+            "lore": "While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes.",
+            "notes": [
+                "Fully stacks with other sources of lifesteal."
+            ]
+        },
+        "stat": {
+            "abilityId": 5282,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2,
+                0.2,
+                0.2
+            ],
+            "cooldown": [
+                45,
+                45,
+                45
+            ],
+            "manaCost": [
+                100,
+                100,
+                100
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5962": {
+        "id": 5962,
+        "name": "special_bonus_agility_20",
+        "uri": "broodmother",
+        "language": {
+            "abilityId": 5962,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Agility",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5962,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6257": {
+        "id": 6257,
+        "name": "special_bonus_unique_broodmother_1",
+        "uri": "broodmother",
+        "language": {
+            "abilityId": 6257,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50 Insatiable Hunger Damage/Lifesteal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6257,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6258": {
+        "id": 6258,
+        "name": "special_bonus_unique_broodmother_2",
+        "uri": "broodmother",
+        "language": {
+            "abilityId": 6258,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+350 Spiders Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6258,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6361": {
+        "id": 6361,
+        "name": "special_bonus_unique_broodmother_3",
+        "uri": "broodmother",
+        "language": {
+            "abilityId": 6361,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+80 Spawn Spiderlings Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6361,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6362": {
+        "id": 6362,
+        "name": "special_bonus_unique_broodmother_4",
+        "uri": "broodmother",
+        "language": {
+            "abilityId": 6362,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+18 Spiders Attack Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6362,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

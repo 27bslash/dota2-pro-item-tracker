@@ -1,0 +1,564 @@
+{
+    "468": {
+        "id": 468,
+        "name": "special_bonus_unique_shadow_shaman_6",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 468,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+140 Shackles Total Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 468,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5078": {
+        "id": 5078,
+        "name": "shadow_shaman_ether_shock",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 5078,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Ether Shock",
+            "description": [
+                "Creates a cone of ethereal energy that strikes multiple enemy units."
+            ],
+            "attributes": [
+                "TARGETS: 1 / 3 / 5 / 7",
+                "DAMAGE: 140 / 200 / 260 / 320"
+            ],
+            "lore": "Originally used to open shows with the travelling con-man, Rhasta's lightning display shocks adversaries in more ways than one.",
+            "notes": [
+                "Can hit secondary targets up to 1000 distance away."
+            ]
+        },
+        "stat": {
+            "abilityId": 5078,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                14,
+                12,
+                10,
+                8
+            ],
+            "manaCost": [
+                100,
+                120,
+                140,
+                160
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5079": {
+        "id": 5079,
+        "name": "shadow_shaman_voodoo",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 5079,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Hex",
+            "description": [
+                "Transforms an enemy unit into a harmless creature, disabling their attacks and abilities."
+            ],
+            "attributes": [
+                "DURATION: 1.25 / 2.0 / 2.75 / 3.5"
+            ],
+            "lore": "Rhasta often ended performances by turning himself into a chicken - now, the humiliation is shared.",
+            "notes": [
+                "Instantly destroys illusions.",
+                "The target will have a base movement speed of 100, but buffs granting maximum movement speed won't be disabled.",
+                "Hex disables damage block."
+            ]
+        },
+        "stat": {
+            "abilityId": 5079,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                13
+            ],
+            "manaCost": [
+                70,
+                110,
+                150,
+                190
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5080": {
+        "id": 5080,
+        "name": "shadow_shaman_shackles",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 5080,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shackles",
+            "description": [
+                "CHANNELED - Magically binds an enemy unit so that it cannot move or attack, while dealing damage over time."
+            ],
+            "attributes": [
+                "TOTAL DAMAGE: 60 / 160 / 260 / 360",
+                "MAX DURATION: 2.75 / 3.5 / 4.25 / 5"
+            ],
+            "lore": "A self-defense incantation, Rhasta developed shackles after his master was slain in the Bleeding Hills.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5080,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 136,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "channelTime": [
+                2.75,
+                3.5,
+                4.25,
+                5
+            ],
+            "cooldown": [
+                16,
+                14,
+                12,
+                10
+            ],
+            "manaCost": [
+                140,
+                150,
+                160,
+                170
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5081": {
+        "id": 5081,
+        "name": "shadow_shaman_mass_serpent_ward",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 5081,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Mass Serpent Ward",
+            "description": [
+                "Summons 10 Serpent Wards to attack enemy units and structures. The Wards are immune to magic."
+            ],
+            "attributes": [
+                "DURATION: 45.0 / 45.0 / 45.0",
+                "ATTACK DAMAGE: 50 / 80 / 110",
+                "SCEPTER BONUS ATTACK RANGE: 225",
+                "HITS TO DESTROY: 2"
+            ],
+            "lore": "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the snakes to do his bidding.",
+            "aghanimDescription": "Causes Serpent Wards to have split shot, attacking two units for full damage. Increases attack range of Serpent Wards.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5081,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                550
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                120
+            ],
+            "manaCost": [
+                200,
+                350,
+                600
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6052": {
+        "id": 6052,
+        "name": "special_bonus_unique_shadow_shaman_1",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 6052,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1 Serpent Wards Max HP",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6052,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6295": {
+        "id": 6295,
+        "name": "special_bonus_unique_shadow_shaman_2",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 6295,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+2.0s Shackles Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6295,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6502": {
+        "id": 6502,
+        "name": "special_bonus_unique_shadow_shaman_3",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 6502,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+340 Ether Shock Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6502,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6521": {
+        "id": 6521,
+        "name": "special_bonus_unique_shadow_shaman_4",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 6521,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Wards Attack Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6521,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6877": {
+        "id": 6877,
+        "name": "special_bonus_unique_shadow_shaman_5",
+        "uri": "shadow_shaman",
+        "language": {
+            "abilityId": 6877,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-4.5s Hex Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6877,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

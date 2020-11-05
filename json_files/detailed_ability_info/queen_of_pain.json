@@ -1,0 +1,666 @@
+{
+    "441": {
+        "id": 441,
+        "name": "special_bonus_spell_lifesteal_25",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 441,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "25% Spell Lifesteal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 441,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "448": {
+        "id": 448,
+        "name": "special_bonus_spell_block_18",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 448,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "18s Spell Block",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 448,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5173": {
+        "id": 5173,
+        "name": "queenofpain_shadow_strike",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 5173,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shadow Strike",
+            "description": [
+                "Hurls a poisoned dagger which deals large initial damage, and then deals damage over time. The poisoned unit has its movement speed slowed for 15.0 seconds. An instance of damage is dealt every 3.0 seconds."
+            ],
+            "attributes": [
+                "MOVEMENT SLOW: -20% / -35% / -50% / -65%",
+                "INITIAL DAMAGE: 30 / 60 / 90 / 120",
+                "DAMAGE PER TICK: 30 / 50 / 70 / 90"
+            ],
+            "lore": "Akasha's envenomed dagger allows her to delight in the drawn out suffering of her victims.",
+            "notes": [
+                "The affected unit slowly regains its original movement speed every second during the duration.",
+                "Units afflicted by Shadow Strike can be denied by their allies when their HP drops below 25% of their maximum health."
+            ]
+        },
+        "stat": {
+            "abilityId": 5173,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                450,
+                500,
+                550,
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                16,
+                12,
+                8,
+                4
+            ],
+            "manaCost": [
+                110,
+                120,
+                130,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "15.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5174": {
+        "id": 5174,
+        "name": "queenofpain_blink",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 5174,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Blink",
+            "description": [
+                "Short distance teleportation that allows Queen of Pain to move in and out of combat."
+            ],
+            "attributes": [
+                "RANGE: 1300"
+            ],
+            "lore": "The Secret Queen lives up to her title, making her pain impossible to escape.",
+            "notes": [
+                "You can use Blink to dodge incoming projectiles."
+            ]
+        },
+        "stat": {
+            "abilityId": 5174,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4112,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.33,
+                0.33,
+                0.33,
+                0.33
+            ],
+            "cooldown": [
+                15,
+                12,
+                9,
+                6
+            ],
+            "manaCost": [
+                60,
+                60,
+                60,
+                60
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5175": {
+        "id": 5175,
+        "name": "queenofpain_scream_of_pain",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 5175,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Scream Of Pain",
+            "description": [
+                "The Queen of Pain lets loose a piercing scream around her, damaging nearby enemies."
+            ],
+            "attributes": [
+                "RADIUS: 525"
+            ],
+            "lore": "The sultry voice of Akasha beckons her opponents while stealing their souls.",
+            "notes": [
+                "Scream Of Pain will hit invisible units.",
+                "Scream Of Pain cannot be disjointed."
+            ]
+        },
+        "stat": {
+            "abilityId": 5175,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                7,
+                7,
+                7,
+                7
+            ],
+            "damage": [
+                75,
+                150,
+                225,
+                300
+            ],
+            "manaCost": [
+                80,
+                100,
+                120,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5176": {
+        "id": 5176,
+        "name": "queenofpain_sonic_wave",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 5176,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Sonic Wave",
+            "description": [
+                "Creates a gigantic wave of sound in front of Queen of Pain, dealing heavy damage to all enemy units in its wake and pushing them back."
+            ],
+            "attributes": [
+                "WAVE MAX RADIUS: 450",
+                "DAMAGE: 340 / 450 / 560",
+                "KNOCKBACK DISTANCE: 350",
+                "SCEPTER COOLDOWN: 40",
+                "SCEPTER DAMAGE: 390 / 500 / 610"
+            ],
+            "lore": "Her most exquisite of all of torments, Akasha's Sonic Wave puts her poor foes out of their misery.",
+            "aghanimDescription": "Increases damage and decreases cooldown.",
+            "notes": [
+                "Sonic Wave can hit units up to 1150 units away."
+            ]
+        },
+        "stat": {
+            "abilityId": 5176,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 1040,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.452,
+                0.452,
+                0.452
+            ],
+            "cooldown": [
+                125
+            ],
+            "manaCost": [
+                250,
+                400,
+                550
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6407": {
+        "id": 6407,
+        "name": "special_bonus_unique_queen_of_pain",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 6407,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "525 AoE Shadow Strike",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6407,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6513": {
+        "id": 6513,
+        "name": "special_bonus_spell_lifesteal_30",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 6513,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "30% Spell Lifesteal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6513,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6575": {
+        "id": 6575,
+        "name": "special_bonus_spell_lifesteal_60",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 6575,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "60% Spell Lifesteal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6575,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6856": {
+        "id": 6856,
+        "name": "special_bonus_unique_queen_of_pain_2",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 6856,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Scream of Pain 1.2s Fear",
+            "description": [
+                "Enemies damaged by Scream of Pain are forced to run towards their fountain for 1.2 seconds."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6856,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7034": {
+        "id": 7034,
+        "name": "special_bonus_spell_block_15",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 7034,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "15s Spell Block",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7034,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7035": {
+        "id": 7035,
+        "name": "special_bonus_spell_block_20",
+        "uri": "queenofpain",
+        "language": {
+            "abilityId": 7035,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "20s Spell Block",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7035,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

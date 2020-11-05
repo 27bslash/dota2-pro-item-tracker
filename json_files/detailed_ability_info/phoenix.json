@@ -1,0 +1,924 @@
+{
+    "406": {
+        "id": 406,
+        "name": "special_bonus_unique_phoenix_6",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 406,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+18% Icarus Dive Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 406,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "426": {
+        "id": 426,
+        "name": "special_bonus_unique_phoenix_7",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 426,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Sun Ray During Supernova",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 426,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5623": {
+        "id": 5623,
+        "name": "phoenix_icarus_dive",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 5623,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Icarus Dive",
+            "description": [
+                "Phoenix dives forward in an arc with a fixed distance in the targeted direction, dealing damage over time and slowing the movement speed of any units it comes into contact with, and then orbiting back to its original position. If Phoenix casts Supernova, the dive ends."
+            ],
+            "attributes": [
+                "HP COST: 15%",
+                "DIVE LENGTH: 1400",
+                "BURN DURATION: 4",
+                "DAMAGE PER SECOND: 10 / 30 / 50 / 70",
+                "MOVE SLOW: 19% / 22% / 25% / 28%"
+            ],
+            "lore": "Though no stranger to travelling the cosmic void, soaring within an atmosphere offers unique pleasures.",
+            "notes": [
+                "Icarus Dive has a 2.0 second travel duration, and can be cancelled by casting the ability again while in flight."
+            ]
+        },
+        "stat": {
+            "abilityId": 5623,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 20496,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                36,
+                34,
+                32,
+                30
+            ],
+            "manaCost": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5624": {
+        "id": 5624,
+        "name": "phoenix_icarus_dive_stop",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 5624,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Stop Icarus Dive",
+            "description": [
+                "Immediately cancels the dive."
+            ],
+            "attributes": [],
+            "lore": "SCREE!",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5624,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 34885,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5625": {
+        "id": 5625,
+        "name": "phoenix_fire_spirits",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 5625,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Fire Spirits",
+            "description": [
+                "Summons 4 fire spirits that circle around Phoenix. Each spirit can be launched independently at a targeted area of effect. Affected enemy units take damage over time and have their attack speed greatly reduced."
+            ],
+            "attributes": [
+                "HP COST: 20%",
+                "SPIRIT DURATION: 20",
+                "RADIUS: 175 / 175 / 175 / 175",
+                "BURN DURATION: 4.0",
+                "DAMAGE PER SECOND: 15 / 35 / 55 / 75",
+                "ATTACK SPEED SLOW: -80 / -100 / -120 / -140"
+            ],
+            "lore": "The ever-collapsing core of Phoenix often emits short-lived bursts of conscious light.",
+            "notes": [
+                "Fire Spirits reveal the area they strike for 1 second."
+            ]
+        },
+        "stat": {
+            "abilityId": 5625,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                51,
+                44,
+                37,
+                30
+            ],
+            "manaCost": [
+                120
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5626": {
+        "id": 5626,
+        "name": "phoenix_sun_ray",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 5626,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Sun Ray",
+            "description": [
+                "Phoenix expels a beam of light at the cost of its own health. The beam damages enemies and heals allies for a base amount plus a percentage of their health. The percentage increases as the beam continues to fire."
+            ],
+            "attributes": [
+                "HEALTH COST PER SECOND: 6%",
+                "BASE DAMAGE PER SECOND: 14 / 20 / 26 / 32",
+                "MAX DAMAGE: 1.5% / 3.25% / 5.0% / 6.75%",
+                "BASE HEAL PER SECOND: 7 / 10 / 13 / 16",
+                "MAX HEAL: 0.625% / 1.25% / 1.875% / 2.5%"
+            ],
+            "lore": "The vent through which such stellar energy flows is mere atoms wide.",
+            "notes": [
+                "Sun Ray has a width of 130 units, and a length of %abilitycastrange% units.",
+                "Sun Ray is canceled if Phoenix gets stunned, silenced, cycloned, hexed or slept.",
+                "Phoenix can use items and abilities without canceling Sun Ray."
+            ]
+        },
+        "stat": {
+            "abilityId": 5626,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1300
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.01
+            ],
+            "cooldown": [
+                26
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "6.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5627": {
+        "id": 5627,
+        "name": "phoenix_sun_ray_stop",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 5627,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Stop Sun Ray",
+            "description": [
+                "Immediately stops the Sun Ray."
+            ],
+            "attributes": [],
+            "lore": "CHIRP!",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5627,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 34885,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5628": {
+        "id": 5628,
+        "name": "phoenix_sun_ray_toggle_move",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 5628,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Toggle Movement",
+            "description": [
+                "Toggles slow forward movement during Sun Ray firing."
+            ],
+            "attributes": [],
+            "lore": "SQAWRK!",
+            "notes": [
+                "Sun Ray allows Phoenix to move over cliffs and trees."
+            ]
+        },
+        "stat": {
+            "abilityId": 5628,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 38980,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5630": {
+        "id": 5630,
+        "name": "phoenix_supernova",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 5630,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Supernova",
+            "description": [
+                "The Phoenix willingly ends its current life for the chance to be reborn. Transforms into a burning sun that scorches enemies in a huge area. The sun can be destroyed by attacks from enemy Heroes. After 6.0 seconds the sun explodes, stunning all nearby enemies while restoring Phoenix to full health and mana with refreshed abilities.",
+                "",
+                "DISPEL TYPE: Strong Dispel"
+            ],
+            "attributes": [
+                "RADIUS: 1300",
+                "DAMAGE PER SECOND: 60 / 90 / 120",
+                "STUN DURATION: 2.0 / 2.5 / 3.0",
+                "ATTACKS TO DESTROY: 6 / 8 / 10",
+                "SCEPTER ATTACKS TO DESTROY: 7 / 10 / 13",
+                "SCEPTER CAST RANGE: 500"
+            ],
+            "lore": "The solar crucible of a Supernova may be fatal, yet from its flames arise new beacons to wander infinity.",
+            "aghanimDescription": "Increases number of attacks to destroy Supernova and allows Phoenix to cast Supernova on an allied hero, bringing both into the sun to be reborn together.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5630,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 32772,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 16,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.01
+            ],
+            "cooldown": [
+                110,
+                110,
+                110
+            ],
+            "manaCost": [
+                200,
+                200,
+                200
+            ],
+            "isUltimate": true,
+            "duration": "6.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5631": {
+        "id": 5631,
+        "name": "phoenix_launch_fire_spirit",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 5631,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Launch Fire Spirit",
+            "description": [
+                "Each fire spirit can be launched independently at a targeted area of effect. Affected enemy units take damage over time and have their attack speed greatly reduced."
+            ],
+            "attributes": [
+                "HP COST: 20%",
+                "SPIRIT DURATION: 20.0 / 20.0 / 20.0 / 20.0",
+                "RADIUS: 175 / 175 / 175 / 175",
+                "BURN DURATION: 4.0",
+                "DAMAGE PER SECOND: 15 / 35 / 55 / 75",
+                "ATTACK SPEED SLOW: -80 / -100 / -120 / -140"
+            ],
+            "lore": "PKAWW! BOOM",
+            "notes": [
+                "Fire Spirits reveal the area they strike for 1 second."
+            ]
+        },
+        "stat": {
+            "abilityId": 5631,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16433,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "manaCost": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5996": {
+        "id": 5996,
+        "name": "special_bonus_spell_amplify_6",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 5996,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+6% Spell Amplification",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5996,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6085": {
+        "id": 6085,
+        "name": "special_bonus_unique_phoenix_2",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 6085,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.25s Supernova Stun Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6085,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6227": {
+        "id": 6227,
+        "name": "special_bonus_unique_phoenix_1",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 6227,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+3 Supernova Hit Count",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6227,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6235": {
+        "id": 6235,
+        "name": "special_bonus_hp_500",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 6235,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+500 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6235,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6401": {
+        "id": 6401,
+        "name": "special_bonus_unique_phoenix_3",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 6401,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+25 Fire Spirits DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6401,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6852": {
+        "id": 6852,
+        "name": "special_bonus_unique_phoenix_4",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 6852,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1100 Icarus Dive Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6852,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6915": {
+        "id": 6915,
+        "name": "special_bonus_unique_phoenix_5",
+        "uri": "phoenix",
+        "language": {
+            "abilityId": 6915,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.5% Max Health Sun Ray Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6915,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

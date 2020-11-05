@@ -1,0 +1,548 @@
+{
+    "5003": {
+        "id": 5003,
+        "name": "antimage_mana_break",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 5003,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Mana Break",
+            "description": [
+                "Burns an opponent's mana on each attack. Mana Break deals 50% of the mana burned as damage to the target. Mana Break has 50% effect if caused by illusions."
+            ],
+            "attributes": [
+                "MANA BURNED PER HIT: 28 / 40 / 52 / 64",
+                "MAX MANA BURNED PER HIT: 1% / 2% / 3% / 4%"
+            ],
+            "lore": "A modified technique of the Turstarkuri monks' peaceful ways is to turn magical energies on their owner.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5003,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5004": {
+        "id": 5004,
+        "name": "antimage_blink",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 5004,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Blink",
+            "description": [
+                "Short distance teleportation that allows Anti-Mage to move in and out of combat."
+            ],
+            "attributes": [
+                "RANGE: 925 / 1000 / 1075 / 1150"
+            ],
+            "lore": "In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive.",
+            "notes": [
+                "You can use Blink to dodge incoming projectiles."
+            ]
+        },
+        "stat": {
+            "abilityId": 5004,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4112,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                15,
+                12,
+                9,
+                6
+            ],
+            "manaCost": [
+                60
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5005": {
+        "id": 5005,
+        "name": "antimage_spell_shield",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 5005,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Spell Shield",
+            "description": [
+                "Increases Anti-Mage's resistance to magic damage."
+            ],
+            "attributes": [
+                "RESISTANCE: 20% / 30% / 40% / 50%"
+            ],
+            "lore": "Years of meditation and obsession with revenge have hardened Anti-Mage's skin against mystical opponents.",
+            "aghanimDescription": "Causes Spell Shield to passively block and reflect a targeted spell once every %scepter_cooldown% seconds.",
+            "notes": [
+                "Stacks multiplicatively with other spell resistance sources."
+            ]
+        },
+        "stat": {
+            "abilityId": 5005,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5006": {
+        "id": 5006,
+        "name": "antimage_mana_void",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 5006,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Mana Void",
+            "description": [
+                "For each point of mana missing by the target unit, damage is dealt to it and surrounding enemies.  The main target is also mini-stunned."
+            ],
+            "attributes": [
+                "DAMAGE: 0.8 / 0.95 / 1.1",
+                "STUN DURATION: 0.3",
+                "RADIUS: 500",
+                "SCEPTER COOLDOWN INCREASE: 100",
+                "SCEPTER STUN DURATION: 1.3"
+            ],
+            "lore": "After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts.",
+            "aghanimDescription": "Increases stun duration. Mana Void kills cause the enemy's highest cooldown ability to take longer to cool down upon respawning.",
+            "notes": [
+                "Damage is calculated based on the primary target's mana, but applied to all enemies within the area of effect."
+            ]
+        },
+        "stat": {
+            "abilityId": 5006,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 40,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                70,
+                70,
+                70
+            ],
+            "manaCost": [
+                125,
+                200,
+                275
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6012": {
+        "id": 6012,
+        "name": "special_bonus_unique_antimage",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 6012,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-2.0s Blink Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6012,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6353": {
+        "id": 6353,
+        "name": "special_bonus_unique_antimage_2",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 6353,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-50s Mana Void Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6353,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6606": {
+        "id": 6606,
+        "name": "special_bonus_unique_antimage_3",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 6606,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+325 Blink Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6606,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6607": {
+        "id": 6607,
+        "name": "special_bonus_unique_antimage_4",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 6607,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20% Counterspell Magic Resistance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6607,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6800": {
+        "id": 6800,
+        "name": "special_bonus_unique_antimage_5",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 6800,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Blink Uncontrollable Illusion",
+            "description": [
+                "After blinking, an uncontrollable illusion is created at Anti-Mage's original location.  Deals -80% less damage, takes 250% damage, and lasts 10 seconds."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6800,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7314": {
+        "id": 7314,
+        "name": "antimage_counterspell",
+        "uri": "antimage",
+        "language": {
+            "abilityId": 7314,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Counterspell",
+            "description": [
+                "Passively grants you magic resistance. Can be activated to create an anti-magic shell around you that sends any targeted spells back towards enemies instead of affecting you."
+            ],
+            "attributes": [
+                "MAGIC RESISTANCE: 15% / 25% / 35% / 45%",
+                "DURATION: 1.2"
+            ],
+            "lore": "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7314,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                15,
+                11,
+                7,
+                3
+            ],
+            "manaCost": [
+                45,
+                50,
+                55,
+                60
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    }
+}

@@ -1,0 +1,640 @@
+{
+    "467": {
+        "id": 467,
+        "name": "special_bonus_hp_450",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 467,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+450 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 467,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "506": {
+        "id": 506,
+        "name": "special_bonus_unique_beastmaster_5",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 506,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+200 Hawk Vision",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 506,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5168": {
+        "id": 5168,
+        "name": "beastmaster_wild_axes",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 5168,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Wild Axes",
+            "description": [
+                "Beastmaster sends his axes flying and calls them home again, slicing through enemy units and trees along their path.  Each axe can hit an enemy once, and amplifies subsequent damage from Beastmaster and his units."
+            ],
+            "attributes": [
+                "CAST RANGE: 1500",
+                "DAMAGE PER AXE: 30 / 60 / 90 / 120",
+                "DAMAGE AMP PER STACK: 6% / 8% / 10% / 12%",
+                "SCEPTER COOLDOWN: 0"
+            ],
+            "lore": "While learning to maneuver in nature alone, the Beastmaster also mastered the use of a pair of tomahawks, adept at cutting down trees as well as adversaries.",
+            "aghanimDescription": "Causes Wild Axes to have no cooldown, and can be used again once they come back.",
+            "notes": [
+                "This ability destroys trees."
+            ]
+        },
+        "stat": {
+            "abilityId": 5168,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                8
+            ],
+            "manaCost": [
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5169": {
+        "id": 5169,
+        "name": "beastmaster_call_of_the_wild",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 5169,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "description": [],
+            "attributes": [
+                "SUMMON DURATION:%boar_duration%",
+                "BOAR HEALTH:%boar_boar_hp_tooltip%",
+                "BOAR ATTACK DAMAGE:%boar_boar_damage_tooltip%",
+                "%BOAR SLOW:%boar_boar_moveslow_tooltip%",
+                "BOAR POISON DURATION:%boar_boar_poison_duration_tooltip%",
+                "SUMMON DURATION:%hawk_duration%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5169,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                45
+            ],
+            "manaCost": [
+                50,
+                60,
+                70,
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5172": {
+        "id": 5172,
+        "name": "beastmaster_inner_beast",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 5172,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Inner Beast",
+            "description": [
+                "Untaps the inner fury of nearby allies, passively increasing their attack speed."
+            ],
+            "attributes": [
+                "RADIUS: 1200",
+                "BONUS ATTACK SPEED: 10 / 20 / 30 / 40"
+            ],
+            "lore": "Beastmaster's ability to incite the innate strength of animals was seen in the mauling of the king of Slom.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5172,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5177": {
+        "id": 5177,
+        "name": "beastmaster_primal_roar",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 5177,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Primal Roar",
+            "description": [
+                "Beastmaster lets loose a deafening roar that stuns, and shoves open a path to its target. All units in the path of the roar are damaged, while units shoved aside by the roar have their movement and attack speed slowed. Additionally, Beastmaster and his units gain 40% movement speed for 3 seconds."
+            ],
+            "attributes": [
+                "STUN DURATION: 3.0 / 3.5 / 4.0",
+                "DAMAGE: 150 / 225 / 300",
+                "SLOW DURATION: 3 / 3.5 / 4",
+                "SHOUT WIDTH: 300",
+                "MOVEMENT SLOW: -60%",
+                "ATTACK SLOW: -60"
+            ],
+            "lore": "The Beastmaster has learned to channel his primal instincts into an animalistic roar, causing devastation in the ranks of enemies.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5177,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 0.6000000238418579,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "cooldown": [
+                90,
+                80,
+                70
+            ],
+            "manaCost": [
+                150,
+                175,
+                200
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5970": {
+        "id": 5970,
+        "name": "special_bonus_armor_7",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 5970,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+7 Armor",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5970,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6103": {
+        "id": 6103,
+        "name": "special_bonus_unique_beastmaster",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 6103,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Wild Axes Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6103,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6517": {
+        "id": 6517,
+        "name": "special_bonus_unique_beastmaster_2",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 6517,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Boar Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6517,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6611": {
+        "id": 6611,
+        "name": "special_bonus_unique_beastmaster_3",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 6611,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-14s Hawks Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6611,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6612": {
+        "id": 6612,
+        "name": "special_bonus_unique_beastmaster_4",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 6612,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Inner Beast Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6612,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7231": {
+        "id": 7231,
+        "name": "beastmaster_call_of_the_wild_hawk",
+        "uri": "beastmaster",
+        "language": {
+            "abilityId": 7231,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Call of the Wild Hawk",
+            "description": [
+                "Beastmaster sends an invisible Hawk to scout an area."
+            ],
+            "attributes": [
+                "SUMMON DURATION: 60",
+                "HAWK HEALTH: 150 / 200 / 250 / 300",
+                "HAWK SPEED: 300 / 340 / 380 / 420",
+                "HAWK VISION: 600 / 700 / 800 / 900"
+            ],
+            "lore": "After befriending the strange beast of his childhood, Beastmaster has learned to call to animals in times of need.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7231,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                60,
+                50,
+                40,
+                30
+            ],
+            "manaCost": [
+                30
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    }
+}

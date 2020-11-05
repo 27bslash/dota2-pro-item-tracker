@@ -1,0 +1,595 @@
+{
+    "410": {
+        "id": 410,
+        "name": "special_bonus_unique_silencer_6",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 410,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20% Arcane Curse Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 410,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5377": {
+        "id": 5377,
+        "name": "silencer_curse_of_the_silent",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 5377,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Arcane Curse",
+            "description": [
+                "Curses the target area, causing enemy heroes to take damage and slowing their movement speed. Anytime affected enemies cast a spell, the duration is increased."
+            ],
+            "attributes": [
+                "DAMAGE: 16 / 26 / 36 / 46",
+                "BASE DURATION: 6",
+                "PENALTY DURATION: 5",
+                "RADIUS: 425",
+                "MOVEMENT SLOW: -9% / -12% / -15% / -18%"
+            ],
+            "lore": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
+            "notes": [
+                "If an enemy hero affected by Arcane Curse is silenced, Arcane Curse will pause damage, slow and duration.",
+                "Affects creeps."
+            ]
+        },
+        "stat": {
+            "abilityId": 5377,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.5,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                20,
+                18,
+                16,
+                14
+            ],
+            "manaCost": [
+                125,
+                130,
+                135,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5378": {
+        "id": 5378,
+        "name": "silencer_glaives_of_wisdom",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 5378,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Glaives of Wisdom",
+            "description": [
+                "Silencer enchants his glaives with his wisdom, dealing additional damage based on his Intelligence. Silencer temporarily steals his target's Intelligence with each hit."
+            ],
+            "attributes": [
+                "INT TO DAMAGE: 15% / 35% / 55% / 75%",
+                "INT STEAL: 1 / 1 / 2 / 3",
+                "INT STEAL DURATION: 10 / 20 / 30 / 40"
+            ],
+            "lore": "Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5378,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 393224,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                15
+            ],
+            "isUltimate": false,
+            "duration": "0.0 0.0 0.0 0.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5379": {
+        "id": 5379,
+        "name": "silencer_last_word",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 5379,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Last Word",
+            "description": [
+                "Enchants a target, providing vision of them and causing them to be damaged and silenced if they cast a spell or if the enchantment timer expires. Deals extra damage based on the difference in intelligence between Silencer and the target."
+            ],
+            "attributes": [
+                "BASE DAMAGE: 80 / 120 / 160 / 200",
+                "INT MULTIPLIER: 1.5 / 2 / 2.5 / 3",
+                "ENEMY CAST TIMER: 4",
+                "SILENCE DURATION: 3 / 4 / 5 / 6",
+                "SCEPTER RADIUS: 600"
+            ],
+            "lore": "Nortrom ensures that spells uttered by his opponents will be their last.",
+            "aghanimDescription": "Causes Last Word to become an AoE ability.",
+            "notes": [
+                "Channeling abilities will trigger this effect once the caster finishes its channel."
+            ]
+        },
+        "stat": {
+            "abilityId": 5379,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.30000001192092896,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                22,
+                18,
+                14,
+                10
+            ],
+            "manaCost": [
+                115
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5380": {
+        "id": 5380,
+        "name": "silencer_global_silence",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 5380,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Global Silence",
+            "description": [
+                "Silencer stops all sound, preventing enemy heroes and units on the map from casting spells."
+            ],
+            "attributes": [
+                "DURATION: "
+            ],
+            "lore": "With a shock to the ground, all magic and sound pauses, and Nortrom fulfills his prophecy.",
+            "notes": [
+                "This skill works on invisible and Spell Immune units, but gaining spell immunity will remove its effect."
+            ]
+        },
+        "stat": {
+            "abilityId": 5380,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 0.5,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                130,
+                115,
+                100
+            ],
+            "manaCost": [
+                300,
+                450,
+                600
+            ],
+            "isUltimate": true,
+            "duration": "4.5 5.25 6.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5945": {
+        "id": 5945,
+        "name": "special_bonus_attack_range_200",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 5945,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+200 Attack Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5945,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6184": {
+        "id": 6184,
+        "name": "special_bonus_unique_silencer",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 6184,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Arcane Curse Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6184,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6561": {
+        "id": 6561,
+        "name": "special_bonus_cooldown_reduction_30",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 6561,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "30% Cooldown Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6561,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6878": {
+        "id": 6878,
+        "name": "special_bonus_unique_silencer_2",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 6878,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+2 Permanent Intelligence Steal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6878,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6879": {
+        "id": 6879,
+        "name": "special_bonus_unique_silencer_3",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 6879,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+15% Glaives of Wisdom Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6879,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6880": {
+        "id": 6880,
+        "name": "special_bonus_unique_silencer_4",
+        "uri": "silencer",
+        "language": {
+            "abilityId": 6880,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.5s Global Silence",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6880,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

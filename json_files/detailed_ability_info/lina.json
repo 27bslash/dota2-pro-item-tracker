@@ -1,0 +1,548 @@
+{
+    "444": {
+        "id": 444,
+        "name": "special_bonus_spell_amplify_11",
+        "uri": "lina",
+        "language": {
+            "abilityId": 444,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+11% Spell Amplification",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 444,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5040": {
+        "id": 5040,
+        "name": "lina_dragon_slave",
+        "uri": "lina",
+        "language": {
+            "abilityId": 5040,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Dragon Slave",
+            "description": [
+                "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its path."
+            ],
+            "attributes": [],
+            "lore": "In the scorched barren of Misrule, Lina learned to manipulate the fiery breath of the Desert Wyrm as a form of entertainment.",
+            "notes": [
+                "Dragon Slave can hit units up to 1225 units away."
+            ]
+        },
+        "stat": {
+            "abilityId": 5040,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 24,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1075
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.45,
+                0.45,
+                0.45,
+                0.45
+            ],
+            "cooldown": [
+                8
+            ],
+            "damage": [
+                85,
+                160,
+                235,
+                310
+            ],
+            "manaCost": [
+                100,
+                115,
+                130,
+                145
+            ],
+            "isUltimate": false,
+            "duration": "0.6875 0.6875 0.6875 0.6875",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5041": {
+        "id": 5041,
+        "name": "lina_light_strike_array",
+        "uri": "lina",
+        "language": {
+            "abilityId": 5041,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Light Strike Array",
+            "description": [
+                "Summons a column of flames that damages and stuns enemies."
+            ],
+            "attributes": [
+                "RADIUS: 225",
+                "STUN DURATION: 1.6 / 1.9 / 2.2 / 2.5",
+                "CAST DELAY: 0.5",
+                "DAMAGE: 80 / 120 / 160 / 200"
+            ],
+            "lore": "Lina's essence allows her to focus the sun's energies, causing air to combust at will.",
+            "notes": [
+                "Light Strike Array will destroy trees in its area of effect."
+            ]
+        },
+        "stat": {
+            "abilityId": 5041,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                625
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.45,
+                0.45,
+                0.45,
+                0.45
+            ],
+            "cooldown": [
+                7,
+                7,
+                7,
+                7
+            ],
+            "manaCost": [
+                100,
+                110,
+                120,
+                130
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5042": {
+        "id": 5042,
+        "name": "lina_fiery_soul",
+        "uri": "lina",
+        "language": {
+            "abilityId": 5042,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Fiery Soul",
+            "description": [
+                "Grants bonus attack and movement speed each time Lina casts a spell. Stacks with itself. Lasts 10 seconds."
+            ],
+            "attributes": [
+                "ATTACK SPEED BONUS: 40 / 55 / 70 / 85",
+                "MAX STACKS: 3",
+                "DURATION: 10"
+            ],
+            "lore": "Dancing flames embody Lina's playful nature, bringing out her true blazing self.",
+            "notes": [
+                "Duration refreshes each time a new spell is cast.",
+                "Using items does not trigger Fiery Soul."
+            ]
+        },
+        "stat": {
+            "abilityId": 5042,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5043": {
+        "id": 5043,
+        "name": "lina_laguna_blade",
+        "uri": "lina",
+        "language": {
+            "abilityId": 5043,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Laguna Blade",
+            "description": [
+                "Fires off a bolt of lightning at a single enemy unit, dealing massive damage."
+            ],
+            "attributes": [
+                "DAMAGE: 500 / 700 / 900"
+            ],
+            "lore": "The air around Lina becomes so intensely torrid that it scorches a foe that comes too close with white-hot lightning.",
+            "aghanimDescription": "Changes Laguna Blade's damage type to Pure, and allows it to slice through spell immunity.",
+            "notes": [
+                "Laguna Blade has a 0.25 delay before the damage is applied after the spell is cast, allowing certain abilities to avoid the damage."
+            ]
+        },
+        "stat": {
+            "abilityId": 5043,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.45,
+                0.45,
+                0.45
+            ],
+            "cooldown": [
+                70,
+                60,
+                50
+            ],
+            "manaCost": [
+                280,
+                420,
+                680
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5963": {
+        "id": 5963,
+        "name": "special_bonus_attack_range_150",
+        "uri": "lina",
+        "language": {
+            "abilityId": 5963,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+150 Attack Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5963,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "5993": {
+        "id": 5993,
+        "name": "special_bonus_hp_300",
+        "uri": "lina",
+        "language": {
+            "abilityId": 5993,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+300 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5993,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6212": {
+        "id": 6212,
+        "name": "special_bonus_unique_lina_1",
+        "uri": "lina",
+        "language": {
+            "abilityId": 6212,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-5s Dragon Slave Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6212,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6313": {
+        "id": 6313,
+        "name": "special_bonus_unique_lina_2",
+        "uri": "lina",
+        "language": {
+            "abilityId": 6313,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30/1.5% Fiery Soul Per Stack",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6313,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6388": {
+        "id": 6388,
+        "name": "special_bonus_unique_lina_3",
+        "uri": "lina",
+        "language": {
+            "abilityId": 6388,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+110 Light Strike Array Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6388,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

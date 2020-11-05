@@ -1,0 +1,711 @@
+{
+    "5400": {
+        "id": 5400,
+        "name": "brewmaster_thunder_clap",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 5400,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Thunder Clap",
+            "description": [
+                "Slams the ground, dealing damage and slowing the movement speed and attack rate of nearby enemy units."
+            ],
+            "attributes": [
+                "RADIUS: 400 / 400 / 400 / 400",
+                "DAMAGE: 90 / 160 / 230 / 300",
+                "MOVEMENT SLOW: 25% / 35% / 45% / 55%",
+                "ATTACK SLOW: 25 / 35 / 45 / 55",
+                "HERO DURATION: 4.0"
+            ],
+            "lore": "A slam of Mangix' mighty keg starts the festivities.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5400,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                13
+            ],
+            "manaCost": [
+                90,
+                100,
+                110,
+                120
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5401": {
+        "id": 5401,
+        "name": "brewmaster_drunken_haze",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 5401,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Drunken Haze",
+            "description": [
+                "Drenches a target in alcohol, causing their movement speed to be reduced, and causing their attacks to have a chance to miss."
+            ],
+            "attributes": [
+                "DURATION: 4.5",
+                "MOVEMENT SLOW: 10% / 20% / 30% / 40%",
+                "MISS CHANCE: 70%"
+            ],
+            "lore": "The Order of the Oyo's solution to all problems - another round!",
+            "notes": [
+                "Can be disjointed."
+            ]
+        },
+        "stat": {
+            "abilityId": 5401,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 5,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                850,
+                850,
+                850,
+                850
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                11,
+                9,
+                7,
+                5
+            ],
+            "manaCost": [
+                25
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5402": {
+        "id": 5402,
+        "name": "brewmaster_drunken_brawler",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 5402,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Drunken Brawler",
+            "description": [
+                "Goes into a drunken brawler state, granting you a chance to avoid attacks and to deal critical damage. Brewmaster moves with a varying amount of movement speed, alternating between -20 slower and 40% faster. Lasts 5 seconds."
+            ],
+            "attributes": [
+                "DODGE CHANCE: 50% / 60% / 70% / 80%",
+                "CRITICAL CHANCE: 80%",
+                "CRITICAL DAMAGE: 140% / 180% / 220% / 260%",
+                "DURATION: 5"
+            ],
+            "lore": "When Mangix won his title as the Brewmaster of the Order of Oyo, he also claimed his place in the mastery of inebriation.",
+            "notes": [
+                "Stacks diminishingly with other sources of Evasion."
+            ]
+        },
+        "stat": {
+            "abilityId": 5402,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                23,
+                21,
+                19,
+                17
+            ],
+            "manaCost": [
+                35,
+                40,
+                45,
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5403": {
+        "id": 5403,
+        "name": "brewmaster_primal_split",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 5403,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Primal Split",
+            "description": [
+                "Splits Brewmaster into elements, forming 3 specialized warriors, adept at survival, each with their own abilities. If any of them survive until the end of their summoned timer, the Brewmaster is reborn."
+            ],
+            "attributes": [
+                "DURATION: 16 / 18 / 20",
+                "SCEPTER BONUS MOVESPEED: 100"
+            ],
+            "lore": "It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor.",
+            "aghanimDescription": "Grants Brewlings bonus movement speed. Earth gains Thunder Clap, Storm gains Cinder Brew and Fire gains Drunken Brawler.",
+            "notes": [
+                "The Earth Element will carry all auras that the Brewmaster has, as well as True Sight.",
+                "The Fire Element has phased movement.",
+                "When the spell ends, Brewmaster will take the place of an element in this order, assuming they are alive: Earth, Storm, Fire."
+            ]
+        },
+        "stat": {
+            "abilityId": 5403,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.65
+            ],
+            "cooldown": [
+                140,
+                130,
+                120
+            ],
+            "manaCost": [
+                125,
+                150,
+                175
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6030": {
+        "id": 6030,
+        "name": "special_bonus_attack_speed_80",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 6030,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+80 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6030,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6037": {
+        "id": 6037,
+        "name": "special_bonus_attack_speed_100",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 6037,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6037,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6082": {
+        "id": 6082,
+        "name": "special_bonus_unique_brewmaster",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 6082,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1400 Health to Primal Split Units",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6082,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6159": {
+        "id": 6159,
+        "name": "special_bonus_attack_damage_12",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 6159,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+12 Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6159,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6359": {
+        "id": 6359,
+        "name": "special_bonus_unique_brewmaster_2",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 6359,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-65s Primal Split Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6359,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6516": {
+        "id": 6516,
+        "name": "special_bonus_unique_brewmaster_3",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 6516,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+2.5s Thunder Clap Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6516,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6555": {
+        "id": 6555,
+        "name": "special_bonus_attack_speed_140",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 6555,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+140 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6555,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6614": {
+        "id": 6614,
+        "name": "special_bonus_unique_brewmaster_4",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 6614,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+120% Drunken Brawler Critical Strike Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6614,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7310": {
+        "id": 7310,
+        "name": "brewmaster_cinder_brew",
+        "uri": "brewmaster",
+        "language": {
+            "abilityId": 7310,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Cinder Brew",
+            "description": [
+                "Drenches an area in alcohol, causing enemy units to move slower and ignited once they take any spell damage. Duration is increased by 3 seconds when ignited."
+            ],
+            "attributes": [
+                "DURATION: 5",
+                "IGNITE TOTAL DAMAGE: 75 / 150 / 225 / 300",
+                "MOVEMENT SLOW: 24% / 28% / 32% / 36%"
+            ],
+            "lore": "The Order of the Oyo's solution to all problems - another round!",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7310,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                850,
+                850,
+                850,
+                850
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                20,
+                17,
+                14,
+                11
+            ],
+            "manaCost": [
+                50,
+                60,
+                70,
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    }
+}

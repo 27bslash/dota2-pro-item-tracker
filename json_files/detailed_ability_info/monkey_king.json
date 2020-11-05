@@ -1,0 +1,879 @@
+{
+    "5716": {
+        "id": 5716,
+        "name": "monkey_king_boundless_strike",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 5716,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Boundless Strike",
+            "description": [
+                "Monkey King enlarges his staff and slams it against the ground, stunning enemies in a line and damaging them with a critical hit based on his attack. Has True Strike."
+            ],
+            "attributes": [
+                "DISTANCE: 1200",
+                "STUN DURATION: 0.4 / 0.8 / 1.2 / 1.6",
+                "CRITICAL DAMAGE: 150% / 175% / 200% / 225%"
+            ],
+            "lore": "The legendary Jingu Bang grows to match its master's will, ensuring no enemy can escape the Monkey King's reach.",
+            "notes": [
+                "Does not affect spell-immune enemies."
+            ]
+        },
+        "stat": {
+            "abilityId": 5716,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2097168,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                22
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5719": {
+        "id": 5719,
+        "name": "monkey_king_mischief",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 5719,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Mischief",
+            "description": [
+                "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants damage immunity for 0.2 upon transforming."
+            ],
+            "attributes": [
+                "MOVE SPEED: 200"
+            ],
+            "lore": "Watch out for that tree.",
+            "notes": [
+                "If transformed into a courier, Monkey King matches the movement speed of the courier."
+            ]
+        },
+        "stat": {
+            "abilityId": 5719,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 41028,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                20
+            ],
+            "manaCost": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5721": {
+        "id": 5721,
+        "name": "monkey_king_tree_dance",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 5721,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Tree Dance",
+            "description": [
+                "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for 4 seconds. Taking damage from player controlled units or Roshan while on the ground puts Tree Dance on cooldown."
+            ],
+            "attributes": [
+                "DISTANCE: 1000",
+                "DAMAGE COOLDOWN: 3.0",
+                "PRIMAL SPRING DAMAGE: 140 / 210 / 280 / 350",
+                "PRIMAL SPRING SLOW: 20% / 40% / 60% / 80%"
+            ],
+            "lore": "Sun Wukong dances nimbly along the treetop canopy, always just out of arm's reach.",
+            "notes": [
+                "Tree Dance cooldown starts upon landing.",
+                "Right-clicking the ground will have Monkey King drop from the tree."
+            ]
+        },
+        "stat": {
+            "abilityId": 5721,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4104,
+            "unitTargetType": 64,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                1
+            ],
+            "manaCost": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5722": {
+        "id": 5722,
+        "name": "monkey_king_untransform",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 5722,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Revert Form",
+            "description": [
+                "Reverts Monkey King's shape to his original form."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5722,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 41029,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                1
+            ],
+            "manaCost": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "10.0 10.0 10.0 10.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5723": {
+        "id": 5723,
+        "name": "monkey_king_jingu_mastery",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 5723,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Jingu Mastery",
+            "description": [
+                "Monkey King's attacks awaken the Jingu Bang's power. Upon the fourth hit on the same enemy hero, Monkey King earns four charged attacks that have bonus damage and lifesteal."
+            ],
+            "attributes": [
+                "REQUIRED HITS: 4",
+                "COUNTER DURATION: 7 / 8 / 9 / 10",
+                "CHARGES: 4",
+                "BONUS DAMAGE: 40 / 70 / 100 / 130",
+                "BONUS LIFESTEAL: 15% / 30% / 45% / 60%"
+            ],
+            "lore": "Always sensitive to the moods of its master, the Jingu Bang radiates power when Sun Wukong's combat fervor is on full display.",
+            "notes": [
+                "Hitting an enemy with Boundless Strike adds to the hit counter.",
+                "Repeatedly hitting an enemy refreshes the Jingu Mastery debuff duration.",
+                "Hit charges on enemies cannot be dispelled."
+            ]
+        },
+        "stat": {
+            "abilityId": 5723,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5724": {
+        "id": 5724,
+        "name": "monkey_king_primal_spring",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 5724,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Primal Spring",
+            "description": [
+                "Monkey King springs out from his tree perch, damaging and slowing enemies in the area where he lands. Damage and slow amounts are in proportion to channel duration."
+            ],
+            "attributes": [
+                "DAMAGE: 140 / 210 / 280 / 350",
+                "MOVEMENT SLOW: 20% / 40% / 60% / 80%",
+                "MAX SLOW DURATION: 4.0",
+                "MAX DISTANCE: 1000"
+            ],
+            "lore": "Leaping from the safety of cover into the midst of his enemies, Sun Wukong attacks without mercy.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5724,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4336,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "channelTime": [
+                1.7
+            ],
+            "cooldown": [
+                19,
+                17,
+                15,
+                13
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5725": {
+        "id": 5725,
+        "name": "monkey_king_wukongs_command",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 5725,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Wukong's Command",
+            "description": [
+                "Monkey King creates a circular formation of soldiers that spread out from his position. If Monkey King leaves the area his soldiers disperse. The soldiers have Monkey King's attack and only target heroes. Monkey King is granted bonus armor for the spell's duration."
+            ],
+            "attributes": [
+                "SOLDIER ATK SPEED: 1.1",
+                "DURATION: 13.0",
+                "BONUS ARMOR: 12 / 18 / 24",
+                "SCEPTER SOLDIER SPAWN INTERVAL: 3.5",
+                "SCEPTER SOLDIER DURATION: 12"
+            ],
+            "lore": "Monkey King rips out a tuft of fur to blow at his enemies, charging each strand to transform into a copy of himself.",
+            "aghanimDescription": "Spawns a monkey soldier near you at regular intervals. Soldiers do not spawn while invisible or on trees. Soldiers only attack buildings when Monkey King himself is nearby.",
+            "notes": [
+                "Soldiers do not receive Jingu Mastery bonuses.",
+                "Soldiers do not copy Basher or Abyssal."
+            ]
+        },
+        "stat": {
+            "abilityId": 5725,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2097200,
+            "unitTargetType": 1,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                1.2
+            ],
+            "cooldown": [
+                130,
+                110,
+                90
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": true,
+            "duration": "13.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5726": {
+        "id": 5726,
+        "name": "monkey_king_primal_spring_early",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 5726,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Spring Early",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5726,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 67653,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5906": {
+        "id": 5906,
+        "name": "special_bonus_attack_speed_20",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 5906,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5906,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6303": {
+        "id": 6303,
+        "name": "special_bonus_unique_monkey_king",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 6303,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40% Boundless Strike Crit",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6303,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6421": {
+        "id": 6421,
+        "name": "special_bonus_unique_monkey_king_2",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 6421,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Jingu Mastery Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6421,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6696": {
+        "id": 6696,
+        "name": "special_bonus_unique_monkey_king_3",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 6696,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+320 Primal Spring Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6696,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6697": {
+        "id": 6697,
+        "name": "special_bonus_unique_monkey_king_4",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 6697,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Armor Wukong's Command",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6697,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7024": {
+        "id": 7024,
+        "name": "special_bonus_unique_monkey_king_5",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 7024,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+400 Tree Dance Vision AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7024,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7025": {
+        "id": 7025,
+        "name": "special_bonus_unique_monkey_king_6",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 7025,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Additional Wukong's Command Ring",
+            "description": [
+                "Creates an additional ring of 7 soldiers at 1100 range from the center."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7025,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7038": {
+        "id": 7038,
+        "name": "special_bonus_unique_monkey_king_7",
+        "uri": "monkey_king",
+        "language": {
+            "abilityId": 7038,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+475 Tree Dance Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7038,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

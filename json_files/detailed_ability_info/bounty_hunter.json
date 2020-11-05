@@ -1,0 +1,547 @@
+{
+    "431": {
+        "id": 431,
+        "name": "special_bonus_evasion_40",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 431,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "40% Evasion",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 431,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "484": {
+        "id": 484,
+        "name": "special_bonus_unique_bounty_hunter_4",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 484,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40 Jinada Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 484,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5285": {
+        "id": 5285,
+        "name": "bounty_hunter_shuriken_toss",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 5285,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shuriken Toss",
+            "description": [
+                "Hurls a deadly shuriken at an enemy unit, dealing damage and mini-stunning the target. The shuriken will bounce to any Tracked units who are within a 1200 radius of each other."
+            ],
+            "attributes": [
+                "DAMAGE: 150 / 225 / 300 / 375",
+                "TRACK BOUNCE RANGE: 1200",
+                "MINISTUN DURATION: 0.1",
+                "SCEPTER COOLDOWN: 6",
+                "SCEPTER CAST RANGE: 650"
+            ],
+            "lore": "While the shuriken may be small, Gondar's precise aim can cause critical damage.",
+            "aghanimDescription": "Upgrades Shuriken Toss. Applies Jinada to it, reduces cooldown and increases cast range.",
+            "notes": [
+                "This spell interrupts channeling abilities."
+            ]
+        },
+        "stat": {
+            "abilityId": 5285,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.10000000149011612,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                8
+            ],
+            "manaCost": [
+                120,
+                125,
+                130,
+                135
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5286": {
+        "id": 5286,
+        "name": "bounty_hunter_jinada",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 5286,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Jinada",
+            "description": [
+                "Bounty Hunter plans his next hit, dealing bonus damage and stealing some unreliable gold."
+            ],
+            "attributes": [
+                "BONUS DAMAGE: 70 / 100 / 130 / 160",
+                "GOLD STEAL: 12 / 20 / 28 / 36"
+            ],
+            "lore": "Gondar's vast experience ensures he never walks away from a transaction empty-handed.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5286,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                12,
+                9,
+                6,
+                3
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5287": {
+        "id": 5287,
+        "name": "bounty_hunter_wind_walk",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 5287,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shadow Walk",
+            "description": [
+                "Bounty Hunter becomes invisible and gains the ability to move through other units until he attacks or uses an ability.  If he breaks the invisibility with an attack, that attack will slow the target's movement speed."
+            ],
+            "attributes": [
+                "INVISIBILITY DURATION: 20.0 / 25.0 / 30.0 / 35.0",
+                "FADE TIME: 1.0 / 0.75 / 0.5 / 0.25",
+                "MOVEMENT SLOW: 14% / 20% / 26% / 32%",
+                "SLOW DURATION: 4"
+            ],
+            "lore": "The court jesters present during King Goff's assassination can recount no other image than a dancing shadow.",
+            "notes": [
+                "Will not break most channeling of spells upon activation."
+            ]
+        },
+        "stat": {
+            "abilityId": 5287,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 526340,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                15,
+                15,
+                15,
+                15
+            ],
+            "manaCost": [
+                65
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5288": {
+        "id": 5288,
+        "name": "bounty_hunter_track",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 5288,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Track",
+            "description": [
+                "Tracks an enemy hero, granting True Sight of the target, and information on how much gold it is carrying. You move fast when near the tracked unit and deal critical strikes when attacking it. If the target dies, Bounty Hunter and nearby heroes collect a bonus bounty of gold. Casting Track does not take you out of invisibility."
+            ],
+            "attributes": [
+                "SELF CRITICAL STRIKE: 140% / 170% / 200%",
+                "SELF BONUS SPEED: 16% / 20% / 24%",
+                "ALLIES BONUS GOLD: 40 / 80 / 120",
+                "SELF BONUS GOLD: 130 / 225 / 320",
+                "DURATION: 30.0 / 30.0 / 30.0"
+            ],
+            "lore": "Using his elevated senses of sight and smell, Gondar's hits have quite a good chance of success.",
+            "notes": [
+                "Bounty Hunter will get the bonus gold if the target dies while Track is active, regardless of how it died.",
+                "Track's effect is only visible to allies.",
+                "You can see the amount of gold the target is carrying by mousing over the debuff icon above the target's ability bar.",
+                "Bonus gold is reliable gold."
+            ]
+        },
+        "stat": {
+            "abilityId": 5288,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 8,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 20,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                4
+            ],
+            "manaCost": [
+                60
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6018": {
+        "id": 6018,
+        "name": "special_bonus_unique_bounty_hunter",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 6018,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50 Jinada Gold Steal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6018,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6358": {
+        "id": 6358,
+        "name": "special_bonus_unique_bounty_hunter_2",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 6358,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50 Shuriken Toss Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6358,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6613": {
+        "id": 6613,
+        "name": "special_bonus_evasion_50",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 6613,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "50% Evasion",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6613,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7040": {
+        "id": 7040,
+        "name": "special_bonus_unique_bounty_hunter_3",
+        "uri": "bounty_hunter",
+        "language": {
+            "abilityId": 7040,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+250 Track Gold",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7040,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

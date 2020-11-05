@@ -1,0 +1,569 @@
+{
+    "509": {
+        "id": 509,
+        "name": "special_bonus_unique_leshrac_5",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 509,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40 Split Earth Radius",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 509,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "516": {
+        "id": 516,
+        "name": "special_bonus_unique_leshrac_6",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 516,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+175 Lightning Storm Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 516,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5241": {
+        "id": 5241,
+        "name": "leshrac_split_earth",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 5241,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Split Earth",
+            "description": [
+                "Splits the earth under enemies. Deals damage and stuns for a short duration."
+            ],
+            "attributes": [
+                "RADIUS: 150 / 175 / 200 / 225",
+                "STUN DURATION: 2",
+                "STUN DELAY: 0.35"
+            ],
+            "lore": "Twisting nature to his vile will, the shifting earth consumes those unlucky enough to cross Leshrac's path.",
+            "notes": [
+                "Split Earth will destroy trees in its area of effect.",
+                "There is a 0.35 second delay before the effect is applied."
+            ]
+        },
+        "stat": {
+            "abilityId": 5241,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                650
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.7,
+                0.7,
+                0.7,
+                0.7
+            ],
+            "cooldown": [
+                9,
+                9,
+                9,
+                9
+            ],
+            "damage": [
+                120,
+                180,
+                240,
+                300
+            ],
+            "manaCost": [
+                80,
+                100,
+                120,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "2 2 2 2",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5242": {
+        "id": 5242,
+        "name": "leshrac_diabolic_edict",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 5242,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Diabolic Edict",
+            "description": [
+                "Saturates the area around Leshrac with magical explosions that deal physical damage to enemy units and structures. The fewer units available to attack, the more damage those units will take. Deals 40% more damage to towers. Lasts 10 seconds."
+            ],
+            "attributes": [
+                "RADIUS: 500",
+                "EXPLOSIONS: 40"
+            ],
+            "lore": "Chronoptic energy bursts from one plane to the other, evaporating anything it touches.",
+            "notes": [
+                "Damage is not reduced by damage block.",
+                "The explosions will continue even if Leshrac is killed.",
+                "Can damage buildings, Spell Immune units, and invisible units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5242,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 35,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.5
+            ],
+            "cooldown": [
+                22,
+                22,
+                22,
+                22
+            ],
+            "damage": [
+                8,
+                20,
+                32,
+                44
+            ],
+            "manaCost": [
+                95,
+                120,
+                135,
+                155
+            ],
+            "isUltimate": false,
+            "duration": "10",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5243": {
+        "id": 5243,
+        "name": "leshrac_lightning_storm",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 5243,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Lightning Storm",
+            "description": [
+                "Summons a lightning storm that blasts the target enemy unit, then strikes any nearby enemy units. Struck enemies are slowed."
+            ],
+            "attributes": [
+                "DAMAGE: 90 / 130 / 170 / 210",
+                "LIGHTNING STRIKES: 4 / 6 / 8 / 10",
+                "MOVEMENT SLOW: -75%",
+                "SLOW DURATION: 0.4 / 0.6 / 0.8 / 1.0",
+                "LIGHTNING JUMP RADIUS: 475",
+                "SCEPTER INTERVAL: 1.5",
+                "SCEPTER RADIUS: 750"
+            ],
+            "lore": "The Tormented Soul's mastery of the elements is evident in the massive storms that strike down armies before him.",
+            "aghanimDescription": "While Pulse Nova is active, Lightning Storm will hit one random unit in a radius every %interval_scepter% seconds.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5243,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                650
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                4
+            ],
+            "manaCost": [
+                80,
+                100,
+                120,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5244": {
+        "id": 5244,
+        "name": "leshrac_pulse_nova",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 5244,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Pulse Nova",
+            "description": [
+                "Creates waves of damaging energy around Leshrac, one per second, to damage nearby enemy units. Drains Leshrac's mana with each pulse."
+            ],
+            "attributes": [
+                "RADIUS: 450",
+                "MANA/SEC: 20 / 40 / 60",
+                "DAMAGE: 100 / 150 / 200"
+            ],
+            "lore": "If necessary, the Tormented Soul can manipulate space time itself, ravaging lesser beings.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5244,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 524804,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "manaCost": [
+                70
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6063": {
+        "id": 6063,
+        "name": "special_bonus_unique_leshrac_1",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 6063,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Diabolic Edict Explosions",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6063,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6240": {
+        "id": 6240,
+        "name": "special_bonus_unique_leshrac_2",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 6240,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.0s Lightning Storm Slow Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6240,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6321": {
+        "id": 6321,
+        "name": "special_bonus_mp_400",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 6321,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+400 Mana",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6321,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6672": {
+        "id": 6672,
+        "name": "special_bonus_unique_leshrac_3",
+        "uri": "leshrac",
+        "language": {
+            "abilityId": 6672,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40 Pulse Nova Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6672,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

@@ -1,0 +1,499 @@
+{
+    "5226": {
+        "id": 5226,
+        "name": "dragon_knight_breathe_fire",
+        "uri": "dragon_knight",
+        "language": {
+            "abilityId": 5226,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Breathe Fire",
+            "description": [
+                "Unleashes a breath of fire in front of Dragon Knight that burns enemies and reduces the damage their attacks deal."
+            ],
+            "attributes": [
+                "DAMAGE REDUCTION: -25%",
+                "REDUCTION DURATION: 11"
+            ],
+            "lore": "Knight Davion's breath has become that of the mighty Eldwurm Slyrak, remembered for burning numerous other knights to a crisp.",
+            "notes": [
+                "Hits units up to 900 away."
+            ]
+        },
+        "stat": {
+            "abilityId": 5226,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 1048,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                14,
+                13,
+                12,
+                11
+            ],
+            "damage": [
+                90,
+                170,
+                240,
+                300
+            ],
+            "manaCost": [
+                100,
+                110,
+                120,
+                130
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5227": {
+        "id": 5227,
+        "name": "dragon_knight_dragon_tail",
+        "uri": "dragon_knight",
+        "language": {
+            "abilityId": 5227,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Dragon Tail",
+            "description": [
+                "Dragon Knight smites an enemy unit in melee range with his shield, stunning it while dealing minor damage. When in Elder Dragon Form, the cast range increases to 400."
+            ],
+            "attributes": [
+                "STUN DURATION: 2.5 / 2.75 / 3.0 / 3.25"
+            ],
+            "lore": "Davion's combination of dragon talents and knightly skills makes him a vicious opponent in melee combat.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5227,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                150
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                12,
+                11,
+                10,
+                9
+            ],
+            "damage": [
+                25,
+                50,
+                75,
+                100
+            ],
+            "manaCost": [
+                100,
+                100,
+                100,
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5228": {
+        "id": 5228,
+        "name": "dragon_knight_dragon_blood",
+        "uri": "dragon_knight",
+        "language": {
+            "abilityId": 5228,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Dragon Blood",
+            "description": [
+                "The life blood of the Dragon improves health regeneration and strengthens armor."
+            ],
+            "attributes": [
+                "HEALTH REGEN: 4 / 8 / 12 / 16",
+                "ARMOR: 3 / 6 / 9 / 12"
+            ],
+            "lore": "Slyrak's blood still courses through Davion's veins, giving him twice the vitality of an ordinary knight.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5228,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5229": {
+        "id": 5229,
+        "name": "dragon_knight_elder_dragon_form",
+        "uri": "dragon_knight",
+        "language": {
+            "abilityId": 5229,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Elder Dragon Form",
+            "description": [
+                "Dragon Knight takes the form of one of three powerful elder dragons, increasing his speed, and Dragon Tail's range, while granting him new powers.",
+                "<font color=\\\"#9acd32\\\">LEVEL 1 Green Dragon</font> - Corrosive Breath: attacks deal 20 / 20 / 20 / 30 poison damage per second for 5.0 / 5.0 / 5.0 seconds. Works on structures.",
+                "<font color=\\\"#ff0000\\\">LEVEL 2 Red Dragon</font> - Splash Attack: attacks damage all enemy units in a 300 radius for 75 / 75 / 75 / 115% damage, with Corrosive Breath added to the targets.",
+                "<font color=\\\"#87ceeb\\\">LEVEL 3 Blue Dragon</font> - Frost Breath: slows movement speed by -40 / -40 / -40 / -60% and attack speed by -40 / -40 / -40 / -60 of enemy units in Splash Attack range for 3.0 / 3.0 / 3.0 seconds, with Corrosive Breath added to the targets."
+            ],
+            "attributes": [
+                "DURATION: 60",
+                "BONUS MOVE SPEED: 25",
+                "BONUS ATTACK RANGE: 350 / 350 / 350 / 350"
+            ],
+            "lore": "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm.",
+            "aghanimDescription": "Increases the level of your ultimate. Adds a 4th level, Black Dragon. Black Dragon has bonus Corrosive Damage, Splash Damage and Slow amount, increased Magic Resistance and free pathing.",
+            "notes": [
+                "Corrosive Breath poison damage is lethal.",
+                "Cooldowns of items that are different for ranged and melee units will be based on which form Dragon Knight was in when the item was used."
+            ]
+        },
+        "stat": {
+            "abilityId": 5229,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 4,
+            "modifierSupportValue": 0.3499999940395355,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                115
+            ],
+            "manaCost": [
+                50,
+                50,
+                50
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5984": {
+        "id": 5984,
+        "name": "special_bonus_strength_25",
+        "uri": "dragon_knight",
+        "language": {
+            "abilityId": 5984,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+25 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5984,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6090": {
+        "id": 6090,
+        "name": "special_bonus_unique_dragon_knight",
+        "uri": "dragon_knight",
+        "language": {
+            "abilityId": 6090,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "1.8x Dragon Blood HP Regen/Armor",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6090,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6635": {
+        "id": 6635,
+        "name": "special_bonus_unique_dragon_knight_2",
+        "uri": "dragon_knight",
+        "language": {
+            "abilityId": 6635,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.6s Dragon Tail",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6635,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7113": {
+        "id": 7113,
+        "name": "special_bonus_unique_dragon_knight_3",
+        "uri": "dragon_knight",
+        "language": {
+            "abilityId": 7113,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-24% Breathe Fire Damage Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7113,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "8005": {
+        "id": 8005,
+        "name": "special_bonus_gold_income_210",
+        "uri": "dragon_knight",
+        "language": {
+            "abilityId": 8005,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+210 Gold/Min",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 8005,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    }
+}

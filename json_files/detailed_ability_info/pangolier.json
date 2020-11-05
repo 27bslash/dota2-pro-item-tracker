@@ -1,0 +1,705 @@
+{
+    "447": {
+        "id": 447,
+        "name": "special_bonus_strength_16",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 447,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+16 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 447,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5961": {
+        "id": 5961,
+        "name": "special_bonus_mp_regen_2",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 5961,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+2 Mana Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5961,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6343": {
+        "id": 6343,
+        "name": "pangolier_gyroshell",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 6343,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Rolling Thunder",
+            "description": [
+                "Pangolier curls into a spell-immune ball and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage and stunning them when they land. ",
+                "",
+                "Colliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.",
+                "",
+                "DISPEL TYPE: Basic Dispel"
+            ],
+            "attributes": [
+                "TRANSFORM TIME: 1.2",
+                "ROLL SPEED: 600",
+                "RADIUS: 150",
+                "KNOCKBACK DISTANCE: 150",
+                "STUN DURATION: 1.0 / 1.25 / 1.5",
+                "DURATION: 8.0"
+            ],
+            "lore": "Where his ancestors sought only refuge, the Pangolier saw opportunity...",
+            "notes": [
+                "Enemies can be stunned multiple times per use, but cannot be affected a subsequent time until the previous stun duration ends.",
+                "If Pangolier is disabled while rolling, he will continue to stun and knock enemies that come within range."
+            ]
+        },
+        "stat": {
+            "abilityId": 6343,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 20484,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                1.2
+            ],
+            "cooldown": [
+                70
+            ],
+            "damage": [
+                200,
+                275,
+                350
+            ],
+            "manaCost": [
+                100,
+                150,
+                200
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6344": {
+        "id": 6344,
+        "name": "pangolier_swashbuckle",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 6344,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Swashbuckle",
+            "description": [
+                "Vector Targeted. Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes.",
+                "",
+                "Lucky Shot has a chance to activate from this damage."
+            ],
+            "attributes": [
+                "DASH RANGE: 900",
+                "SLASH RANGE: 1000",
+                "SLASH WIDTH: 125",
+                "DAMAGE PER STRIKE: 24 / 42 / 60 / 78",
+                "STRIKES: 4"
+            ],
+            "lore": "The Pangolier's blade is even nimbler than his tongue.",
+            "notes": [
+                "Attack modifiers have a chance to proc on Swashbuckle attacks.",
+                "Casting Swashbuckle during Rolling Thunder ends Rolling Thunder."
+            ]
+        },
+        "stat": {
+            "abilityId": 6344,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                20,
+                16,
+                12,
+                8
+            ],
+            "manaCost": [
+                80,
+                90,
+                100,
+                110
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6346": {
+        "id": 6346,
+        "name": "pangolier_heartpiercer",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 6346,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Heartpiercer",
+            "description": [
+                "Pangolier reads his enemies perfectly, deftly slipping his blade past defenses. Each attack has a chance to negate enemy armor and slow the target for a duration, activating after a short delay."
+            ],
+            "attributes": [
+                "PIERCE CHANCE: 15%",
+                "DURATION: 2 / 3 / 4 / 5",
+                "MOVE SLOW: -35 / -40 / -45 / -50",
+                "DEBUFF DELAY: 2.0"
+            ],
+            "lore": "These fools know nothing of real armor...",
+            "notes": [
+                "Does not proc when attacking Roshan or buildings."
+            ]
+        },
+        "stat": {
+            "abilityId": 6346,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6461": {
+        "id": 6461,
+        "name": "pangolier_shield_crash",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 6461,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shield Crash",
+            "description": [
+                "Pangolier jumps in the air and slams back to the ground in front of his current position, damaging all enemies in a radius. For each enemy hero hit, he gains a percentage of incoming damage reduction for a short time.",
+                "",
+                "Forward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs."
+            ],
+            "attributes": [
+                "DAMAGE: 75 / 150 / 225 / 300",
+                "RADIUS: 500",
+                "REDUCTION DURATION: 10.0",
+                "REDUCTION PER HERO: 9% / 12% / 15% / 18%"
+            ],
+            "lore": "Only in the midst of his enemies does the Pangolier truly thrive.",
+            "aghanimDescription": "Causes Shield Crash to cast a 2-attack Swashbuckle in every 90 degrees around your hero.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6461,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                19,
+                17,
+                15,
+                13
+            ],
+            "manaCost": [
+                90,
+                100,
+                110,
+                120
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6463": {
+        "id": 6463,
+        "name": "special_bonus_unique_pangolier_2",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 6463,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "2.5s Shield Crash CD in Ball",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6463,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7307": {
+        "id": 7307,
+        "name": "pangolier_lucky_shot",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 7307,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Lucky Shot",
+            "description": [
+                "Pangolier rolls the dice and lets fate decide the outcome for his enemies. Grants a chance to slow, apply a Disarm and reduce armor."
+            ],
+            "attributes": [
+                "CHANCE: 17%",
+                "DURATION: 2 / 3 / 4 / 5",
+                "SLOW: 35%",
+                "ARMOR REDUCTION: 3 / 4 / 5 / 6"
+            ],
+            "lore": "The Pangolier's blade is guided more often by whim than reason.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7307,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "9060": {
+        "id": 9060,
+        "name": "special_bonus_unique_pangolier_3",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 9060,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Swashbuckle Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9060,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "9061": {
+        "id": 9061,
+        "name": "special_bonus_unique_pangolier_4",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 9061,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-2.5s Swashbuckle Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9061,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "9062": {
+        "id": 9062,
+        "name": "special_bonus_unique_pangolier_5",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 9062,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-28.0s Rolling Thunder Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9062,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "9135": {
+        "id": 9135,
+        "name": "special_bonus_unique_pangolier_6",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 9135,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+3s Rolling Thunder Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9135,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "9391": {
+        "id": 9391,
+        "name": "special_bonus_unique_pangolier_7",
+        "uri": "pangolier",
+        "language": {
+            "abilityId": 9391,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+350 Swashbuckle Slash Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9391,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

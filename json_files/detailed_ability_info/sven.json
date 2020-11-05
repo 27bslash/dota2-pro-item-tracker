@@ -1,0 +1,498 @@
+{
+    "5094": {
+        "id": 5094,
+        "name": "sven_storm_bolt",
+        "uri": "sven",
+        "language": {
+            "abilityId": 5094,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Storm Hammer",
+            "description": [
+                "Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target."
+            ],
+            "attributes": [
+                "DURATION: 1.25 / 1.5 / 1.75 / 2.0",
+                "RADIUS: 255",
+                "SCEPTER BONUS CAST RANGE: 500"
+            ],
+            "lore": "The Rogue Knight's iron gauntlet, taken from the school of his father, strikes his foes to their core.",
+            "aghanimDescription": "Increases cast range and transports you along the storm hammer, attacking every enemy on impact.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5094,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16424,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                18,
+                16,
+                14,
+                12
+            ],
+            "damage": [
+                110,
+                180,
+                250,
+                320
+            ],
+            "manaCost": [
+                110,
+                120,
+                130,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5095": {
+        "id": 5095,
+        "name": "sven_great_cleave",
+        "uri": "sven",
+        "language": {
+            "abilityId": 5095,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Great Cleave",
+            "description": [
+                "Sven strikes with great force, cleaving all nearby enemy units with his attack."
+            ],
+            "attributes": [
+                "CLEAVE DAMAGE: 30% / 50% / 70% / 90%"
+            ],
+            "lore": "The Vigil Knights still seek to reclaim the stolen Outcast Blade from Sven, a weapon capable of cutting wide swaths through lesser warriors.",
+            "notes": [
+                "Cleave damage goes through spell immunity.",
+                "The cleave damages a circular area in front of Sven."
+            ]
+        },
+        "stat": {
+            "abilityId": 5095,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5096": {
+        "id": 5096,
+        "name": "sven_warcry",
+        "uri": "sven",
+        "language": {
+            "abilityId": 5096,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Warcry",
+            "description": [
+                "Sven's Warcry heartens his allied heroes for battle, increasing their armor and movement speed. Lasts 8 seconds."
+            ],
+            "attributes": [
+                "RADIUS: 700",
+                "BONUS SPEED: 8% / 12% / 16% / 20%",
+                "BONUS ARMOR: 6 / 9 / 12 / 15",
+                "DURATION: 8"
+            ],
+            "lore": "Calling a few lines from the Vigil Codex fortifies Sven's obedience to his rogue code. So poetic!",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5096,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                32,
+                28,
+                24,
+                20
+            ],
+            "manaCost": [
+                30,
+                40,
+                50,
+                60
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5097": {
+        "id": 5097,
+        "name": "sven_gods_strength",
+        "uri": "sven",
+        "language": {
+            "abilityId": 5097,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "God's Strength",
+            "description": [
+                "Sven channels his rogue strength, granting bonus damage for 40.0 seconds."
+            ],
+            "attributes": [
+                "BONUS DAMAGE: 110% / 160% / 210%"
+            ],
+            "lore": "With the strength that shattered the Sacred Helm, the Rogue Knight stands unopposed in melee combat.",
+            "notes": [
+                "The bonus damage is based on base damage and the primary attribute of Sven."
+            ]
+        },
+        "stat": {
+            "abilityId": 5097,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 16388,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                110
+            ],
+            "manaCost": [
+                100,
+                150,
+                200
+            ],
+            "isUltimate": true,
+            "duration": "40.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6045": {
+        "id": 6045,
+        "name": "special_bonus_unique_sven",
+        "uri": "sven",
+        "language": {
+            "abilityId": 6045,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-5s Storm Hammer Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6045,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6504": {
+        "id": 6504,
+        "name": "special_bonus_mp_225",
+        "uri": "sven",
+        "language": {
+            "abilityId": 6504,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+225 Mana",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6504,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6910": {
+        "id": 6910,
+        "name": "special_bonus_unique_sven_2",
+        "uri": "sven",
+        "language": {
+            "abilityId": 6910,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50% God's Strength Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6910,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6911": {
+        "id": 6911,
+        "name": "special_bonus_unique_sven_3",
+        "uri": "sven",
+        "language": {
+            "abilityId": 6911,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Storm Hammer Dispels Enemies",
+            "description": [
+                "Applies a basic dispel on all enemies hit."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6911,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7112": {
+        "id": 7112,
+        "name": "special_bonus_unique_sven_4",
+        "uri": "sven",
+        "language": {
+            "abilityId": 7112,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1s Storm Hammer Stun Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7112,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

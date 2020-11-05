@@ -1,0 +1,504 @@
+{
+    "350": {
+        "id": 350,
+        "name": "special_bonus_unique_necrophos_5",
+        "uri": "necrolyte",
+        "language": {
+            "abilityId": 350,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+32% Heartstopper Regen Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 350,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5158": {
+        "id": 5158,
+        "name": "necrolyte_death_pulse",
+        "uri": "necrolyte",
+        "language": {
+            "abilityId": 5158,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Death Pulse",
+            "description": [
+                "Necrophos releases a wave of death around him, dealing damage to enemy units and healing allied units."
+            ],
+            "attributes": [
+                "RADIUS: 500",
+                "HEAL: 60 / 80 / 100 / 120"
+            ],
+            "lore": "Poor souls who succumb to Rotund'jere's plagues are recycled for future use.",
+            "notes": [
+                "Death Pulse can't be disjointed.",
+                "Can heal Spell Immune units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5158,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                8,
+                7,
+                6,
+                5
+            ],
+            "damage": [
+                100,
+                150,
+                200,
+                250
+            ],
+            "manaCost": [
+                100,
+                130,
+                160,
+                190
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5159": {
+        "id": 5159,
+        "name": "necrolyte_heartstopper_aura",
+        "uri": "necrolyte",
+        "language": {
+            "abilityId": 5159,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Heartstopper Aura",
+            "description": [
+                "Necrophos stills the hearts of his opponents, causing nearby enemy units to lose a percentage of their max health over time. Passively provides regen for 7 seconds for each unit Necrophos kills."
+            ],
+            "attributes": [
+                "RADIUS: 800",
+                "HEALTH DECAY: 0.6% / 1.2% / 1.8% / 2.4%",
+                "HEALTH REGEN PER KILL: 3.5 / 4.5 / 5.5 / 6.5",
+                "MANA REGEN PER KILL: 3.5 / 4.5 / 5.5 / 6.5",
+                "HERO KILL REGEN MULTIPLIER: 6",
+                "REGEN DURATION: 7",
+                "SCEPTER DAMAGE MULTIPLIER: 2"
+            ],
+            "lore": "Those who come within a short distance of Necrophos can feel pestilence and plague in the air.",
+            "aghanimDescription": "Increases Heartstopper Aura damage while Ghost Shroud is active.",
+            "notes": [
+                "Damage won't disable items like Blink Dagger.",
+                "Does not affect ancient creeps."
+            ]
+        },
+        "stat": {
+            "abilityId": 5159,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 1048578,
+            "unitTargetType": 0,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5160": {
+        "id": 5160,
+        "name": "necrolyte_sadist",
+        "uri": "necrolyte",
+        "language": {
+            "abilityId": 5160,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Ghost Shroud",
+            "description": [
+                "Necrophos slips into the realm that separates the living from the dead. Unable to attack or be attacked, he emits an aura that slows enemies around him. He takes additional magic damage in this form, but his restorative powers are amplified."
+            ],
+            "attributes": [
+                "DURATION: 3 / 3.5 / 4 / 4.5",
+                "RESTORATION AMPLIFICATION: 75%",
+                "MOVEMENT SLOW: 6% / 12% / 18% / 24%",
+                "SLOW RADIUS: 750",
+                "INCREASED MAGIC DAMAGE: -40%",
+                "SCEPTER COOLDOWN: 10"
+            ],
+            "lore": "Rotund'jere uses the souls of his victims as bridge from life to afterlife.",
+            "aghanimDescription": "Reduces Ghost Shroud cooldown.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5160,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                28,
+                24,
+                20,
+                16
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5161": {
+        "id": 5161,
+        "name": "necrolyte_reapers_scythe",
+        "uri": "necrolyte",
+        "language": {
+            "abilityId": 5161,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Reaper's Scythe",
+            "description": [
+                "Stuns the target enemy hero, then deals damage based on how much life it is missing. Heroes killed by Reaper's Scythe will have 15 / 25 / 35 seconds added to their respawn timer. Any kill under this effect is credited to Necrophos."
+            ],
+            "attributes": [
+                "DAMAGE PER MISSING HP: 0.7 / 0.8 / 0.9",
+                "STUN DURATION: 1.5 / 1.5 / 1.5",
+                "ADDED RESPAWN TIME: 15 / 25 / 35"
+            ],
+            "lore": "The amount of death and suffering in the air increases the power of Necrophos's plague magic.",
+            "notes": [
+                "Damage is dealt at the end of the stun."
+            ]
+        },
+        "stat": {
+            "abilityId": 5161,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 8,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.10000000149011612,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.55
+            ],
+            "cooldown": [
+                120
+            ],
+            "manaCost": [
+                200,
+                350,
+                500
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6010": {
+        "id": 6010,
+        "name": "special_bonus_unique_necrophos",
+        "uri": "necrolyte",
+        "language": {
+            "abilityId": 6010,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-2.5s Death Pulse Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6010,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6703": {
+        "id": 6703,
+        "name": "special_bonus_unique_necrophos_2",
+        "uri": "necrolyte",
+        "language": {
+            "abilityId": 6703,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.5  Heartstopper Aura",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6703,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7110": {
+        "id": 7110,
+        "name": "special_bonus_unique_necrophos_3",
+        "uri": "necrolyte",
+        "language": {
+            "abilityId": 7110,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+24% Ghost Shroud Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7110,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7111": {
+        "id": 7111,
+        "name": "special_bonus_unique_necrophos_4",
+        "uri": "necrolyte",
+        "language": {
+            "abilityId": 7111,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+32 Death Pulse Heal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7111,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

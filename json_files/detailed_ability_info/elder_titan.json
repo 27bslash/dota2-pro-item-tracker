@@ -1,0 +1,760 @@
+{
+    "409": {
+        "id": 409,
+        "name": "special_bonus_attack_speed_55",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 409,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+55 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 409,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5589": {
+        "id": 5589,
+        "name": "elder_titan_echo_stomp",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 5589,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Echo Stomp",
+            "description": [
+                "Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations.  The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage."
+            ],
+            "attributes": [
+                "CAST TIME: 1.7",
+                "RADIUS: 500",
+                "STOMP DAMAGE: 70 / 100 / 130 / 160",
+                "SLEEP DURATION: 2.0 / 3.0 / 4.0 / 5.0",
+                "WAKEUP DAMAGE THRESHOLD: 50 / 100 / 150 / 200",
+                "CAST TIME:%spirit_cast_time%",
+                "RADIUS:%spirit_radius%",
+                "STOMP DAMAGE:%spirit_stomp_damage%",
+                "SLEEP DURATION:%spirit_sleep_duration%",
+                "WAKE THRESHOLD:%spirit_wake_damage_limit%"
+            ],
+            "lore": "The force of creation still echoes in the stomp of the Titan.",
+            "notes": [
+                "If a unit is hit by Astral Spirit and Elder Titan, they will take both instances of damage."
+            ]
+        },
+        "stat": {
+            "abilityId": 5589,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 132,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "channelTime": [
+                1.3
+            ],
+            "cooldown": [
+                14,
+                13,
+                12,
+                11
+            ],
+            "manaCost": [
+                85,
+                90,
+                95,
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5591": {
+        "id": 5591,
+        "name": "elder_titan_ancestral_spirit",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 5591,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Astral Spirit",
+            "description": [
+                "Elder Titan sends forth his Astral Spirit, damaging any units it passes through.  When the spirit rejoins the Titan, it grants bonus damage and movement speed for each unit it passed through.",
+                "",
+                "The Astral Spirit can be controlled and possesses the Echo Stomp, Return Spirit, and Natural Order abilities."
+            ],
+            "attributes": [
+                "DURATION: 8.0",
+                "BUFF DURATION: 10.0",
+                "DAMAGE: 50",
+                "RADIUS: 275",
+                "BONUS SPEED (CREEPS): 1%",
+                "BONUS SPEED (HEROES): 7%",
+                "BONUS DAMAGE (CREEPS): 3 / 7 / 11 / 15",
+                "BONUS DAMAGE (HEROES): 20 / 40 / 60 / 80",
+                "BONUS ARMOR (CREEPS): 0.5",
+                "BONUS ARMOR (HEROES): 1.5 / 3 / 4.5 / 6"
+            ],
+            "lore": "Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need.",
+            "aghanimDescription": "Causes you to become Spell Immune for %scepter_magic_immune_per_hero% seconds per affected enemy hero when the spirit returns to you.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5591,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16432,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                23,
+                21,
+                19,
+                17
+            ],
+            "manaCost": [
+                80,
+                90,
+                100,
+                110
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5592": {
+        "id": 5592,
+        "name": "elder_titan_return_spirit",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 5592,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Return Astral Spirit",
+            "description": [
+                "Returns the Astral Spirit to Elder Titan."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5592,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 575557,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5593": {
+        "id": 5593,
+        "name": "elder_titan_natural_order",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 5593,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Natural Order",
+            "description": [
+                "Reduces all elements to their basic levels, removing base armor and magic damage resistance from nearby enemy units. The armor reduction is centered around the hero, while the magic armor reduction is centered around Astral Spirit."
+            ],
+            "attributes": [
+                "RADIUS: 350",
+                "BASE ARMOR REDUCTION: 40% / 60% / 80% / 100%",
+                "BASE RESIST REDUCTION: 40% / 60% / 80% / 100%",
+                "RADIUS:%spirit_radius%",
+                "%BASE ARMOR REDUCTION:%spirit_armor_reduction_pct%",
+                "%BASE RESIST REDUCTION:%spirit_magic_resistance_pct%"
+            ],
+            "lore": "As it was at the beginning, Elder Titan makes it so again.",
+            "notes": [
+                "When the Astral Spirit isn't present, both the armor and magic armor reduction is centered around Elder Titan."
+            ]
+        },
+        "stat": {
+            "abilityId": 5593,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 1048578,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5594": {
+        "id": 5594,
+        "name": "elder_titan_earth_splitter",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 5594,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Earth Splitter",
+            "description": [
+                "Sends forth a jagged crack in front of Elder Titan. After 3 seconds, the crack implodes, slowing movement while dealing damage to each enemy based on their maximum life. Half of the damage dealt is Magical damage, while the other half is Physical damage."
+            ],
+            "attributes": [
+                "CRACK WIDTH: 315",
+                "CRACK LENGTH: 2400",
+                "IMPLODE DELAY: 3.14",
+                "SLOW DURATION: 3.0 / 4.0 / 5.0",
+                "MAX HP AS DAMAGE: 30% / 40% / 50%",
+                "MOVEMENT SLOW: 30% / 40% / 50%"
+            ],
+            "lore": "That which he created, the titan tears asunder.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5594,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 16,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                2400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                100,
+                100,
+                100
+            ],
+            "manaCost": [
+                125,
+                175,
+                225
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6138": {
+        "id": 6138,
+        "name": "special_bonus_magic_resistance_15",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 6138,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+15% Magic Resistance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6138,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6171": {
+        "id": 6171,
+        "name": "special_bonus_unique_elder_titan",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 6171,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+25 Astral Spirit Hero Attack",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6171,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6378": {
+        "id": 6378,
+        "name": "special_bonus_unique_elder_titan_2",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 6378,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Echo Stomp Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6378,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6444": {
+        "id": 6444,
+        "name": "special_bonus_attack_speed_70",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 6444,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+70 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6444,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6720": {
+        "id": 6720,
+        "name": "special_bonus_unique_elder_titan_3",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 6720,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-60 Earth Splitter Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6720,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6721": {
+        "id": 6721,
+        "name": "special_bonus_lifesteal_100",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 6721,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "100% Lifesteal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6721,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6827": {
+        "id": 6827,
+        "name": "special_bonus_cleave_100",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 6827,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100% Cleave",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6827,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7350": {
+        "id": 7350,
+        "name": "special_bonus_unique_elder_titan_4",
+        "uri": "elder_titan",
+        "language": {
+            "abilityId": 7350,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+450 Echo Stomp Wake Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7350,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

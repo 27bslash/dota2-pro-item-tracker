@@ -1,0 +1,954 @@
+{
+    "556": {
+        "id": 556,
+        "name": "special_bonus_unique_underlord_5",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 556,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-3s Firestorm Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 556,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "557": {
+        "id": 557,
+        "name": "special_bonus_unique_underlord_6",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 557,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+75 Pit of Malice AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 557,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5613": {
+        "id": 5613,
+        "name": "abyssal_underlord_firestorm",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 5613,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Firestorm",
+            "description": [
+                "Calls down waves of fire that damage enemy units in the target area, burning for additional damage over time."
+            ],
+            "attributes": [
+                "RADIUS: 400 / 430 / 460 / 490",
+                "WAVE COUNT: 6",
+                "WAVE DAMAGE: 25 / 40 / 55 / 70",
+                "WAVE INTERVAL 1.0",
+                "MAX HP BURN DAMAGE: 1% / 2% / 3% / 4%",
+                "BURN DURATION: 2.0"
+            ],
+            "lore": "The flames of conquest blaze forth from the darkest depths of the abyss.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5613,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                675
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.5
+            ],
+            "cooldown": [
+                12
+            ],
+            "manaCost": [
+                100,
+                110,
+                120,
+                130
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5614": {
+        "id": 5614,
+        "name": "abyssal_underlord_pit_of_malice",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 5614,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Pit of Malice",
+            "description": [
+                "A deadly pit is conjured at the target location; any unit that enters will be rooted. Each enemy unit within the pit are affected every 3.6 seconds."
+            ],
+            "attributes": [
+                "RADIUS: 400",
+                "PIT DURATION: 12.0",
+                "DISABLE INTERVAL: 3.6",
+                "DISABLE DURATION: 0.9 / 1.2 / 1.5 / 1.8"
+            ],
+            "lore": "Twisting into the seams of reality itself, Vrogros' manifest hatred paralyzes those who defy his will.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5614,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                675
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.45
+            ],
+            "cooldown": [
+                18,
+                17,
+                16,
+                15
+            ],
+            "manaCost": [
+                80,
+                100,
+                120,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5615": {
+        "id": 5615,
+        "name": "abyssal_underlord_atrophy_aura",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 5615,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Atrophy Aura",
+            "description": [
+                "Nearby enemy units are weakened, losing a portion of their base damage. If an enemy dies while under this effect, Underlord gains temporary bonus damage."
+            ],
+            "attributes": [
+                "RADIUS: 900",
+                "DAMAGE REDUCTION: 5% / 15% / 25% / 35%",
+                "BONUS DAMAGE(CREEP): 4 / 5 / 6 / 7",
+                "BONUS DAMAGE(HERO): 30 / 35 / 40 / 45",
+                "DURATION: 30 / 45 / 60 / 75",
+                "SCEPTER DURATION: 70 / 80 / 90 / 100"
+            ],
+            "lore": "To merely stand in the presence of the Underlord is to feel the conviction of battle sapped from one's soul.",
+            "aghanimDescription": "Causes bonus damage to be granted to nearby allied heroes within %radius% range for half the values.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5615,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 1048578,
+            "unitTargetType": 0,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5616": {
+        "id": 5616,
+        "name": "abyssal_underlord_dark_rift",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 5616,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Dark Rift",
+            "description": [
+                "Opens a dark rift at the targeted friendly unit's or building's position.  After a short delay, Underlord and all nearby friendly heroes are teleported to that unit's location.  Dark Rift can be cancelled at anytime during the cast.  If it is cancelled in this way or the target unit dies before the spell becomes active, Dark Rift goes into cooldown."
+            ],
+            "attributes": [
+                "TELEPORT RADIUS: 600",
+                "TELEPORT DELAY: 6.0 / 5.0 / 4.0"
+            ],
+            "lore": "They come without warning, leaving fire and blood where kingdoms once flourished.",
+            "notes": [
+                "Double-click to teleport to your team's base fountain."
+            ]
+        },
+        "stat": {
+            "abilityId": 5616,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 24,
+            "unitTargetType": 36,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 32,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.6
+            ],
+            "cooldown": [
+                130,
+                115,
+                100
+            ],
+            "manaCost": [
+                100,
+                200,
+                300
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5617": {
+        "id": 5617,
+        "name": "abyssal_underlord_cancel_dark_rift",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 5617,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Cancel Dark Rift",
+            "description": [
+                "Stop the teleport."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5617,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 32837,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5908": {
+        "id": 5908,
+        "name": "special_bonus_attack_speed_60",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 5908,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+60 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5908,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "5932": {
+        "id": 5932,
+        "name": "special_bonus_armor_5",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 5932,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5 Armor",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5932,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6019": {
+        "id": 6019,
+        "name": "special_bonus_unique_underlord",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6019,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.65s Pit of Malice Root",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6019,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6020": {
+        "id": 6020,
+        "name": "special_bonus_attack_speed_50",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6020,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6020,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6079": {
+        "id": 6079,
+        "name": "special_bonus_hp_regen_20",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6079,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Health Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6079,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6120": {
+        "id": 6120,
+        "name": "special_bonus_cast_range_175",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6120,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+175 Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6120,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6299": {
+        "id": 6299,
+        "name": "special_bonus_magic_resistance_12",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6299,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+12% Magic Resistance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6299,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6308": {
+        "id": 6308,
+        "name": "special_bonus_hp_regen_25",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6308,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+25 Health Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6308,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6351": {
+        "id": 6351,
+        "name": "special_bonus_hp_regen_30",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6351,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Health Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6351,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6967": {
+        "id": 6967,
+        "name": "special_bonus_unique_underlord_2",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6967,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+14 Firestorm Wave Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6967,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6968": {
+        "id": 6968,
+        "name": "special_bonus_unique_underlord_3",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6968,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5 Atrophy Permanent Bonus Damage ",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6968,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6969": {
+        "id": 6969,
+        "name": "special_bonus_unique_underlord_4",
+        "uri": "abyssal_underlord",
+        "language": {
+            "abilityId": 6969,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "15% Firestorm Building Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6969,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

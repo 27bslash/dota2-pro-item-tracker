@@ -1,0 +1,472 @@
+{
+    "5090": {
+        "id": 5090,
+        "name": "death_prophet_carrion_swarm",
+        "uri": "death_prophet",
+        "language": {
+            "abilityId": 5090,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Crypt Swarm",
+            "description": [
+                "Sends a swarm of winged beasts to savage enemy units in front of Death Prophet."
+            ],
+            "attributes": [
+                "CAST RANGE: 810 / 810 / 810 / 810"
+            ],
+            "lore": "Krobelus' many trips to the grave gather a flock of the damned.",
+            "notes": [
+                "Can hit units up to 1110 range away."
+            ]
+        },
+        "stat": {
+            "abilityId": 5090,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 24,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                8,
+                7,
+                6,
+                5
+            ],
+            "damage": [
+                75,
+                150,
+                225,
+                300
+            ],
+            "manaCost": [
+                85,
+                110,
+                135,
+                160
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5091": {
+        "id": 5091,
+        "name": "death_prophet_silence",
+        "uri": "death_prophet",
+        "language": {
+            "abilityId": 5091,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Silence",
+            "description": [
+                "Prevents enemy units in a target area from casting spells."
+            ],
+            "attributes": [
+                "RADIUS: 425",
+                "DURATION: 3.0 / 4.0 / 5.0 / 6.0"
+            ],
+            "lore": "Peering into the veil of her opponent's demise, Krobelus sees a silent future.",
+            "notes": [
+                "Doesn't prevent usage of items."
+            ]
+        },
+        "stat": {
+            "abilityId": 5091,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                15,
+                14,
+                13,
+                12
+            ],
+            "manaCost": [
+                80,
+                90,
+                100,
+                110
+            ],
+            "isUltimate": false,
+            "duration": "3 4 5 6",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5093": {
+        "id": 5093,
+        "name": "death_prophet_exorcism",
+        "uri": "death_prophet",
+        "language": {
+            "abilityId": 5093,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Exorcism",
+            "description": [
+                "Unleashes evil spirits to drain the life of nearby enemy units and structures. At the end of the spell's duration, Death Prophet is healed in proportion to the damage dealt. Lasts 35 seconds."
+            ],
+            "attributes": [
+                "RADIUS: 700 / 700 / 700",
+                "SPIRITS: 8 / 16 / 24",
+                "LIFE DRAIN: 25% / 25% / 25%",
+                "SPIRIT DAMAGE: 61",
+                "SCEPTER MOVESPEED SLOW: 100%",
+                "SCEPTER SLOW DURATION: 0.3",
+                "SPIRIT BONUS DAMAGE: 50%",
+                "MOVEMENT BONUS: 16% / 18% / 20%"
+            ],
+            "lore": "Over time, the banshee remnants of her previous lives return to haunt the present.",
+            "aghanimDescription": "Whenever an enemy is affected by your spells or when you attack an enemy, a ghost will fly out, slow and hit the enemy for bonus its usual damage then return to you with life.",
+            "notes": [
+                "Radius represents the area in which the spirits will acquire targets around Death Prophet.",
+                "Spirit damage isn't reduced by damage block abilities."
+            ]
+        },
+        "stat": {
+            "abilityId": 5093,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.5,
+                0.5,
+                0.5
+            ],
+            "cooldown": [
+                145
+            ],
+            "manaCost": [
+                250,
+                350,
+                450
+            ],
+            "isUltimate": true,
+            "duration": "35",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5685": {
+        "id": 5685,
+        "name": "death_prophet_spirit_siphon",
+        "uri": "death_prophet",
+        "language": {
+            "abilityId": 5685,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Spirit Siphon",
+            "description": [
+                "Creates a spirit link between Death Prophet and an enemy unit, draining 14 + 1.0 / 2.5 / 4.0 / 5.5% Max HP per second and steal %movement_slow% movement speed from the enemy."
+            ],
+            "attributes": [
+                "BASE DAMAGE: 14",
+                "MAX HP AS DAMAGE: 1.0% / 2.5% / 4.0% / 5.5%",
+                "SPEED STEAL: 4% / 6% / 8% / 10%",
+                "DURATION: 6"
+            ],
+            "lore": "Krobelus willingly shows others the path she alone cannot follow.",
+            "notes": [
+                "Cannot cast multiple on same target."
+            ]
+        },
+        "stat": {
+            "abilityId": 5685,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16392,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "1 2 3 4",
+            "chargeRestoreTime": "45 40 35 30"
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6191": {
+        "id": 6191,
+        "name": "special_bonus_unique_death_prophet",
+        "uri": "death_prophet",
+        "language": {
+            "abilityId": 6191,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8 Exorcism Spirits",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6191,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6367": {
+        "id": 6367,
+        "name": "special_bonus_unique_death_prophet_2",
+        "uri": "death_prophet",
+        "language": {
+            "abilityId": 6367,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-3s Crypt Swarm Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6367,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6628": {
+        "id": 6628,
+        "name": "special_bonus_unique_death_prophet_3",
+        "uri": "death_prophet",
+        "language": {
+            "abilityId": 6628,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.8% Max Health Spirit Siphon",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6628,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6805": {
+        "id": 6805,
+        "name": "special_bonus_unique_death_prophet_4",
+        "uri": "death_prophet",
+        "language": {
+            "abilityId": 6805,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Exorcism Grants Haste",
+            "description": [
+                "While Exorcism is active, Death Prophet moves at 550 movement speed and cannot be slowed."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6805,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

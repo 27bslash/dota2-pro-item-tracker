@@ -1,0 +1,801 @@
+{
+    "411": {
+        "id": 411,
+        "name": "special_bonus_unique_skywrath_6",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 411,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Arcane Bolt Pierces Spell Immunity",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 411,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5581": {
+        "id": 5581,
+        "name": "skywrath_mage_arcane_bolt",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 5581,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Arcane Bolt",
+            "description": [
+                "Skywrath Mage launches a slow-moving bolt of arcane magic, dealing damage to an enemy unit based on Skywrath Mage's intelligence."
+            ],
+            "attributes": [
+                "BASE DAMAGE: 60 / 80 / 100 / 120",
+                "INT DAMAGE MULTIPLIER: 1.6"
+            ],
+            "lore": "Within the Ghastly Eyrie's endless intrigue, only the clever and calm can hope to survive.",
+            "aghanimDescription": "When Skywrath Mage casts Arcane Bolt, a different random target within %scepter_radius% range willl be hit with the same ability. Heroes will take priority.",
+            "notes": [
+                "The projectile moves very slowly (500 ms), providing 325 vision around it.  Upon impact, it will reveal the target area for 3.34 seconds.",
+                "Arcane Bolt cannot be disjointed."
+            ]
+        },
+        "stat": {
+            "abilityId": 5581,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                875
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "cooldown": [
+                5,
+                4,
+                3,
+                2
+            ],
+            "manaCost": [
+                90
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5582": {
+        "id": 5582,
+        "name": "skywrath_mage_concussive_shot",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 5582,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Concussive Shot",
+            "description": [
+                "Skywrath Mage sets off a long range shot that hits the closest hero within a long range.  Upon impact, it deals damage and slows in an area of effect."
+            ],
+            "attributes": [
+                "SHOT RANGE: 1600",
+                "DAMAGE RADIUS: 250",
+                "DAMAGE: 100 / 160 / 220 / 280",
+                "SLOW DURATION: 4.0",
+                "SLOW: 30% / 35% / 40% / 45%"
+            ],
+            "lore": "Those who serve the court of the Ghastly Eyrie are ever locked in covert war. One must always know where danger lurks nearest.",
+            "aghanimDescription": "When Skywrath Mage casts Concussive Shot, a different random target within cast range will be hit with the same ability. Heroes will take priority.",
+            "notes": [
+                "If no enemy heroes are in range or they are in fog, Concussive Shot targets the nearest enemy creep.",
+                "Damages creeps around the impact area.",
+                "Provides 400 vision around the projectile, and reveals the target area for 3.34 seconds upon impact."
+            ]
+        },
+        "stat": {
+            "abilityId": 5582,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                18,
+                16,
+                14,
+                12
+            ],
+            "manaCost": [
+                80,
+                85,
+                90,
+                95
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5583": {
+        "id": 5583,
+        "name": "skywrath_mage_ancient_seal",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 5583,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Ancient Seal",
+            "description": [
+                "Skywrath Mage seals the targeted unit with an ancient rune, silencing it and causing it to take additional damage from spells."
+            ],
+            "attributes": [
+                "INCREASED MAGIC DAMAGE: -30% / -35% / -40% / -45%",
+                "DURATION: 3.0 / 4.0 / 5.0 / 6.0"
+            ],
+            "lore": "A holy incantation, whosoever finds themselves touched by Avilliva's sigil must suffer in penitent silence.",
+            "aghanimDescription": "Anytime Skywrath Mage casts Ancient Seal, a different random target within %scepter_radius% range will be affected by the same ability. Heroes will take priority.",
+            "notes": [
+                "The magic damage resistance reduction doesn't affect creeps."
+            ]
+        },
+        "stat": {
+            "abilityId": 5583,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700,
+                750,
+                800,
+                850
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "cooldown": [
+                14
+            ],
+            "manaCost": [
+                80,
+                90,
+                100,
+                110
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5584": {
+        "id": 5584,
+        "name": "skywrath_mage_mystic_flare",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 5584,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Mystic Flare",
+            "description": [
+                "Skywrath Mage uses his ultimate magical ability to conjure a precise and violent mystical field that lays waste to his adversaries. Deals massive damage distributed evenly among any Heroes in the area over 2.4 seconds."
+            ],
+            "attributes": [
+                "RADIUS: 170",
+                "DURATION: 2.4",
+                "DAMAGE: 750 / 1175 / 1600"
+            ],
+            "lore": "Only the most practiced of Skywrath sorcerers could hope to shape the skies into such a storm.",
+            "aghanimDescription": "When Skywrath Mage casts Mystic Flare, another Mystic Flare will be created on the position of a different random target enemy within %scepter_radius% range. Heroes will take priority",
+            "notes": [
+                "Mystic Flare only affects Heroes; it does not damage illusions or creep heroes.",
+                "Spell immune enemies do not count toward the damage distribution.",
+                "Mystic Flare will damage enemy creeps if no enemy heroes are present."
+            ]
+        },
+        "stat": {
+            "abilityId": 5584,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 16432,
+            "unitTargetType": 1,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "cooldown": [
+                60,
+                40,
+                20
+            ],
+            "manaCost": [
+                300,
+                550,
+                800
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5925": {
+        "id": 5925,
+        "name": "special_bonus_intelligence_8",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 5925,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8 Intelligence",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5925,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "5965": {
+        "id": 5965,
+        "name": "special_bonus_intelligence_10",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 5965,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+10 Intelligence",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5965,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6117": {
+        "id": 6117,
+        "name": "special_bonus_intelligence_7",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 6117,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+7 Intelligence",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6117,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6181": {
+        "id": 6181,
+        "name": "special_bonus_unique_skywrath",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 6181,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-8s Ancient Seal Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6181,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6255": {
+        "id": 6255,
+        "name": "special_bonus_mp_regen_14",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 6255,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+14 Mana Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6255,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6318": {
+        "id": 6318,
+        "name": "special_bonus_gold_income_300",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 6318,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+300 Gold/Min",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6318,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6884": {
+        "id": 6884,
+        "name": "special_bonus_unique_skywrath_2",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 6884,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1 Arcane Bolt Per Cast",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6884,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6885": {
+        "id": 6885,
+        "name": "special_bonus_unique_skywrath_3",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 6885,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-12% Ancient Seal Magic Resistance Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6885,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6886": {
+        "id": 6886,
+        "name": "special_bonus_unique_skywrath_4",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 6886,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Global Concussive Shot",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6886,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6921": {
+        "id": 6921,
+        "name": "special_bonus_unique_skywrath_5",
+        "uri": "Skywrath_Mage",
+        "language": {
+            "abilityId": 6921,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+480 Mystic Flare Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6921,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

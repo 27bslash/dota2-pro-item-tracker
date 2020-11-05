@@ -1,0 +1,847 @@
+{
+    "5328": {
+        "id": 5328,
+        "name": "chen_penitence",
+        "uri": "chen",
+        "language": {
+            "abilityId": 5328,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Penitence",
+            "description": [
+                "Forces an enemy unit to move slower and for allies to attack it more quickly."
+            ],
+            "attributes": [
+                "DURATION: 5 / 6 / 7 / 8",
+                "MOVEMENT SLOW: -18% / -24% / -30% / -36%",
+                "BONUS ATTACK SPEED: 30 / 60 / 90 / 120"
+            ],
+            "lore": "Although Chen's brand of animal enthrallment isn't quite strong enough to control the minds of enemy heroes, it still tests their resolve in combat.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5328,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                14,
+                13,
+                12,
+                11
+            ],
+            "manaCost": [
+                70,
+                80,
+                90,
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5329": {
+        "id": 5329,
+        "name": "chen_test_of_faith",
+        "uri": "chen",
+        "language": {
+            "abilityId": 5329,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Test of Faith",
+            "description": [
+                "Deals random damage to test an enemy unit's faith. Heals a random amount to allied units. Always applies the maximum effect when cast on yourself."
+            ],
+            "attributes": [
+                "DAMAGE MIN: 50 / 100 / 150 / 200",
+                "DAMAGE MAX: 100 / 200 / 300 / 400",
+                "HEAL MIN: 25 / 50 / 75 / 100",
+                "HEAL MAX: 50 / 100 / 150 / 200"
+            ],
+            "lore": "Knights of the Fold possess a fanatical form of magic that is considered quite unwieldy by most other users of arcane arts.",
+            "notes": [
+                "Can target spell immune allies."
+            ]
+        },
+        "stat": {
+            "abilityId": 5329,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 4,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600,
+                600,
+                600,
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                16
+            ],
+            "manaCost": [
+                60,
+                80,
+                100,
+                120
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5330": {
+        "id": 5330,
+        "name": "chen_holy_persuasion",
+        "uri": "chen",
+        "language": {
+            "abilityId": 5330,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Holy Persuasion",
+            "description": [
+                "Chen takes control of an enemy or neutral creep. If the persuaded creep's base health is naturally below the health minimum, its base health will be raised to the health minimum. Converted creeps will have increased movement speed and bonus damage."
+            ],
+            "attributes": [
+                "MAX UNITS: 1 / 2 / 3 / 4",
+                "CREEP MAX LEVEL: 3 / 4 / 5 / 6",
+                "MOVE SPEED BONUS: 10 / 15 / 20 / 25",
+                "BONUS DAMAGE: 8 / 16 / 24 / 32",
+                "HEALTH MINIMUM: 700 / 800 / 900 / 1000"
+            ],
+            "lore": "Although they may not be knights, Chen incorporates beasts into the Fold in the same way he himself was converted.",
+            "aghanimDescription": "Allows Holy Persuasion to target Ancient Creeps, maximum one per level of Hand of God.",
+            "notes": [
+                "Persuading a new creep above max unit count causes the oldest persuaded creep to die.",
+                "Can target Ancient Creeps when Chen has Aghanim's Scepter.",
+                "The health of creeps already under Chen's control does not update to the new level upon leveling Holy Persuasion further.",
+                "Fully restores the creep's mana upon converting."
+            ]
+        },
+        "stat": {
+            "abilityId": 5330,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 32776,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                15
+            ],
+            "manaCost": [
+                90,
+                110,
+                130,
+                150
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5331": {
+        "id": 5331,
+        "name": "chen_hand_of_god",
+        "uri": "chen",
+        "language": {
+            "abilityId": 5331,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Hand of God",
+            "description": [
+                "Heals all allied heroes on the map as well as all units under Chen's control."
+            ],
+            "attributes": [
+                "HEAL: 250 / 425 / 600",
+                "SCEPTER HOLY PERSUASION ANCIENTS: 1 / 2 / 3"
+            ],
+            "lore": "Using the mental link with his thralls, Chen calls down restoration and well-being to those who share his fanaticism.",
+            "notes": [
+                "Can heal invulnerable and hidden/banished allies."
+            ]
+        },
+        "stat": {
+            "abilityId": 5331,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                160,
+                140,
+                120
+            ],
+            "manaCost": [
+                250,
+                350,
+                450
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5522": {
+        "id": 5522,
+        "name": "chen_test_of_faith_teleport",
+        "uri": "chen",
+        "language": {
+            "abilityId": 5522,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "description": [
+                "Teleports an allied unit back to the base.  Creeps are teleported instantly, while Heroes have a delay before teleporting. If cast on Chen, all units controlled by Chen through Holy Persuasion will be teleported to him after a delay."
+            ],
+            "attributes": [
+                "HERO/SELF TP DELAY: 6.0 / 5.0 / 4.0 / 3.0"
+            ],
+            "lore": "",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5522,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 5,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 16,
+            "unitDamageType": 0,
+            "spellImmunity": 2,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600,
+                600,
+                600,
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                24,
+                24,
+                24,
+                24
+            ],
+            "manaCost": [
+                200,
+                200,
+                200,
+                200
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6056": {
+        "id": 6056,
+        "name": "special_bonus_cast_range_150",
+        "uri": "chen",
+        "language": {
+            "abilityId": 6056,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+150 Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6056,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6259": {
+        "id": 6259,
+        "name": "special_bonus_unique_chen_1",
+        "uri": "chen",
+        "language": {
+            "abilityId": 6259,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+4 Holy Persuasion Max Units",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6259,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6260": {
+        "id": 6260,
+        "name": "special_bonus_unique_chen_2",
+        "uri": "chen",
+        "language": {
+            "abilityId": 6260,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+280 Hand of God Heal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6260,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6327": {
+        "id": 6327,
+        "name": "special_bonus_spell_amplify_25",
+        "uri": "Chen",
+        "language": {
+            "abilityId": 6327,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+25% Spell Amplification",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6327,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6363": {
+        "id": 6363,
+        "name": "special_bonus_unique_chen_3",
+        "uri": "chen",
+        "language": {
+            "abilityId": 6363,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-7s Divine Favor Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6363,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6535": {
+        "id": 6535,
+        "name": "special_bonus_unique_chen_4",
+        "uri": "chen",
+        "language": {
+            "abilityId": 6535,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+800 Holy Persuasion Minimum Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6535,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7306": {
+        "id": 7306,
+        "name": "chen_divine_favor",
+        "uri": "chen",
+        "language": {
+            "abilityId": 7306,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Divine Favor",
+            "description": [
+                "Passively provides an aura that grants increased health regeneration and amplifies all health restore by a percentage.",
+                "",
+                "Can be cast on allies to teleport them to Chen. If cast on Chen, all units controlled by Chen will be teleported to him. Taking damage will dispel the buff."
+            ],
+            "attributes": [
+                "HEAL INCREASE: 6% / 10% / 14% / 18%",
+                "REGEN PER SEC: 1.25 / 2.5 / 3.75 / 5",
+                "TELEPORT DELAY: 6.0"
+            ],
+            "lore": "Chen's zeal is infectious, blessing his allies with vitality and compelling them to his side.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7306,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 5,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                140,
+                120,
+                100,
+                80
+            ],
+            "manaCost": [
+                130
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "7653": {
+        "id": 7653,
+        "name": "special_bonus_unique_chen_7",
+        "uri": "chen",
+        "language": {
+            "abilityId": 7653,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-24s Hand of God Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7653,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "7869": {
+        "id": 7869,
+        "name": "special_bonus_unique_chen_5",
+        "uri": "chen",
+        "language": {
+            "abilityId": 7869,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+16 Holy Persuasion Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7869,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7894": {
+        "id": 7894,
+        "name": "special_bonus_unique_chen_6",
+        "uri": "chen",
+        "language": {
+            "abilityId": 7894,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-32s Divine Favor Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7894,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

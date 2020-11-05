@@ -1,0 +1,685 @@
+{
+    "510": {
+        "id": 510,
+        "name": "special_bonus_unique_chaos_knight_5",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 510,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+10% Chaos Strike Chance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 510,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "568": {
+        "id": 568,
+        "name": "special_bonus_cooldown_reduction_14",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 568,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "14% Cooldown Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 568,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5426": {
+        "id": 5426,
+        "name": "chaos_knight_chaos_bolt",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 5426,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Chaos Bolt",
+            "description": [
+                "Throws a mysterious bolt of energy at the target unit. It stuns for a random duration and deals random damage."
+            ],
+            "attributes": [
+                "MINIMUM STUN: 1.25 / 1.5 / 1.75 / 2",
+                "MAXIMUM STUN: 2.2 / 2.8 / 3.4 / 4",
+                "MINIMUM DAMAGE: 90 / 110 / 130 / 150",
+                "MAXIMUM DAMAGE: 180 / 220 / 260 / 300"
+            ],
+            "lore": "Even Chaos Knight cannot predict this manifest of unholy energy.",
+            "notes": [
+                "The stun duration and damage values dealt are inversely related.",
+                "Nearby illusions will mimic the cast animation."
+            ]
+        },
+        "stat": {
+            "abilityId": 5426,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                13,
+                12,
+                11,
+                10
+            ],
+            "manaCost": [
+                110,
+                120,
+                130,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5427": {
+        "id": 5427,
+        "name": "chaos_knight_reality_rift",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 5427,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Reality Rift",
+            "description": [
+                "Teleports you, any images you have and the target unit to a point along the line between the two of you. Reduces armor of the enemy unit for 6 seconds."
+            ],
+            "attributes": [
+                "CAST RANGE: 550 / 600 / 650 / 700",
+                "PULL DISTANCE: 250 / 300 / 350 / 400",
+                "ARMOR REDUCTION: 3 / 4 / 5 / 6"
+            ],
+            "lore": "Armageddon rides between the planes, bringing Chaos Knight to his victim wherever he may hide.",
+            "notes": [
+                "Chaos Knight and the target unit are made to face each other, and Chaos Knight and his phantasms are issued an attack order against the target."
+            ]
+        },
+        "stat": {
+            "abilityId": 5427,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4104,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                550,
+                600,
+                650,
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                15,
+                12,
+                9,
+                6
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5428": {
+        "id": 5428,
+        "name": "chaos_knight_chaos_strike",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 5428,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Chaos Strike",
+            "description": [
+                "Chaos Knight's attacks have a chance to deal a critical strike of varying strength, in addition to a lifesteal for percentage of the damage."
+            ],
+            "attributes": [
+                "CHANCE: 30%",
+                "CRITICAL MIN: 120%",
+                "CRITICAL MAX: 140% / 170% / 200% / 230%",
+                "CRITICAL LIFESTEAL: 25% / 40% / 55% / 70%"
+            ],
+            "lore": "Chaos Knight's unwieldy power bludgeons those who stand before him, crushing the thickest of armors.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5428,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5429": {
+        "id": 5429,
+        "name": "chaos_knight_phantasm",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 5429,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Phantasm",
+            "description": [
+                "Summons several phantasmal copies of the Chaos Knight from alternate dimensions. The phantasms are strong illusions that deal 100% damage, but take 325% damage.",
+                "DISPEL TYPE: Basic Dispel"
+            ],
+            "attributes": [
+                "NUMBER OF PHANTASMS: 1 / 2 / 3",
+                "PHANTASM DURATION: 30",
+                "PHANTASM DAMAGE TAKEN: 325%",
+                "PHANTASM DAMAGE: 100%",
+                "%SCEPTER PHANTASM DAMAGE TAKEN:%incoming_damage_tooltip_scepter%"
+            ],
+            "lore": "Drawing on his battles fought across many worlds and many times, phantasms of the Chaos Knight rise up to quell all who oppose him.",
+            "aghanimDescription": "Creates an illusion of allied heroes. Creates an additional illusion for Chaos Knight as well.",
+            "notes": [
+                "Removes most negative buffs from Chaos Knight.",
+                "Chaos Knight is invulnerable for 0.5 seconds when casting, allowing him to dodge stuns and damage.",
+                "Strong Illusions are not instantly killed by spells."
+            ]
+        },
+        "stat": {
+            "abilityId": 5429,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 16,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                75
+            ],
+            "manaCost": [
+                75,
+                125,
+                175
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5921": {
+        "id": 5921,
+        "name": "special_bonus_all_stats_5",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 5921,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5 All Stats",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5921,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "5928": {
+        "id": 5928,
+        "name": "special_bonus_strength_12",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 5928,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+12 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5928,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6133": {
+        "id": 6133,
+        "name": "special_bonus_unique_chaos_knight",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 6133,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Reality Rift Pierces Spell Immune",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6133,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6145": {
+        "id": 6145,
+        "name": "special_bonus_strength_15",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 6145,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+15 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6145,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6618": {
+        "id": 6618,
+        "name": "special_bonus_unique_chaos_knight_2",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 6618,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-1.5s Chaos Strike Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6618,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6619": {
+        "id": 6619,
+        "name": "special_bonus_unique_chaos_knight_3",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 6619,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1 Min/Max Chaos Bolt Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6619,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7651": {
+        "id": 7651,
+        "name": "special_bonus_unique_chaos_knight_4",
+        "uri": "chaos_knight",
+        "language": {
+            "abilityId": 7651,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8s Phantasm Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7651,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    }
+}

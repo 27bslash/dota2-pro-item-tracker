@@ -1,0 +1,537 @@
+{
+    "5233": {
+        "id": 5233,
+        "name": "dazzle_poison_touch",
+        "uri": "dazzle",
+        "language": {
+            "abilityId": 5233,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Poison Touch",
+            "description": [
+                "Releases a cone of poison that strikes multiple enemy units. Deals damage over time and slows the targets. Anytime the targets get attacked, the debuff duration is refreshed."
+            ],
+            "attributes": [
+                "TARGETS: 2 / 4 / 6 / 8",
+                "DAMAGE PER SECOND: 16 / 28 / 40 / 52",
+                "SLOW: -14% / -16% / -18% / -20%",
+                "DURATION: 4 / 5 / 6 / 7"
+            ],
+            "lore": "One of the few Dezun rites used for offensive purposes, the paralytic enchantment often proves useful.",
+            "notes": [
+                "The damage is not reduced by damage block abilities."
+            ]
+        },
+        "stat": {
+            "abilityId": 5233,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.3499999940395355,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                500,
+                600,
+                700,
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                27,
+                24,
+                21,
+                18
+            ],
+            "manaCost": [
+                110,
+                120,
+                130,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5234": {
+        "id": 5234,
+        "name": "dazzle_shallow_grave",
+        "uri": "dazzle",
+        "language": {
+            "abilityId": 5234,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shallow Grave",
+            "description": [
+                "An ally blessed with Shallow Grave, no matter how close to death, cannot die while under its protection."
+            ],
+            "attributes": [
+                "DURATION: 5.0"
+            ],
+            "lore": "Only a seasoned acolyte of the Shadow can properly perform the rite of preventing death.",
+            "notes": [
+                "HP cannot go below 1 while under the effects of Shallow Grave, but Axe's Culling Blade will still kill the hero."
+            ]
+        },
+        "stat": {
+            "abilityId": 5234,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 49160,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                550,
+                700,
+                850,
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                60,
+                46,
+                32,
+                18
+            ],
+            "manaCost": [
+                150
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5235": {
+        "id": 5235,
+        "name": "dazzle_shadow_wave",
+        "uri": "dazzle",
+        "language": {
+            "abilityId": 5235,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shadow Wave",
+            "description": [
+                "Sends out a bolt of power that arcs between allies, healing them while damaging any units standing nearby.  Dazzle is always healed by Shadow Wave."
+            ],
+            "attributes": [
+                "HEAL ARC RADIUS: 475",
+                "MAX HEAL TARGETS: 4 / 5 / 6 / 7",
+                "DAMAGE RADIUS: 185",
+                "DAMAGE: 80 / 100 / 120 / 140"
+            ],
+            "lore": "While it is a simplistic and routine rite among Shadow Priests, the Shadow Wave is also the most critical for success.",
+            "notes": [
+                "Prioritizes allied heroes over creeps.",
+                "If enemies are near multiple allied units affected by Shadow Wave, they will take multiple instances of damage."
+            ]
+        },
+        "stat": {
+            "abilityId": 5235,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 32776,
+            "unitTargetType": 3,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                14,
+                12,
+                10,
+                8
+            ],
+            "manaCost": [
+                90,
+                100,
+                110,
+                120
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5236": {
+        "id": 5236,
+        "name": "dazzle_weave",
+        "uri": "dazzle",
+        "language": {
+            "abilityId": 5236,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Weave",
+            "description": [
+                "Applies a buff that increases the armor of allied heroes while decreasing the armor of enemy heroes in the target area over time."
+            ],
+            "attributes": [
+                "RADIUS: 575 / 575 / 575",
+                "DURATION: 24.0",
+                "ARMOR PER SECOND: 0.75 / 1 / 1.25"
+            ],
+            "lore": "His ethereal journey into the Nothl realm has allowed Dazzle to mend together the powers of light and dark, creating shifting waves of enchantments.",
+            "notes": [
+                "Places a buff on units, so entering or leaving the area after the cast has no effect."
+            ]
+        },
+        "stat": {
+            "abilityId": 5236,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                2000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                40,
+                40,
+                40
+            ],
+            "manaCost": [
+                100,
+                100,
+                100
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6049": {
+        "id": 6049,
+        "name": "special_bonus_unique_dazzle_1",
+        "uri": "dazzle",
+        "language": {
+            "abilityId": 6049,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-32% Poison Touch Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6049,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6232": {
+        "id": 6232,
+        "name": "special_bonus_unique_dazzle_2",
+        "uri": "dazzle",
+        "language": {
+            "abilityId": 6232,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Shadow Wave Heal / Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6232,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6528": {
+        "id": 6528,
+        "name": "special_bonus_unique_dazzle_3",
+        "uri": "dazzle",
+        "language": {
+            "abilityId": 6528,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+36 Poison Touch DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6528,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6626": {
+        "id": 6626,
+        "name": "special_bonus_unique_dazzle_4",
+        "uri": "dazzle",
+        "language": {
+            "abilityId": 6626,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.5 Bad Juju Armor Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6626,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7304": {
+        "id": 7304,
+        "name": "dazzle_bad_juju",
+        "uri": "dazzle",
+        "language": {
+            "abilityId": 7304,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Bad Juju",
+            "description": [
+                "Passively reduces cooldowns on your abilities and items. Anytime you cast a spell, all nearby enemies will have their armor reduced. Debuff stacks and refreshes duration."
+            ],
+            "attributes": [
+                "COOLDOWN REDUCTION: 26% / 38% / 50%",
+                "ARMOR REDUCTION: 2 / 2.25 / 2.5",
+                "DURATION: 8.0",
+                "RADIUS: 1200"
+            ],
+            "lore": "Each invocation of the Nothl realm helps it further permeate the surroundings of our own.",
+            "aghanimDescription": "Causes all of your abilities to fire an attack at nearby enemies when they are cast.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7304,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    }
+}

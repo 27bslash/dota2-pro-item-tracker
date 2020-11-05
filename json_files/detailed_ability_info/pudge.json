@@ -1,0 +1,549 @@
+{
+    "332": {
+        "id": 332,
+        "name": "special_bonus_unique_pudge_5",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 332,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-4 Meat Hook Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 332,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "408": {
+        "id": 408,
+        "name": "special_bonus_unique_pudge_6",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 408,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.8s Dismember Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 408,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5074": {
+        "id": 5074,
+        "name": "pudge_flesh_heap",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 5074,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Flesh Heap",
+            "description": [
+                "Gives Pudge increased magic resistance, as well as bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active."
+            ],
+            "attributes": [
+                "MAGIC RESISTANCE: 8% / 10% / 12% / 14%",
+                "STRENGTH BONUS: 1.5 / 2 / 2.5 / 3.0",
+                "RANGE: 450"
+            ],
+            "lore": "The Butcher gives new meaning to the words 'meat shield.'",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5074,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5075": {
+        "id": 5075,
+        "name": "pudge_meat_hook",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 5075,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Meat Hook",
+            "description": [
+                "Launches a bloody hook toward a unit or location. The hook will snag the first unit it encounters, dragging the unit back to Pudge and dealing damage if it is an enemy."
+            ],
+            "attributes": [
+                "DAMAGE: 150 / 220 / 290 / 360",
+                "CAST RANGE: 1300"
+            ],
+            "lore": "The Butcher's hook is a symbolic nightmare, its curved blade a frightening reminder of his slaughterous intent.",
+            "notes": [
+                "Interrupts channeling spells of the primary target if it's an enemy.",
+                "Meat Hook hits invisible units.",
+                "Meat Hook can go through trees, cliffs, buildings, ancient units and Roshan.",
+                "Meat Hook can drag friendly units, but they won't be damaged.",
+                "Meat Hook can hit and drag runes to Pudge, refunding the Hook's mana cost."
+            ]
+        },
+        "stat": {
+            "abilityId": 5075,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16400,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1300
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                21,
+                18,
+                15,
+                12
+            ],
+            "damage": [
+                150,
+                220,
+                290,
+                360
+            ],
+            "manaCost": [
+                125,
+                130,
+                135,
+                140
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5076": {
+        "id": 5076,
+        "name": "pudge_rot",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 5076,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Rot",
+            "description": [
+                "A toxic cloud that deals intense damage and slows movement--harming not only enemy units but Pudge himself."
+            ],
+            "attributes": [
+                "RADIUS: 250",
+                "MOVE SLOW: -14% / -20% / -26% / -32%",
+                "DAMAGE: 30 / 60 / 90 / 120"
+            ],
+            "lore": "A foul odor precedes a toxic, choking gas, emanating from the Butcher's putrid, ever-swelling mass.",
+            "notes": [
+                "Using Rot doesn't interrupt channeling.",
+                "Rot hits invisible units.",
+                "If Pudge is silenced, he can't deactivate Rot if it's activated."
+            ]
+        },
+        "stat": {
+            "abilityId": 5076,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 541188,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5077": {
+        "id": 5077,
+        "name": "pudge_dismember",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 5077,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Dismember",
+            "description": [
+                "CHANNELED - Pudge chows down on an enemy unit, disabling it and dealing damage over time. Pudge gets healed for the same amount he damages. Lasts longer on creeps."
+            ],
+            "attributes": [
+                "DURATION: ",
+                "CREEP DURATION: 6.0 / 6.0 / 6.0",
+                "SCEPTER ALLIED HEAL: 4%",
+                "SCEPTER COOLDOWN: 11"
+            ],
+            "lore": "'When I'm through with these vermin, they'll be fit for a pie!'",
+            "aghanimDescription": "Reduces cooldown and allows targeting an ally to swallow them and heal them for %scepter_regen_pct%%% of their max health per second. The ally can exit whenever they want by issuing a command.",
+            "notes": [
+                "If a unit becomes invisible while Dismembered, it will still be under the effects of Dismember."
+            ]
+        },
+        "stat": {
+            "abilityId": 5077,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 16520,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                160
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "channelTime": [
+                3,
+                3,
+                3
+            ],
+            "cooldown": [
+                30,
+                25,
+                20
+            ],
+            "manaCost": [
+                100,
+                130,
+                170
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6023": {
+        "id": 6023,
+        "name": "special_bonus_unique_pudge_1",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 6023,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1.5 Flesh Heap Stack Str",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6023,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6245": {
+        "id": 6245,
+        "name": "special_bonus_unique_pudge_2",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 6245,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Rot Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6245,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6506": {
+        "id": 6506,
+        "name": "special_bonus_unique_pudge_3",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 6506,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "1.8x Dismember Damage/Heal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6506,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7142": {
+        "id": 7142,
+        "name": "special_bonus_unique_pudge_4",
+        "uri": "pudge",
+        "language": {
+            "abilityId": 7142,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-16% Rot Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7142,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

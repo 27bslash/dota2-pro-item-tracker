@@ -1,0 +1,762 @@
+{
+    "402": {
+        "id": 402,
+        "name": "special_bonus_unique_nyx_4",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 402,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.25s Impale Stun Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 402,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "435": {
+        "id": 435,
+        "name": "special_bonus_agility_80",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 435,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+80 Agility",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 435,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5462": {
+        "id": 5462,
+        "name": "nyx_assassin_impale",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 5462,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Impale",
+            "description": [
+                "Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall."
+            ],
+            "attributes": [
+                "STUN DURATION: 1.4 / 1.8 / 2.2 / 2.6",
+                "IMPALE DAMAGE: 100 / 160 / 220 / 280"
+            ],
+            "lore": "All zealot scarabs possess intimate knowledge of underground pathways, using them to their advantage.",
+            "notes": [
+                "The spikes move at 1600 units per second, over 700 range.",
+                "Impale cannot be blocked by Linken's Sphere."
+            ]
+        },
+        "stat": {
+            "abilityId": 5462,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16400,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                14
+            ],
+            "manaCost": [
+                95,
+                115,
+                135,
+                155
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5463": {
+        "id": 5463,
+        "name": "nyx_assassin_mana_burn",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 5463,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Mana Burn",
+            "description": [
+                "Destroys the target hero's mana equal to a multiplier of its Intelligence, and deals damage equal to the mana burned."
+            ],
+            "attributes": [
+                "INTELLIGENCE MULTIPLIER: 3.5 / 4 / 4.5 / 5"
+            ],
+            "lore": "The tome in Ultimyr describes one scarab with the ability eat away at the mind of lesser beings.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5463,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16392,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600,
+                600,
+                600,
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                28,
+                20,
+                12,
+                4
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5464": {
+        "id": 5464,
+        "name": "nyx_assassin_spiked_carapace",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 5464,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Spiked Carapace",
+            "description": [
+                "When activated while above ground, Spiked Carapace reflects and negates damage dealt to Nyx Assassin (max once from each source), as well as stunning the source of the damage. Activating Spiked Carapace will not break Vendetta invisibility.",
+                "",
+                "While Burrowed, Spiked Carapace instantly stuns nearby enemies when cast."
+            ],
+            "attributes": [
+                "REFLECT DURATION: 2.0",
+                "STUN DURATION: 0.6 / 1.2 / 1.8 / 2.4",
+                "DAMAGE REFLECTED: 100%"
+            ],
+            "lore": "While their carapace is relatively thin, it's guarded by a retractable field of razor-sharp spikes.",
+            "notes": [
+                "The damage is calculated after all reductions.",
+                "Spiked Carapace will only trigger on damage from other player controlled units.",
+                "The damage reflected will have the same damage type as it had when it was dealt to Nyx."
+            ]
+        },
+        "stat": {
+            "abilityId": 5464,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                25,
+                20,
+                15,
+                10
+            ],
+            "manaCost": [
+                40,
+                40,
+                40,
+                40
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5465": {
+        "id": 5465,
+        "name": "nyx_assassin_vendetta",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 5465,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Vendetta",
+            "description": [
+                "Allows Nyx Assassin to become invisible and gain a speed bonus. If Nyx Assassin attacks to break the invisibility, massive bonus damage is dealt with the attack. Applies a break status on the enemy for 4.0 seconds."
+            ],
+            "attributes": [
+                "DURATION: 40 / 50 / 60",
+                "MOVEMENT SPEED: 16% / 18% / 20%",
+                "BONUS DAMAGE: 250 / 375 / 500"
+            ],
+            "lore": "The scarab kills for the glory of his queen.",
+            "aghanimDescription": "Grants new ability: Burrow. Nyx Assassin buries himself beneath the battlefield over a short duration.",
+            "notes": [
+                "Has a 0.0 second fadetime.",
+                "If a spell is used to break the invisibility, or the invisibility expires, the bonus damage is lost.",
+                "While the invisibility cannot be dispelled, the Break can be."
+            ]
+        },
+        "stat": {
+            "abilityId": 5465,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 526340,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                90,
+                70,
+                50
+            ],
+            "manaCost": [
+                140,
+                200,
+                260
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5666": {
+        "id": 5666,
+        "name": "nyx_assassin_burrow",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 5666,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Burrow",
+            "description": [
+                "Nyx Assassin buries himself beneath the battlefield over a short duration. Once burrowed, Spiked Carapace instantly stuns nearby enemies when cast, the range of Mana Burn and Impale is increased, and Impale's cooldown is decreased. While burrowed, Nyx Assassin is stationary, unable to attack, and invisible. His health and mana regeneration are also increased, and he gains damage reduction from all damage sources."
+            ],
+            "attributes": [
+                "BURROW HEALTH/MANA REGEN: 1.5%",
+                "BURROW DAMAGE REDUCTION: 40%",
+                "BURROW MANA BURN RANGE: 1050",
+                "BURROW IMPALE RANGE: 1225",
+                "BURROW IMPALE COOLDOWN: 7",
+                "BURROW SPIKED CARAPACE RANGE: 300"
+            ],
+            "lore": "Some castes of zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey.",
+            "notes": [
+                "Casting Vendetta will cancel burrow."
+            ]
+        },
+        "stat": {
+            "abilityId": 5666,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                1.5
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5673": {
+        "id": 5673,
+        "name": "nyx_assassin_unburrow",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 5673,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Unburrow",
+            "description": [
+                "Emerge from the burrow."
+            ],
+            "attributes": [],
+            "lore": "Some castes of zealot scarab are known to create small burrows to lie in wait, ready to ambush their prey.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5673,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16389,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5956": {
+        "id": 5956,
+        "name": "special_bonus_gold_income_60",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 5956,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+60 Gold/Min",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5956,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6130": {
+        "id": 6130,
+        "name": "special_bonus_unique_nyx",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 6130,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+60% Spiked Carapace Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6130,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6399": {
+        "id": 6399,
+        "name": "special_bonus_unique_nyx_2",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 6399,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+140 Impale Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6399,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6430": {
+        "id": 6430,
+        "name": "special_bonus_agility_40",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 6430,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40 Agility",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6430,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6705": {
+        "id": 6705,
+        "name": "special_bonus_agility_100",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 6705,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Agility",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6705,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6814": {
+        "id": 6814,
+        "name": "special_bonus_unique_nyx_3",
+        "uri": "nyx_assassin",
+        "language": {
+            "abilityId": 6814,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Vendetta Unobstructed Pathing",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6814,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

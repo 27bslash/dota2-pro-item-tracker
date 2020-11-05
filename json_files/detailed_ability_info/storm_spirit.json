@@ -1,0 +1,495 @@
+{
+    "5098": {
+        "id": 5098,
+        "name": "storm_spirit_static_remnant",
+        "uri": "storm_spirit",
+        "language": {
+            "abilityId": 5098,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Static Remnant",
+            "description": [
+                "Creates an explosively charged image of Storm Spirit that lasts 12.0 seconds and will detonate and deal damage if an enemy unit comes near it."
+            ],
+            "attributes": [
+                "RADIUS: 260",
+                "DAMAGE: 120 / 175 / 230 / 285"
+            ],
+            "lore": "Raijin Thunderkeg's duality allows him to admire himself in shocking fashion.",
+            "notes": [
+                "Remnants take 1.0 second to materialize after the spell is cast.",
+                "Remnants grant unobstructed vision for their duration.",
+                "The explosion actually hits units in a 260 radius, but will only be triggered in 235."
+            ]
+        },
+        "stat": {
+            "abilityId": 5098,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                3.5
+            ],
+            "manaCost": [
+                70,
+                80,
+                90,
+                100
+            ],
+            "isUltimate": false,
+            "duration": "12.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5099": {
+        "id": 5099,
+        "name": "storm_spirit_electric_vortex",
+        "uri": "storm_spirit",
+        "language": {
+            "abilityId": 5099,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Electric Vortex",
+            "description": [
+                "A vortex that pulls an enemy unit to Storm Spirit's location."
+            ],
+            "attributes": [
+                "PULL DISTANCE: 180 / 220 / 260 / 300",
+                "DURATION: ",
+                "SCEPTER RADIUS: 475"
+            ],
+            "lore": "Raijin's thunderous, boisterous energy often draws others into an electrifying situation.",
+            "aghanimDescription": "Electric Vortex affects all enemies within a radius around Storm Spirit.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5099,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                300
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                16
+            ],
+            "manaCost": [
+                60,
+                70,
+                80,
+                90
+            ],
+            "isUltimate": false,
+            "duration": "1.4 1.8 2.2 2.6",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5100": {
+        "id": 5100,
+        "name": "storm_spirit_overload",
+        "uri": "storm_spirit",
+        "language": {
+            "abilityId": 5100,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Overload",
+            "description": [
+                "Casting a spell creates an electrical charge, which is released in a burst on Storm's next attack, dealing damage and slowing nearby enemies."
+            ],
+            "attributes": [
+                "MOVEMENT SLOW: -80%",
+                "ATTACK SLOW: -80",
+                "RADIUS: 300",
+                "DAMAGE: 40 / 60 / 80 / 100"
+            ],
+            "lore": "Pow!  Zip!  Zap!",
+            "notes": [
+                "Using items doesn't trigger Overload.",
+                "Overload charges do not stack."
+            ]
+        },
+        "stat": {
+            "abilityId": 5100,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 40,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "0.6 0.6 0.6 0.6",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5101": {
+        "id": 5101,
+        "name": "storm_spirit_ball_lightning",
+        "uri": "storm_spirit",
+        "language": {
+            "abilityId": 5101,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Ball Lightning",
+            "description": [
+                "Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost is 30+ 8% of his total mana pool, and the cost per 100 units traveled is 10+ 0.65 of his total mana pool. Damage is expressed in damage per 100 units traveled."
+            ],
+            "attributes": [
+                "SPEED: 1250 / 1875 / 2500",
+                "RADIUS: 200",
+                "MANA DRAIN PER UNIT: 0.65%"
+            ],
+            "lore": "The Storm is coming in.",
+            "notes": [
+                "Abilities and items can be used while traveling.",
+                "This ability will destroy trees.",
+                "Storm Spirit is invulnerable during Ball Lightning."
+            ]
+        },
+        "stat": {
+            "abilityId": 5101,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4112,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "damage": [
+                8,
+                12,
+                16
+            ],
+            "manaCost": [
+                30
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6167": {
+        "id": 6167,
+        "name": "special_bonus_unique_storm_spirit",
+        "uri": "storm_spirit",
+        "language": {
+            "abilityId": 6167,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+0.4s Electric Vortex",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6167,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6907": {
+        "id": 6907,
+        "name": "special_bonus_unique_storm_spirit_3",
+        "uri": "storm_spirit",
+        "language": {
+            "abilityId": 6907,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Overload Pierces Immunity",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6907,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6908": {
+        "id": 6908,
+        "name": "special_bonus_unique_storm_spirit_4",
+        "uri": "storm_spirit",
+        "language": {
+            "abilityId": 6908,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "600 Distance Auto Remnant in Ball Lightning",
+            "description": [
+                "Every 600 distance travelled in Ball Lightning creates a Static Remnant."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6908,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6916": {
+        "id": 6916,
+        "name": "special_bonus_unique_storm_spirit_5",
+        "uri": "storm_spirit",
+        "language": {
+            "abilityId": 6916,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+65 Static Remnant Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6916,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7936": {
+        "id": 7936,
+        "name": "special_bonus_unique_storm_spirit_6",
+        "uri": "storm_spirit",
+        "language": {
+            "abilityId": 7936,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+24 Overload Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7936,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

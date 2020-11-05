@@ -1,0 +1,632 @@
+{
+    "5334": {
+        "id": 5334,
+        "name": "spectre_spectral_dagger",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 5334,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Spectral Dagger",
+            "description": [
+                "Spectre flings a dagger to draw a Shadow Path, dealing damage and slowing the movement speed of any enemies along the trail. Units hit by the dagger also trail a Shadow Path. While treading the path, Spectre phases through otherwise impassable terrain."
+            ],
+            "attributes": [
+                "DAMAGE: 90 / 140 / 190 / 240",
+                "MOVEMENT SPEED CHANGE: 10% / 14% / 18% / 22%",
+                "DURATION: 7.0 / 7.0 / 7.0 / 7.0"
+            ],
+            "lore": "Mercurial's dagger eclipses the physical plane in shadow, a state in which mortals cower, but spectres thrive.",
+            "notes": [
+                "There is a 1.0 second grace period after leaving the path where no collision is preserved."
+            ]
+        },
+        "stat": {
+            "abilityId": 5334,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 24,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                2000,
+                2000,
+                2000,
+                2000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                16,
+                16,
+                16,
+                16
+            ],
+            "manaCost": [
+                100,
+                120,
+                140,
+                160
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5335": {
+        "id": 5335,
+        "name": "spectre_desolate",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 5335,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Desolate",
+            "description": [
+                "Deals bonus damage whenever Spectre attacks an enemy that does not have any allied units within a 425 radius around them."
+            ],
+            "attributes": [
+                "BONUS DAMAGE: 24 / 36 / 48 / 60",
+                "RADIUS: 425"
+            ],
+            "lore": "Often times, warriors find themselves alone with a vision of Mercurial - the fated question is if it is the true Spectre.",
+            "notes": [
+                "Damage is dealt before Spectre's attack.",
+                "Spectre's illusions also have Desolate."
+            ]
+        },
+        "stat": {
+            "abilityId": 5335,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5336": {
+        "id": 5336,
+        "name": "spectre_dispersion",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 5336,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Dispersion",
+            "description": [
+                "Damage done to Spectre is reflected on her enemies, leaving her unharmed. The effect lessens with distance."
+            ],
+            "attributes": [
+                "DAMAGE REFLECTED: 7% / 12% / 17% / 22%",
+                "MIN RADIUS: 300 / 300 / 300 / 300",
+                "MAX RADIUS: 700"
+            ],
+            "lore": "A daunting task lies before enemies of Mercurial - killing a shadow with blade and magic.",
+            "notes": [
+                "The reflected damage is not dealt to Spectre.",
+                "Illusions don't get this ability.",
+                "Damage is reflected before reductions, and is returned as the same damage type."
+            ]
+        },
+        "stat": {
+            "abilityId": 5336,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5337": {
+        "id": 5337,
+        "name": "spectre_haunt",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 5337,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Haunt",
+            "description": [
+                "Creates a spectral nemesis to attack each enemy hero. At any moment during the duration, Spectre can use Reality to exchange places of a given haunt.",
+                "",
+                "Haunt illusions are uncontrollable, take extra damage, and deal less damage than Spectre herself.  They ignore terrain."
+            ],
+            "attributes": [
+                "HAUNT DURATION: 5.0 / 6.0 / 7.0",
+                "HAUNT DAMAGE: 40% / 60% / 80%",
+                "HAUNT DAMAGE TAKEN: 200% / 200% / 200%",
+                "DURATION:%single_duration%",
+                "%HAUNT DAMAGE:%single_tooltip_outgoing%",
+                "%HAUNT DAMAGE TAKEN:%single_tooltip_illusion_total_damage_incoming%"
+            ],
+            "lore": "At the height of combat, Mercurial's physical manifestation shatters, and the shadowy pieces haunt those who still cling to life.",
+            "aghanimDescription": "Grants new ability: Shadow Step. Allows you to perform a single target unit Haunt",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5337,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                180,
+                150,
+                120
+            ],
+            "manaCost": [
+                150,
+                200,
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5338": {
+        "id": 5338,
+        "name": "spectre_reality",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 5338,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Reality",
+            "description": [
+                "Spectre exchanges places with a chosen Haunt."
+            ],
+            "attributes": [],
+            "lore": "The scattered shadows unite into the one true Spectre.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5338,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 80,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5920": {
+        "id": 5920,
+        "name": "special_bonus_all_stats_4",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 5920,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+4 All Stats",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5920,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "5976": {
+        "id": 5976,
+        "name": "special_bonus_hp_400",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 5976,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+400 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5976,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6148": {
+        "id": 6148,
+        "name": "special_bonus_unique_spectre",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 6148,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-8s Spectral Dagger Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6148,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6900": {
+        "id": 6900,
+        "name": "special_bonus_unique_spectre_2",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 6900,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+12 Desolate Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6900,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6901": {
+        "id": 6901,
+        "name": "special_bonus_unique_spectre_3",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 6901,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+14% Spectral Dagger Slow/Bonus",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6901,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6902": {
+        "id": 6902,
+        "name": "special_bonus_unique_spectre_4",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 6902,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+32% Haunt Illusion Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6902,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6903": {
+        "id": 6903,
+        "name": "special_bonus_unique_spectre_5",
+        "uri": "spectre",
+        "language": {
+            "abilityId": 6903,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5% Dispersion",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6903,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

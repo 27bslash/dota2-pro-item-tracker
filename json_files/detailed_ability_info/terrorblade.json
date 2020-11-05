@@ -1,0 +1,724 @@
+{
+    "452": {
+        "id": 452,
+        "name": "special_bonus_evasion_16",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 452,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "16% Evasion",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 452,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "479": {
+        "id": 479,
+        "name": "special_bonus_unique_terrorblade_5",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 479,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8s Conjure Image Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 479,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5619": {
+        "id": 5619,
+        "name": "terrorblade_reflection",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 5619,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Reflection",
+            "description": [
+                "Terrorblade brings forth an invulnerable dark reflection of all enemy heroes in a target area. Affected enemy heroes are slowed and attacked by their reflection."
+            ],
+            "attributes": [
+                "REFLECTION DURATION: 2.5 / 3.5 / 4.5 / 5.5",
+                "REFLECTION DAMAGE: 40% / 60% / 80% / 100%",
+                "MOVEMENT SLOW: 25%",
+                "RADIUS: 475"
+            ],
+            "lore": "In the fractal prison of Foulfell, Terrorblade learned the truth of this old tale: you are your own worst enemy.  Now it is a lesson he teaches others.",
+            "notes": [
+                "Reflections are untargetable, invulnerable illusions, that will be destroyed if the slow debuff is removed.",
+                "Reflections can only attack their source."
+            ]
+        },
+        "stat": {
+            "abilityId": 5619,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                22,
+                20,
+                18,
+                16
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5620": {
+        "id": 5620,
+        "name": "terrorblade_conjure_image",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 5620,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Conjure Image",
+            "description": [
+                "Creates an illusion of Terrorblade that deals damage."
+            ],
+            "attributes": [
+                "ILLUSION DURATION: 34.0",
+                "ILLUSION DAMAGE: 30% / 40% / 50% / 60%",
+                "ILLUSION DAMAGE TAKEN: 320.0%"
+            ],
+            "lore": "There's only one thing more dangerous than facing Terrorblade.  Facing MORE Terrorblades!",
+            "notes": [
+                "Illusions created by Conjure Image are visually different for enemies."
+            ]
+        },
+        "stat": {
+            "abilityId": 5620,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.15
+            ],
+            "cooldown": [
+                16
+            ],
+            "manaCost": [
+                70,
+                75,
+                80,
+                85
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5621": {
+        "id": 5621,
+        "name": "terrorblade_metamorphosis",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 5621,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Metamorphosis",
+            "description": [
+                "Terrorblade transforms into a powerful demon with a ranged attack. Any of Terrorblade's illusions that are within 1200 range will also be transformed by Metamorphosis."
+            ],
+            "attributes": [
+                "DURATION: 40 / 44 / 48 / 52",
+                "TRANSFORMATION TIME: 0.35",
+                "BASE ATTACK TIME: 1.5",
+                "ATTACK RANGE: 550",
+                "BONUS DAMAGE: 20 / 40 / 60 / 80",
+                "ILLUSION AURA RADIUS: 1200",
+                "SCEPTER FEAR DURATION: 3.75",
+                "SCEPTER WAVE RADIUS: 1600"
+            ],
+            "lore": "Temper, temper. The rage rises up and takes control.  Meet Terrorblade's own worst self.",
+            "aghanimDescription": "Grants you Terror Wave. Causes a wave to travel outwards in all directions forcing enemy heroes to become feared upon impact.",
+            "notes": [
+                "Cooldowns of items that are different for ranged and melee units will be based on which form Terrorblade was in when the item was used."
+            ]
+        },
+        "stat": {
+            "abilityId": 5621,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                155
+            ],
+            "manaCost": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5622": {
+        "id": 5622,
+        "name": "terrorblade_sunder",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 5622,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Sunder",
+            "description": [
+                "Severs the life from both Terrorblade and a target hero, exchanging a percentage of both units' current health. Some health points must remain."
+            ],
+            "attributes": [
+                "MINIMUM HP SWAP: 35% / 30% / 25%"
+            ],
+            "lore": "You didn't need that life, did you?  The demon marauder steals that which you hold most dear.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5622,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 32776,
+            "unitTargetType": 8,
+            "unitTargetTeam": 4,
+            "unitTargetFlags": 16,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                475
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.35
+            ],
+            "cooldown": [
+                120,
+                80,
+                40
+            ],
+            "manaCost": [
+                200,
+                100,
+                50
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5903": {
+        "id": 5903,
+        "name": "special_bonus_hp_250",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 5903,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+250 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5903,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "5923": {
+        "id": 5923,
+        "name": "special_bonus_all_stats_8",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 5923,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+8 All Stats",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5923,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6016": {
+        "id": 6016,
+        "name": "special_bonus_attack_speed_25",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 6016,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+25 Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6016,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6107": {
+        "id": 6107,
+        "name": "special_bonus_unique_terrorblade",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 6107,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-32s Sunder Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6107,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6135": {
+        "id": 6135,
+        "name": "special_bonus_all_stats_15",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 6135,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+15 All Stats",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6135,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6168": {
+        "id": 6168,
+        "name": "special_bonus_all_stats_10",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 6168,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+10 All Stats",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6168,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6942": {
+        "id": 6942,
+        "name": "special_bonus_unique_terrorblade_2",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 6942,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-8s Reflection Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6942,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6943": {
+        "id": 6943,
+        "name": "special_bonus_unique_terrorblade_3",
+        "uri": "terrorblade",
+        "language": {
+            "abilityId": 6943,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+240 Metamorphosis Attack Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6943,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

@@ -1,0 +1,539 @@
+{
+    "482": {
+        "id": 482,
+        "name": "special_bonus_unique_bloodseeker_5",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 482,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Bloodrage Attack Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 482,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5015": {
+        "id": 5015,
+        "name": "bloodseeker_bloodrage",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 5015,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Bloodrage",
+            "description": [
+                "Drives you into a bloodthirsty rage during which you attacks faster and deal more spell damage at the cost a percentage of your health per second. Provides half attack speed to allied heroes."
+            ],
+            "attributes": [
+                "DURATION: 8",
+                "ATTACK SPEED: 50 / 80 / 110 / 140",
+                "SPELL AMPLIFICATION: 6 / 12 / 18 / 24",
+                "MAX HEALTH DAMAGE PER SECOND: 2.2% / 2.4% / 2.6% / 2.8%"
+            ],
+            "lore": "Strygwyr shares his animalistic thirst for bloodshed.",
+            "notes": [
+                "Bloodrage can be cast on yourself or an enemy units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5015,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2056,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.10000000149011612,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                14,
+                12,
+                10,
+                8
+            ],
+            "manaCost": [
+                25
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5016": {
+        "id": 5016,
+        "name": "bloodseeker_blood_bath",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 5016,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Blood Rite",
+            "description": [
+                "Bloodseeker baptizes an area in sacred blood. After 2.9 seconds the ritual completes, causing any enemies caught in the area to take damage and become silenced."
+            ],
+            "attributes": [
+                "SILENCE DURATION: 3 / 4 / 5 / 6",
+                "DAMAGE: 120 / 180 / 240 / 300",
+                "RITUAL AREA: 600"
+            ],
+            "lore": "The Flayed Twins are ever willing to aid those who spill blood upon the field of battle.",
+            "notes": [
+                "Total time is a 2.6 second delay plus a 0.3 second cast time."
+            ]
+        },
+        "stat": {
+            "abilityId": 5016,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                12
+            ],
+            "manaCost": [
+                70,
+                80,
+                90,
+                100
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5017": {
+        "id": 5017,
+        "name": "bloodseeker_thirst",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 5017,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Thirst",
+            "description": [
+                "Bloodseeker is invigorated by the wounds of his enemies, restoring some life when he kills an enemy unit. Also gains bonus movement speed when an enemy hero's health falls below 75%, with the bonuses increasing as their health falls further. If an enemy hero's health falls below 25%, he will also gain vision and True Sight of that hero. Bonuses stack per hero. Unlocks max movement speed for Bloodseeker."
+            ],
+            "attributes": [
+                "THIRST HEALTH THRESHHOLD: 75%",
+                "MAX THIRST MOVE SPEED: 14% / 24% / 34% / 44%",
+                "MAX HEALTH HEAL HEROES: 12% / 18% / 24% / 30%",
+                "MAX HEALTH HEAL CREEPS: 8% / 12% / 16% / 20%",
+                "HALF HEAL RADIUS: 300",
+                "VISIBILITY HEALTH THRESHHOLD: 25%"
+            ],
+            "lore": "Strygwyr becomes frenzied when blood is spilled.",
+            "notes": [
+                "Not triggered by Illusions.",
+                "Max movement speed and attack speed bonuses occur when an enemy's health is at or below 25%.",
+                "Effects linger for 4.0 seconds if a target dies."
+            ]
+        },
+        "stat": {
+            "abilityId": 5017,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5018": {
+        "id": 5018,
+        "name": "bloodseeker_rupture",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 5018,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Rupture",
+            "description": [
+                "Causes an enemy unit's skin to rupture. If the unit moves, it takes damage based on the distance moved.  The damage is dealt through spell immunity."
+            ],
+            "attributes": [
+                "DURATION: 10 / 11 / 12",
+                "MOVE DAMAGE: 30% / 45% / 60%",
+                "CAST RANGE: ",
+                "SCEPTER CHARGES: 2",
+                "SCEPTER REPLENISH TIME: 40"
+            ],
+            "lore": "When the Bloodseeker hunts you, injuries become fatalities.",
+            "aghanimDescription": "Grants %max_charges_scepter% charges to Rupture with a %charge_restore_time_scepter% seconds replenish time.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5018,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 2,
+            "spellImmunity": 3,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                70
+            ],
+            "manaCost": [
+                200,
+                225,
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6230": {
+        "id": 6230,
+        "name": "special_bonus_unique_bloodseeker",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 6230,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-5s Blood Rite Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6230,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6356": {
+        "id": 6356,
+        "name": "special_bonus_unique_bloodseeker_2",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 6356,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+75 Blood Rite Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6356,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6357": {
+        "id": 6357,
+        "name": "special_bonus_unique_bloodseeker_3",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 6357,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+475 Rupture Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6357,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6405": {
+        "id": 6405,
+        "name": "special_bonus_hp_225",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 6405,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+225 Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6405,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6809": {
+        "id": 6809,
+        "name": "special_bonus_unique_bloodseeker_4",
+        "uri": "bloodseeker",
+        "language": {
+            "abilityId": 6809,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+14 Max Thirst MS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6809,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

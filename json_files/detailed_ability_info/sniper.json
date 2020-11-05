@@ -1,0 +1,506 @@
+{
+    "5154": {
+        "id": 5154,
+        "name": "sniper_shrapnel",
+        "uri": "sniper",
+        "language": {
+            "abilityId": 5154,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Shrapnel",
+            "description": [
+                "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 40 seconds."
+            ],
+            "attributes": [
+                "MOVEMENT SLOW: -12% / -18% / -24% / -30%",
+                "RADIUS: 450",
+                "DURATION: 10.0",
+                "DAMAGE: 20 / 35 / 50 / 65"
+            ],
+            "lore": "Kardel's modular rifle also fires incendiary rounds, useful for assaulting entrenched locations.",
+            "notes": [
+                "Damage is dealt 11 times, immediately at spell effect then every second.",
+                "Does not damage buildings.",
+                "Provides vision in the targeted area."
+            ]
+        },
+        "stat": {
+            "abilityId": 5154,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16432,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.25,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                0
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "3",
+            "chargeRestoreTime": "40"
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5155": {
+        "id": 5155,
+        "name": "sniper_headshot",
+        "uri": "sniper",
+        "language": {
+            "abilityId": 5155,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Headshot",
+            "description": [
+                "Sniper increases his accuracy, giving him a chance to deal extra damage and briefly knocks back his enemies."
+            ],
+            "attributes": [
+                "CHANCE: 40%",
+                "KNOCKBACK DISTANCE: 10"
+            ],
+            "lore": "Taking potshots at steepstalkers in his childhood has been thoroughly refined into perfect leads on enemy combatants.",
+            "notes": [
+                "Works on allied creeps."
+            ]
+        },
+        "stat": {
+            "abilityId": 5155,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "damage": [
+                20,
+                50,
+                80,
+                110
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5156": {
+        "id": 5156,
+        "name": "sniper_take_aim",
+        "uri": "sniper",
+        "language": {
+            "abilityId": 5156,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Take Aim",
+            "description": [
+                "Extends the attack range of Sniper's rifle. Can be activated to double the attack range bonus for 1 attack. Goes on cooldown after the attack is used."
+            ],
+            "attributes": [
+                "BONUS RANGE: 100 / 200 / 300 / 400"
+            ],
+            "lore": "Kardel always takes it upon himself to stay as far from harm as he can while still performing his role - taking perfect aim.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5156,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                9,
+                8,
+                7,
+                6
+            ],
+            "manaCost": [
+                30
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5157": {
+        "id": 5157,
+        "name": "sniper_assassinate",
+        "uri": "sniper",
+        "language": {
+            "abilityId": 5157,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Assassinate",
+            "description": [
+                "Sniper locks onto a target enemy unit and, after a short aiming duration, fires a devastating shot that deals damage at long range and mini-stuns the target."
+            ],
+            "attributes": [
+                "AIM DURATION: ",
+                "SCEPTER STUN DURATION: 1 / 1.25 / 1.5",
+                "SCEPTER AIM DURATION: 0.5"
+            ],
+            "lore": "In order to fulfill the prophecy and return to his home town, Kardel must make another shot as perfect as the one on the day of his ancient test.",
+            "aghanimDescription": "Causes Assassinate to fire quicker and disable the enemy target.",
+            "notes": [
+                "Crosshair effect is only visible to allies.",
+                "Invisibility doesn't disjoint the projectile.",
+                "Interrupts channeling spells, including on Spell Immune units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5157,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2097160,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 32,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                3000
+            ],
+            "castRangeBuffer": [
+                600
+            ],
+            "castPoint": [
+                2,
+                2,
+                2
+            ],
+            "cooldown": [
+                20,
+                15,
+                10
+            ],
+            "damage": [
+                320,
+                485,
+                650
+            ],
+            "manaCost": [
+                175,
+                225,
+                275
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6198": {
+        "id": 6198,
+        "name": "special_bonus_unique_sniper_2",
+        "uri": "sniper",
+        "language": {
+            "abilityId": 6198,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5 Shrapnel Charges",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6198,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6305": {
+        "id": 6305,
+        "name": "special_bonus_unique_sniper_1",
+        "uri": "sniper",
+        "language": {
+            "abilityId": 6305,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+24 Shrapnel DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6305,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6896": {
+        "id": 6896,
+        "name": "special_bonus_unique_sniper_3",
+        "uri": "sniper",
+        "language": {
+            "abilityId": 6896,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+28 Knockback Distance Headshot",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6896,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6897": {
+        "id": 6897,
+        "name": "special_bonus_unique_sniper_4",
+        "uri": "sniper",
+        "language": {
+            "abilityId": 6897,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-1.5s Assassinate Cast Time",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6897,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7396": {
+        "id": 7396,
+        "name": "special_bonus_unique_sniper_5",
+        "uri": "sniper",
+        "language": {
+            "abilityId": 7396,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-14% Shrapnel Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7396,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

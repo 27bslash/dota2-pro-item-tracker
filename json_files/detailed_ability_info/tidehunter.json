@@ -1,0 +1,601 @@
+{
+    "460": {
+        "id": 460,
+        "name": "special_bonus_attack_damage_200",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 460,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+200 Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 460,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5118": {
+        "id": 5118,
+        "name": "tidehunter_gush",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 5118,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Gush",
+            "description": [
+                "Summons a gush of water to damage an enemy unit, reducing their movement speed and armor."
+            ],
+            "attributes": [
+                "SLOW: -40% / -40% / -40% / -40%",
+                "ARMOR REDUCTION: 4 / 5 / 6 / 7",
+                "DAMAGE: 110 / 160 / 210 / 260",
+                "SCEPTER RANGE: 2200",
+                "SCEPTER RADIUS: 260",
+                "SCEPTER COOLDOWN: 7"
+            ],
+            "lore": "During his championship of the Sunken Isles, Leviathan gained mastery over the open sea.",
+            "aghanimDescription": "Gush becomes a ground targeted wave ability that affects enemy units in a line.  Decreases cooldown.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5118,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                12
+            ],
+            "manaCost": [
+                90,
+                100,
+                110,
+                120
+            ],
+            "isUltimate": false,
+            "duration": "4.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5119": {
+        "id": 5119,
+        "name": "tidehunter_kraken_shell",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 5119,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Kraken Shell",
+            "description": [
+                "Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. The hide also removes negative status effects if the damage taken crosses a threshold.",
+                "",
+                "Does not stack with items that provide Damage Block.",
+                "",
+                "DISPEL TYPE: Strong Dispel"
+            ],
+            "attributes": [
+                "DAMAGE BLOCK: 14 / 26 / 38 / 50",
+                "DAMAGE THRESHOLD: 600 / 550 / 500 / 450",
+                "THRESHOLD TIMER: 6.0 / 6.0 / 6.0 / 6.0"
+            ],
+            "lore": "Claddish navymen tell tales of a mighty sea-faring beast that suffered spear and sword but continued to lay waste to the fleet.",
+            "notes": [
+                "Only damage from player owned sources is counted towards debuff removal.",
+                "The counter will reset if no player owned damage is taken for 6.0 / 6.0 / 6.0 / 6.0 seconds.",
+                "Kraken Shell removes most debuffs, even if they are generally not purgable."
+            ]
+        },
+        "stat": {
+            "abilityId": 5119,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5120": {
+        "id": 5120,
+        "name": "tidehunter_anchor_smash",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 5120,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Anchor Smash",
+            "description": [
+                "Tidehunter swings his mighty anchor to attack and deal bonus damage to nearby enemies and reduce their attack damage."
+            ],
+            "attributes": [
+                "ATTACK BONUS DAMAGE: 45 / 90 / 135 / 180",
+                "DAMAGE REDUCTION: -30% / -40% / -50% / -60%",
+                "DURATION: 6.0 / 6.0 / 6.0 / 6.0",
+                "RADIUS: 375"
+            ],
+            "lore": "Stolen from one of Admiral Kunkka's flagships, Leviathan's heavy anchor proves useful as a melee weapon.",
+            "notes": [
+                "Anchor Smash works on all Ancient creeps except for Roshan."
+            ]
+        },
+        "stat": {
+            "abilityId": 5120,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                375
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                7,
+                6,
+                5,
+                4
+            ],
+            "manaCost": [
+                30,
+                40,
+                50,
+                60
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5121": {
+        "id": 5121,
+        "name": "tidehunter_ravage",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 5121,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Ravage",
+            "description": [
+                "Slams the ground, causing tentacles to erupt in all directions, damaging and stunning all nearby enemy units."
+            ],
+            "attributes": [
+                "RADIUS: 1250",
+                "DURATION: 2.4 / 2.6 / 2.8"
+            ],
+            "lore": "Calling to the abyssal god Maelrawn has resulted in entire armadas being lost at sea.",
+            "notes": [
+                "Ravage will hit invisible units.",
+                "Ravage waves move outwards at a speed of 725."
+            ]
+        },
+        "stat": {
+            "abilityId": 5121,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                150,
+                150,
+                150
+            ],
+            "damage": [
+                200,
+                300,
+                400
+            ],
+            "manaCost": [
+                150,
+                225,
+                325
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6151": {
+        "id": 6151,
+        "name": "special_bonus_unique_tidehunter",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 6151,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-4 Gush Armor",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6151,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6160": {
+        "id": 6160,
+        "name": "special_bonus_mp_regen_3",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 6160,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+3 Mana Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6160,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6556": {
+        "id": 6556,
+        "name": "special_bonus_attack_damage_250",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 6556,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+250 Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6556,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6945": {
+        "id": 6945,
+        "name": "special_bonus_unique_tidehunter_2",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 6945,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+80 Gush Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6945,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6946": {
+        "id": 6946,
+        "name": "special_bonus_unique_tidehunter_3",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 6946,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-20% Anchor Smash Damage Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6946,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6947": {
+        "id": 6947,
+        "name": "special_bonus_unique_tidehunter_4",
+        "uri": "tidehunter",
+        "language": {
+            "abilityId": 6947,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+30 Kraken Shell Damage Block",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6947,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

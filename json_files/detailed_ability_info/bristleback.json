@@ -1,0 +1,490 @@
+{
+    "5548": {
+        "id": 5548,
+        "name": "bristleback_viscous_nasal_goo",
+        "uri": "bristleback",
+        "language": {
+            "abilityId": 5548,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Viscous Nasal Goo",
+            "description": [
+                "Covers a target in snot, causing it to have reduced armor and movement speed.  Multiple casts stack and refresh the duration."
+            ],
+            "attributes": [
+                "DURATION: 5.0",
+                "BASE ARMOR LOSS: 2",
+                "ARMOR LOSS PER STACK: 1.4 / 1.9 / 2.4 / 2.9",
+                "BASE MOVEMENT SLOW: 20%",
+                "MOVE SLOW PER STACK: 3% / 6% / 9% / 12%",
+                "STACK LIMIT: 4",
+                "SCEPTER RADIUS: 825"
+            ],
+            "lore": "Having caught a cold while stuck in the snow, Bristleback turns it to his advantage.",
+            "aghanimDescription": "Viscous Nasal Goo becomes a no target area of effect ability, applying to all enemies within range.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5548,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16392,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                1.5,
+                1.5,
+                1.5,
+                1.5
+            ],
+            "manaCost": [
+                12,
+                16,
+                20,
+                24
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5549": {
+        "id": 5549,
+        "name": "bristleback_quill_spray",
+        "uri": "bristleback",
+        "language": {
+            "abilityId": 5549,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Quill Spray",
+            "description": [
+                "Sprays enemy units with quills dealing damage in an area of effect around Bristleback. Deals bonus damage for every time a unit was hit by Quill Spray in the last 14.0 seconds."
+            ],
+            "attributes": [
+                "RADIUS: 700",
+                "QUILL BASE DAMAGE: 20.0 / 40.0 / 60.0 / 80.0",
+                "QUILL STACK DAMAGE: 30.0 / 32.0 / 34.0 / 36.0",
+                "STACK DURATION: 14.0",
+                "MAX DAMAGE: 550.0"
+            ],
+            "lore": "An enforcer's honor can be a prickly thing.  So can his quills.",
+            "notes": [
+                "Quill Spray damage is not reduced by damage block abilities."
+            ]
+        },
+        "stat": {
+            "abilityId": 5549,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                650
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                3,
+                3,
+                3,
+                3
+            ],
+            "manaCost": [
+                35,
+                35,
+                35,
+                35
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5550": {
+        "id": 5550,
+        "name": "bristleback_bristleback",
+        "uri": "bristleback",
+        "language": {
+            "abilityId": 5550,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Bristleback",
+            "description": [
+                "Bristleback takes less damage if hit on the sides or rear. If Bristleback takes 210 damage from the rear, he releases a Quill Spray of the current level."
+            ],
+            "attributes": [
+                "SIDE DAMAGE REDUCTION: 8% / 12% / 16% / 20%",
+                "BACK DAMAGE REDUCTION: 16% / 24% / 32% / 40%",
+                "DAMAGE THRESHOLD: 210"
+            ],
+            "lore": "Turning his back to a fight might be just the thing.",
+            "notes": [
+                "Bristleback's rear is considered to be within 70 degrees from the back.",
+                "Bristleback's side is considered to be within 110 degrees from the back."
+            ]
+        },
+        "stat": {
+            "abilityId": 5550,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5551": {
+        "id": 5551,
+        "name": "bristleback_warpath",
+        "uri": "bristleback",
+        "language": {
+            "abilityId": 5551,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Warpath",
+            "description": [
+                "Bristleback works himself up into a fury every time he casts a spell, increasing his movement speed and damage."
+            ],
+            "attributes": [
+                "DAMAGE PER STACK: 22 / 28 / 34",
+                "MOVEMENT PER STACK: 3% / 4% / 5%",
+                "STACK DURATION: 14.0",
+                "MAX STACKS: 5 / 7 / 9"
+            ],
+            "lore": "'Temper, temper,' his mum always chided.  But in a fight, a temper can come in handy.",
+            "notes": [
+                "Bristleback's illusions will receive the bonuses.",
+                "Items will not trigger Warpath."
+            ]
+        },
+        "stat": {
+            "abilityId": 5551,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": true,
+            "duration": "10.0 10.0 10.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6066": {
+        "id": 6066,
+        "name": "special_bonus_respawn_reduction_40",
+        "uri": "Bristleback",
+        "language": {
+            "abilityId": 6066,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-40s Respawn Time",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6066,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6083": {
+        "id": 6083,
+        "name": "special_bonus_unique_bristleback",
+        "uri": "bristleback",
+        "language": {
+            "abilityId": 6083,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5 Max Goo Stacks",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6083,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6360": {
+        "id": 6360,
+        "name": "special_bonus_unique_bristleback_2",
+        "uri": "bristleback",
+        "language": {
+            "abilityId": 6360,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+20 Quill Stack Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6360,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6560": {
+        "id": 6560,
+        "name": "special_bonus_spell_lifesteal_13",
+        "uri": "bristleback",
+        "language": {
+            "abilityId": 6560,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "13% Spell Lifesteal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6560,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6615": {
+        "id": 6615,
+        "name": "special_bonus_unique_bristleback_3",
+        "uri": "bristleback",
+        "language": {
+            "abilityId": 6615,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+24 Warpath Damage Per Stack",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6615,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

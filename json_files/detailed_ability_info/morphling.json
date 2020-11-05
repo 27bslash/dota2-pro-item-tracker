@@ -1,0 +1,843 @@
+{
+    "5052": {
+        "id": 5052,
+        "name": "morphling_waveform",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 5052,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Waveform",
+            "description": [
+                "Morphling dissolves into liquid and surges forward, damaging enemy units in his path.  Morphling is invulnerable during Waveform."
+            ],
+            "attributes": [
+                "CAST RANGE: "
+            ],
+            "lore": "A torrential flood takes enemies by force.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5052,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 20496,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700,
+                800,
+                900,
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.25
+            ],
+            "cooldown": [
+                20,
+                17,
+                14,
+                11
+            ],
+            "damage": [
+                75,
+                150,
+                225,
+                300
+            ],
+            "manaCost": [
+                150,
+                155,
+                160,
+                165
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5053": {
+        "id": 5053,
+        "name": "morphling_adaptive_strike_agi",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 5053,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Adaptive Strike (Agility)",
+            "description": [
+                "Launches a surge of water toward an enemy unit, dealing base damage plus additional damage based on Morphling's agility times a multiplier.  If Morphling's agility is 50% higher than strength, the maximum agility multiplier is used. ",
+                "",
+                " Also puts Adaptive Strike (Strength) on a 3 second cooldown."
+            ],
+            "attributes": [
+                "BASE DAMAGE: 70 / 80 / 90 / 100",
+                "DAMAGE MAX AGI MULTIPLIER: 1.0 / 1.5 / 2.0 / 2.5",
+                "DAMAGE MIN AGI MULTIPLIER: 0.5"
+            ],
+            "lore": "The Morphling calls upon his elements to crush his opponents with waves.",
+            "notes": [
+                "Projectile moves at 1150 speed."
+            ]
+        },
+        "stat": {
+            "abilityId": 5053,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.30000001192092896,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600,
+                700,
+                800,
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.25
+            ],
+            "cooldown": [
+                10
+            ],
+            "manaCost": [
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5055": {
+        "id": 5055,
+        "name": "morphling_morph_agi",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 5055,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Attribute Shift (Agility Gain)",
+            "description": [
+                "Morphling shifts its form, pulling points from Strength and pouring them into Agility. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.  Passively grants bonus Agility."
+            ],
+            "attributes": [
+                "SHIFT RATE: 1 / 4 / 10 / 25",
+                "BONUS AGILITY: 3 / 5 / 7 / 9"
+            ],
+            "lore": "Shifting water makes it difficult to discern the nature of Morphling.",
+            "notes": [
+                "Attribute Shift can't convert stats from items.",
+                "Leveling up Agility Gain will also level up Strength Gain."
+            ]
+        },
+        "stat": {
+            "abilityId": 5055,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 516,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5056": {
+        "id": 5056,
+        "name": "morphling_morph_str",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 5056,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Attribute Shift (Strength Gain)",
+            "description": [
+                "Morphling shifts its form, pulling points from Agility and pouring them into Strength. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.  Passively grants bonus Strength."
+            ],
+            "attributes": [
+                "SHIFT RATE: 1 / 4 / 10 / 25",
+                "BONUS STRENGTH: 3 / 5 / 7 / 9"
+            ],
+            "lore": "Shifting water makes it difficult to discern the nature of Morphling.",
+            "notes": [
+                "Attribute Shift can't convert stats from items.",
+                "Leveling up Strength Gain will also level up Agility Gain."
+            ]
+        },
+        "stat": {
+            "abilityId": 5056,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 516,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5057": {
+        "id": 5057,
+        "name": "morphling_replicate",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 5057,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Morph",
+            "description": [
+                "Morphling changes his form to match the targeted enemy, gaining their basic abilities with reduced mana cost. Can be toggled for the duration of the ability."
+            ],
+            "attributes": [
+                "DURATION: 20",
+                "MANA COST REDUCTION: 50%",
+                "SCEPTER BONUS CAST RANGE: 600"
+            ],
+            "lore": "Staring into Morphling produces a reflection that mimics the beholder.",
+            "aghanimDescription": "Allows targeting allied heroes. While Morphed, you gain Cast Range increase.",
+            "notes": [
+                "You can't target yourself with Morph."
+            ]
+        },
+        "stat": {
+            "abilityId": 5057,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 8,
+            "unitTargetType": 8,
+            "unitTargetTeam": 8,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700,
+                850,
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.25
+            ],
+            "cooldown": [
+                160,
+                100,
+                40
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5058": {
+        "id": 5058,
+        "name": "morphling_morph_replicate",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 5058,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Morph Replicate",
+            "description": [
+                "Toggles Morphling's form between his own and the replicated enemy."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5058,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 59397,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                1
+            ],
+            "manaCost": [
+                0
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5674": {
+        "id": 5674,
+        "name": "morphling_hybrid",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 5674,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Hybrid",
+            "description": [
+                "Morphling creates a hybrid replication of a target allied hero, which can cast all of that hero's current, non-ultimate abilities. Enemies are able to see which unit is a hybrid."
+            ],
+            "attributes": [
+                "DURATION: 20.0"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5674,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 9,
+            "unitTargetType": 8,
+            "unitTargetTeam": 8,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.25
+            ],
+            "cooldown": [
+                60
+            ],
+            "manaCost": [
+                200
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6062": {
+        "id": 6062,
+        "name": "special_bonus_unique_morphling_1",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 6062,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+275 Waveform Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6062,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6225": {
+        "id": 6225,
+        "name": "special_bonus_unique_morphling_2",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 6225,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-50 Morph Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6225,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6698": {
+        "id": 6698,
+        "name": "special_bonus_unique_morphling_3",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 6698,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+3 Multishot Adaptive Strike",
+            "description": [
+                "Additional enemy units within cast range are also targeted by Adaptive Strike."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6698,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6840": {
+        "id": 6840,
+        "name": "special_bonus_unique_morphling_4",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 6840,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Waveform Attacks Targets",
+            "description": [
+                "Enemies hit by Waveform are also instantly attacked by Morphling."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6840,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6927": {
+        "id": 6927,
+        "name": "special_bonus_unique_morphling_5",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 6927,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Morph Targets Allies",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6927,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7000": {
+        "id": 7000,
+        "name": "morphling_adaptive_strike_str",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 7000,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Adaptive Strike (Strength)",
+            "description": [
+                "Launches a surge of water toward an enemy unit, stunning and knocking back the target based on Morphling's strength. If his strength is 50% higher than his agility, the maximum stun/knockback is dealt. ",
+                "",
+                " Also puts Adaptive Strike (Agility) on a 3 second cooldown."
+            ],
+            "attributes": [
+                "STUN MAX: 1.5 / 2.0 / 2.5 / 3.0",
+                "STUN MIN: 0.5",
+                "KNOCKBACK MAX: 500",
+                "KNOCKBACK MIN: 100"
+            ],
+            "lore": "The Morphling calls upon his elements to crush his opponents with waves.",
+            "notes": [
+                "Projectile moves at 1150 speed."
+            ]
+        },
+        "stat": {
+            "abilityId": 7000,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.30000001192092896,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600,
+                700,
+                800,
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.25
+            ],
+            "cooldown": [
+                10
+            ],
+            "manaCost": [
+                80
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "7052": {
+        "id": 7052,
+        "name": "special_bonus_unique_morphling_6",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 7052,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "2 Waveform Charges",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7052,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7060": {
+        "id": 7060,
+        "name": "special_bonus_unique_morphling_8",
+        "uri": "morphling",
+        "language": {
+            "abilityId": 7060,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+16s Morph Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7060,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

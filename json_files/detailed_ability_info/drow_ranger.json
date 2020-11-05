@@ -1,0 +1,660 @@
+{
+    "343": {
+        "id": 343,
+        "name": "drow_ranger_multishot",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 343,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Multishot",
+            "description": [
+                "Channeling. Drow releases a flurry of arrows in continuous salvos, hitting enemies for extra damage and applying longer duration Frost Arrows. Lasts up to 1.75 seconds."
+            ],
+            "attributes": [
+                "ARROW COUNT: 12",
+                "ARROW BASE DAMAGE BONUS: 85% / 110% / 135% / 160%",
+                "ARROW SLOW DURATION: 1.25 / 2 / 2.75 / 3.5",
+                "ARROW RANGE MULTIPLIER: 2"
+            ],
+            "lore": "In the ranger's youth, learning to fire multiple arrows at once was considered a distracting frivolity. In the war of the Ancients, such technique has become strange necessity.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 343,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 1040,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "channelTime": [
+                1.75
+            ],
+            "cooldown": [
+                26,
+                24,
+                22,
+                20
+            ],
+            "manaCost": [
+                50,
+                70,
+                90,
+                110
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "486": {
+        "id": 486,
+        "name": "special_bonus_unique_drow_ranger_6",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 486,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-6s Multishot Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 486,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5019": {
+        "id": 5019,
+        "name": "drow_ranger_frost_arrows",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 5019,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Frost Arrows",
+            "description": [
+                "Adds a freezing effect to Drow's attacks, slowing enemy movement and dealing bonus damage. Slow lasts 1.5 seconds."
+            ],
+            "attributes": [
+                "MOVEMENT SLOW: -16% / -32% / -48% / -64%",
+                "BONUS DAMAGE: 5 / 10 / 15 / 20"
+            ],
+            "lore": "Ice-encased arrows pierce the silence, chilling their victims to the core.",
+            "notes": [
+                "The slow duration is refreshed on successive casts."
+            ]
+        },
+        "stat": {
+            "abilityId": 5019,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 393224,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                625
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "damage": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "manaCost": [
+                12,
+                12,
+                12,
+                12
+            ],
+            "isUltimate": false,
+            "duration": "1.5",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5021": {
+        "id": 5021,
+        "name": "drow_ranger_trueshot",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 5021,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Precision Aura",
+            "description": [
+                "Adds bonus damage to the physical attack of allied, ranged Hero units based on a percentage of Drow's agility.  Affects creeps for 30 seconds when cast."
+            ],
+            "attributes": [
+                "RANGE DAMAGE BONUS: 10% / 20% / 30% / 40%",
+                "RADIUS: 1200"
+            ],
+            "lore": "Traxex' time spent alone in the forests of her Drow home has allowed her to teach other archers how to improve their bow skills.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5021,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                100
+            ],
+            "isUltimate": false,
+            "duration": "30.0",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5022": {
+        "id": 5022,
+        "name": "drow_ranger_marksmanship",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 5022,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Marksmanship",
+            "description": [
+                "Drow's experiences in battle grant her a chance to launch arrows with incredible accuracy and effectiveness. Pierces through the enemy's defenses, ignoring their base armor. Grants Drow and nearby ranged heroes with bonus agility based on Drow's current agility. This ability is disabled if there is an enemy hero within 400 range."
+            ],
+            "attributes": [
+                "SCEPTER SPLIT COUNT: 2",
+                "SCEPTER DAMAGE REDUCTION: 50%",
+                "CHANCE: 20% / 30% / 40%",
+                "BONUS PROC DAMAGE: 70 / 80 / 90",
+                "AGILITY BONUS: 28% / 36% / 44%",
+                "AGILITY RADIUS: 1200"
+            ],
+            "lore": "The Drow Ranger is the epitome of archery prowess.",
+            "aghanimDescription": "Causes Drow Ranger's attacks to splinter on the target, hitting nearby units with normal attacks that deal reduced damage.",
+            "notes": [
+                "Marksmanship procs have true strike."
+            ]
+        },
+        "stat": {
+            "abilityId": 5022,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5632": {
+        "id": 5632,
+        "name": "drow_ranger_wave_of_silence",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 5632,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Gust",
+            "description": [
+                "Releases a wave that silences and knocks back enemy units. Knockback distance is relative to how close they are to you."
+            ],
+            "attributes": [
+                "WIDTH: 250",
+                "SILENCE DURATION: 3 / 4 / 5 / 6",
+                "KNOCKBACK DURATION: 0.6 / 0.7 / 0.8 / 0.9",
+                "KNOCKBACK MAX: 450"
+            ],
+            "lore": "Traxex is rather fond of the tranquility of physical combat, calling on her Drow heritage to end the incantations of opposing magi.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5632,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.25
+            ],
+            "cooldown": [
+                16,
+                15,
+                14,
+                13
+            ],
+            "manaCost": [
+                90
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6202": {
+        "id": 6202,
+        "name": "special_bonus_unique_drow_ranger_1",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 6202,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+28% Multishot Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6202,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6209": {
+        "id": 6209,
+        "name": "special_bonus_unique_drow_ranger_2",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 6209,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+550 Gust Distance/Knockback",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6209,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6280": {
+        "id": 6280,
+        "name": "special_bonus_unique_drow_ranger_3",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 6280,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+12 Marksmanship Chance",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6280,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6634": {
+        "id": 6634,
+        "name": "special_bonus_unique_drow_ranger_4",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 6634,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+2.5s Gust Silence Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6634,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6804": {
+        "id": 6804,
+        "name": "special_bonus_cooldown_reduction_50",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 6804,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "50% Cooldown Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6804,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "8010": {
+        "id": 8010,
+        "name": "special_bonus_unique_drow_ranger_5",
+        "uri": "drow_ranger",
+        "language": {
+            "abilityId": 8010,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+50% Gust Blind",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 8010,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    }
+}

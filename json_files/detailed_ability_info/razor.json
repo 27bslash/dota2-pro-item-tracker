@@ -1,0 +1,498 @@
+{
+    "586": {
+        "id": 586,
+        "name": "special_bonus_unique_razor_6",
+        "uri": "razor",
+        "language": {
+            "abilityId": 586,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+1 Eye of the Storm Target",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 586,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5082": {
+        "id": 5082,
+        "name": "razor_plasma_field",
+        "uri": "razor",
+        "language": {
+            "abilityId": 5082,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Plasma Field",
+            "description": [
+                "Releases a wave of energetic plasma that grows in power as it expands, but also zaps on contraction, slowing and dealing damage to enemy units caught in its path. Damage and slow increases with distance from Razor. The Plasma Field hits each unit twice, once each direction."
+            ],
+            "attributes": [
+                "DAMAGE MIN: 15 / 25 / 35 / 45",
+                "DAMAGE MAX: 80 / 115 / 150 / 185",
+                "SLOW MIN: 5%",
+                "SLOW MAX: 25% / 30% / 35% / 40%",
+                "SLOW DURATION: 1.5",
+                "RADIUS: 700"
+            ],
+            "lore": "The Lightning Revenant rules the Underscape with plasmatic power.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5082,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                13,
+                12,
+                11,
+                10
+            ],
+            "manaCost": [
+                125,
+                125,
+                125,
+                125
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5083": {
+        "id": 5083,
+        "name": "razor_static_link",
+        "uri": "razor",
+        "language": {
+            "abilityId": 5083,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Static Link",
+            "description": [
+                "Creates a charged link between Razor and an enemy Hero, stealing damage from the target and giving it to Razor. Allows razor to attack while moving with the link active."
+            ],
+            "attributes": [
+                "DAMAGE DRAIN RATE: 7 / 12 / 17 / 22",
+                "LINK DURATION: 5 / 6 / 7 / 8",
+                "BUFF DURATION: 18.0 / 18.0 / 18.0 / 18.0"
+            ],
+            "lore": "Razor's polarity channels electricity into his being, draining the power of his opposition.",
+            "notes": [
+                "The link is broken when either unit dies or the distance between them becomes 250 units greater than Static Link's cast range.",
+                "Can target Spell Immune units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5083,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16392,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                550
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                40,
+                35,
+                30,
+                25
+            ],
+            "manaCost": [
+                65
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5084": {
+        "id": 5084,
+        "name": "razor_unstable_current",
+        "uri": "razor",
+        "language": {
+            "abilityId": 5084,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Storm Surge",
+            "description": [
+                "Passively increases your movement speed."
+            ],
+            "attributes": [
+                "BONUS SPEED: 12% / 16% / 20% / 24%"
+            ],
+            "lore": "Merely approaching the Lightning Revenant is rewarded with shock therapy.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5084,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5085": {
+        "id": 5085,
+        "name": "razor_eye_of_the_storm",
+        "uri": "razor",
+        "language": {
+            "abilityId": 5085,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Eye of the Storm",
+            "description": [
+                "A powerful lightning storm strikes out at enemy units with the lowest health, dealing damage and reducing their armor."
+            ],
+            "attributes": [
+                "RADIUS: 500",
+                "DURATION: 30.0",
+                "STRIKE INTERVAL: 0.7 / 0.6 / 0.5",
+                "ARMOR REDUCTION: 1 / 1 / 1",
+                "DAMAGE: 60 / 75 / 90"
+            ],
+            "lore": "Ride the lightning.",
+            "aghanimDescription": "Causes Eye of the Storm to strike two different units instead of one and can damage structures.  When striking buildings, it will only target towers, barracks, and the Ancient.",
+            "notes": [
+                "Each blast targets the lowest health enemy unit within range.",
+                "Eye of the Storm will prioritize striking static linked heroes.",
+                "Successive casts of Eye of the Storm will stack."
+            ]
+        },
+        "stat": {
+            "abilityId": 5085,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 0.10000000149011612,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0
+            ],
+            "cooldown": [
+                80,
+                70,
+                60
+            ],
+            "manaCost": [
+                100,
+                150,
+                200
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6028": {
+        "id": 6028,
+        "name": "special_bonus_unique_razor",
+        "uri": "razor",
+        "language": {
+            "abilityId": 6028,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+5 Static Link Damage Steal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6028,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6408": {
+        "id": 6408,
+        "name": "special_bonus_unique_razor_2",
+        "uri": "razor",
+        "language": {
+            "abilityId": 6408,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-0.1 Eye of the Storm Strike Interval",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6408,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6860": {
+        "id": 6860,
+        "name": "special_bonus_unique_razor_3",
+        "uri": "razor",
+        "language": {
+            "abilityId": 6860,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+4% Unstable Current Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6860,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6861": {
+        "id": 6861,
+        "name": "special_bonus_unique_razor_4",
+        "uri": "razor",
+        "language": {
+            "abilityId": 6861,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+180 Eye of the Storm Passive Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6861,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}

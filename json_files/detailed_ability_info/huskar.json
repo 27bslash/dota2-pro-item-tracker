@@ -1,0 +1,627 @@
+{
+    "462": {
+        "id": 462,
+        "name": "special_bonus_unique_huskar_6",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 462,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+40% Berserker's Blood Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 462,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5271": {
+        "id": 5271,
+        "name": "huskar_inner_vitality",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 5271,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Inner Vitality",
+            "description": [
+                "Unlocks the regenerative power of a friendly unit, with healing based upon its primary attribute. If the target is below 35%, it will heal faster. Lasts 16 / 16 / 16 / 16 seconds."
+            ],
+            "attributes": [
+                "HEALTH REGEN: 12",
+                "BONUS FROM ATTRIBUTE: 6% / 8% / 10% / 12%",
+                "BONUS WHEN HURT: 22% / 30% / 38% / 46%"
+            ],
+            "lore": "While Huskar has little use for magic, this minor enchantment was learned from the Dazzle and the Dezun priests, to be used in times of great injury.",
+            "notes": [
+                "The HP percentage is checked every second and the regeneration adjusted accordingly.",
+                "Can be cast on Spell Immune units."
+            ]
+        },
+        "stat": {
+            "abilityId": 5271,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 32776,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                22,
+                18,
+                14,
+                10
+            ],
+            "manaCost": [
+                140,
+                150,
+                160,
+                170
+            ],
+            "isUltimate": false,
+            "duration": "16 16 16 16",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5272": {
+        "id": 5272,
+        "name": "huskar_burning_spear",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 5272,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Burning Spear",
+            "description": [
+                "Huskar sets his spears aflame, dealing damage over time with his regular attack. Multiple attacks will stack additional damage. Each attack drains some of Huskar's health. Lasts 8 seconds."
+            ],
+            "attributes": [
+                "HEALTH COST: 4%",
+                "BURN DAMAGE: 5 / 10 / 15 / 20"
+            ],
+            "lore": "The Sacred Warrior ignites his weaponry after marking it with his own blood - causing far greater pain than he himself feels.",
+            "notes": [
+                "Burning Spear stacks additively when used multiple times on one target.  There is no cap.",
+                "Huskar cannot kill himself with this skill."
+            ]
+        },
+        "stat": {
+            "abilityId": 5272,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 393224,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                450
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "manaCost": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "isUltimate": false,
+            "duration": "8",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5273": {
+        "id": 5273,
+        "name": "huskar_berserkers_blood",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 5273,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Berserker's Blood",
+            "description": [
+                "Huskar's injuries feed his power, giving increased attack speed and health regen based on missing health. Health regen is a percentage of your strength."
+            ],
+            "attributes": [
+                "MAX ATTACK SPEED: 130 / 190 / 250 / 310",
+                "MAX STR REGEN: 25% / 45% / 65% / 85%",
+                "HP FOR MAX BONUS: 10%"
+            ],
+            "lore": "After losing his birthright, Huskar gained a lethality in physical combat that is only heightened as his own blood is spilled.",
+            "notes": [
+                "Bonuses are provided linearly, no bonus at Full HP and full bonus at strictly less than 10% HP."
+            ]
+        },
+        "stat": {
+            "abilityId": 5273,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5274": {
+        "id": 5274,
+        "name": "huskar_life_break",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 5274,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Life Break",
+            "description": [
+                "Huskar draws upon his health to break an enemy's life, leaping at a target within attack range to shatter a percentage of that hero's current health, and slowing them.  While leaping, Huskar is Spell Immune.",
+                "",
+                "DISPEL TYPE: Basic Dispel"
+            ],
+            "attributes": [
+                "DAMAGE DEALT: 32% / 38% / 44%",
+                "DAMAGE TAKEN: 32% / 38% / 44%",
+                "MOVEMENT SLOW: -60%",
+                "SLOW DURATION: 3 / 4 / 5",
+                "TAUNT DURATION: 2.5"
+            ],
+            "lore": "No matter the danger, Huskar thrusts himself into melees that only he can survive.",
+            "aghanimDescription": "Forces the enemy target to attack you.",
+            "notes": [
+                "If Huskar is disabled during the charge or the target moves more than 1400 units in 0.015 seconds, the charge stops.",
+                "Slow works on Spell Immune units.",
+                "Life Break cannot be disjointed."
+            ]
+        },
+        "stat": {
+            "abilityId": 5274,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 8,
+            "unitTargetType": 5,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                550
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                12
+            ],
+            "manaCost": [
+                0,
+                0,
+                0
+            ],
+            "isUltimate": true,
+            "duration": "3 4 5",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6186": {
+        "id": 6186,
+        "name": "special_bonus_attack_range_175",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 6186,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+175 Attack Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6186,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6204": {
+        "id": 6204,
+        "name": "special_bonus_unique_huskar",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 6204,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+325 Life Break Cast Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6204,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6380": {
+        "id": 6380,
+        "name": "special_bonus_unique_huskar_2",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 6380,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+6 Burning Spears DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6380,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6655": {
+        "id": 6655,
+        "name": "special_bonus_unique_huskar_3",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 6655,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "0 Inner Vitality Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6655,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7143": {
+        "id": 7143,
+        "name": "special_bonus_unique_huskar_5",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 7143,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Burning Spears Pure Damage",
+            "description": [
+                "Pierces Spell Immunity."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7143,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7300": {
+        "id": 7300,
+        "name": "huskar_inner_fire",
+        "uri": "huskar",
+        "language": {
+            "abilityId": 7300,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Inner Fire",
+            "description": [
+                "In a fiery rage, knocks all nearby enemies away from you to a fixed distance, dealing damage and disarming them."
+            ],
+            "attributes": [
+                "DAMAGE: 100 / 170 / 240 / 310",
+                "DURATION: 1.75 / 2.5 / 3.25 / 4",
+                "RADIUS: 500",
+                "KNOCKBACK TO: 400"
+            ],
+            "lore": "Not even Huskar's own flesh can contain the unending expansion of his life force.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7300,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                14,
+                13,
+                12,
+                11
+            ],
+            "manaCost": [
+                75,
+                100,
+                125,
+                150
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    }
+}

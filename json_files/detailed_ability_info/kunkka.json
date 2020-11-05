@@ -1,0 +1,635 @@
+{
+    "469": {
+        "id": 469,
+        "name": "special_bonus_strength_18",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 469,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+18 Strength",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 469,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5031": {
+        "id": 5031,
+        "name": "kunkka_torrent",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 5031,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Torrent",
+            "description": [
+                "Summons a rising torrent that, after a short delay, hurls enemy units into the sky, stunning, dealing damage and slowing movement speed."
+            ],
+            "attributes": [
+                "DELAY: 1.6 / 1.6 / 1.6 / 1.6",
+                "SLOW DURATION: 1 / 2 / 3 / 4",
+                "STUN DURATION: 1.6",
+                "MOVE SLOW: -35%",
+                "RADIUS: 225",
+                "DAMAGE: 75 / 150 / 225 / 300"
+            ],
+            "lore": "An ancestral rush of water explodes from the center of the world, called upon by the Admiral.",
+            "aghanimDescription": "Adds a new ability: Torrent Storm. Continuously releases visible Torrents around you.",
+            "notes": [
+                "The initial bubble effect is only visible to allies and provides vision in fog of war.",
+                "Units tossed in the air will be stunned and still able to be attacked."
+            ]
+        },
+        "stat": {
+            "abilityId": 5031,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16432,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.5,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": true,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1500
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                16,
+                14,
+                12,
+                10
+            ],
+            "manaCost": [
+                90,
+                100,
+                110,
+                120
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5032": {
+        "id": 5032,
+        "name": "kunkka_tidebringer",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 5032,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Tidebringer",
+            "description": [
+                "Kunkka's legendary sword grants increased damage and cleaves a large area of effect in front of him for a single strike."
+            ],
+            "attributes": [
+                "DAMAGE BONUS: 25 / 50 / 75 / 100",
+                "CLEAVE DAMAGE: 165%",
+                "CLEAVE RANGE: 650 / 800 / 950 / 1100"
+            ],
+            "lore": "A lost Claddish soul inhabits Kunkka's trusty Tidebringer, empowering it to destroy demons of the Cataract.",
+            "notes": [
+                "Cleave damage goes through spell immunity."
+            ]
+        },
+        "stat": {
+            "abilityId": 5032,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 393224,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                150
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0,
+                0,
+                0,
+                0
+            ],
+            "cooldown": [
+                13,
+                10,
+                7,
+                4
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5033": {
+        "id": 5033,
+        "name": "kunkka_x_marks_the_spot",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 5033,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "X Marks the Spot",
+            "description": [
+                "Targets a friendly or enemy Hero, marks their position with an X, and returns them to it after several seconds.  Kunkka can trigger the return at any time during the duration. Lasts twice as long on allied heroes."
+            ],
+            "attributes": [
+                "ENEMY DELAY: 4.0",
+                "ALLIED DELAY: 8.0"
+            ],
+            "lore": "The Admiral's set of arcane abilities includes some that can be used for battle as well as entertainment.",
+            "notes": [
+                "If the target becomes Spell Immune after the cast, the target will not return to the X after the duration.",
+                "Interrupts channeling spells."
+            ]
+        },
+        "stat": {
+            "abilityId": 5033,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16392,
+            "unitTargetType": 1,
+            "unitTargetTeam": 4,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                400,
+                600,
+                800,
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                38,
+                30,
+                22,
+                14
+            ],
+            "manaCost": [
+                50
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5034": {
+        "id": 5034,
+        "name": "kunkka_return",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 5034,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Return",
+            "description": [
+                "Returns the marked hero to the X."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5034,
+            "gameVersionId": 135,
+            "type": 0,
+            "behavior": 16389,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4,
+                0.4,
+                0.4,
+                0.4
+            ],
+            "cooldown": [
+                1
+            ],
+            "manaCost": [
+                0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5035": {
+        "id": 5035,
+        "name": "kunkka_ghostship",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 5035,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Ghostship",
+            "description": [
+                "Summons a ghostly ship that sails through the battle before smashing apart, damaging and stunning all enemies caught near the wreckage. Allied heroes touched by the Ghostship are given a swig of The Admiral's Rum, receiving bonus movement speed and a delayed reaction to incoming damage."
+            ],
+            "attributes": [
+                "IMPACT DELAY: 3.1",
+                "RUM BONUS SPEED: 10% / 10% / 10%",
+                "RUM DURATION: 10",
+                "RANGE: 2000",
+                "WIDTH: 425 / 425 / 425",
+                "STUN DURATION: 1.4 / 1.4 / 1.4",
+                "DAMAGE DELAYED: 40%"
+            ],
+            "lore": "The final ship of the Claddish Navy is nothing but a phantom, but it is all too real to the enemies of the Admiral.",
+            "notes": [
+                "Damage dealt after Rum wears off is non-lethal and can never kill a hero.",
+                "Actual area of effect of ship's collision is larger than the boat itself.",
+                "The boat has a movement speed of 650."
+            ]
+        },
+        "stat": {
+            "abilityId": 5035,
+            "gameVersionId": 135,
+            "type": 1,
+            "behavior": 17424,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 2,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                80,
+                70,
+                60
+            ],
+            "damage": [
+                400,
+                500,
+                600
+            ],
+            "manaCost": [
+                125,
+                175,
+                225
+            ],
+            "isUltimate": true,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "6089": {
+        "id": 6089,
+        "name": "special_bonus_unique_kunkka",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 6089,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+80 Torrent AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6089,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6385": {
+        "id": 6385,
+        "name": "special_bonus_unique_kunkka_2",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 6385,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+100 Torrent Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6385,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6666": {
+        "id": 6666,
+        "name": "special_bonus_unique_kunkka_3",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 6666,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "Ghostship Fleet",
+            "description": [
+                "Spawns 3 Ghostships, 3.35 seconds apart, towards the target location."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6666,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6667": {
+        "id": 6667,
+        "name": "special_bonus_unique_kunkka_4",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 6667,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "+110% Tidebringer Cleave",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6667,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7131": {
+        "id": 7131,
+        "name": "special_bonus_unique_kunkka_5",
+        "uri": "kunkka",
+        "language": {
+            "abilityId": 7131,
+            "gameVersionId": 135,
+            "languageId": 0,
+            "displayName": "-1.5s Tidebringer Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7131,
+            "gameVersionId": 135,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    }
+}
