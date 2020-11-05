@@ -18,66 +18,30 @@ hero_output = db['heroes']
 parse = db['parse']
 
 
-def sort_dict(items):
-    newlist = sorted(
-        items, key=itemgetter('time'))
-    return newlist
+class Hero:
+    def __init__(self):
+        with open('json_files/hero_ids.json') as f:
+            self.data = json.load(f)
 
+    def sanitise_name(self, name):
+        self.name = name.lower()
+        self.name = name.replace(' ', '_')
+        return self.name
 
-def switcher(h):
-    switch = {
-        'necrophos': 'necrolyte',
-        'clockwerk': 'rattletrap',
-        "nature's_prophet": 'furion',
-        'timbersaw': 'shredder',
-        'io': 'wisp',
-        'queen_of_pain': 'queenofpain',
-        'doom': 'doom_bringer',
-        'shadow_fiend': 'nevermore',
-        'wraith_king': 'skeleton_king',
-        'magnus': 'magnataur',
-        'underlord': 'abyssal_underlord',
-        'anti-mage': 'antimage',
-        'outworld_devourer': 'obsidian_destroyer',
-        'windranger': 'windrunner',
-        'zeus': 'zuus',
-        'vengeful_spirit': 'vengefulspirit',
-        'treant_protector': 'treant',
-        'centaur_warrunner': 'centaur'
-    }
-    # print(h, switch.get(h))
-    if switch.get(h):
-        return switch.get(h)
-    else:
-        return h
+    def get_id(self, name):
+        self.sanitise_name(name)
+        if self.name is None:
+            return False
+        return [hero['id'] for hero in self.data['heroes'] if self.name == hero['name']][0]
 
+    def get_hero_name(self, name):
+        self.sanitise_name(name)
+        if self.name is None:
+            return False
+        return [hero['name'] for hero in self.data['heroes'] if self.name == hero['name']]
 
-def convert_time(lst):
-    for item in lst:
-        if item['time'] > 0:
-            item['time'] = str(datetime.timedelta(
-                seconds=item['time']))
-        else:
-            item['time'] = 0
-    return lst
-
-
-def get_most_recent_items(arr, l,  p):
-    done = set()
-    output = []
-    for j in range(l):
-        if l == 6:
-            item_str = 'item_'+str(j)
-        else:
-            item_str = 'backpack_'+str(j)
-        item = get_item_name(p[item_str])
-        for purchase in arr:
-            if purchase['key'] == item and purchase['key'] not in done:
-                if len(output) < 10:
-                    done.add(purchase['key'])
-                    output.append(
-                        {'key': item, 'time': purchase['time']})
-    return convert_time(sort_dict(output))
+    def hero_name_from_hero_id(self, _id):
+        return [hero['name'] for hero in self.data['heroes'] if hero['id'] == _id][0]
 
 
 def delete_dupes(d):
@@ -88,6 +52,170 @@ def delete_dupes(d):
             done.add(item['key'])  # note it down for further iterations
             result.append(item)
     return result
+
+
+class Items():
+    def __init__(self):
+        pass
+
+    def pro_items(self, match_data):
+        item_lst = []
+        sd = []
+        data = match_data
+        black_lst = ['ward_sentry', 'ward_observer', 'clarity', 'tpscroll',
+                     'enchanted_mango', 'smoke_of_deceit', 'tango', 'faerie_fire', 'tome_of_knowledge', 'healing_salve', None]
+        item_lst = [item['key']
+                    for x in data for item in x['final_items'] if item not in black_lst]
+        counter = dict(Counter(item_lst))
+        sd = dict(sorted(counter.items(),
+                         key=itemgetter(1), reverse=True))
+        return sd
+
+    def get_item_name(self, item_id):
+        # print(item_id)
+        if not item_id:
+            return
+        with open('json_files/items.json') as json_file:
+            data = json.load(json_file)
+            item = [item['name']
+                    for item in data['items'] if item_id == item['id']]
+            return item[0]
+
+    def convert_time(self, lst):
+        for item in lst:
+            if item['time'] > 0:
+                item['time'] = str(datetime.timedelta(
+                    seconds=item['time']))
+            else:
+                item['time'] = 0
+        return lst
+
+    def get_most_recent_items(self, arr, l,  p):
+        done = set()
+        output = []
+        for j in range(l):
+            if l == 6:
+                item_str = 'item_'+str(j)
+            else:
+                item_str = 'backpack_'+str(j)
+            item = self.get_item_name(p[item_str])
+            for purchase in arr:
+                if purchase['key'] == item and purchase['key'] not in done:
+                    if len(output) < 10:
+                        done.add(purchase['key'])
+                        output.append(
+                            {'key': item, 'time': purchase['time']})
+        return self.convert_time(sort_dict(output))
+
+    def remove_buildup_items(self, starting_items):
+        item_lst = ['bracer', 'null_talisman', 'wraith_band',
+                    'ring_of_basilius', 'buckler', 'headress', 'magic_wand']
+        build_up = [{'key': 'magic_wand', 'items': [
+            'branches', 'branches', 'magic_stick']},
+            {'key': 'wraith_band', 'items': ['circlet', 'slippers']},
+            {'key': 'null_talisman', 'items': ['circlet', 'mantle']},
+            {'key': 'bracer', 'items': ['circlet', 'gauntlets']},
+            {'key': 'ring_of_basilius', 'items': ['sobi_mask']},
+            {'key': 'buckler', 'items': ['ring_of_protection']},
+            {'key': 'headdress', 'items': ['ring_of_regen']}]
+
+        for item in starting_items:
+            item_idx = find_index(build_up, item['key'])
+            items = build_up[item_idx]['items']
+            if item_idx >= 0:
+                for buildup_item in items:
+                    del starting_items[find_index(
+                        starting_items, buildup_item)]
+        return starting_items
+
+
+class Talents():
+    def __init__(self):
+        pass
+
+    def count_talents(self, data):
+        try:
+            talents = [ability['key']
+                       for item in data for ability in item['abilities'] if 'special_bonus' in ability['img']]
+            # print('counter',talents,dict(Counter(talents)))
+            return dict(Counter(talents))
+        except Exception as e:
+            print('y', traceback.format_exc())
+
+    def get_talent_order(self, match_data, hero):
+        talents = []
+        count = self.count_talents(match_data)
+        if count is None:
+            return False
+        talents = db['talents'].find_one({'hero': hero})
+        start = time.perf_counter()
+        for x in talents['talents']:
+            if x['key'] in count:
+                x['talent_count'] = count[x['key']]
+            else:
+                x['talent_count'] = 0
+        level = 10
+        for i in range(0, 8, 2):
+            if i < 8:
+                picks = talents['talents'][i]['talent_count'] + \
+                    talents['talents'][i+1]['talent_count']
+                talents['talents'][i]['total_pick_count'] = picks
+                talents['talents'][i+1]['total_pick_count'] = picks
+                talents['talents'][i]['level'] = level
+                talents['talents'][i+1]['level'] = level
+                level += 5
+        print('Get_talent_order: ', time.perf_counter()-start)
+        return reversed(talents['talents'])
+
+
+class Db_insert:
+    def __init__(self):
+        pass
+
+    def insert_player_picks(self):
+        data = db['account_ids'].find({})
+        for player in data:
+            print(player['name'])
+            self.insert_total_picks('name', player['name'], 'player_picks')
+
+    def insert_total_picks(self, key, val, collection):
+        roles = {'Safelane': hero_output.count_documents(
+                {key: val, 'role': 'Safelane'}),
+            'Midlane': hero_output.count_documents(
+            {key: val, 'role': 'Midlane'}),
+            'Offlane': hero_output.count_documents(
+            {key: val, 'role': 'Offlane'}),
+            'Support': hero_output.count_documents(
+            {key: val, 'role': 'Support'}),
+            'Roaming': hero_output.count_documents(
+            {key: val, 'role': 'Roaming'}),
+            'Hard Support': hero_output.count_documents(
+            {key: val, 'role': 'Hard Support'}),
+        }
+        roles = {k: v for k, v in sorted(
+            roles.items(), key=lambda item: item[1], reverse=True)}
+        for k in list(roles.keys()):
+            if roles[k] <= 0:
+                del roles[k]
+        db[collection].find_one_and_replace({key: val},
+                                            {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles})
+
+    def insert_talent_order(self, hero):
+        with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
+            data = json.load(f)
+            hero_method = Hero(hero)
+            data_talents = data[str(hero_method.get_id(hero))]['talents']
+            start = time.perf_counter()
+            talents = [detailed_ability_info(
+                [x['abilityId']], hero_method.get_id(hero))[0] for x in data_talents]
+            if db['talents'].find_one({'hero': hero}) is None:
+                db['talents'].insert_one({'hero': hero, 'talents': talents})
+
+
+def sort_dict(items):
+    newlist = sorted(
+        items, key=itemgetter('time'))
+    return newlist
 
 
 def get_urls(hero_name):
@@ -102,18 +230,11 @@ def get_urls(hero_name):
     return list(reversed(urls))
 
 
-def pro_items(match_data):
-    item_lst = []
-    sd = []
-    data = match_data
-    black_lst = ['ward_sentry', 'ward_observer', 'clarity', 'tpscroll',
-                 'enchanted_mango', 'smoke_of_deceit', 'tango', 'faerie_fire', 'tome_of_knowledge', 'healing_salve', None]
-    item_lst = [item['key']
-                for x in data for item in x['final_items'] if item not in black_lst]
-    counter = dict(Counter(item_lst))
-    sd = dict(sorted(counter.items(),
-                     key=itemgetter(1), reverse=True))
-    return sd
+def find_index(lst, value):
+    for i, dic in enumerate(lst):
+        if dic['key'] == value:
+            return i
+    return -1
 
 
 def parse_request():
@@ -146,123 +267,7 @@ def delete_old_urls():
             print(f"Deleted {d['id']}")
 
 
-def pro_name(hero_name):
-    hero_name = hero_name.replace('_', ' ')
-    hero_name = " ".join(w.capitalize() for w in hero_name.split())
-    # print('initial name', hero_name)
-    if 'Anti' in hero_name:
-        hero_name = 'Anti-Mage'
-    if 'Queen' in hero_name:
-        hero_name = "Queen%20of%20Pain"
-    return hero_name
-
-
-def get_time(x):
-    print(x)
-    seconds = time.time() - x  # seconds
-    minutes = seconds / 60  # mins
-    hours = minutes / 60  # hours
-    days = hours / 24  # days
-    time_since = ''
-    if math.floor(hours) <= 24 and math.floor(hours) > 1:
-        return f"{math.floor(hours)} hours ago"
-    if math.floor(hours) == 1:
-        return f"{math.floor(hours)} hour ago"
-    elif math.floor(days) > 1:
-        return f"{math.floor(days)} days ago"
-    elif math.floor(days) == 1:
-        return f"{math.floor(days)} day ago"
-    else:
-        return 'Just Now'
-
-
-def get_id(name):
-    if name:
-        # print(name)
-        name = name.lower()
-        name = name.replace(' ', '_')
-        with open('json_files/hero_ids.json') as json_file:
-            data = json.load(json_file)
-            try:
-                return [hero['id']
-                        for hero in data['heroes'] if name == hero['name']][0]
-            except Exception as e:
-                return False
-        return False
-
-
-def get_hero_name(name):
-    heroes = []
-    if name:
-        name = name.lower()
-        name = name.replace(' ', '_')
-        with open('json_files/hero_ids.json') as json_file:
-            data = json.load(json_file)
-            heroes = [hero['name']
-                      for hero in data['heroes'] if name == hero['name']]
-            return heroes
-    return False
-
-
-def hero_name_from_hero_id(name):
-    with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
-        for hero in data['heroes']:
-            if hero['id'] == name:
-                return hero['name']
-
-# def get_ability_name(arr):
-#     abilityArr = []
-#     for a_id in arr:
-#         with open('json_files/ability_ids.json', 'r')as f:
-#             data = json.load(f)
-#             key = str(a_id)
-#             with open('json_files/final.json', 'r') as f:
-#                 mData = json.load(f)
-#             abilityArr.append(
-#                 {'key': mData[data[key]], 'img': data[key]})
-#             sli = slice(0, 19)
-#             abilityArr = abilityArr[sli]
-#         return abilityArr
-
-
-def get_ability_name(arr):
-    abilityArr = []
-    try:
-        for a_id in arr:
-            with open('json_files/ability_ids.json', 'r')as f:
-                data = json.load(f)
-                key = str(a_id)
-                with open('json_files/final.json', 'r') as f:
-                    mData = json.load(f)
-                    if key in data.keys():
-                        ability_name = mData[data[key]]
-                        ability_img = data[key]
-                        o = {'key': ability_name, 'img': ability_img}
-                        abilityArr.append(
-                            {'key': mData[data[key]], 'img': data[key]})
-                    else:
-                        abilityArr.append(
-                            {'key': '', 'img': 'null'})
-                sli = slice(0, 19)
-                abilityArr = abilityArr[sli]
-        return abilityArr
-    except Exception as e:
-        print(arr)
-
-
-def get_item_name(item_id):
-    # print(item_id)
-    if not item_id:
-        return
-    with open('json_files/items.json') as json_file:
-        data = json.load(json_file)
-        item = [item['name']
-                for item in data['items'] if item_id == item['id']]
-        return item[0]
-
-
-def stratz_abillity_test(arr, h_id):
+def detailed_ability_info(arr, h_id):
     output = []
     talents = []
     start = time.time()
@@ -304,7 +309,6 @@ def stratz_abillity_test(arr, h_id):
                                 if int(_id) in t.values():
                                     # print(talent['slot'])
                                     d['slot'] = t['slot']
-
                     else:
                         d['type'] = 'ability'
                     output.append(d)
@@ -313,173 +317,7 @@ def stratz_abillity_test(arr, h_id):
                 except Exception as e:
                     print(traceback.format_exc())
     end = time.time()
-    # print(end-start)
-    # print(output)
     return output
-
-
-def insert_player_picks():
-    data = db['account_ids'].find({})
-    for player in data:
-        print(player['name'])
-        insert_hero_picks('name', player['name'], 'player_picks')
-
-
-def insert_hero_picks(key, val, collection):
-    db[collection].delete_many({key: val})
-    roles = {'Safelane': hero_output.count_documents(
-            {key: val, 'role': 'Safelane'}),
-        'Midlane': hero_output.count_documents(
-        {key: val, 'role': 'Midlane'}),
-        'Offlane': hero_output.count_documents(
-        {key: val, 'role': 'Offlane'}),
-        'Support': hero_output.count_documents(
-        {key: val, 'role': 'Support'}),
-        'Roaming': hero_output.count_documents(
-        {key: val, 'role': 'Roaming'}),
-        'Hard Support': hero_output.count_documents(
-        {key: val, 'role': 'Hard Support'}),
-    }
-    roles = {k: v for k, v in sorted(
-        roles.items(), key=lambda item: item[1], reverse=True)}
-    for k in list(roles.keys()):
-        if roles[k] <= 0:
-            del roles[k]
-    db[collection].insert_one(
-        {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles})
-
-
-def insert_talent_order(hero):
-    with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
-        data = json.load(f)
-        data_talents = data[str(get_id(hero))]['talents']
-        start = time.perf_counter()
-        talents = [stratz_abillity_test(
-            [x['abilityId']], get_id(hero))[0] for x in data_talents]
-        if db['talents'].find_one({'hero': hero}) is None:
-            db['talents'].insert_one({'hero': hero, 'talents': talents})
-
-
-def get_talent_order(match_data, hero):
-    talents = []
-    count = count_talents(match_data)
-    if count is None:
-        return False
-    talents = db['talents'].find_one({'hero': hero})
-    start = time.perf_counter()
-    d = {}
-    for x in talents['talents']:
-        if x['key'] in count:
-            x['talent_count'] = count[x['key']]
-        else:
-            x['talent_count'] = 0
-    c = []
-    level = 10
-    for i in range(0, 8, 2):
-        if i < 8:
-            picks = talents['talents'][i]['talent_count'] + \
-                talents['talents'][i+1]['talent_count']
-            talents['talents'][i]['total_pick_count'] = picks
-            talents['talents'][i+1]['total_pick_count'] = picks
-            talents['talents'][i]['level'] = level
-            talents['talents'][i+1]['level'] = level
-            level += 5
-    print('Get_talent_order: ', time.perf_counter()-start)
-    return reversed(talents['talents'])
-
-
-def count_talents(data):
-    try:
-        talents = [ability['key']
-                   for item in data for ability in item['abilities'] if 'special_bonus' in ability['img']]
-        # print('counter',talents,dict(Counter(talents)))
-        return dict(Counter(talents))
-    except Exception as e:
-        print('y', traceback.format_exc())
-
-
-def get_talets():
-    output = []
-    ids = []
-    ten = []
-    fifteen = []
-    twenty = []
-    twenty_five = []
-    data = hero_output.find({'hero': 'jakiro'})
-    for i, item in enumerate(data):
-        temp = {}
-        ids.append(item['id'])
-        for ability in item['abilities']:
-            if ability['type'] == 'talent':
-                if ability['level'] >= 10 and ability['level'] < 15:
-                    temp['id'] = item['id']
-                    temp['name'] = ability['key']
-                    temp['level'] = 10
-                    # m.append(item['id'])
-                    ten.append(ability['key'])
-                    # m.append(10)
-                    # print(item['id'], 10, i, ability['level'], ability['key'])
-                elif ability['level'] >= 15 and ability['level'] < 20:
-                    temp['id'] = item['id']
-                    temp['name'] = ability['key']
-                    temp['level'] = 15
-                    # m.append(item['id'])
-                    if ability['key'] not in ten:
-                        # print(ability['key'], ten)
-                        fifteen.append(ability['key'])
-                    # m.append(15)
-                elif ability['level'] >= 20 and ability['level'] < 25:
-                    temp['id'] = item['id']
-                    temp['name'] = ability['key']
-                    temp['level'] = 20
-                    # m.append(item['id'])
-                    twenty.append(ability['key'])
-                    # m.append(20)
-                elif ability['level'] >= 25:
-                    # print(25, ability['level'], ability['key'])
-                    temp['id'] = item['id']
-                    temp['name'] = ability['key']
-                    temp['level'] = 25
-                    # m.append(item['id'])
-                    twenty_five.append(ability['key'])
-                    # m.append(25)
-                    # print(20, i, ability['level'], ability['key'])
-                    # print(15, i, ability['level'], ability['key'])
-                # print(ten, fifteen, twenty, twenty_five)
-    output.append(dict(Counter(ten)))
-    output.append(dict(Counter(fifteen)))
-    output.append(dict(Counter(twenty)))
-    output.append(dict(Counter(twenty_five)))
-    print(output)
-    for i, item in enumerate(reversed(output)):
-        # print('y',i, output[i])
-        if i < 3:
-            for x in output[i+1]:
-                print(x, item)
-                if x in item:
-                    pass
-                    # print('test', i, x)
-                    # print(output)
-    return output
-
-    # print(m)
-    # print(json.dumps(output, indent=2))
-
-
-def t(lst):
-    rev = list(reversed(lst))
-    for i, e in enumerate(rev):
-        print(i)
-        if i < len(rev) - 1:
-            for spell in e:
-                # print('spell',spell)
-                # print('testing: ', i, rev[i], rev[i+1])
-                if spell in rev[i+1]:
-                    print('ninenene', spell, i+1)
-                    rev[i] = None
-    # print(rev)
-    test = [x for x in rev if x]
-    print(test)
 
 
 ab_arr = [5239,
@@ -507,6 +345,6 @@ if __name__ == "__main__":
     # get_hero_name('jakiro')
     # get_id('lih')
     # get_talent_order('jakiro')
-    # stratz_abillity_test(ab_arr, 'clockwerk')
+    # detailed_ability_info(ab_arr, 'clockwerk')
     # loop_test()
     pass
