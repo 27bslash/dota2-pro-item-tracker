@@ -10,15 +10,15 @@ let cells = document.querySelectorAll(".hero-cell"),
 document.querySelector(".suggestions").style.display = "none";
 async function get_json(search) {
   let url = `${window.location.origin}/files/${search}`;
-  if (search == "abilities") {
-    url = `${window.location.origin}/files/${search}/${window.location.href.split("/").pop()}`;
-    console.log(url)
+  if (window.location.href.includes("hero") && search === "abilities") {
+    url = `${
+      window.location.origin
+    }/files/abilities/${window.location.href.split("/").pop()}`;
   }
   const res = await fetch(url);
   const data = await res.json();
   return data;
 }
-
 const hero_data = get_json("hero_ids");
 const player_data = get_json("accounts");
 
@@ -295,6 +295,5 @@ document.querySelectorAll(".sort-button").forEach((x) => {
   });
 });
 
-closeAllTooltips();
 hero_autocomplete();
 player_autocomplete();

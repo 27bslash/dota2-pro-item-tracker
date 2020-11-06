@@ -1,9 +1,11 @@
-const hero_ids = get_json("hero_ids");
-const abilities = get_json("abilities");
-const hero_colors = get_json("colors");
 const hero_name = window.location.href.split("/").pop();
+let hero_colors;
 let h_id;
-
+if (hero_name.length > 0) {
+  hero_colors = get_json("colors");
+  abilities = get_json("abilities");
+}
+closeAllTooltips()
 window.addEventListener("mouseover", (event) => {
   if (event.target.className === "table-img") {
     abilities.then((result) => {
@@ -12,7 +14,7 @@ window.addEventListener("mouseover", (event) => {
       hero = parent.children[1].getAttribute("data-hero");
       tooltip = parent.children[2];
       hero_colors.then((res) => {
-        for (let i of res.colors) {
+        for (const i of res.colors) {
           if (i.hero == hero) {
             tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, rgba(19,18,18,1) 37%)`;
           }
@@ -22,7 +24,7 @@ window.addEventListener("mouseover", (event) => {
       skillText = parent.children[1].alt;
       //tHeader
       if (a_id && "language" in result[a_id]) {
-        let base = result[a_id]["language"];
+        const base = result[a_id]["language"];
         tooltipHeader = document.createElement("div");
         tooltipHeader.setAttribute("class", "tooltip-line-one");
         headerImg = document.createElement("img");
