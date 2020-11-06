@@ -68,16 +68,10 @@
           </div>
         </div>
         <div class="control-footer">
-          <button
-            class="sort-button"
-            onclick="pickSort(null,'picks')"
-          >
+          <button class="sort-button" onclick="pickSort(null,'picks')">
             PICKS
           </button>
-          <button
-            class="sort-button"
-            onclick="pickSort(null,'winrate')"
-          >
+          <button class="sort-button" onclick="pickSort(null,'winrate')">
             WINRATE
           </button>
         </div>
@@ -133,4 +127,5 @@
     document.getElementsByTagName("html")[0].style.visibility = "visible";
   });
 </script>
+<script src="{{ url_for('static', filename='sorting.js') }}"></script>
 {%endblock content%}

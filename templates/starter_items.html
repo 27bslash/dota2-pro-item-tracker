@@ -42,7 +42,7 @@
 </script>
 <title>{{hero_name}}</title>
 <main>
-  <div class="content" style="margin-top: 40px;">
+  <div class="content" style="margin-top: 40px">
     <a href="/hero/{{hero_name}}">
       <img
         src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
@@ -61,9 +61,9 @@
       {%if most_used%}
       <div class="most-used-wrapper">
         <div class="most-used closed">
-          {%for key,value in most_used.items()%} {%set hue = 360/value/max*100%} {%
-          set s = value/max*100%} {% set saturation = s|round(0,'ceil')|int %} {%
-          set round = hue|round(0, 'ceil')|int%}
+          {%for key,value in most_used.items()%} {%set hue = 360/value/max*100%}
+          {% set s = value/max*100%} {% set saturation = s|round(0,'ceil')|int
+          %} {% set round = hue|round(0, 'ceil')|int%}
           <div class="most-used-row">
             <img
               class="most-used-item"
@@ -72,17 +72,20 @@
               }}_lg.png"
               width="50"
               height="40"
-              alt='{{key}}'
+              alt="{{key}}"
             />
-            <div class="bar" style= "background-color: hsl(120, 100%,25%, {{saturation}}%);width:{{value/max * 80}}%;">
+            <div
+              class="bar"
+              style="background-color: hsl(120, 100%,25%, {{saturation}}%);width:{{value/max * 80}}%;"
+            >
               <p class="bar-value">{{value}}</p>
             </div>
           </div>
           {%endfor%}
         </div>
         {%endif%}
-        <div class="arrow-button"onclick="toggleWindow()">
-          <i id="arrow" class="fas fa-caret-down" ></i>
+        <div class="arrow-button" onclick="toggleWindow()">
+          <i id="arrow" class="fas fa-caret-down"></i>
         </div>
       </div>
       <script>
@@ -98,50 +101,44 @@
       </script>
       {%if talents%}
       <div class="talent-wrapper">
-      <img id='main-talent-img' height='70' src="{{ url_for('static', filename='talent_img.png') }}"/>
-      <div class='tooltip' id="talents" style='display: none'>
-        {%for talent in talents%}
-        {%if talent.slot % 2 == 0 or talent.slot == 0 %}
-        {%set col = 3%}
-        {%set class = 'talent-right'%}
-        {%endif%}
-        {%if talent.slot % 2 != 0 or talent.slot == 1 %}
-        {%set col = 1%}
-        {%set class = 'talent-left'%}
-        {%endif%}
-        {%set level = 25%}
-        {%if loop.index % 2 == 0%}
-        <div class="talent-center">
-          <div class="talent-level">
-            <p>{{talent.level}}</p>
+        <img
+          id="main-talent-img"
+          height="70"
+          src="{{ url_for('static', filename='talent_img.png') }}"
+        />
+        <div class="tooltip" id="talents" style="display: none">
+          {%for talent in talents%} {%if talent.slot % 2 == 0 or talent.slot ==
+          0 %} {%set col = 3%} {%set class = 'talent-right'%} {%endif%} {%if
+          talent.slot % 2 != 0 or talent.slot == 1 %} {%set col = 1%} {%set
+          class = 'talent-left'%} {%endif%} {%set level = 25%} {%if loop.index %
+          2 == 0%}
+          <div class="talent-center">
+            <div class="talent-level">
+              <p>{{talent.level}}</p>
+            </div>
+            <div class="talent-picks">
+              <p>Pick</p>
+            </div>
           </div>
-          <div class="talent-picks">
-            <p>Pick</p>
-          </div>
-        </div>
-        {%endif%}
-        <div class="{{class}}" style = 'grid-column: {{col}}'>
-          
-          {%set width = 0%}
-          {%if talent.total_pick_count > 0%}
-          {%set width = talent.talent_count/talent.total_pick_count*100%}
           {%endif%}
-          <p class='talent-text'>{{talent.key}}</p>
-          <div class="talent-bar" style='width: {{width}}%;'></div>
-          <p style='z-index: 99'>{{width|round(0, 'floor')|int}}%</p>
+          <div class="{{class}}" style="grid-column: {{col}}">
+            {%set width = 0%} {%if talent.total_pick_count > 0%} {%set width =
+            talent.talent_count/talent.total_pick_count*100%} {%endif%}
+            <p class="talent-text">{{talent.key}}</p>
+            <div class="talent-bar" style="width: {{width}}%;"></div>
+            <p style="z-index: 99">{{width|round(0, 'floor')|int}}%</p>
+          </div>
+          {%endfor%} {%endif%}
         </div>
-        {%endfor%}
-      {%endif%}
+      </div>
     </div>
-    </div>
-  </div>
-    <div class="pick-counter" style="display: flex;">
+    <div class="pick-counter" style="display: flex">
       <a href="/hero/{{hero_name}}">
-        <p class='bold-name' id="hero-name" style="color: rgb{{hero_colour}};">
-          <strong style="text-transform: capitalize;">{{display_name}}</strong>
+        <p class="bold-name" id="hero-name" style="color: rgb{{hero_colour}};">
+          <strong style="text-transform: capitalize">{{display_name}}</strong>
         </p></a
       >
-      <p style="color: white;">
+      <p style="color: white">
         was picked {{total}} times. It's mostly played:
       </p>
       {%for k,v in roles.items()%}
@@ -152,7 +149,7 @@
       </a>
       {%endfor%}
     </div>
-    <table role='main' class="item-table stripe">
+    <table role="main" class="item-table stripe">
       <thead>
         <th class="stats" id="win"></th>
         <th class="stats" id="item-header">ITEMS</th>
@@ -195,7 +192,7 @@
                     width="100"
                     height="80"
                     alt="{{item.key}}" />
-                  <div class="overlay" style="background-color: inherit;"></div
+                  <div class="overlay" style="background-color: inherit"></div
                 ></a>
               </div>
               {% endfor %}
@@ -204,7 +201,7 @@
               {% for item in dict_item['abilities'] %}
               <div class="ability-img-wrapper">
                 <strong
-                  ><p style="color: white; text-align: center;">
+                  ><p style="color: white; text-align: center">
                     {{loop.index}}
                   </p></strong
                 >
@@ -218,17 +215,19 @@
                   alt="{{item.key}}"
                   onerror="this.onerror=null;this.src='//ailhumfakp.cloudimg.io/v7/../static/talent_img.png';"
                 />
-                <div class="tooltip" style='display: flex; background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto;'>
+                <div
+                  class="tooltip"
+                  style="display: flex; background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 75%); margin-left: auto;"
+                >
                   <div class="tooltip-line-one">
-                    <img 
-                    src = "{{ url_for('static', filename='talent_img.png') }}"
-                    width='55'
+                    <img
+                      src="{{ url_for('static', filename='talent_img.png') }}"
+                      width="55"
                     />
                     <h3>{{item.key}}</h3>
                   </div>
                 </div>
-                {%endif%}
-                {%if item.type != 'talent'%}
+                {%endif%} {%if item.type != 'talent'%}
                 <img
                   class="table-img"
                   src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{{item.img}}_hp1.png?v=5933967"
@@ -245,30 +244,26 @@
                   style="background: radial-gradient(circle at top left, rgba{{hero_colour}} 0%, rgba(19,18,18,1) 37%);"
                 ></div>
                 {%endif%}
-            </div>
-            {%endfor%}
+              </div>
+              {%endfor%}
             </div>
             <div class="draft">
               <div class="radiant_draft">
-                {%for d_pick in dict_item['radiant_draft']%}
-                {%set draft_pick = d_pick|replace("'", '')%}
-                {%if hero_name == d_pick%}
-                {%set class = 'icon-highlight'%}
-                {%endif%}
-                <a href = "{{url_for ('hero_get', hero_name = d_pick)}}">
-                <i class="d2mh {{draft_pick}} {{class}}"></i>
+                {%for d_pick in dict_item['radiant_draft']%} {%set draft_pick =
+                d_pick|replace("'", '')%} {%if hero_name == d_pick%} {%set class
+                = 'icon-highlight'%} {%endif%}
+                <a href="{{url_for ('hero_get', hero_name = d_pick)}}">
+                  <i class="d2mh {{draft_pick}} {{class}}"></i>
                 </a>
                 {%endfor%}
               </div>
               <div class="dire_draft">
-                {%for d_pick in dict_item['dire_draft']%}
-                {%set draft_pick = d_pick|replace("'", '')%}
-                {%if hero_name == d_pick%}
-                {%set class = 'icon-highlight'%}
-                {%endif%}
-                <a href = "{{url_for ('hero_get', hero_name = d_pick)}}">
-                <i class="d2mh {{draft_pick}} {{class}}"></i>
-                </a>                
+                {%for d_pick in dict_item['dire_draft']%} {%set draft_pick =
+                d_pick|replace("'", '')%} {%if hero_name == d_pick%} {%set class
+                = 'icon-highlight'%} {%endif%}
+                <a href="{{url_for ('hero_get', hero_name = d_pick)}}">
+                  <i class="d2mh {{draft_pick}} {{class}}"></i>
+                </a>
                 {%endfor%}
               </div>
             </div>
@@ -288,52 +283,27 @@
             days ago'%} {%endif%} {{output}}
           </td>
           <td class="stats" id="player-name">
-            <a
-              href="{{url_for('player_get', player_name=dict_item['name'])}}"
-            >
+            <a href="{{url_for('player_get', player_name=dict_item['name'])}}">
               {{dict_item['name']}}</a
             >
           </td>
-          <td class="stats" id="level">
-            {{dict_item['lvl']}}
-          </td>
-          <td class="stats" id="kills">
-            {{dict_item['kills']}}
-          </td>
-          <td class="stats" id="deaths">
-            {{dict_item['deaths']}}
-          </td>
-          <td class="stats" id="assists">
-            {{dict_item['assists']}}
-          </td>
-          <td class="stats" id="last-hits">
-            {{dict_item['last_hits']}}
-          </td>
-          <td class="stats" id="gold">
-            {{dict_item['gold']}}
-          </td>
-          <td class="stats" id="gpm">
-            {{dict_item['gpm']}}
-          </td>
-          <td class="stats" id="xpm">
-            /{{dict_item['xpm']}}
-          </td>
-          <td class="stats" id="hero-d">
-            {{dict_item['hero_damage']}}
-          </td>
-          <td class="stats" id="tower-d">
-            {{dict_item['tower_damage']}}
-          </td>
-          <td class="stats" id="duration">
-            {{dict_item['duration']}}
-          </td>
-          <td class="stats" id="mmr">
-            {{dict_item['mmr']}}
-          </td>
+          <td class="stats" id="level">{{dict_item['lvl']}}</td>
+          <td class="stats" id="kills">{{dict_item['kills']}}</td>
+          <td class="stats" id="deaths">{{dict_item['deaths']}}</td>
+          <td class="stats" id="assists">{{dict_item['assists']}}</td>
+          <td class="stats" id="last-hits">{{dict_item['last_hits']}}</td>
+          <td class="stats" id="gold">{{dict_item['gold']}}</td>
+          <td class="stats" id="gpm">{{dict_item['gpm']}}</td>
+          <td class="stats" id="xpm">/{{dict_item['xpm']}}</td>
+          <td class="stats" id="hero-d">{{dict_item['hero_damage']}}</td>
+          <td class="stats" id="tower-d">{{dict_item['tower_damage']}}</td>
+          <td class="stats" id="duration">{{dict_item['duration']}}</td>
+          <td class="stats" id="mmr">{{dict_item['mmr']}}</td>
         </tr>
         {%endfor%}
       </tbody>
     </table>
   </div>
 </main>
+<script src="{{ url_for('static', filename='tooltip.js') }}"></script>
 {%endblock%}

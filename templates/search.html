@@ -26,6 +26,7 @@
     src="https://kit.fontawesome.com/452aecdbf8.js"
     crossorigin="anonymous"
   ></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon/favicon-32x32.png">
   </head>
   <body>
     <nav>
@@ -59,9 +60,7 @@
       </div>
     </div>
   </nav>
-    {%block content%} {%endblock%}
-    <script src="{{ url_for('static', filename='autocomplete.js') }}"></script>
-    <script src="{{ url_for('static', filename='sorting.js') }}"></script>
-    <script src="{{ url_for('static', filename='tooltip.js') }}"></script>
+  <script src="{{ url_for('static', filename='autocomplete.js') }}"></script>
+  {%block content%} {%endblock%}
   </body>
 </html>
