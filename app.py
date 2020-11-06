@@ -186,7 +186,6 @@ def player_get(player_name):
 
 def find_hero(query, hero):
     data = hero_output.find({query: hero}).sort('unix_time', -1)
-    print(hero_output.find({query: hero}).sort('unix_time', -1).explain()['executionStats'])
     s = time.perf_counter()
     match_data = [hero for hero in data]
     print('data time', time.perf_counter() - s)
@@ -326,7 +325,7 @@ def wins_json():
 
 @ app.after_request
 def add_header(response):
-    response.cache_control.max_age = 43200
+    response.cache_control.max_age = 244800
     response.add_etag()
     return response
 
