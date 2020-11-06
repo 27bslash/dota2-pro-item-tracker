@@ -203,11 +203,11 @@ class Db_insert:
     def insert_talent_order(self, hero):
         with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
             data = json.load(f)
-            hero_method = Hero(hero)
-            data_talents = data[str(hero_method.get_id(hero))]['talents']
+            hero_methods = Hero()
+            data_talents = data[str(hero_methods.get_id(hero))]['talents']
             start = time.perf_counter()
             talents = [detailed_ability_info(
-                [x['abilityId']], hero_method.get_id(hero))[0] for x in data_talents]
+                [x['abilityId']], hero_methods.get_id(hero))[0] for x in data_talents]
             if db['talents'].find_one({'hero': hero}) is None:
                 db['talents'].insert_one({'hero': hero, 'talents': talents})
 
@@ -255,6 +255,7 @@ def parse_request():
 def delete_old_urls():
     data = hero_output.find()
     for d in data:
+        # print(d['id'])
         time_since = time.time() - d["unix_time"]
         # 8 days old
         if time_since > 690000:
