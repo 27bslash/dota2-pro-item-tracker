@@ -10,7 +10,11 @@ let cells = document.querySelectorAll(".hero-cell"),
 document.querySelector(".suggestions").style.display = "none";
 async function get_json(search) {
   let url = `${window.location.origin}/files/${search}`;
-  if (window.location.href.includes("hero") && search === "abilities") {
+  if (
+    window.location.href.includes("hero") &&
+    !window.location.href.includes("starter_items") &&
+    search === "abilities"
+  ) {
     url = `${
       window.location.origin
     }/files/abilities/${window.location.href.split("/").pop()}`;
