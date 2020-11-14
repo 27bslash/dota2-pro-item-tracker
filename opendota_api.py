@@ -63,9 +63,11 @@ async def async_get(m_id, hero_name):
                     p = resp['players'][i]
                     hero_id = p['hero_id']
                     if p['randomed'] and p['isRadiant']:
-                        rad_draft.append(hero_methods.hero_name_from_hero_id(hero_id))
+                        rad_draft.append(
+                            hero_methods.hero_name_from_hero_id(hero_id))
                     if p['randomed'] and not p['isRadiant']:
-                        dire_draft.append(hero_methods.hero_name_from_hero_id(hero_id))
+                        dire_draft.append(
+                            hero_methods.hero_name_from_hero_id(hero_id))
                     roles_arr = [(p['lane'], p['gold_per_min'],  p['lane_efficiency'], p['sen_placed'],
                                   p['player_slot'], p['is_roaming']) for p in resp['players'] if 'lane_efficiency' in p and 'lane' in p]
                     if hero_id == hero_methods.get_id(hero_name):
@@ -75,9 +77,10 @@ async def async_get(m_id, hero_name):
                         if purchase_log:
                             role = roles(roles_arr, p['player_slot'])
                             print(f"{hero_name} should reach here.")
-                            starting_items = [{'key': purchase['key'], 'time':0}
-                                              for purchase in purchase_log if purchase['time'] <= 0]
-                            starting_items = item_methods.remove_buildup_items(starting_items)
+                            starting_items = [
+                                purchase for purchase in purchase_log if purchase['time'] <= 0]
+                            starting_items = item_methods.clean_items(
+                                starting_items)
                             rev = purchase_log.copy()[:: -1]
                             main_items = item_methods.get_most_recent_items(
                                 rev, 6, p)

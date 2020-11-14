@@ -128,6 +128,24 @@ class Items():
                         starting_items, buildup_item)]
         return starting_items
 
+    def item_charges(self, starting_items):
+        max_charges = 1
+        temp = []
+        for i, item in enumerate(starting_items):
+            temp.append(item)
+            if item['key'] == 'tango':
+                max_charges = 3
+            if 'charges' in item:
+                print(item['charges'], max_charges)
+                for _ in range(1, round(item['charges']/max_charges)):
+                    print(item)
+                    temp.insert(i, {'key': item['key'], 'time': item['time']})
+        return temp
+
+    def clean_items(self, starting_items):
+        starting_items = self.remove_buildup_items(starting_items)
+        return sort_dict(self.item_charges(starting_items))
+
 
 class Talents():
     def __init__(self):
@@ -342,10 +360,11 @@ ab_arr = [5239,
           5977
           ]
 if __name__ == "__main__":
-    insert_player_picks()
+    # insert_player_picks()
     # get_hero_name('jakiro')
     # get_id('lih')
     # get_talent_order('jakiro')
     # detailed_ability_info(ab_arr, 'clockwerk')
     # loop_test()
+    # parse_request()
     pass
