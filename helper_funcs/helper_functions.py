@@ -11,7 +11,7 @@ import requests
 from collections import Counter
 
 cluster = pymongo.MongoClient(
-    'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
+    'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
 db = cluster['pro-item-tracker']
 hero_urls = db['urls']
 hero_output = db['heroes']

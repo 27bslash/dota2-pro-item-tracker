@@ -7,12 +7,13 @@ import pymongo
 from pymongo import MongoClient
 
 output = []
-cluster = MongoClient(
-    'mongodb://dbuser:a12345@ds211774.mlab.com:11774/pro-item-tracker', retryWrites=False)
+cluster = pymongo.MongoClient(
+    'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
 db = cluster['pro-item-tracker']
+hero_urls = db['urls']
 hero_output = db['heroes']
 acc_ids = db['account_ids']
-parse = db['parse']
+
 
 
 async def account_id(m_id, hero_name):
