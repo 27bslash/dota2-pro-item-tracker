@@ -5,16 +5,16 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 406,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+18% Icarus Dive Slow",
+            "displayName": "+24% Icarus Dive Slow",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 406,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +50,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 426,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Sun Ray During Supernova",
             "description": [],
@@ -59,7 +59,7 @@
         },
         "stat": {
             "abilityId": 426,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +67,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,7 +95,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 5623,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Icarus Dive",
             "description": [
@@ -115,7 +115,7 @@
         },
         "stat": {
             "abilityId": 5623,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 20496,
             "unitTargetType": 0,
@@ -123,7 +123,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -141,13 +141,13 @@
                 0.2
             ],
             "cooldown": [
-                36,
-                34,
-                32,
-                30
+                36.0,
+                34.0,
+                32.0,
+                30.0
             ],
             "manaCost": [
-                0
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -163,7 +163,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 5624,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Stop Icarus Dive",
             "description": [
@@ -175,7 +175,7 @@
         },
         "stat": {
             "abilityId": 5624,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 34885,
             "unitTargetType": 0,
@@ -183,7 +183,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -198,10 +198,10 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -217,11 +217,12 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 5625,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Fire Spirits",
             "description": [
-                "Summons 4 fire spirits that circle around Phoenix. Each spirit can be launched independently at a targeted area of effect. Affected enemy units take damage over time and have their attack speed greatly reduced."
+                "Summons 4 fire spirits that circle around Phoenix. Each spirit can be launched independently ",
+                "\t\tat a targeted area of effect. Affected enemy units take damage over time and have their attack speed greatly reduced."
             ],
             "attributes": [
                 "HP COST: 20%",
@@ -238,7 +239,7 @@
         },
         "stat": {
             "abilityId": 5625,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -246,7 +247,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -264,13 +265,13 @@
                 250
             ],
             "cooldown": [
-                51,
-                44,
-                37,
-                30
+                51.0,
+                44.0,
+                37.0,
+                30.0
             ],
             "manaCost": [
-                120
+                120.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -286,7 +287,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 5626,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Sun Ray",
             "description": [
@@ -308,7 +309,7 @@
         },
         "stat": {
             "abilityId": 5626,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 0,
@@ -316,7 +317,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -337,10 +338,13 @@
                 0.01
             ],
             "cooldown": [
-                26
+                30.0
             ],
             "manaCost": [
-                100
+                100.0,
+                110.0,
+                120.0,
+                130.0
             ],
             "isUltimate": false,
             "duration": "6.0",
@@ -356,7 +360,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 5627,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Stop Sun Ray",
             "description": [
@@ -368,7 +372,7 @@
         },
         "stat": {
             "abilityId": 5627,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 34885,
             "unitTargetType": 0,
@@ -376,7 +380,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -391,10 +395,10 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -410,7 +414,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 5628,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Toggle Movement",
             "description": [
@@ -424,7 +428,7 @@
         },
         "stat": {
             "abilityId": 5628,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 38980,
             "unitTargetType": 0,
@@ -432,7 +436,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -447,10 +451,10 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -466,7 +470,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 5630,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Supernova",
             "description": [
@@ -483,12 +487,11 @@
                 "SCEPTER CAST RANGE: 500"
             ],
             "lore": "The solar crucible of a Supernova may be fatal, yet from its flames arise new beacons to wander infinity.",
-            "aghanimDescription": "Increases number of attacks to destroy Supernova and allows Phoenix to cast Supernova on an allied hero, bringing both into the sun to be reborn together.",
             "notes": []
         },
         "stat": {
             "abilityId": 5630,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 32772,
             "unitTargetType": 1,
@@ -496,7 +499,7 @@
             "unitTargetFlags": 16,
             "unitDamageType": 1,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -517,14 +520,12 @@
                 0.01
             ],
             "cooldown": [
-                110,
-                110,
-                110
+                120.0
             ],
             "manaCost": [
-                200,
-                200,
-                200
+                150.0,
+                200.0,
+                250.0
             ],
             "isUltimate": true,
             "duration": "6.0",
@@ -540,7 +541,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 5631,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Launch Fire Spirit",
             "description": [
@@ -561,7 +562,7 @@
         },
         "stat": {
             "abilityId": 5631,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16433,
             "unitTargetType": 0,
@@ -569,7 +570,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -587,16 +588,16 @@
                 250
             ],
             "cooldown": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "manaCost": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -606,58 +607,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5996": {
-        "id": 5996,
-        "name": "special_bonus_spell_amplify_6",
-        "uri": "phoenix",
-        "language": {
-            "abilityId": 5996,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+6% Spell Amplification",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5996,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6085": {
         "id": 6085,
         "name": "special_bonus_unique_phoenix_2",
         "uri": "phoenix",
         "language": {
             "abilityId": 6085,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.25s Supernova Stun Duration",
             "description": [],
@@ -666,7 +622,7 @@
         },
         "stat": {
             "abilityId": 6085,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -674,7 +630,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -702,7 +658,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 6227,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Supernova Hit Count",
             "description": [],
@@ -711,7 +667,7 @@
         },
         "stat": {
             "abilityId": 6227,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -719,52 +675,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6235": {
-        "id": 6235,
-        "name": "special_bonus_hp_500",
-        "uri": "phoenix",
-        "language": {
-            "abilityId": 6235,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+500 Health",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6235,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -792,7 +703,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 6401,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+25 Fire Spirits DPS",
             "description": [],
@@ -801,7 +712,7 @@
         },
         "stat": {
             "abilityId": 6401,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -809,7 +720,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -837,7 +748,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 6852,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1100 Icarus Dive Cast Range",
             "description": [],
@@ -846,7 +757,7 @@
         },
         "stat": {
             "abilityId": 6852,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -854,7 +765,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -882,7 +793,7 @@
         "uri": "phoenix",
         "language": {
             "abilityId": 6915,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.5% Max Health Sun Ray Damage",
             "description": [],
@@ -891,7 +802,7 @@
         },
         "stat": {
             "abilityId": 6915,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -899,7 +810,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

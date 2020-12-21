@@ -1,11 +1,60 @@
 {
+    "701": {
+        "id": 701,
+        "name": "medusa_cold_blooded",
+        "language": {
+            "abilityId": 701,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Cold Blooded",
+            "description": [
+                "When Medusa is targeted with a spell, a single-target Mystic Snake is sent back towards the enemy. Cooldown: 12."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 701,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                12.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5504": {
         "id": 5504,
         "name": "medusa_split_shot",
         "uri": "medusa",
         "language": {
             "abilityId": 5504,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Split Shot",
             "description": [
@@ -25,7 +74,7 @@
         },
         "stat": {
             "abilityId": 5504,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2564,
             "unitTargetType": 0,
@@ -33,7 +82,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -67,7 +116,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 5505,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Mystic Snake",
             "description": [
@@ -86,14 +135,13 @@
                 "SCEPTER DURATION BOUNCE INCREASE: 0.3"
             ],
             "lore": "The Gorgon's curse is her greatest strength.",
-            "aghanimDescription": "Causes Mystic Snake to turn enemies hit into stone. Stone duration increases with each bounce of the Mystic Snake.",
             "notes": [
                 "Mystic Snake cannot be disjointed."
             ]
         },
         "stat": {
             "abilityId": 5505,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -101,7 +149,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -122,13 +170,13 @@
                 0.2
             ],
             "cooldown": [
-                10
+                10.0
             ],
             "manaCost": [
-                140,
-                150,
-                160,
-                170
+                140.0,
+                150.0,
+                160.0,
+                170.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -144,7 +192,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 5506,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Mana Shield",
             "description": [
@@ -161,7 +209,7 @@
         },
         "stat": {
             "abilityId": 5506,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2564,
             "unitTargetType": 0,
@@ -169,7 +217,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -203,7 +251,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 5507,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Stone Gaze",
             "description": [
@@ -224,7 +272,7 @@
         },
         "stat": {
             "abilityId": 5507,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -232,7 +280,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -253,12 +301,10 @@
                 0.4
             ],
             "cooldown": [
-                90
+                90.0
             ],
             "manaCost": [
-                200,
-                200,
-                200
+                100.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -268,103 +314,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5907": {
-        "id": 5907,
-        "name": "special_bonus_attack_speed_30",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 5907,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+30 Attack Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5907,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5972": {
-        "id": 5972,
-        "name": "special_bonus_evasion_15",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 5972,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "15% Evasion",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5972,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6182": {
         "id": 6182,
         "name": "special_bonus_unique_medusa",
         "uri": "medusa",
         "language": {
             "abilityId": 6182,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+2s Stone Gaze Duration",
             "description": [
@@ -375,7 +331,7 @@
         },
         "stat": {
             "abilityId": 6182,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -383,97 +339,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6185": {
-        "id": 6185,
-        "name": "special_bonus_mp_500",
-        "uri": "Medusa",
-        "language": {
-            "abilityId": 6185,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+500 Mana",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6185,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6382": {
-        "id": 6382,
-        "name": "special_bonus_mp_600",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 6382,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+600 Mana",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6382,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -501,7 +367,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 6392,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+7 Split Shot Targets",
             "description": [],
@@ -510,7 +376,7 @@
         },
         "stat": {
             "abilityId": 6392,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -518,52 +384,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6686": {
-        "id": 6686,
-        "name": "special_bonus_mp_1000",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 6686,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+1000 Mana",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6686,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -591,7 +412,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 6687,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+32% Mystic Snake Mana Gain",
             "description": [],
@@ -600,7 +421,7 @@
         },
         "stat": {
             "abilityId": 6687,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -608,7 +429,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -636,7 +457,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 6803,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Split Shot Uses Modifiers",
             "description": [
@@ -647,7 +468,7 @@
         },
         "stat": {
             "abilityId": 6803,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -655,97 +476,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6816": {
-        "id": 6816,
-        "name": "special_bonus_mp_800",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 6816,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+800 Mana",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6816,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7059": {
-        "id": 7059,
-        "name": "special_bonus_mp_700",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 7059,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+700 Mana",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7059,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -773,7 +504,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 7389,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-3s Mystic Snake Cooldown",
             "description": [],
@@ -782,7 +513,7 @@
         },
         "stat": {
             "abilityId": 7389,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -790,7 +521,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

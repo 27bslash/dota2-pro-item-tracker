@@ -5,7 +5,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 482,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+30 Bloodrage Attack Speed",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 482,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,17 +50,17 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 5015,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Bloodrage",
             "description": [
-                "Drives you into a bloodthirsty rage during which you attacks faster and deal more spell damage at the cost a percentage of your health per second. Provides half attack speed to allied heroes."
+                "Drives Bloodseeker into a bloodthirsty rage which causes him to attack faster and deal more spell damage at the cost of a percentage of his health per second. Provides half attack speed to allied heroes."
             ],
             "attributes": [
                 "DURATION: 8",
-                "ATTACK SPEED: 50 / 80 / 110 / 140",
-                "SPELL AMPLIFICATION: 6 / 12 / 18 / 24",
-                "MAX HEALTH DAMAGE PER SECOND: 2.2% / 2.4% / 2.6% / 2.8%"
+                "ATTACK SPEED: 60 / 90 / 120 / 150",
+                "SPELL AMPLIFICATION: 15 / 20 / 25 / 30",
+                "MAX HEALTH DAMAGE PER SECOND: 2%"
             ],
             "lore": "Strygwyr shares his animalistic thirst for bloodshed.",
             "notes": [
@@ -69,7 +69,7 @@
         },
         "stat": {
             "abilityId": 5015,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2056,
             "unitTargetType": 1,
@@ -98,13 +98,13 @@
                 0.2
             ],
             "cooldown": [
-                14,
-                12,
-                10,
-                8
+                14.0,
+                12.0,
+                10.0,
+                8.0
             ],
             "manaCost": [
-                25
+                25.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -120,7 +120,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 5016,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Blood Rite",
             "description": [
@@ -128,7 +128,7 @@
             ],
             "attributes": [
                 "SILENCE DURATION: 3 / 4 / 5 / 6",
-                "DAMAGE: 120 / 180 / 240 / 300",
+                "DAMAGE: 120 / 160 / 200 / 240",
                 "RITUAL AREA: 600"
             ],
             "lore": "The Flayed Twins are ever willing to aid those who spill blood upon the field of battle.",
@@ -138,7 +138,7 @@
         },
         "stat": {
             "abilityId": 5016,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -146,7 +146,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -167,13 +167,16 @@
                 0.3
             ],
             "cooldown": [
-                12
+                15.0,
+                14.0,
+                13.0,
+                12.0
             ],
             "manaCost": [
-                70,
-                80,
-                90,
-                100
+                90.0,
+                100.0,
+                110.0,
+                120.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -189,7 +192,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 5017,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Thirst",
             "description": [
@@ -198,8 +201,8 @@
             "attributes": [
                 "THIRST HEALTH THRESHHOLD: 75%",
                 "MAX THIRST MOVE SPEED: 14% / 24% / 34% / 44%",
-                "MAX HEALTH HEAL HEROES: 12% / 18% / 24% / 30%",
-                "MAX HEALTH HEAL CREEPS: 8% / 12% / 16% / 20%",
+                "MAX HEALTH HEAL HEROES: 10% / 15% / 20% / 25%",
+                "MAX HEALTH HEAL CREEPS: 11% / 14% / 17% / 20%",
                 "HALF HEAL RADIUS: 300",
                 "VISIBILITY HEALTH THRESHHOLD: 25%"
             ],
@@ -212,7 +215,7 @@
         },
         "stat": {
             "abilityId": 5017,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -220,7 +223,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -248,7 +251,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 5018,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Rupture",
             "description": [
@@ -256,18 +259,17 @@
             ],
             "attributes": [
                 "DURATION: 10 / 11 / 12",
-                "MOVE DAMAGE: 30% / 45% / 60%",
+                "MOVE DAMAGE: 36% / 48% / 60%",
                 "CAST RANGE: ",
                 "SCEPTER CHARGES: 2",
                 "SCEPTER REPLENISH TIME: 40"
             ],
             "lore": "When the Bloodseeker hunts you, injuries become fatalities.",
-            "aghanimDescription": "Grants %max_charges_scepter% charges to Rupture with a %charge_restore_time_scepter% seconds replenish time.",
             "notes": []
         },
         "stat": {
             "abilityId": 5018,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -275,7 +277,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 2,
             "spellImmunity": 3,
-            "modifierSupportValue": 0,
+            "modifierSupportValue": 0.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -296,12 +298,12 @@
                 0.4
             ],
             "cooldown": [
-                70
+                70.0
             ],
             "manaCost": [
-                200,
-                225,
-                250
+                100.0,
+                150.0,
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -317,16 +319,16 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 6230,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-5s Blood Rite Cooldown",
+            "displayName": "-4s Blood Rite Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6230,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -334,7 +336,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -362,7 +364,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 6356,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+75 Blood Rite Damage",
             "description": [],
@@ -371,7 +373,7 @@
         },
         "stat": {
             "abilityId": 6356,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -379,7 +381,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -407,7 +409,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 6357,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+475 Rupture Cast Range",
             "description": [],
@@ -416,7 +418,7 @@
         },
         "stat": {
             "abilityId": 6357,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -424,52 +426,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6405": {
-        "id": 6405,
-        "name": "special_bonus_hp_225",
-        "uri": "bloodseeker",
-        "language": {
-            "abilityId": 6405,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+225 Health",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6405,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -497,16 +454,16 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 6809,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+14 Max Thirst MS",
+            "displayName": "+14% Max Thirst MS",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6809,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -514,7 +471,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

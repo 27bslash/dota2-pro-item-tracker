@@ -5,7 +5,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 323,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Vengeance Aura Illusion Casts Spells",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 323,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +50,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 493,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+100 Vengeance Aura Attack Range",
             "description": [],
@@ -59,7 +59,7 @@
         },
         "stat": {
             "abilityId": 493,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +67,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,7 +95,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 5122,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Magic Missile",
             "description": [
@@ -110,7 +110,7 @@
         },
         "stat": {
             "abilityId": 5122,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -118,7 +118,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -130,7 +130,10 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                550
+                575,
+                600,
+                625,
+                650
             ],
             "castRangeBuffer": [
                 250
@@ -142,16 +145,16 @@
                 0.3
             ],
             "cooldown": [
-                12,
-                11,
-                10,
-                9
+                12.0,
+                11.0,
+                10.0,
+                9.0
             ],
             "manaCost": [
-                100,
-                110,
-                120,
-                130
+                100.0,
+                110.0,
+                120.0,
+                130.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -167,18 +170,15 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 5123,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Vengeance Aura",
             "description": [
-                "Vengeful Spirit's presence increases the ranged attack range and primary attribute of nearby friendly units. Spawns a Strong Illusion of Vengeful Spirit when she dies that lasts until it is killed or Vengeful Spirit revives."
+                "Vengeful Spirit's presence increases the damage of nearby friendly heroes."
             ],
             "attributes": [
-                "BONUS ATTACK RANGE: 50 / 75 / 100 / 125",
-                "BONUS PRIMARY ATTRIBUTE: 4 / 7 / 10 / 13",
-                "RADIUS: 1200",
-                "ILLUSION DAMAGE DEALT: 70% / 80% / 90% / 100%",
-                "ILLUSION DAMAGE TAKEN: 150%"
+                "BASE DAMAGE BONUS: 8% / 16% / 24% / 32%",
+                "RADIUS: 1200"
             ],
             "lore": "Although they may not share her undying passion for revenge, allies do draw on her fanaticism in combat.",
             "notes": [
@@ -188,7 +188,7 @@
         },
         "stat": {
             "abilityId": 5123,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 0,
@@ -196,13 +196,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
+            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -227,7 +227,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 5124,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Wave of Terror",
             "description": [
@@ -242,7 +242,7 @@
         },
         "stat": {
             "abilityId": 5124,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 0,
@@ -250,7 +250,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -274,22 +274,22 @@
                 0.3
             ],
             "cooldown": [
-                16,
-                14,
-                12,
-                10
+                16.0,
+                14.0,
+                12.0,
+                10.0
             ],
             "damage": [
-                60,
-                80,
-                100,
-                120
+                60.0,
+                80.0,
+                100.0,
+                120.0
             ],
             "manaCost": [
-                25,
-                30,
-                35,
-                40
+                25.0,
+                30.0,
+                35.0,
+                40.0
             ],
             "isUltimate": false,
             "duration": "8",
@@ -305,18 +305,14 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 5125,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Nether Swap",
             "description": [
                 "Instantaneously swaps positions with a target Hero, friend or enemy.  Nether Swap interrupts channeling abilities on the target."
             ],
-            "attributes": [
-                "SCEPTER FEAR RADIUS: 700",
-                "SCEPTER FEAR DURATION: 2"
-            ],
+            "attributes": [],
             "lore": "Martyrdom is a small price to pay for vengeance.",
-            "aghanimDescription": "After a Nether Swap, enemies around Vengeful Spirit are Feared.",
             "notes": [
                 "Works on Spell Immune units.",
                 "Trees near Vengeful Spirit and the target will be destroyed when the spell is cast.",
@@ -325,7 +321,7 @@
         },
         "stat": {
             "abilityId": 5125,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 8,
@@ -333,21 +329,21 @@
             "unitTargetFlags": 32,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 2,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                700,
-                850,
-                1000
+                800,
+                950,
+                1100
             ],
             "castRangeBuffer": [
                 250
@@ -356,110 +352,22 @@
                 0.4
             ],
             "cooldown": [
-                0
+                60.0,
+                45.0,
+                30.0
             ],
             "manaCost": [
-                100,
-                150,
-                200
+                100.0,
+                150.0,
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
-            "charges": "2",
-            "chargeRestoreTime": "90 80 70"
+            "charges": "",
+            "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
         "isTalent": false
-    },
-    "5929": {
-        "id": 5929,
-        "name": "special_bonus_agility_15",
-        "uri": "vengefulspirit",
-        "language": {
-            "abilityId": 5929,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+15 Agility",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5929,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5936": {
-        "id": 5936,
-        "name": "special_bonus_magic_resistance_8",
-        "uri": "vengefulspirit",
-        "language": {
-            "abilityId": 5936,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+8% Magic Resistance",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5936,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
     },
     "6057": {
         "id": 6057,
@@ -467,7 +375,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6057,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Magic Missile Pierces Spell Immunity",
             "description": [],
@@ -476,7 +384,7 @@
         },
         "stat": {
             "abilityId": 6057,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -484,7 +392,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -512,16 +420,16 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6237,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+6 Vengeance Aura Attributes",
+            "displayName": "+16% Vengeance Aura Base Damage Bonus",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6237,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -529,7 +437,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -557,7 +465,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6310,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+200 Magic Missile Damage",
             "description": [],
@@ -566,7 +474,7 @@
         },
         "stat": {
             "abilityId": 6310,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -574,7 +482,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -602,7 +510,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6977,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-1 Wave of Terror Armor",
             "description": [],
@@ -611,7 +519,7 @@
         },
         "stat": {
             "abilityId": 6977,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -619,7 +527,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -647,7 +555,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6978,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-2.75s Magic Missile Cooldown",
             "description": [],
@@ -656,7 +564,7 @@
         },
         "stat": {
             "abilityId": 6978,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -664,7 +572,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -692,7 +600,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 7018,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-6s Wave of Terror Cooldown",
             "description": [],
@@ -701,7 +609,7 @@
         },
         "stat": {
             "abilityId": 7018,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -709,7 +617,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

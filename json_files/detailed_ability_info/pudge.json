@@ -1,11 +1,58 @@
 {
+    "322": {
+        "id": 322,
+        "name": "pudge_eject",
+        "language": {
+            "abilityId": 322,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Eject",
+            "description": [
+                "Ejects the swallowed allied hero inside of you."
+            ],
+            "attributes": [],
+            "lore": "Allies emerge forever changed.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 322,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "332": {
         "id": 332,
         "name": "special_bonus_unique_pudge_5",
         "uri": "pudge",
         "language": {
             "abilityId": 332,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-4 Meat Hook Cooldown",
             "description": [],
@@ -14,7 +61,7 @@
         },
         "stat": {
             "abilityId": 332,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +69,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +97,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 408,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.8s Dismember Duration",
             "description": [],
@@ -59,7 +106,7 @@
         },
         "stat": {
             "abilityId": 408,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +114,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "507": {
+        "id": 507,
+        "name": "special_bonus_unique_pudge_7",
+        "language": {
+            "abilityId": 507,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+120 Meat Hook Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 507,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,14 +186,14 @@
         "uri": "pudge",
         "language": {
             "abilityId": 5074,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Flesh Heap",
             "description": [
                 "Gives Pudge increased magic resistance, as well as bonus strength that increases each time Pudge kills an enemy Hero or it dies in his vicinity.  Flesh Heap is retroactive, meaning it can gain charges before it is skilled, which then become active."
             ],
             "attributes": [
-                "MAGIC RESISTANCE: 8% / 10% / 12% / 14%",
+                "MAGIC RESISTANCE: 12% / 14% / 16% / 18%",
                 "STRENGTH BONUS: 1.5 / 2 / 2.5 / 3.0",
                 "RANGE: 450"
             ],
@@ -111,7 +202,7 @@
         },
         "stat": {
             "abilityId": 5074,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -119,7 +210,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -147,7 +238,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 5075,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Meat Hook",
             "description": [
@@ -168,7 +259,7 @@
         },
         "stat": {
             "abilityId": 5075,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16400,
             "unitTargetType": 0,
@@ -176,7 +267,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -200,22 +291,22 @@
                 0.3
             ],
             "cooldown": [
-                21,
-                18,
-                15,
-                12
+                21.0,
+                18.0,
+                15.0,
+                12.0
             ],
             "damage": [
-                150,
-                220,
-                290,
-                360
+                150.0,
+                220.0,
+                290.0,
+                360.0
             ],
             "manaCost": [
-                125,
-                130,
-                135,
-                140
+                125.0,
+                130.0,
+                135.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -231,7 +322,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 5076,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Rot",
             "description": [
@@ -240,7 +331,9 @@
             "attributes": [
                 "RADIUS: 250",
                 "MOVE SLOW: -14% / -20% / -26% / -32%",
-                "DAMAGE: 30 / 60 / 90 / 120"
+                "DAMAGE: 30 / 60 / 90 / 120",
+                "SCEPTER BONUS DAMAGE: 80",
+                "SCEPTER BONUS RADIUS: 200"
             ],
             "lore": "A foul odor precedes a toxic, choking gas, emanating from the Butcher's putrid, ever-swelling mass.",
             "notes": [
@@ -251,7 +344,7 @@
         },
         "stat": {
             "abilityId": 5076,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 541188,
             "unitTargetType": 0,
@@ -259,13 +352,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
+            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -274,10 +367,10 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -293,7 +386,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 5077,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Dismember",
             "description": [
@@ -301,19 +394,16 @@
             ],
             "attributes": [
                 "DURATION: ",
-                "CREEP DURATION: 6.0 / 6.0 / 6.0",
-                "SCEPTER ALLIED HEAL: 4%",
-                "SCEPTER COOLDOWN: 11"
+                "CREEP DURATION: 6.0 / 6.0 / 6.0"
             ],
             "lore": "'When I'm through with these vermin, they'll be fit for a pie!'",
-            "aghanimDescription": "Reduces cooldown and allows targeting an ally to swallow them and heal them for %scepter_regen_pct%%% of their max health per second. The ally can exit whenever they want by issuing a command.",
             "notes": [
                 "If a unit becomes invisible while Dismembered, it will still be under the effects of Dismember."
             ]
         },
         "stat": {
             "abilityId": 5077,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 16520,
             "unitTargetType": 3,
@@ -321,13 +411,13 @@
             "unitTargetFlags": 4,
             "unitDamageType": 1,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 2,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -344,19 +434,19 @@
                 0.3
             ],
             "channelTime": [
-                3,
-                3,
-                3
+                3.0,
+                3.0,
+                3.0
             ],
             "cooldown": [
-                30,
-                25,
-                20
+                30.0,
+                25.0,
+                20.0
             ],
             "manaCost": [
-                100,
-                130,
-                170
+                100.0,
+                130.0,
+                170.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -372,7 +462,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 6023,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.5 Flesh Heap Stack Str",
             "description": [],
@@ -381,7 +471,7 @@
         },
         "stat": {
             "abilityId": 6023,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -389,7 +479,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -417,7 +507,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 6245,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+30 Rot Damage",
             "description": [],
@@ -426,7 +516,7 @@
         },
         "stat": {
             "abilityId": 6245,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -434,7 +524,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -462,7 +552,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 6506,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "1.8x Dismember Damage/Heal",
             "description": [],
@@ -471,7 +561,7 @@
         },
         "stat": {
             "abilityId": 6506,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -479,7 +569,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -507,16 +597,16 @@
         "uri": "pudge",
         "language": {
             "abilityId": 7142,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-16% Rot Slow",
+            "displayName": "-14% Rot Slow",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7142,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -524,7 +614,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

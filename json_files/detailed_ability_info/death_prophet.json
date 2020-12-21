@@ -1,11 +1,55 @@
 {
+    "698": {
+        "id": 698,
+        "name": "special_bonus_unique_death_prophet_5",
+        "language": {
+            "abilityId": 698,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "-20.0s Spirit Siphon Replenish Time",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 698,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
     "5090": {
         "id": 5090,
         "name": "death_prophet_carrion_swarm",
         "uri": "death_prophet",
         "language": {
             "abilityId": 5090,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Crypt Swarm",
             "description": [
@@ -21,7 +65,7 @@
         },
         "stat": {
             "abilityId": 5090,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 24,
             "unitTargetType": 3,
@@ -29,7 +73,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,22 +94,22 @@
                 0.2
             ],
             "cooldown": [
-                8,
-                7,
-                6,
-                5
+                8.0,
+                7.0,
+                6.0,
+                5.0
             ],
             "damage": [
-                75,
-                150,
-                225,
-                300
+                75.0,
+                150.0,
+                225.0,
+                300.0
             ],
             "manaCost": [
-                85,
-                110,
-                135,
-                160
+                85.0,
+                110.0,
+                135.0,
+                160.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -81,7 +125,7 @@
         "uri": "death_prophet",
         "language": {
             "abilityId": 5091,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Silence",
             "description": [
@@ -98,7 +142,7 @@
         },
         "stat": {
             "abilityId": 5091,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -106,7 +150,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -127,19 +171,62 @@
                 0.4
             ],
             "cooldown": [
-                15,
-                14,
-                13,
-                12
+                15.0,
+                14.0,
+                13.0,
+                12.0
             ],
             "manaCost": [
-                80,
-                90,
-                100,
-                110
+                80.0,
+                90.0,
+                100.0,
+                110.0
             ],
             "isUltimate": false,
             "duration": "3 4 5 6",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5092": {
+        "id": 5092,
+        "name": "death_prophet_witchcraft",
+        "language": {
+            "abilityId": 5092,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5092,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
             "charges": "",
             "chargeRestoreTime": ""
         },
@@ -152,7 +239,7 @@
         "uri": "death_prophet",
         "language": {
             "abilityId": 5093,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Exorcism",
             "description": [
@@ -169,7 +256,6 @@
                 "MOVEMENT BONUS: 16% / 18% / 20%"
             ],
             "lore": "Over time, the banshee remnants of her previous lives return to haunt the present.",
-            "aghanimDescription": "Whenever an enemy is affected by your spells or when you attack an enemy, a ghost will fly out, slow and hit the enemy for bonus its usual damage then return to you with life.",
             "notes": [
                 "Radius represents the area in which the spirits will acquire targets around Death Prophet.",
                 "Spirit damage isn't reduced by damage block abilities."
@@ -177,7 +263,7 @@
         },
         "stat": {
             "abilityId": 5093,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -185,7 +271,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -205,12 +291,12 @@
                 0.5
             ],
             "cooldown": [
-                145
+                145.0
             ],
             "manaCost": [
-                250,
-                350,
-                450
+                250.0,
+                350.0,
+                450.0
             ],
             "isUltimate": true,
             "duration": "35",
@@ -226,16 +312,15 @@
         "uri": "death_prophet",
         "language": {
             "abilityId": 5685,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Spirit Siphon",
             "description": [
-                "Creates a spirit link between Death Prophet and an enemy unit, draining 14 + 1.0 / 2.5 / 4.0 / 5.5% Max HP per second and steal %movement_slow% movement speed from the enemy."
+                "Creates a spirit link between Death Prophet and an enemy unit, draining 14 + 1.0 / 2.5 / 4.0 / 5.5% Max HP per second from the enemy."
             ],
             "attributes": [
                 "BASE DAMAGE: 14",
                 "MAX HP AS DAMAGE: 1.0% / 2.5% / 4.0% / 5.5%",
-                "SPEED STEAL: 4% / 6% / 8% / 10%",
                 "DURATION: 6"
             ],
             "lore": "Krobelus willingly shows others the path she alone cannot follow.",
@@ -245,7 +330,7 @@
         },
         "stat": {
             "abilityId": 5685,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 3,
@@ -253,7 +338,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -274,15 +359,15 @@
                 0.1
             ],
             "cooldown": [
-                0
+                0.0
             ],
             "manaCost": [
-                80
+                80.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "1 2 3 4",
-            "chargeRestoreTime": "45 40 35 30"
+            "chargeRestoreTime": "36 34 32 30"
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -293,7 +378,7 @@
         "uri": "death_prophet",
         "language": {
             "abilityId": 6191,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+8 Exorcism Spirits",
             "description": [],
@@ -302,7 +387,7 @@
         },
         "stat": {
             "abilityId": 6191,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -310,7 +395,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -338,7 +423,7 @@
         "uri": "death_prophet",
         "language": {
             "abilityId": 6367,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-3s Crypt Swarm Cooldown",
             "description": [],
@@ -347,7 +432,7 @@
         },
         "stat": {
             "abilityId": 6367,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -355,7 +440,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -383,7 +468,7 @@
         "uri": "death_prophet",
         "language": {
             "abilityId": 6628,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.8% Max Health Spirit Siphon",
             "description": [],
@@ -392,7 +477,7 @@
         },
         "stat": {
             "abilityId": 6628,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -400,7 +485,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -428,7 +513,7 @@
         "uri": "death_prophet",
         "language": {
             "abilityId": 6805,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Exorcism Grants Haste",
             "description": [
@@ -439,7 +524,7 @@
         },
         "stat": {
             "abilityId": 6805,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -447,7 +532,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

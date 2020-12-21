@@ -1,20 +1,19 @@
 {
-    "428": {
-        "id": 428,
-        "name": "special_bonus_cooldown_reduction_6",
-        "uri": "arc_warden",
+    "685": {
+        "id": 685,
+        "name": "special_bonus_unique_arc_warden_6",
         "language": {
-            "abilityId": 428,
-            "gameVersionId": 135,
+            "abilityId": 685,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "6% Cooldown Reduction",
+            "displayName": "+12s Tempest Double Duration",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 428,
-            "gameVersionId": 135,
+            "abilityId": 685,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +21,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +49,7 @@
         "uri": "arc_warden",
         "language": {
             "abilityId": 5677,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Flux",
             "description": [
@@ -68,7 +67,7 @@
         },
         "stat": {
             "abilityId": 5677,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -76,7 +75,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -103,10 +102,10 @@
                 0.3
             ],
             "cooldown": [
-                16
+                16.0
             ],
             "manaCost": [
-                75
+                75.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -122,7 +121,7 @@
         "uri": "arc_warden",
         "language": {
             "abilityId": 5678,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Magnetic Field",
             "description": [
@@ -139,7 +138,7 @@
         },
         "stat": {
             "abilityId": 5678,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -147,7 +146,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -168,13 +167,13 @@
                 0.3
             ],
             "cooldown": [
-                20
+                20.0
             ],
             "manaCost": [
-                50,
-                70,
-                90,
-                110
+                50.0,
+                70.0,
+                90.0,
+                110.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -190,7 +189,7 @@
         "uri": "arc_warden",
         "language": {
             "abilityId": 5679,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Spark Wraith",
             "description": [
@@ -212,7 +211,7 @@
         },
         "stat": {
             "abilityId": 5679,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -220,13 +219,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
+            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -241,13 +240,13 @@
                 0.3
             ],
             "cooldown": [
-                4,
-                4,
-                4,
-                4
+                4.0,
+                4.0,
+                4.0,
+                4.0
             ],
             "manaCost": [
-                80
+                80.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -263,7 +262,7 @@
         "uri": "arc_warden",
         "language": {
             "abilityId": 5683,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Tempest Double",
             "description": [
@@ -274,14 +273,13 @@
                 "BOUNTY GOLD: 180 / 240 / 300"
             ],
             "lore": "Warped by the power of its peers, Arc Warden becomes what it despises most: disharmony.",
-            "aghanimDescription": "Grants a new ability, Rune Forge. Creates a random Rune in front of you.",
             "notes": [
                 "Tempest Double and Refresher Orb cannot be used by the duplicate."
             ]
         },
         "stat": {
             "abilityId": 5683,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -289,7 +287,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -307,9 +305,9 @@
                 0.15
             ],
             "cooldown": [
-                60,
-                50,
-                40
+                60.0,
+                50.0,
+                40.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -319,202 +317,22 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5943": {
-        "id": 5943,
-        "name": "special_bonus_attack_range_100",
-        "uri": "arc_warden",
-        "language": {
-            "abilityId": 5943,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+100 Attack Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5943,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5950": {
-        "id": 5950,
-        "name": "special_bonus_cooldown_reduction_8",
-        "uri": "arc_warden",
-        "language": {
-            "abilityId": 5950,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "8% Cooldown Reduction",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5950,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5951": {
-        "id": 5951,
-        "name": "special_bonus_cooldown_reduction_15",
-        "uri": "arc_warden",
-        "language": {
-            "abilityId": 5951,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "15% Cooldown Reduction",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5951,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6111": {
-        "id": 6111,
-        "name": "special_bonus_lifesteal_25",
-        "uri": "arc_warden",
-        "language": {
-            "abilityId": 6111,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "25% Lifesteal",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6111,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6287": {
         "id": 6287,
         "name": "special_bonus_unique_arc_warden",
         "uri": "arc_warden",
         "language": {
             "abilityId": 6287,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+250 Spark Wraith Damage",
+            "displayName": "+150 Spark Wraith Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6287,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -522,7 +340,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -550,7 +368,7 @@
         "uri": "arc_warden",
         "language": {
             "abilityId": 6354,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3s Flux Duration",
             "description": [],
@@ -559,7 +377,7 @@
         },
         "stat": {
             "abilityId": 6354,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -567,7 +385,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -595,7 +413,7 @@
         "uri": "arc_warden",
         "language": {
             "abilityId": 7104,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-1.5s Spark Wraith Cooldown",
             "description": [],
@@ -604,7 +422,7 @@
         },
         "stat": {
             "abilityId": 7104,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -612,7 +430,53 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7105": {
+        "id": 7105,
+        "name": "special_bonus_unique_arc_warden_4",
+        "language": {
+            "abilityId": 7105,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Global Flux",
+            "description": [
+                "Affects visible units only."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7105,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -640,16 +504,16 @@
         "uri": "arc_warden",
         "language": {
             "abilityId": 7120,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+350 Flux Cast Range",
+            "displayName": "+250 Flux Cast Range",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7120,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -657,7 +521,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -678,5 +542,57 @@
         },
         "drawMatchPage": true,
         "isTalent": true
+    },
+    "7854": {
+        "id": 7854,
+        "name": "arc_warden_scepter",
+        "language": {
+            "abilityId": 7854,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7854,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.15
+            ],
+            "cooldown": [
+                60.0
+            ],
+            "manaCost": [
+                100.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
     }
 }

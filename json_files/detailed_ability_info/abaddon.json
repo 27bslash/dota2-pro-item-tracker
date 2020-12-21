@@ -1,56 +1,11 @@
 {
-    "442": {
-        "id": 442,
-        "name": "special_bonus_attack_damage_80",
-        "uri": "abaddon",
-        "language": {
-            "abilityId": 442,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+80 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 442,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "5585": {
         "id": 5585,
         "name": "abaddon_death_coil",
         "uri": "abaddon",
         "language": {
             "abilityId": 5585,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Mist Coil",
             "description": [
@@ -67,7 +22,7 @@
         },
         "stat": {
             "abilityId": 5585,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 5,
@@ -75,7 +30,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -99,7 +54,7 @@
                 5.5
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -115,7 +70,7 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 5586,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Aphotic Shield",
             "description": [
@@ -136,7 +91,7 @@
         },
         "stat": {
             "abilityId": 5586,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -144,7 +99,7 @@
             "unitTargetFlags": 2,
             "unitDamageType": 1,
             "spellImmunity": 2,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -162,19 +117,19 @@
                 250
             ],
             "castPoint": [
-                0.4
+                0.3
             ],
             "cooldown": [
-                12,
-                10,
-                8,
-                6
+                12.0,
+                10.0,
+                8.0,
+                6.0
             ],
             "manaCost": [
-                100,
-                105,
-                110,
-                115
+                100.0,
+                105.0,
+                110.0,
+                115.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -190,7 +145,7 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 5587,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Curse of Avernus",
             "description": [
@@ -208,7 +163,7 @@
         },
         "stat": {
             "abilityId": 5587,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -216,7 +171,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -244,7 +199,7 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 5588,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Borrowed Time",
             "description": [
@@ -255,12 +210,11 @@
             "attributes": [
                 "HEALTH THRESHOLD: 400",
                 "DURATION: 4.0 / 5.0 / 6.0",
-                "SCEPTER DURATION: 5.0 / 6.0 / 7.0",
+                "SCEPTER DURATION: 6 / 7 / 8",
                 "SCEPTER RANGE: 1600",
                 "SCEPTER DAMAGE THRESHOLD: 525"
             ],
             "lore": "The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding.  What should hurt, instead heals; and what should kill gives strength anew.",
-            "aghanimDescription": "Increases duration. While Borrowed Time is active, anytime an ally takes more than %ally_threshold_scepter% damage while within %redirect_range_scepter% range of Abaddon, an individual Mist Coil will automatically fire towards that ally.",
             "notes": [
                 "Borrowed Time can be manually activated while Abaddon is disabled, but not while silenced.  The passive activation can still occur while silenced.",
                 "Aphotic Shield does not block any damage to Abaddon when Borrowed Time is active, allowing him to heal."
@@ -268,7 +222,7 @@
         },
         "stat": {
             "abilityId": 5588,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 67588,
             "unitTargetType": 0,
@@ -276,7 +230,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -291,14 +245,14 @@
                 250
             ],
             "cooldown": [
-                60,
-                50,
-                40
+                60.0,
+                50.0,
+                40.0
             ],
             "manaCost": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -308,103 +262,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5968": {
-        "id": 5968,
-        "name": "special_bonus_attack_damage_90",
-        "uri": "abaddon",
-        "language": {
-            "abilityId": 5968,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+90 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5968,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5982": {
-        "id": 5982,
-        "name": "special_bonus_strength_8",
-        "uri": "abaddon",
-        "language": {
-            "abilityId": 5982,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+8 Strength",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5982,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6100": {
         "id": 6100,
         "name": "special_bonus_unique_abaddon",
         "uri": "abaddon",
         "language": {
             "abilityId": 6100,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+180 Aphotic Shield Health",
             "description": [],
@@ -413,7 +277,7 @@
         },
         "stat": {
             "abilityId": 6100,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -421,7 +285,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -449,16 +313,16 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 6601,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+48 Mist Coil Heal/Damage",
+            "displayName": "+50 Mist Coil Heal/Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6601,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -466,7 +330,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -494,7 +358,7 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 6602,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+60 Curse of Avernus Attack Speed",
             "description": [],
@@ -503,7 +367,7 @@
         },
         "stat": {
             "abilityId": 6602,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -511,7 +375,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -539,16 +403,16 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 7335,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "375 AoE Mist Coil",
+            "displayName": "425 AoE Mist Coil",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7335,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -556,7 +420,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7340": {
+        "id": 7340,
+        "name": "special_bonus_unique_abaddon_5",
+        "language": {
+            "abilityId": 7340,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Curse of Avernus Affects Towers",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7340,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

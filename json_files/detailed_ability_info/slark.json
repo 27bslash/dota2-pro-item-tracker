@@ -1,11 +1,69 @@
 {
+    "668": {
+        "id": 668,
+        "name": "slark_fish_bait",
+        "language": {
+            "abilityId": 668,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Fish Bait",
+            "description": [
+                "Reduce movement speed of an enemy by 30% for 4 seconds and provide true sight vision over them. If Slark pounces on the enemy during that time, he will be rewarded with 50 Attack Speed for the duration of the Leash."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 668,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1100
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                20.0
+            ],
+            "manaCost": [
+                100.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5494": {
         "id": 5494,
         "name": "slark_dark_pact",
         "uri": "slark",
         "language": {
             "abilityId": 5494,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Dark Pact",
             "description": [
@@ -28,7 +86,7 @@
         },
         "stat": {
             "abilityId": 5494,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -36,7 +94,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -60,13 +118,13 @@
                 0.001
             ],
             "cooldown": [
-                9,
-                8,
-                7,
-                6
+                9.0,
+                8.0,
+                7.0,
+                6.0
             ],
             "manaCost": [
-                60
+                60.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -82,7 +140,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 5495,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Pounce",
             "description": [
@@ -90,12 +148,11 @@
             ],
             "attributes": [
                 "DISTANCE: 700",
-                "SCEPTER DISTANCE: 1100",
+                "SCEPTER DISTANCE: 1200",
                 "LEASH DURATION: 2.5 / 2.75 / 3 / 3.25",
                 "LEASH RADIUS: 400"
             ],
             "lore": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless.",
-            "aghanimDescription": "Provides %max_charges% charges and increases pounce range.",
             "notes": [
                 "On cast, Slark leaps forward at a speed of 933.33, stopping when he latches onto an enemy hero or has traveled 700 distance.",
                 "Spell Immune units cannot be leashed.",
@@ -104,7 +161,7 @@
         },
         "stat": {
             "abilityId": 5495,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4100,
             "unitTargetType": 0,
@@ -112,7 +169,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -127,16 +184,16 @@
                 250
             ],
             "cooldown": [
-                20,
-                16,
-                12,
-                8
+                20.0,
+                16.0,
+                12.0,
+                8.0
             ],
             "manaCost": [
-                75,
-                75,
-                75,
-                75
+                75.0,
+                75.0,
+                75.0,
+                75.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -152,7 +209,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 5496,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Essence Shift",
             "description": [
@@ -172,7 +229,7 @@
         },
         "stat": {
             "abilityId": 5496,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -180,7 +237,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -208,7 +265,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 5497,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Shadow Dance",
             "description": [
@@ -220,7 +277,6 @@
                 "HEALTH GAINED PER SECOND: 5% / 6% / 7%"
             ],
             "lore": "The hidden Thirteenth is a slippery foe.",
-            "aghanimDescription": "Reduces cooldown and causes Shadow Dance active to be an area of effect ability, hiding nearby allied heroes underneath it. Allies do not gain bonus movement speed or health regeneration.",
             "notes": [
                 "If Slark is damaged by a neutral unit, the passive movement and health regeneration bonuses are lost for 2.0 / 2.0 / 2.0 seconds.",
                 "The passive movement and health regeneration bonuses have a 0.5 / 0.5 / 0.5 second activation and deactivation delay."
@@ -228,7 +284,7 @@
         },
         "stat": {
             "abilityId": 5497,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -236,7 +292,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -251,14 +307,14 @@
                 250
             ],
             "cooldown": [
-                80,
-                70,
-                60
+                80.0,
+                65.0,
+                50.0
             ],
             "manaCost": [
-                120,
-                120,
-                120
+                120.0,
+                120.0,
+                120.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -268,58 +324,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6139": {
-        "id": 6139,
-        "name": "special_bonus_all_stats_12",
-        "uri": "slark",
-        "language": {
-            "abilityId": 6139,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+12 All Stats",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6139,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6147": {
         "id": 6147,
         "name": "special_bonus_unique_slark",
         "uri": "slark",
         "language": {
             "abilityId": 6147,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.8s Pounce Leash",
             "description": [],
@@ -328,7 +339,7 @@
         },
         "stat": {
             "abilityId": 6147,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -336,97 +347,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6250": {
-        "id": 6250,
-        "name": "special_bonus_strength_9",
-        "uri": "slark",
-        "language": {
-            "abilityId": 6250,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+9 Strength",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6250,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6289": {
-        "id": 6289,
-        "name": "special_bonus_lifesteal_15",
-        "uri": "slark",
-        "language": {
-            "abilityId": 6289,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "15% Lifesteal",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6289,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -454,7 +375,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 6892,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+120 Dark Pact Damage",
             "description": [],
@@ -463,7 +384,7 @@
         },
         "stat": {
             "abilityId": 6892,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -471,7 +392,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -499,7 +420,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 6893,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1s Shadow Dance Duration",
             "description": [],
@@ -508,7 +429,7 @@
         },
         "stat": {
             "abilityId": 6893,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -516,7 +437,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -544,7 +465,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 6894,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+65 Essence Shift Duration",
             "description": [],
@@ -553,7 +474,7 @@
         },
         "stat": {
             "abilityId": 6894,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -561,52 +482,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7384": {
-        "id": 7384,
-        "name": "special_bonus_agility_6",
-        "uri": "slark",
-        "language": {
-            "abilityId": 7384,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+6 Agility",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7384,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

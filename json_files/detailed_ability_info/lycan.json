@@ -1,11 +1,117 @@
 {
+    "333": {
+        "id": 333,
+        "name": "lycan_wolf_bite",
+        "language": {
+            "abilityId": 333,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Wolf Bite",
+            "description": [
+                "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain 30% Lifesteal and share Lifesteal with each other as long as they are within 1200 range of each other."
+            ],
+            "attributes": [],
+            "lore": "Does this bite look infected?",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 333,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 16,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                300
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                80.0
+            ],
+            "manaCost": [
+                150.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "621": {
+        "id": 621,
+        "name": "special_bonus_unique_lycan_6",
+        "language": {
+            "abilityId": 621,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+75 Shapeshift Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 621,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
     "5395": {
         "id": 5395,
         "name": "lycan_summon_wolves",
         "uri": "lycan",
         "language": {
             "abilityId": 5395,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Summon Wolves",
             "description": [
@@ -26,7 +132,7 @@
         },
         "stat": {
             "abilityId": 5395,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -34,7 +140,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -55,13 +161,13 @@
                 0.3
             ],
             "cooldown": [
-                30,
-                30,
-                30,
-                30
+                30.0,
+                30.0,
+                30.0,
+                30.0
             ],
             "manaCost": [
-                145
+                145.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -77,7 +183,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 5396,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Howl",
             "description": [
@@ -93,7 +199,7 @@
         },
         "stat": {
             "abilityId": 5396,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16388,
             "unitTargetType": 0,
@@ -101,7 +207,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 5,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -122,13 +228,13 @@
                 0.3
             ],
             "cooldown": [
-                24,
-                22,
-                20,
-                18
+                18.0
             ],
             "manaCost": [
-                50
+                35.0,
+                40.0,
+                45.0,
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -144,14 +250,13 @@
         "uri": "lycan",
         "language": {
             "abilityId": 5397,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Feral Impulse",
             "description": [
                 "Increases the HP regeneration and damage of Lycan and all units under his control."
             ],
             "attributes": [
-                "RADIUS: 1200",
                 "BONUS DAMAGE: 14% / 26% / 38% / 50%",
                 "BONUS HP REGEN: 2 / 4 / 6 / 8"
             ],
@@ -160,7 +265,7 @@
         },
         "stat": {
             "abilityId": 5397,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -168,7 +273,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -196,7 +301,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 5398,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Shapeshift",
             "description": [
@@ -211,7 +316,6 @@
                 "TRANSFORM TIME: 1.25"
             ],
             "lore": "Forever a slave to his lycanthropy, Banehallow has come to accept his curse, and embrace his own savagery.",
-            "aghanimDescription": "Grants new ability: Wolf Bite. Bite an ally, granting them Shapeshift properties.",
             "notes": [
                 "Hex doesn't remove Lycan's movement speed.",
                 "Lycan has a smaller collision size in this state."
@@ -219,7 +323,7 @@
         },
         "stat": {
             "abilityId": 5398,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -227,7 +331,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -242,12 +346,12 @@
                 250
             ],
             "cooldown": [
-                125,
-                110,
-                95
+                125.0,
+                110.0,
+                95.0
             ],
             "manaCost": [
-                100
+                100.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -257,37 +361,43 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5931": {
-        "id": 5931,
-        "name": "special_bonus_armor_4",
-        "uri": "lycan",
+    "5399": {
+        "id": 5399,
+        "name": "lycan_summon_wolves_critical_strike",
         "language": {
-            "abilityId": 5931,
-            "gameVersionId": 135,
+            "abilityId": 5399,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+4 Armor",
-            "description": [],
-            "attributes": [],
+            "displayName": "Cripple",
+            "description": [
+                "Gives 20% to cripple the target, causing 8 damage per second and lose 60 Attack Speed for 4.0 seconds."
+            ],
+            "attributes": [
+                "CRIPPLE CHANCE: 20%",
+                "DAMAGE PER SECOND: 8",
+                "ATTACK SPEED SLOW: 60",
+                "DURATION: 4.0"
+            ],
             "notes": []
         },
         "stat": {
-            "abilityId": 5931,
-            "gameVersionId": 135,
-            "type": 2,
+            "abilityId": 5399,
+            "gameVersionId": 137,
+            "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
@@ -300,32 +410,33 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
     },
-    "6021": {
-        "id": 6021,
-        "name": "special_bonus_cooldown_reduction_10",
-        "uri": "lycan",
+    "5500": {
+        "id": 5500,
+        "name": "lycan_summon_wolves_invisibility",
         "language": {
-            "abilityId": 6021,
-            "gameVersionId": 135,
+            "abilityId": 5500,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "10% Cooldown Reduction",
-            "description": [],
+            "displayName": "Invisibility",
+            "description": [
+                "Permanently invisible when not attacking."
+            ],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6021,
-            "gameVersionId": 135,
-            "type": 2,
+            "abilityId": 5500,
+            "gameVersionId": 137,
+            "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -345,7 +456,7 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
     },
     "6134": {
         "id": 6134,
@@ -353,7 +464,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6134,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5s Shapeshift Duration",
             "description": [],
@@ -362,7 +473,7 @@
         },
         "stat": {
             "abilityId": 6134,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -370,7 +481,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -398,7 +509,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6140,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+2 Wolves Summoned",
             "description": [],
@@ -407,7 +518,7 @@
         },
         "stat": {
             "abilityId": 6140,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -415,7 +526,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -443,16 +554,16 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6519,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+10 Feral HP Regen",
+            "displayName": "+8 Feral HP Regen",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6519,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -460,7 +571,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -488,16 +599,16 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6684,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+15% Feral Impulse Damage",
+            "displayName": "+25% Feral Impulse Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6684,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -505,7 +616,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -533,7 +644,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6685,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+32% Chance Shapeshift Critical Strike",
             "description": [],
@@ -542,7 +653,7 @@
         },
         "stat": {
             "abilityId": 6685,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -550,7 +661,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

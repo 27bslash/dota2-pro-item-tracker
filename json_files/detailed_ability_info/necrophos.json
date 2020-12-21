@@ -5,7 +5,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 350,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+32% Heartstopper Regen Reduction",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 350,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,13 +44,71 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "661": {
+        "id": 661,
+        "name": "necrolyte_death_seeker",
+        "language": {
+            "abilityId": 661,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Death Seeker",
+            "description": [
+                "Spawns a fast moving large Death Pulse towards the target enemy or ally, dealing 50% more damage/heal and causing it to spread a normal Death Pulse towards nearby enemies and allies."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 661,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 3,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                20.0
+            ],
+            "manaCost": [
+                150.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5158": {
         "id": 5158,
         "name": "necrolyte_death_pulse",
         "uri": "necrolyte",
         "language": {
             "abilityId": 5158,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Death Pulse",
             "description": [
@@ -68,7 +126,7 @@
         },
         "stat": {
             "abilityId": 5158,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -76,7 +134,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -94,28 +152,28 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                8,
-                7,
-                6,
-                5
+                8.0,
+                7.0,
+                6.0,
+                5.0
             ],
             "damage": [
-                100,
-                150,
-                200,
-                250
+                100.0,
+                150.0,
+                200.0,
+                250.0
             ],
             "manaCost": [
-                100,
-                130,
-                160,
-                190
+                100.0,
+                130.0,
+                160.0,
+                190.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -131,7 +189,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 5159,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Heartstopper Aura",
             "description": [
@@ -147,7 +205,6 @@
                 "SCEPTER DAMAGE MULTIPLIER: 2"
             ],
             "lore": "Those who come within a short distance of Necrophos can feel pestilence and plague in the air.",
-            "aghanimDescription": "Increases Heartstopper Aura damage while Ghost Shroud is active.",
             "notes": [
                 "Damage won't disable items like Blink Dagger.",
                 "Does not affect ancient creeps."
@@ -155,7 +212,7 @@
         },
         "stat": {
             "abilityId": 5159,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 0,
@@ -163,7 +220,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -191,7 +248,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 5160,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Ghost Shroud",
             "description": [
@@ -206,12 +263,11 @@
                 "SCEPTER COOLDOWN: 10"
             ],
             "lore": "Rotund'jere uses the souls of his victims as bridge from life to afterlife.",
-            "aghanimDescription": "Reduces Ghost Shroud cooldown.",
             "notes": []
         },
         "stat": {
             "abilityId": 5160,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -219,7 +275,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -234,16 +290,16 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                28,
-                24,
-                20,
-                16
+                28.0,
+                24.0,
+                20.0,
+                16.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -259,7 +315,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 5161,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Reaper's Scythe",
             "description": [
@@ -277,7 +333,7 @@
         },
         "stat": {
             "abilityId": 5161,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 1,
@@ -306,12 +362,12 @@
                 0.55
             ],
             "cooldown": [
-                120
+                120.0
             ],
             "manaCost": [
-                200,
-                350,
-                500
+                200.0,
+                350.0,
+                500.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -327,7 +383,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 6010,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-2.5s Death Pulse Cooldown",
             "description": [],
@@ -336,7 +392,7 @@
         },
         "stat": {
             "abilityId": 6010,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -344,7 +400,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -366,13 +422,62 @@
         "drawMatchPage": true,
         "isTalent": true
     },
+    "6316": {
+        "id": 6316,
+        "name": "necrolyte_sadist_stop",
+        "language": {
+            "abilityId": 6316,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6316,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 67589,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
     "6703": {
         "id": 6703,
         "name": "special_bonus_unique_necrophos_2",
         "uri": "necrolyte",
         "language": {
             "abilityId": 6703,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.5  Heartstopper Aura",
             "description": [],
@@ -381,7 +486,7 @@
         },
         "stat": {
             "abilityId": 6703,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -389,7 +494,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -417,7 +522,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 7110,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+24% Ghost Shroud Slow",
             "description": [],
@@ -426,7 +531,7 @@
         },
         "stat": {
             "abilityId": 7110,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -434,7 +539,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -462,7 +567,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 7111,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+32 Death Pulse Heal",
             "description": [],
@@ -471,7 +576,7 @@
         },
         "stat": {
             "abilityId": 7111,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -479,7 +584,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

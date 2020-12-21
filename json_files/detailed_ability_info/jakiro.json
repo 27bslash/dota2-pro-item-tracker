@@ -1,65 +1,20 @@
 {
-    "481": {
-        "id": 481,
-        "name": "special_bonus_attack_range_275",
-        "uri": "jakiro",
-        "language": {
-            "abilityId": 481,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+275 Attack Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 481,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "526": {
         "id": 526,
         "name": "special_bonus_unique_jakiro_6",
         "uri": "jakiro",
         "language": {
             "abilityId": 526,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-1s Ice Path Cooldown",
+            "displayName": "-1.5s Ice Path Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 526,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -89,22 +44,21 @@
         "drawMatchPage": false,
         "isTalent": true
     },
-    "584": {
-        "id": 584,
-        "name": "special_bonus_attack_range_325",
-        "uri": "jakiro",
+    "542": {
+        "id": 542,
+        "name": "special_bonus_unique_jakiro_7",
         "language": {
-            "abilityId": 584,
-            "gameVersionId": 135,
+            "abilityId": 542,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+325 Attack Range",
+            "displayName": "+25 Macropyre Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 584,
-            "gameVersionId": 135,
+            "abilityId": 542,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -112,7 +66,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -133,6 +87,69 @@
         },
         "drawMatchPage": false,
         "isTalent": true
+    },
+    "553": {
+        "id": 553,
+        "name": "jakiro_liquid_ice",
+        "language": {
+            "abilityId": 553,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Liquid Frost",
+            "description": [
+                "Applies a frost debuff that slows enemy movement speed by 30 and causes them to lose 20 plus 2.5 of their max health per second for 4.0 seconds."
+            ],
+            "attributes": [
+                "DURATION: 4.0",
+                "MOVEMENT SLOW: 30%",
+                "BASE DAMAGE: 20",
+                "MAX HEALTH DAMAGE: 2.5%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 553,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 35,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 35,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldown": [
+                12.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
     },
     "5297": {
         "id": 5297,
@@ -140,7 +157,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 5297,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Dual Breath",
             "description": [
@@ -161,7 +178,7 @@
         },
         "stat": {
             "abilityId": 5297,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 24,
             "unitTargetType": 3,
@@ -190,19 +207,19 @@
                 0.55
             ],
             "cooldown": [
-                10,
-                10,
-                10,
-                10
+                10.0,
+                10.0,
+                10.0,
+                10.0
             ],
             "damage": [
-                0
+                0.0
             ],
             "manaCost": [
-                140,
-                150,
-                160,
-                170
+                140.0,
+                150.0,
+                160.0,
+                170.0
             ],
             "isUltimate": false,
             "duration": "5.0",
@@ -218,7 +235,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 5298,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Ice Path",
             "description": [
@@ -237,7 +254,7 @@
         },
         "stat": {
             "abilityId": 5298,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 3,
@@ -245,7 +262,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -266,16 +283,16 @@
                 0.65
             ],
             "cooldown": [
-                12,
-                11,
-                10,
-                9
+                12.0,
+                11.0,
+                10.0,
+                9.0
             ],
             "damage": [
-                0
+                0.0
             ],
             "manaCost": [
-                100
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -291,7 +308,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 5299,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Liquid Fire",
             "description": [
@@ -309,7 +326,7 @@
         },
         "stat": {
             "abilityId": 5299,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 35,
@@ -317,7 +334,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 35,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -335,16 +352,16 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                20,
-                15,
-                10,
-                4
+                20.0,
+                15.0,
+                10.0,
+                4.0
             ],
             "isUltimate": false,
             "duration": "5.0",
@@ -360,7 +377,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 5300,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Macropyre",
             "description": [
@@ -371,11 +388,10 @@
                 "FLAME WIDTH: 260",
                 "DURATION: 10",
                 "SCEPTER DAMAGE PER SECOND: 125 / 175 / 225",
-                "SCEPTER FLAME LENGTH: 1800",
-                "SCEPTER DURATION: 30"
+                "SCEPTER FLAME LENGTH:%cast_range_scepter%",
+                "SCEPTER DURATION:%duration_scepter%"
             ],
             "lore": "Ice and fire combine to rip the battlefield to shreds with extreme temperatures.",
-            "aghanimDescription": "Increases flame length, duration, and damage.",
             "notes": [
                 "Macropyre destroys trees in its path.",
                 "Units hit by Macropyre will continue to be affected after they leave the area for 2 additional seconds."
@@ -383,7 +399,7 @@
         },
         "stat": {
             "abilityId": 5300,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 16,
             "unitTargetType": 3,
@@ -391,7 +407,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -412,14 +428,14 @@
                 0.55
             ],
             "cooldown": [
-                60,
-                60,
-                60
+                60.0,
+                60.0,
+                60.0
             ],
             "manaCost": [
-                220,
-                330,
-                440
+                220.0,
+                330.0,
+                440.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -429,103 +445,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6040": {
-        "id": 6040,
-        "name": "special_bonus_attack_range_250",
-        "uri": "jakiro",
-        "language": {
-            "abilityId": 6040,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+250 Attack Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6040,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6051": {
-        "id": 6051,
-        "name": "special_bonus_attack_range_300",
-        "uri": "jakiro",
-        "language": {
-            "abilityId": 6051,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+300 Attack Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6051,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6064": {
         "id": 6064,
         "name": "special_bonus_unique_jakiro",
         "uri": "jakiro",
         "language": {
             "abilityId": 6064,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1s Ice Path Duration",
             "description": [],
@@ -534,7 +460,7 @@
         },
         "stat": {
             "abilityId": 6064,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -542,52 +468,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6307": {
-        "id": 6307,
-        "name": "special_bonus_attack_range_400",
-        "uri": "jakiro",
-        "language": {
-            "abilityId": 6307,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+400 Attack Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6307,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -615,7 +496,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 6381,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+25 Dual Breath Burn Damage",
             "description": [],
@@ -624,7 +505,7 @@
         },
         "stat": {
             "abilityId": 6381,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -632,7 +513,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -660,7 +541,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 6538,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Macropyre Pure and Pierces Immunity",
             "description": [],
@@ -669,7 +550,7 @@
         },
         "stat": {
             "abilityId": 6538,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -677,7 +558,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -705,7 +586,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 6661,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-50 Liquid Fire Attack Speed",
             "description": [],
@@ -714,7 +595,7 @@
         },
         "stat": {
             "abilityId": 6661,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -722,7 +603,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -750,7 +631,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 7660,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+325 Dual Breath Range",
             "description": [],
@@ -759,7 +640,7 @@
         },
         "stat": {
             "abilityId": 7660,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -767,7 +648,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

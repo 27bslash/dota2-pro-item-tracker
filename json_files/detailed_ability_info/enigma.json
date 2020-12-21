@@ -5,7 +5,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 346,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+150 Eidolon Attack Range",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 346,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +50,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 461,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.35s Malefice Stun Duration",
             "description": [],
@@ -59,7 +59,7 @@
         },
         "stat": {
             "abilityId": 461,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +67,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,7 +95,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 520,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+135 Eidolon Health",
             "description": [],
@@ -104,7 +104,7 @@
         },
         "stat": {
             "abilityId": 520,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -112,7 +112,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -140,16 +140,16 @@
         "uri": "enigma",
         "language": {
             "abilityId": 521,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+4s Midnight Pulse Duration",
+            "displayName": "+5s Midnight Pulse Duration",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 521,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -157,7 +157,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "620": {
+        "id": 620,
+        "name": "special_bonus_unique_enigma_9",
+        "language": {
+            "abilityId": 620,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+150 Midnight Pulse Radius",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 620,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -185,7 +229,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 5146,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Malefice",
             "description": [
@@ -200,7 +244,7 @@
         },
         "stat": {
             "abilityId": 5146,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -232,16 +276,13 @@
                 0.3
             ],
             "cooldown": [
-                18,
-                17,
-                16,
-                15
+                14.0
             ],
             "manaCost": [
-                100,
-                120,
-                140,
-                160
+                100.0,
+                120.0,
+                140.0,
+                160.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -257,7 +298,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 5147,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Demonic Conversion",
             "description": [
@@ -277,7 +318,7 @@
         },
         "stat": {
             "abilityId": 5147,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 8,
@@ -285,7 +326,7 @@
             "unitTargetFlags": 16,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -309,16 +350,16 @@
                 0.3
             ],
             "cooldown": [
-                35
+                35.0
             ],
             "manaCost": [
-                140,
-                150,
-                160,
-                170
+                140.0,
+                150.0,
+                160.0,
+                170.0
             ],
             "isUltimate": false,
-            "duration": "35.0",
+            "duration": "40.0",
             "charges": "",
             "chargeRestoreTime": ""
         },
@@ -331,7 +372,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 5148,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Midnight Pulse",
             "description": [
@@ -351,7 +392,7 @@
         },
         "stat": {
             "abilityId": 5148,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -359,7 +400,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -380,16 +421,16 @@
                 0.1
             ],
             "cooldown": [
-                50,
-                45,
-                40,
-                35
+                50.0,
+                45.0,
+                40.0,
+                35.0
             ],
             "manaCost": [
-                50,
-                80,
-                110,
-                140
+                50.0,
+                80.0,
+                110.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -405,7 +446,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 5149,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Black Hole",
             "description": [
@@ -417,14 +458,13 @@
                 "DURATION: 4.0 / 4.0 / 4.0"
             ],
             "lore": "The ground trembles as Enigma channels his ultimate vortex of destruction, a singularity with the power to end worlds.",
-            "aghanimDescription": "Adds the current level of Midnight Pulse to Black Hole.",
             "notes": [
                 "Disables enemies through spell immunity."
             ]
         },
         "stat": {
             "abilityId": 5149,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 176,
             "unitTargetType": 0,
@@ -432,7 +472,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -455,17 +495,17 @@
                 0.3
             ],
             "channelTime": [
-                4
+                4.0
             ],
             "cooldown": [
-                200,
-                180,
-                160
+                200.0,
+                180.0,
+                160.0
             ],
             "manaCost": [
-                300,
-                400,
-                500
+                300.0,
+                400.0,
+                500.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -481,7 +521,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 6065,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5 Demonic Conversion Eidolons",
             "description": [],
@@ -490,7 +530,7 @@
         },
         "stat": {
             "abilityId": 6065,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -498,7 +538,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -526,7 +566,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 6510,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+4 Malefice Instances",
             "description": [],
@@ -535,7 +575,7 @@
         },
         "stat": {
             "abilityId": 6510,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -543,7 +583,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -571,7 +611,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 6649,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+50 Eidolon Damage",
             "description": [],
@@ -580,7 +620,7 @@
         },
         "stat": {
             "abilityId": 6649,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -588,7 +628,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -616,7 +656,7 @@
         "uri": "enigma",
         "language": {
             "abilityId": 7658,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80 Malefice Instance Damage",
             "description": [],
@@ -625,7 +665,7 @@
         },
         "stat": {
             "abilityId": 7658,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -633,7 +673,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

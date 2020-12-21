@@ -1,20 +1,19 @@
 {
-    "439": {
-        "id": 439,
-        "name": "special_bonus_corruption_25",
-        "uri": "visage",
+    "626": {
+        "id": 626,
+        "name": "special_bonus_unique_visage_7",
         "language": {
-            "abilityId": 439,
-            "gameVersionId": 135,
+            "abilityId": 626,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-2.5 Armor Corruption",
+            "displayName": "+2 Grave Chill Duration",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 439,
-            "gameVersionId": 135,
+            "abilityId": 626,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +21,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,13 +43,71 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "683": {
+        "id": 683,
+        "name": "visage_silent_as_the_grave",
+        "language": {
+            "abilityId": 683,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Silent as the Grave",
+            "description": [
+                "Turns Visage and familiars invisible, granting Visage 20% movement speed and upgrading its movement type to flying. When Visage or its familiars leave invisibility they deal 30% more damage for 4 seconds. Lasts 40 seconds. Invisibility ends when attacking or casting."
+            ],
+            "attributes": [
+                "BONUS DAMAGE DURATION: 4",
+                "BONUS DAMAGE: 30%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 683,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 526341,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                45.0
+            ],
+            "manaCost": [
+                100.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5480": {
         "id": 5480,
         "name": "visage_grave_chill",
         "uri": "visage",
         "language": {
             "abilityId": 5480,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Grave Chill",
             "description": [
@@ -70,7 +127,7 @@
         },
         "stat": {
             "abilityId": 5480,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -78,7 +135,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -102,13 +159,13 @@
                 0.2
             ],
             "cooldown": [
-                16,
-                14,
-                12,
-                10
+                16.0,
+                14.0,
+                12.0,
+                10.0
             ],
             "manaCost": [
-                90
+                90.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -124,7 +181,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 5481,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Soul Assumption",
             "description": [
@@ -146,7 +203,7 @@
         },
         "stat": {
             "abilityId": 5481,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -154,7 +211,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -178,16 +235,16 @@
                 0.2
             ],
             "cooldown": [
-                4,
-                4,
-                4,
-                4
+                4.0,
+                4.0,
+                4.0,
+                4.0
             ],
             "manaCost": [
-                135,
-                140,
-                145,
-                150
+                135.0,
+                140.0,
+                145.0,
+                150.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -203,7 +260,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 5482,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Gravekeeper's Cloak",
             "description": [
@@ -224,7 +281,7 @@
         },
         "stat": {
             "abilityId": 5482,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -232,7 +289,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -260,7 +317,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 5483,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Summon Familiars",
             "description": [
@@ -268,12 +325,10 @@
             ],
             "attributes": [
                 "FAMILIAR SPEED: 430",
-                "FAMILIAR ATTACK DAMAGE: 20 / 40 / 60",
-                "HP: 500 / 600 / 700",
-                "SCEPTER FAMILIARS: 3"
+                "FAMILIAR ATTACK DAMAGE: 20 / 50 / 75",
+                "HP: 500 / 600 / 700"
             ],
             "lore": "Guardians of the Narrow Maze, Necro'lic's Familiars stand watch over his domain.",
-            "aghanimDescription": "Summons a bonus Familiar.",
             "notes": [
                 "Casting Summon Familiars will replace any existing Familiars.",
                 "Familiars within range of Visage will receive bonuses from Gravekeeper's Cloak and Grave Chill."
@@ -281,7 +336,7 @@
         },
         "stat": {
             "abilityId": 5483,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -289,7 +344,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -304,17 +359,17 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                130
+                130.0
             ],
             "manaCost": [
-                150,
-                150,
-                150
+                150.0,
+                150.0,
+                150.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -324,42 +379,58 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5947": {
-        "id": 5947,
-        "name": "special_bonus_cast_range_75",
-        "uri": "visage",
+    "5484": {
+        "id": 5484,
+        "name": "visage_summon_familiars_stone_form",
         "language": {
-            "abilityId": 5947,
-            "gameVersionId": 135,
+            "abilityId": 5484,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+75 Cast Range",
-            "description": [],
-            "attributes": [],
+            "displayName": "Stone Form",
+            "description": [
+                "After a short delay, the Familiar turns into stone and smashes into the ground, stunning and damaging all targets in the area. The Familiar becomes invulnerable, and will regain its health very rapidly. After 6.0 seconds, the Familiar will automatically leave Stone Form."
+            ],
+            "attributes": [
+                "STUN DURATION: 1.0 / 1.25 / 1.5",
+                "STUN RADIUS: 350",
+                "DAMAGE: 60 / 100 / 140",
+                "STONE DURATION: 6.0",
+                "BONUS REGEN: 150 / 175 / 200"
+            ],
             "notes": []
         },
         "stat": {
-            "abilityId": 5947,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 5484,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 101,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 3,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
+            "castRange": [
+                160
+            ],
             "castRangeBuffer": [
                 250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                14.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -367,24 +438,23 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
     },
-    "6009": {
-        "id": 6009,
-        "name": "special_bonus_attack_damage_25",
-        "uri": "visage",
+    "6031": {
+        "id": 6031,
+        "name": "special_bonus_unique_visage_1",
         "language": {
-            "abilityId": 6009,
-            "gameVersionId": 135,
+            "abilityId": 6031,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+25 Damage",
+            "displayName": "+18 Familiar Attack Per Charge",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6009,
-            "gameVersionId": 135,
+            "abilityId": 6031,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -392,7 +462,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -420,7 +490,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6320,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40 Familiars Movement Speed",
             "description": [],
@@ -429,7 +499,7 @@
         },
         "stat": {
             "abilityId": 6320,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -437,52 +507,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6372": {
-        "id": 6372,
-        "name": "special_bonus_exp_boost_35",
-        "uri": "visage",
-        "language": {
-            "abilityId": 6372,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+35% XP Gain",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6372,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -510,7 +535,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6522,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Soul Assumption Hits 2 Targets",
             "description": [
@@ -521,7 +546,7 @@
         },
         "stat": {
             "abilityId": 6522,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -529,7 +554,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -557,7 +582,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6983,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+20 Soul Assumption Damage Per Charge",
             "description": [],
@@ -566,7 +591,7 @@
         },
         "stat": {
             "abilityId": 6983,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -574,7 +599,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -602,7 +627,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6984,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5 Gravekeeper's Cloak Stacks",
             "description": [],
@@ -611,7 +636,7 @@
         },
         "stat": {
             "abilityId": 6984,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -619,7 +644,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -647,7 +672,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6985,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1 Familiar",
             "description": [],
@@ -656,7 +681,7 @@
         },
         "stat": {
             "abilityId": 6985,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -664,7 +689,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -686,42 +711,60 @@
         "drawMatchPage": true,
         "isTalent": true
     },
-    "7383": {
-        "id": 7383,
-        "name": "special_bonus_corruption_3",
-        "uri": "visage",
+    "7116": {
+        "id": 7116,
+        "name": "visage_stone_form_self_cast",
         "language": {
-            "abilityId": 7383,
-            "gameVersionId": 135,
+            "abilityId": 7116,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-3 Armor Corruption",
-            "description": [],
-            "attributes": [],
-            "notes": []
+            "displayName": "Stone Form",
+            "description": [
+                "After a short delay, the nearest Familiar turns into stone and smashes into the ground, stunning and damaging all targets in the area. The Familiar becomes invulnerable, and will regain its health very rapidly. After 6.0 seconds, the Familiar will automatically leave Stone Form."
+            ],
+            "attributes": [
+                "STUN DURATION: 1.0 / 1.25 / 1.5",
+                "STUN RADIUS: 350",
+                "DAMAGE: 60 / 100 / 140",
+                "STONE DURATION:%form_stone_duration%",
+                "BONUS REGEN: 150 / 175 / 200"
+            ],
+            "notes": [
+                "While Stone Form is not dispellable, the stun can be removed by strong dispells."
+            ]
         },
         "stat": {
-            "abilityId": 7383,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 7116,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 591940,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 3,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRangeBuffer": [
                 250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                0.0
+            ],
+            "manaCost": [
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -729,6 +772,6 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
     }
 }

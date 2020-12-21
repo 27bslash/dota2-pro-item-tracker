@@ -1,11 +1,66 @@
 {
+    "320": {
+        "id": 320,
+        "name": "enchantress_bunny_hop",
+        "language": {
+            "abilityId": 320,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Sproink",
+            "description": [
+                "Leaps backward, dodges incoming projectiles, and launches an Impetus attack on the 3 furthest enemy units within Enchantress' attack range + 200."
+            ],
+            "attributes": [
+                "DISTANCE: 500"
+            ],
+            "lore": "Sproink is as Sproink does.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 320,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 64,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                5.0
+            ],
+            "manaCost": [
+                50.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5267": {
         "id": 5267,
         "name": "enchantress_untouchable",
         "uri": "enchantress",
         "language": {
             "abilityId": 5267,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Untouchable",
             "description": [
@@ -15,7 +70,6 @@
                 "ATTACK SLOW: -100 / -140 / -180"
             ],
             "lore": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty.",
-            "aghanimDescription": "Grants new ability: Sproink. Enchantress leaps backward and dodges incoming projectiles. Also increases your attack range.",
             "notes": [
                 "All units who directly attack Enchantress will get slowed.",
                 "The slow is applied on the attacking unit when the attack starts, not when damage is applied."
@@ -23,7 +77,7 @@
         },
         "stat": {
             "abilityId": 5267,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -31,7 +85,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -59,7 +113,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 5268,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Enchant",
             "description": [
@@ -70,7 +124,8 @@
             "attributes": [
                 "HERO MOVE SLOW: -55%",
                 "CREEP ENCHANT DURATION: 30 / 60 / 90 / 120",
-                "CREEP MAX HEALTH BONUS: 200 / 400 / 800 / 1200",
+                "CREEP MAX HEALTH BONUS: 200 / 300 / 400 / 500",
+                "CREEP ARMOR BONUS: 2 / 4 / 6 / 8",
                 "CREEP ATTACK DAMAGE BONUS: 10 / 30 / 50 / 70"
             ],
             "lore": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
@@ -80,7 +135,7 @@
         },
         "stat": {
             "abilityId": 5268,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -88,7 +143,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -112,13 +167,16 @@
                 0.3
             ],
             "cooldown": [
-                20
+                28.0,
+                24.0,
+                20.0,
+                16.0
             ],
             "manaCost": [
-                40,
-                50,
-                60,
-                70
+                40.0,
+                50.0,
+                60.0,
+                70.0
             ],
             "isUltimate": false,
             "duration": "3.75 4.5 5.25 6",
@@ -134,7 +192,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 5269,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Nature's Attendants",
             "description": [
@@ -153,7 +211,7 @@
         },
         "stat": {
             "abilityId": 5269,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -161,7 +219,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -182,13 +240,13 @@
                 0.3
             ],
             "cooldown": [
-                35
+                35.0
             ],
             "manaCost": [
-                170,
-                160,
-                150,
-                140
+                170.0,
+                160.0,
+                150.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "11",
@@ -204,7 +262,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 5270,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Impetus",
             "description": [
@@ -221,7 +279,7 @@
         },
         "stat": {
             "abilityId": 5270,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -229,7 +287,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -247,18 +305,18 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                6,
-                4,
-                2,
-                0
+                6.0,
+                4.0,
+                2.0,
+                0.0
             ],
             "manaCost": [
-                65
+                65.0
             ],
             "isUltimate": false,
             "duration": "1.5 1.5 1.5",
@@ -268,58 +326,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6050": {
-        "id": 6050,
-        "name": "special_bonus_intelligence_25",
-        "uri": "Enchantress",
-        "language": {
-            "abilityId": 6050,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+25 Intelligence",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6050,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6086": {
         "id": 6086,
         "name": "special_bonus_unique_enchantress_2",
         "uri": "enchantress",
         "language": {
             "abilityId": 6086,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+6 Nature's Attendants Wisps",
             "description": [],
@@ -328,7 +341,7 @@
         },
         "stat": {
             "abilityId": 6086,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -336,7 +349,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -364,7 +377,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 6331,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Enchant Affects Ancients",
             "description": [],
@@ -373,7 +386,7 @@
         },
         "stat": {
             "abilityId": 6331,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -381,7 +394,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -409,7 +422,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 6379,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-65 Untouchable Slow",
             "description": [],
@@ -418,7 +431,7 @@
         },
         "stat": {
             "abilityId": 6379,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -426,7 +439,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -454,7 +467,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 6515,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+6.5% Impetus Damage",
             "description": [],
@@ -463,7 +476,7 @@
         },
         "stat": {
             "abilityId": 6515,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -471,7 +484,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -499,7 +512,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 6648,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+20 Nature's Attendants Heal",
             "description": [],
@@ -508,7 +521,7 @@
         },
         "stat": {
             "abilityId": 6648,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -516,7 +529,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

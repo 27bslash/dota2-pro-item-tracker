@@ -1,20 +1,20 @@
 {
-    "457": {
-        "id": 457,
-        "name": "special_bonus_night_vision_800",
+    "504": {
+        "id": 504,
+        "name": "special_bonus_unique_slardar_5",
         "uri": "slardar",
         "language": {
-            "abilityId": 457,
-            "gameVersionId": 135,
+            "abilityId": 504,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+800 Night Vision",
+            "displayName": "-4 Corrosive Haze Armor",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 457,
-            "gameVersionId": 135,
+            "abilityId": 504,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,22 +44,21 @@
         "drawMatchPage": false,
         "isTalent": true
     },
-    "504": {
-        "id": 504,
-        "name": "special_bonus_unique_slardar_5",
-        "uri": "slardar",
+    "695": {
+        "id": 695,
+        "name": "special_bonus_unique_slardar_6",
         "language": {
-            "abilityId": 504,
-            "gameVersionId": 135,
+            "abilityId": 695,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-4 Corrosive Haze Armor",
+            "displayName": "+100 Slithereen Crush AoE",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 504,
-            "gameVersionId": 135,
+            "abilityId": 695,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +66,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,29 +94,28 @@
         "uri": "slardar",
         "language": {
             "abilityId": 5114,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Guardian Sprint",
             "description": [
                 "Slardar slithers ahead, moving significantly faster and passing through units. Slardar has unlocked max speed and grants movement speed while in the river."
             ],
             "attributes": [
-                "BONUS MOVE SPEED: 18% / 26% / 34% / 42%",
+                "BONUS MOVE SPEED: 16% / 24% / 32% / 40%",
                 "DURATION: 10",
-                "BONUS RIVER MOVE SPEED: 25% / 45% / 65% / 85%",
-                "SCEPTER RIVER HP REGEN: 35",
-                "SCEPTER RIVER BONUS ARMOR: 12",
+                "BONUS RIVER MOVE SPEED: 26% / 44% / 62% / 80%",
+                "SCEPTER RIVER HP REGEN: 30",
+                "SCEPTER RIVER BONUS ARMOR: 10",
                 "SCEPTER RIVER STATUS RESISTANCE: 40%"
             ],
             "lore": "As Slardar has made the transition from the Deeps, it has been necessary to use his powerful tail for sprinting instead of swimming.",
-            "aghanimDescription": "Provides additional HP Regen, Armor and Status Resistance while in a puddle or in the river.",
             "notes": [
                 "Activating this skill doesn't interrupt channeling abilities."
             ]
         },
         "stat": {
             "abilityId": 5114,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 526340,
             "unitTargetType": 0,
@@ -125,7 +123,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -143,16 +141,16 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                17
+                17.0
             ],
             "manaCost": [
-                25
+                25.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -168,7 +166,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 5115,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Slithereen Crush",
             "description": [
@@ -184,12 +182,11 @@
                 "SCEPTER PUDDLE AOE: 600"
             ],
             "lore": "A swift crush of might and water breaks even the toughest of defenses.",
-            "aghanimDescription": "Whenever Slardar casts Slithereen Crush, he creates a puddle of water that is considered a river for movement and bonuses.",
             "notes": []
         },
         "stat": {
             "abilityId": 5115,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -221,19 +218,19 @@
                 0.35
             ],
             "cooldown": [
-                8
+                8.0
             ],
             "damage": [
-                80,
-                140,
-                200,
-                260
+                80.0,
+                140.0,
+                200.0,
+                260.0
             ],
             "manaCost": [
-                80,
-                95,
-                105,
-                115
+                90.0,
+                100.0,
+                110.0,
+                120.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -249,7 +246,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 5116,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Bash of the Deep",
             "description": [
@@ -266,7 +263,7 @@
         },
         "stat": {
             "abilityId": 5116,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -274,7 +271,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 25,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -302,7 +299,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 5117,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Corrosive Haze",
             "description": [
@@ -317,7 +314,7 @@
         },
         "stat": {
             "abilityId": 5117,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -325,7 +322,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 6,
+            "modifierSupportValue": 6.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -348,10 +345,10 @@
                 0.3
             ],
             "cooldown": [
-                5
+                5.0
             ],
             "manaCost": [
-                25
+                25.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -361,58 +358,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6067": {
-        "id": 6067,
-        "name": "special_bonus_mp_175",
-        "uri": "slardar",
-        "language": {
-            "abilityId": 6067,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+175 Mana",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6067,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6211": {
         "id": 6211,
         "name": "special_bonus_unique_slardar",
         "uri": "slardar",
         "language": {
             "abilityId": 6211,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.25s Slithereen Crush Stun",
             "description": [],
@@ -421,7 +373,7 @@
         },
         "stat": {
             "abilityId": 6211,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -429,52 +381,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6888": {
-        "id": 6888,
-        "name": "special_bonus_night_vision_1000",
-        "uri": "slardar",
-        "language": {
-            "abilityId": 6888,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+1000 Night Vision",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6888,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -502,7 +409,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 6889,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+60 Bash Damage",
             "description": [],
@@ -511,7 +418,7 @@
         },
         "stat": {
             "abilityId": 6889,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -519,7 +426,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -547,7 +454,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 6890,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Corrosive Haze Undispellable",
             "description": [],
@@ -556,7 +463,7 @@
         },
         "stat": {
             "abilityId": 6890,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -564,7 +471,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -586,13 +493,68 @@
         "drawMatchPage": true,
         "isTalent": true
     },
+    "7864": {
+        "id": 7864,
+        "name": "slardar_scepter",
+        "language": {
+            "abilityId": 7864,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7864,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                5.0
+            ],
+            "manaCost": [
+                20.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
     "7871": {
         "id": 7871,
         "name": "special_bonus_unique_slardar_4",
         "uri": "slardar",
         "language": {
             "abilityId": 7871,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-4s Slithereen Crush Cooldown",
             "description": [],
@@ -601,7 +563,7 @@
         },
         "stat": {
             "abilityId": 7871,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -609,7 +571,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

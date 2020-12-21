@@ -5,7 +5,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 417,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80 Maledict AoE",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 417,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,52 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "427": {
-        "id": 427,
-        "name": "special_bonus_attack_damage_75",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 427,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+75 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 427,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,7 +50,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 555,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+15% Maledict Burst Damage",
             "description": [],
@@ -104,7 +59,7 @@
         },
         "stat": {
             "abilityId": 555,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -112,7 +67,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -134,13 +89,70 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "632": {
+        "id": 632,
+        "name": "witch_doctor_voodoo_switcheroo",
+        "language": {
+            "abilityId": 632,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Voodoo Switcheroo",
+            "description": [
+                "Turns Witch Doctor into a Death Ward for 2 seconds. Death Ward has -30 Attack Speed. He is hidden during this time."
+            ],
+            "attributes": [
+                "DURATION: 2"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 632,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                70.0
+            ],
+            "manaCost": [
+                250.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5138": {
         "id": 5138,
         "name": "witch_doctor_paralyzing_cask",
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5138,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Paralyzing Cask",
             "description": [
@@ -159,7 +171,7 @@
         },
         "stat": {
             "abilityId": 5138,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -191,22 +203,22 @@
                 0.35
             ],
             "cooldown": [
-                20,
-                18,
-                16,
-                14
+                20.0,
+                18.0,
+                16.0,
+                14.0
             ],
             "damage": [
-                75,
-                100,
-                125,
-                150
+                75.0,
+                100.0,
+                125.0,
+                150.0
             ],
             "manaCost": [
-                80,
-                100,
-                120,
-                140
+                80.0,
+                100.0,
+                120.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -222,7 +234,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5139,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Voodoo Restoration",
             "description": [
@@ -241,7 +253,7 @@
         },
         "stat": {
             "abilityId": 5139,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 524804,
             "unitTargetType": 0,
@@ -249,7 +261,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -264,16 +276,16 @@
                 250
             ],
             "cooldown": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "manaCost": [
-                35,
-                40,
-                45,
-                50
+                35.0,
+                40.0,
+                45.0,
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -289,7 +301,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5140,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Maledict",
             "description": [
@@ -306,7 +318,7 @@
         },
         "stat": {
             "abilityId": 5140,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 1,
@@ -314,7 +326,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -338,22 +350,22 @@
                 0.35
             ],
             "cooldown": [
-                30,
-                26,
-                22,
-                18
+                30.0,
+                26.0,
+                22.0,
+                18.0
             ],
             "damage": [
-                7,
-                14,
-                21,
-                28
+                7.0,
+                14.0,
+                21.0,
+                28.0
             ],
             "manaCost": [
-                105,
-                110,
-                115,
-                120
+                105.0,
+                110.0,
+                115.0,
+                120.0
             ],
             "isUltimate": false,
             "duration": "12.0",
@@ -369,7 +381,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5141,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Death Ward",
             "description": [
@@ -380,7 +392,6 @@
                 "ATTACK RANGE: 700"
             ],
             "lore": "Witch Doctor performs a ritualistic dance, one that haunts the dreams of those who live to recount it.",
-            "aghanimDescription": "Death Ward attacks have True Strike and bounce between nearby enemies.",
             "notes": [
                 "The Death Ward is invulnerable, and is only destroyed if Witch Doctor is interrupted or its duration expires.",
                 "The Death Ward can be controlled, and made to attack a specific target.",
@@ -389,7 +400,7 @@
         },
         "stat": {
             "abilityId": 5141,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 144,
             "unitTargetType": 1,
@@ -397,7 +408,7 @@
             "unitTargetFlags": 468,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -420,15 +431,15 @@
                 0.35
             ],
             "channelTime": [
-                8
+                8.0
             ],
             "cooldown": [
-                80
+                80.0
             ],
             "manaCost": [
-                200,
-                200,
-                200
+                200.0,
+                200.0,
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -444,7 +455,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5998,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+100 Death Ward Attack Range",
             "description": [],
@@ -453,7 +464,7 @@
         },
         "stat": {
             "abilityId": 5998,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -461,7 +472,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -489,7 +500,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 6298,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.2% Max Health Voodoo Restoration",
             "description": [],
@@ -498,7 +509,7 @@
         },
         "stat": {
             "abilityId": 6298,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -506,7 +517,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -534,7 +545,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 6524,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+2 Cask Bounces",
             "description": [],
@@ -543,7 +554,7 @@
         },
         "stat": {
             "abilityId": 6524,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -551,7 +562,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -579,7 +590,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 6995,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1 Maledict Tick",
             "description": [],
@@ -588,7 +599,7 @@
         },
         "stat": {
             "abilityId": 6995,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -596,7 +607,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -624,7 +635,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 6996,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+60 Death Ward Damage",
             "description": [],
@@ -633,7 +644,7 @@
         },
         "stat": {
             "abilityId": 6996,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -641,7 +652,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

@@ -1,32 +1,37 @@
 {
-    "499": {
-        "id": 499,
-        "name": "special_bonus_unique_lifestealer_5",
-        "uri": "life_stealer",
+    "631": {
+        "id": 631,
+        "name": "life_stealer_ghoul_frenzy",
         "language": {
-            "abilityId": 499,
-            "gameVersionId": 135,
+            "abilityId": 631,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-4s Open Wounds Cooldown",
-            "description": [],
-            "attributes": [],
+            "displayName": "Ghoul Frenzy",
+            "description": [
+                "Passively causes Lifestealer's attacks to significantly slow enemy movement speed for 1.5 seconds. Grants you Attack Speed."
+            ],
+            "attributes": [
+                "MOVEMENT SLOW: 6% / 12% / 18% / 24%",
+                "DURATION: 1.5",
+                "BONUS ATTACK SPEED: 20 / 30 / 40 / 50"
+            ],
             "notes": []
         },
         "stat": {
-            "abilityId": 499,
-            "gameVersionId": 135,
-            "type": 2,
+            "abilityId": 631,
+            "gameVersionId": 137,
+            "type": 0,
             "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
-            "fightRecapLevel": 0,
+            "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
             "maxLevel": 0,
@@ -42,7 +47,7 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": false,
-        "isTalent": true
+        "isTalent": false
     },
     "5249": {
         "id": 5249,
@@ -50,7 +55,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5249,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Rage",
             "description": [
@@ -69,7 +74,7 @@
         },
         "stat": {
             "abilityId": 5249,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -77,7 +82,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,16 +100,16 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                18
+                18.0
             ],
             "manaCost": [
-                75,
-                75,
-                75,
-                75
+                75.0,
+                100.0,
+                125.0,
+                150.0
             ],
             "isUltimate": false,
             "duration": "3 4 5 6",
@@ -120,15 +125,14 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5250,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Feast",
             "description": [
-                "Lifestealer's attacks heal himself for a percentage of his target's max health. Increases attack speed."
+                "Lifestealer's attacks heal himself for a percentage of his target's max health."
             ],
             "attributes": [
-                "MAX HEALTH LIFE STEAL: 1.5% / 2% / 2.5% / 3%",
-                "ATTACK SPEED: 15 / 30 / 45 / 60"
+                "MAX HEALTH LIFE STEAL: 1.6% / 2.2% / 2.8% / 3.4%"
             ],
             "lore": "After escaping from his cell in Devarque, N'aix subsisted on flesh and bones of those unfortunate to cross his path.",
             "notes": [
@@ -140,7 +144,7 @@
         },
         "stat": {
             "abilityId": 5250,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -148,7 +152,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -176,49 +180,46 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5251,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Open Wounds",
             "description": [
                 "Lifestealer rends an enemy unit, slowing the victim's movement speed and allowing all allies to regain health for a percentage of the damage they deal to that unit. All damage dealt will steal life, including damage from spells. The victim recovers movement speed over the duration."
             ],
             "attributes": [
-                "LIFE STEAL: 35%",
-                "MAX SLOW: 70%",
+                "LIFE STEAL: 50%",
+                "MAX SLOW: 50%",
                 "DURATION: 8"
             ],
             "lore": "Fresh wounds and the scent of blood often draw out the scavengers to finish the job.",
             "notes": [
-                "Open Wounds slows over 8 different steps: 70% / 70% / 60% / 50% / 30% / 10% / 10% / 10%, with the slow decreasing one step per second.",
+                "Open Wounds slows over 8 different steps: 50% / 50% / 40% / 30% / 20% / 10% / 10% / 10%, with the slow decreasing one step per second.",
                 "Stacks additively with other sources of Lifesteal."
             ]
         },
         "stat": {
             "abilityId": 5251,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
-            "behavior": 8,
+            "behavior": 0,
             "unitTargetType": 3,
             "unitTargetTeam": 1,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                200,
-                300,
-                400,
-                500
+                800
             ],
             "castRangeBuffer": [
                 250
@@ -227,16 +228,13 @@
                 0.2
             ],
             "cooldown": [
-                24,
-                20,
-                16,
-                12
+                25.0
             ],
             "manaCost": [
-                140
+                125.0
             ],
             "isUltimate": false,
-            "duration": "8 8 8 8",
+            "duration": "8",
             "charges": "",
             "chargeRestoreTime": ""
         },
@@ -249,7 +247,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5252,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Infest",
             "description": [
@@ -264,10 +262,9 @@
                 "MOVEMENT SPEED: 15% / 20% / 25%",
                 "HEALTH BONUS: 400 / 800 / 1200",
                 "SCEPTER COOLDOWN: 25",
-                "SCEPTER CAST RANGE: 600"
+                "SCEPTER CAST RANGE: 500"
             ],
             "lore": "With this infestation, N'aix consumes the life blood of the host, restoring him back to full unholy power.",
-            "aghanimDescription": "Reduces Infest cooldown, increases cast range, and applies Rage buff to the infested unit.",
             "notes": [
                 "If the infested unit dies before Lifestealer consumes it, no health is gained.",
                 "Lifestealer gains experience while under the effects of Infest.",
@@ -277,7 +274,7 @@
         },
         "stat": {
             "abilityId": 5252,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 32776,
             "unitTargetType": 8,
@@ -285,7 +282,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 1,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -306,14 +303,14 @@
                 0.2
             ],
             "cooldown": [
-                100,
-                75,
-                50
+                100.0,
+                75.0,
+                50.0
             ],
             "manaCost": [
-                50,
-                50,
-                50
+                100.0,
+                150.0,
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -329,7 +326,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5253,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Consume",
             "description": [
@@ -340,7 +337,7 @@
         },
         "stat": {
             "abilityId": 5253,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8390661,
             "unitTargetType": 0,
@@ -348,7 +345,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -363,7 +360,7 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -379,7 +376,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5655,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Control",
             "description": [
@@ -390,7 +387,7 @@
         },
         "stat": {
             "abilityId": 5655,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8390725,
             "unitTargetType": 0,
@@ -398,7 +395,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -413,10 +410,186 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5657": {
+        "id": 5657,
+        "name": "life_stealer_empty_1",
+        "language": {
+            "abilityId": 5657,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5657,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 67,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5658": {
+        "id": 5658,
+        "name": "life_stealer_empty_2",
+        "language": {
+            "abilityId": 5658,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5658,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 67,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5659": {
+        "id": 5659,
+        "name": "life_stealer_empty_3",
+        "language": {
+            "abilityId": 5659,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5659,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 67,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5660": {
+        "id": 5660,
+        "name": "life_stealer_empty_4",
+        "language": {
+            "abilityId": 5660,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5660,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 67,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
             ],
             "isUltimate": false,
             "duration": "",
@@ -432,7 +605,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5671,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Assimilate",
             "description": [
@@ -451,7 +624,7 @@
         },
         "stat": {
             "abilityId": 5671,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 9,
             "unitTargetType": 1,
@@ -459,7 +632,7 @@
             "unitTargetFlags": 16,
             "unitDamageType": 1,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -480,10 +653,10 @@
                 0.2
             ],
             "cooldown": [
-                50
+                50.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -499,7 +672,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5675,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Eject",
             "description": [
@@ -513,7 +686,7 @@
         },
         "stat": {
             "abilityId": 5675,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2117,
             "unitTargetType": 0,
@@ -521,7 +694,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -536,10 +709,10 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -548,140 +721,5 @@
         },
         "drawMatchPage": true,
         "isTalent": false
-    },
-    "6173": {
-        "id": 6173,
-        "name": "special_bonus_unique_lifestealer",
-        "uri": "life_stealer",
-        "language": {
-            "abilityId": 6173,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+1.5s Rage Duration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6173,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6676": {
-        "id": 6676,
-        "name": "special_bonus_unique_lifestealer_2",
-        "uri": "life_stealer",
-        "language": {
-            "abilityId": 6676,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+40% Open Wounds Lifesteal",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6676,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7012": {
-        "id": 7012,
-        "name": "special_bonus_unique_lifestealer_3",
-        "uri": "life_stealer",
-        "language": {
-            "abilityId": 7012,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+1.2% Feast Lifesteal",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7012,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
     }
 }

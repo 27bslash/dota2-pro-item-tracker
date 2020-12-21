@@ -1,11 +1,55 @@
 {
+    "567": {
+        "id": 567,
+        "name": "special_bonus_unique_razor_5",
+        "language": {
+            "abilityId": 567,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+15% Storm Surge and Unlocks Max Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 567,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
     "586": {
         "id": 586,
         "name": "special_bonus_unique_razor_6",
         "uri": "razor",
         "language": {
             "abilityId": 586,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1 Eye of the Storm Target",
             "description": [],
@@ -14,7 +58,7 @@
         },
         "stat": {
             "abilityId": 586,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +66,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,14 +94,14 @@
         "uri": "razor",
         "language": {
             "abilityId": 5082,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Plasma Field",
             "description": [
                 "Releases a wave of energetic plasma that grows in power as it expands, but also zaps on contraction, slowing and dealing damage to enemy units caught in its path. Damage and slow increases with distance from Razor. The Plasma Field hits each unit twice, once each direction."
             ],
             "attributes": [
-                "DAMAGE MIN: 15 / 25 / 35 / 45",
+                "DAMAGE MIN: 35 / 40 / 45 / 50",
                 "DAMAGE MAX: 80 / 115 / 150 / 185",
                 "SLOW MIN: 5%",
                 "SLOW MAX: 25% / 30% / 35% / 40%",
@@ -69,7 +113,7 @@
         },
         "stat": {
             "abilityId": 5082,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -77,7 +121,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,22 +139,22 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                13,
-                12,
-                11,
-                10
+                13.0,
+                12.0,
+                11.0,
+                10.0
             ],
             "manaCost": [
-                125,
-                125,
-                125,
-                125
+                125.0,
+                125.0,
+                125.0,
+                125.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -126,7 +170,7 @@
         "uri": "razor",
         "language": {
             "abilityId": 5083,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Static Link",
             "description": [
@@ -145,7 +189,7 @@
         },
         "stat": {
             "abilityId": 5083,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 1,
@@ -153,7 +197,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -177,13 +221,13 @@
                 0.3
             ],
             "cooldown": [
-                40,
-                35,
-                30,
-                25
+                40.0,
+                35.0,
+                30.0,
+                25.0
             ],
             "manaCost": [
-                65
+                65.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -199,11 +243,11 @@
         "uri": "razor",
         "language": {
             "abilityId": 5084,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Storm Surge",
             "description": [
-                "Passively increases your movement speed."
+                "Passively increases Razor's movement speed."
             ],
             "attributes": [
                 "BONUS SPEED: 12% / 16% / 20% / 24%"
@@ -213,7 +257,7 @@
         },
         "stat": {
             "abilityId": 5084,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -221,7 +265,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -249,7 +293,7 @@
         "uri": "razor",
         "language": {
             "abilityId": 5085,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Eye of the Storm",
             "description": [
@@ -263,7 +307,6 @@
                 "DAMAGE: 60 / 75 / 90"
             ],
             "lore": "Ride the lightning.",
-            "aghanimDescription": "Causes Eye of the Storm to strike two different units instead of one and can damage structures.  When striking buildings, it will only target towers, barracks, and the Ancient.",
             "notes": [
                 "Each blast targets the lowest health enemy unit within range.",
                 "Eye of the Storm will prioritize striking static linked heroes.",
@@ -272,7 +315,7 @@
         },
         "stat": {
             "abilityId": 5085,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -295,17 +338,17 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                80,
-                70,
-                60
+                80.0,
+                70.0,
+                60.0
             ],
             "manaCost": [
-                100,
-                150,
-                200
+                100.0,
+                150.0,
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -321,7 +364,7 @@
         "uri": "razor",
         "language": {
             "abilityId": 6028,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5 Static Link Damage Steal",
             "description": [],
@@ -330,7 +373,7 @@
         },
         "stat": {
             "abilityId": 6028,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -338,7 +381,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -366,7 +409,7 @@
         "uri": "razor",
         "language": {
             "abilityId": 6408,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-0.1 Eye of the Storm Strike Interval",
             "description": [],
@@ -375,7 +418,7 @@
         },
         "stat": {
             "abilityId": 6408,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -383,7 +426,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -411,7 +454,7 @@
         "uri": "razor",
         "language": {
             "abilityId": 6860,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+4% Unstable Current Movement Speed",
             "description": [],
@@ -420,7 +463,7 @@
         },
         "stat": {
             "abilityId": 6860,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -428,7 +471,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -456,7 +499,7 @@
         "uri": "razor",
         "language": {
             "abilityId": 6861,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+180 Eye of the Storm Passive Damage",
             "description": [],
@@ -465,7 +508,7 @@
         },
         "stat": {
             "abilityId": 6861,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -473,7 +516,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

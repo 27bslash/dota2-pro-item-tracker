@@ -1,11 +1,81 @@
 {
+    "314": {
+        "id": 314,
+        "name": "lone_druid_entangling_claws",
+        "language": {
+            "abilityId": 314,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Entangling Claws",
+            "description": [
+                "Cause roots to burst from the ground, immobilizing the target enemy unit and causes them to take more damage from attacks. Enemies can still move and attack while entangled."
+            ],
+            "attributes": [
+                "DURATION: 1.5 / 2.25 / 3.0 / 3.75",
+                "ATTACK AMPLIFICATION: 25%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 314,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                450
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                16.0,
+                14.0,
+                12.0,
+                10.0
+            ],
+            "manaCost": [
+                75.0,
+                90.0,
+                105.0,
+                120.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "423": {
         "id": 423,
         "name": "special_bonus_unique_lone_druid_11",
         "uri": "lone_druid",
         "language": {
             "abilityId": 423,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+25 Spirit Bear Movement Speed",
             "description": [],
@@ -14,7 +84,7 @@
         },
         "stat": {
             "abilityId": 423,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +92,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "711": {
+        "id": 711,
+        "name": "special_bonus_unique_lone_druid_12",
+        "language": {
+            "abilityId": 711,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Entangle Disarms",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 711,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +164,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 5412,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Summon Spirit Bear",
             "description": [
@@ -65,14 +179,13 @@
                 "BEAR MOVESPEED: 340 / 360 / 380 / 400"
             ],
             "lore": "Sylla's lifelong companion is symbiotic with his spirit and heart, coming to aid him in any time of need.",
-            "aghanimDescription": "Allows Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
             "notes": [
                 "Most spells interact with the Spirit Bear in the same way as they do with heroes."
             ]
         },
         "stat": {
             "abilityId": 5412,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -80,7 +193,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -101,13 +214,13 @@
                 0.5
             ],
             "cooldown": [
-                120
+                120.0
             ],
             "manaCost": [
-                75,
-                75,
-                75,
-                75
+                75.0,
+                75.0,
+                75.0,
+                75.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -123,7 +236,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 5413,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Rabid",
             "description": [
@@ -139,7 +252,7 @@
         },
         "stat": {
             "abilityId": 5413,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -147,7 +260,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -162,13 +275,13 @@
                 250
             ],
             "cooldown": [
-                35
+                35.0
             ],
             "manaCost": [
-                50,
-                50,
-                50,
-                50
+                50.0,
+                50.0,
+                50.0,
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -184,7 +297,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 5414,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Savage Roar",
             "description": [
@@ -206,7 +319,7 @@
         },
         "stat": {
             "abilityId": 5414,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -214,7 +327,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -232,13 +345,13 @@
                 0.1
             ],
             "cooldown": [
-                38,
-                32,
-                26,
-                20
+                38.0,
+                32.0,
+                26.0,
+                20.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -254,7 +367,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 5415,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "True Form",
             "description": [
@@ -277,7 +390,7 @@
         },
         "stat": {
             "abilityId": 5415,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -285,7 +398,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -300,15 +413,15 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                100
+                100.0
             ],
             "manaCost": [
-                200
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -324,7 +437,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 5416,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Druid Form",
             "description": [
@@ -333,12 +446,11 @@
             "attributes": [
                 "TRANSFORM TIME: 1.933"
             ],
-            "aghanimDescription": "Allows Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
             "notes": []
         },
         "stat": {
             "abilityId": 5416,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 0,
             "unitTargetType": 0,
@@ -346,7 +458,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -361,19 +473,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "manaCost": [
-                25,
-                25,
-                25
+                25.0,
+                25.0,
+                25.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -389,7 +501,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 5417,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Battle Cry",
             "description": [
@@ -406,7 +518,7 @@
         },
         "stat": {
             "abilityId": 5417,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -414,7 +526,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -434,12 +546,241 @@
                 0.5
             ],
             "cooldown": [
-                45
+                45.0
             ],
             "manaCost": [
-                50,
-                50,
-                50
+                50.0,
+                50.0,
+                50.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5418": {
+        "id": 5418,
+        "name": "lone_druid_spirit_bear_return",
+        "language": {
+            "abilityId": 5418,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Return",
+            "description": [
+                "Channels for 3 seconds and then teleports the Spirit Bear back to the Lone Druid."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5418,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 4228,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "channelTime": [
+                3.0
+            ],
+            "cooldown": [
+                30.0
+            ],
+            "manaCost": [
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5419": {
+        "id": 5419,
+        "name": "lone_druid_spirit_bear_entangle",
+        "language": {
+            "abilityId": 5419,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Entangling Claws",
+            "description": [
+                "Attacks have a chance to cause roots to burst from the ground, immobilizing the attacked enemy unit, and dealing damage per second."
+            ],
+            "attributes": [
+                "ENTANGLE CHANCE: 20%",
+                "HERO DURATION: 0.75 / 1.5 / 2.25 / 3.0"
+            ],
+            "notes": [
+                "Entangled units can't use Blink abilities, and are revealed if they are invisible."
+            ]
+        },
+        "stat": {
+            "abilityId": 5419,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 66,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                5.0
+            ],
+            "damage": [
+                60.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5420": {
+        "id": 5420,
+        "name": "lone_druid_spirit_bear_demolish",
+        "language": {
+            "abilityId": 5420,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Demolish",
+            "description": [
+                "Increases the power of the Spirit Bear, causing it to deal more damage to buildings and have additional spell resistance."
+            ],
+            "attributes": [
+                "BONUS BUILDING DAMAGE: 10% / 20% / 30% / 40%",
+                "SPELL RESISTANCE: 33%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5420,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 66,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5687": {
+        "id": 5687,
+        "name": "lone_druid_savage_roar_bear",
+        "language": {
+            "abilityId": 5687,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Savage Roar",
+            "description": [
+                "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by 20%."
+            ],
+            "attributes": [
+                "RANGE: 375",
+                "ENEMY MOVEMENT SPEED BONUS: 20%",
+                "DURATION: 1.2 / 1.6 / 2.0 / 2.4"
+            ],
+            "notes": [
+                "An entangled hero will not be able to move.",
+                "Cooldown is shared with Lone Druid."
+            ]
+        },
+        "stat": {
+            "abilityId": 5687,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 5,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                38.0,
+                32.0,
+                26.0,
+                20.0
+            ],
+            "manaCost": [
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -455,7 +796,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 6261,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+200 Spirit Bear Damage",
             "description": [],
@@ -464,7 +805,7 @@
         },
         "stat": {
             "abilityId": 6261,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -472,7 +813,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -500,7 +841,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 6262,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+8 Spirit Bear Armor",
             "description": [],
@@ -509,7 +850,7 @@
         },
         "stat": {
             "abilityId": 6262,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -517,7 +858,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -545,7 +886,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 6263,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.5s Entangle Duration",
             "description": [],
@@ -554,7 +895,7 @@
         },
         "stat": {
             "abilityId": 6263,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -562,7 +903,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -590,7 +931,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 6268,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-10 Savage Roar Cooldown",
             "description": [],
@@ -599,7 +940,7 @@
         },
         "stat": {
             "abilityId": 6268,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -607,52 +948,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6396": {
-        "id": 6396,
-        "name": "special_bonus_attack_damage_55",
-        "uri": "Lone_Druid",
-        "language": {
-            "abilityId": 6396,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+55 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6396,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -680,7 +976,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 6508,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40% Spirit Bear Magic Resistance",
             "description": [],
@@ -689,7 +985,7 @@
         },
         "stat": {
             "abilityId": 6508,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -697,7 +993,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -725,7 +1021,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 6679,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40 Spirit Link Attack Speed",
             "description": [],
@@ -734,7 +1030,7 @@
         },
         "stat": {
             "abilityId": 6679,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -742,7 +1038,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -770,16 +1066,16 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 6680,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+1000 True Form Health",
+            "displayName": "+1000 True Form and Spirit Bear Health",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6680,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -787,7 +1083,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -815,16 +1111,16 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 6806,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-32s True Form Cooldown",
+            "displayName": "-40s True Form Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6806,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -832,7 +1128,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -860,7 +1156,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 7036,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "0 Entangle Cooldown",
             "description": [],
@@ -869,7 +1165,7 @@
         },
         "stat": {
             "abilityId": 7036,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -877,7 +1173,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -899,13 +1195,59 @@
         "drawMatchPage": true,
         "isTalent": true
     },
+    "7308": {
+        "id": 7308,
+        "name": "lone_druid_spirit_bear_defender",
+        "language": {
+            "abilityId": 7308,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Defender",
+            "description": [
+                "Spirit Bear absorbs 30% of the damage dealt to Lone Druid."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7308,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
     "7309": {
         "id": 7309,
         "name": "lone_druid_spirit_link",
         "uri": "lone_druid",
         "language": {
             "abilityId": 7309,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Spirit Link",
             "description": [
@@ -920,7 +1262,7 @@
         },
         "stat": {
             "abilityId": 7309,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -928,7 +1270,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -956,7 +1298,7 @@
         "uri": "lone_druid",
         "language": {
             "abilityId": 7382,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-0.1 Spirit Bear Attack Time",
             "description": [],
@@ -965,7 +1307,7 @@
         },
         "stat": {
             "abilityId": 7382,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -973,7 +1315,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

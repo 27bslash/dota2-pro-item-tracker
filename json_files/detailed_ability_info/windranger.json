@@ -1,11 +1,118 @@
 {
+    "587": {
+        "id": 587,
+        "name": "windrunner_focusfire_cancel",
+        "language": {
+            "abilityId": 587,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Focus Fire Cancel",
+            "description": [
+                "End your Focus Fire early."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 587,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 33285,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "652": {
+        "id": 652,
+        "name": "windrunner_gale_force",
+        "language": {
+            "abilityId": 652,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 652,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                20.0
+            ],
+            "manaCost": [
+                100.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5130": {
         "id": 5130,
         "name": "windrunner_shackleshot",
         "uri": "windrunner",
         "language": {
             "abilityId": 5130,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Shackleshot",
             "description": [
@@ -23,7 +130,7 @@
         },
         "stat": {
             "abilityId": 5130,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -31,7 +138,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -52,22 +159,22 @@
                 0.15
             ],
             "cooldown": [
-                16,
-                14,
-                12,
-                10
+                16.0,
+                14.0,
+                12.0,
+                10.0
             ],
             "damage": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "manaCost": [
-                70,
-                85,
-                100,
-                115
+                70.0,
+                85.0,
+                100.0,
+                115.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -83,7 +190,7 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 5131,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Powershot",
             "description": [
@@ -100,7 +207,7 @@
         },
         "stat": {
             "abilityId": 5131,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 144,
             "unitTargetType": 0,
@@ -108,7 +215,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -126,22 +233,22 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "channelTime": [
-                1
+                1.0
             ],
             "cooldown": [
-                12,
-                11,
-                10,
-                9
+                12.0,
+                11.0,
+                10.0,
+                9.0
             ],
             "manaCost": [
-                90,
-                100,
-                110,
-                120
+                90.0,
+                100.0,
+                110.0,
+                120.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -157,31 +264,30 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 5132,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Windrun",
             "description": [
                 "Increases movement speed and adds evasion from all physical attacks, while slowing movement of nearby enemies."
             ],
             "attributes": [
-                "MOVE SPEED BONUS: 60%",
                 "EVASION: 100%",
                 "ENEMY SLOW: -15% / -20% / -25% / -30%",
                 "ENEMY SLOW RADIUS: 325",
                 "DURATION: 3 / 4 / 5 / 6",
-                "SCEPTER MOVE SPEED BONUS: 45%",
+                "SCEPTER MOVE SPEED BONUS: 40%",
                 "SCEPTER CHARGES: 2",
-                "SCEPTER REPLENISH TIME: 15 / 14 / 13 / 12"
+                "SCEPTER REPLENISH TIME: 15 / 14 / 13 / 12",
+                "MOVE SPEED BONUS: 60%"
             ],
             "lore": "Lyralei enchants gusts of winds to fight incoming attacks.",
-            "aghanimDescription": "Grants %max_charges% charges to Windrun, increases movement speed, and removes movement speed limit.",
             "notes": [
                 "Activating Windrun will evade incoming projectiles."
             ]
         },
         "stat": {
             "abilityId": 5132,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -210,13 +316,13 @@
                 0.3
             ],
             "cooldown": [
-                15,
-                14,
-                13,
-                12
+                15.0,
+                14.0,
+                13.0,
+                12.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "3 4 5 6",
@@ -232,7 +338,7 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 5133,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Focus Fire",
             "description": [
@@ -250,7 +356,7 @@
         },
         "stat": {
             "abilityId": 5133,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 16392,
             "unitTargetType": 35,
@@ -258,7 +364,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -276,17 +382,17 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                70,
-                50,
-                30
+                70.0,
+                50.0,
+                30.0
             ],
             "manaCost": [
-                75,
-                100,
-                125
+                75.0,
+                100.0,
+                125.0
             ],
             "isUltimate": true,
             "duration": "20.0",
@@ -296,58 +402,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6027": {
-        "id": 6027,
-        "name": "special_bonus_attack_range_75",
-        "uri": "windrunner",
-        "language": {
-            "abilityId": 6027,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+75 Attack Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6027,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6144": {
         "id": 6144,
         "name": "special_bonus_unique_windranger",
         "uri": "windrunner",
         "language": {
             "abilityId": 6144,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Windrun Grants Invisibility",
             "description": [],
@@ -356,7 +417,7 @@
         },
         "stat": {
             "abilityId": 6144,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -364,52 +425,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6222": {
-        "id": 6222,
-        "name": "special_bonus_cooldown_reduction_25",
-        "uri": "windrunner",
-        "language": {
-            "abilityId": 6222,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "25% Cooldown Reduction",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6222,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -437,7 +453,7 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 6413,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+-30% Windrun Slow",
             "description": [],
@@ -446,7 +462,7 @@
         },
         "stat": {
             "abilityId": 6413,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -454,7 +470,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -482,7 +498,7 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 6562,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+100 Powershot Damage",
             "description": [],
@@ -491,7 +507,7 @@
         },
         "stat": {
             "abilityId": 6562,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -499,7 +515,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -527,7 +543,7 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 6992,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+35% Ministun Focus Fire",
             "description": [],
@@ -536,7 +552,7 @@
         },
         "stat": {
             "abilityId": 6992,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -544,7 +560,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -572,7 +588,7 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 6993,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+2 Shackleshot Target",
             "description": [],
@@ -581,7 +597,7 @@
         },
         "stat": {
             "abilityId": 6993,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -589,7 +605,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -617,7 +633,7 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 7062,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.8s Shackleshot Duration",
             "description": [],
@@ -626,7 +642,7 @@
         },
         "stat": {
             "abilityId": 7062,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -634,7 +650,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7888": {
+        "id": 7888,
+        "name": "special_bonus_unique_windranger_7",
+        "language": {
+            "abilityId": 7888,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "-60s Focus Fire Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7888,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -662,7 +722,7 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 7889,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-16% Focus Fire Damage Reduction",
             "description": [],
@@ -671,7 +731,7 @@
         },
         "stat": {
             "abilityId": 7889,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -679,7 +739,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -707,7 +767,7 @@
         "uri": "windrunner",
         "language": {
             "abilityId": 7890,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-2s Shackleshot Cooldown",
             "description": [],
@@ -716,7 +776,7 @@
         },
         "stat": {
             "abilityId": 7890,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -724,7 +784,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -744,6 +804,50 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7911": {
+        "id": 7911,
+        "name": "special_bonus_unique_windranger_10",
+        "language": {
+            "abilityId": 7911,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+20 Windrun HP Regen",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7911,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
         "isTalent": true
     }
 }

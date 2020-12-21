@@ -5,7 +5,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 470,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+25 Wrath of Nature Base Damage",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 470,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,13 +44,73 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "625": {
+        "id": 625,
+        "name": "furion_greater_sprout",
+        "language": {
+            "abilityId": 625,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Greater Sprout",
+            "description": [
+                "Creates a larger circle of trees in a 300 AoE for 6 seconds. Ensnares enemies inside for 2 seconds, dealing 150 damage per second."
+            ],
+            "attributes": [
+                "DURATION: 6"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 625,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 4,
+            "unitTargetFlags": 1,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                850
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.35
+            ],
+            "cooldown": [
+                30.0
+            ],
+            "manaCost": [
+                130.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5245": {
         "id": 5245,
         "name": "furion_sprout",
         "uri": "furion",
         "language": {
             "abilityId": 5245,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Sprout",
             "description": [
@@ -67,7 +127,7 @@
         },
         "stat": {
             "abilityId": 5245,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 24,
             "unitTargetType": 3,
@@ -75,7 +135,7 @@
             "unitTargetFlags": 1,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -99,16 +159,16 @@
                 0.35
             ],
             "cooldown": [
-                11,
-                10,
-                9,
-                8
+                11.0,
+                10.0,
+                9.0,
+                8.0
             ],
             "manaCost": [
-                70,
-                90,
-                110,
-                130
+                70.0,
+                90.0,
+                110.0,
+                130.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -124,7 +184,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 5246,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Teleportation",
             "description": [
@@ -139,7 +199,7 @@
         },
         "stat": {
             "abilityId": 5246,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2101264,
             "unitTargetType": 0,
@@ -147,7 +207,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -165,22 +225,22 @@
                 250
             ],
             "castPoint": [
-                3,
-                3,
-                3,
-                3
+                3.0,
+                3.0,
+                3.0,
+                3.0
             ],
             "cooldown": [
-                50,
-                40,
-                30,
-                20
+                50.0,
+                40.0,
+                30.0,
+                20.0
             ],
             "manaCost": [
-                50,
-                50,
-                50,
-                50
+                50.0,
+                50.0,
+                50.0,
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -196,7 +256,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 5247,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Nature's Call",
             "description": [
@@ -206,7 +266,7 @@
                 "TREANT DURATION: 60 / 60 / 60 / 60",
                 "TREANT COUNT: 2 / 3 / 4 / 5",
                 "TREANT HEALTH: 550",
-                "TREANT DAMAGE: 24 / 28 / 32 / 36"
+                "TREANT DAMAGE: 22 / 26 / 30 / 34"
             ],
             "lore": "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild.",
             "notes": [
@@ -215,7 +275,7 @@
         },
         "stat": {
             "abilityId": 5247,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -223,7 +283,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -247,16 +307,16 @@
                 0.5
             ],
             "cooldown": [
-                37,
-                37,
-                37,
-                37
+                37.0,
+                37.0,
+                37.0,
+                37.0
             ],
             "manaCost": [
-                130,
-                140,
-                150,
-                160
+                130.0,
+                140.0,
+                150.0,
+                160.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -272,7 +332,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 5248,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Wrath of Nature",
             "description": [
@@ -281,14 +341,11 @@
             "attributes": [
                 "MAX TARGETS: 18",
                 "DAMAGE: 110 / 140 / 170",
-                "ADDED DAMAGE PER BOUNCE: 11%",
+                "ADDED DAMAGE PER BOUNCE: 9%",
                 "BONUS DAMAGE PER UNIT: 4 / 5 / 6",
-                "BONUS DAMAGE DURATION: 50",
-                "SCEPTER DAMAGE: 135 / 170 / 205",
-                "SCEPTER TREANT SPAWN TIMER: 4"
+                "BONUS DAMAGE DURATION: 50"
             ],
             "lore": "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness.",
-            "aghanimDescription": "Increases damage. If a unit is killed by Wrath of Nature, or within %scepter_buffer% seconds thereafter, a Nature's Call treant will spawn. These treants' health and damage are based on the current level of Nature's Call. If a hero is killed, a Greater Treant will be created, which has %treant_large_hp_bonus_tooltip% health and deals %treant_large_damage_bonus_tooltip% damage.",
             "notes": [
                 "Wrath of Nature will not hit units out of vision.",
                 "Can be cast through the minimap; the nearest valid target will be selected."
@@ -296,7 +353,7 @@
         },
         "stat": {
             "abilityId": 5248,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 24,
             "unitTargetType": 5,
@@ -304,7 +361,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -327,12 +384,12 @@
                 0.5
             ],
             "cooldown": [
-                85
+                85.0
             ],
             "manaCost": [
-                175,
-                225,
-                275
+                175.0,
+                225.0,
+                275.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -342,67 +399,22 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5952": {
-        "id": 5952,
-        "name": "special_bonus_cooldown_reduction_20",
-        "uri": "furion",
-        "language": {
-            "abilityId": 5952,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "20% Cooldown Reduction",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5952,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6084": {
         "id": 6084,
         "name": "special_bonus_unique_furion",
         "uri": "furion",
         "language": {
             "abilityId": 6084,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "1.8x Treant HP/Damage",
+            "displayName": "2x Treant HP/Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6084,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -410,7 +422,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -438,16 +450,16 @@
         "uri": "furion",
         "language": {
             "abilityId": 6500,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+4 Treants Summoned",
+            "displayName": "+5 Treants Summoned",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6500,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -455,7 +467,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -483,7 +495,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 6539,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Removed Teleportation Cooldown",
             "description": [],
@@ -492,7 +504,7 @@
         },
         "stat": {
             "abilityId": 6539,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -500,7 +512,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -528,7 +540,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 6702,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-4s Sprout Cooldown",
             "description": [],
@@ -537,7 +549,7 @@
         },
         "stat": {
             "abilityId": 6702,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -545,7 +557,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

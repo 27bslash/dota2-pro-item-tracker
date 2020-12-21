@@ -5,7 +5,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 401,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+50 Mana Drain",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 401,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +50,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 465,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+15% Mana Drain Slow",
             "description": [],
@@ -59,7 +59,7 @@
         },
         "stat": {
             "abilityId": 465,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +67,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,7 +95,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 540,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-2s Earth Spike Cooldown",
             "description": [],
@@ -104,7 +104,7 @@
         },
         "stat": {
             "abilityId": 540,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -112,7 +112,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -140,7 +140,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 541,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+20 Finger of Death Damage Per Kill",
             "description": [],
@@ -149,7 +149,7 @@
         },
         "stat": {
             "abilityId": 541,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -157,7 +157,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -185,7 +185,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 5044,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Earth Spike",
             "description": [
@@ -201,7 +201,7 @@
         },
         "stat": {
             "abilityId": 5044,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16408,
             "unitTargetType": 3,
@@ -209,7 +209,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -221,7 +221,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                500
+                575
             ],
             "castRangeBuffer": [
                 250
@@ -233,22 +233,22 @@
                 0.3
             ],
             "cooldown": [
-                12,
-                12,
-                12,
-                12
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "damage": [
-                80,
-                140,
-                200,
-                260
+                80.0,
+                140.0,
+                200.0,
+                260.0
             ],
             "manaCost": [
-                70,
-                100,
-                130,
-                160
+                70.0,
+                100.0,
+                130.0,
+                160.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -264,7 +264,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 5045,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Hex",
             "description": [
@@ -276,12 +276,12 @@
             "lore": "Lion is compelled to share his transfiguration, twisting the essence of those who oppose him.",
             "notes": [
                 "Instantly destroys illusions.",
-                "The target will have a base movement speed of 140, but buffs granting maximum movement speed won't be disabled."
+                "The target will have a base movement speed of 120, but buffs granting maximum movement speed won't be disabled."
             ]
         },
         "stat": {
             "abilityId": 5045,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -289,7 +289,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -307,22 +307,22 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                30,
-                24,
-                18,
-                12
+                30.0,
+                24.0,
+                18.0,
+                12.0
             ],
             "manaCost": [
-                125,
-                150,
-                175,
-                200
+                125.0,
+                150.0,
+                175.0,
+                200.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -338,7 +338,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 5046,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Mana Drain",
             "description": [
@@ -357,7 +357,7 @@
         },
         "stat": {
             "abilityId": 5046,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16520,
             "unitTargetType": 3,
@@ -365,7 +365,7 @@
             "unitTargetFlags": 64,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 5,
+            "modifierSupportValue": 5.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -392,16 +392,16 @@
                 5.1
             ],
             "cooldown": [
-                16,
-                12,
-                8,
-                4
+                16.0,
+                12.0,
+                8.0,
+                4.0
             ],
             "manaCost": [
-                10,
-                10,
-                10,
-                10
+                10.0,
+                10.0,
+                10.0,
+                10.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -417,7 +417,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 5047,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Finger of Death",
             "description": [
@@ -427,12 +427,10 @@
                 "DAMAGE: 600 / 725 / 850",
                 "SCEPTER DAMAGE: 725 / 875 / 1025",
                 "DAMAGE PER KILL: 40",
-                "SCEPTER MANA COST: 200 / 420 / 625",
                 "SCEPTER COOLDOWN: 100.0 / 60.0 / 20.0",
                 "SCEPTER AREA OF EFFECT: 325"
             ],
             "lore": "Lion's disfigured hand is also the source of his greatest power, capable of flooding victims with malefic force.",
-            "aghanimDescription": "Increases damage. Decreases cooldown. Finger of Death hits all units in a small area.",
             "notes": [
                 "Finger of Death has a 0.25 delay before the damage is applied after the spell is cast, allowing certain abilities to avoid the damage.",
                 "Finger of Death only gains damage if the enemy hero dies within 3 seconds of being affected by Finger of Death."
@@ -440,7 +438,7 @@
         },
         "stat": {
             "abilityId": 5047,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 40,
             "unitTargetType": 3,
@@ -448,7 +446,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 0,
+            "modifierSupportValue": 0.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -471,14 +469,14 @@
                 0.3
             ],
             "cooldown": [
-                160,
-                100,
-                40
+                160.0,
+                100.0,
+                40.0
             ],
             "manaCost": [
-                200,
-                420,
-                650
+                200.0,
+                420.0,
+                650.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -494,7 +492,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 6174,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+2 Mana Drain Multi Target",
             "description": [
@@ -505,7 +503,7 @@
         },
         "stat": {
             "abilityId": 6174,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -513,52 +511,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6309": {
-        "id": 6309,
-        "name": "special_bonus_all_stats_20",
-        "uri": "lion",
-        "language": {
-            "abilityId": 6309,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+20 All Stats",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6309,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -586,7 +539,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 6389,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+800 Earth Spike Range",
             "description": [],
@@ -595,7 +548,7 @@
         },
         "stat": {
             "abilityId": 6389,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -603,7 +556,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -631,7 +584,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 6600,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+160 Finger of Death Damage",
             "description": [],
@@ -640,7 +593,7 @@
         },
         "stat": {
             "abilityId": 6600,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -648,7 +601,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -676,7 +629,7 @@
         "uri": "lion",
         "language": {
             "abilityId": 6678,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+250 AoE Hex",
             "description": [],
@@ -685,7 +638,7 @@
         },
         "stat": {
             "abilityId": 6678,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -693,7 +646,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

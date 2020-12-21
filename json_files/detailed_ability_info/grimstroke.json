@@ -5,7 +5,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 508,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+20% Ink Swell Movement Speed",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 508,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,67 +44,84 @@
         "drawMatchPage": false,
         "isTalent": true
     },
-    "6003": {
-        "id": 6003,
-        "name": "special_bonus_cast_range_100",
-        "uri": "grimstroke",
+    "561": {
+        "id": 561,
+        "name": "grimstroke_ink_over",
         "language": {
-            "abilityId": 6003,
-            "gameVersionId": 135,
+            "abilityId": 561,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+100 Cast Range",
-            "description": [],
-            "attributes": [],
+            "displayName": "Ink Over",
+            "description": [
+                "Covers an enemy in ink for 6 seconds, slowing their attack speed by 50, movement speed by 20 and dealing a total of 240 damage over its duration."
+            ],
+            "attributes": [
+                "DURATION: 6",
+                "TOTAL DAMAGE: 240",
+                "ATTACK SPEED SLOW: 50",
+                "MOVE SPEED SLOW: 20"
+            ],
             "notes": []
         },
         "stat": {
-            "abilityId": 6003,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
+            "abilityId": 561,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.5,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
-            "fightRecapLevel": 0,
+            "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
+            "castRange": [
+                700
+            ],
             "castRangeBuffer": [
                 250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                14.0
+            ],
+            "manaCost": [
+                125.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
             "chargeRestoreTime": ""
         },
-        "drawMatchPage": true,
-        "isTalent": true
+        "drawMatchPage": false,
+        "isTalent": false
     },
-    "6007": {
-        "id": 6007,
-        "name": "special_bonus_gold_income_90",
-        "uri": "grimstroke",
+    "705": {
+        "id": 705,
+        "name": "special_bonus_unique_grimstroke_7",
         "language": {
-            "abilityId": 6007,
-            "gameVersionId": 135,
+            "abilityId": 705,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+90 Gold/Min",
+            "displayName": "-4s Ink Swell Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6007,
-            "gameVersionId": 135,
+            "abilityId": 705,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -112,7 +129,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -131,97 +148,7 @@
             "charges": "",
             "chargeRestoreTime": ""
         },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6055": {
-        "id": 6055,
-        "name": "special_bonus_spell_amplify_15",
-        "uri": "grimstroke",
-        "language": {
-            "abilityId": 6055,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+15% Spell Amplification",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6055,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6236": {
-        "id": 6236,
-        "name": "special_bonus_spell_amplify_20",
-        "uri": "grimstroke",
-        "language": {
-            "abilityId": 6236,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+20% Spell Amplification",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6236,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
         "isTalent": true
     },
     "6491": {
@@ -230,7 +157,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 6491,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Soulbind",
             "description": [
@@ -241,7 +168,6 @@
                 "BIND RADIUS: 550"
             ],
             "lore": "The Ascended were chosen sons of Ashkavor, granted immense power by the bonds forged between their own souls and those they were charged with protecting. In the years that followed the ruination of his kin, Grimstroke discovered much more sinister applications for the binding rituals...",
-            "aghanimDescription": "Grants you a new ability, Dark Portrait. Creates an ink illusion of a target enemy hero.",
             "notes": [
                 "Affected units are leashed, and prevented from blinking.",
                 "Provides vision of both leashed units."
@@ -249,7 +175,7 @@
         },
         "stat": {
             "abilityId": 6491,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 40,
             "unitTargetType": 1,
@@ -280,14 +206,14 @@
                 0.15
             ],
             "cooldown": [
-                100,
-                75,
-                50
+                100.0,
+                75.0,
+                50.0
             ],
             "manaCost": [
-                150,
-                200,
-                250
+                150.0,
+                200.0,
+                250.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -303,7 +229,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 7659,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80 Ink Swell Max Damage",
             "description": [],
@@ -312,7 +238,7 @@
         },
         "stat": {
             "abilityId": 7659,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -320,7 +246,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -342,13 +268,77 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "7852": {
+        "id": 7852,
+        "name": "grimstroke_dark_portrait",
+        "language": {
+            "abilityId": 7852,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Dark Portrait",
+            "description": [
+                "Creates an ink illusion of a target enemy hero. Illusion is spell immune, and has bonus movement speed and attack damage."
+            ],
+            "attributes": [
+                "ILLUSION DURATION: 25",
+                "ILLUSION MOVESPEED BONUS: 30%",
+                "ILLUSION OUTGOING DAMAGE: 150%",
+                "ILLUSION DAMAGE TAKEN: 350%"
+            ],
+            "lore": "No dark creation is beyond the skill of the master's hand.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7852,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 16,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.5,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                35.0
+            ],
+            "manaCost": [
+                200.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
     "8000": {
         "id": 8000,
         "name": "grimstroke_dark_artistry",
         "uri": "grimstroke",
         "language": {
             "abilityId": 8000,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Stroke of Fate",
             "description": [
@@ -366,7 +356,7 @@
         },
         "stat": {
             "abilityId": 8000,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 0,
@@ -395,16 +385,16 @@
                 0.8
             ],
             "cooldown": [
-                11,
-                9,
-                7,
-                5
+                11.0,
+                9.0,
+                7.0,
+                5.0
             ],
             "manaCost": [
-                100,
-                110,
-                120,
-                130
+                100.0,
+                110.0,
+                120.0,
+                130.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -420,7 +410,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8001,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+150 Ink Swell Radius",
             "description": [],
@@ -429,7 +419,7 @@
         },
         "stat": {
             "abilityId": 8001,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -437,7 +427,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -465,7 +455,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8002,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40% Stroke of Fate Damage",
             "description": [],
@@ -474,7 +464,7 @@
         },
         "stat": {
             "abilityId": 8002,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -482,7 +472,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -510,7 +500,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8003,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+800 Stroke of Fate Cast Range",
             "description": [],
@@ -519,7 +509,7 @@
         },
         "stat": {
             "abilityId": 8003,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -527,7 +517,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -555,7 +545,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8004,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Hits to Kill Phantom",
             "description": [],
@@ -564,7 +554,7 @@
         },
         "stat": {
             "abilityId": 8004,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -572,7 +562,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -600,7 +590,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8006,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Phantom's Embrace",
             "description": [
@@ -622,7 +612,7 @@
         },
         "stat": {
             "abilityId": 8006,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 3,
@@ -648,19 +638,19 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                32,
-                28,
-                24,
-                20
+                36.0,
+                30.0,
+                24.0,
+                18.0
             ],
             "manaCost": [
-                110,
-                120,
-                130,
-                140
+                80.0,
+                100.0,
+                120.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -676,7 +666,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8007,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Ink Swell",
             "description": [
@@ -686,8 +676,9 @@
                 "BUFF DURATION: 3.0",
                 "MOVEMENT SPEED BONUS: 12% / 14% / 16% / 18%",
                 "RADIUS: 400",
-                "MAX DAMAGE: 100 / 200 / 300 / 400",
+                "MAX DAMAGE: 90 / 180 / 270 / 360",
                 "MAX STUN DURATION: 1.0 / 1.9 / 2.8 / 3.7",
+                "MAX THRESHOLD DURATION: 2.5",
                 "INK TENDRILS DPS: 25 / 35 / 45 / 55"
             ],
             "lore": "Now that the rise of the ink tide no longer threatens to overwhelm Grimstroke, its tendrils of power are never far from his hand.",
@@ -695,7 +686,7 @@
         },
         "stat": {
             "abilityId": 8007,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 3,
@@ -727,16 +718,16 @@
                 0.15
             ],
             "cooldown": [
-                30,
-                25,
-                20,
-                15
+                30.0,
+                25.0,
+                20.0,
+                15.0
             ],
             "manaCost": [
-                120,
-                130,
-                140,
-                150
+                120.0,
+                130.0,
+                140.0,
+                150.0
             ],
             "isUltimate": false,
             "duration": "",

@@ -1,11 +1,73 @@
 {
+    "595": {
+        "id": 595,
+        "name": "crystal_maiden_let_it_go",
+        "language": {
+            "abilityId": 595,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Let It Go",
+            "description": [
+                "Creates an icy path towards the targeted direction, allowing you to move faster and path freely. Enemies walking over this path will move slower."
+            ],
+            "attributes": [
+                "MOVEMENT SPEED: 50%",
+                "SLOW: 10%",
+                "DURATION: 12"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 595,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 16,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                30.0
+            ],
+            "manaCost": [
+                100.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5126": {
         "id": 5126,
         "name": "crystal_maiden_crystal_nova",
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 5126,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Crystal Nova",
             "description": [
@@ -23,7 +85,7 @@
         },
         "stat": {
             "abilityId": 5126,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -31,7 +93,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -55,16 +117,16 @@
                 0.3
             ],
             "cooldown": [
-                11,
-                10,
-                9,
-                8
+                11.0,
+                10.0,
+                9.0,
+                8.0
             ],
             "manaCost": [
-                130,
-                145,
-                160,
-                175
+                130.0,
+                145.0,
+                160.0,
+                175.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -80,15 +142,14 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 5127,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Frostbite",
             "description": [
                 "Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time. Lasts 10.0 seconds on creeps level 6 or lower."
             ],
             "attributes": [
-                "HERO TOTAL DAMAGE: 150 / 200 / 250 / 300",
-                "CREEP TOTAL DAMAGE: 1000",
+                "DAMAGE PER SECOND: 100",
                 "HERO DURATION: 1.5 / 2.0 / 2.5 / 3.0",
                 "CREEP DURATION: 10.0"
             ],
@@ -99,7 +160,7 @@
         },
         "stat": {
             "abilityId": 5127,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -131,16 +192,16 @@
                 0.3
             ],
             "cooldown": [
-                9,
-                8,
-                7,
-                6
+                9.0,
+                8.0,
+                7.0,
+                6.0
             ],
             "manaCost": [
-                140,
-                145,
-                150,
-                155
+                140.0,
+                145.0,
+                150.0,
+                155.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -156,7 +217,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 5128,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Arcane Aura",
             "description": [
@@ -171,7 +232,7 @@
         },
         "stat": {
             "abilityId": 5128,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -179,7 +240,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -210,7 +271,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 5129,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Freezing Field",
             "description": [
@@ -226,7 +287,6 @@
                 "SCEPTER FROSTBITE DELAY: 1.75"
             ],
             "lore": "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught.",
-            "aghanimDescription": "Applies Frostbite to any unit that has been standing in the Freezing Field for over a set amount of time.",
             "notes": [
                 "The slow is applied on all enemies in the radius, even if they aren't hit by an explosion (lasts 1.0 second).",
                 "Explosions occur every 0.1 seconds."
@@ -234,7 +294,7 @@
         },
         "stat": {
             "abilityId": 5129,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 32900,
             "unitTargetType": 0,
@@ -257,20 +317,20 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "channelTime": [
-                10
+                10.0
             ],
             "cooldown": [
-                110,
-                100,
-                90
+                110.0,
+                100.0,
+                90.0
             ],
             "manaCost": [
-                200,
-                400,
-                600
+                200.0,
+                400.0,
+                600.0
             ],
             "isUltimate": true,
             "duration": "10.0",
@@ -286,7 +346,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 6072,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.25s Frostbite Duration",
             "description": [],
@@ -295,7 +355,7 @@
         },
         "stat": {
             "abilityId": 6072,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -303,7 +363,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -331,7 +391,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 6234,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+240 Crystal Nova Damage",
             "description": [],
@@ -340,7 +400,7 @@
         },
         "stat": {
             "abilityId": 6234,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -348,7 +408,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -376,7 +436,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 6520,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+50 Freezing Field Damage",
             "description": [],
@@ -385,7 +445,7 @@
         },
         "stat": {
             "abilityId": 6520,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -393,97 +453,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6622": {
-        "id": 6622,
-        "name": "special_bonus_attack_speed_200",
-        "uri": "crystal_maiden",
-        "language": {
-            "abilityId": 6622,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+200 Attack Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6622,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7020": {
-        "id": 7020,
-        "name": "special_bonus_attack_speed_250",
-        "uri": "crystal_maiden",
-        "language": {
-            "abilityId": 7020,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+250 Attack Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7020,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -511,7 +481,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 7042,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+6% Magic Resistance Arcane Aura",
             "description": [],
@@ -520,7 +490,7 @@
         },
         "stat": {
             "abilityId": 7042,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -528,7 +498,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -556,7 +526,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 7654,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-3s Crystal Nova Cooldown",
             "description": [],
@@ -565,7 +535,7 @@
         },
         "stat": {
             "abilityId": 7654,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -573,7 +543,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

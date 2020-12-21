@@ -5,7 +5,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 509,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40 Split Earth Radius",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 509,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +50,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 516,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+175 Lightning Storm Damage",
             "description": [],
@@ -59,7 +59,7 @@
         },
         "stat": {
             "abilityId": 516,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +67,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -89,13 +89,69 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "539": {
+        "id": 539,
+        "name": "leshrac_greater_lightning_storm",
+        "language": {
+            "abilityId": 539,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Nihilism",
+            "description": [
+                "Causes all nearby enemies in 450 AoE to turn ethereal, preventing them from attacking, causing them to take 30% more magic damage and be slowed by 30 for 4 seconds. Increases Leshrac's speed rather than reducing it."
+            ],
+            "attributes": [
+                "DURATION: 4",
+                "INCREASED MAGIC DAMAGE: 30%",
+                "SLOW: 30%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 539,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                25.0
+            ],
+            "manaCost": [
+                75.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5241": {
         "id": 5241,
         "name": "leshrac_split_earth",
         "uri": "leshrac",
         "language": {
             "abilityId": 5241,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Split Earth",
             "description": [
@@ -114,7 +170,7 @@
         },
         "stat": {
             "abilityId": 5241,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 3,
@@ -122,7 +178,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -146,25 +202,25 @@
                 0.7
             ],
             "cooldown": [
-                9,
-                9,
-                9,
-                9
+                9.0,
+                9.0,
+                9.0,
+                9.0
             ],
             "damage": [
-                120,
-                180,
-                240,
-                300
+                120.0,
+                180.0,
+                240.0,
+                300.0
             ],
             "manaCost": [
-                80,
-                100,
-                120,
-                140
+                80.0,
+                100.0,
+                120.0,
+                140.0
             ],
             "isUltimate": false,
-            "duration": "2 2 2 2",
+            "duration": "2",
             "charges": "",
             "chargeRestoreTime": ""
         },
@@ -177,7 +233,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 5242,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Diabolic Edict",
             "description": [
@@ -196,7 +252,7 @@
         },
         "stat": {
             "abilityId": 5242,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 35,
@@ -204,7 +260,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -222,22 +278,22 @@
                 0.5
             ],
             "cooldown": [
-                22,
-                22,
-                22,
-                22
+                22.0,
+                22.0,
+                22.0,
+                22.0
             ],
             "damage": [
-                8,
-                20,
-                32,
-                44
+                8.0,
+                20.0,
+                32.0,
+                44.0
             ],
             "manaCost": [
-                95,
-                120,
-                135,
-                155
+                95.0,
+                120.0,
+                135.0,
+                155.0
             ],
             "isUltimate": false,
             "duration": "10",
@@ -253,7 +309,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 5243,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Lightning Storm",
             "description": [
@@ -269,12 +325,11 @@
                 "SCEPTER RADIUS: 750"
             ],
             "lore": "The Tormented Soul's mastery of the elements is evident in the massive storms that strike down armies before him.",
-            "aghanimDescription": "While Pulse Nova is active, Lightning Storm will hit one random unit in a radius every %interval_scepter% seconds.",
             "notes": []
         },
         "stat": {
             "abilityId": 5243,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -282,7 +337,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -303,13 +358,13 @@
                 0.4
             ],
             "cooldown": [
-                4
+                4.0
             ],
             "manaCost": [
-                80,
-                100,
-                120,
-                140
+                80.0,
+                100.0,
+                120.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -325,14 +380,14 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 5244,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Pulse Nova",
             "description": [
                 "Creates waves of damaging energy around Leshrac, one per second, to damage nearby enemy units. Drains Leshrac's mana with each pulse."
             ],
             "attributes": [
-                "RADIUS: 450",
+                "RADIUS: 475",
                 "MANA/SEC: 20 / 40 / 60",
                 "DAMAGE: 100 / 150 / 200"
             ],
@@ -341,7 +396,7 @@
         },
         "stat": {
             "abilityId": 5244,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 524804,
             "unitTargetType": 3,
@@ -349,7 +404,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -364,19 +419,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                1,
-                1,
-                1,
-                1
+                1.0,
+                1.0,
+                1.0,
+                1.0
             ],
             "manaCost": [
-                70
+                70.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -392,7 +447,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 6063,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+30 Diabolic Edict Explosions",
             "description": [],
@@ -401,7 +456,7 @@
         },
         "stat": {
             "abilityId": 6063,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -409,7 +464,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -437,7 +492,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 6240,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.0s Lightning Storm Slow Duration",
             "description": [],
@@ -446,7 +501,7 @@
         },
         "stat": {
             "abilityId": 6240,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -454,52 +509,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6321": {
-        "id": 6321,
-        "name": "special_bonus_mp_400",
-        "uri": "leshrac",
-        "language": {
-            "abilityId": 6321,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+400 Mana",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6321,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -527,7 +537,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 6672,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40 Pulse Nova Damage",
             "description": [],
@@ -536,7 +546,7 @@
         },
         "stat": {
             "abilityId": 6672,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -544,7 +554,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7101": {
+        "id": 7101,
+        "name": "special_bonus_unique_leshrac_4",
+        "language": {
+            "abilityId": 7101,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Diabolic Edict Gains Ethereal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7101,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

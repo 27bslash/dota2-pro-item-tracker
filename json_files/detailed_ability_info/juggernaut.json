@@ -1,20 +1,81 @@
 {
-    "429": {
-        "id": 429,
-        "name": "special_bonus_hp_475",
-        "uri": "juggernaut",
+    "419": {
+        "id": 419,
+        "name": "juggernaut_swift_slash",
         "language": {
-            "abilityId": 429,
-            "gameVersionId": 135,
+            "abilityId": 419,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+475 Health",
+            "displayName": "Swiftslash",
+            "description": [
+                "Performs a mini Omnislash for a short duration."
+            ],
+            "attributes": [
+                "DURATION: 0.8"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 419,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 32776,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                650
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3,
+                0.3,
+                0.3
+            ],
+            "cooldown": [
+                15.0
+            ],
+            "manaCost": [
+                100.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "628": {
+        "id": 628,
+        "name": "special_bonus_unique_juggernaut_5",
+        "language": {
+            "abilityId": 628,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "-20s Healing Ward Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 429,
-            "gameVersionId": 135,
+            "abilityId": 628,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +83,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +111,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 5027,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Blade Dance",
             "description": [
@@ -65,7 +126,7 @@
         },
         "stat": {
             "abilityId": 5027,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -73,7 +134,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -101,7 +162,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 5028,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Blade Fury",
             "description": [
@@ -110,7 +171,7 @@
                 "DISPEL TYPE: Basic Dispel"
             ],
             "attributes": [
-                "RADIUS: 250",
+                "RADIUS: 260",
                 "DAMAGE: 85 / 110 / 135 / 160",
                 "DURATION: 5.0"
             ],
@@ -122,7 +183,7 @@
         },
         "stat": {
             "abilityId": 5028,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 526340,
             "unitTargetType": 0,
@@ -130,7 +191,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -148,22 +209,22 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                42,
-                34,
-                26,
-                18
+                42.0,
+                34.0,
+                26.0,
+                18.0
             ],
             "manaCost": [
-                120,
-                110,
-                100,
-                90
+                120.0,
+                110.0,
+                100.0,
+                90.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -179,7 +240,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 5029,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Healing Ward",
             "description": [
@@ -196,7 +257,7 @@
         },
         "stat": {
             "abilityId": 5029,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -204,7 +265,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -228,13 +289,13 @@
                 0.3
             ],
             "cooldown": [
-                60,
-                60,
-                60,
-                60
+                60.0,
+                60.0,
+                60.0,
+                60.0
             ],
             "manaCost": [
-                140
+                140.0
             ],
             "isUltimate": false,
             "duration": "25.0",
@@ -250,7 +311,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 5030,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Omnislash",
             "description": [
@@ -265,7 +326,6 @@
                 "SCEPTER DURATION:%duration_scepter%"
             ],
             "lore": "'The fruits of discipline; with practice comes strength.'",
-            "aghanimDescription": "Adds a new ability: Swift Slash. Performs a mini omnislash for a short duration.",
             "notes": [
                 "You can use items during Omnislash.",
                 "Can target Spell Immune units.",
@@ -274,15 +334,15 @@
         },
         "stat": {
             "abilityId": 5030,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 32776,
             "unitTargetType": 3,
             "unitTargetTeam": 1,
-            "unitTargetFlags": 5,
+            "unitTargetFlags": 4,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 0,
+            "modifierSupportValue": 0.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -305,12 +365,12 @@
                 0.3
             ],
             "cooldown": [
-                140
+                140.0
             ],
             "manaCost": [
-                200,
-                275,
-                350
+                200.0,
+                275.0,
+                350.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -320,58 +380,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5922": {
-        "id": 5922,
-        "name": "special_bonus_all_stats_6",
-        "uri": "juggernaut",
-        "language": {
-            "abilityId": 5922,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+6 All Stats",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5922,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6105": {
         "id": 6105,
         "name": "special_bonus_unique_juggernaut",
         "uri": "juggernaut",
         "language": {
             "abilityId": 6105,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1s Blade Fury",
             "description": [],
@@ -380,7 +395,7 @@
         },
         "stat": {
             "abilityId": 6105,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -388,52 +403,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6377": {
-        "id": 6377,
-        "name": "special_bonus_hp_600",
-        "uri": "juggernaut",
-        "language": {
-            "abilityId": 6377,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+600 Health",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6377,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -461,7 +431,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 6662,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.0s Omnislash Duration",
             "description": [],
@@ -470,7 +440,7 @@
         },
         "stat": {
             "abilityId": 6662,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -478,7 +448,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -506,16 +476,16 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 7021,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+140 Blade Fury DPS",
+            "displayName": "+160 Blade Fury DPS",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7021,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -523,7 +493,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -551,7 +521,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 7394,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+100 Blade Fury Movement Speed",
             "description": [],
@@ -560,7 +530,7 @@
         },
         "stat": {
             "abilityId": 7394,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -568,7 +538,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

@@ -5,7 +5,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 517,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.5s Static Storm Duration",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 517,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,14 +50,14 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 5458,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Thunder Strike",
             "description": [
                 "Repeatedly strikes the targeted unit with lightning. Each strike damages nearby enemy units in a small radius and slows enemy movement and attack speed by 100% for 0.1 seconds. Provides vision of its target."
             ],
             "attributes": [
-                "RADIUS: 240 / 240 / 240 / 240",
+                "RADIUS: 240",
                 "STRIKES: 4",
                 "STRIKE INTERVAL: 2.0 / 2.0 / 2.0 / 2.0",
                 "STRIKE DAMAGE: 45 / 70 / 95 / 120"
@@ -67,7 +67,7 @@
         },
         "stat": {
             "abilityId": 5458,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 3,
@@ -75,7 +75,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -102,16 +102,16 @@
                 0.05
             ],
             "cooldown": [
-                18,
-                15,
-                12,
-                9
+                18.0,
+                15.0,
+                12.0,
+                9.0
             ],
             "manaCost": [
-                130,
-                140,
-                150,
-                160
+                130.0,
+                140.0,
+                150.0,
+                160.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -127,7 +127,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 5459,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Glimpse",
             "description": [
@@ -143,7 +143,7 @@
         },
         "stat": {
             "abilityId": 5459,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 1,
@@ -151,7 +151,7 @@
             "unitTargetFlags": 16,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -178,13 +178,13 @@
                 0.05
             ],
             "cooldown": [
-                60,
-                46,
-                32,
-                18
+                60.0,
+                46.0,
+                32.0,
+                18.0
             ],
             "manaCost": [
-                100
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -200,7 +200,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 5460,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Kinetic Field",
             "description": [
@@ -218,7 +218,7 @@
         },
         "stat": {
             "abilityId": 5460,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -226,7 +226,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -253,16 +253,16 @@
                 0.05
             ],
             "cooldown": [
-                19,
-                16,
-                13,
-                10
+                19.0,
+                16.0,
+                13.0,
+                10.0
             ],
             "manaCost": [
-                70,
-                70,
-                70,
-                70
+                70.0,
+                70.0,
+                70.0,
+                70.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -278,7 +278,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 5461,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Static Storm",
             "description": [
@@ -291,12 +291,11 @@
                 "SCEPTER DURATION:%duration_scepter%"
             ],
             "lore": "A summer squall in Druud is a hardship that only an Oglodi can survive.",
-            "aghanimDescription": "Mutes items.",
             "notes": []
         },
         "stat": {
             "abilityId": 5461,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -304,7 +303,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -331,14 +330,14 @@
                 0.05
             ],
             "cooldown": [
-                90,
-                80,
-                70
+                90.0,
+                80.0,
+                70.0
             ],
             "manaCost": [
-                125,
-                175,
-                225
+                125.0,
+                175.0,
+                225.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -348,103 +347,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5964": {
-        "id": 5964,
-        "name": "special_bonus_respawn_reduction_30",
-        "uri": "Disruptor",
-        "language": {
-            "abilityId": 5964,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "-30s Respawn Time",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5964,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6026": {
-        "id": 6026,
-        "name": "special_bonus_gold_income_180",
-        "uri": "disruptor",
-        "language": {
-            "abilityId": 6026,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+180 Gold/Min",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6026,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6215": {
         "id": 6215,
         "name": "special_bonus_unique_disruptor",
         "uri": "disruptor",
         "language": {
             "abilityId": 6215,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Thunder Strike Hits",
             "description": [],
@@ -453,7 +362,7 @@
         },
         "stat": {
             "abilityId": 6215,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -461,52 +370,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6221": {
-        "id": 6221,
-        "name": "special_bonus_magic_resistance_30",
-        "uri": "disruptor",
-        "language": {
-            "abilityId": 6221,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+30% Magic Resistance",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6221,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -534,16 +398,16 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 6368,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-2s Kinetic Field Cooldown",
+            "displayName": "-3s Kinetic Field Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6368,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -551,7 +415,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -579,7 +443,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 6536,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+30 Thunder Strike Damage",
             "description": [],
@@ -588,7 +452,7 @@
         },
         "stat": {
             "abilityId": 6536,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -596,7 +460,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -624,7 +488,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 6630,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-8s Glimpse Cooldown",
             "description": [],
@@ -633,7 +497,7 @@
         },
         "stat": {
             "abilityId": 6630,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -641,7 +505,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -669,7 +533,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 6812,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3s Kinetic Field Duration",
             "description": [],
@@ -678,7 +542,7 @@
         },
         "stat": {
             "abilityId": 6812,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -686,7 +550,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -714,7 +578,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 7656,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Kinetic Field Grants True Sight",
             "description": [],
@@ -723,7 +587,7 @@
         },
         "stat": {
             "abilityId": 7656,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -731,7 +595,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

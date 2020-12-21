@@ -1,40 +1,51 @@
 {
-    "469": {
-        "id": 469,
-        "name": "special_bonus_strength_18",
-        "uri": "kunkka",
+    "319": {
+        "id": 319,
+        "name": "kunkka_torrent_storm",
         "language": {
-            "abilityId": 469,
-            "gameVersionId": 135,
+            "abilityId": 319,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+18 Strength",
-            "description": [],
+            "displayName": "Torrent Storm",
+            "description": [
+                "Releases a visible Torrent in a random area around Kunkka once every 0.25 for 5.0 seconds. Spawns within 1100 range of him."
+            ],
             "attributes": [],
+            "lore": "A hundred leagues of dry land couldn't keep these seas at bay.",
             "notes": []
         },
         "stat": {
-            "abilityId": 469,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 319,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRangeBuffer": [
                 250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                70.0
+            ],
+            "manaCost": [
+                250.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -42,7 +53,69 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": false,
-        "isTalent": true
+        "isTalent": false
+    },
+    "605": {
+        "id": 605,
+        "name": "kunkka_tidal_wave",
+        "language": {
+            "abilityId": 605,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Tidal Wave",
+            "description": [
+                "Releases a Tidal Wave that spawns behind Kunkka. Deals 225 damage and drags enemies along it for 600 distance."
+            ],
+            "attributes": [
+                "SPEED: 700",
+                "RADIUS: 750",
+                "DURATION: 1.25"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 605,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                16.0
+            ],
+            "manaCost": [
+                150.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
     },
     "5031": {
         "id": 5031,
@@ -50,7 +123,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5031,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Torrent",
             "description": [
@@ -65,7 +138,6 @@
                 "DAMAGE: 75 / 150 / 225 / 300"
             ],
             "lore": "An ancestral rush of water explodes from the center of the world, called upon by the Admiral.",
-            "aghanimDescription": "Adds a new ability: Torrent Storm. Continuously releases visible Torrents around you.",
             "notes": [
                 "The initial bubble effect is only visible to allies and provides vision in fog of war.",
                 "Units tossed in the air will be stunned and still able to be attacked."
@@ -73,7 +145,7 @@
         },
         "stat": {
             "abilityId": 5031,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -102,16 +174,16 @@
                 0.4
             ],
             "cooldown": [
-                16,
-                14,
-                12,
-                10
+                16.0,
+                14.0,
+                12.0,
+                10.0
             ],
             "manaCost": [
-                90,
-                100,
-                110,
-                120
+                90.0,
+                100.0,
+                110.0,
+                120.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -127,7 +199,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5032,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Tidebringer",
             "description": [
@@ -145,7 +217,7 @@
         },
         "stat": {
             "abilityId": 5032,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -153,7 +225,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -171,16 +243,16 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                13,
-                10,
-                7,
-                4
+                13.0,
+                10.0,
+                7.0,
+                4.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -196,7 +268,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5033,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "X Marks the Spot",
             "description": [
@@ -214,7 +286,7 @@
         },
         "stat": {
             "abilityId": 5033,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 1,
@@ -222,7 +294,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -249,13 +321,13 @@
                 0.4
             ],
             "cooldown": [
-                38,
-                30,
-                22,
-                14
+                38.0,
+                30.0,
+                22.0,
+                14.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -271,7 +343,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5034,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Return",
             "description": [
@@ -282,7 +354,7 @@
         },
         "stat": {
             "abilityId": 5034,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16389,
             "unitTargetType": 0,
@@ -290,7 +362,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -311,10 +383,10 @@
                 0.4
             ],
             "cooldown": [
-                1
+                1.0
             ],
             "manaCost": [
-                0
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -330,7 +402,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5035,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Ghostship",
             "description": [
@@ -338,7 +410,7 @@
             ],
             "attributes": [
                 "IMPACT DELAY: 3.1",
-                "RUM BONUS SPEED: 10% / 10% / 10%",
+                "RUM BONUS SPEED: 12%",
                 "RUM DURATION: 10",
                 "RANGE: 2000",
                 "WIDTH: 425 / 425 / 425",
@@ -354,7 +426,7 @@
         },
         "stat": {
             "abilityId": 5035,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 17424,
             "unitTargetType": 0,
@@ -362,7 +434,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -383,19 +455,19 @@
                 0.3
             ],
             "cooldown": [
-                80,
-                70,
-                60
+                80.0,
+                70.0,
+                60.0
             ],
             "damage": [
-                400,
-                500,
-                600
+                400.0,
+                500.0,
+                600.0
             ],
             "manaCost": [
-                125,
-                175,
-                225
+                125.0,
+                175.0,
+                225.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -411,7 +483,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 6089,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80 Torrent AoE",
             "description": [],
@@ -420,7 +492,7 @@
         },
         "stat": {
             "abilityId": 6089,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -428,7 +500,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -456,7 +528,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 6385,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+100 Torrent Damage",
             "description": [],
@@ -465,7 +537,7 @@
         },
         "stat": {
             "abilityId": 6385,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -473,7 +545,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -501,7 +573,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 6666,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Ghostship Fleet",
             "description": [
@@ -512,7 +584,7 @@
         },
         "stat": {
             "abilityId": 6666,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -520,7 +592,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -548,16 +620,16 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 6667,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+110% Tidebringer Cleave",
+            "displayName": "+140% Tidebringer Cleave",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6667,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -565,7 +637,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -593,7 +665,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 7131,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-1.5s Tidebringer Cooldown",
             "description": [],
@@ -602,7 +674,7 @@
         },
         "stat": {
             "abilityId": 7131,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -610,7 +682,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

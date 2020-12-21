@@ -1,11 +1,55 @@
 {
+    "702": {
+        "id": 702,
+        "name": "special_bonus_unique_mirana_5",
+        "language": {
+            "abilityId": 702,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+4s Moonlight Shadow Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 702,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
     "5048": {
         "id": 5048,
         "name": "mirana_arrow",
         "uri": "mirana",
         "language": {
             "abilityId": 5048,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Sacred Arrow",
             "description": [
@@ -25,7 +69,7 @@
         },
         "stat": {
             "abilityId": 5048,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 17424,
             "unitTargetType": 0,
@@ -33,13 +77,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
+            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -57,22 +101,22 @@
                 0.5
             ],
             "cooldown": [
-                19,
-                18,
-                17,
-                16
+                19.0,
+                18.0,
+                17.0,
+                16.0
             ],
             "damage": [
-                60,
-                150,
-                240,
-                330
+                60.0,
+                150.0,
+                240.0,
+                330.0
             ],
             "manaCost": [
-                100,
-                100,
-                100,
-                100
+                100.0,
+                100.0,
+                100.0,
+                100.0
             ],
             "isUltimate": false,
             "duration": "3.11 3.11 3.11 3.11",
@@ -88,7 +132,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 5049,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Moonlight Shadow",
             "description": [
@@ -107,7 +151,7 @@
         },
         "stat": {
             "abilityId": 5049,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 49156,
             "unitTargetType": 0,
@@ -115,7 +159,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -138,12 +182,12 @@
                 0.5
             ],
             "cooldown": [
-                140,
-                120,
-                100
+                140.0,
+                120.0,
+                100.0
             ],
             "manaCost": [
-                125
+                125.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -159,7 +203,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 5050,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Leap",
             "description": [
@@ -175,7 +219,7 @@
         },
         "stat": {
             "abilityId": 5050,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 20484,
             "unitTargetType": 0,
@@ -183,7 +227,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -198,10 +242,10 @@
                 250
             ],
             "cooldown": [
-                0
+                0.0
             ],
             "manaCost": [
-                40
+                40.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -217,7 +261,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 5051,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Starstorm",
             "description": [
@@ -228,7 +272,6 @@
                 "SCEPTER INTERVAL: 8.0"
             ],
             "lore": "The Goddess breaks the strata to empower her Princess in the time of need.",
-            "aghanimDescription": "Passively triggers Starstorm every %interval_scepter% seconds. Does not trigger if the enemy doesn't see Mirana.",
             "notes": [
                 "Starstorm is not blocked by Linken's Sphere.",
                 "Starstorm cannot hit invisible units.",
@@ -237,7 +280,7 @@
         },
         "stat": {
             "abilityId": 5051,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16388,
             "unitTargetType": 0,
@@ -245,7 +288,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -263,22 +306,22 @@
                 0.4
             ],
             "cooldown": [
-                12,
-                12,
-                12,
-                12
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "damage": [
-                75,
-                150,
-                225,
-                300
+                75.0,
+                150.0,
+                225.0,
+                300.0
             ],
             "manaCost": [
-                80,
-                105,
-                130,
-                155
+                80.0,
+                105.0,
+                130.0,
+                155.0
             ],
             "isUltimate": false,
             "duration": "10.0 10.0 10.0 10.0",
@@ -288,58 +331,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5989": {
-        "id": 5989,
-        "name": "special_bonus_spell_amplify_10",
-        "uri": "mirana",
-        "language": {
-            "abilityId": 5989,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+10% Spell Amplification",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5989,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6013": {
         "id": 6013,
         "name": "special_bonus_unique_mirana_1",
         "uri": "mirana",
         "language": {
             "abilityId": 6013,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+75 Leap Attack Speed",
             "description": [],
@@ -348,7 +346,7 @@
         },
         "stat": {
             "abilityId": 6013,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -356,7 +354,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -384,7 +382,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 6242,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+2 Multishot Sacred Arrows",
             "description": [
@@ -395,7 +393,7 @@
         },
         "stat": {
             "abilityId": 6242,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -403,7 +401,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -431,7 +429,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 6397,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-3.5s Sacred Arrow cooldown",
             "description": [],
@@ -440,7 +438,7 @@
         },
         "stat": {
             "abilityId": 6397,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -448,7 +446,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -476,16 +474,16 @@
         "uri": "mirana",
         "language": {
             "abilityId": 6692,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-60 Moonlight Shadow Cooldown",
+            "displayName": "-60s Moonlight Shadow Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6692,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -493,52 +491,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6830": {
-        "id": 6830,
-        "name": "special_bonus_mana_break_25",
-        "uri": "mirana",
-        "language": {
-            "abilityId": 6830,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+25 Mana Break",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6830,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

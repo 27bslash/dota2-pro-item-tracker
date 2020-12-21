@@ -1,101 +1,11 @@
 {
-    "436": {
-        "id": 436,
-        "name": "special_bonus_mana_break_15",
-        "uri": "weaver",
-        "language": {
-            "abilityId": 436,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+15 Mana Break",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 436,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "437": {
-        "id": 437,
-        "name": "special_bonus_strength_11",
-        "uri": "weaver",
-        "language": {
-            "abilityId": 437,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+11 Strength",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 437,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "5289": {
         "id": 5289,
         "name": "weaver_the_swarm",
         "uri": "weaver",
         "language": {
             "abilityId": 5289,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "The Swarm",
             "description": [
@@ -113,12 +23,12 @@
             "notes": [
                 "When a beetle latches on a target, it will remain there until it is killed or the duration expires.",
                 "Beetles are Spell Immune, but can be killed in 8 / 8 / 8 / 8 attacks from a hero. Other units deal half damage.",
-                "Beetles provide vision of the target unless the target is invisible."
+                "Beetles provide vision and will even latch onto and reveal invisible heroes."
             ]
         },
         "stat": {
             "abilityId": 5289,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16400,
             "unitTargetType": 0,
@@ -150,13 +60,13 @@
                 0.3
             ],
             "cooldown": [
-                44,
-                36,
-                28,
-                20
+                44.0,
+                36.0,
+                28.0,
+                20.0
             ],
             "manaCost": [
-                110
+                110.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -172,7 +82,7 @@
         "uri": "weaver",
         "language": {
             "abilityId": 5290,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Shukuchi",
             "description": [
@@ -192,7 +102,7 @@
         },
         "stat": {
             "abilityId": 5290,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 526340,
             "unitTargetType": 0,
@@ -200,7 +110,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -215,19 +125,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                12,
-                10,
-                8,
-                6
+                12.0,
+                10.0,
+                8.0,
+                6.0
             ],
             "manaCost": [
-                70
+                70.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -243,7 +153,7 @@
         "uri": "weaver",
         "language": {
             "abilityId": 5291,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Geminate Attack",
             "description": [
@@ -260,7 +170,7 @@
         },
         "stat": {
             "abilityId": 5291,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -268,7 +178,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -283,10 +193,10 @@
                 250
             ],
             "cooldown": [
-                9,
-                7,
-                5,
-                3
+                9.0,
+                7.0,
+                5.0,
+                3.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -302,7 +212,7 @@
         "uri": "weaver",
         "language": {
             "abilityId": 5292,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Time Lapse",
             "description": [
@@ -315,7 +225,6 @@
                 "SCEPTER ALLY CAST RANGE: 600"
             ],
             "lore": "If Skitskurr does not deem the current reality of the world to fit his desires, he simply crawls back in time to right what was wronged.",
-            "aghanimDescription": "Reduces cooldown, and allows Weaver to cast Time Lapse on an ally.",
             "notes": [
                 "Removes most negative buffs from Weaver.",
                 "Time Lapse disjoints projectiles."
@@ -323,7 +232,7 @@
         },
         "stat": {
             "abilityId": 5292,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 57348,
             "unitTargetType": 1,
@@ -331,7 +240,7 @@
             "unitTargetFlags": 16,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -355,14 +264,14 @@
                 0.3
             ],
             "cooldown": [
-                70,
-                55,
-                40
+                70.0,
+                55.0,
+                40.0
             ],
             "manaCost": [
-                150,
-                75,
-                0
+                150.0,
+                75.0,
+                0.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -378,7 +287,7 @@
         "uri": "weaver",
         "language": {
             "abilityId": 6131,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+160 Shukuchi Movement Speed",
             "description": [],
@@ -387,7 +296,7 @@
         },
         "stat": {
             "abilityId": 6131,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -395,7 +304,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -423,7 +332,7 @@
         "uri": "weaver",
         "language": {
             "abilityId": 6200,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+60 Shukuchi Damage",
             "description": [],
@@ -432,7 +341,7 @@
         },
         "stat": {
             "abilityId": 6200,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -440,97 +349,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6386": {
-        "id": 6386,
-        "name": "special_bonus_magic_resistance_35",
-        "uri": "weaver",
-        "language": {
-            "abilityId": 6386,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+35% Magic Resistance",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6386,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6987": {
-        "id": 6987,
-        "name": "special_bonus_mana_break_20",
-        "uri": "weaver",
-        "language": {
-            "abilityId": 6987,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+20 Mana Break",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6987,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -558,7 +377,7 @@
         "uri": "weaver",
         "language": {
             "abilityId": 6988,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.4 Swarm Armor Reduction",
             "description": [],
@@ -567,7 +386,7 @@
         },
         "stat": {
             "abilityId": 6988,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -575,7 +394,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -603,7 +422,7 @@
         "uri": "weaver",
         "language": {
             "abilityId": 6989,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+4 Swarm Attacks to Kill",
             "description": [],
@@ -612,7 +431,7 @@
         },
         "stat": {
             "abilityId": 6989,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -620,7 +439,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -648,7 +467,7 @@
         "uri": "weaver",
         "language": {
             "abilityId": 6990,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1 Geminate Attack",
             "description": [],
@@ -657,7 +476,7 @@
         },
         "stat": {
             "abilityId": 6990,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -665,7 +484,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

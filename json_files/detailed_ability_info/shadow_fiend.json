@@ -5,7 +5,7 @@
         "uri": "nevermore",
         "language": {
             "abilityId": 5059,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Shadowraze",
             "description": [
@@ -24,7 +24,7 @@
         },
         "stat": {
             "abilityId": 5059,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16388,
             "unitTargetType": 0,
@@ -32,7 +32,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,10 +50,147 @@
                 0.55
             ],
             "cooldown": [
-                10
+                10.0
             ],
             "manaCost": [
-                90
+                75.0,
+                80.0,
+                85.0,
+                90.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5060": {
+        "id": 5060,
+        "name": "nevermore_shadowraze2",
+        "uri": "Shadow_Fiend",
+        "language": {
+            "abilityId": 5060,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Shadowraze",
+            "description": [
+                "Shadow Fiend razes the ground a short distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack."
+            ],
+            "attributes": [
+                "RANGE: 450",
+                "BONUS PER STACK: 50 / 60 / 70 / 80",
+                "STACK DURATION: 8",
+                "BASE DAMAGE: 90 / 160 / 230 / 300"
+            ],
+            "lore": "Nevermore's trademark for harvesting souls.",
+            "notes": [
+                "Stack duration refreshes on stack gain."
+            ]
+        },
+        "stat": {
+            "abilityId": 5060,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 16388,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": false,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.55
+            ],
+            "cooldown": [
+                10.0
+            ],
+            "manaCost": [
+                75.0,
+                80.0,
+                85.0,
+                90.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5061": {
+        "id": 5061,
+        "name": "nevermore_shadowraze3",
+        "uri": "Shadow_Fiend",
+        "language": {
+            "abilityId": 5061,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Shadowraze",
+            "description": [
+                "Shadow Fiend razes the ground a longer distance away from him, dealing damage to enemy units in the area. Adds a stacking damage amplifier on the target that causes the enemy to take bonus Shadow Raze damage per stack."
+            ],
+            "attributes": [
+                "RANGE: 700",
+                "BONUS PER STACK: 50 / 60 / 70 / 80",
+                "STACK DURATION: 8",
+                "BASE DAMAGE: 90 / 160 / 230 / 300"
+            ],
+            "lore": "Nevermore's trademark for harvesting souls.",
+            "notes": [
+                "Stack duration refreshes on stack gain."
+            ]
+        },
+        "stat": {
+            "abilityId": 5061,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 16388,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": false,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.55
+            ],
+            "cooldown": [
+                10.0
+            ],
+            "manaCost": [
+                75.0,
+                80.0,
+                85.0,
+                90.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -69,7 +206,7 @@
         "uri": "nevermore",
         "language": {
             "abilityId": 5062,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Necromastery",
             "description": [
@@ -81,14 +218,13 @@
                 "SCEPTER MAX SOULS: 25"
             ],
             "lore": "Harvested souls swirl in and out of the Abysm, empowering the Shadow Fiend to increase the size of his collection.",
-            "aghanimDescription": "Increases max souls.",
             "notes": [
                 "Denies and neutral creeps also provide bonus damage through Necromastery."
             ]
         },
         "stat": {
             "abilityId": 5062,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -96,13 +232,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": false,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -124,7 +260,7 @@
         "uri": "nevermore",
         "language": {
             "abilityId": 5063,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Presence of the Dark Lord",
             "description": [
@@ -141,7 +277,7 @@
         },
         "stat": {
             "abilityId": 5063,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 0,
@@ -149,7 +285,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": false,
             "isOnLearnbar": true,
@@ -180,7 +316,7 @@
         "uri": "nevermore",
         "language": {
             "abilityId": 5064,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Requiem of Souls",
             "description": [
@@ -192,7 +328,6 @@
                 "SCEPTER HEAL ON RETURN: 100%"
             ],
             "lore": "The captured souls of those past slain are released to ravage their former allies.",
-            "aghanimDescription": "Increases Necromastery Max Souls and causes Requiem of Souls to return back to Shadow Fiend. The wave back to Shadow Fiend deals less damage, but heals Shadow Fiend for all the damage it dealt.",
             "notes": [
                 "One line is generated from Shadow Fiend for every 1 souls in his possession, for a maximum of 18 lines (23 lines with Scepter).",
                 "The movement reductions from Requiem of Souls go through spell immunity.",
@@ -201,7 +336,7 @@
         },
         "stat": {
             "abilityId": 5064,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2097156,
             "unitTargetType": 0,
@@ -229,19 +364,19 @@
                 1.67
             ],
             "cooldown": [
-                120,
-                110,
-                100
+                120.0,
+                110.0,
+                100.0
             ],
             "damage": [
-                80,
-                120,
-                160
+                80.0,
+                120.0,
+                160.0
             ],
             "manaCost": [
-                150,
-                175,
-                200
+                150.0,
+                175.0,
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -257,7 +392,7 @@
         "uri": "nevermore",
         "language": {
             "abilityId": 6070,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+120 Shadowraze Damage",
             "description": [],
@@ -266,7 +401,7 @@
         },
         "stat": {
             "abilityId": 6070,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -274,52 +409,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6445": {
-        "id": 6445,
-        "name": "special_bonus_cooldown_reduction_40",
-        "uri": "nevermore",
-        "language": {
-            "abilityId": 6445,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "40% Cooldown Reduction",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6445,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -347,7 +437,7 @@
         "uri": "nevermore",
         "language": {
             "abilityId": 6670,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Damage Per Soul",
             "description": [],
@@ -356,7 +446,7 @@
         },
         "stat": {
             "abilityId": 6670,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -364,7 +454,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -392,7 +482,7 @@
         "uri": "nevermore",
         "language": {
             "abilityId": 6875,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Presence Aura Affects Building",
             "description": [],
@@ -401,7 +491,7 @@
         },
         "stat": {
             "abilityId": 6875,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -409,7 +499,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "6876": {
+        "id": 6876,
+        "name": "special_bonus_unique_nevermore_4",
+        "language": {
+            "abilityId": 6876,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+20 Max Souls",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6876,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -437,7 +571,7 @@
         "uri": "nevermore",
         "language": {
             "abilityId": 6912,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-4 Presence Aura Armor",
             "description": [],
@@ -446,7 +580,7 @@
         },
         "stat": {
             "abilityId": 6912,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -454,7 +588,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

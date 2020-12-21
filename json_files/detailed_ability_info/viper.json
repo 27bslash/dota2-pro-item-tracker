@@ -1,11 +1,55 @@
 {
+    "645": {
+        "id": 645,
+        "name": "special_bonus_unique_viper_5",
+        "language": {
+            "abilityId": 645,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "-11s Nethertoxin Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 645,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
     "5218": {
         "id": 5218,
         "name": "viper_poison_attack",
         "uri": "viper",
         "language": {
             "abilityId": 5218,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Poison Attack",
             "description": [
@@ -23,7 +67,7 @@
         },
         "stat": {
             "abilityId": 5218,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -31,7 +75,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -52,19 +96,19 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                0
+                0.0
             ],
             "damage": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "manaCost": [
-                25
+                25.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -80,7 +124,7 @@
         "uri": "viper",
         "language": {
             "abilityId": 5219,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Nethertoxin",
             "description": [
@@ -98,7 +142,7 @@
         },
         "stat": {
             "abilityId": 5219,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -106,7 +150,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -127,13 +171,10 @@
                 0.2
             ],
             "cooldown": [
-                14
+                14.0
             ],
             "manaCost": [
-                70,
-                80,
-                90,
-                100
+                85.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -149,7 +190,7 @@
         "uri": "viper",
         "language": {
             "abilityId": 5220,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Corrosive Skin",
             "description": [
@@ -169,7 +210,7 @@
         },
         "stat": {
             "abilityId": 5220,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -177,7 +218,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 10,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -205,7 +246,7 @@
         "uri": "viper",
         "language": {
             "abilityId": 5221,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Viper Strike",
             "description": [
@@ -221,12 +262,11 @@
                 "SCEPTER COOLDOWN: 10"
             ],
             "lore": "Once used to slay his sadistic summoner, the most powerful of Netherdrake infections spreads through the veins of those foolish enough to cross Viper.",
-            "aghanimDescription": "Decreases mana cost and cooldown, and increases cast range.",
             "notes": []
         },
         "stat": {
             "abilityId": 5221,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -234,7 +274,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 1,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -257,14 +297,14 @@
                 0.3
             ],
             "cooldown": [
-                50,
-                40,
-                30
+                50.0,
+                40.0,
+                30.0
             ],
             "manaCost": [
-                125,
-                175,
-                250
+                125.0,
+                175.0,
+                250.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -280,7 +320,7 @@
         "uri": "viper",
         "language": {
             "abilityId": 6156,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5 Corrosive Skin Stats",
             "description": [],
@@ -289,7 +329,7 @@
         },
         "stat": {
             "abilityId": 6156,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -297,7 +337,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -325,7 +365,7 @@
         "uri": "viper",
         "language": {
             "abilityId": 6165,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80 Viper Strike DPS",
             "description": [],
@@ -334,7 +374,7 @@
         },
         "stat": {
             "abilityId": 6165,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -342,97 +382,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6503": {
-        "id": 6503,
-        "name": "special_bonus_armor_20",
-        "uri": "viper",
-        "language": {
-            "abilityId": 6503,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+20 Armor",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6503,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6565": {
-        "id": 6565,
-        "name": "special_bonus_spell_lifesteal_8",
-        "uri": "viper",
-        "language": {
-            "abilityId": 6565,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "8% Spell Lifesteal",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6565,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -460,7 +410,7 @@
         "uri": "viper",
         "language": {
             "abilityId": 6819,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Nethertoxin Silences",
             "description": [],
@@ -469,7 +419,7 @@
         },
         "stat": {
             "abilityId": 6819,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -477,7 +427,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -505,7 +455,7 @@
         "uri": "viper",
         "language": {
             "abilityId": 6820,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Poison Attack Affects Buildings",
             "description": [],
@@ -514,7 +464,7 @@
         },
         "stat": {
             "abilityId": 6820,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -522,7 +472,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -542,51 +492,6 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
-    },
-    "8017": {
-        "id": 8017,
-        "name": "special_bonus_attack_damage_160",
-        "uri": "viper",
-        "language": {
-            "abilityId": 8017,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+160 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 8017,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
         "isTalent": true
     }
 }

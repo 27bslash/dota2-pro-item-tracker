@@ -1,5 +1,5 @@
 {% extends 'search.html' %} {%block content%}
-<script>
+<script  async defer>
   $(document).ready(function () {
     document.getElementsByTagName("html")[0].style.visibility = "visible";
     let table = $(".item-table").DataTable({
@@ -374,5 +374,5 @@
     </table>
   </div>
 </main>
-<script src="{{ url_for('static', filename='tooltip.js') }}"></script>
+<script src="{{ url_for('static', filename='tooltip.js') }}"  async defer></script>
 {%endblock%}

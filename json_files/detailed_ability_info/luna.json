@@ -1,11 +1,71 @@
 {
+    "337": {
+        "id": 337,
+        "name": "luna_lunar_grace",
+        "language": {
+            "abilityId": 337,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Lunar Blessing",
+            "description": [
+                "Dispels negative buffs and grants you bonus attack speed. Has an increased effect during the night."
+            ],
+            "attributes": [
+                "ATTACK SPEED: 30 / 45 / 60 / 75",
+                "NIGHT MULTIPLIER: 2",
+                "DURATION: 5"
+            ],
+            "lore": "The Goddess of the Moon smiles upon her kin.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 337,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                30.0,
+                25.0,
+                20.0,
+                15.0
+            ],
+            "manaCost": [
+                40.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5222": {
         "id": 5222,
         "name": "luna_lucent_beam",
         "uri": "luna",
         "language": {
             "abilityId": 5222,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Lucent Beam",
             "description": [
@@ -20,7 +80,7 @@
         },
         "stat": {
             "abilityId": 5222,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -49,16 +109,16 @@
                 0.4
             ],
             "cooldown": [
-                6,
-                6,
-                6,
-                6
+                6.0,
+                6.0,
+                6.0,
+                6.0
             ],
             "manaCost": [
-                90,
-                100,
-                110,
-                120
+                90.0,
+                100.0,
+                110.0,
+                120.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -74,7 +134,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 5223,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Moon Glaives",
             "description": [
@@ -83,7 +143,7 @@
             "attributes": [
                 "BOUNCE RADIUS: 500",
                 "BOUNCES: 3 / 4 / 5 / 6",
-                "DAMAGE REDUCTION PER BOUNCE: 52% / 46% / 40% / 34%"
+                "DAMAGE REDUCTION PER BOUNCE: 50% / 44% / 38% / 32%"
             ],
             "lore": "Carefully sharpened, Luna's boomerang-like weapon cuts a wide swath through enemy numbers.",
             "notes": [
@@ -92,7 +152,7 @@
         },
         "stat": {
             "abilityId": 5223,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -100,7 +160,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -128,23 +188,23 @@
         "uri": "luna",
         "language": {
             "abilityId": 5224,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Lunar Blessing",
             "description": [
-                "Increases the attack damage for Luna and nearby allied ranged player units. Luna is also blessed with increased vision range at night."
+                "Increases the attack damage for Luna and nearby allied heroes. Luna is also blessed with increased vision range at night."
             ],
             "attributes": [
                 "BLESSING RADIUS: 1200",
-                "BASE DAMAGE BONUS: 10% / 18% / 26% / 34%",
-                "NIGHT VISION: 200 / 400 / 600 / 800"
+                "DAMAGE BONUS: 5 / 15 / 25 / 35",
+                "NIGHT VISION: 250 / 500 / 750 / 1000"
             ],
             "lore": "The Goddess of the Moon smiles upon her kin.",
             "notes": []
         },
         "stat": {
             "abilityId": 5224,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -152,7 +212,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -180,7 +240,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 5225,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Eclipse",
             "description": [
@@ -195,7 +255,6 @@
                 "SCEPTER CAST RANGE: 2500"
             ],
             "lore": "In times of great need, Selemene herself descends into the world, blocking out the light and hope of the opposed.",
-            "aghanimDescription": "Allows Luna to cast Eclipse on an allied unit or herself and have its effects follow them, or cast it on an area. Also increases total beams and duration, removes the limit on beams per unit, and makes the beams appear twice as fast.",
             "notes": [
                 "Eclipse doesn't work if Luna doesn't have any points in Lucent Beam.",
                 "Beams will stop if Luna is killed.",
@@ -205,7 +264,7 @@
         },
         "stat": {
             "abilityId": 5225,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 3,
@@ -213,7 +272,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -236,12 +295,12 @@
                 0.6
             ],
             "cooldown": [
-                140
+                140.0
             ],
             "manaCost": [
-                150,
-                200,
-                250
+                150.0,
+                200.0,
+                250.0
             ],
             "isUltimate": true,
             "duration": "2.4 4.2 6.0",
@@ -251,58 +310,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6121": {
-        "id": 6121,
-        "name": "special_bonus_lifesteal_30",
-        "uri": "luna",
-        "language": {
-            "abilityId": 6121,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "30% Lifesteal",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6121,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6127": {
         "id": 6127,
         "name": "special_bonus_unique_luna_2",
         "uri": "luna",
         "language": {
             "abilityId": 6127,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-3.5s Lucent Beam Cooldown",
             "description": [],
@@ -311,7 +325,7 @@
         },
         "stat": {
             "abilityId": 6127,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -319,7 +333,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -347,7 +361,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 6180,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+100 Lucent Beam Damage",
             "description": [],
@@ -356,7 +370,7 @@
         },
         "stat": {
             "abilityId": 6180,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -364,97 +378,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6213": {
-        "id": 6213,
-        "name": "special_bonus_cast_range_300",
-        "uri": "luna",
-        "language": {
-            "abilityId": 6213,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+300 Cast Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6213,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6384": {
-        "id": 6384,
-        "name": "special_bonus_cast_range_400",
-        "uri": "luna",
-        "language": {
-            "abilityId": 6384,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+400 Cast Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6384,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -482,7 +406,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 6682,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+14 Lunar Blessing Attributes",
             "description": [],
@@ -491,7 +415,7 @@
         },
         "stat": {
             "abilityId": 6682,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -499,7 +423,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -521,22 +445,21 @@
         "drawMatchPage": true,
         "isTalent": true
     },
-    "6930": {
-        "id": 6930,
-        "name": "special_bonus_cast_range_350",
-        "uri": "luna",
+    "7047": {
+        "id": 7047,
+        "name": "special_bonus_unique_luna_4",
         "language": {
-            "abilityId": 6930,
-            "gameVersionId": 135,
+            "abilityId": 7047,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+350 Cast Range",
+            "displayName": "+0.25s Lucent Beam Ministun",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6930,
-            "gameVersionId": 135,
+            "abilityId": 7047,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -544,7 +467,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -572,7 +495,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 7055,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.2s Eclipse Lucent Ministun",
             "description": [],
@@ -581,7 +504,7 @@
         },
         "stat": {
             "abilityId": 7055,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -589,7 +512,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -609,51 +532,6 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
-    },
-    "8011": {
-        "id": 8011,
-        "name": "special_bonus_lifesteal_35",
-        "uri": "luna",
-        "language": {
-            "abilityId": 8011,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "35% Lifesteal",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 8011,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
         "isTalent": true
     }
 }

@@ -5,41 +5,37 @@
         "uri": "tiny",
         "language": {
             "abilityId": 296,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Craggy Exterior",
             "description": [
-                "Causes damage to bounce back on Tiny's attackers. Melee enemies that attack Tiny have a chance of being stunned. The proc chance improves with each level in Grow."
+                "Enemies that attack Tiny have a 20% chance of being stunned for 1.0 second and taking 100 damage. Affects enemies within 400 range of him. Procs after an attack impacts, and does not affect spell immune enemies."
             ],
             "attributes": [
-                "ARMOR: 2 / 4 / 6 / 8",
-                "CHANCE TO STUN: 25%",
-                "STUN DURATION: 0.5 / 1.0 / 1.5 / 2.0",
-                "DAMAGE: 60 / 80 / 100 / 120"
+                "CHANCE TO STUN: 20%",
+                "STUN DURATION: 1.0",
+                "DAMAGE: 100"
             ],
-            "lore": "Melee warriors tend to find attacking the Stone Giant largely ineffective.",
-            "notes": [
-                "The damage and stun occur when an attack lands."
-            ]
+            "notes": []
         },
         "stat": {
             "abilityId": 296,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
-            "behavior": 2,
+            "behavior": 0,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 35,
             "isOnCastbar": true,
             "isOnLearnbar": true,
-            "fightRecapLevel": 0,
+            "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
@@ -60,16 +56,16 @@
         "uri": "tiny",
         "language": {
             "abilityId": 558,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+3 Tree Grab Attack Charges",
+            "displayName": "+5 Tree Grab Attack Charges",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 558,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -77,7 +73,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -105,11 +101,11 @@
         "uri": "tiny",
         "language": {
             "abilityId": 5106,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Avalanche",
             "description": [
-                "Bombards an area with rocks, continously doing small intervals of damage and stun to enemy units. Avalanche does 3x damage to units being tossed."
+                "Bombards an area with rocks, continously doing small intervals of damage and stun to enemy units. Avalanche does 2.5x damage to units being tossed."
             ],
             "attributes": [
                 "RADIUS: 325 / 350 / 375 / 400",
@@ -121,7 +117,7 @@
         },
         "stat": {
             "abilityId": 5106,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -129,7 +125,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -147,22 +143,22 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                26,
-                22,
-                18,
-                14
+                26.0,
+                22.0,
+                18.0,
+                14.0
             ],
             "manaCost": [
-                120,
-                120,
-                120,
-                120
+                120.0,
+                120.0,
+                120.0,
+                120.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -178,7 +174,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 5107,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Toss",
             "description": [
@@ -197,7 +193,7 @@
         },
         "stat": {
             "abilityId": 5107,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4194344,
             "unitTargetType": 8,
@@ -226,22 +222,22 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                17,
-                15,
-                13,
-                11
+                17.0,
+                15.0,
+                13.0,
+                11.0
             ],
             "manaCost": [
-                90,
-                100,
-                110,
-                120
+                90.0,
+                100.0,
+                110.0,
+                120.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -257,7 +253,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 5108,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Tree Grab",
             "description": [
@@ -272,14 +268,13 @@
                 "THROW SPLASH: 150%"
             ],
             "lore": "Sticks and stones break all the bones, with structures sure to follow.",
-            "aghanimDescription": "Grants new ability: Tree Volley. Tiny throws random trees within range towards the targeted aoe.",
             "notes": [
                 "The cooldown begins when the tree is thrown."
             ]
         },
         "stat": {
             "abilityId": 5108,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 72,
@@ -287,7 +282,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 35,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -308,13 +303,13 @@
                 0.2
             ],
             "cooldown": [
-                25,
-                20,
-                15,
-                10
+                16.0,
+                14.0,
+                12.0,
+                10.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -330,7 +325,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 5109,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Grow",
             "description": [
@@ -338,16 +333,15 @@
             ],
             "attributes": [
                 "BONUS ARMOR: 10 / 16 / 22",
-                "BONUS DAMAGE: 25 / 50 / 75",
+                "BONUS DAMAGE: 30 / 70 / 110",
                 "ATTACK SPEED REDUCTION: 20 / 35 / 50"
             ],
             "lore": "Watching a hill become a mountain is awe-inspiring - especially if the mountain begins laying waste to adversaries.",
-            "aghanimDescription": "Grants you a new channeling ability, Tree Volley. Tiny throws a random tree within range towards the targeted aoe. Deals Tiny's attack damage plus a bonus to enemies in that area with each tree thrown.",
             "notes": []
         },
         "stat": {
             "abilityId": 5109,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -355,7 +349,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -383,7 +377,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 6153,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80 Avalanche Damage",
             "description": [],
@@ -392,7 +386,7 @@
         },
         "stat": {
             "abilityId": 6153,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -400,52 +394,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6567": {
-        "id": 6567,
-        "name": "special_bonus_intelligence_14",
-        "uri": "tiny",
-        "language": {
-            "abilityId": 6567,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+14 Intelligence",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6567,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -473,7 +422,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 6932,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "3 Toss Charges",
             "description": [],
@@ -482,7 +431,7 @@
         },
         "stat": {
             "abilityId": 6932,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -490,7 +439,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -518,16 +467,16 @@
         "uri": "tiny",
         "language": {
             "abilityId": 6933,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-7s Avalanche Cooldown",
+            "displayName": "-8s Avalanche Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6933,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -535,7 +484,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -563,7 +512,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 6934,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-7s Tree Grab CD",
             "description": [],
@@ -572,7 +521,7 @@
         },
         "stat": {
             "abilityId": 6934,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -580,7 +529,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -602,13 +551,70 @@
         "drawMatchPage": true,
         "isTalent": true
     },
+    "6937": {
+        "id": 6937,
+        "name": "tiny_toss_tree",
+        "language": {
+            "abilityId": 6937,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Tree Throw",
+            "description": [
+                "Throws the tree at the target unit, proccing your attack on it and splashing damage around the target."
+            ],
+            "attributes": [
+                "CAST RANGE: 1300",
+                "SPLASH RADIUS: 275",
+                "SPLASH DAMAGE: 150%"
+            ],
+            "lore": "Even enemies can share in Tiny's arbor ardor.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 6937,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1300
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
     "7005": {
         "id": 7005,
         "name": "special_bonus_unique_tiny_5",
         "uri": "tiny",
         "language": {
             "abilityId": 7005,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Toss Requires No Target",
             "description": [
@@ -619,7 +625,7 @@
         },
         "stat": {
             "abilityId": 7005,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -627,7 +633,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -648,5 +654,72 @@
         },
         "drawMatchPage": true,
         "isTalent": true
+    },
+    "7850": {
+        "id": 7850,
+        "name": "tiny_tree_channel",
+        "language": {
+            "abilityId": 7850,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Tree Volley",
+            "description": [
+                "Tiny channels this ability to throw random trees within range towards the targeted aoe. Deals Tiny's attack damage plus a bonus to enemies in that area with each tree thrown."
+            ],
+            "attributes": [
+                "TARGET AOE: 400",
+                "MAX CHANNEL TIME: ",
+                "TREE GRAB RADIUS: 525",
+                "THROW INTERVAL: 0.4"
+            ],
+            "lore": "Sticks thrown from stones are like to shatter many bones.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7850,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1300
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "channelTime": [
+                2.4
+            ],
+            "cooldown": [
+                15.0
+            ],
+            "manaCost": [
+                200.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
     }
 }

@@ -1,20 +1,19 @@
 {
-    "443": {
-        "id": 443,
-        "name": "special_bonus_cast_range_225",
-        "uri": "zuus",
+    "611": {
+        "id": 611,
+        "name": "special_bonus_unique_zeus_4",
         "language": {
-            "abilityId": 443,
-            "gameVersionId": 135,
+            "abilityId": 611,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+225 Cast Range",
+            "displayName": "+100 Thundergod's Wrath Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 443,
-            "gameVersionId": 135,
+            "abilityId": 611,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +21,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,13 +43,67 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "641": {
+        "id": 641,
+        "name": "zuus_heavenly_jump",
+        "language": {
+            "abilityId": 641,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Heavenly Jump",
+            "description": [
+                "Jumps forward a distance of 350 units. Midway through the jump a Arc Lightning is cast on a an enemy within it\u2019s cast range."
+            ],
+            "attributes": [
+                "DISTANCE: 350"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 641,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 64,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                6.0
+            ],
+            "manaCost": [
+                75.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5110": {
         "id": 5110,
         "name": "zuus_arc_lightning",
         "uri": "zuus",
         "language": {
             "abilityId": 5110,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Arc Lightning",
             "description": [
@@ -65,7 +118,7 @@
         },
         "stat": {
             "abilityId": 5110,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -73,7 +126,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -97,7 +150,7 @@
                 1.6
             ],
             "manaCost": [
-                80
+                80.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -113,7 +166,7 @@
         "uri": "zuus",
         "language": {
             "abilityId": 5111,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Lightning Bolt",
             "description": [
@@ -130,7 +183,7 @@
         },
         "stat": {
             "abilityId": 5111,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 24,
             "unitTargetType": 3,
@@ -165,22 +218,22 @@
                 0.4
             ],
             "cooldown": [
-                6,
-                6,
-                6,
-                6
+                6.0,
+                6.0,
+                6.0,
+                6.0
             ],
             "damage": [
-                125,
-                200,
-                275,
-                350
+                125.0,
+                200.0,
+                275.0,
+                350.0
             ],
             "manaCost": [
-                125,
-                130,
-                135,
-                140
+                125.0,
+                130.0,
+                135.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -196,7 +249,7 @@
         "uri": "zuus",
         "language": {
             "abilityId": 5112,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Static Field",
             "description": [
@@ -213,7 +266,7 @@
         },
         "stat": {
             "abilityId": 5112,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -221,7 +274,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -249,7 +302,7 @@
         "uri": "zuus",
         "language": {
             "abilityId": 5113,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Thundergod's Wrath",
             "description": [
@@ -261,12 +314,11 @@
                 "DURATION: 3.0 / 3.0 / 3.0 / 3.0"
             ],
             "lore": "The Lord of Heaven smites all who oppose him, near or far.",
-            "aghanimDescription": "Grants a new ability, Nimbus, creating a cloud that automatically casts Lightning Bolt on nearby enemies.",
             "notes": []
         },
         "stat": {
             "abilityId": 5113,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -274,7 +326,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -295,12 +347,14 @@
                 0.4
             ],
             "cooldown": [
-                120
+                130.0,
+                125.0,
+                120.0
             ],
             "manaCost": [
-                250,
-                350,
-                450
+                300.0,
+                400.0,
+                500.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -316,7 +370,7 @@
         "uri": "zuus",
         "language": {
             "abilityId": 6157,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.2% Static Field Damage",
             "description": [],
@@ -325,7 +379,7 @@
         },
         "stat": {
             "abilityId": 6157,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -333,7 +387,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -361,7 +415,7 @@
         "uri": "zuus",
         "language": {
             "abilityId": 6325,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Nimbus",
             "description": [
@@ -382,7 +436,7 @@
         },
         "stat": {
             "abilityId": 6325,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -411,10 +465,10 @@
                 0.2
             ],
             "cooldown": [
-                45
+                45.0
             ],
             "manaCost": [
-                325
+                325.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -430,16 +484,16 @@
         "uri": "zuus",
         "language": {
             "abilityId": 6501,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+115 Arc Lightning Damage",
+            "displayName": "+100 Arc Lightning Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6501,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -447,7 +501,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -475,7 +529,7 @@
         "uri": "zuus",
         "language": {
             "abilityId": 6518,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.4s Lightning Bolt Ministun",
             "description": [],
@@ -484,7 +538,7 @@
         },
         "stat": {
             "abilityId": 6518,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -492,52 +546,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7117": {
-        "id": 7117,
-        "name": "special_bonus_cast_range_275",
-        "uri": "zuus",
-        "language": {
-            "abilityId": 7117,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+275 Cast Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7117,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

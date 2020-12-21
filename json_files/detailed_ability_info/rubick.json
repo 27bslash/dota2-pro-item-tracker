@@ -5,16 +5,16 @@
         "uri": "rubick",
         "language": {
             "abilityId": 518,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "Fade Bolt Steals Hero Damage",
+            "displayName": "Fade Bolt Borrows Hero Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 518,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,37 +44,39 @@
         "drawMatchPage": false,
         "isTalent": true
     },
-    "548": {
-        "id": 548,
-        "name": "special_bonus_attack_base_damage_50",
-        "uri": "rubick",
+    "647": {
+        "id": 647,
+        "name": "rubick_telekinesis_land_self",
         "language": {
-            "abilityId": 548,
-            "gameVersionId": 135,
+            "abilityId": 647,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+50 Base Damage",
-            "description": [],
+            "displayName": "Telekinesis Land",
+            "description": [
+                "Chooses the location you will land when Telekinesis finishes."
+            ],
             "attributes": [],
+            "lore": "",
             "notes": []
         },
         "stat": {
-            "abilityId": 548,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 647,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 67633,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
@@ -87,7 +89,7 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": false,
-        "isTalent": true
+        "isTalent": false
     },
     "5448": {
         "id": 5448,
@@ -95,7 +97,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5448,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Telekinesis",
             "description": [
@@ -116,7 +118,7 @@
         },
         "stat": {
             "abilityId": 5448,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -124,7 +126,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -151,13 +153,13 @@
                 0.1
             ],
             "cooldown": [
-                34,
-                30,
-                26,
-                22
+                34.0,
+                30.0,
+                26.0,
+                22.0
             ],
             "manaCost": [
-                125
+                125.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -173,7 +175,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5449,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Telekinesis Land",
             "description": [
@@ -185,7 +187,7 @@
         },
         "stat": {
             "abilityId": 5449,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 49,
             "unitTargetType": 0,
@@ -193,7 +195,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -221,7 +223,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5450,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Fade Bolt",
             "description": [
@@ -238,7 +240,7 @@
         },
         "stat": {
             "abilityId": 5450,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -273,16 +275,16 @@
                 0.1
             ],
             "cooldown": [
-                16,
-                14,
-                12,
-                10
+                16.0,
+                14.0,
+                12.0,
+                10.0
             ],
             "manaCost": [
-                120,
-                130,
-                140,
-                150
+                120.0,
+                130.0,
+                140.0,
+                150.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -298,7 +300,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5451,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Null Field",
             "description": [
@@ -315,7 +317,7 @@
         },
         "stat": {
             "abilityId": 5451,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 526340,
             "unitTargetType": 0,
@@ -323,7 +325,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -338,7 +340,7 @@
                 250
             ],
             "cooldown": [
-                30
+                30.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -354,25 +356,25 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5452,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Spell Steal",
             "description": [
-                "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies."
+                "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies, and stolen spells last longer on enemies."
             ],
             "attributes": [
                 "DURATION: 180.0 / 240.0 / 300.0",
-                "SCEPTER COOLDOWN: 2"
+                "SCEPTER COOLDOWN: 6 / 4 / 2",
+                "STOLEN DEBUFF AMP: 10% / 20% / 30%"
             ],
             "lore": "...but even their lesser magics can be a source of much utility.",
-            "aghanimDescription": "Decreases cooldown, increases cast range and upgrades the spell to the Scepter level.",
             "notes": [
                 "Cannot steal item abilities."
             ]
         },
         "stat": {
             "abilityId": 5452,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 1,
@@ -380,7 +382,7 @@
             "unitTargetFlags": 20,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -406,14 +408,14 @@
                 0.1
             ],
             "cooldown": [
-                20,
-                18,
-                16
+                26.0,
+                20.0,
+                14.0
             ],
             "manaCost": [
-                25,
-                25,
-                25
+                25.0,
+                25.0,
+                25.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -423,30 +425,31 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5902": {
-        "id": 5902,
-        "name": "special_bonus_hp_150",
-        "uri": "rubick",
+    "5453": {
+        "id": 5453,
+        "name": "rubick_empty1",
         "language": {
-            "abilityId": 5902,
-            "gameVersionId": 135,
+            "abilityId": 5453,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+150 Health",
-            "description": [],
+            "displayName": "Stolen Spell",
+            "description": [
+                "Spells acquired with Spell Steal will replace this slot."
+            ],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 5902,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 5453,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 66,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -466,7 +469,182 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
+    },
+    "5454": {
+        "id": 5454,
+        "name": "rubick_empty2",
+        "language": {
+            "abilityId": 5454,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Stolen Spell",
+            "description": [
+                "Spells acquired with Spell Steal will replace this slot."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5454,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 66,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5455": {
+        "id": 5455,
+        "name": "rubick_hidden1",
+        "language": {
+            "abilityId": 5455,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5455,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 65,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5456": {
+        "id": 5456,
+        "name": "rubick_hidden2",
+        "language": {
+            "abilityId": 5456,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5456,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 65,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5457": {
+        "id": 5457,
+        "name": "rubick_hidden3",
+        "language": {
+            "abilityId": 5457,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5457,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 65,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
     },
     "6041": {
         "id": 6041,
@@ -474,7 +652,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6041,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+240 Telekinesis Land Distance",
             "description": [],
@@ -483,7 +661,7 @@
         },
         "stat": {
             "abilityId": 6041,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -491,7 +669,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -519,7 +697,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6862,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-15% Fade Bolt Damage Reduction",
             "description": [],
@@ -528,7 +706,7 @@
         },
         "stat": {
             "abilityId": 6862,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -536,7 +714,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -564,7 +742,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6863,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-4s Fade Bolt Cooldown",
             "description": [],
@@ -573,7 +751,7 @@
         },
         "stat": {
             "abilityId": 6863,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -581,7 +759,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -609,7 +787,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6864,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-12s Telekinesis Cooldown",
             "description": [],
@@ -618,7 +796,7 @@
         },
         "stat": {
             "abilityId": 6864,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -626,7 +804,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -654,7 +832,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6870,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40% Spell Amp For Stolen Spells",
             "description": [],
@@ -663,7 +841,7 @@
         },
         "stat": {
             "abilityId": 6870,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -671,7 +849,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -699,22 +877,22 @@
         "uri": "rubick",
         "language": {
             "abilityId": 7320,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Arcane Supremacy",
             "description": [
-                "Rubick's mastery of the arcane allows him to deal more spell damage and create spells that last longer on enemies."
+                "Rubick's mastery of the arcane allows him to have a larger cast range and increased potency."
             ],
             "attributes": [
-                "SPELL AMPLIFICATION: 14% / 18% / 22% / 26%",
-                "DEBUFF AMPLIFICATION: 16% / 24% / 32% / 40%"
+                "CAST RANGE: 75 / 125 / 175 / 225",
+                "SPELL AMP: 14% / 18% / 22% / 26%"
             ],
             "lore": "Not every magus can be a Grand Magus...",
             "notes": []
         },
         "stat": {
             "abilityId": 7320,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -722,7 +900,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

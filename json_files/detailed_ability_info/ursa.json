@@ -5,7 +5,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 424,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Overpower Attacks",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 424,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,20 +44,83 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "5302": {
+        "id": 5302,
+        "name": "polar_furbolg_ursa_warrior_thunder_clap",
+        "language": {
+            "abilityId": 5302,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Thunder Clap",
+            "description": [
+                "The Hellbear Smasher claps his massive hands together, creating a deafening blast. The blast damages nearby enemies and throws them off their footing."
+            ],
+            "attributes": [
+                "RADIUS: 300",
+                "MOVE SLOW: -25%",
+                "ATTACK SLOW: -25",
+                "DURATION: 3.0"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5302,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                12.0
+            ],
+            "damage": [
+                150.0
+            ],
+            "manaCost": [
+                50.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
     "5357": {
         "id": 5357,
         "name": "ursa_earthshock",
         "uri": "ursa",
         "language": {
             "abilityId": 5357,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Earthshock",
             "description": [
                 "Ursa leaps forward 250 units and slams the earth, causing a powerful shock to damage and slow all enemy units in a nearby area for 4.0 seconds."
             ],
             "attributes": [
-                "SLOW: -10% / -20% / -30% / -40%",
+                "SLOW: -16% / -24% / -32% / -40%",
                 "RADIUS: 385"
             ],
             "lore": "The very steps of a male ursine shake the ground as well as the resolve of opposing warriors.",
@@ -65,7 +128,7 @@
         },
         "stat": {
             "abilityId": 5357,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 18436,
             "unitTargetType": 0,
@@ -73,7 +136,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -90,23 +153,20 @@
             "castRangeBuffer": [
                 250
             ],
-            "castPoint": [
-                0
-            ],
             "cooldown": [
-                11,
-                10,
-                9,
-                8
+                11.0,
+                10.0,
+                9.0,
+                8.0
             ],
             "damage": [
-                75,
-                125,
-                175,
-                225
+                75.0,
+                125.0,
+                175.0,
+                225.0
             ],
             "manaCost": [
-                85
+                85.0
             ],
             "isUltimate": false,
             "duration": "4.0",
@@ -122,7 +182,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 5358,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Overpower",
             "description": [
@@ -140,7 +200,7 @@
         },
         "stat": {
             "abilityId": 5358,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16388,
             "unitTargetType": 0,
@@ -148,7 +208,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -172,16 +232,16 @@
                 0.3
             ],
             "cooldown": [
-                15,
-                13,
-                11,
-                9
+                12.0,
+                11.0,
+                10.0,
+                9.0
             ],
             "manaCost": [
-                55,
-                60,
-                65,
-                70
+                30.0,
+                40.0,
+                50.0,
+                60.0
             ],
             "isUltimate": false,
             "duration": "20",
@@ -197,7 +257,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 5359,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Fury Swipes",
             "description": [
@@ -213,7 +273,7 @@
         },
         "stat": {
             "abilityId": 5359,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -221,7 +281,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -249,7 +309,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 5360,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Enrage",
             "description": [
@@ -264,12 +324,11 @@
                 "SCEPTER COOLDOWN: 30 / 24 / 18"
             ],
             "lore": "Ulfsaar succumbs to his ancient spirit, becoming the most ferocious creature on the battlefield.",
-            "aghanimDescription": "Reduces cooldown and allows Ursa to use Enrage while disabled.",
             "notes": []
         },
         "stat": {
             "abilityId": 5360,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -277,7 +336,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -295,14 +354,14 @@
                 250
             ],
             "cooldown": [
-                70,
-                50,
-                30
+                70.0,
+                50.0,
+                30.0
             ],
             "manaCost": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -318,7 +377,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 6132,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+12 Fury Swipes Damage",
             "description": [],
@@ -327,7 +386,7 @@
         },
         "stat": {
             "abilityId": 6132,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -335,142 +394,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6169": {
-        "id": 6169,
-        "name": "special_bonus_agility_16",
-        "uri": "ursa",
-        "language": {
-            "abilityId": 6169,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+16 Agility",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6169,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6170": {
-        "id": 6170,
-        "name": "special_bonus_agility_14",
-        "uri": "ursa",
-        "language": {
-            "abilityId": 6170,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+14 Agility",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6170,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6252": {
-        "id": 6252,
-        "name": "special_bonus_all_stats_14",
-        "uri": "ursa",
-        "language": {
-            "abilityId": 6252,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+14 All Stats",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6252,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -498,7 +422,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 6973,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-3s Earthshock Cooldown",
             "description": [],
@@ -507,7 +431,7 @@
         },
         "stat": {
             "abilityId": 6973,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -515,7 +439,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -543,7 +467,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 6974,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.2s Enrage Duration",
             "description": [],
@@ -552,7 +476,7 @@
         },
         "stat": {
             "abilityId": 6974,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -560,7 +484,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -588,7 +512,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 6975,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+20s Fury Swipes Reset Time",
             "description": [],
@@ -597,7 +521,7 @@
         },
         "stat": {
             "abilityId": 6975,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -605,7 +529,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -633,7 +557,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 6976,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+480 AoE Earthshock",
             "description": [],
@@ -642,7 +566,7 @@
         },
         "stat": {
             "abilityId": 6976,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -650,7 +574,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -678,7 +602,7 @@
         "uri": "ursa",
         "language": {
             "abilityId": 7133,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Enrage gains 80% Status Resistance",
             "description": [],
@@ -687,7 +611,7 @@
         },
         "stat": {
             "abilityId": 7133,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -695,52 +619,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7386": {
-        "id": 7386,
-        "name": "special_bonus_agility_12",
-        "uri": "ursa",
-        "language": {
-            "abilityId": 7386,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+12 Agility",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7386,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

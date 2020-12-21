@@ -1,15 +1,73 @@
 {
+    "694": {
+        "id": 694,
+        "name": "sniper_concussive_grenade",
+        "language": {
+            "abilityId": 694,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Concussive Grenade",
+            "description": [
+                "Grants Concussive Grenade. Knocks enemies back 425 distance, slowing them by 50%% and disarming them for 3 seconds. Radius: 375"
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 694,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                550
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                20.0
+            ],
+            "manaCost": [
+                75.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5154": {
         "id": 5154,
         "name": "sniper_shrapnel",
         "uri": "sniper",
         "language": {
             "abilityId": 5154,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Shrapnel",
             "description": [
-                "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 40 seconds."
+                "Consumes a charge to launch a ball of shrapnel that showers the target area in explosive pellets. Enemies are subject to damage and slowed movement. Reveals the targeted area. Shrapnel charges restore every 35 seconds."
             ],
             "attributes": [
                 "MOVEMENT SLOW: -12% / -18% / -24% / -30%",
@@ -26,7 +84,7 @@
         },
         "stat": {
             "abilityId": 5154,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -58,15 +116,15 @@
                 0.3
             ],
             "cooldown": [
-                0
+                0.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "3",
-            "chargeRestoreTime": "40"
+            "chargeRestoreTime": "35"
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -77,7 +135,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 5155,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Headshot",
             "description": [
@@ -94,7 +152,7 @@
         },
         "stat": {
             "abilityId": 5155,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -102,7 +160,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -117,10 +175,10 @@
                 250
             ],
             "damage": [
-                20,
-                50,
-                80,
-                110
+                20.0,
+                50.0,
+                80.0,
+                110.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -136,7 +194,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 5156,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Take Aim",
             "description": [
@@ -150,7 +208,7 @@
         },
         "stat": {
             "abilityId": 5156,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -158,7 +216,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -176,19 +234,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                9,
-                8,
-                7,
-                6
+                9.0,
+                8.0,
+                7.0,
+                6.0
             ],
             "manaCost": [
-                30
+                30.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -204,7 +262,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 5157,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Assassinate",
             "description": [
@@ -216,7 +274,6 @@
                 "SCEPTER AIM DURATION: 0.5"
             ],
             "lore": "In order to fulfill the prophecy and return to his home town, Kardel must make another shot as perfect as the one on the day of his ancient test.",
-            "aghanimDescription": "Causes Assassinate to fire quicker and disable the enemy target.",
             "notes": [
                 "Crosshair effect is only visible to allies.",
                 "Invisibility doesn't disjoint the projectile.",
@@ -225,7 +282,7 @@
         },
         "stat": {
             "abilityId": 5157,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2097160,
             "unitTargetType": 3,
@@ -233,7 +290,7 @@
             "unitTargetFlags": 32,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 0,
+            "modifierSupportValue": 0.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -251,24 +308,24 @@
                 600
             ],
             "castPoint": [
-                2,
-                2,
-                2
+                2.0,
+                2.0,
+                2.0
             ],
             "cooldown": [
-                20,
-                15,
-                10
+                20.0,
+                15.0,
+                10.0
             ],
             "damage": [
-                320,
-                485,
-                650
+                320.0,
+                485.0,
+                650.0
             ],
             "manaCost": [
-                175,
-                225,
-                275
+                175.0,
+                225.0,
+                275.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -284,7 +341,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 6198,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5 Shrapnel Charges",
             "description": [],
@@ -293,7 +350,7 @@
         },
         "stat": {
             "abilityId": 6198,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -301,7 +358,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -329,7 +386,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 6305,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+24 Shrapnel DPS",
             "description": [],
@@ -338,7 +395,7 @@
         },
         "stat": {
             "abilityId": 6305,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -346,7 +403,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -374,7 +431,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 6896,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+28 Knockback Distance Headshot",
             "description": [],
@@ -383,7 +440,7 @@
         },
         "stat": {
             "abilityId": 6896,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -391,7 +448,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -419,7 +476,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 6897,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-1.5s Assassinate Cast Time",
             "description": [],
@@ -428,7 +485,7 @@
         },
         "stat": {
             "abilityId": 6897,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -436,7 +493,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -464,7 +521,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 7396,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-14% Shrapnel Slow",
             "description": [],
@@ -473,7 +530,7 @@
         },
         "stat": {
             "abilityId": 7396,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -481,7 +538,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7892": {
+        "id": 7892,
+        "name": "special_bonus_unique_sniper_6",
+        "language": {
+            "abilityId": 7892,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+125 Take Aim Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7892,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

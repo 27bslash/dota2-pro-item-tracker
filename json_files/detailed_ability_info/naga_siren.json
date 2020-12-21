@@ -1,11 +1,112 @@
 {
+    "601": {
+        "id": 601,
+        "name": "special_bonus_unique_naga_siren_5",
+        "language": {
+            "abilityId": 601,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "-30s Song of the Siren Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 601,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "622": {
+        "id": 622,
+        "name": "naga_siren_crit",
+        "language": {
+            "abilityId": 622,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Critical Strike",
+            "description": [
+                "Attacks inflict critical damage."
+            ],
+            "attributes": [
+                "Critical Strike%DOTA_Tooltip_ability_naga_siren_crit%",
+                "Attacks inflict critical damage.%Description%",
+                "CRITICAL CHANCE: 60%",
+                "CRITICAL DAMAGE: 120%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 622,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5467": {
         "id": 5467,
         "name": "naga_siren_mirror_image",
         "uri": "naga_siren",
         "language": {
             "abilityId": 5467,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Mirror Image",
             "description": [
@@ -28,7 +129,7 @@
         },
         "stat": {
             "abilityId": 5467,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -36,7 +137,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -54,16 +155,16 @@
                 0.65
             ],
             "cooldown": [
-                45,
-                40,
-                35,
-                30
+                40.0,
+                36.0,
+                32.0,
+                28.0
             ],
             "manaCost": [
-                70,
-                85,
-                100,
-                115
+                70.0,
+                85.0,
+                100.0,
+                115.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -79,7 +180,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 5468,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Ensnare",
             "description": [
@@ -93,7 +194,7 @@
         },
         "stat": {
             "abilityId": 5468,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -101,13 +202,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
+            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -122,16 +223,16 @@
                 250
             ],
             "castPoint": [
-                0.5
+                0.4
             ],
             "cooldown": [
-                14
+                14.0
             ],
             "manaCost": [
-                70,
-                80,
-                90,
-                100
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -147,7 +248,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 5469,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Rip Tide",
             "description": [
@@ -164,7 +265,7 @@
         },
         "stat": {
             "abilityId": 5469,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -172,7 +273,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -187,10 +288,10 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -206,7 +307,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 5470,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Song of the Siren",
             "description": [
@@ -214,12 +315,9 @@
             ],
             "attributes": [
                 "DURATION: 7.0 / 7.0 / 7.0",
-                "RADIUS: 1000 / 1200 / 1400",
-                "SCEPTER HEALTH REGEN: 10%",
-                "SCEPTER COOLDOWN: 140 / 100 / 60"
+                "RADIUS: 1000 / 1200 / 1400"
             ],
             "lore": "Slithice's powerful voice enchants leagues of opponents, while calling her Slithereen kin in a time of need.",
-            "aghanimDescription": "Song of the Siren regenerates all nearby allies for a percentage of their max health per second.",
             "notes": [
                 "Units affected by Song of the Siren are invulnerable and cannot take damage from any source.",
                 "Doesn't affect Spell Immune units.",
@@ -228,7 +326,7 @@
         },
         "stat": {
             "abilityId": 5470,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -236,13 +334,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 2,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -256,17 +354,17 @@
                 250
             ],
             "castPoint": [
-                1
+                1.0
             ],
             "cooldown": [
-                160,
-                120,
-                80
+                160.0,
+                120.0,
+                80.0
             ],
             "manaCost": [
-                150,
-                175,
-                200
+                150.0,
+                175.0,
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -282,7 +380,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 5478,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Song of the Siren End",
             "description": [
@@ -293,7 +391,7 @@
         },
         "stat": {
             "abilityId": 5478,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 5,
             "unitTargetType": 0,
@@ -301,7 +399,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -316,14 +414,14 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                1,
-                1,
-                1
+                1.0,
+                1.0,
+                1.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -333,193 +431,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5901": {
-        "id": 5901,
-        "name": "special_bonus_hp_125",
-        "uri": "naga_siren",
-        "language": {
-            "abilityId": 5901,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+125 Health",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5901,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5974": {
-        "id": 5974,
-        "name": "special_bonus_evasion_25",
-        "uri": "naga_siren",
-        "language": {
-            "abilityId": 5974,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "25% Evasion",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5974,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5978": {
-        "id": 5978,
-        "name": "special_bonus_strength_13",
-        "uri": "naga_siren",
-        "language": {
-            "abilityId": 5978,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+13 Strength",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5978,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "6029": {
-        "id": 6029,
-        "name": "special_bonus_agility_10",
-        "uri": "naga_siren",
-        "language": {
-            "abilityId": 6029,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+10 Agility",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6029,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6205": {
         "id": 6205,
         "name": "special_bonus_unique_naga_siren",
         "uri": "naga_siren",
         "language": {
             "abilityId": 6205,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1 Mirror Image Illusion",
             "description": [],
@@ -528,7 +446,7 @@
         },
         "stat": {
             "abilityId": 6205,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -536,52 +454,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6281": {
-        "id": 6281,
-        "name": "special_bonus_strength_14",
-        "uri": "naga_siren",
-        "language": {
-            "abilityId": 6281,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+14 Strength",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6281,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -609,16 +482,16 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 6398,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-9s Ensnare Cooldown",
+            "displayName": "-6s Ensnare Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6398,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -626,52 +499,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6700": {
-        "id": 6700,
-        "name": "special_bonus_evasion_30",
-        "uri": "naga_siren",
-        "language": {
-            "abilityId": 6700,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "30% Evasion",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6700,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -699,7 +527,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 6701,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-5 Rip Tide Armor",
             "description": [],
@@ -708,7 +536,7 @@
         },
         "stat": {
             "abilityId": 6701,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -716,7 +544,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -744,7 +572,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 7029,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+9% Mirror Image Damage",
             "description": [],
@@ -753,7 +581,7 @@
         },
         "stat": {
             "abilityId": 7029,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -761,7 +589,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

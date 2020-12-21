@@ -5,7 +5,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 492,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5 Fervor Attack Speed",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 492,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,13 +44,174 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "704": {
+        "id": 704,
+        "name": "special_bonus_unique_troll_warlord_7",
+        "language": {
+            "abilityId": 704,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+2s Battle Trance Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 704,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5305": {
+        "id": 5305,
+        "name": "dark_troll_warlord_ensnare",
+        "language": {
+            "abilityId": 5305,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Ensnare",
+            "description": [
+                "The Dark Troll Summoner tosses netting around an enemy's feet, briefly immobilizing the unit, though the unit can still attack and use abilities."
+            ],
+            "attributes": [
+                "DURATION: 1.75"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5305,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                550
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                15.0
+            ],
+            "manaCost": [
+                75.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5306": {
+        "id": 5306,
+        "name": "dark_troll_warlord_raise_dead",
+        "language": {
+            "abilityId": 5306,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Raise Dead",
+            "description": [
+                "The Dark Troll Summoner stirs the ground underfoot, raising the remains of trolls long dead, bringing to life two skeleton Warriors who will fight at his side."
+            ],
+            "attributes": [
+                "DURATION: 40.0"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5306,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                18.0
+            ],
+            "manaCost": [
+                50.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
     "5508": {
         "id": 5508,
         "name": "troll_warlord_berserkers_rage",
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5508,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Berserker's Rage",
             "description": [
@@ -59,7 +220,7 @@
                 "Whirling Axes has different functionality while Berserker's Rage is active."
             ],
             "attributes": [
-                "BONUS MOVE SPEED: 10 / 20 / 30 / 40",
+                "BONUS MOVE SPEED: 15 / 25 / 35 / 45",
                 "BONUS ARMOR: 6",
                 "MELEE BASE ATTACK TIME: 1.45",
                 "ENSNARE CHANCE: 14% / 16% / 18% / 20%",
@@ -72,7 +233,7 @@
         },
         "stat": {
             "abilityId": 5508,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2564,
             "unitTargetType": 0,
@@ -80,7 +241,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -114,7 +275,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5509,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Whirling Axes (Ranged)",
             "description": [
@@ -132,7 +293,7 @@
         },
         "stat": {
             "abilityId": 5509,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16408,
             "unitTargetType": 3,
@@ -140,13 +301,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
+            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -164,10 +325,10 @@
                 0.2
             ],
             "cooldown": [
-                9
+                9.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -183,7 +344,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5510,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Whirling Axes (Melee)",
             "description": [
@@ -203,7 +364,7 @@
         },
         "stat": {
             "abilityId": 5510,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -211,13 +372,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
+            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -226,13 +387,13 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                9
+                9.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -248,7 +409,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5511,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Fervor",
             "description": [
@@ -263,7 +424,7 @@
         },
         "stat": {
             "abilityId": 5511,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -271,7 +432,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -299,7 +460,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5512,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Battle Trance",
             "description": [
@@ -315,7 +476,6 @@
                 "SCEPTER CAST RANGE: 525"
             ],
             "lore": "An adrenaline rush of pure hatred quickens your blades.",
-            "aghanimDescription": "Reduces Battle Trance cooldown and allows it to be cast on allied or enemy heroes. Lasts half duration on enemies.",
             "notes": [
                 "Troll can still use his abilities while affected by Battle Trance.",
                 "Troll can still be killed with Axe's Culling Blade."
@@ -323,7 +483,7 @@
         },
         "stat": {
             "abilityId": 5512,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 0,
             "unitTargetType": 1,
@@ -331,13 +491,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 2,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 3,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -349,15 +509,15 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                90
+                90.0
             ],
             "manaCost": [
-                150
+                150.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -367,148 +527,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5939": {
-        "id": 5939,
-        "name": "special_bonus_attack_damage_30",
-        "uri": "troll_warlord",
-        "language": {
-            "abilityId": 5939,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+30 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5939,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5973": {
-        "id": 5973,
-        "name": "special_bonus_evasion_20",
-        "uri": "troll_warlord",
-        "language": {
-            "abilityId": 5973,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "20% Evasion",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5973,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6014": {
-        "id": 6014,
-        "name": "special_bonus_agility_8",
-        "uri": "troll_warlord",
-        "language": {
-            "abilityId": 6014,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+8 Agility",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6014,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6154": {
         "id": 6154,
         "name": "special_bonus_unique_troll_warlord",
         "uri": "troll_warlord",
         "language": {
             "abilityId": 6154,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-5s Whirling Axes Cooldown",
             "description": [],
@@ -517,7 +542,7 @@
         },
         "stat": {
             "abilityId": 6154,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -525,7 +550,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -553,7 +578,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 6958,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Max Fervor Stacks",
             "description": [],
@@ -562,7 +587,7 @@
         },
         "stat": {
             "abilityId": 6958,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -570,7 +595,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -598,7 +623,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 6959,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+90 Whirling Axes Damage",
             "description": [],
@@ -607,7 +632,7 @@
         },
         "stat": {
             "abilityId": 6959,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -615,7 +640,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -643,7 +668,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 6960,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Battle Trance Strong Dispels",
             "description": [
@@ -654,7 +679,7 @@
         },
         "stat": {
             "abilityId": 6960,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -662,7 +687,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -683,5 +708,60 @@
         },
         "drawMatchPage": true,
         "isTalent": true
+    },
+    "7865": {
+        "id": 7865,
+        "name": "troll_warlord_scepter",
+        "language": {
+            "abilityId": 7865,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7865,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                25.0
+            ],
+            "manaCost": [
+                150.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
     }
 }

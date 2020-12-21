@@ -5,7 +5,7 @@
         "uri": "omniknight",
         "language": {
             "abilityId": 404,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+10 Heavenly Grace HP Regen",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 404,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +50,7 @@
         "uri": "omniknight",
         "language": {
             "abilityId": 472,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-2s Purification Cooldown",
             "description": [],
@@ -59,7 +59,7 @@
         },
         "stat": {
             "abilityId": 472,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +67,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,7 +95,7 @@
         "uri": "omniknight",
         "language": {
             "abilityId": 501,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-60s Guardian Angel Cooldown",
             "description": [],
@@ -104,7 +104,7 @@
         },
         "stat": {
             "abilityId": 501,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -112,7 +112,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -134,13 +134,138 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "552": {
+        "id": 552,
+        "name": "omniknight_angelic_flight",
+        "language": {
+            "abilityId": 552,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Angelic Flight",
+            "description": [
+                "."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 552,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 4,
+            "modifierSupportValue": 3.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                400
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                45.0
+            ],
+            "manaCost": [
+                125.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "656": {
+        "id": 656,
+        "name": "omniknight_hammer_of_purity",
+        "language": {
+            "abilityId": 656,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Hammer of Purity",
+            "description": [
+                "Causes Omniknight's next attack to deal bonus pure damage based on 25 plus 150% of his base damage. He is healed for the same amount of pure damage. Cooldown: 6"
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 656,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 2,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                150
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "cooldown": [
+                6.0
+            ],
+            "damage": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "manaCost": [
+                30.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5263": {
         "id": 5263,
         "name": "omniknight_purification",
         "uri": "omniknight",
         "language": {
             "abilityId": 5263,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Purification",
             "description": [
@@ -155,7 +280,7 @@
         },
         "stat": {
             "abilityId": 5263,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 40,
             "unitTargetType": 3,
@@ -163,7 +288,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -184,16 +309,16 @@
                 0.2
             ],
             "cooldown": [
-                18,
-                16,
-                14,
-                12
+                18.0,
+                16.0,
+                14.0,
+                12.0
             ],
             "manaCost": [
-                80,
-                95,
-                110,
-                125
+                80.0,
+                95.0,
+                110.0,
+                125.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -209,7 +334,7 @@
         "uri": "omniknight",
         "language": {
             "abilityId": 5264,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Heavenly Grace",
             "description": [
@@ -218,7 +343,7 @@
                 "DISPEL TYPE: Strong Dispel"
             ],
             "attributes": [
-                "DURATION: 12",
+                "DURATION: 10",
                 "STATUS RESISTANCE: 50",
                 "BONUS STRENGTH: 7 / 14 / 21 / 28",
                 "HP REGEN: 8 / 12 / 16 / 20"
@@ -228,7 +353,7 @@
         },
         "stat": {
             "abilityId": 5264,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -236,7 +361,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 3,
+            "modifierSupportValue": 3.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -257,16 +382,16 @@
                 0.25
             ],
             "cooldown": [
-                26,
-                22,
-                18,
-                14
+                26.0,
+                22.0,
+                18.0,
+                14.0
             ],
             "manaCost": [
-                80,
-                90,
-                100,
-                110
+                80.0,
+                90.0,
+                100.0,
+                110.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -282,7 +407,7 @@
         "uri": "omniknight",
         "language": {
             "abilityId": 5265,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Degen Aura",
             "description": [
@@ -299,7 +424,7 @@
         },
         "stat": {
             "abilityId": 5265,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 0,
@@ -307,7 +432,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -338,7 +463,7 @@
         "uri": "omniknight",
         "language": {
             "abilityId": 5266,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Guardian Angel",
             "description": [
@@ -351,7 +476,6 @@
                 "SCEPTER HP REGEN: 40"
             ],
             "lore": "The All Seeing One casts down his protection over those that Purist calls friend.",
-            "aghanimDescription": "Increases duration, provides HP regen, radius becomes global and affects buildings.",
             "notes": [
                 "Affects allies with spell immunity.",
                 "Can be purged."
@@ -359,7 +483,7 @@
         },
         "stat": {
             "abilityId": 5266,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -367,7 +491,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -385,14 +509,14 @@
                 0.4
             ],
             "cooldown": [
-                160,
-                150,
-                140
+                160.0,
+                150.0,
+                140.0
             ],
             "manaCost": [
-                125,
-                175,
-                250
+                125.0,
+                175.0,
+                250.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -402,103 +526,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5916": {
-        "id": 5916,
-        "name": "special_bonus_mp_regen_4",
-        "uri": "omniknight",
-        "language": {
-            "abilityId": 5916,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+4 Mana Regen",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5916,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5942": {
-        "id": 5942,
-        "name": "special_bonus_attack_damage_70",
-        "uri": "omniknight",
-        "language": {
-            "abilityId": 5942,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+70 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5942,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "5981": {
         "id": 5981,
         "name": "special_bonus_unique_omniknight_1",
         "uri": "omniknight",
         "language": {
             "abilityId": 5981,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+160 Purification Damage/Heal",
             "description": [],
@@ -507,7 +541,7 @@
         },
         "stat": {
             "abilityId": 5981,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -515,7 +549,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -543,7 +577,7 @@
         "uri": "omniknight",
         "language": {
             "abilityId": 6300,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-15% Degen Aura",
             "description": [],
@@ -552,7 +586,7 @@
         },
         "stat": {
             "abilityId": 6300,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -560,7 +594,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -588,7 +622,7 @@
         "uri": "omniknight",
         "language": {
             "abilityId": 6709,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-3s Heavenly Grace Cooldown",
             "description": [],
@@ -597,7 +631,7 @@
         },
         "stat": {
             "abilityId": 6709,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -605,7 +639,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -633,7 +667,7 @@
         "uri": "omniknight",
         "language": {
             "abilityId": 7010,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80 Purification AoE",
             "description": [],
@@ -642,7 +676,7 @@
         },
         "stat": {
             "abilityId": 7010,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -650,7 +684,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -671,5 +705,74 @@
         },
         "drawMatchPage": true,
         "isTalent": true
+    },
+    "7323": {
+        "id": 7323,
+        "name": "omniknight_pacify",
+        "language": {
+            "abilityId": 7323,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Divine Sanction",
+            "description": [
+                "Causes affected enemies to deal less spell damage for a duration."
+            ],
+            "attributes": [
+                "RADIUS: 425",
+                "SPELL DAMAGE REDUCTION: 50% / 60% / 70% / 80%",
+                "DURATION: 7.0"
+            ],
+            "lore": "When faced with the pit of sacrifice, Purist's resilience to magic was tested and affirmed.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7323,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                18.0,
+                16.0,
+                14.0,
+                12.0
+            ],
+            "manaCost": [
+                50.0,
+                60.0,
+                70.0,
+                80.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
     }
 }

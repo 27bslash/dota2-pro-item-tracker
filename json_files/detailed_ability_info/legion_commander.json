@@ -5,16 +5,16 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 463,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-6s Overwhelming Odds Cooldown",
+            "displayName": "-9s Overwhelming Odds Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 463,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +50,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 5595,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Overwhelming Odds",
             "description": [
@@ -71,7 +71,7 @@
         },
         "stat": {
             "abilityId": 5595,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -79,7 +79,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -103,13 +103,13 @@
                 0.3
             ],
             "cooldown": [
-                15
+                15.0
             ],
             "manaCost": [
-                100,
-                110,
-                120,
-                130
+                100.0,
+                110.0,
+                120.0,
+                130.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -125,7 +125,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 5596,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Press The Attack",
             "description": [
@@ -143,7 +143,7 @@
         },
         "stat": {
             "abilityId": 5596,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -151,7 +151,7 @@
             "unitTargetFlags": 2,
             "unitDamageType": 0,
             "spellImmunity": 2,
-            "modifierSupportValue": 3,
+            "modifierSupportValue": 3.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -172,13 +172,13 @@
                 0.2
             ],
             "cooldown": [
-                16,
-                15,
-                14,
-                13
+                16.0,
+                15.0,
+                14.0,
+                13.0
             ],
             "manaCost": [
-                110
+                110.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -194,7 +194,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 5597,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Moment of Courage",
             "description": [
@@ -209,7 +209,7 @@
         },
         "stat": {
             "abilityId": 5597,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -217,7 +217,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -251,7 +251,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 5598,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Duel",
             "description": [
@@ -263,7 +263,6 @@
                 "SCEPTER DURATION: 6 / 7 / 8"
             ],
             "lore": "To face a soldier of Stonehall in single combat is a challenge few can resist.",
-            "aghanimDescription": "Increases Duel duration, makes Legion Commander Spell Immune in Duel, and makes Legion Commander and her opponent only take damage from each other.",
             "notes": [
                 "Duels will end if the units are pushed 2000 units apart.",
                 "Winning a Duel automatically casts Press the Attack on yourself."
@@ -271,7 +270,7 @@
         },
         "stat": {
             "abilityId": 5598,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 1,
@@ -279,7 +278,7 @@
             "unitTargetFlags": 20,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 3,
+            "modifierSupportValue": 3.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -303,14 +302,14 @@
                 0.3
             ],
             "cooldown": [
-                50,
-                50,
-                50
+                50.0,
+                50.0,
+                50.0
             ],
             "manaCost": [
-                75,
-                75,
-                75
+                75.0,
+                75.0,
+                75.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -320,103 +319,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6115": {
-        "id": 6115,
-        "name": "special_bonus_strength_7",
-        "uri": "legion_commander",
-        "language": {
-            "abilityId": 6115,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+7 Strength",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6115,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6141": {
-        "id": 6141,
-        "name": "special_bonus_movement_speed_30",
-        "uri": "legion_commander",
-        "language": {
-            "abilityId": 6141,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+30 Movement Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6141,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6218": {
         "id": 6218,
         "name": "special_bonus_unique_legion_commander",
         "uri": "legion_commander",
         "language": {
             "abilityId": 6218,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+30 Duel Damage Bonus",
             "description": [],
@@ -425,7 +334,7 @@
         },
         "stat": {
             "abilityId": 6218,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -433,7 +342,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -461,7 +370,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 6449,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-10s Press The Attack Cooldown",
             "description": [],
@@ -470,7 +379,7 @@
         },
         "stat": {
             "abilityId": 6449,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -478,7 +387,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -506,7 +415,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 6526,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+8% Moment Proc Chance",
             "description": [],
@@ -515,7 +424,7 @@
         },
         "stat": {
             "abilityId": 6526,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -523,7 +432,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -551,7 +460,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 6671,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+65 Overwhelming Odds Hero Damage",
             "description": [],
@@ -560,7 +469,7 @@
         },
         "stat": {
             "abilityId": 6671,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -568,52 +477,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7132": {
-        "id": 7132,
-        "name": "special_bonus_mp_regen_150",
-        "uri": "legion_commander",
-        "language": {
-            "abilityId": 7132,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+1.5 Mana Regen",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7132,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -641,7 +505,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 7395,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "400 AoE Press The Attack",
             "description": [],
@@ -650,7 +514,7 @@
         },
         "stat": {
             "abilityId": 7395,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -658,7 +522,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

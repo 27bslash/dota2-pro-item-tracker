@@ -1,56 +1,11 @@
 {
-    "450": {
-        "id": 450,
-        "name": "special_bonus_attack_base_damage_25",
-        "uri": "centaur",
-        "language": {
-            "abilityId": 450,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+25 Base Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 450,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "453": {
         "id": 453,
         "name": "special_bonus_unique_centaur_5",
         "uri": "centaur",
         "language": {
             "abilityId": 453,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-20s Stampede Cooldown",
             "description": [],
@@ -59,7 +14,7 @@
         },
         "stat": {
             "abilityId": 453,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -89,13 +44,266 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "581": {
+        "id": 581,
+        "name": "centaur_overrun",
+        "language": {
+            "abilityId": 581,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Overrun",
+            "description": [
+                "Casts a personal Stampede."
+            ],
+            "attributes": [
+                "STAMPEDE DURATION: 2.0"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 581,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 4,
+            "modifierSupportValue": 0.20000000298023224,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                16.0
+            ],
+            "manaCost": [
+                50.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "615": {
+        "id": 615,
+        "name": "special_bonus_unique_centaur_6",
+        "language": {
+            "abilityId": 615,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+50% Stampede Damage Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 615,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "696": {
+        "id": 696,
+        "name": "special_bonus_unique_centaur_7",
+        "language": {
+            "abilityId": 696,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+1s Stampede Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 696,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "5294": {
+        "id": 5294,
+        "name": "centaur_khan_endurance_aura",
+        "language": {
+            "abilityId": 5294,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Swiftness Aura",
+            "description": [
+                "The fearsome Hellbear Smasher attacks more quickly and bullies nearby allies into following suit."
+            ],
+            "attributes": [
+                "ATTACK SPEED: 15",
+                "RADIUS: 1200"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5294,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5295": {
+        "id": 5295,
+        "name": "centaur_khan_war_stomp",
+        "language": {
+            "abilityId": 5295,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "War Stomp",
+            "description": [
+                "The Centaur Conqueror's powerful hooves stomp the ground, stunning and damaging nearby enemies. Heroes recover more quickly."
+            ],
+            "attributes": [
+                "RADIUS: 250",
+                "STUN DURATION: 3.0",
+                "HERO STUN: 2.0"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5295,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 4,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.4
+            ],
+            "cooldown": [
+                12.0
+            ],
+            "damage": [
+                25.0
+            ],
+            "manaCost": [
+                50.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
     "5514": {
         "id": 5514,
         "name": "centaur_hoof_stomp",
         "uri": "centaur",
         "language": {
             "abilityId": 5514,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Hoof Stomp",
             "description": [
@@ -111,7 +319,7 @@
         },
         "stat": {
             "abilityId": 5514,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -119,7 +327,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -140,16 +348,16 @@
                 0.5
             ],
             "cooldown": [
-                15,
-                14,
-                13,
-                12
+                15.0,
+                14.0,
+                13.0,
+                12.0
             ],
             "manaCost": [
-                100,
-                110,
-                120,
-                130
+                100.0,
+                110.0,
+                120.0,
+                130.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -165,7 +373,7 @@
         "uri": "centaur",
         "language": {
             "abilityId": 5515,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Double Edge",
             "description": [
@@ -182,7 +390,7 @@
         },
         "stat": {
             "abilityId": 5515,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -190,7 +398,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -214,13 +422,13 @@
                 0.4
             ],
             "cooldown": [
-                4
+                4.0
             ],
             "manaCost": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -236,7 +444,7 @@
         "uri": "centaur",
         "language": {
             "abilityId": 5516,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Retaliate",
             "description": [
@@ -254,7 +462,7 @@
         },
         "stat": {
             "abilityId": 5516,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -262,7 +470,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -290,7 +498,7 @@
         "uri": "centaur",
         "language": {
             "abilityId": 5517,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Stampede",
             "description": [
@@ -298,18 +506,17 @@
             ],
             "attributes": [
                 "TRAMPLE RADIUS: 105",
-                "STAMPEDE DURATION: 4.0",
-                "STRENGTH MULTIPLIER DAMAGE: 1.0 / 2.0 / 3.0",
+                "STAMPEDE DURATION: 3.5 / 4 / 4.5",
+                "STRENGTH MULTIPLIER DAMAGE: 2.0 / 2.5 / 3.0",
                 "SLOW DURATION: 2.3",
                 "SCEPTER DAMAGE REDUCTION: 40%"
             ],
             "lore": "The great belt of Omexe, which labels Bradwarden as the greatest warrior of his kind, incites his fellow gladiators to follow him into barbarous combat.",
-            "aghanimDescription": "Heroes affected by Stampede take reduced damage, and are able to run through obstructions, including trees and up cliffs.",
             "notes": []
         },
         "stat": {
             "abilityId": 5517,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -332,14 +539,14 @@
                 250
             ],
             "cooldown": [
-                110,
-                100,
-                90
+                110.0,
+                100.0,
+                90.0
             ],
             "manaCost": [
-                150,
-                200,
-                250
+                150.0,
+                200.0,
+                250.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -349,148 +556,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5910": {
-        "id": 5910,
-        "name": "special_bonus_hp_regen_5",
-        "uri": "centaur",
-        "language": {
-            "abilityId": 5910,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+5 Health Regen",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5910,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5937": {
-        "id": 5937,
-        "name": "special_bonus_magic_resistance_10",
-        "uri": "centaur",
-        "language": {
-            "abilityId": 5937,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+10% Magic Resistance",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5937,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5940": {
-        "id": 5940,
-        "name": "special_bonus_attack_damage_40",
-        "uri": "centaur",
-        "language": {
-            "abilityId": 5940,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+40 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5940,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "5988": {
         "id": 5988,
         "name": "special_bonus_unique_centaur_2",
         "uri": "centaur",
         "language": {
             "abilityId": 5988,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1s Hoof Stomp Duration",
             "description": [],
@@ -499,7 +571,7 @@
         },
         "stat": {
             "abilityId": 5988,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -507,7 +579,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -535,7 +607,7 @@
         "uri": "centaur",
         "language": {
             "abilityId": 6322,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Gains Retaliate Aura",
             "description": [
@@ -546,7 +618,7 @@
         },
         "stat": {
             "abilityId": 6322,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -554,7 +626,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -582,7 +654,7 @@
         "uri": "centaur",
         "language": {
             "abilityId": 6616,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+50 Retaliate Damage",
             "description": [],
@@ -591,7 +663,7 @@
         },
         "stat": {
             "abilityId": 6616,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -599,7 +671,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -627,7 +699,7 @@
         "uri": "centaur",
         "language": {
             "abilityId": 6617,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40% Double Edge Strength Damage",
             "description": [],
@@ -636,7 +708,7 @@
         },
         "stat": {
             "abilityId": 6617,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -644,52 +716,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7372": {
-        "id": 7372,
-        "name": "special_bonus_attack_base_damage_30",
-        "uri": "centaur",
-        "language": {
-            "abilityId": 7372,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+30 Base Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7372,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

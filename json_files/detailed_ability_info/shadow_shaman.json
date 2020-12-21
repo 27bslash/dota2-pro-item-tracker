@@ -5,7 +5,7 @@
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 468,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+140 Shackles Total Damage",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 468,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,13 +44,71 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "536": {
+        "id": 536,
+        "name": "shadow_shaman_serpentine",
+        "language": {
+            "abilityId": 536,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Serpentine",
+            "description": [
+                "Creates a line of 8 Serpent Wards."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 536,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                35.0
+            ],
+            "manaCost": [
+                100.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5078": {
         "id": 5078,
         "name": "shadow_shaman_ether_shock",
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 5078,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Ether Shock",
             "description": [
@@ -67,7 +125,7 @@
         },
         "stat": {
             "abilityId": 5078,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -75,7 +133,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -99,16 +157,16 @@
                 0.3
             ],
             "cooldown": [
-                14,
-                12,
-                10,
-                8
+                14.0,
+                12.0,
+                10.0,
+                8.0
             ],
             "manaCost": [
-                100,
-                120,
-                140,
-                160
+                100.0,
+                120.0,
+                140.0,
+                160.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -124,7 +182,7 @@
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 5079,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Hex",
             "description": [
@@ -142,7 +200,7 @@
         },
         "stat": {
             "abilityId": 5079,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -150,7 +208,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -168,19 +226,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                13
+                13.0
             ],
             "manaCost": [
-                70,
-                110,
-                150,
-                190
+                70.0,
+                110.0,
+                150.0,
+                190.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -196,7 +254,7 @@
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 5080,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Shackles",
             "description": [
@@ -211,7 +269,7 @@
         },
         "stat": {
             "abilityId": 5080,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 136,
             "unitTargetType": 3,
@@ -219,7 +277,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -246,19 +304,19 @@
                 2.75,
                 3.5,
                 4.25,
-                5
+                5.0
             ],
             "cooldown": [
-                16,
-                14,
-                12,
-                10
+                16.0,
+                14.0,
+                12.0,
+                10.0
             ],
             "manaCost": [
-                140,
-                150,
-                160,
-                170
+                140.0,
+                150.0,
+                160.0,
+                170.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -274,7 +332,7 @@
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 5081,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Mass Serpent Ward",
             "description": [
@@ -282,17 +340,15 @@
             ],
             "attributes": [
                 "DURATION: 45.0 / 45.0 / 45.0",
-                "ATTACK DAMAGE: 50 / 80 / 110",
-                "SCEPTER BONUS ATTACK RANGE: 225",
+                "ATTACK DAMAGE: 50 / 85 / 120",
                 "HITS TO DESTROY: 2"
             ],
             "lore": "Snake charming was a big part of the Shadow Shaman's act; now Rhasta can empower the snakes to do his bidding.",
-            "aghanimDescription": "Causes Serpent Wards to have split shot, attacking two units for full damage. Increases attack range of Serpent Wards.",
             "notes": []
         },
         "stat": {
             "abilityId": 5081,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 48,
             "unitTargetType": 0,
@@ -300,7 +356,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -321,12 +377,12 @@
                 0.3
             ],
             "cooldown": [
-                120
+                120.0
             ],
             "manaCost": [
-                200,
-                350,
-                600
+                200.0,
+                350.0,
+                600.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -342,7 +398,7 @@
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 6052,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1 Serpent Wards Max HP",
             "description": [],
@@ -351,7 +407,7 @@
         },
         "stat": {
             "abilityId": 6052,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -359,7 +415,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -387,7 +443,7 @@
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 6295,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+2.0s Shackles Duration",
             "description": [],
@@ -396,7 +452,7 @@
         },
         "stat": {
             "abilityId": 6295,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -404,7 +460,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -432,7 +488,7 @@
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 6502,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+340 Ether Shock Damage",
             "description": [],
@@ -441,7 +497,7 @@
         },
         "stat": {
             "abilityId": 6502,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -449,7 +505,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -477,16 +533,16 @@
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 6521,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+30 Wards Attack Damage",
+            "displayName": "+25 Wards Attack Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6521,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -494,7 +550,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -522,16 +578,16 @@
         "uri": "shadow_shaman",
         "language": {
             "abilityId": 6877,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-4.5s Hex Cooldown",
+            "displayName": "-5s Hex Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6877,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -539,7 +595,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

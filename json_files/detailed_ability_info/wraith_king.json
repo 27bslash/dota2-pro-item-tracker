@@ -5,7 +5,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 477,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-1s Wraithfire Blast Cooldown",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 477,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "741": {
+        "id": 741,
+        "name": "special_bonus_unique_wraith_king_10",
+        "language": {
+            "abilityId": 741,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "-2s Mortal Strike Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 741,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +94,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 5086,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Wraithfire Blast",
             "description": [
@@ -69,7 +113,7 @@
         },
         "stat": {
             "abilityId": 5086,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -101,22 +145,22 @@
                 0.35
             ],
             "cooldown": [
-                14,
-                12,
-                10,
-                8
+                14.0,
+                12.0,
+                10.0,
+                8.0
             ],
             "damage": [
-                70,
-                80,
-                90,
-                100
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "manaCost": [
-                95,
-                110,
-                125,
-                140
+                95.0,
+                110.0,
+                125.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -132,19 +176,20 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 5087,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "Vampiric Aura",
+            "displayName": "Vampiric Spirit",
             "description": [
-                "Nearby friendly heroes restore health based on the damage they deal when attacking enemy units. Has 50% effect on ranged allied heroes. Does not affect allied creeps."
+                "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. Every two kills on an enemy unit adds a skeleton charge. Skeletons respawn once when killed. "
             ],
             "attributes": [
-                "Vampiric Aura%DOTA_Tooltip_ability_skeleton_king_vampiric_aura%",
-                "Nearby friendly heroes restore health based on the damage they deal when attacking enemy units. Has 50% effect on ranged allied heroes. Does not affect allied creeps.%Description%",
+                "Vampiric Spirit%DOTA_Tooltip_ability_skeleton_king_vampiric_aura%",
+                "Restore health based on the damage Wraith King deals when attacking enemy units. Can be cast to summon skeletons with Vampiric Spirit. Every two kills on an enemy unit adds a skeleton charge. Skeletons respawn once when killed. %Description%",
                 "Wraith King's blade drains his enemy's essence to feed his aura.%Lore%",
-                "Vampiric Aura lifesteal has 50% effect on ranged Heroes.%abilitydraft_note%",
-                "Stacks additively with other sources of Lifesteal.%Note0%",
-                "LIFESTEAL: 8% / 16% / 24% / 32%"
+                "Stacks additively with other sources of Lifesteal.%Note1%",
+                "LIFESTEAL: 10% / 18% / 26% / 34%",
+                "MAX CHARGES: 2 / 4 / 6 / 8",
+                "SKELETON DURATION: 60"
             ],
             "lore": "Wraith King's blade drains his enemy's essence to feed his aura.",
             "notes": [
@@ -153,70 +198,15 @@
         },
         "stat": {
             "abilityId": 5087,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
-            "behavior": 1048578,
+            "behavior": 4,
             "unitTargetType": 0,
             "unitTargetTeam": 2,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
-            "spellImmunity": 4,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5088": {
-        "id": 5088,
-        "name": "skeleton_king_mortal_strike",
-        "uri": "skeleton_king",
-        "language": {
-            "abilityId": 5088,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "Mortal Strike",
-            "description": [
-                "Wraith King passively gains a chance to deal bonus damage on an attack. Every two kills on an enemy unit adds a skeleton charge. Skeletons respawn once when killed. "
-            ],
-            "attributes": [
-                "CRITICAL CHANCE: 9% / 11% / 13% / 15%",
-                "CRITICAL DAMAGE: 300%",
-                "MAX CHARGES: 2 / 4 / 6 / 8",
-                "SKELETON DURATION: 60"
-            ],
-            "lore": "One blow to crush a foe.",
-            "notes": [
-                "Summoned skeletons will automatically attack any unit targeted by Wraithfire Blast."
-            ]
-        },
-        "stat": {
-            "abilityId": 5088,
-            "gameVersionId": 135,
-            "type": 0,
-            "behavior": 4,
-            "unitTargetType": 1,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -234,13 +224,68 @@
                 0.1
             ],
             "cooldown": [
-                50
+                50.0
             ],
             "manaCost": [
-                50,
-                60,
-                70,
-                80
+                50.0,
+                60.0,
+                70.0,
+                80.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5088": {
+        "id": 5088,
+        "name": "skeleton_king_mortal_strike",
+        "uri": "skeleton_king",
+        "language": {
+            "abilityId": 5088,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Mortal Strike",
+            "description": [
+                "Wraith King passively deals bonus damage on an attack with a cooldown. "
+            ],
+            "attributes": [
+                "CRITICAL DAMAGE: 150% / 190% / 230% / 270%"
+            ],
+            "lore": "One blow to crush a foe.",
+            "notes": [
+                "Summoned skeletons will automatically attack any unit targeted by Wraithfire Blast."
+            ]
+        },
+        "stat": {
+            "abilityId": 5088,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 1,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "cooldown": [
+                4.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -256,7 +301,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 5089,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Reincarnation",
             "description": [
@@ -271,7 +316,6 @@
                 "SCEPTER DEATH DELAY RADIUS: 1200"
             ],
             "lore": "Conspirators against the Wraith King wonder why he never stays dead.",
-            "aghanimDescription": "If a nearby allied hero is slain, they will be transformed into a wraith and have their death delayed for %scepter_duration% seconds.",
             "notes": [
                 "Wraith King won't revive if he doesn't have enough mana.",
                 "If Wraith King has an Aegis and Reincarnation off cooldown, Reincarnation will trigger first.",
@@ -282,7 +326,7 @@
         },
         "stat": {
             "abilityId": 5089,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 1,
@@ -305,12 +349,12 @@
                 250
             ],
             "cooldown": [
-                200,
-                120,
-                40
+                200.0,
+                120.0,
+                40.0
             ],
             "manaCost": [
-                160
+                160.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -326,7 +370,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6088,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+20% Vampiric Aura Lifesteal",
             "description": [],
@@ -335,7 +379,7 @@
         },
         "stat": {
             "abilityId": 6088,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -343,7 +387,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -371,7 +415,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6201,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "No Reincarnation Manacost",
             "description": [],
@@ -380,7 +424,7 @@
         },
         "stat": {
             "abilityId": 6201,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -388,7 +432,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -416,7 +460,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6414,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40 Wraithfire Blast DPS",
             "description": [],
@@ -425,7 +469,7 @@
         },
         "stat": {
             "abilityId": 6414,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -433,7 +477,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -461,7 +505,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6566,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Reincarnation Casts Wraithfire Blast",
             "description": [
@@ -472,7 +516,7 @@
         },
         "stat": {
             "abilityId": 6566,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -480,7 +524,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -508,7 +552,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6821,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+6 Skeletons Spawned",
             "description": [],
@@ -517,7 +561,7 @@
         },
         "stat": {
             "abilityId": 6821,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -525,7 +569,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -553,7 +597,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6822,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+24 Skeletons Attack Damage",
             "description": [],
@@ -562,7 +606,7 @@
         },
         "stat": {
             "abilityId": 6822,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -570,7 +614,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -598,7 +642,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 7107,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.2s Wraithfire Blast Slow Duration",
             "description": [],
@@ -607,7 +651,7 @@
         },
         "stat": {
             "abilityId": 7107,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -615,7 +659,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -643,7 +687,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 7108,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80% Skeletons Spawned",
             "description": [],
@@ -652,7 +696,7 @@
         },
         "stat": {
             "abilityId": 7108,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -660,7 +704,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

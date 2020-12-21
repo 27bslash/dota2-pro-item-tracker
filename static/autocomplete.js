@@ -86,7 +86,6 @@ const abbreviations = (e, result) => {
 
 const player_name_display = (player_arr) => {
   playerSuggestionList.innerHTML = "";
-  console.log(player_arr);
   if (player_arr.length > 20) {
     player_arr = player_arr.slice(0, 15);
   }

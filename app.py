@@ -19,7 +19,6 @@ import gzip
 import functools
 from io import BytesIO as IO
 from flask_minify import minify, decorators
-
 # benchmarks for laning phase instead of networth maybe
 cluster = pymongo.MongoClient(
     'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
@@ -309,6 +308,13 @@ def color_json():
         return data
 
 
+@ app.route('/files/ability_colours')
+def ability_color_json():
+    with open('json_files/ability_colours.json', 'r') as f:
+        data = json.load(f)
+        return data
+
+
 @ app.route('/files/accounts')
 def acc_json():
     data = db['account_ids'].find({})
@@ -334,7 +340,7 @@ def do_everything(hero_name):
     amount = 100
     start = time.time()
     asyncio.run(single_request(hero_name))
-    asyncio.run(main(get_urls(hero_name), hero_name))
+    # asyncio.run(main(get_urls(hero_name), hero_name))
     names = []
     end = time.time()
     print("Took {} seconds to pull {} websites.".format(end - start, amount))
@@ -350,8 +356,8 @@ def clean_name(h_name):
 async def request_shit(hero_name):
     db_hero_name = hero_name.replace(' ', '_').lower()
     start = time.time()
+    hero_name = hero_name.capitalize()
     base = 'http://www.dota2protracker.com/hero/'
-    hero_name = pro_name(hero_name)
     url = 'http://www.dota2protracker.com/hero/'+hero_name
     print(url)
     async with aiohttp.ClientSession() as session:
@@ -361,6 +367,7 @@ async def request_shit(hero_name):
             selector = Selector(text=text)
             table = selector.xpath(
                 '//*[@class="display compact"]//tbody//tr')
+            print(table)
             for i in reversed(range(len(table))):
                 row = table[i]
                 match_id = row.css('a::attr(href)').re(
@@ -368,31 +375,19 @@ async def request_shit(hero_name):
                 m_id = re.sub(r"\D", '', match_id)
                 mmr = row.xpath('td')[5].css('::text').extract()[0]
                 name = row.xpath('td')[1].css('::text').extract()[1]
-                lane_select = row.xpath('td')[6].css(
-                    'img::attr(src)').extract()[0]
-                role_select = row.xpath('td')[7].css(
-                    'img::attr(src)').extract()[0]
-                lane = clean_img(lane_select)
-                role = clean_img(role_select)
                 # print(mmr)
                 lanes = {'safelane': '1', 'mid': '2', 'roaming': '4',
                          'offlane': '3', 'unknown': '0', 'jungle': 'jungle'}
                 roles = {'1': 'Safelane', '2': 'Midlane',
                          '3': 'Offlane', '4': 'Support', '5': 'Hard Support', 'roaming': 'roaming', 'jungle': 'jungle', 'unknown': []}
-                if role == 'core':
-                    lane = lanes[lane]
-                    role = roles[lane]
-                else:
-                    role = roles[role]
+                print('m_id')
                 if match_id:
-                    delete_old_urls()
-                    print(hero_name, match_id, mmr, role)
                     o = {'id': m_id, 'hero': db_hero_name,
-                         'name': name, 'mmr': mmr, 'role': role}
+                         'name': name, 'mmr': mmr}
                     # print(o)
                     if hero_urls.find_one({'hero': db_hero_name, 'id': m_id}) is None:
-                        # print(o)
-                        hero_urls.insert_one(o)
+                        print(o)
+                        # hero_urls.insert_one(o)
             end = time.time()
             print('protracker', end-start, 'seconds')
 
@@ -419,12 +414,11 @@ def opendota_call():
     db['most-common-items'].delete_many({'hero': 'anti-mage'})
     delete_old_urls()
     print('input')
-    Database_method = Db_insert()
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for i in data['heroes']:
             names.append(i['name'])
-            Database_method.insert_talent_order(i['name'])
+            database_methods.insert_talent_order(i['name'])
         strt = time.perf_counter()
         # asyncio.run(pro_request(names))
         print('1st', time.perf_counter() - strt)
@@ -433,7 +427,7 @@ def opendota_call():
         for name in names:
             sleep = len(get_urls(name))
             asyncio.run(main(get_urls(name), name))
-            Database_method.insert_total_picks('hero', name, 'hero_picks')
+            database_methods.insert_total_picks('hero', name, 'hero_picks')
             # loop.run_until_complete(
             #     test(steam_api_test(name), name))
             # sync(steam_api_test(name),name)
@@ -446,7 +440,7 @@ def opendota_call():
             pass
     parse_request()
     get_winrate()
-    Database_method.insert_player_picks()
+    database_methods.insert_player_picks()
     print('end', (time.time()-start)/60, 'minutes')
 
 
@@ -459,8 +453,12 @@ def manual_hero_update(name):
 
 
 if __name__ == '__main__':
-    # opendota_call()
     # delete_old_urls()
-    # manual_hero_update('timbersaw')
+    # manual_hero_update('hoodwink')
     # get_winrate()
+    # opendota_call()
+    # do_everything('lich')
+    # database_methods.insert_talent_order('hoodwink')
     app.run(debug=False)
+    # database_methods.insert_total_picks('hero', 'hoodwink', 'hero_picks')
+    pass

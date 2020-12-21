@@ -1,29 +1,87 @@
 {
+    "651": {
+        "id": 651,
+        "name": "shredder_flamethrower",
+        "language": {
+            "abilityId": 651,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Flamethrower",
+            "description": [
+                "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 75 damage per second and slows by 20%. Lasts 7 seconds. Debuff lingers for 3 seconds."
+            ],
+            "attributes": [
+                "DURATION: 7",
+                "DAMAGE PER SECOND: 75"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 651,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                15.0
+            ],
+            "manaCost": [
+                100.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5524": {
         "id": 5524,
         "name": "shredder_whirling_death",
         "uri": "shredder",
         "language": {
             "abilityId": 5524,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Whirling Death",
             "description": [
                 "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area.  If an enemy hero is affected, it loses some of its primary attribute for a short duration.  Whirling Death will deal bonus damage per tree destroyed."
             ],
             "attributes": [
-                "DAMAGE: 90 / 120 / 150 / 180",
+                "DAMAGE: 80 / 120 / 160 / 200",
                 "TREE BONUS DAMAGE: 12 / 18 / 24 / 30",
-                "RADIUS: 300",
+                "RADIUS: 325",
                 "STAT LOSS PERCENT: 13% / 14% / 15% / 16%",
                 "STAT LOSS DURATION: 14.0"
             ],
-            "lore": "In the case that Rizzrack gets surrounded by the the vines and plants of his nightmares, he has an immediate chainsaw defense.",
+            "lore": "In the case that Rizzrack gets surrounded by the vines and plants of his nightmares, he has an immediate chainsaw defense.",
             "notes": []
         },
         "stat": {
             "abilityId": 5524,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 18436,
             "unitTargetType": 0,
@@ -31,7 +89,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -49,16 +107,16 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                6
+                6.0
             ],
             "manaCost": [
-                70
+                70.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -74,7 +132,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5525,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Timber Chain",
             "description": [
@@ -84,14 +142,14 @@
                 "DAMAGE: 100 / 140 / 180 / 220",
                 "LATCH RANGE: 850 / 1050 / 1250 / 1450",
                 "RADIUS: 225 / 225 / 225 / 225",
-                "SPEED: 1600 / 2000 / 2400 / 2800"
+                "SPEED: 1900 / 2200 / 2500 / 2800"
             ],
             "lore": "You never know when you might need to escape from malevolent saplings.",
             "notes": []
         },
         "stat": {
             "abilityId": 5525,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 20496,
             "unitTargetType": 0,
@@ -99,7 +157,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -126,13 +184,13 @@
                 0.3
             ],
             "cooldown": [
-                4
+                4.0
             ],
             "manaCost": [
-                60,
-                70,
-                80,
-                90
+                60.0,
+                70.0,
+                80.0,
+                90.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -148,7 +206,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5526,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Reactive Armor",
             "description": [
@@ -165,7 +223,7 @@
         },
         "stat": {
             "abilityId": 5526,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -173,7 +231,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -201,11 +259,11 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5527,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Chakram",
             "description": [
-                "Fires your main saw blade at the target location where it will spin in place, dealing damage in an area around it. Enemies caught in the saw blade will move more slowly for every 5% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted. While active the ability costs mana, and you lose the ability to attack."
+                "Fires Timbersaw's main saw blade at the target location where it will spin in place, dealing damage in an area around it. Enemies caught in the saw blade will move more slowly for every 5% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted. While active the ability costs mana, and Timbersaw loses the ability to attack."
             ],
             "attributes": [
                 "RADIUS: 200",
@@ -220,14 +278,13 @@
                 "MANA COST PER SECOND:%2_mana_per_second%"
             ],
             "lore": "The ultimate in anti-flora weaponry.",
-            "aghanimDescription": "Grants a second Chakram.",
             "notes": [
                 "The Chakram will return if Timbersaw runs out of mana or moves over 2000.0 distance away."
             ]
         },
         "stat": {
             "abilityId": 5527,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -235,7 +292,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -255,19 +312,17 @@
                 250
             ],
             "castPoint": [
-                0.3,
-                0.3,
-                0.3
+                0.15
             ],
             "cooldown": [
-                8,
-                8,
-                8
+                8.0,
+                8.0,
+                8.0
             ],
             "manaCost": [
-                80,
-                140,
-                200
+                80.0,
+                140.0,
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -283,7 +338,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5528,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Return Chakram",
             "description": [
@@ -294,7 +349,7 @@
         },
         "stat": {
             "abilityId": 5528,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 575557,
             "unitTargetType": 0,
@@ -302,7 +357,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -317,15 +372,15 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -341,11 +396,11 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5645,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Second Chakram",
             "description": [
-                "Fires a secondary saw blade at the target location where it will spin in place, dealing damage in an area around it.  Additionally, for each 5% of health missing, enemies caught in the saw blade move more slowly. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and you lose the ability to attack."
+                "Fires a secondary saw blade at the target location where it will spin in place, dealing damage in an area around it.  Additionally, for each 5% of health missing, enemies caught in the saw blade move more slowly. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and Timbersaw loses the ability to attack."
             ],
             "attributes": [
                 "RADIUS: 200",
@@ -362,7 +417,7 @@
         },
         "stat": {
             "abilityId": 5645,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -370,7 +425,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -390,19 +445,17 @@
                 250
             ],
             "castPoint": [
-                0.3,
-                0.3,
-                0.3
+                0.15
             ],
             "cooldown": [
-                8,
-                8,
-                8
+                8.0,
+                8.0,
+                8.0
             ],
             "manaCost": [
-                80,
-                140,
-                200
+                80.0,
+                140.0,
+                200.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -418,7 +471,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5646,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Return Chakram",
             "description": [
@@ -429,7 +482,7 @@
         },
         "stat": {
             "abilityId": 5646,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 575557,
             "unitTargetType": 0,
@@ -437,7 +490,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -452,15 +505,15 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -470,148 +523,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5913": {
-        "id": 5913,
-        "name": "special_bonus_hp_regen_14",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 5913,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+14 Health Regen",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5913,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6034": {
-        "id": 6034,
-        "name": "special_bonus_hp_175",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 6034,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+175 Health",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6034,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6190": {
-        "id": 6190,
-        "name": "special_bonus_cooldown_reduction_12",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 6190,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "12% Cooldown Reduction",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6190,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6223": {
         "id": 6223,
         "name": "special_bonus_unique_timbersaw",
         "uri": "shredder",
         "language": {
             "abilityId": 6223,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+10% Whirling Death Attribute Reduction",
             "description": [],
@@ -620,7 +538,7 @@
         },
         "stat": {
             "abilityId": 6223,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -628,7 +546,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -650,50 +568,79 @@
         "drawMatchPage": true,
         "isTalent": true
     },
-    "6926": {
-        "id": 6926,
-        "name": "special_bonus_mp_regen_175",
-        "uri": "shredder",
+    "6488": {
+        "id": 6488,
+        "name": "snapfire_lil_shredder",
+        "uri": "snapfire",
         "language": {
-            "abilityId": 6926,
-            "gameVersionId": 135,
+            "abilityId": 6488,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+1.75 Mana Regen",
-            "description": [],
-            "attributes": [],
-            "notes": []
+            "displayName": "Lil' Shredder",
+            "description": [
+                "Snapfire heats up her mounted turret to rapidly fire 6 fixed-damage attacks. Each attack reduces the enemy's armor. Provides bonus attack range for the duration."
+            ],
+            "attributes": [
+                "BONUS RANGE: 75 / 150 / 225 / 300",
+                "FIXED DAMAGE PER SHOT: 20 / 40 / 60 / 80",
+                "ARMOR LOSS PER STACK: 1",
+                "ARMOR LOSS DURATION: 4.0"
+            ],
+            "lore": "Beadie constantly tinkers with a design she first dreamed up plotting an exodus from her old gang.",
+            "notes": [
+                "Sets 1.0 base attack rate for the duration.",
+                "Attack modifiers have a chance to proc on Lil' Shredder attacks."
+            ]
         },
         "stat": {
-            "abilityId": 6926,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 6488,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 16388,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
-            "unitDamageType": 0,
+            "unitDamageType": 3,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
-            "fightRecapLevel": 0,
+            "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
             "castRangeBuffer": [
                 250
             ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                24.0,
+                20.0,
+                16.0,
+                12.0
+            ],
+            "manaCost": [
+                75.0,
+                80.0,
+                85.0,
+                90.0
+            ],
             "isUltimate": false,
-            "duration": "",
+            "duration": "8",
             "charges": "",
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
     },
     "6948": {
         "id": 6948,
@@ -701,7 +648,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 6948,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+8 Reactive Armor Stacks",
             "description": [],
@@ -710,7 +657,7 @@
         },
         "stat": {
             "abilityId": 6948,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -718,7 +665,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -746,7 +693,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 6949,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1125 Timber Chain Range",
             "description": [],
@@ -755,7 +702,7 @@
         },
         "stat": {
             "abilityId": 6949,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -763,7 +710,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

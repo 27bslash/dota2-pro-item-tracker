@@ -1,20 +1,19 @@
 {
-    "449": {
-        "id": 449,
-        "name": "special_bonus_reincarnation_300",
-        "uri": "undying",
+    "616": {
+        "id": 616,
+        "name": "special_bonus_unique_undying_6",
         "language": {
-            "abilityId": 449,
-            "gameVersionId": 135,
+            "abilityId": 616,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "Gains Reincarnation 300 CD",
+            "displayName": "+10 Soul Rip Damage/Heal",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 449,
-            "gameVersionId": 135,
+            "abilityId": 616,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +21,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +49,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 5442,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Decay",
             "description": [
@@ -64,7 +63,6 @@
                 "SCEPTER STRENGTH STEAL: 10"
             ],
             "lore": "The strength of the living is simply borrowed from the strength of the dead.",
-            "aghanimDescription": "Increases strength steal.",
             "notes": [
                 "The strength stolen stacks, but can't cause a hero to have strength below 1.",
                 "The strength steal takes effect before the damage is dealt.",
@@ -73,7 +71,7 @@
         },
         "stat": {
             "abilityId": 5442,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 5,
@@ -81,7 +79,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -105,16 +103,16 @@
                 0.45
             ],
             "cooldown": [
-                10,
-                8,
-                6,
-                4
+                10.0,
+                8.0,
+                6.0,
+                4.0
             ],
             "manaCost": [
-                70,
-                85,
-                100,
-                115
+                85.0,
+                95.0,
+                105.0,
+                115.0
             ],
             "isUltimate": false,
             "duration": "21.0 24.0 27.0 30.0",
@@ -130,14 +128,14 @@
         "uri": "undying",
         "language": {
             "abilityId": 5443,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Soul Rip",
             "description": [
                 "Undying rips health away from all nearby units and uses it to heal an ally, or damage an enemy. Soul Rip can also be used to heal Tombstone."
             ],
             "attributes": [
-                "DAMAGE/HEAL PER UNIT: 22 / 29 / 36 / 43",
+                "DAMAGE/HEAL PER UNIT: 19 / 26 / 33 / 40",
                 "MAX UNITS: 8 / 9 / 10 / 11",
                 "RIP RADIUS: 1300",
                 "TOMBSTONE HEAL: 4 / 8 / 12 / 16"
@@ -150,7 +148,7 @@
         },
         "stat": {
             "abilityId": 5443,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 8,
@@ -158,7 +156,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 0,
+            "modifierSupportValue": 0.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -179,16 +177,16 @@
                 0.35
             ],
             "cooldown": [
-                24,
-                18,
-                12,
-                6
+                24.0,
+                18.0,
+                12.0,
+                6.0
             ],
             "manaCost": [
-                100,
-                110,
-                120,
-                130
+                100.0,
+                110.0,
+                120.0,
+                130.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -204,7 +202,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 5444,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Tombstone",
             "description": [
@@ -227,7 +225,7 @@
         },
         "stat": {
             "abilityId": 5444,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16400,
             "unitTargetType": 0,
@@ -235,7 +233,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -259,16 +257,111 @@
                 0.45
             ],
             "cooldown": [
-                85,
-                80,
-                75,
-                70
+                85.0,
+                80.0,
+                75.0,
+                70.0
             ],
             "manaCost": [
-                120,
-                130,
-                140,
-                150
+                120.0,
+                130.0,
+                140.0,
+                150.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5445": {
+        "id": 5445,
+        "name": "undying_tombstone_zombie_aura",
+        "language": {
+            "abilityId": 5445,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5445,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 1048579,
+            "unitTargetType": 0,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5446": {
+        "id": 5446,
+        "name": "undying_tombstone_zombie_deathstrike",
+        "language": {
+            "abilityId": 5446,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Deathlust",
+            "description": [
+                "Slows enemy units on attack.  If the attacked unit's health goes below the threshold, the zombie receives enhanced movement and attack speed."
+            ],
+            "attributes": [
+                "HEALTH THRESHOLD BY PERCENT: 40%",
+                "SLOW DURATION: 2.5",
+                "MOVEMENT SLOW: -7%",
+                "BONUS MOVE SPEED: 35% / 40% / 45% / 50%",
+                "BONUS ATTACK SPEED: 50 / 60 / 70 / 80"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5446,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 5,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
             ],
             "isUltimate": false,
             "duration": "",
@@ -284,7 +377,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 5447,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Flesh Golem",
             "description": [
@@ -303,7 +396,7 @@
         },
         "stat": {
             "abilityId": 5447,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -311,7 +404,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -326,12 +419,12 @@
                 250
             ],
             "cooldown": [
-                125
+                125.0
             ],
             "manaCost": [
-                100,
-                125,
-                150
+                100.0,
+                125.0,
+                150.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -347,7 +440,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 6155,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+25 Tombstone Zombie Damage",
             "description": [],
@@ -356,7 +449,7 @@
         },
         "stat": {
             "abilityId": 6155,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -364,7 +457,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -392,16 +485,16 @@
         "uri": "undying",
         "language": {
             "abilityId": 6420,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-2.0s Decay Cooldown",
+            "displayName": "-1.5s Decay Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6420,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -409,7 +502,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -437,7 +530,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 6546,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Tombstone On Death",
             "description": [],
@@ -446,7 +539,7 @@
         },
         "stat": {
             "abilityId": 6546,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -454,52 +547,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6677": {
-        "id": 6677,
-        "name": "special_bonus_reincarnation_200",
-        "uri": "undying",
-        "language": {
-            "abilityId": 6677,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "Gains Reincarnation 200 CD",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6677,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -527,7 +575,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 6971,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40 Decay Duration",
             "description": [],
@@ -536,7 +584,7 @@
         },
         "stat": {
             "abilityId": 6971,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -544,7 +592,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -572,16 +620,16 @@
         "uri": "undying",
         "language": {
             "abilityId": 6972,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+4 Tombstone Attacks to Destroy",
+            "displayName": "+6 Tombstone Attacks to Destroy",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6972,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -589,52 +637,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7385": {
-        "id": 7385,
-        "name": "special_bonus_reincarnation_250",
-        "uri": "undying",
-        "language": {
-            "abilityId": 7385,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "Gains Reincarnation 250 CD",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7385,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

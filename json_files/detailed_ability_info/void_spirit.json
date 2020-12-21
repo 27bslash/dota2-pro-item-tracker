@@ -1,56 +1,11 @@
 {
-    "5938": {
-        "id": 5938,
-        "name": "special_bonus_attack_damage_15",
-        "uri": "void_spirit",
-        "language": {
-            "abilityId": 5938,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+15 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5938,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6470": {
         "id": 6470,
         "name": "void_spirit_dissimilate",
         "uri": "void_spirit",
         "language": {
             "abilityId": 6470,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Dissimilate",
             "description": [
@@ -64,7 +19,7 @@
         },
         "stat": {
             "abilityId": 6470,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4100,
             "unitTargetType": 3,
@@ -72,7 +27,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -90,67 +45,22 @@
                 0.2
             ],
             "cooldown": [
-                20,
-                17,
-                14,
-                11
+                20.0,
+                17.0,
+                14.0,
+                11.0
             ],
             "damage": [
-                100,
-                180,
-                260,
-                340
+                100.0,
+                180.0,
+                260.0,
+                340.0
             ],
             "manaCost": [
-                100,
-                110,
-                120,
-                130
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
-    "7401": {
-        "id": 7401,
-        "name": "special_bonus_spell_amplify_14",
-        "uri": "void_spirit",
-        "language": {
-            "abilityId": 7401,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+14% Spell Amplification",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7401,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
+                100.0,
+                110.0,
+                120.0,
+                130.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -158,7 +68,7 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
     },
     "7701": {
         "id": 7701,
@@ -166,7 +76,7 @@
         "uri": "void_spirit",
         "language": {
             "abilityId": 7701,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Aether Remnant",
             "description": [
@@ -183,7 +93,7 @@
         },
         "stat": {
             "abilityId": 7701,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -191,7 +101,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -209,26 +119,26 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                17,
-                15,
-                13,
-                11
+                17.0,
+                15.0,
+                13.0,
+                11.0
             ],
             "manaCost": [
-                85,
-                90,
-                95,
-                100
+                85.0,
+                90.0,
+                95.0,
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
             "chargeRestoreTime": ""
         },
-        "drawMatchPage": false,
+        "drawMatchPage": true,
         "isTalent": false
     },
     "7705": {
@@ -237,7 +147,7 @@
         "uri": "void_spirit",
         "language": {
             "abilityId": 7705,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Astral Step",
             "description": [
@@ -255,7 +165,7 @@
         },
         "stat": {
             "abilityId": 7705,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 20496,
             "unitTargetType": 3,
@@ -263,7 +173,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -281,17 +191,17 @@
                 0.2
             ],
             "cooldown": [
-                0
+                0.0
             ],
             "manaCost": [
-                100
+                100.0
             ],
             "isUltimate": true,
             "duration": "",
             "charges": "2",
             "chargeRestoreTime": "30 25 20"
         },
-        "drawMatchPage": false,
+        "drawMatchPage": true,
         "isTalent": false
     },
     "7706": {
@@ -300,16 +210,16 @@
         "uri": "void_spirit",
         "language": {
             "abilityId": 7706,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-5.5 Astral Step Charge Restore Time",
+            "displayName": "-5.0 Astral Step Charge Restore Time",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7706,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -317,7 +227,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "7707": {
+        "id": 7707,
+        "name": "special_bonus_unique_void_spirit_2",
+        "language": {
+            "abilityId": 7707,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+400 Astral Step Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7707,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -345,7 +299,7 @@
         "uri": "void_spirit",
         "language": {
             "abilityId": 7708,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Dissimilate Stuns for 2.5s",
             "description": [],
@@ -354,7 +308,7 @@
         },
         "stat": {
             "abilityId": 7708,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -362,7 +316,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -390,7 +344,7 @@
         "uri": "void_spirit",
         "language": {
             "abilityId": 7709,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80 Resonant Pulse Damage",
             "description": [],
@@ -399,7 +353,7 @@
         },
         "stat": {
             "abilityId": 7709,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -407,7 +361,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -435,7 +389,7 @@
         "uri": "void_spirit",
         "language": {
             "abilityId": 7710,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Resonant Pulse",
             "description": [
@@ -449,12 +403,11 @@
                 "BONUS ABSORB PER HERO HIT: 30 / 45 / 60 / 75"
             ],
             "lore": "Inai never hesitates to shroud himself in the essence of his true self when forced to interact with the mortal plane.",
-            "aghanimDescription": "Causes Resonant Pulse to silence and gain two charges.",
             "notes": []
         },
         "stat": {
             "abilityId": 7710,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16388,
             "unitTargetType": 0,
@@ -462,7 +415,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -480,16 +433,60 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                16
+                16.0
             ],
             "manaCost": [
-                100,
-                110,
-                120,
-                130
+                100.0,
+                110.0,
+                120.0,
+                130.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "7711": {
+        "id": 7711,
+        "name": "special_bonus_unique_void_spirit_5",
+        "language": {
+            "abilityId": 7711,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "50% Larger Dissimilate Portals",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7711,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
             ],
             "isUltimate": false,
             "duration": "",
@@ -497,7 +494,51 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": false,
-        "isTalent": false
+        "isTalent": true
+    },
+    "7712": {
+        "id": 7712,
+        "name": "special_bonus_unique_void_spirit_6",
+        "language": {
+            "abilityId": 7712,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Dissimilate Grants 3s Invisibility",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7712,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "7713": {
         "id": 7713,
@@ -505,7 +546,7 @@
         "uri": "void_spirit",
         "language": {
             "abilityId": 7713,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Remnant Provides 475 Truesight",
             "description": [],
@@ -514,7 +555,7 @@
         },
         "stat": {
             "abilityId": 7713,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -522,7 +563,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -550,7 +591,7 @@
         "uri": "void_spirit",
         "language": {
             "abilityId": 7714,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Astral Step 160% Crit",
             "description": [
@@ -561,7 +602,7 @@
         },
         "stat": {
             "abilityId": 7714,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -569,7 +610,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -591,22 +632,21 @@
         "drawMatchPage": false,
         "isTalent": true
     },
-    "7873": {
-        "id": 7873,
-        "name": "special_bonus_mp_regen_250",
-        "uri": "void_spirit",
+    "7715": {
+        "id": 7715,
+        "name": "special_bonus_unique_void_spirit_9",
         "language": {
-            "abilityId": 7873,
-            "gameVersionId": 135,
+            "abilityId": 7715,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+2.5 Mana Regen",
+            "displayName": "+2 Astral Step Charges",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 7873,
-            "gameVersionId": 135,
+            "abilityId": 7715,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -614,7 +654,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -633,7 +673,7 @@
             "charges": "",
             "chargeRestoreTime": ""
         },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
         "isTalent": true
     }
 }

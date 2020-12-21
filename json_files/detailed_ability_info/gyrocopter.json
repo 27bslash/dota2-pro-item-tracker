@@ -1,56 +1,11 @@
 {
-    "487": {
-        "id": 487,
-        "name": "special_bonus_attack_damage_16",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 487,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+16 Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 487,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "5361": {
         "id": 5361,
         "name": "gyrocopter_rocket_barrage",
         "uri": "gyrocopter",
         "language": {
             "abilityId": 5361,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Rocket Barrage",
             "description": [
@@ -68,7 +23,7 @@
         },
         "stat": {
             "abilityId": 5361,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -76,7 +31,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -94,16 +49,16 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                7,
+                7.0,
                 6.5,
-                6,
+                6.0,
                 5.5
             ],
             "manaCost": [
-                90
+                90.0
             ],
             "isUltimate": false,
             "duration": "3",
@@ -119,7 +74,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 5362,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Homing Missile",
             "description": [
@@ -130,7 +85,7 @@
                 "TOWER HITS TO DESTROY: 6",
                 "STUN DURATION: 2.25 / 2.5 / 2.75 / 3.0"
             ],
-            "lore": "The biggest missile Aurel could possibly attach to his craft, The Bomb\u00e2\u201e\u00a2 has carefully calculated aerodynamics and explosives for maximum impact.",
+            "lore": "The biggest missile Aurel could possibly attach to his craft, The Bomb\u2122 has carefully calculated aerodynamics and explosives for maximum impact.",
             "notes": [
                 "Towers do half damage to the missile.",
                 "The crosshair effect is visible to allies only.",
@@ -139,7 +94,7 @@
         },
         "stat": {
             "abilityId": 5362,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 3,
@@ -147,7 +102,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -165,25 +120,25 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                26,
-                21,
-                16,
-                11
+                26.0,
+                21.0,
+                16.0,
+                11.0
             ],
             "damage": [
-                100,
-                175,
-                250,
-                325
+                100.0,
+                175.0,
+                250.0,
+                325.0
             ],
             "manaCost": [
-                120,
-                130,
-                140,
-                150
+                120.0,
+                130.0,
+                140.0,
+                150.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -199,7 +154,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 5363,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Flak Cannon",
             "description": [
@@ -212,14 +167,13 @@
                 "SIDE GUNNER ATTACK RADIUS: 700"
             ],
             "lore": "This newly revamped Gyrocopter has attached enough armaments to assault in a 360 degree radius.",
-            "aghanimDescription": "Adds a Side Gunner that at random attacks enemy units near Gyrocopter. Prioritizes furthest unit away within its range.",
             "notes": [
                 "Attack range for the primary attack is unchanged."
             ]
         },
         "stat": {
             "abilityId": 5363,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -227,7 +181,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -242,19 +196,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                18
+                18.0
             ],
             "manaCost": [
-                50,
-                50,
-                50,
-                50
+                50.0,
+                50.0,
+                50.0,
+                50.0
             ],
             "isUltimate": false,
             "duration": "10",
@@ -270,7 +224,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 5364,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Call Down",
             "description": [
@@ -290,7 +244,7 @@
         },
         "stat": {
             "abilityId": 5364,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 48,
             "unitTargetType": 0,
@@ -298,7 +252,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -321,12 +275,12 @@
                 0.3
             ],
             "cooldown": [
-                90
+                90.0
             ],
             "manaCost": [
-                125,
-                125,
-                125
+                125.0,
+                125.0,
+                125.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -342,7 +296,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6216,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "3 Homing Missile Charges",
             "description": [],
@@ -351,7 +305,7 @@
         },
         "stat": {
             "abilityId": 6216,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -359,7 +313,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -387,7 +341,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6312,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Flak Cannon Attacks",
             "description": [],
@@ -396,7 +350,7 @@
         },
         "stat": {
             "abilityId": 6312,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -404,7 +358,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -432,7 +386,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6652,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+16 Rocket Barrage Damage",
             "description": [],
@@ -441,7 +395,7 @@
         },
         "stat": {
             "abilityId": 6652,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -449,7 +403,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -477,7 +431,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6653,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-40s Call Down Cooldown",
             "description": [],
@@ -486,7 +440,7 @@
         },
         "stat": {
             "abilityId": 6653,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -494,7 +448,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -522,7 +476,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6654,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Global Call Down",
             "description": [],
@@ -531,7 +485,7 @@
         },
         "stat": {
             "abilityId": 6654,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -539,7 +493,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -567,7 +521,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 7141,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.4s Homing Missile Stun Duration",
             "description": [],
@@ -576,7 +530,7 @@
         },
         "stat": {
             "abilityId": 7141,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -584,7 +538,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

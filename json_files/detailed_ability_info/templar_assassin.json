@@ -5,7 +5,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5194,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Refraction",
             "description": [
@@ -25,7 +25,7 @@
         },
         "stat": {
             "abilityId": 5194,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -33,7 +33,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -48,19 +48,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                17,
-                17,
-                17,
-                17
+                17.0,
+                17.0,
+                17.0,
+                17.0
             ],
             "manaCost": [
-                100
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -76,7 +76,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5195,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Meld",
             "description": [
@@ -94,7 +94,7 @@
         },
         "stat": {
             "abilityId": 5195,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 40964,
             "unitTargetType": 0,
@@ -102,7 +102,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -117,22 +117,22 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                12,
-                10,
-                8,
-                6
+                12.0,
+                10.0,
+                8.0,
+                6.0
             ],
             "manaCost": [
-                50,
-                50,
-                50,
-                50
+                50.0,
+                50.0,
+                50.0,
+                50.0
             ],
             "isUltimate": false,
             "duration": "12",
@@ -148,15 +148,15 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5196,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Psi Blades",
             "description": [
                 "Templar Assassin's psi blades slice through the attacked unit, splitting and damaging enemy units directly behind it, while gaining bonus attack range."
             ],
             "attributes": [
-                "BONUS ATTACK RANGE: 60 / 120 / 180 / 240",
-                "SPLIT RANGE: 590 / 630 / 670 / 710",
+                "BONUS ATTACK RANGE: 80 / 130 / 180 / 230",
+                "SPLIT RANGE MULTIPLIER: 2",
                 "SPLIT AMOUNT: 100%"
             ],
             "lore": "Her blades pierce the skin as much as the mind, furthering her understanding of the mystery that is reality.",
@@ -167,7 +167,7 @@
         },
         "stat": {
             "abilityId": 5196,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -175,7 +175,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 2,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -203,7 +203,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5197,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Psionic Trap",
             "description": [
@@ -217,7 +217,6 @@
                 "BONUS DAMAGE: 250 / 300 / 350"
             ],
             "lore": "Calling upon the reach of the Hidden Temple, none escape the eye of the Templar.",
-            "aghanimDescription": "Grants new ability: Psionic Projection. Allows you to teleport to any Psionic Trap after a brief channel.",
             "notes": [
                 "Traps last indefinitely.",
                 "They have invisibility that fades in over 2.0 / 2.0 / 2.0 seconds, spell immunity, and 100 HP.",
@@ -226,7 +225,7 @@
         },
         "stat": {
             "abilityId": 5197,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 16400,
             "unitTargetType": 0,
@@ -234,13 +233,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -258,14 +257,14 @@
                 0.3
             ],
             "cooldown": [
-                11,
-                8,
-                5
+                11.0,
+                8.0,
+                5.0
             ],
             "manaCost": [
-                15,
-                15,
-                15
+                15.0,
+                15.0,
+                15.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -281,7 +280,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5198,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Trap",
             "description": [
@@ -294,7 +293,7 @@
         },
         "stat": {
             "abilityId": 5198,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 526404,
             "unitTargetType": 0,
@@ -302,7 +301,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 100,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -317,13 +316,68 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
                 0.5
             ],
             "manaCost": [
-                0
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5199": {
+        "id": 5199,
+        "name": "templar_assassin_self_trap",
+        "language": {
+            "abilityId": 5199,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Trap",
+            "description": [
+                "Springs the trap, slowing nearby enemies."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5199,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2116,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 3,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.3
+            ],
+            "cooldown": [
+                0.5
+            ],
+            "manaCost": [
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -339,7 +393,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6071,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+6 Refraction Instances",
             "description": [],
@@ -348,7 +402,7 @@
         },
         "stat": {
             "abilityId": 6071,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -356,7 +410,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -384,7 +438,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6545,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-3 Meld Armor Reduction",
             "description": [],
@@ -393,7 +447,7 @@
         },
         "stat": {
             "abilityId": 6545,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -401,7 +455,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -429,7 +483,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6938,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+160 Psionic Trap Damage",
             "description": [],
@@ -438,7 +492,7 @@
         },
         "stat": {
             "abilityId": 6938,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -446,7 +500,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -474,7 +528,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6939,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Meld Dispels",
             "description": [
@@ -485,7 +539,7 @@
         },
         "stat": {
             "abilityId": 6939,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -493,7 +547,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -521,7 +575,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6940,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Psi Blades Spill Paralyzes",
             "description": [
@@ -532,7 +586,7 @@
         },
         "stat": {
             "abilityId": 6940,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -540,7 +594,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -568,7 +622,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 7058,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Psionic Traps",
             "description": [],
@@ -577,7 +631,7 @@
         },
         "stat": {
             "abilityId": 7058,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -585,7 +639,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -613,7 +667,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 7371,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "1s Meld Hit Bash",
             "description": [],
@@ -622,7 +676,7 @@
         },
         "stat": {
             "abilityId": 7371,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -630,7 +684,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -651,5 +705,68 @@
         },
         "drawMatchPage": true,
         "isTalent": true
+    },
+    "7853": {
+        "id": 7853,
+        "name": "templar_assassin_trap_teleport",
+        "language": {
+            "abilityId": 7853,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Psionic Projection",
+            "description": [
+                "Allows Templar Assassin to teleport to any Psionic Trap after a brief channel. Does not break meld. Detonates the Psionic Trap on arrival."
+            ],
+            "attributes": [
+                "CHANNEL TIME: 1",
+                "COOLDOWN: 30",
+                "TRAP DETONATE DAMAGE: 250 / 300 / 350"
+            ],
+            "lore": "In reward for her service, Lanaya has been granted access to secrets that unlock new techniques for her psionic gifts.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7853,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 3,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "channelTime": [
+                1.0
+            ],
+            "cooldown": [
+                15.0
+            ],
+            "manaCost": [
+                100.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
     }
 }

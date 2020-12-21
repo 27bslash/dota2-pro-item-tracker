@@ -5,7 +5,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 512,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5 Sticky Napalm Damage",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 512,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,95 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "572": {
+        "id": 572,
+        "name": "special_bonus_unique_batrider_5",
+        "language": {
+            "abilityId": 572,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "2 Flamebreak Charges",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 572,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "658": {
+        "id": 658,
+        "name": "special_bonus_unique_batrider_6",
+        "language": {
+            "abilityId": 658,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "-35s Flaming Lasso Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 658,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,18 +138,18 @@
         "uri": "batrider",
         "language": {
             "abilityId": 5320,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Sticky Napalm",
             "description": [
-                "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies in the area. Additional casts of Sticky Napalm continue to increase damage, up to 10 / 10 / 10 / 10 stacks. The extra damage is halved against creeps."
+                "Drenches an area in sticky oil, amplifying damage from Batrider's attacks and abilities and slowing the movement speed and turn rate of enemies in the area. Additional casts of Sticky Napalm continue to increase damage, up to 10 / 10 / 10 / 10 stacks."
             ],
             "attributes": [
-                "EXTRA DAMAGE: 10 / 15 / 20 / 25",
-                "DURATION: 8.0 / 8.0 / 8.0 / 8.0",
+                "EXTRA DAMAGE: 6 / 12 / 18 / 24",
+                "DURATION: 8",
                 "MOVEMENT SLOW: -2% / -4% / -6% / -8%",
-                "TURN RATE SLOW: -40% / -50% / -60% / -70%",
-                "RADIUS: 375 / 375 / 375 / 375"
+                "TURN RATE SLOW: -10% / -30% / -50% / -70%",
+                "RADIUS: 375 / 400 / 425 / 450"
             ],
             "lore": "It's not uncommon to hear the Rider cackle while he increases the flammability of his opponents.",
             "notes": [
@@ -71,7 +159,7 @@
         },
         "stat": {
             "abilityId": 5320,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -100,19 +188,16 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                3,
-                3,
-                3,
-                3
+                3.0,
+                3.0,
+                3.0,
+                3.0
             ],
             "manaCost": [
-                20,
-                20,
-                20,
-                20
+                20.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -128,7 +213,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 5321,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Flamebreak",
             "description": [
@@ -138,7 +223,6 @@
                 "IMPACT DAMAGE: 30 / 60 / 90 / 120",
                 "DAMAGE PER SECOND: 20",
                 "BURN DURATION: 2 / 4 / 6 / 8",
-                "TOTAL DAMAGE: 70 / 140 / 210 / 280",
                 "RADIUS: 500"
             ],
             "lore": "A molotov cocktail is the weapon of choice for Batrider.",
@@ -146,7 +230,7 @@
         },
         "stat": {
             "abilityId": 5321,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -154,7 +238,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -178,16 +262,16 @@
                 0.2
             ],
             "cooldown": [
-                18,
-                17,
-                16,
-                15
+                18.0,
+                17.0,
+                16.0,
+                15.0
             ],
             "manaCost": [
-                110,
-                120,
-                130,
-                140
+                110.0,
+                120.0,
+                130.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -203,7 +287,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 5322,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Firefly",
             "description": [
@@ -211,7 +295,7 @@
             ],
             "attributes": [
                 "DAMAGE PER SECOND: 10 / 30 / 50 / 70",
-                "MOVEMENT SPEED: 4% / 7% / 10% / 13%",
+                "MOVEMENT SPEED: 3% / 6% / 9% / 12%",
                 "RADIUS: 200 / 200 / 200 / 200",
                 "DURATION: 15",
                 "BONUS VISION: 200 / 400 / 600 / 800"
@@ -225,7 +309,7 @@
         },
         "stat": {
             "abilityId": 5322,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -233,7 +317,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -248,19 +332,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                40,
-                38,
-                36,
-                34
+                40.0,
+                38.0,
+                36.0,
+                34.0
             ],
             "manaCost": [
-                125
+                125.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -276,7 +360,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 5323,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Flaming Lasso",
             "description": [
@@ -284,11 +368,10 @@
             ],
             "attributes": [
                 "DURATION: 3.0 / 3.5 / 4.0",
-                "DAMAGE PER SECOND: 20 / 40 / 60",
-                "SCEPTER TETHER RANGE: 550"
+                "DAMAGE PER SECOND: 40 / 60 / 80",
+                "SCEPTER TETHER RANGE: 600"
             ],
             "lore": "Few dare to ask to ride on the bat, as Batrider gives them free of charge.",
-            "aghanimDescription": "Flaming Lasso grabs both its target, as well as the target's nearest allied hero within range. The secondary target is tethered to the first.",
             "notes": [
                 "Killing the target or the Batrider will break the lasso before its expiration.",
                 "If Batrider moves more than 400 units in 0.05 seconds the lasso breaks.",
@@ -297,7 +380,7 @@
         },
         "stat": {
             "abilityId": 5323,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -305,7 +388,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 1,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -317,7 +400,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                100
+                175
             ],
             "castRangeBuffer": [
                 250
@@ -329,12 +412,12 @@
                 0.2
             ],
             "cooldown": [
-                100,
-                90,
-                80
+                120.0,
+                115.0,
+                110.0
             ],
             "manaCost": [
-                225
+                225.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -344,103 +427,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5919": {
-        "id": 5919,
-        "name": "special_bonus_movement_speed_25",
-        "uri": "batrider",
-        "language": {
-            "abilityId": 5919,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+25 Movement Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5919,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5948": {
-        "id": 5948,
-        "name": "special_bonus_spell_amplify_5",
-        "uri": "batrider",
-        "language": {
-            "abilityId": 5948,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+5% Spell Amplification",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5948,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6087": {
         "id": 6087,
         "name": "special_bonus_unique_batrider_1",
         "uri": "batrider",
         "language": {
             "abilityId": 6087,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+6.5s Firefly Duration",
             "description": [],
@@ -449,7 +442,7 @@
         },
         "stat": {
             "abilityId": 6087,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -457,7 +450,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -485,7 +478,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 6229,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-10s Flamebreak Cooldown",
             "description": [],
@@ -494,7 +487,7 @@
         },
         "stat": {
             "abilityId": 6229,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -502,7 +495,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -530,7 +523,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 6610,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+1.0s Flamebreak Burn Duration",
             "description": [],
@@ -539,7 +532,7 @@
         },
         "stat": {
             "abilityId": 6610,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -547,7 +540,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

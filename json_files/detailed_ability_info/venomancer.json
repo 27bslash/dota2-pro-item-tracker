@@ -5,7 +5,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 416,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+15s Plague Ward Duration",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 416,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,42 +44,55 @@
         "drawMatchPage": false,
         "isTalent": true
     },
-    "434": {
-        "id": 434,
-        "name": "special_bonus_spell_lifesteal_12",
-        "uri": "venomancer",
+    "592": {
+        "id": 592,
+        "name": "venomancer_area_poison",
         "language": {
-            "abilityId": 434,
-            "gameVersionId": 135,
+            "abilityId": 592,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "12% Spell Lifesteal",
-            "description": [],
-            "attributes": [],
+            "displayName": "Venomancer Scepter",
+            "description": [
+                "Creates a 650 AoE pool of poison at the target location, dealing another instance of Poison Nova damage and slows by 20%. If an enemy dies in the area, a Plague Ward is spawned."
+            ],
+            "attributes": [
+                "DURATION: 15",
+                "RADIUS: 650"
+            ],
             "notes": []
         },
         "stat": {
-            "abilityId": 434,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 592,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
             "unitTargetType": 0,
-            "unitTargetTeam": 0,
+            "unitTargetTeam": 1,
             "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "unitDamageType": 3,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
-            "fightRecapLevel": 0,
+            "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
+            "castRange": [
+                900
+            ],
             "castRangeBuffer": [
                 250
+            ],
+            "cooldown": [
+                60.0
+            ],
+            "manaCost": [
+                150.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -87,7 +100,7 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": false,
-        "isTalent": true
+        "isTalent": false
     },
     "5178": {
         "id": 5178,
@@ -95,7 +108,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 5178,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Venomous Gale",
             "description": [
@@ -103,7 +116,7 @@
             ],
             "attributes": [
                 "DURATION: 15.0 / 15.0 / 15.0 / 15.0",
-                "INITIAL DAMAGE: 25 / 50 / 75 / 100",
+                "INITIAL DAMAGE: 50 / 75 / 100 / 125",
                 "DAMAGE PER TICK: 15 / 45 / 75 / 105",
                 "SLOW: -50% / -50% / -50% / -50%"
             ],
@@ -116,7 +129,7 @@
         },
         "stat": {
             "abilityId": 5178,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -124,7 +137,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -142,19 +155,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                21,
-                20,
-                19,
-                18
+                21.0,
+                20.0,
+                19.0,
+                18.0
             ],
             "manaCost": [
-                125
+                125.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -170,7 +183,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 5179,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Poison Sting",
             "description": [
@@ -178,8 +191,8 @@
             ],
             "attributes": [
                 "DURATION: 6.0 / 9.0 / 12.0 / 15.0",
-                "DAMAGE PER SECOND: 8 / 16 / 24 / 32",
-                "SLOW: -11% / -13% / -15% / -17%"
+                "DAMAGE PER SECOND: 6 / 14 / 22 / 30",
+                "SLOW: -9% / -11% / -13% / -15%"
             ],
             "lore": "The paralytic sting of the creature which caused his transformation now belongs to the Venomancer.",
             "notes": [
@@ -189,7 +202,7 @@
         },
         "stat": {
             "abilityId": 5179,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -197,7 +210,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -225,7 +238,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 5180,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Plague Ward",
             "description": [
@@ -241,7 +254,7 @@
         },
         "stat": {
             "abilityId": 5180,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 0,
@@ -249,7 +262,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -267,16 +280,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                5
+                5.0
             ],
             "manaCost": [
-                20
+                20.0,
+                22.0,
+                24.0,
+                26.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -292,7 +308,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 5181,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Poison Nova",
             "description": [
@@ -302,17 +318,16 @@
                 "RADIUS: 830",
                 "DURATION: 18",
                 "DAMAGE: 40 / 65 / 90",
+                "TRAVEL SPEED 500",
                 "SCEPTER DAMAGE: 75 / 100 / 125",
-                "SCEPTER COOLDOWN: 100.0 / 80.0 / 60.0",
-                "TRAVEL SPEED 500"
+                "SCEPTER COOLDOWN: 100.0 / 80.0 / 60.0"
             ],
             "lore": "In the Acid Jungles, creatures releasing noxious poison to their attackers is common; Venomancer spreads this plague beyond the Jidi Isle.",
-            "aghanimDescription": "Increases damage and decreases cooldown.",
             "notes": []
         },
         "stat": {
             "abilityId": 5181,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -320,7 +335,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 0,
+            "modifierSupportValue": 0.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -335,19 +350,19 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0
             ],
             "cooldown": [
-                140,
-                120,
-                100
+                140.0,
+                120.0,
+                100.0
             ],
             "manaCost": [
-                200,
-                300,
-                400
+                200.0,
+                300.0,
+                400.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -363,7 +378,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 6058,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "2.6x Plague Ward HP/Damage",
             "description": [],
@@ -372,7 +387,7 @@
         },
         "stat": {
             "abilityId": 6058,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -380,7 +395,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -408,7 +423,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 6532,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-10% Poison Sting Slow",
             "description": [],
@@ -417,7 +432,7 @@
         },
         "stat": {
             "abilityId": 6532,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -425,7 +440,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -453,7 +468,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 6979,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-6 Venomous Gale CD",
             "description": [],
@@ -462,7 +477,7 @@
         },
         "stat": {
             "abilityId": 6979,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -470,7 +485,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -498,7 +513,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 6980,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5.0s Poison Nova Duration",
             "description": [],
@@ -507,7 +522,7 @@
         },
         "stat": {
             "abilityId": 6980,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -515,7 +530,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -543,7 +558,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 6981,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Gale Hero Impact Summons 2 Wards",
             "description": [
@@ -554,7 +569,7 @@
         },
         "stat": {
             "abilityId": 6981,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -562,7 +577,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -590,7 +605,7 @@
         "uri": "venomancer",
         "language": {
             "abilityId": 6999,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+640 Poison Nova AoE",
             "description": [],
@@ -599,7 +614,7 @@
         },
         "stat": {
             "abilityId": 6999,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -607,7 +622,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

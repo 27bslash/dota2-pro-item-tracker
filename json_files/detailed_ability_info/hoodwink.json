@@ -1,131 +1,30 @@
 {
-    "627": {
-        "id": 627,
-        "name": "special_bonus_unique_storm_spirit_7",
+    "8106": {
+        "id": 8106,
+        "name": "hoodwink_sharpshooter",
         "language": {
-            "abilityId": 627,
+            "abilityId": 8106,
             "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "2x Overload Attack Bounce",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 627,
-            "gameVersionId": 137,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "682": {
-        "id": 682,
-        "name": "storm_spirit_electric_rave",
-        "language": {
-            "abilityId": 682,
-            "gameVersionId": 137,
-            "languageId": 0,
-            "displayName": "Electric Rave",
+            "displayName": "Sharpshooter",
             "description": [
-                "Grants Storm Spirit and allied heroes within 750 AoE of him 3 Overload charges. Provides 40 Attack Speed. Lasts up to 12 seconds or until the charges are depleted."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 682,
-            "gameVersionId": 137,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0
-            ],
-            "cooldown": [
-                30.0
-            ],
-            "manaCost": [
-                150.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
-    "5098": {
-        "id": 5098,
-        "name": "storm_spirit_static_remnant",
-        "uri": "storm_spirit",
-        "language": {
-            "abilityId": 5098,
-            "gameVersionId": 137,
-            "languageId": 0,
-            "displayName": "Static Remnant",
-            "description": [
-                "Creates an explosively charged image of Storm Spirit that lasts 12.0 seconds and will detonate and deal damage if an enemy unit comes near it."
+                "Hoodwink charges up and fires a deadly bolt from her crossbow, dealing heavy damage, slow, and Break to an enemy Hero. The damage and debuff duration scale up to max after 3.0 seconds, and the bolt is fired automatically after 5.0 seconds.",
+                "Hoodwink is knocked backwards for a distance of 350 from the force of the shot."
             ],
             "attributes": [
-                "RADIUS: 260",
-                "DAMAGE: 120 / 175 / 230 / 285"
+                "MAX WIND-UP TIME: 3.0",
+                "MAX DAMAGE: 600 / 1000 / 1400",
+                "MAX DEBUFF DURATION: 6.0",
+                "MOVE SLOW: 50%"
             ],
-            "lore": "Raijin Thunderkeg's duality allows him to admire himself in shocking fashion.",
-            "notes": [
-                "Remnants take 1.0 second to materialize after the spell is cast.",
-                "Remnants grant unobstructed vision for their duration.",
-                "The explosion actually hits units in a 260 radius, but will only be triggered in 235."
-            ]
+            "lore": "While her first arbalest was a chance discovery, Hoodwink now takes great care in carving and caring for her own -- of course with some necessary components pilfered or otherwise cleverly procured.",
+            "notes": []
         },
         "stat": {
-            "abilityId": 5098,
+            "abilityId": 8106,
             "gameVersionId": 137,
-            "type": 0,
-            "behavior": 4,
+            "type": 1,
+            "behavior": 16,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
@@ -138,222 +37,24 @@
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                3.5
-            ],
-            "manaCost": [
-                70.0,
-                80.0,
-                90.0,
-                100.0
-            ],
-            "isUltimate": false,
-            "duration": "12.0",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5099": {
-        "id": 5099,
-        "name": "storm_spirit_electric_vortex",
-        "uri": "storm_spirit",
-        "language": {
-            "abilityId": 5099,
-            "gameVersionId": 137,
-            "languageId": 0,
-            "displayName": "Electric Vortex",
-            "description": [
-                "A vortex that pulls an enemy unit to Storm Spirit's location."
-            ],
-            "attributes": [
-                "PULL DISTANCE: 180 / 220 / 260 / 300",
-                "DURATION: ",
-                "SCEPTER RADIUS: 475"
-            ],
-            "lore": "Raijin's thunderous, boisterous energy often draws others into an electrifying situation.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5099,
-            "gameVersionId": 137,
-            "type": 0,
-            "behavior": 8,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                300
+                3000
             ],
             "castRangeBuffer": [
                 250
             ],
             "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
+                0.0
             ],
             "cooldown": [
-                16.0
+                45.0
             ],
             "manaCost": [
-                60.0,
-                70.0,
-                80.0,
-                90.0
-            ],
-            "isUltimate": false,
-            "duration": "1.4 1.8 2.2 2.6",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5100": {
-        "id": 5100,
-        "name": "storm_spirit_overload",
-        "uri": "storm_spirit",
-        "language": {
-            "abilityId": 5100,
-            "gameVersionId": 137,
-            "languageId": 0,
-            "displayName": "Overload",
-            "description": [
-                "Casting a spell creates an electrical charge, which is released in a burst on Storm's next attack, dealing damage and slowing nearby enemies."
-            ],
-            "attributes": [
-                "MOVEMENT SLOW: -80%",
-                "ATTACK SLOW: -80",
-                "RADIUS: 300",
-                "DAMAGE: 40 / 60 / 80 / 100"
-            ],
-            "lore": "Pow!  Zip!  Zap!",
-            "notes": [
-                "Using items doesn't trigger Overload.",
-                "Overload charges do not stack."
-            ]
-        },
-        "stat": {
-            "abilityId": 5100,
-            "gameVersionId": 137,
-            "type": 0,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 40,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "0.6 0.6 0.6 0.6",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5101": {
-        "id": 5101,
-        "name": "storm_spirit_ball_lightning",
-        "uri": "storm_spirit",
-        "language": {
-            "abilityId": 5101,
-            "gameVersionId": 137,
-            "languageId": 0,
-            "displayName": "Ball Lightning",
-            "description": [
-                "Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost is 30+ 8% of his total mana pool, and the cost per 100 units traveled is 10+ 0.65 of his total mana pool. Damage is expressed in damage per 100 units traveled."
-            ],
-            "attributes": [
-                "SPEED: 1250 / 1875 / 2500",
-                "RADIUS: 200",
-                "MANA DRAIN PER UNIT: 0.65%"
-            ],
-            "lore": "The Storm is coming in.",
-            "notes": [
-                "Abilities and items can be used while traveling.",
-                "This ability will destroy trees.",
-                "Storm Spirit is invulnerable during Ball Lightning."
-            ]
-        },
-        "stat": {
-            "abilityId": 5101,
-            "gameVersionId": 137,
-            "type": 1,
-            "behavior": 4112,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3
-            ],
-            "damage": [
-                8.0,
-                12.0,
-                16.0
-            ],
-            "manaCost": [
-                30.0
+                150.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -363,157 +64,284 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6167": {
-        "id": 6167,
-        "name": "special_bonus_unique_storm_spirit",
-        "uri": "storm_spirit",
+    "8158": {
+        "id": 8158,
+        "name": "hoodwink_bushwhack",
         "language": {
-            "abilityId": 6167,
+            "abilityId": 8158,
             "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+0.4s Electric Vortex",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6167,
-            "gameVersionId": 137,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6906": {
-        "id": 6906,
-        "name": "special_bonus_unique_storm_spirit_2",
-        "language": {
-            "abilityId": 6906,
-            "gameVersionId": 137,
-            "languageId": 0,
-            "displayName": "+6 Ball Lightning Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6906,
-            "gameVersionId": 137,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6907": {
-        "id": 6907,
-        "name": "special_bonus_unique_storm_spirit_3",
-        "uri": "storm_spirit",
-        "language": {
-            "abilityId": 6907,
-            "gameVersionId": 137,
-            "languageId": 0,
-            "displayName": "Overload Pierces Immunity",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6907,
-            "gameVersionId": 137,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6908": {
-        "id": 6908,
-        "name": "special_bonus_unique_storm_spirit_4",
-        "uri": "storm_spirit",
-        "language": {
-            "abilityId": 6908,
-            "gameVersionId": 137,
-            "languageId": 0,
-            "displayName": "{s:value} Distance Auto Remnant in Ball Lightning",
+            "displayName": "Bushwhack",
             "description": [
-                "Every {s:value} distance travelled in Ball Lightning creates a Static Remnant."
+                "Tosses a net trap that stuns enemy heroes if they are near a tree in the area.  Affected enemies take damage and are pulled towards the tree nearest to them, and have their vision reduced to 0 for the duration of the stun."
+            ],
+            "attributes": [
+                "RADIUS: 325",
+                "STUN DURATION: 1.3 / 1.6 / 1.9 / 2.2",
+                "DAMAGE: 90 / 180 / 270 / 360"
+            ],
+            "lore": "Hoodwink favors Ironwood groves for ambushes, but the wary step carefully in all areas of the mistwoods.",
+            "notes": [
+                "Units can be freed from the stun by destroying the tree."
+            ]
+        },
+        "stat": {
+            "abilityId": 8158,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 48,
+            "unitTargetType": 69,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1200
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                14.0
+            ],
+            "manaCost": [
+                90.0,
+                100.0,
+                110.0,
+                120.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "8159": {
+        "id": 8159,
+        "name": "hoodwink_sharpshooter_release",
+        "language": {
+            "abilityId": 8159,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "End Sharpshooter",
+            "description": [
+                "Release the charged up shot, regain ability to move and attack."
+            ],
+            "attributes": [],
+            "lore": "Fire!",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 8159,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 51269,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 3,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                999999
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "8429": {
+        "id": 8429,
+        "name": "hoodwink_acorn_shot",
+        "language": {
+            "abilityId": 8429,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Acorn Shot",
+            "description": [
+                "Fires Hoodwink's attack with an acorn at the target unit.  The acorn bounces to nearby targets, slowing them and dealing bonus damage.",
+                "If point targeted, a tree is created at the target position and the acorn will bounce to nearby targets."
+            ],
+            "attributes": [
+                "BONUS ATTACK RANGE: 125 / 200 / 275 / 350",
+                "BOUNCE COUNT: 3 / 4 / 5 / 6",
+                "SLOW DURATION: 0.25",
+                "MOVEMENT SLOW: 100%",
+                "BONUS DAMAGE: 25 / 50 / 75 / 100"
+            ],
+            "lore": "Though she'll make do with almost anything, Oak and Ironwood acorns make the most effective projectiles -- and the bulk of Hoodwink's stash.",
+            "notes": [
+                "The same target can be hit more than once.",
+                "Bounces will seek units in the fog of war in a 525 radius, but not invisible units.",
+                "The planted tree lasts for 20 seconds.",
+                "Acorn Shot benefits from attack range bonuses."
+            ]
+        },
+        "stat": {
+            "abilityId": 8429,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 24,
+            "unitTargetType": 5,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 4,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                575
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                16.0,
+                14.0,
+                12.0,
+                10.0
+            ],
+            "manaCost": [
+                75.0,
+                85.0,
+                95.0,
+                105.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "9501": {
+        "id": 9501,
+        "name": "hoodwink_scurry",
+        "language": {
+            "abilityId": 9501,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Scurry",
+            "description": [
+                "Hoodwink passively has a chance to evade physical attacks while near trees.  When activated, Hoodwink gains bonus movement speed, phased collision, and tree-walking for a brief time."
+            ],
+            "attributes": [
+                "BONUS MOVEMENT SPEED: 25% / 30% / 35% / 40%",
+                "BUFF DURATION: 4.0",
+                "EVASION: 8% / 16% / 24% / 32%",
+                "EVASION RADIUS: 275"
+            ],
+            "lore": "There's not a nook or cranny in the Wood Tomo'kan out of reach of Hoodwink's paws.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9501,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2052,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                275
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                0.0
+            ],
+            "manaCost": [
+                35.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "2",
+            "chargeRestoreTime": "30 25 20 15"
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "9505": {
+        "id": 9505,
+        "name": "special_bonus_unique_hoodwink_camouflage",
+        "language": {
+            "abilityId": 9505,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Scurry Camouflage",
+            "description": [
+                "Hoodwink becomes invisible near trees after 1.2 seconds of not moving, attacking, or casting spells."
             ],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6908,
+            "abilityId": 9505,
             "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
@@ -541,24 +369,23 @@
             "charges": "",
             "chargeRestoreTime": ""
         },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
         "isTalent": true
     },
-    "6916": {
-        "id": 6916,
-        "name": "special_bonus_unique_storm_spirit_5",
-        "uri": "storm_spirit",
+    "9506": {
+        "id": 9506,
+        "name": "special_bonus_unique_hoodwink_sharpshooter_speed",
         "language": {
-            "abilityId": 6916,
+            "abilityId": 9506,
             "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+65 Static Remnant Damage",
+            "displayName": "25.0% Sharpshooter Faster Projectile / Charge Time",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6916,
+            "abilityId": 9506,
             "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
@@ -586,24 +413,23 @@
             "charges": "",
             "chargeRestoreTime": ""
         },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
         "isTalent": true
     },
-    "7936": {
-        "id": 7936,
-        "name": "special_bonus_unique_storm_spirit_6",
-        "uri": "storm_spirit",
+    "9507": {
+        "id": 9507,
+        "name": "special_bonus_unique_hoodwink_sharpshooter_pure_damage",
         "language": {
-            "abilityId": 7936,
+            "abilityId": 9507,
             "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+24 Overload Damage",
+            "displayName": "Sharpshooter Pure Damage and Pierces Spell Immunity",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 7936,
+            "abilityId": 9507,
             "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
@@ -631,7 +457,95 @@
             "charges": "",
             "chargeRestoreTime": ""
         },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "9509": {
+        "id": 9509,
+        "name": "special_bonus_unique_hoodwink_acorn_shot_charges",
+        "language": {
+            "abilityId": 9509,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "2 Acorn Shot Charges",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9509,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "9510": {
+        "id": 9510,
+        "name": "special_bonus_unique_hoodwink_bushwhack_cooldown",
+        "language": {
+            "abilityId": 9510,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "-3s Bushwhack Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9510,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
         "isTalent": true
     }
 }

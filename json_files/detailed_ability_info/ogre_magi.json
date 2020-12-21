@@ -5,7 +5,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 403,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+16 Ignite DPS",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 403,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,13 +44,139 @@
         "drawMatchPage": false,
         "isTalent": true
     },
+    "648": {
+        "id": 648,
+        "name": "ogre_magi_smash",
+        "language": {
+            "abilityId": 648,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Fire Shield",
+            "description": [
+                "Creates a shield around the target ally, absorbing 70% of the damage of next 3 attacks. Launches fireballs at the attacker, dealing 125 damage.<br><br>Lasts 25 seconds."
+            ],
+            "attributes": [
+                "DURATION: 25",
+                "NUMBER OF ATTACKS: 3",
+                "DAMAGE: 125"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 648,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 35,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                600
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                18.0
+            ],
+            "manaCost": [
+                125.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "5304": {
+        "id": 5304,
+        "name": "ogre_magi_frost_armor",
+        "language": {
+            "abilityId": 5304,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Ice Armor",
+            "description": [
+                "The Ogre Frostmage summons an invisible layer of icy air that surrounds the target friendly unit, increasing its armor and temporarily slowing any enemies that dare attack it."
+            ],
+            "attributes": [
+                "ARMOR BONUS: 5",
+                "DURATION: 45.0",
+                "MOVE SLOW: -25%",
+                "ATTACK SLOW: -25",
+                "SLOW DURATION: 5.0"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5304,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 32776,
+            "unitTargetType": 3,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.56
+            ],
+            "cooldown": [
+                5.0
+            ],
+            "manaCost": [
+                40.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
     "5438": {
         "id": 5438,
         "name": "ogre_magi_fireblast",
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5438,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Fireblast",
             "description": [
@@ -61,14 +187,13 @@
                 "FIREBLAST DAMAGE: 60 / 120 / 180 / 240"
             ],
             "lore": "The Ogre Magi is easily amused, entertained for hours by playing with fire.",
-            "aghanimDescription": "Gains new ability: Unrefined Fireblast. Blasts an enemy unit with a wave of fire, dealing damage and stunning the target.",
             "notes": [
                 "When Multicast, Fireblast hits the same target each time with a 0.6 seconds interval."
             ]
         },
         "stat": {
             "abilityId": 5438,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -76,7 +201,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -97,16 +222,16 @@
                 0.45
             ],
             "cooldown": [
-                11,
-                10,
-                9,
-                8
+                11.0,
+                10.0,
+                9.0,
+                8.0
             ],
             "manaCost": [
-                75,
-                85,
-                95,
-                105
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -122,7 +247,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5439,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Ignite",
             "description": [
@@ -141,7 +266,7 @@
         },
         "stat": {
             "abilityId": 5439,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 40,
             "unitTargetType": 3,
@@ -149,7 +274,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -173,10 +298,10 @@
                 0.45
             ],
             "cooldown": [
-                15
+                15.0
             ],
             "manaCost": [
-                90
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -192,7 +317,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5440,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Bloodlust",
             "description": [
@@ -211,7 +336,7 @@
         },
         "stat": {
             "abilityId": 5440,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 163848,
             "unitTargetType": 35,
@@ -219,7 +344,7 @@
             "unitTargetFlags": 32,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -240,13 +365,13 @@
                 0.45
             ],
             "cooldown": [
-                20,
-                18,
-                16,
-                14
+                20.0,
+                18.0,
+                16.0,
+                14.0
             ],
             "manaCost": [
-                65
+                65.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -262,7 +387,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5441,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Multicast",
             "description": [
@@ -281,7 +406,7 @@
         },
         "stat": {
             "abilityId": 5441,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -289,7 +414,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -317,11 +442,11 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5466,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Unrefined Fireblast",
             "description": [
-                "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 45% of Ogre Magi's current mana."
+                "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 30% of Ogre Magi's current mana."
             ],
             "attributes": [
                 "STUN DURATION: 1.5",
@@ -334,7 +459,7 @@
         },
         "stat": {
             "abilityId": 5466,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -342,7 +467,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -363,10 +488,10 @@
                 0.45
             ],
             "cooldown": [
-                6
+                6.0
             ],
             "manaCost": [
-                400
+                400.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -382,7 +507,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 6183,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+40 Bloodlust AS",
             "description": [],
@@ -391,7 +516,7 @@
         },
         "stat": {
             "abilityId": 6183,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -399,187 +524,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6355": {
-        "id": 6355,
-        "name": "special_bonus_movement_speed_75",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 6355,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+75 Movement Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6355,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6373": {
-        "id": 6373,
-        "name": "special_bonus_movement_speed_60",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 6373,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+60 Movement Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6373,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6633": {
-        "id": 6633,
-        "name": "special_bonus_strength_40",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 6633,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+40 Strength",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6633,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6706": {
-        "id": 6706,
-        "name": "special_bonus_movement_speed_90",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 6706,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+90 Movement Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6706,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -607,7 +552,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 6707,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+240 Fireblast Damage",
             "description": [],
@@ -616,7 +561,7 @@
         },
         "stat": {
             "abilityId": 6707,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -624,7 +569,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -646,22 +591,20 @@
         "drawMatchPage": true,
         "isTalent": true
     },
-    "6708": {
-        "id": 6708,
-        "name": "special_bonus_strength_30",
-        "uri": "ogre_magi",
+    "7030": {
+        "id": 7030,
+        "name": "special_bonus_unique_ogre_magi_3",
         "language": {
-            "abilityId": 6708,
-            "gameVersionId": 135,
+            "abilityId": 7030,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+30 Strength",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6708,
-            "gameVersionId": 135,
+            "abilityId": 7030,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -669,7 +612,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

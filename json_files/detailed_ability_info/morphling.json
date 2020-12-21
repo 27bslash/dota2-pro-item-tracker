@@ -5,7 +5,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5052,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Waveform",
             "description": [
@@ -19,7 +19,7 @@
         },
         "stat": {
             "abilityId": 5052,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 20496,
             "unitTargetType": 0,
@@ -27,7 +27,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -51,22 +51,22 @@
                 0.25
             ],
             "cooldown": [
-                20,
-                17,
-                14,
-                11
+                20.0,
+                17.0,
+                14.0,
+                11.0
             ],
             "damage": [
-                75,
-                150,
-                225,
-                300
+                75.0,
+                150.0,
+                225.0,
+                300.0
             ],
             "manaCost": [
-                150,
-                155,
-                160,
-                165
+                150.0,
+                155.0,
+                160.0,
+                165.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -82,7 +82,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5053,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Adaptive Strike (Agility)",
             "description": [
@@ -102,7 +102,7 @@
         },
         "stat": {
             "abilityId": 5053,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -134,10 +134,56 @@
                 0.25
             ],
             "cooldown": [
-                10
+                10.0
             ],
             "manaCost": [
-                80
+                80.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5054": {
+        "id": 5054,
+        "name": "morphling_morph",
+        "language": {
+            "abilityId": 5054,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "description": [],
+            "attributes": [
+                "BONUS AGILITY:%agi_bonus_attributes%",
+                "BONUS STRENGTH:%str_bonus_attributes%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5054,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 1,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
             ],
             "isUltimate": false,
             "duration": "",
@@ -153,7 +199,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5055,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Attribute Shift (Agility Gain)",
             "description": [
@@ -171,7 +217,7 @@
         },
         "stat": {
             "abilityId": 5055,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 516,
             "unitTargetType": 0,
@@ -179,7 +225,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -194,7 +240,7 @@
                 250
             ],
             "cooldown": [
-                0
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -210,7 +256,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5056,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Attribute Shift (Strength Gain)",
             "description": [
@@ -228,7 +274,7 @@
         },
         "stat": {
             "abilityId": 5056,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 516,
             "unitTargetType": 0,
@@ -236,7 +282,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -251,7 +297,7 @@
                 250
             ],
             "cooldown": [
-                0
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -267,7 +313,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5057,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Morph",
             "description": [
@@ -279,14 +325,13 @@
                 "SCEPTER BONUS CAST RANGE: 600"
             ],
             "lore": "Staring into Morphling produces a reflection that mimics the beholder.",
-            "aghanimDescription": "Allows targeting allied heroes. While Morphed, you gain Cast Range increase.",
             "notes": [
                 "You can't target yourself with Morph."
             ]
         },
         "stat": {
             "abilityId": 5057,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 8,
@@ -294,7 +339,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -317,12 +362,12 @@
                 0.25
             ],
             "cooldown": [
-                160,
-                100,
-                40
+                160.0,
+                100.0,
+                40.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -338,7 +383,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5058,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Morph Replicate",
             "description": [
@@ -349,7 +394,7 @@
         },
         "stat": {
             "abilityId": 5058,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 59397,
             "unitTargetType": 0,
@@ -357,7 +402,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -372,13 +417,13 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                1
+                1.0
             ],
             "manaCost": [
-                0
+                0.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -394,7 +439,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5674,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Hybrid",
             "description": [
@@ -407,7 +452,7 @@
         },
         "stat": {
             "abilityId": 5674,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 9,
             "unitTargetType": 8,
@@ -415,7 +460,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -436,10 +481,10 @@
                 0.25
             ],
             "cooldown": [
-                60
+                60.0
             ],
             "manaCost": [
-                200
+                200.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -455,7 +500,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6062,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+275 Waveform Range",
             "description": [],
@@ -464,7 +509,7 @@
         },
         "stat": {
             "abilityId": 6062,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -472,7 +517,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -500,7 +545,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6225,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-50 Morph Cooldown",
             "description": [],
@@ -509,7 +554,7 @@
         },
         "stat": {
             "abilityId": 6225,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -517,7 +562,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -545,7 +590,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6698,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Multishot Adaptive Strike",
             "description": [
@@ -556,7 +601,7 @@
         },
         "stat": {
             "abilityId": 6698,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -564,7 +609,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -592,7 +637,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6840,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Waveform Attacks Targets",
             "description": [
@@ -603,7 +648,7 @@
         },
         "stat": {
             "abilityId": 6840,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -611,7 +656,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -639,7 +684,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6927,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Morph Targets Allies",
             "description": [],
@@ -648,7 +693,7 @@
         },
         "stat": {
             "abilityId": 6927,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -656,7 +701,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -684,7 +729,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 7000,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Adaptive Strike (Strength)",
             "description": [
@@ -705,7 +750,7 @@
         },
         "stat": {
             "abilityId": 7000,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -737,10 +782,10 @@
                 0.25
             ],
             "cooldown": [
-                10
+                10.0
             ],
             "manaCost": [
-                80
+                80.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -756,7 +801,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 7052,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "2 Waveform Charges",
             "description": [],
@@ -765,7 +810,7 @@
         },
         "stat": {
             "abilityId": 7052,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -773,7 +818,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": true
+    },
+    "7056": {
+        "id": 7056,
+        "name": "special_bonus_unique_morphling_7",
+        "language": {
+            "abilityId": 7056,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "-5s Adaptive Strike Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7056,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -801,7 +890,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 7060,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+16s Morph Duration",
             "description": [],
@@ -810,7 +899,7 @@
         },
         "stat": {
             "abilityId": 7060,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -818,7 +907,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

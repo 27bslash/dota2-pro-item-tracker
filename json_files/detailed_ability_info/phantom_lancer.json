@@ -1,65 +1,20 @@
 {
-    "445": {
-        "id": 445,
-        "name": "special_bonus_30_crit_2",
-        "uri": "phantom_lancer",
-        "language": {
-            "abilityId": 445,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+30% Critical Strike (200%)",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 445,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "563": {
         "id": 563,
         "name": "special_bonus_unique_phantom_lancer_5",
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 563,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-1s Spirit Lance CD",
+            "displayName": "-2s Spirit Lance CD",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 563,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,7 +50,7 @@
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 564,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+4% Juxtapose Damage",
             "description": [],
@@ -104,7 +59,7 @@
         },
         "stat": {
             "abilityId": 564,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -112,7 +67,51 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "634": {
+        "id": 634,
+        "name": "special_bonus_unique_phantom_lancer_7",
+        "language": {
+            "abilityId": 634,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+1 Spirit Lance Multishot",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 634,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -140,7 +139,7 @@
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 5065,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Spirit Lance",
             "description": [
@@ -162,7 +161,7 @@
         },
         "stat": {
             "abilityId": 5065,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -170,7 +169,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -197,13 +196,10 @@
                 0.3
             ],
             "cooldown": [
-                7
+                7.0
             ],
             "manaCost": [
-                110,
-                120,
-                130,
-                140
+                120.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -219,7 +215,7 @@
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 5066,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Doppelganger",
             "description": [
@@ -243,7 +239,7 @@
         },
         "stat": {
             "abilityId": 5066,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4144,
             "unitTargetType": 0,
@@ -251,7 +247,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -272,13 +268,13 @@
                 0.1
             ],
             "cooldown": [
-                25,
-                20,
-                15,
-                10
+                25.0,
+                20.0,
+                15.0,
+                10.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -294,7 +290,7 @@
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 5067,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Juxtapose",
             "description": [
@@ -314,7 +310,7 @@
         },
         "stat": {
             "abilityId": 5067,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -322,19 +318,25 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
+            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRangeBuffer": [
                 250
+            ],
+            "cooldown": [
+                60.0
+            ],
+            "manaCost": [
+                75.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -350,19 +352,18 @@
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 5068,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Phantom Rush",
             "description": [
-                "When targetting an enemy for an attack, Phantom Lancer quickly charges into range, gaining a temporary agility boost upon reaching the target. Phantom Lancer's illusions also have this ability."
+                "When targetting an enemy for an attack, Phantom Lancer quickly charges into range, gaining a temporary agility boost. Phantom Lancer's illusions also have this ability."
             ],
             "attributes": [
-                "MIN RUSH DISTANCE: 250",
+                "MIN RUSH DISTANCE: 200",
                 "MAX RUSH DISTANCE: 600 / 700 / 800 / 900",
                 "BONUS AGILITY: 11 / 22 / 33 / 44"
             ],
             "lore": "Azwraith knows that on the field of battle, speed can mean everything.",
-            "aghanimDescription": "Removes cooldown and minimum distance.",
             "notes": [
                 "If the attack order is cancelled, the movement speed bonus is lost.",
                 "Rush movement speed is 800."
@@ -370,7 +371,7 @@
         },
         "stat": {
             "abilityId": 5068,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2564,
             "unitTargetType": 0,
@@ -378,7 +379,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -393,10 +394,10 @@
                 250
             ],
             "cooldown": [
-                16,
-                12,
-                8,
-                4
+                16.0,
+                12.0,
+                8.0,
+                4.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -412,16 +413,16 @@
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 6146,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+400 Phantom Rush Range",
+            "displayName": "+350 Phantom Rush Range",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6146,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -429,7 +430,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -457,7 +458,7 @@
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 6400,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+100 Spirit Lance Damage",
             "description": [],
@@ -466,7 +467,7 @@
         },
         "stat": {
             "abilityId": 6400,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -474,7 +475,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -502,7 +503,7 @@
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 6849,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+5 Max Juxtapose Illusions",
             "description": [],
@@ -511,7 +512,7 @@
         },
         "stat": {
             "abilityId": 6849,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -519,7 +520,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -547,7 +548,7 @@
         "uri": "phantom_lancer",
         "language": {
             "abilityId": 6850,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-4s Doppelganger CD",
             "description": [],
@@ -556,7 +557,7 @@
         },
         "stat": {
             "abilityId": 6850,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -564,52 +565,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6851": {
-        "id": 6851,
-        "name": "special_bonus_24_crit_2",
-        "uri": "phantom_lancer",
-        "language": {
-            "abilityId": 6851,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+24% Critical Strike (200%)",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6851,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

@@ -2,10 +2,10 @@ const hero_name = window.location.href.split("/").pop();
 let hero_colors;
 let h_id;
 if (hero_name.length > 0) {
-  hero_colors = get_json("colors");
+  hero_colors = get_json("ability_colours");
   abilities = get_json("abilities");
 }
-closeAllTooltips()
+closeAllTooltips();
 window.addEventListener("mouseover", (event) => {
   if (event.target.className === "table-img") {
     abilities.then((result) => {
@@ -13,9 +13,10 @@ window.addEventListener("mouseover", (event) => {
       a_id = parent.children[1].getAttribute("data_id");
       hero = parent.children[1].getAttribute("data-hero");
       tooltip = parent.children[2];
+      tooltip.style.background = `radial-gradient(circle at top left, rgba(41 35 35) 0%, rgba(19,18,18,1) 37%)`
       hero_colors.then((res) => {
         for (const i of res.colors) {
-          if (i.hero == hero) {
+          if (parent.children[1].getAttribute("src").includes(i.ability)) {
             tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, rgba(19,18,18,1) 37%)`;
           }
         }

@@ -1,56 +1,11 @@
 {
-    "458": {
-        "id": 458,
-        "name": "special_bonus_hp_650",
-        "uri": "spirit_breaker",
-        "language": {
-            "abilityId": 458,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+650 Health",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 458,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "5353": {
         "id": 5353,
         "name": "spirit_breaker_charge_of_darkness",
         "uri": "spirit_breaker",
         "language": {
             "abilityId": 5353,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Charge of Darkness",
             "description": [
@@ -59,11 +14,10 @@
             "attributes": [
                 "CHARGE BONUS SPEED: 300 / 325 / 350 / 375",
                 "STUN DURATION: 1.2 / 1.6 / 2.0 / 2.4",
-                "SCEPTER COOLDOWN: 6",
-                "SCEPTER SPEED BONUS: 100"
+                "SCEPTER COOLDOWN: 7",
+                "SCEPTER SPEED BONUS: 175"
             ],
             "lore": "Barathrum erupts from the darkness with unwieldy force.",
-            "aghanimDescription": "Increases Charge of Darkness movement speed and reduces cooldown.",
             "notes": [
                 "Spirit Breaker passes through trees, cliffs, and units.",
                 "The charge indicator is visible only to allies.",
@@ -72,7 +26,7 @@
         },
         "stat": {
             "abilityId": 5353,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 16781320,
             "unitTargetType": 3,
@@ -101,16 +55,16 @@
                 0.3
             ],
             "cooldown": [
-                17,
-                15,
-                13,
-                11
+                17.0,
+                15.0,
+                13.0,
+                11.0
             ],
             "manaCost": [
-                70,
-                80,
-                90,
-                100
+                70.0,
+                80.0,
+                90.0,
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -126,7 +80,7 @@
         "uri": "spirit_breaker",
         "language": {
             "abilityId": 5354,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Empowering Haste",
             "description": [
@@ -144,7 +98,7 @@
         },
         "stat": {
             "abilityId": 5354,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 1050628,
             "unitTargetType": 0,
@@ -152,7 +106,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -167,7 +121,7 @@
                 250
             ],
             "cooldown": [
-                20
+                20.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -183,7 +137,7 @@
         "uri": "spirit_breaker",
         "language": {
             "abilityId": 5355,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Greater Bash",
             "description": [
@@ -202,7 +156,7 @@
         },
         "stat": {
             "abilityId": 5355,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -210,7 +164,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 40,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -244,7 +198,7 @@
         "uri": "spirit_breaker",
         "language": {
             "abilityId": 5356,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Nether Strike",
             "description": [
@@ -260,7 +214,7 @@
         },
         "stat": {
             "abilityId": 5356,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 20488,
             "unitTargetType": 3,
@@ -268,7 +222,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 1,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -289,14 +243,14 @@
                 1.2
             ],
             "cooldown": [
-                100,
-                80,
-                60
+                90.0,
+                70.0,
+                50.0
             ],
             "manaCost": [
-                125,
-                150,
-                175
+                125.0,
+                150.0,
+                175.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -306,58 +260,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5912": {
-        "id": 5912,
-        "name": "special_bonus_hp_regen_10",
-        "uri": "spirit_breaker",
-        "language": {
-            "abilityId": 5912,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+10 Health Regen",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5912,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6149": {
         "id": 6149,
         "name": "special_bonus_unique_spirit_breaker_1",
         "uri": "spirit_breaker",
         "language": {
             "abilityId": 6149,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+20% Greater Bash Chance",
             "description": [],
@@ -366,7 +275,7 @@
         },
         "stat": {
             "abilityId": 6149,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -374,7 +283,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -402,7 +311,7 @@
         "uri": "spirit_breaker",
         "language": {
             "abilityId": 6296,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-5.5s Bulldoze Cooldown",
             "description": [],
@@ -411,7 +320,7 @@
         },
         "stat": {
             "abilityId": 6296,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -419,7 +328,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -447,7 +356,7 @@
         "uri": "spirit_breaker",
         "language": {
             "abilityId": 6543,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+12% Greater Bash Damage",
             "description": [],
@@ -456,7 +365,7 @@
         },
         "stat": {
             "abilityId": 6543,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -464,142 +373,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6905": {
-        "id": 6905,
-        "name": "special_bonus_hp_800",
-        "uri": "spirit_breaker",
-        "language": {
-            "abilityId": 6905,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+800 Health",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6905,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7019": {
-        "id": 7019,
-        "name": "special_bonus_night_vision_600",
-        "uri": "spirit_breaker",
-        "language": {
-            "abilityId": 7019,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+600 Night Vision",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7019,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7022": {
-        "id": 7022,
-        "name": "special_bonus_night_vision_500",
-        "uri": "spirit_breaker",
-        "language": {
-            "abilityId": 7022,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+500 Night Vision",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7022,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -627,7 +401,7 @@
         "uri": "spirit_breaker",
         "language": {
             "abilityId": 7301,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Bulldoze",
             "description": [
@@ -643,7 +417,7 @@
         },
         "stat": {
             "abilityId": 7301,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -651,7 +425,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -666,16 +440,16 @@
                 250
             ],
             "cooldown": [
-                22,
-                20,
-                18,
-                16
+                22.0,
+                20.0,
+                18.0,
+                16.0
             ],
             "manaCost": [
-                30,
-                40,
-                50,
-                60
+                30.0,
+                40.0,
+                50.0,
+                60.0
             ],
             "isUltimate": false,
             "duration": "",

@@ -5,7 +5,7 @@
         "uri": "mars",
         "language": {
             "abilityId": 466,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-3s Spear Cooldown",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 466,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -44,22 +44,21 @@
         "drawMatchPage": false,
         "isTalent": true
     },
-    "5918": {
-        "id": 5918,
-        "name": "special_bonus_movement_speed_20",
-        "uri": "mars",
+    "545": {
+        "id": 545,
+        "name": "special_bonus_unique_mars_rebuke_cooldown",
         "language": {
-            "abilityId": 5918,
-            "gameVersionId": 135,
+            "abilityId": 545,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+20 Movement Speed",
+            "displayName": "-4s God's Rebuke Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 5918,
-            "gameVersionId": 135,
+            "abilityId": 545,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +66,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -86,52 +85,7 @@
             "charges": "",
             "chargeRestoreTime": ""
         },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "5933": {
-        "id": 5933,
-        "name": "special_bonus_armor_6",
-        "uri": "mars",
-        "language": {
-            "abilityId": 5933,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+6 Armor",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5933,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
         "isTalent": true
     },
     "6495": {
@@ -140,7 +94,7 @@
         "uri": "mars",
         "language": {
             "abilityId": 6495,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "God's Rebuke",
             "description": [
@@ -155,14 +109,13 @@
                 "SCEPTER COOLDOWN: 3.5"
             ],
             "lore": "There isn't a warrior alive who can stand unmoved by the sting of Mars' rebuke.",
-            "aghanimDescription": "Decreases cooldown of God's Rebuke.",
             "notes": [
                 "Attack modifiers have a chance to proc on God's Rebuke attacks."
             ]
         },
         "stat": {
             "abilityId": 6495,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2097168,
             "unitTargetType": 3,
@@ -170,13 +123,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -191,16 +144,13 @@
                 0.2
             ],
             "cooldown": [
-                16,
-                14,
-                12,
-                10
+                16.0,
+                14.0,
+                12.0,
+                10.0
             ],
             "manaCost": [
-                65,
-                70,
-                75,
-                80
+                80.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -216,7 +166,7 @@
         "uri": "mars",
         "language": {
             "abilityId": 6582,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Bulwark",
             "description": [
@@ -232,7 +182,7 @@
         },
         "stat": {
             "abilityId": 6582,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 516,
             "unitTargetType": 0,
@@ -240,13 +190,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
+            "hasScepterUpgrade": true,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -268,7 +218,7 @@
         "uri": "mars",
         "language": {
             "abilityId": 6583,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Spear of Mars",
             "description": [
@@ -287,7 +237,7 @@
         },
         "stat": {
             "abilityId": 6583,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 1040,
             "unitTargetType": 3,
@@ -295,7 +245,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -313,13 +263,13 @@
                 0.25
             ],
             "cooldown": [
-                14
+                14.0
             ],
             "manaCost": [
-                110,
-                120,
-                130,
-                140
+                110.0,
+                120.0,
+                130.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -335,7 +285,7 @@
         "uri": "mars",
         "language": {
             "abilityId": 6584,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.8s Spear of Mars Stun",
             "description": [],
@@ -344,7 +294,7 @@
         },
         "stat": {
             "abilityId": 6584,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -352,7 +302,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -380,7 +330,7 @@
         "uri": "mars",
         "language": {
             "abilityId": 6598,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Arena Of Blood",
             "description": [
@@ -389,7 +339,7 @@
             "attributes": [
                 "DURATION: 5 / 6 / 7",
                 "RADIUS: 550",
-                "SPEAR DAMAGE: 120 / 185 / 250",
+                "SPEAR DAMAGE: 100 / 175 / 250",
                 "FORMATION TIME: 0.3"
             ],
             "lore": "The long-dead members of the Ash Legion, assembled from the finest warriors to ever test the might of Mars, still revel in the thrill of combat, gladly beholden to the hand that fell them for as long as he so commands.",
@@ -397,7 +347,7 @@
         },
         "stat": {
             "abilityId": 6598,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 48,
             "unitTargetType": 3,
@@ -405,7 +355,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -426,12 +376,14 @@
                 0.2
             ],
             "cooldown": [
-                90,
-                75,
-                60
+                90.0,
+                75.0,
+                60.0
             ],
             "manaCost": [
-                200
+                150.0,
+                175.0,
+                200.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -447,7 +399,7 @@
         "uri": "mars",
         "language": {
             "abilityId": 6756,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "God's Rebuke +65% Crit",
             "description": [],
@@ -456,7 +408,7 @@
         },
         "stat": {
             "abilityId": 6756,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -464,7 +416,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -492,7 +444,7 @@
         "uri": "mars",
         "language": {
             "abilityId": 6759,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+160 Spear Of Mars Damage",
             "description": [],
@@ -501,7 +453,7 @@
         },
         "stat": {
             "abilityId": 6759,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -509,7 +461,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -537,16 +489,16 @@
         "uri": "mars",
         "language": {
             "abilityId": 6766,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "Arena Of Blood Grants Team +80 HP Regen",
+            "displayName": "Arena Of Blood Grants Team +120 HP Regen",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6766,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -554,7 +506,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

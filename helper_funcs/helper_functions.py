@@ -72,7 +72,6 @@ class Items():
         return sd
 
     def get_item_name(self, item_id):
-        # print(item_id)
         if not item_id:
             return
         with open('json_files/items.json') as json_file:
@@ -136,9 +135,7 @@ class Items():
             if item['key'] == 'tango':
                 max_charges = 3
             if 'charges' in item:
-                print(item['charges'], max_charges)
                 for _ in range(1, round(item['charges']/max_charges)):
-                    print(item)
                     temp.insert(i, {'key': item['key'], 'time': item['time']})
         return temp
 
@@ -306,16 +303,20 @@ def detailed_ability_info(arr, h_id):
                     d['id'] = _id
                     gap = 0
                     level = i+1
-                    if data[_id]['uri'] != 'invoker':
-                        if level > 16:
-                            gap += 1
-                        if level > 17:
-                            gap += 1
-                        if level > 18:
-                            gap += 4
-                        d['level'] = i+1+gap
+                    if 'uri' in data[_id]:
+                        if data[_id]['uri'] != 'invoker':
+                            if level > 16:
+                                gap += 1
+                            if level > 17:
+                                gap += 1
+                            if level > 18:
+                                gap += 4
+                            d['level'] = i+1+gap
+                        else:
+                            # invoker edge case
+                            level = i+1
+                            d['level'] = i+1+gap
                     else:
-                        # invoker edge case
                         level = i+1
                         d['level'] = i+1+gap
                     if 'special_bonus' in data[_id]['name']:

@@ -5,16 +5,16 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 421,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-2.5s Blinding Light Cooldown",
+            "displayName": "-6s Blinding Light Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 421,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +50,7 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 422,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+150 Will-O-Wisp AOE",
             "description": [],
@@ -59,7 +59,7 @@
         },
         "stat": {
             "abilityId": 422,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -67,7 +67,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -95,7 +95,7 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 527,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-4s Chakra Magic Cooldown",
             "description": [],
@@ -104,7 +104,7 @@
         },
         "stat": {
             "abilityId": 527,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -112,7 +112,254 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "532": {
+        "id": 532,
+        "name": "keeper_of_the_light_radiant_bind",
+        "language": {
+            "abilityId": 532,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Solar Bind",
+            "description": [
+                "Weakens an enemy's magical resistance, and applies a slow that increases in strength the more the target moves."
+            ],
+            "attributes": [
+                "DURATION: 7",
+                "SLOW PER 100 UNITS: 4% / 5.5% / 7% / 8.5%",
+                "MAGIC RESISTANCE REDUCTION: 15% / 20% / 25% / 30%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 532,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 8,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                700,
+                750,
+                800,
+                850
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                22.0,
+                20.0,
+                18.0,
+                16.0
+            ],
+            "manaCost": [
+                60.0,
+                80.0,
+                100.0,
+                120.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "624": {
+        "id": 624,
+        "name": "special_bonus_unique_keeper_of_the_light_10",
+        "language": {
+            "abilityId": 624,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+1.2s Blinding Light Stun",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 624,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "657": {
+        "id": 657,
+        "name": "special_bonus_unique_keeper_of_the_light_8",
+        "language": {
+            "abilityId": 657,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+30% Blinding Light Miss",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 657,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "664": {
+        "id": 664,
+        "name": "special_bonus_unique_keeper_of_the_light_11",
+        "language": {
+            "abilityId": 664,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+15s Spirit Form Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 664,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "669": {
+        "id": 669,
+        "name": "special_bonus_unique_keeper_of_the_light_9",
+        "language": {
+            "abilityId": 669,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "+50% Illuminate Daytime Heal",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 669,
+            "gameVersionId": 137,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -140,7 +387,7 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 5471,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Illuminate",
             "description": [
@@ -153,14 +400,13 @@
                 "RANGE: 1550"
             ],
             "lore": "Ezalor's hidden light reveals itself in marvelous fashion.",
-            "aghanimDescription": "Allows Illuminate to heal allies during the day for the same amount as its damage values, and causes Illuminate to not require channeling.",
             "notes": [
                 "Gives increasing vision over the channeling time."
             ]
         },
         "stat": {
             "abilityId": 5471,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 144,
             "unitTargetType": 0,
@@ -168,13 +414,13 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -192,19 +438,19 @@
                 0.3
             ],
             "channelTime": [
-                2,
+                2.0,
                 2.7,
                 3.4,
                 4.1
             ],
             "cooldown": [
-                11
+                11.0
             ],
             "manaCost": [
-                150,
-                160,
-                170,
-                180
+                100.0,
+                125.0,
+                150.0,
+                175.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -220,7 +466,7 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 5472,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Mana Leak",
             "description": [
@@ -238,7 +484,7 @@
         },
         "stat": {
             "abilityId": 5472,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -246,7 +492,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -273,13 +519,13 @@
                 0.3
             ],
             "cooldown": [
-                16,
-                14,
-                12,
-                10
+                16.0,
+                14.0,
+                12.0,
+                10.0
             ],
             "manaCost": [
-                160
+                160.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -295,17 +541,15 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 5473,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Chakra Magic",
             "description": [
-                "Restores mana to the target unit and reduces cooldowns of all abilities currently on cooldown by a fixed amount. Can be cast on enemy, placing a debuff that drains 4.5 / 5 / 5.5 / 6.0% of current mana per 100 units moved."
+                "Restores mana to the target unit and reduces cooldowns of all abilities currently on cooldown by a fixed amount."
             ],
             "attributes": [
                 "MANA RESTORE: 80 / 160 / 240 / 320",
-                "COOLDOWN REDUCTION: 3 / 4 / 5 / 6",
-                "MANA LEAK: 4.5% / 5% / 5.5% / 6.0%",
-                "ENEMY DURATION: 5"
+                "COOLDOWN REDUCTION: 3 / 4 / 5 / 6"
             ],
             "lore": "In the same vein, Ezalor bestows his harmony among others.",
             "notes": [
@@ -314,15 +558,15 @@
         },
         "stat": {
             "abilityId": 5473,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
-            "unitTargetTeam": 4,
+            "unitTargetTeam": 2,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 3,
+            "modifierSupportValue": 3.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -349,13 +593,13 @@
                 0.3
             ],
             "cooldown": [
-                20,
-                18,
-                16,
-                14
+                20.0,
+                18.0,
+                16.0,
+                14.0
             ],
             "manaCost": [
-                0
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -371,22 +615,22 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 5474,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Spirit Form",
             "description": [
-                "Ezalor temporarily turns his body luminescent, gaining various abilities.  Illuminate is now channeled by a separate spirit, and gains the Blinding Light and Recall abilities."
+                "Ezalor temporarily turns his body luminescent, gaining bonus movement speed, cast range, allows Illuminate to be channeled by a separate spirit, and grants the Recall and Blinding Light abilities."
             ],
             "attributes": [
-                "DURATION: 40.0 / 40.0 / 40.0"
+                "DURATION: 40.0 / 40.0 / 40.0",
+                "MOVEMENT SPEED: 20% / 25% / 30%"
             ],
             "lore": "In a flash of light, Ezalor reveals his true nature.",
-            "aghanimDescription": "Permanent Spirit Form. During daytime, allows Illuminate to heal allies for the same amount as its damage values.",
             "notes": []
         },
         "stat": {
             "abilityId": 5474,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -409,14 +653,14 @@
                 250
             ],
             "cooldown": [
-                80,
-                70,
-                60
+                90.0,
+                80.0,
+                70.0
             ],
             "manaCost": [
-                100,
-                100,
-                100
+                75.0,
+                125.0,
+                175.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -432,14 +676,14 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 5475,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Recall",
             "description": [
                 "After a short delay, teleports the targeted friendly hero to your location.  If the targeted friendly hero takes player based damage during this time, the ability is interrupted."
             ],
             "attributes": [
-                "TELEPORT DELAY: 5.0 / 4.0 / 3.0"
+                "TELEPORT DELAY: 3.0"
             ],
             "lore": "Walk towards the light.",
             "notes": [
@@ -451,7 +695,7 @@
         },
         "stat": {
             "abilityId": 5475,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 8,
@@ -459,14 +703,14 @@
             "unitTargetFlags": 32,
             "unitDamageType": 0,
             "spellImmunity": 4,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 3,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
@@ -482,12 +726,10 @@
                 0.3
             ],
             "cooldown": [
-                15
+                15.0
             ],
             "manaCost": [
-                100,
-                100,
-                100
+                150.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -503,17 +745,17 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 5476,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Blinding Light",
             "description": [
-                "A blinding light flashes over the targeted area, knocking back and blinding the units in the area, causing them to miss some attacks. Knockback is 350 range over 0.4 seconds,"
+                "A blinding light flashes over the targeted area, knocking back and blinding the units in the area, causing them to miss some attacks. Knockback is 400 range over 0.4 seconds,"
             ],
             "attributes": [
-                "MISS CHANCE: 70%",
-                "DURATION: 3 / 4 / 5 / 6",
+                "MISS CHANCE: 40%",
+                "DURATION: 4",
                 "RADIUS: 600",
-                "DAMAGE: 50 / 100 / 150 / 200"
+                "DAMAGE: 100"
             ],
             "lore": "The Primordial light turns the tides of battle in favor of Ezalor and his allies.",
             "notes": [
@@ -522,30 +764,27 @@
         },
         "stat": {
             "abilityId": 5476,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
-            "behavior": 48,
+            "behavior": 0,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
-            "fightRecapLevel": 0,
+            "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                475,
-                550,
-                625,
-                700
+                600
             ],
             "castRangeBuffer": [
                 250
@@ -557,16 +796,10 @@
                 0.3
             ],
             "cooldown": [
-                20,
-                18,
-                16,
-                14
+                18.0
             ],
             "manaCost": [
-                130,
-                145,
-                160,
-                175
+                150.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -582,7 +815,7 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 5477,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Release Illuminate",
             "description": [
@@ -593,7 +826,7 @@
         },
         "stat": {
             "abilityId": 5477,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 32837,
             "unitTargetType": 0,
@@ -601,7 +834,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -616,10 +849,10 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -635,7 +868,7 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 5479,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Illuminate",
             "description": [
@@ -654,7 +887,7 @@
         },
         "stat": {
             "abilityId": 5479,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -662,7 +895,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -686,13 +919,13 @@
                 0.3
             ],
             "cooldown": [
-                11
+                11.0
             ],
             "manaCost": [
-                150,
-                160,
-                170,
-                180
+                100.0,
+                125.0,
+                150.0,
+                175.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -702,30 +935,29 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5954": {
-        "id": 5954,
-        "name": "special_bonus_respawn_reduction_25",
-        "uri": "Keeper_of_the_Light",
+    "5501": {
+        "id": 5501,
+        "name": "keeper_of_the_light_empty1",
         "language": {
-            "abilityId": 5954,
-            "gameVersionId": 135,
+            "abilityId": 5501,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-25s Respawn Time",
+            "displayName": "Empty",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 5954,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 5501,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 66,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -745,32 +977,31 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
     },
-    "6114": {
-        "id": 6114,
-        "name": "special_bonus_cast_range_200",
-        "uri": "keeper_of_the_light",
+    "5502": {
+        "id": 5502,
+        "name": "keeper_of_the_light_empty2",
         "language": {
-            "abilityId": 6114,
-            "gameVersionId": 135,
+            "abilityId": 5502,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+200 Cast Range",
+            "displayName": "Empty",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6114,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 5502,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 66,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -790,32 +1021,33 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
     },
-    "6161": {
-        "id": 6161,
-        "name": "special_bonus_cast_range_250",
-        "uri": "keeper_of_the_light",
+    "5503": {
+        "id": 5503,
+        "name": "keeper_of_the_light_spirit_form_illuminate_end",
         "language": {
-            "abilityId": 6161,
-            "gameVersionId": 135,
+            "abilityId": 5503,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+250 Cast Range",
-            "description": [],
+            "displayName": "Release Illuminate",
+            "description": [
+                "Release the channel early."
+            ],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6161,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
+            "abilityId": 5503,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 32837,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -829,13 +1061,19 @@
             "castRangeBuffer": [
                 250
             ],
+            "castPoint": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
     },
     "6217": {
         "id": 6217,
@@ -843,16 +1081,16 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 6217,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+160 Illuminate Damage/Heal",
+            "displayName": "+160 Illuminate Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6217,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -860,7 +1098,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -888,7 +1126,7 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 6527,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+250 Chakra Magic Mana",
             "description": [],
@@ -897,7 +1135,7 @@
         },
         "stat": {
             "abilityId": 6527,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -905,7 +1143,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -933,7 +1171,7 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 6665,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+2 Will-O-Wisp Flicker",
             "description": [],
@@ -942,7 +1180,7 @@
         },
         "stat": {
             "abilityId": 6665,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -950,7 +1188,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -978,40 +1216,37 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 7316,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Will-O-Wisp",
             "description": [
-                "Summons Ignis Fatuus at the targeted area. Alternates on and off every second. When actived, it causes all enemies near it to stare hypnotized at it. Can be attacked by units in or outside of the radius, dies after a certain number of attacks."
+                "Summons Ignis Fatuus at the targeted area. Alternates on and off, drawing enemies closer with its mesmerising flicker."
             ],
             "attributes": [
                 "RADIUS: 725",
-                "FLICKER COUNT: 3 / 4 / 5",
-                "HIT COUNT: 4 / 5 / 6",
-                "OFF DURATION: 1.85",
-                "ON DURATION: 1.3"
+                "HIT COUNT: 6"
             ],
             "lore": "Though he would not claim to 'know' them, Ezalor holds an uncanny influence over many powerful creatures always willing to come to his aid.",
             "notes": []
         },
         "stat": {
             "abilityId": 7316,
-            "gameVersionId": 135,
-            "type": 1,
-            "behavior": 48,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
             "unitTargetType": 1,
             "unitTargetTeam": 1,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
@@ -1025,14 +1260,12 @@
                 0.1
             ],
             "cooldown": [
-                130
+                60.0
             ],
             "manaCost": [
-                250,
-                350,
-                450
+                250.0
             ],
-            "isUltimate": true,
+            "isUltimate": false,
             "duration": "",
             "charges": "",
             "chargeRestoreTime": ""
@@ -1046,7 +1279,7 @@
         "uri": "keeper_of_the_light",
         "language": {
             "abilityId": 7398,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+3 Will-O-Wisp Health Count",
             "description": [],
@@ -1055,7 +1288,7 @@
         },
         "stat": {
             "abilityId": 7398,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -1063,7 +1296,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

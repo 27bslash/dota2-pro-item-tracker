@@ -1,11 +1,71 @@
 {
+    "639": {
+        "id": 639,
+        "name": "broodmother_silken_bola",
+        "language": {
+            "abilityId": 639,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Silken Bola",
+            "description": [
+                "Consumes a Spin Web charge and roots the target enemy for 2 seconds."
+            ],
+            "attributes": [
+                "DURATION: 2"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 639,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.30000001192092896,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                900
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                12.0
+            ],
+            "manaCost": [
+                50.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
     "5279": {
         "id": 5279,
         "name": "broodmother_spawn_spiderlings",
         "uri": "broodmother",
         "language": {
             "abilityId": 5279,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Spawn Spiderlings",
             "description": [
@@ -24,7 +84,7 @@
         },
         "stat": {
             "abilityId": 5279,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -32,7 +92,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 0,
+            "modifierSupportValue": 0.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -56,13 +116,13 @@
                 0.2
             ],
             "cooldown": [
-                11,
-                10,
-                9,
-                8
+                11.0,
+                10.0,
+                9.0,
+                8.0
             ],
             "manaCost": [
-                100
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -78,7 +138,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 5280,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Spin Web",
             "description": [
@@ -87,13 +147,12 @@
             "attributes": [
                 "MAX WEBS: 2 / 4 / 6 / 8",
                 "HEALTH REGEN: 3 / 5 / 7 / 9",
-                "MOVE INCREASE: 20% / 35% / 50% / 65%",
+                "MOVE INCREASE: 25% / 35% / 45% / 55%",
                 "SCEPTER MAX WEBS: 6 / 10 / 14 / 18",
                 "SCEPTER MAX WEB CHARGES: 6 / 10 / 14 / 18",
-                "SCEPTER MOVE SPEED: 30% / 50% / 70% / 90%"
+                "SCEPTER MOVE SPEED: 35% / 50% / 65% / 80%"
             ],
             "lore": "Weaving a bed of silken fibers, Arachnia's web both protects her and her offspring, as well as giving advancing opponents a sense of forboding.",
-            "aghanimDescription": "Increases movement speed, removes movement speed limit, and increases Spin Web max count",
             "notes": [
                 "Also affects Spiderling and Spiderites.",
                 "If free movement is disabled, you will destroy nearby trees."
@@ -101,7 +160,7 @@
         },
         "stat": {
             "abilityId": 5280,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -109,7 +168,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -130,10 +189,10 @@
                 0.4
             ],
             "cooldown": [
-                0
+                0.0
             ],
             "manaCost": [
-                50
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -149,7 +208,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 5281,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Incapacitating Bite",
             "description": [
@@ -167,7 +226,7 @@
         },
         "stat": {
             "abilityId": 5281,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -175,7 +234,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -203,7 +262,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 5282,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Insatiable Hunger",
             "description": [
@@ -221,7 +280,7 @@
         },
         "stat": {
             "abilityId": 5282,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -229,7 +288,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -249,14 +308,14 @@
                 0.2
             ],
             "cooldown": [
-                45,
-                45,
-                45
+                45.0,
+                45.0,
+                45.0
             ],
             "manaCost": [
-                100,
-                100,
-                100
+                100.0,
+                100.0,
+                100.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -266,30 +325,34 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5962": {
-        "id": 5962,
-        "name": "special_bonus_agility_20",
-        "uri": "broodmother",
+    "5283": {
+        "id": 5283,
+        "name": "broodmother_spawn_spiderite",
         "language": {
-            "abilityId": 5962,
-            "gameVersionId": 135,
+            "abilityId": 5283,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "+20 Agility",
-            "description": [],
-            "attributes": [],
+            "displayName": "Spawn Spiderite",
+            "description": [
+                "Applies debuff on attack. If debuffed unit dies, a spiderite will spawn."
+            ],
+            "attributes": [
+                "LIFETIME: 60.0",
+                "DEBUFF DURATION: 2.0"
+            ],
             "notes": []
         },
         "stat": {
-            "abilityId": 5962,
-            "gameVersionId": 135,
-            "type": 2,
+            "abilityId": 5283,
+            "gameVersionId": 137,
+            "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -309,7 +372,113 @@
             "chargeRestoreTime": ""
         },
         "drawMatchPage": true,
-        "isTalent": true
+        "isTalent": false
+    },
+    "5284": {
+        "id": 5284,
+        "name": "broodmother_poison_sting",
+        "language": {
+            "abilityId": 5284,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Poison Sting",
+            "description": [
+                "Poisons and slows enemies with each attack."
+            ],
+            "attributes": [
+                "DAMAGE PER SECOND: 8",
+                "MOVE SLOW: -8%",
+                "DURATION (CREEP): 6.0",
+                "DURATION (HERO): 2.0"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5284,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 15,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5643": {
+        "id": 5643,
+        "name": "broodmother_spin_web_destroy",
+        "language": {
+            "abilityId": 5643,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Destroy Spin Web",
+            "description": [
+                "Destroys the selected Spin Web."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5643,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 2116,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                0.0
+            ],
+            "manaCost": [
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
     },
     "6257": {
         "id": 6257,
@@ -317,7 +486,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 6257,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+50 Insatiable Hunger Damage/Lifesteal",
             "description": [],
@@ -326,7 +495,7 @@
         },
         "stat": {
             "abilityId": 6257,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -334,7 +503,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -362,7 +531,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 6258,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+350 Spiders Health",
             "description": [],
@@ -371,7 +540,7 @@
         },
         "stat": {
             "abilityId": 6258,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -379,7 +548,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -407,7 +576,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 6361,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80 Spawn Spiderlings Damage",
             "description": [],
@@ -416,7 +585,7 @@
         },
         "stat": {
             "abilityId": 6361,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -424,7 +593,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -452,7 +621,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 6362,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+18 Spiders Attack Damage",
             "description": [],
@@ -461,7 +630,7 @@
         },
         "stat": {
             "abilityId": 6362,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -469,7 +638,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,

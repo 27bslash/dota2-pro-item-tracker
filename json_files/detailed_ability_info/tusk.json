@@ -5,7 +5,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 414,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+0.4s Walrus Punch Stun Duration",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 414,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -22,7 +22,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -50,7 +50,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 5565,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Ice Shards",
             "description": [
@@ -68,7 +68,7 @@
         },
         "stat": {
             "abilityId": 5565,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 17424,
             "unitTargetType": 3,
@@ -76,7 +76,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -100,16 +100,16 @@
                 0.1
             ],
             "cooldown": [
-                23,
-                20,
-                17,
-                14
+                23.0,
+                20.0,
+                17.0,
+                14.0
             ],
             "manaCost": [
-                100,
-                105,
-                110,
-                115
+                100.0,
+                105.0,
+                110.0,
+                115.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -125,7 +125,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 5566,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Snowball",
             "description": [
@@ -150,7 +150,7 @@
         },
         "stat": {
             "abilityId": 5566,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 4104,
             "unitTargetType": 3,
@@ -158,7 +158,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 1,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -182,16 +182,16 @@
                 0.1
             ],
             "cooldown": [
-                21,
-                20,
-                19,
-                18
+                21.0,
+                20.0,
+                19.0,
+                18.0
             ],
             "manaCost": [
-                75,
-                75,
-                75,
-                75
+                75.0,
+                75.0,
+                75.0,
+                75.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -207,17 +207,17 @@
         "uri": "tusk",
         "language": {
             "abilityId": 5567,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Frozen Sigil",
             "description": [
-                "Tusk summons a Frozen Sigil by calling upon the deepest cold of winter. The Sigil creates a snowstorm which slows all enemy units within 600 range."
+                "Summons a flying Sigil that slows enemy attack by -30 and movement speed by -20% for enemies within 650 radius. Lasts 25 seconds. Cooldown: 40"
             ],
             "attributes": [
-                "AURA RADIUS: 600",
-                "DURATION: 30.0",
-                "MOVEMENT SLOW: 10% / 15% / 20% / 25%",
-                "ATTACK SLOW: 30 / 40 / 50 / 60"
+                "AURA RADIUS: 650",
+                "DURATION: 25.0",
+                "MOVEMENT SLOW: 20%",
+                "ATTACK SLOW: 30"
             ],
             "lore": "The chill of home!",
             "notes": [
@@ -228,22 +228,22 @@
         },
         "stat": {
             "abilityId": 5567,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
-            "behavior": 4,
+            "behavior": 0,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
-            "fightRecapLevel": 0,
+            "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 0,
+            "maxLevel": 1,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
@@ -251,22 +251,13 @@
                 250
             ],
             "castPoint": [
-                0.1,
-                0.1,
-                0.1,
                 0.1
             ],
             "cooldown": [
-                50,
-                50,
-                50,
-                50
+                30.0
             ],
             "manaCost": [
-                75,
-                75,
-                75,
-                75
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -282,7 +273,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 5568,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Walrus PUNCH!",
             "description": [
@@ -295,14 +286,13 @@
                 "MOVEMENT SLOW: 40%"
             ],
             "lore": "It never matters who throws the first punch, only who throws the last.",
-            "aghanimDescription": "Adds new ability: Walrus Kick. Kicks the target unit back, damaging them and slowing their movement speed.",
             "notes": [
                 "Walrus PUNCH has true strike."
             ]
         },
         "stat": {
             "abilityId": 5568,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 1,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -310,7 +300,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 0,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -328,17 +318,17 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                36,
-                24,
-                12
+                36.0,
+                24.0,
+                12.0
             ],
             "manaCost": [
-                50,
-                75,
-                100
+                50.0,
+                75.0,
+                100.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -354,7 +344,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 5641,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Launch Snowball",
             "description": [
@@ -370,7 +360,7 @@
         },
         "stat": {
             "abilityId": 5641,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 67653,
             "unitTargetType": 0,
@@ -378,7 +368,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -393,10 +383,62 @@
                 250
             ],
             "castPoint": [
-                0,
-                0,
-                0,
-                0
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": ""
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "5668": {
+        "id": 5668,
+        "name": "tusk_ice_shards_stop",
+        "language": {
+            "abilityId": 5668,
+            "gameVersionId": 137,
+            "languageId": 0,
+            "displayName": "Ice Shards Stop",
+            "description": [
+                "Stop."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 5668,
+            "gameVersionId": 137,
+            "type": 0,
+            "behavior": 5,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -412,11 +454,11 @@
         "uri": "tusk",
         "language": {
             "abilityId": 5672,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Walrus Kick",
             "description": [
-                "Kicks the target unit back, damaging them and slowing their movement speed."
+                "Kicks the closest enemy unit in a targeted direction, stunning and damaging them."
             ],
             "attributes": [
                 "KICK PUSH DISTANCE: 1400",
@@ -429,7 +471,7 @@
         },
         "stat": {
             "abilityId": 5672,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -437,7 +479,7 @@
             "unitTargetFlags": 4,
             "unitDamageType": 1,
             "spellImmunity": 3,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -449,7 +491,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                150
+                0
             ],
             "castRangeBuffer": [
                 250
@@ -458,10 +500,10 @@
                 0.2
             ],
             "cooldown": [
-                8
+                8.0
             ],
             "manaCost": [
-                100
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -471,58 +513,13 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "5911": {
-        "id": 5911,
-        "name": "special_bonus_hp_regen_8",
-        "uri": "tusk",
-        "language": {
-            "abilityId": 5911,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+8 Health Regen",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5911,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
     "6194": {
         "id": 6194,
         "name": "special_bonus_unique_tusk",
         "uri": "tusk",
         "language": {
             "abilityId": 6194,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+80% Walrus Punch Crit",
             "description": [],
@@ -531,7 +528,7 @@
         },
         "stat": {
             "abilityId": 6194,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -539,7 +536,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -567,7 +564,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 6411,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+120 Snowball Damage",
             "description": [],
@@ -576,7 +573,7 @@
         },
         "stat": {
             "abilityId": 6411,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -584,97 +581,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6423": {
-        "id": 6423,
-        "name": "special_bonus_hp_325",
-        "uri": "tusk",
-        "language": {
-            "abilityId": 6423,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+325 Health",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6423,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": ""
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6447": {
-        "id": 6447,
-        "name": "special_bonus_exp_boost_40",
-        "uri": "tusk",
-        "language": {
-            "abilityId": 6447,
-            "gameVersionId": 135,
-            "languageId": 0,
-            "displayName": "+40% XP Gain",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6447,
-            "gameVersionId": 135,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -702,7 +609,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 6961,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "+300 Snowball Speed",
             "description": [],
@@ -711,7 +618,7 @@
         },
         "stat": {
             "abilityId": 6961,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -719,7 +626,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -747,7 +654,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 6962,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "12% Chance Walrus Punch",
             "description": [
@@ -758,7 +665,7 @@
         },
         "stat": {
             "abilityId": 6962,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -766,7 +673,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -794,7 +701,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 6963,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "-6s Ice Shards Cooldown",
             "description": [],
@@ -803,7 +710,7 @@
         },
         "stat": {
             "abilityId": 6963,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -811,7 +718,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -839,7 +746,7 @@
         "uri": "tusk",
         "language": {
             "abilityId": 7322,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
             "displayName": "Tag Team",
             "description": [
@@ -858,7 +765,7 @@
         },
         "stat": {
             "abilityId": 7322,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 3,
@@ -866,7 +773,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 3,
             "spellImmunity": 1,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -884,16 +791,16 @@
                 250
             ],
             "castPoint": [
-                0
+                0.0
             ],
             "cooldown": [
-                24,
-                21,
-                18,
-                15
+                24.0,
+                21.0,
+                18.0,
+                15.0
             ],
             "manaCost": [
-                70
+                70.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -909,16 +816,16 @@
         "uri": "tusk",
         "language": {
             "abilityId": 7891,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "languageId": 0,
-            "displayName": "-8s Snowball Cooldown",
+            "displayName": "-10s Snowball Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7891,
-            "gameVersionId": 135,
+            "gameVersionId": 137,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -926,7 +833,7 @@
             "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 0,
-            "modifierSupportValue": 1,
+            "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
