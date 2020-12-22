@@ -1,3 +1,7 @@
+from helper_funcs.helper_functions import *
+import json
+
+
 def get_ability_imgs():
     make_dir()
     with open('json_files/hero_ids.json', 'r') as d:
@@ -151,6 +155,12 @@ def update_app():
     chunk_stratz_abilites()
     print('fini')
 
+
+def update_talents():
+    with open("json_files/hero_ids.json", 'r') as f:
+        data = json.load(f)
+        for hero in data['heroes']:
+            db_methods.insert_talent_order(hero['name'])
 
 if __name__ == '__main__':
     update_app()

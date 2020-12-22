@@ -216,6 +216,7 @@ class Db_insert:
                                             {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles})
 
     def insert_talent_order(self, hero):
+        print(hero)
         with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
             data = json.load(f)
             hero_methods = Hero()
@@ -223,8 +224,8 @@ class Db_insert:
             start = time.perf_counter()
             talents = [detailed_ability_info(
                 [x['abilityId']], hero_methods.get_id(hero))[0] for x in data_talents]
-            if db['talents'].find_one({'hero': hero}) is None:
-                db['talents'].insert_one({'hero': hero, 'talents': talents})
+            db['talents'].find_one_and_update(
+                {'hero': hero}, {'$set': {'hero': hero, 'talents': talents}})
 
 
 def sort_dict(items):
@@ -317,7 +318,12 @@ def detailed_ability_info(arr, h_id):
                             level = i+1
                             d['level'] = i+1+gap
                     else:
-                        level = i+1
+                        if level > 16:
+                            gap += 1
+                        if level > 17:
+                            gap += 1
+                        if level > 18:
+                            gap += 4
                         d['level'] = i+1+gap
                     if 'special_bonus' in data[_id]['name']:
                         d['type'] = 'talent'
@@ -337,35 +343,18 @@ def detailed_ability_info(arr, h_id):
                 except Exception as e:
                     print(traceback.format_exc())
     end = time.time()
+    print(output)
     return output
 
 
-ab_arr = [5239,
-          5237,
-          5237,
-          5238,
-          5237,
-          5240,
-          5237,
-          5239,
-          5239,
-          5931,
-          5239,
-          5240,
-          5238,
-          5238,
-          502,
-          5238,
-          5240,
-          6364,
-          5977
+ab_arr = [654
           ]
 if __name__ == "__main__":
     # insert_player_picks()
     # get_hero_name('jakiro')
     # get_id('lih')
     # get_talent_order('jakiro')
-    # detailed_ability_info(ab_arr, 'clockwerk')
+    detailed_ability_info(ab_arr, 78)
     # loop_test()
     # parse_request()
     pass
