@@ -216,7 +216,6 @@ class Db_insert:
                                             {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles})
 
     def insert_talent_order(self, hero):
-        print(hero)
         with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
             data = json.load(f)
             hero_methods = Hero()
@@ -343,7 +342,6 @@ def detailed_ability_info(arr, h_id):
                 except Exception as e:
                     print(traceback.format_exc())
     end = time.time()
-    print(output)
     return output
 
 

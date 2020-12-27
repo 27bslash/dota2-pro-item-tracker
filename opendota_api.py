@@ -15,7 +15,6 @@ hero_output = db['heroes']
 acc_ids = db['account_ids']
 
 
-
 async def account_id(m_id, hero_name):
     url = f'https://api.opendota.com/api/matches/{m_id}'
     print(url)
@@ -78,8 +77,16 @@ async def async_get(m_id, hero_name):
                         if purchase_log:
                             role = roles(roles_arr, p['player_slot'])
                             print(f"{hero_name} should reach here.")
-                            starting_items = [
-                                purchase for purchase in purchase_log if purchase['time'] <= 0]
+                            aghanims_shard = None
+                            starting_items = []
+                            for purchase in purchase_log:
+                                if purchase['time'] <= 0:
+                                    starting_items.append(purchase)
+                                if purchase['key'] == 'aghanims_shard':
+                                    aghanims_shard = item_methods.convert_time(
+                                        [purchase])
+                            # starting_items = [
+                            #     purchase for purchase in purchase_log if purchase['time'] <= 0]
                             starting_items = item_methods.clean_items(
                                 starting_items)
                             rev = purchase_log.copy()[:: -1]
@@ -101,7 +108,7 @@ async def async_get(m_id, hero_name):
                                  'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'],
                                  'win': p['win'], 'id': match_id,
                                  'starting_items': starting_items,
-                                 'final_items': main_items, 'backpack': bp_items, 'item_neutral': item_methods.get_item_name(p['item_neutral']),
+                                 'final_items': main_items, 'backpack': bp_items, 'item_neutral': item_methods.get_item_name(p['item_neutral']), 'aghanims_shard': aghanims_shard,
                                  'abilities': detailed_ability_info(abilities, hero_id), 'items': purchase_log})
 
                         else:
