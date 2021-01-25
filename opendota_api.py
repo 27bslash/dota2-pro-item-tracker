@@ -94,6 +94,11 @@ async def async_get(m_id, hero_name):
                                 rev, 6, p)
                             bp_items = item_methods.get_most_recent_items(
                                 rev, 4, p)
+                            for k in p['benchmarks']:
+                                p['benchmarks'][k]['pct'] = round(
+                                    p['benchmarks'][k]['pct']*100, 2)
+                                p['benchmarks'][k]['raw'] = round(
+                                    p['benchmarks'][k]['raw'], 2)
                             if p['duration'] > 0:
                                 p['duration'] = str(datetime.timedelta(
                                     seconds=p['duration']))
@@ -105,9 +110,9 @@ async def async_get(m_id, hero_name):
                                  'name': get_info(match_id, 'name', hero_name), 'account_id': p['account_id'], 'role': role, 'mmr': get_info(match_id, 'mmr', hero_name),
                                  'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
                                  'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
-                                 'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'],
+                                 'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'], 'lane_efficiency': round(p['lane_efficiency'], 2),
                                  'win': p['win'], 'id': match_id,
-                                 'starting_items': starting_items,
+                                 'starting_items': starting_items, 'benchmarks': p['benchmarks'], 'gold_adv': resp['radiant_gold_adv'][-1],
                                  'final_items': main_items, 'backpack': bp_items, 'item_neutral': item_methods.get_item_name(p['item_neutral']), 'aghanims_shard': aghanims_shard,
                                  'abilities': detailed_ability_info(abilities, hero_id), 'items': purchase_log})
 
