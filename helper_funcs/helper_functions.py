@@ -295,7 +295,7 @@ def get_urls(hero_name):
             {'hero': hero_name, 'id': match['id']}) is None]
     except Exception as e:
         pass
-    return list(reversed(urls))
+    return list(reversed(urls[slice(0,60)]))
 
 
 def find_index(lst, value):
