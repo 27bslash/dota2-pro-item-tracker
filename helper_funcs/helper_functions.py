@@ -226,6 +226,59 @@ class Db_insert:
             db['talents'].find_one_and_update(
                 {'hero': hero}, {'$set': {'hero': hero, 'talents': talents}})
 
+    def insert_best_games(self):
+        print('INSERT BEST GAMES')
+        start = time.perf_counter()
+        db['best_games'].delete_many({})
+        with open('json_files/hero_ids.json', 'r') as f:
+            hero_data = json.load(f)
+            for hero in hero_data['heroes']:
+                roles = ['Hard Support', 'Roaming', 'Support',
+                         'Offlane', 'Midlane', 'Safelane']
+                # for hero in hero_data['heroes']:
+                data = hero_output.find({'hero': hero['name']})
+                sd = sorted(self.sum_benchmarks(data),
+                            key=lambda k: k['sum'], reverse=True)
+                self.add_best_games_to_db(sd, hero['name'], None)
+                for role in roles:
+                    data = hero_output.find(
+                        {'hero': hero['name'], 'role': role})
+                    queried = self.sum_benchmarks(data)
+                    sd = sorted(queried, key=lambda k: k['sum'], reverse=True)
+                    self.add_best_games_to_db(sd, hero['name'], role)
+
+    def sum_benchmarks(self, data):
+        current_highest = 0
+        t = []
+        for match in data:
+            dic = {}
+            summed_benchmarks = 0
+            if 'benchmarks' in match:
+                for k in match['benchmarks']:
+                    percentile = match['benchmarks'][k]['pct']
+                    # print(k, match['benchmarks'][k]['pct'])
+                    if k != 'lhten':
+                        summed_benchmarks += float(percentile)
+                    # print(match['id'], sum_benchmarks)
+                dic['id'] = match['id']
+                dic['sum'] = summed_benchmarks
+                t.append(dic)
+                if summed_benchmarks >= current_highest:
+                    current_highest = summed_benchmarks
+        return t
+
+    def add_best_games_to_db(self, data, hero, role):
+        if len(data) < 2:
+            return
+        for match in data[slice(0, 2)]:
+            # print(match)
+            base = hero_output.find_one(
+                {'hero': hero, 'id': match['id']})
+            benchmarks = base['benchmarks']
+            player = base['name']
+            db['best_games'].insert_one(
+                {'id': match['id'], 'hero': hero, 'name': base['name'], 'role': role, 'benchmarks': base['benchmarks']})
+
 
 def sort_dict(items):
     newlist = sorted(

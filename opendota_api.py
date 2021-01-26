@@ -95,10 +95,9 @@ async def async_get(m_id, hero_name):
                             bp_items = item_methods.get_most_recent_items(
                                 rev, 4, p)
                             for k in p['benchmarks']:
-                                p['benchmarks'][k]['pct'] = round(
-                                    p['benchmarks'][k]['pct']*100, 2)
-                                p['benchmarks'][k]['raw'] = round(
-                                    p['benchmarks'][k]['raw'], 2)
+                                # round benchmarks to 2 decimal places add 0 to make it same length
+                                p['benchmarks'][k]['pct'] = f"{round(p['benchmarks'][k]['pct']*100, 2):.2f}"
+                                p['benchmarks'][k]['raw'] = f"{round(p['benchmarks'][k]['raw'], 2):.2f}"
                             if p['duration'] > 0:
                                 p['duration'] = str(datetime.timedelta(
                                     seconds=p['duration']))

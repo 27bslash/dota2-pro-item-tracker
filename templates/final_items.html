@@ -44,6 +44,8 @@
 <title>{{hero_name}}</title>
 <main>
   <div class="content" style="margin-top: 40px;">
+    <div class="top-layer">
+    <div>
     <a href="/hero/{{hero_name}}">
       <img
         src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
@@ -55,7 +57,7 @@
     >
       <img
         title="Starter Items"
-        height="50px"
+        height="60px"
         src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/tango_lg.png"
         alt='show starter items'
     /></a>
@@ -98,6 +100,72 @@
         }
       };
     </script>
+    </div>
+    </div>
+    {%if best_games %}
+      <div class="best-games-wrapper">
+        <table class="best-games" style="border-spacing: 0">
+          <script onclick="document.execCommand('copy')""></script>
+          <thead>
+            <th class="benchmarks">PLAYER</th>
+            <th class="benchmarks"></th>
+            <th class="benchmarks">GPM</th>
+            <th class="benchmarks">XPM</th>
+            <th class="benchmarks">KPM</th>
+            <th class="benchmarks">LHM</th>
+            <th class="benchmarks">HD</th>
+            <th class="benchmarks">HH</th>
+            <th class="benchmarks">TD</th>
+            <th class="benchmarks">SPM</th>
+            <th class="benchmarks">LH@10</th>
+          </thead>
+          <tbody class="best-games-body">
+            {% for dict_item in best_games %}
+            <tr class='best-games-row' id="{{dict_item['id']}}">
+              <td class="benchmark-cell">
+                <a class = 'player-name' href="{{url_for('player_get', player_name=dict_item['name'])}}">{{dict_item['name']}}
+                  </a>
+                </td>
+              <td class="benchmark-cell">
+                <i class="fas fa-copy" id="{{dict_item['id']}}"></i>
+              </td>
+              {% for benchmark in dict_item['benchmarks']%}
+              {% set pct = dict_item['benchmarks'][benchmark]['pct']|int %}
+              {%if pct >= 80 %}{%set color = '#5AA563'%} 
+              {%elif pct >= 60 %}{%set color = '#5499D2'%} 
+              {%elif pct >= 40 %}{%set color = '#C9AF1D'%} 
+              {%elif pct >= 25 %}{%set color = '#D89740'%} 
+              {%else%}{%set color = '#EC494B'%} 
+              {%endif%}
+              
+              <td class="benchmark-cell">
+              <a
+              href="https://www.opendota.com/matches/{{dict_item['id']}}"
+              target="_blank"
+              >
+                <p>
+                  <span class="benchmark-pct" style='color: {{color}}'>
+                    {{dict_item['benchmarks'][benchmark]['pct']}}%
+                  </span>
+                  {%if benchmark == 'gold_per_min' or benchmark == 'xp_per_min' or benchmark == 'tower_damage' or benchmark == 'lhten'%}
+                  <span class="benchmark-raw">
+                    {{dict_item['benchmarks'][benchmark]['raw']|int}}
+                  </span>
+                  {%else%}
+                  <span class="benchmark-raw">
+                    {{dict_item['benchmarks'][benchmark]['raw']}}
+                  </span>
+                  {%endif%}
+                </p>
+              </a>
+              </td>
+              {%endfor%}
+            </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+      </div>
+      {%endif%}
     {%if talents%}
     <div class="talent-wrapper">
     <img id='main-talent-img' height='70' src= "{{ url_for('static', filename='talent_img.png') }}"/>

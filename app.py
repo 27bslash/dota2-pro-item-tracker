@@ -107,7 +107,7 @@ def player_post(player_name):
             suggestion = sorted(suggestion)
             return redirect('/hero/'+suggestion[0])
         else:
-            return redirect(f'/hero/{hero_name}{starter}')
+            return redirect(f'/hero/{player_name}{starter}')
 
 
 @app.route('/hero/<hero_name>/starter_items', methods=['GET'])
@@ -115,6 +115,7 @@ def player_post(player_name):
 def hero_get(hero_name):
     start = time.perf_counter()
     match_data = []
+    best_games = []
     display_name = hero_name.replace('_', ' ').capitalize()
     total = 0
     template = 'final_items.html'
@@ -137,8 +138,12 @@ def hero_get(hero_name):
             # print(hero_output.find(
             #     {'hero': hero_name, 'role': role}).sort('unix_time', -1).explain()['executionStats'])
             match_data = [hero for hero in data]
+            best_games = [match for match in db['best_games'].find(
+                {'hero': hero_name, 'role': role})]
         else:
             match_data = find_hero('hero', hero_name)
+            best_games = [match for match in db['best_games'].find(
+                {'hero': hero_name, 'role': None})]
         total = roles_db['total_picks']
         most_used = item_methods.pro_items(match_data)
         most_used = dict(itertools.islice(most_used.items(), 10))
@@ -147,7 +152,7 @@ def hero_get(hero_name):
         hero_colour = get_hero_name_colour(hero_name)
         print('total Time: ', time.perf_counter()-start)
         return render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
-                               time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles)
+                               time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles, best_games=best_games)
     else:
         return render_template(template, hero_name=hero_name, hero_img=clean_name(hero_name), display_name=display_name, data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
 
@@ -409,7 +414,7 @@ async def single_request(name):
 
 
 def opendota_call():
-    names = []
+    heroes = []
     start = time.time()
     db['most-common-items'].delete_many({'hero': 'anti-mage'})
     delete_old_urls()
@@ -417,30 +422,28 @@ def opendota_call():
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for i in data['heroes']:
-            names.append(i['name'])
+            heroes.append(i['name'])
             database_methods.insert_talent_order(i['name'])
         strt = time.perf_counter()
-        # asyncio.run(pro_request(names))
         print('1st', time.perf_counter() - strt)
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
-        for name in names:
-            sleep = len(get_urls(name))
-            asyncio.run(main(get_urls(name), name))
-            database_methods.insert_total_picks('hero', name, 'hero_picks')
-            # loop.run_until_complete(
-            #     test(steam_api_test(name), name))
-            # sync(steam_api_test(name),name)
+        for hero in heroes:
+            sleep = len(get_urls(hero))
+            
+            # hero_output.delete_many({'hero': hero})
+            
+            asyncio.run(main(get_urls(hero), hero))
+            database_methods.insert_total_picks('hero', hero, 'hero_picks')
             if sleep >= 60:
                 sleep = 60
             print(sleep)
             time.sleep(sleep)
-            # break
-            # delete_output()
             pass
     parse_request()
     get_winrate()
     database_methods.insert_player_picks()
+    database_methods.insert_best_games()
     print('end', (time.time()-start)/60, 'minutes')
 
 
@@ -454,7 +457,7 @@ def manual_hero_update(name):
 
 if __name__ == '__main__':
     # delete_old_urls()
-    # manual_hero_update('hoodwink')
+    # manual_hero_update('abbadon')
     # get_winrate()
     # opendota_call()
     # do_everything('lich')

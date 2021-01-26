@@ -173,11 +173,7 @@ const compWrap = (n) => {
 const autoFocus = (event) => {
   let keyCodes = [13, 27, 40, 38, 39, 37, 9];
   // focus search on keypress
-  if (
-    (window.location.pathname.indexOf("/") + 1) %
-      (window.location.pathname.lastIndexOf("/") + 1) ===
-    0
-  ) {
+  if (!window.location.pathname.includes("player")) {
     if (!keyCodes.includes(event.keyCode)) {
       search.focus();
       document.querySelector(".suggestions").classList.add("hide");

@@ -43,62 +43,133 @@
 <title>{{hero_name}}</title>
 <main>
   <div class="content" style="margin-top: 40px">
-    <a href="/hero/{{hero_name}}">
-      <img
-        src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
-    /></a>
-    <a
-      class="view-changer"
-      onclick="window.location = '/hero/{{hero_name}}'+window.location.search;"
-    >
-      <img
-        title="Starter Items"
-        height="50px"
-        src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
-        alt="final items"
-    /></a>
-    <div class="most-used-container">
-      {%if most_used%}
-      <div class="most-used-wrapper">
-        <div class="most-used closed">
-          {%for key,value in most_used.items()%} {%set hue = 360/value/max*100%}
-          {% set s = value/max*100%} {% set saturation = s|round(0,'ceil')|int
-          %} {% set round = hue|round(0, 'ceil')|int%}
-          <div class="most-used-row">
+    <div class="top-layer">
+      <div>
+        <div style="display: flex; align-items: flex-end">
+          <a href="/hero/{{hero_name}}">
             <img
-              class="most-used-item"
-              src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
+              src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
+          /></a>
+          <a
+            class="view-changer"
+            onclick="window.location = '/hero/{{hero_name}}'+window.location.search;"
+          >
+            <img
+              title="final Items"
+              height="60px"
+              src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/rapier_lg.png"
+              alt="final items"
+          /></a>
+        </div>
+        <div class="most-used-container">
+          {%if most_used%}
+          <div class="most-used-wrapper">
+            <div class="most-used closed">
+              {%for key,value in most_used.items()%} {%set hue =
+              360/value/max*100%} {% set s = value/max*100%} {% set saturation =
+              s|round(0,'ceil')|int %} {% set round = hue|round(0, 'ceil')|int%}
+              <div class="most-used-row">
+                <img
+                  class="most-used-item"
+                  src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
                 key
               }}_lg.png"
-              width="50"
-              height="40"
-              alt="{{key}}"
-            />
-            <div
-              class="bar"
-              style="background-color: hsl(120, 100%,25%, {{saturation}}%);width:{{value/max * 80}}%;"
-            >
-              <p class="bar-value">{{value}}</p>
+                  width="50"
+                  height="40"
+                  alt="{{key}}"
+                />
+                <div
+                  class="bar"
+                  style="background-color: hsl(120, 100%,25%, {{saturation}}%);width:{{value/max * 80}}%;"
+                >
+                  <p class="bar-value">{{value}}</p>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+            {%endif%}
+            <div class="arrow-button" onclick="toggleWindow()">
+              <i id="arrow" class="fas fa-caret-down"></i>
             </div>
           </div>
-          {%endfor%}
-        </div>
-        {%endif%}
-        <div class="arrow-button" onclick="toggleWindow()">
-          <i id="arrow" class="fas fa-caret-down"></i>
+          <script>
+            itemWindow = document.querySelector(".most-used");
+            const toggleWindow = () => {
+              itemWindow.classList.toggle("closed");
+              if (itemWindow.classList.contains("closed")) {
+                document.getElementById("arrow").className =
+                  "fas fa-caret-down";
+              } else {
+                document.getElementById("arrow").className = "fas fa-caret-up";
+              }
+            };
+          </script>
         </div>
       </div>
-      <script>
-        itemWindow = document.querySelector(".most-used");
-        const toggleWindow = () => {
-          itemWindow.classList.toggle("closed");
-          if (itemWindow.classList.contains("closed")) {
-            document.getElementById("arrow").className = "fas fa-caret-down";
-          } else {
-            document.getElementById("arrow").className = "fas fa-caret-up";
-          }
-        };
-      </script>
+      {%if best_games %}
+      <div class="best-games-wrapper">
+        <table class="best-games" style="border-spacing: 0">
+          <script onclick="document.execCommand('copy')""></script>
+          <thead>
+            <th class="benchmarks">PLAYER</th>
+            <th class="benchmarks"></th>
+            <th class="benchmarks">GPM</th>
+            <th class="benchmarks">XPM</th>
+            <th class="benchmarks">KPM</th>
+            <th class="benchmarks">LHM</th>
+            <th class="benchmarks">HD</th>
+            <th class="benchmarks">HH</th>
+            <th class="benchmarks">TD</th>
+            <th class="benchmarks">SPM</th>
+            <th class="benchmarks">LH@10</th>
+          </thead>
+          <tbody class="best-games-body">
+            {% for dict_item in best_games %}
+            <tr class='best-games-row' id="{{dict_item['id']}}">
+              <td class="benchmark-cell">
+                <a class = 'player-name' href="{{url_for('player_get', player_name=dict_item['name'])}}">{{dict_item['name']}}
+                  </a>
+                </td>
+              <td class="benchmark-cell">
+                <i class="fas fa-copy" id="{{dict_item['id']}}"></i>
+              </td>
+              {% for benchmark in dict_item['benchmarks']%}
+              {% set pct = dict_item['benchmarks'][benchmark]['pct']|int %}
+              {%if pct >= 80 %}{%set color = '#5AA563'%} 
+              {%elif pct >= 60 %}{%set color = '#5499D2'%} 
+              {%elif pct >= 40 %}{%set color = '#C9AF1D'%} 
+              {%elif pct >= 25 %}{%set color = '#D89740'%} 
+              {%else%}{%set color = '#EC494B'%} 
+              {%endif%}
+              
+              <td class="benchmark-cell">
+              <a
+              href="https://www.opendota.com/matches/{{dict_item['id']}}"
+              target="_blank"
+              >
+                <p>
+                  <span class="benchmark-pct" style='color: {{color}}'>
+                    {{dict_item['benchmarks'][benchmark]['pct']}}%
+                  </span>
+                  {%if benchmark == 'gold_per_min' or benchmark == 'xp_per_min' or benchmark == 'tower_damage' or benchmark == 'lhten'%}
+                  <span class="benchmark-raw">
+                    {{dict_item['benchmarks'][benchmark]['raw']|int}}
+                  </span>
+                  {%else%}
+                  <span class="benchmark-raw">
+                    {{dict_item['benchmarks'][benchmark]['raw']}}
+                  </span>
+                  {%endif%}
+                </p>
+              </a>
+              </td>
+              {%endfor%}
+            </tr>
+            {%endfor%}
+          </tbody>
+        </table>
+      </div>
+      {%endif%}
       {%if talents%}
       <div class="talent-wrapper">
         <img
@@ -142,7 +213,7 @@
         was picked {{total}} times. It's mostly played:
       </p>
       {%for k,v in roles.items()%}
-      <a href="/hero/{{hero_name}}?role={{k}}">
+      <a href="/hero/{{hero_name}}/starter_items?role={{k}}">
         <p class="total-picks">
           {{k}} ({{v}}){{"," if not loop.last else "." }}
         </p>
@@ -160,7 +231,7 @@
         <th class="stats" id="deaths">D</th>
         <th class="stats" id="assists">A</th>
         <th class="stats">CS</th>
-        <th class="stats" id="gold">NET</th>
+        <th class="stats" id="gold">LANE EFF</th>
         <th class="stats" id="gpm">GPM</th>
         <th class="stats" id="xpm">/XPM</th>
         <th class="stats">HD</th>
@@ -282,7 +353,7 @@
             round = t|round(0, 'floor')|int%} {%set output = round|string +'
             days ago'%} {%endif%} {{output}}
           </td>
-          <td class="stats" id="player-name">
+          <td class="player-name">
             <a href="{{url_for('player_get', player_name=dict_item['name'])}}">
               {{dict_item['name']}}</a
             >
@@ -292,7 +363,7 @@
           <td class="stats" id="deaths">{{dict_item['deaths']}}</td>
           <td class="stats" id="assists">{{dict_item['assists']}}</td>
           <td class="stats" id="last-hits">{{dict_item['last_hits']}}</td>
-          <td class="stats" id="gold">{{dict_item['gold']}}</td>
+          <td class="stats" id="gold">{{dict_item['lane_efficiency']}}%</td>
           <td class="stats" id="gpm">{{dict_item['gpm']}}</td>
           <td class="stats" id="xpm">/{{dict_item['xpm']}}</td>
           <td class="stats" id="hero-d">{{dict_item['hero_damage']}}</td>
@@ -306,4 +377,5 @@
   </div>
 </main>
 <script src="{{ url_for('static', filename='tooltip.js') }}"></script>
+<script src="{{ url_for('static', filename='copy-match-id.js') }}"></script>
 {%endblock%}
