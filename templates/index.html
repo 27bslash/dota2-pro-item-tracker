@@ -94,7 +94,7 @@
   </script>
   <div class="grid-container">
     <div class="hero-grid">
-      {%set x = 0%} {%for j in range(119)%} {%if j < 119%}
+      {%set x = 0%} {%for j in range(links|length)%}
       <div class="hero-cell">
         <a href="/hero/{{links[j]['name']}}">
           <img
@@ -118,7 +118,7 @@
           {%endif%}
         </p>
       </div>
-      {%endif%} {%endfor%}
+      {%endfor%}
     </div>
   </div>
 </main>
