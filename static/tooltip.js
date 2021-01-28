@@ -17,7 +17,7 @@ window.addEventListener("mouseover", (event) => {
       hero_colors.then((res) => {
         for (const i of res.colors) {
           if (parent.children[1].getAttribute("src").includes(i.ability)) {
-            tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, rgba(19,18,18,1) 37%)`;
+            tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, rgba(19,18,18,1) 160px)`;
           }
         }
       });

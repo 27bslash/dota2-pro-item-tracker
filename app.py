@@ -20,6 +20,16 @@ import functools
 from io import BytesIO as IO
 from flask_minify import minify, decorators
 # benchmarks for laning phase instead of networth maybe
+# TODO
+# change colours more contrasting
+# add role images to benchmark table
+# limit amount of entries shown to 10
+# add intermediate items
+# fix tooltip loading before autocorrect js maybe rename and restrusture files
+# copy button and roles on main table
+# add item tooltips
+# redesign ability tooltips
+
 cluster = pymongo.MongoClient(
     'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
 db = cluster['pro-item-tracker']
@@ -139,11 +149,11 @@ def hero_get(hero_name):
             #     {'hero': hero_name, 'role': role}).sort('unix_time', -1).explain()['executionStats'])
             match_data = [hero for hero in data]
             best_games = [match for match in db['best_games'].find(
-                {'hero': hero_name, 'role': role})]
+                {'hero': hero_name, 'display_role': role})]
         else:
             match_data = find_hero('hero', hero_name)
             best_games = [match for match in db['best_games'].find(
-                {'hero': hero_name, 'role': None})]
+                {'hero': hero_name, 'display_role': None})]
         total = roles_db['total_picks']
         most_used = item_methods.pro_items(match_data)
         most_used = dict(itertools.islice(most_used.items(), 10))
@@ -430,9 +440,9 @@ def opendota_call():
         data = json.load(f)
         for hero in heroes:
             sleep = len(get_urls(hero))
-            
+
             # hero_output.delete_many({'hero': hero})
-            
+
             asyncio.run(main(get_urls(hero), hero))
             database_methods.insert_total_picks('hero', hero, 'hero_picks')
             if sleep >= 60:
@@ -462,6 +472,7 @@ if __name__ == '__main__':
     # opendota_call()
     # do_everything('lich')
     # database_methods.insert_talent_order('hoodwink')
+    # database_methods.insert_best_games()
     app.run(debug=False)
     # database_methods.insert_total_picks('hero', 'hoodwink', 'hero_picks')
     pass

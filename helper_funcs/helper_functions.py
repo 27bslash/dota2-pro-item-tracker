@@ -267,7 +267,7 @@ class Db_insert:
                     current_highest = summed_benchmarks
         return t
 
-    def add_best_games_to_db(self, data, hero, role):
+    def add_best_games_to_db(self, data, hero, display_role):
         if len(data) < 2:
             return
         for match in data[slice(0, 2)]:
@@ -277,7 +277,7 @@ class Db_insert:
             benchmarks = base['benchmarks']
             player = base['name']
             db['best_games'].insert_one(
-                {'id': match['id'], 'hero': hero, 'name': base['name'], 'role': role, 'benchmarks': base['benchmarks']})
+                {'id': match['id'], 'hero': hero, 'name': base['name'], 'role': base['role'], 'display_role': display_role, 'benchmarks': base['benchmarks']})
 
 
 def sort_dict(items):
@@ -295,7 +295,7 @@ def get_urls(hero_name):
             {'hero': hero_name, 'id': match['id']}) is None]
     except Exception as e:
         pass
-    return list(reversed(urls[slice(0,60)]))
+    return list(reversed(urls[slice(0, 60)]))
 
 
 def find_index(lst, value):
