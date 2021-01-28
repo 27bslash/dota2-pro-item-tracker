@@ -8,7 +8,9 @@
       { bSortable: false },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
+        { bSortable: false },
+        { bSortable: false },
+        { orderSequence: ["desc", "asc"] },   
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["asc", "desc"] },
         { orderSequence: ["desc", "asc"] },
@@ -109,11 +111,12 @@
           <thead>
             <th class="benchmarks">PLAYER</th>
             <th class="benchmarks"></th>
+            <th class="benchmarks">Role</th>
             <th class="benchmarks">GPM</th>
             <th class="benchmarks">XPM</th>
             <th class="benchmarks">KPM</th>
             <th class="benchmarks">LHM</th>
-            <th class="benchmarks">HD</th>
+            <th class="benchmarks">HDM</th>
             <th class="benchmarks">HH</th>
             <th class="benchmarks">TD</th>
             <th class="benchmarks">SPM</th>
@@ -128,6 +131,10 @@
                 </td>
               <td class="benchmark-cell">
                 <i class="fas fa-copy" id="{{dict_item['id']}}"></i>
+              </td>              
+              <td class="benchmark-cell">
+                {%set role =  dict_item['role']%}
+                <img src="{{ url_for('static', filename='icons')}}/{{role}}.png">
               </td>
               {% for benchmark in dict_item['benchmarks']%}
               {% set pct = dict_item['benchmarks'][benchmark]['pct']|int %}
@@ -227,6 +234,8 @@
         <th class="stats" id="item-header">ITEMS</th>
         <th class="stats">PLAYED</th>
         <th class="stats">PLAYER</th>
+        <th class="stats no-cursor" id="copy-match-header"></th>
+        <th class="stats no-cursor">ROLE</th>
         <th class="stats">LVL</th>
         <th class="stats" id="kills">K</th>
         <th class="stats" id="deaths">D</th>
@@ -245,7 +254,7 @@
         <tr class="item-row">
           {%if dict_item['win'] == 1%}
           <td data-sort="{{dict_item['win']}}" id="win-cell"></td>
-          {%endif%} {%if dict_item['win'] == 0%}
+          {%else%}
           <td data-sort="{{dict_item['win']}}" id="loss-cell"></td>
           {%endif%}
           <td>
@@ -412,6 +421,12 @@
               {{dict_item['name']}}</a
             >
           </td>
+          <td>
+            <i class="fas fa-copy" id="{{dict_item['id']}}"></i>
+          </td>
+          <td>
+            <img src="{{url_for('static', filename='icons')}}/{{dict_item['role']}}.png"/>
+          </td>
           <td class="stats" id="level">
             {{dict_item['lvl']}}
           </td>
@@ -454,5 +469,7 @@
     </table>
   </div>
 </main>
-<script src="{{ url_for('static', filename='tooltip.js') }}"  async defer></script>
+<script src="{{ url_for('static', filename='tooltip.js') }}"  defer></script>
+<script src="{{ url_for('static', filename='copy-match-id.js') }}" ></script>
+
 {%endblock%}

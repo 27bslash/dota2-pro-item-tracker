@@ -8,6 +8,8 @@
         { bSortable: false },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["asc", "desc"] },
+        { bSortable: false },
+        { orderSequence: ["asc", "desc"] },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["asc", "desc"] },
@@ -113,11 +115,12 @@
           <thead>
             <th class="benchmarks">PLAYER</th>
             <th class="benchmarks"></th>
+            <th class="benchmarks">Role</th>
             <th class="benchmarks">GPM</th>
             <th class="benchmarks">XPM</th>
             <th class="benchmarks">KPM</th>
             <th class="benchmarks">LHM</th>
-            <th class="benchmarks">HD</th>
+            <th class="benchmarks">HDM</th>
             <th class="benchmarks">HH</th>
             <th class="benchmarks">TD</th>
             <th class="benchmarks">SPM</th>
@@ -132,6 +135,10 @@
                 </td>
               <td class="benchmark-cell">
                 <i class="fas fa-copy" id="{{dict_item['id']}}"></i>
+              </td>              
+              <td class="benchmark-cell">
+                {%set role =  dict_item['role']%}
+                <img src="{{ url_for('static', filename='icons')}}/{{role}}.png">
               </td>
               {% for benchmark in dict_item['benchmarks']%}
               {% set pct = dict_item['benchmarks'][benchmark]['pct']|int %}
@@ -226,6 +233,8 @@
         <th class="stats" id="item-header">ITEMS</th>
         <th class="stats">PLAYED</th>
         <th class="stats">PLAYER</th>
+        <th class="stats no-cursor" id="copy-match-header"></th>
+        <th class="stats no-cursor">ROLE</th>
         <th class="stats">LVL</th>
         <th class="stats" id="kills">K</th>
         <th class="stats" id="deaths">D</th>
@@ -358,6 +367,12 @@
               {{dict_item['name']}}</a
             >
           </td>
+          <td>
+            <i class="fas fa-copy" id="{{dict_item['id']}}"></i>
+          </td>
+          <td>
+            <img src="{{url_for('static', filename='icons')}}/{{dict_item['role']}}.png"/>
+          </td>
           <td class="stats" id="level">{{dict_item['lvl']}}</td>
           <td class="stats" id="kills">{{dict_item['kills']}}</td>
           <td class="stats" id="deaths">{{dict_item['deaths']}}</td>
@@ -376,6 +391,6 @@
     </table>
   </div>
 </main>
-<script src="{{ url_for('static', filename='tooltip.js') }}"></script>
+<script src="{{ url_for('static', filename='tooltip.js') }}"  defer></script>
 <script src="{{ url_for('static', filename='copy-match-id.js') }}"></script>
 {%endblock%}

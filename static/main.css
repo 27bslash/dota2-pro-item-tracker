@@ -17,9 +17,6 @@ body {
 .top-layer {
   display: flex;
 }
-.best-games {
-  color: white;
-}
 table {
   width: 100%;
 }
@@ -59,7 +56,9 @@ thead .stats:hover {
   cursor: default;
   opacity: 1;
 }
-
+#copy-match-header:hover {
+  cursor: default;
+}
 #kills {
   color: green;
 }
@@ -235,11 +234,9 @@ a {
   margin: 0;
   margin-right: 2px;
 }
-thead .benchmarks {
-  /* background-color: rgb(0, 217, 255); */
-}
 .best-games {
   /* background-color: red; */
+  color: white;
   border: solid grey 1px;
 }
 .best-games thead {
@@ -285,7 +282,7 @@ thead .benchmarks {
 .player-name:hover {
   opacity: 0.75;
 }
-.benchmark-cell i:hover {
+i[class="fas fa-copy"]:hover {
   opacity: 0.75;
   cursor: pointer;
 }
