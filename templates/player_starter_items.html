@@ -210,7 +210,8 @@
             data-search="{{dict_item['hero']}}"
           >
             <a href="{{url_for('hero_get', hero_name=dict_item['hero'])}}">
-              <i class="d2mh {{dict_item['hero']}}"></i>
+              {%set hero = dict_item['hero']|replace("'", "")%}
+              <i class="d2mh {{hero}}"></i>
             </a>
           </td>
           <td class="stats" id="level">{{dict_item['lvl']}}</td>
@@ -231,5 +232,9 @@
     </table>
   </div>
 </main>
-<script src="{{ url_for('static', filename='tooltip.js') }}" async defer></script>
+<script
+  src="{{ url_for('static', filename='tooltip.js') }}"
+  async
+  defer
+></script>
 {%endblock%}
