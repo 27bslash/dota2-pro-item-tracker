@@ -1,5 +1,22 @@
-from helper_funcs.helper_functions import *
+import os
 import json
+from colorthief import ColorThief
+from helper_funcs.helper_functions import *
+from contrast import *
+
+
+def make_dir():
+    for filename in os.listdir("json_files\hero_abilities"):
+        filepath = os.path.join("json_files\hero_abilities", filename)
+        try:
+            shutil.rmtree(filepath)
+        except OSError:
+            os.remove(filepath)
+    with open('json_files/hero_ids.json', 'r') as d:
+        data = json.load(d)
+        for item in data['heroes']:
+            hero_name = item['name']
+            os.mkdir(f"json_files/hero_abilities/{hero_name}")
 
 
 def get_ability_imgs():
@@ -151,16 +168,20 @@ def update_app():
     print('updating hero colours....')
     get_dominant_ability_color()
     get_dominant_color()
+    compute_contrast()
     print('chunking abilites....')
     chunk_stratz_abilites()
     print('fini')
 
 
 def update_talents():
+    db_methods = Db_insert()
     with open("json_files/hero_ids.json", 'r') as f:
         data = json.load(f)
         for hero in data['heroes']:
             db_methods.insert_talent_order(hero['name'])
 
+
 if __name__ == '__main__':
-    update_app()
+    # update_app()
+    get_dominant_color()
