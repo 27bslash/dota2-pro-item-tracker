@@ -1,3 +1,4 @@
+import timeago
 import datetime
 import os
 import re
@@ -19,16 +20,15 @@ import gzip
 import functools
 from io import BytesIO as IO
 from flask_minify import minify, decorators
-# benchmarks for laning phase instead of networth maybe
+import urllib.parse
 # TODO
-# change colours more contrasting
-# add role images to benchmark table
-# limit amount of entries shown to 10
 # add intermediate items
-# fix tooltip loading before autocorrect js maybe rename and restrusture files
-# copy button and roles on main table
 # add item tooltips
 # redesign ability tooltips
+# add bans
+# redesign scroll bar
+# make tooltips not load off screen
+#
 
 cluster = pymongo.MongoClient(
     'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
@@ -47,7 +47,7 @@ cache = Cache(config={
 })
 cache.init_app(app)
 compress.init_app(app)
-minify(app=app, html=True, js=False, cssless=False)
+# minify(app=app, html=True, js=False, cssless=False)
 
 # classes
 hero_methods = Hero()
@@ -122,6 +122,8 @@ def player_post(player_name):
 
 @app.route('/hero/<hero_name>/starter_items', methods=['GET'])
 @app.route('/hero/<hero_name>', methods=['GET'])
+@app.route('/hero/<hero_name>/starter_items/table', methods=['GET'])
+@app.route('/hero/<hero_name>/table', methods=['GET'])
 def hero_get(hero_name):
     start = time.perf_counter()
     match_data = []
@@ -131,6 +133,8 @@ def hero_get(hero_name):
     template = 'final_items.html'
     if 'starter_items' in request.url:
         template = 'starter_items.html'
+    if 'table' in request.url:
+        return generate_table(hero_get.__name__, hero_name, template)
     r_start = time.perf_counter()
     roles_db = db['hero_picks'].find_one({'hero': hero_name})
     roles = roles_db['roles']
@@ -141,10 +145,11 @@ def hero_get(hero_name):
     check_response = hero_output.find_one({'hero': hero_name})
     print('chk_time: ', time.perf_counter() - check_response_time)
     if check_response:
+        # string = json.dumps(urllib.parse.parse_qs(request.args))
         if request.args:
             role = request.args.get('role').replace('%20', ' ').title()
             data = hero_output.find(
-                {'hero': hero_name, 'role': role}).sort('unix_time', -1)
+                {'hero': hero_name, 'role': role})
             # print(hero_output.find(
             #     {'hero': hero_name, 'role': role}).sort('unix_time', -1).explain()['executionStats'])
             match_data = [hero for hero in data]
@@ -159,27 +164,35 @@ def hero_get(hero_name):
         most_used = dict(itertools.islice(most_used.items(), 10))
         max_val = list(most_used.values())[0]
         talents = talent_methods.get_talent_order(match_data, hero_name)
+        misc = time.perf_counter()
         hero_colour = get_hero_name_colour(hero_name)
+        print('misc Time: ', time.perf_counter()-misc)
         print('total Time: ', time.perf_counter()-start)
-        return render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
-                               time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles, best_games=best_games)
+        template_time = time.perf_counter()
+        r_t = render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
+                              time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles, best_games=best_games)
+        print('template time: ', time.perf_counter()-template_time)
+        return r_t
     else:
         return render_template(template, hero_name=hero_name, hero_img=clean_name(hero_name), display_name=display_name, data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
 
 
 @app.route('/player/<player_name>/starter_items', methods=['GET'])
 @app.route('/player/<player_name>', methods=['GET'])
+@app.route('/player/<player_name>/starter_items/table', methods=['GET'])
+@app.route('/player/<player_name>/table', methods=['GET'])
 def player_get(player_name):
     start = time.perf_counter()
     total = 0
     template = 'player_final_items.html'
+    if 'table' in request.url:
+        return generate_table(player_get.__name__, player_name, template)
     if 'starter_items' in request.url:
         template = 'player_starter_items.html'
     display_name = player_name.replace('%20', ' ')
-    print(display_name)
-    check_response_time = time.perf_counter()
     roles_db = db['player_picks'].find_one({'name': display_name})
     roles = roles_db['roles']
+    check_response_time = time.perf_counter()
     check_response = hero_output.find_one({'name': display_name})
     print('chk_time: ', time.perf_counter() - check_response_time)
     if check_response:
@@ -197,8 +210,157 @@ def player_get(player_name):
         return render_template(template, display_name=display_name, data=[], time=time, roles=roles, total=0)
 
 
+def generate_table(func_name, search, template):
+    print('generate table')
+    display_name = search.replace('_', ' ').capitalize()
+    check_response = hero_output.find_one({'hero': search})
+    match_data = None
+    key = ''
+    # print('tet', request.args['draw'], request.args)
+    columns = {'0': 'win', '1': None, '2': 'unix_time', '3': 'name', '4': None, '5': 'role', '6': 'lvl', '7': 'kills', '8': 'deaths', '9': 'assists',
+               '10': 'last_hits', '11': 'gold', '12': 'gpm', '13': 'xpm', '14': 'hero_damage', '15': 'tower_damage', '16': 'duration', '17': 'mmr'}
+    sort_direction = -1 if request.args['order[0][dir]'] == 'desc' else 1
+    column = columns[request.args['order[0][column]']]
+    records_to_skip = int(request.args['start'])
+    length = int(request.args['length'])
+    key = 'name' if func_name == 'player_get' else 'hero'
+    if 'start' in template:
+        if column == 'gold':
+            column = 'lane_efficiency'
+    if check_response:
+        if 'role' in request.args:
+            role = request.args.get('role').replace('%20', ' ').title()
+            data = hero_output.find(
+                {key: search, 'role': role}).sort(column, sort_direction).limit(length).skip(records_to_skip)
+            match_data = [match for match in data]
+            total_entries = [entry for entry in hero_output.find(
+                {key: search, 'role': role})]
+        else:
+            data = hero_output.find(
+                {key: search}).sort(column, sort_direction).limit(length).skip(records_to_skip)
+            match_data = [match for match in data]
+            total_entries = [
+                entry for entry in hero_output.find({key: search})]
+    result = {"draw": request.args['draw'],
+              "recordsTotal": len(total_entries), "recordsFiltered": len(total_entries), "data": []}
+    img_cache = 'https://ailhumfakp.cloudimg.io/v7/'
+    for match in match_data:
+        row_string = []
+        html_string = f"<a href=https://www.opendota.com/matches/{match['id']}"
+        html_string += "<div class='purchases'>"
+        if 'start' in template:
+            for item in match['starting_items']:
+                image = f"<img class='item-img' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png>"
+                html_string += "<div class='item-cell'>"
+                html_string += image
+                html_string += "</div>"
+        else:
+            for item in match['final_items']:
+                image = f"<img class='item-img' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png>"
+                overlay = f"<div class='overlay'>{item['time']}</div>"
+                html_string += "<div class='item-cell'>"
+                html_string += image
+                html_string += overlay
+                html_string += "</div>"
+            for item in match['backpack']:
+                image = f"<img class='item-img' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png>"
+                overlay = f"<div class='overlay'>{item['time']}</div>"
+                html_string += "<div class='item-cell'>"
+                html_string += image
+                html_string += overlay
+                html_string += "</div>"
+            if match['item_neutral']:
+                html_string += "<div class='neutral-cell'>"
+                html_string += f"<div class='circle'><img class='item-img' id='neutral-item' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{match['item_neutral']}_lg.png>/></div></div>"
+            if match['aghanims_shard']:
+                image = f"<img class='item-img' id='aghanims-shard' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png>"
+                overlay = f"<div class='overlay' id='shard-overlay'>{item['time']}</div>"
+                html_string += "<div class='aghanims-shard-cell'>"
+                html_string += image
+                html_string += overlay
+                html_string += "</div>"
+        html_string += "</div></a>"
+        html_string += "<div class='abilities'>"
+        for ability in match['abilities']:
+            ability_img = f"{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{ability['img']}_hp1.png?v=5933967"
+            ability_id = ability['id']
+            ability_key = ability['key']
+            html_string += "<div class='ability-img-wrapper'>"
+            if ability['type'] == 'talent':
+                image = f"<img class='table-img' src='/static/talent_img.png' alt = '{ability_key}'/>"
+                html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
+                html_string += image
+                html_string += "<div class='tooltip' id='talent-tooltip' style='display:none'>"
+                html_string += "<div class='tooltip-line-one'>"
+                html_string += f"<img src='/static/talent_img.png' height='55'><h3>{ability_key}</div></div></div>"
+            else:
+                image = f"<img class='table-img' src='{ability_img}' data_id='{ability_id}' data-tooltip='{ability_key}' alt='{ability_key}'>"
+                html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
+                html_string += image
+                html_string += "<div class='tooltip'></div>"
+                html_string += "</div>"
+        html_string += "</div>"
+        html_string += "<div class='draft'>"
+        html_string += "<div class='radiant_draft'>"
+        for item in match['radiant_draft']:
+            rep = item.replace("'", '')
+            if item == search:
+                highlight = 'icon-highlight'
+            else:
+                highlight = ''
+            html_string += f"<a href='/hero/{item}'><i class='d2mh {rep} {highlight}'></i></a>"
+        html_string += "</div>"
+        html_string += "<div class='dire_draft'>"
+        for item in match['dire_draft']:
+            rep = item.replace("'", '')
+            if item == search:
+                highlight = 'icon-highlight'
+            else:
+                highlight = ''
+            html_string += f"<a href='/hero/{item}'><i class='d2mh {rep} {highlight}'></i></a>"
+        html_string += "</div>"
+        role_file_path = f"/static/icons/{match['role']}.png"
+        role_img = f"<img src='{role_file_path}'"
+        if match['win'] == 0:
+            row_string.append("<div id='loss-cell'></div>")
+        else:
+            row_string.append("<div id='win-cell'></div>")
+        row_string.append(html_string)
+        row_string.append(timeago.format(
+            match['unix_time'], datetime.datetime.now()))
+        row_string.append(f"<p class='stats'>{match['name']}</p>")
+        row_string.append(f"<i class='fas fa-copy' id='{match['id']}'></i>")
+        row_string.append(f"<img src='{role_file_path}'/>")
+        row_string.append(f"<p class='stats' id='level'>{match['lvl']}</p>")
+        row_string.append(f"<p class='stats' id='kills'>{match['kills']}</p>")
+        row_string.append(
+            f"<p class='stats' data-sort={match['deaths']} id='deaths'>{match['deaths']}</p>")
+        row_string.append(
+            f"<p class='stats' id='assists'>{match['assists']}</p>")
+        row_string.append(
+            f"<p class='stats' id='last-hits'>{match['last_hits']}</p>")
+        if 'start' not in template:
+            row_string.append(
+                f"<p class='stats' id='gold'>{match['gold']}</p>")
+        else:
+            row_string.append(
+                f"<p class='stats' id='gold'>{match['lane_efficiency']*100}%</p>")
+        row_string.append(f"<p class='stats' id ='gpm'>{match['gpm']}</p>")
+        row_string.append(f"<p class='stats' id ='xpm'>{match['xpm']}</p>")
+        row_string.append(
+            f"<p class='stats' id ='hero-d'>{match['hero_damage']}</p>")
+        row_string.append(
+            f"<p class='stats' id ='tower-d'>{match['tower_damage']}</p>")
+        row_string.append(
+            f"<p class='stats' id ='duration'>{match['duration']}</p>")
+        row_string.append(f"<p class='stats' id ='mmr'>{match['mmr']}</p>")
+
+        result['data'].append(row_string)
+    return result
+
+
 def find_hero(query, hero):
-    data = hero_output.find({query: hero}).sort('unix_time', -1)
+    data = hero_output.find({query: hero}).limit(5)
     s = time.perf_counter()
     match_data = [hero for hero in data]
     print('data time', time.perf_counter() - s)
@@ -306,7 +468,7 @@ def ability_json():
         return data
 
 
-@app.route('/files/abilities/<hero_name>')
+@ app.route('/files/abilities/<hero_name>')
 def hero_ability_json(hero_name):
     print(hero_name)
     with open('json_files/hero_ids.json', 'r') as f:
@@ -314,6 +476,13 @@ def hero_ability_json(hero_name):
         with open(f"json_files/detailed_ability_info/{hero_name}.json") as f:
             data = json.load(f)
             return json.dumps(data)
+
+
+@ app.route('/files/items')
+def items_json():
+    with open('json_files/stratz_items.json', 'r') as f:
+        data = json.load(f)
+        return data
 
 
 @ app.route('/files/colors')
