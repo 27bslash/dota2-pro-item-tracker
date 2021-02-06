@@ -5,7 +5,6 @@
   --nav-bar: rgb(19, 18, 18);
 }
 html {
-  visibility: hidden;
 }
 
 body {
@@ -478,9 +477,13 @@ label {
 }
 #win-cell {
   background-color: rgb(2 255 2 / 48%);
+  width: 10px;
+  height: 219px;
 }
 #loss-cell {
   background-color: rgb(255 2 2 / 65%);
+  width: 10px;
+  height: 219px;
 }
 .purchases {
   display: flex;
@@ -535,12 +538,7 @@ label {
   border-radius: 50%;
   object-fit: cover;
 }
-#aghanims-shard {
-  margin-left: 15px;
-}
-#shard-overlay {
-  margin-left: 15px;
-}
+
 .item-img {
   display: block;
   width: 77.83px;
@@ -549,6 +547,7 @@ label {
 .neutral-cell {
   display: grid;
   margin-left: 10px;
+  margin-right: 10px;
   justify-items: center;
   align-items: center;
 }
@@ -574,7 +573,9 @@ label {
   position: absolute;
   width: 300px;
 }
-
+#talent-tooltip img {
+  border: solid 1px rgb(32, 31, 31);
+}
 .tooltip-line-one {
   padding: 20px;
   display: flex;
@@ -638,7 +639,12 @@ table.dataTable.stripe tbody tr.odd,
 table.dataTable.display tbody tr.odd {
   background-color: #212729;
 }
-
+.dataTables_processing {
+  background: None !important;
+  color: rgba(255, 255, 255, 0.507) !important;
+  position: absolute;
+  top: 100% !important;
+}
 .dataTables_wrapper .dataTables_length,
 .dataTables_wrapper .dataTables_filter,
 .dataTables_wrapper .dataTables_info,
@@ -678,6 +684,9 @@ table.dataTable tbody td {
   font-size: 13px;
   color: white;
   border-top: 1px solid grey;
+}
+table.dataTable tbody td:nth-child(1) {
+  padding: 0px;
 }
 
 .d2mh {

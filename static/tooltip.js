@@ -13,7 +13,7 @@ window.addEventListener("mouseover", (event) => {
       a_id = parent.children[1].getAttribute("data_id");
       hero = parent.children[1].getAttribute("data-hero");
       tooltip = parent.children[2];
-      tooltip.style.background = `radial-gradient(circle at top left, rgba(41 35 35) 0%, rgba(19,18,18,1) 37%)`
+      tooltip.style.background = `linear-gradient(137deg, rgba(35 35 35), rgb(60,60,60) )`
       hero_colors.then((res) => {
         for (const i of res.colors) {
           if (parent.children[1].getAttribute("src").includes(i.ability)) {
@@ -49,26 +49,22 @@ window.addEventListener("mouseover", (event) => {
         if ("attributes" in base) {
           attributes = document.createElement("div");
           attributes.setAttribute("class", "attributes");
-          attrText = document.createElement("p");
-          attrText.textContent = base["attributes"].join(",");
-          attributes.appendChild(attrText);
+          base["attributes"].forEach((x) => {
+            attrText = document.createElement("p");
+            attrText.textContent = x;
+            attributes.appendChild(attrText);
+          });
           tooltipContent.appendChild(attributes);
         }
         if ("aghanmimDescription" in base) {
           aghanims = document.createElement("div");
           aghanims.setAttribute("class", "aghanimDescription");
           aghsText = document.createElement("p");
-          aghsText.textContent = base["aghanimsDescription"].join(",");
+          base["aghanimsDescription"].forEach((x) => {
+            aghsText.textContent = x;
+          });
           aghanims.appendChild(aghsText);
           tooltipContent.appendChild(aghanims);
-        }
-        if ("notes" in base) {
-          notes = document.createElement("div");
-          notes.setAttribute("class", "notes");
-          noteText = document.createElement("p");
-          noteText.textContent = base["notes"].join(",");
-          notes.appendChild(noteText);
-          tooltipContent.appendChild(notes);
         }
 
         //footer
