@@ -360,7 +360,7 @@ def generate_table(func_name, search, template):
 
 
 def find_hero(query, hero):
-    data = hero_output.find({query: hero}).limit(5)
+    data = hero_output.find({query: hero})
     s = time.perf_counter()
     match_data = [hero for hero in data]
     print('data time', time.perf_counter() - s)
