@@ -246,7 +246,7 @@ def generate_table(func_name, search, template):
     img_cache = 'https://ailhumfakp.cloudimg.io/v7/'
     for match in match_data:
         row_string = []
-        html_string = f"<a href=https://www.opendota.com/matches/{match['id']}"
+        html_string = f"<a href=https://www.opendota.com/matches/{match['id']}>"
         html_string += "<div class='purchases'>"
         if 'start' in template:
             for item in match['starting_items']:
