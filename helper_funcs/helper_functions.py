@@ -80,6 +80,11 @@ class Items():
                     for item in data['items'] if item_id == item['id']]
             return item[0]
 
+    def get_item_id(self, item_name):
+        with open('json_files/items.json') as f:
+            data = json.load(f)
+            return [item['id'] for item in data['items'] if item_name == item['name']][0]
+
     def convert_time(self, lst):
         for item in lst:
             if item['time'] > 0:
@@ -158,12 +163,12 @@ class Talents():
             print('y', traceback.format_exc())
 
     def get_talent_order(self, match_data, hero):
+        start = time.perf_counter()
         talents = []
         count = self.count_talents(match_data)
         if count is None:
             return False
         talents = db['talents'].find_one({'hero': hero})
-        start = time.perf_counter()
         for x in talents['talents']:
             if x['key'] in count:
                 x['talent_count'] = count[x['key']]
@@ -331,6 +336,7 @@ def delete_old_urls():
                 hero_output.delete_many({'id': {"$lte": int(d["id"])}})
                 hero_urls.delete_many({'id': {"$lte": int(d["id"])}})
                 db['non-pro'].delete_many({'id': {"$lte": int(d["id"])}})
+                db['dead_games'].delete_many({'id': {"$lte": int(d["id"])}})
             except Exception as e:
                 print(traceback.format_exc())
             print(f"Deleted {d['id']}")

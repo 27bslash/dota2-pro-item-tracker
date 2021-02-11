@@ -43,8 +43,10 @@ async def account_id(m_id, hero_name):
 
 async def async_get(m_id, hero_name):
     url = f'https://api.opendota.com/api/matches/{m_id}'
-    check = hero_output.find_one({'hero': hero_name, 'id': m_id})
-    if check is not None:
+    dupe_check = hero_output.find_one({'hero': hero_name, 'id': m_id})
+    bad_id_check = db['dead_games'].find_one(
+        {'id': m_id, 'count': {"$gt": 1}})
+    if dupe_check is not None or bad_id_check is not None:
         return
     try:
         async with aiohttp.ClientSession() as session:
@@ -116,9 +118,22 @@ async def async_get(m_id, hero_name):
                                  'abilities': detailed_ability_info(abilities, hero_id), 'items': purchase_log})
 
                         else:
-                            parse.insert_one({'id': m_id})
+                            add_to_dead_games(m_id)
+
     except Exception as e:
         print("Unable to get url", traceback.format_exc())
+        add_to_dead_games(m_id)
+
+
+def add_to_dead_games(m_id):
+    if db['dead_games'].find_one({'id': m_id}) is None:
+        db['dead_games'].insert_one(
+            {'id': m_id, 'count': 0})
+    else:
+        db['dead_games'].find_one_and_update(
+            {'id': m_id}, {"$inc": {'count': +1}})
+    if db['dead_games'].find_one({'id': m_id})['count'] == 0:
+        parse.insert_one({'id': m_id})
 
 
 def roles(s, p_slot):
