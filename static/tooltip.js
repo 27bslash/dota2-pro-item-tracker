@@ -279,9 +279,6 @@ window.addEventListener("mouseover", (event) => {
           tooltip.style.bottom = `${
             window.innerHeight - event.target.getBoundingClientRect().top - 5
           }px`;
-          console.log(
-            window.innerHeight - event.target.getBoundingClientRect().top
-          );
         }
       }
     });
