@@ -215,8 +215,8 @@ def generate_table(func_name, search, template):
     display_name = search.replace('_', ' ').capitalize()
     check_response = hero_output.find_one({'hero': search})
     match_data = None
-    key = ''
-    # print('tet', request.args['draw'], request.args)
+    item_data = ''
+    img_cache = 'https://ailhumfakp.cloudimg.io/v7/'
     columns = {'0': 'win', '1': None, '2': 'unix_time', '3': 'name', '4': None, '5': 'role', '6': 'lvl', '7': 'kills', '8': 'deaths', '9': 'assists',
                '10': 'last_hits', '11': 'gold', '12': 'gpm', '13': 'xpm', '14': 'hero_damage', '15': 'tower_damage', '16': 'duration', '17': 'mmr'}
     sort_direction = -1 if request.args['order[0][dir]'] == 'desc' else 1
@@ -243,49 +243,68 @@ def generate_table(func_name, search, template):
                 entry for entry in hero_output.find({key: search})]
     result = {"draw": request.args['draw'],
               "recordsTotal": len(total_entries), "recordsFiltered": len(total_entries), "data": []}
-    img_cache = 'https://ailhumfakp.cloudimg.io/v7/'
     for match in match_data:
         row_string = []
         html_string = f"<a href=https://www.opendota.com/matches/{match['id']}>"
         html_string += "<div class='purchases'>"
         if 'start' in template:
             for item in match['starting_items']:
-                image = f"<img class='item-img' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png>"
+                image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png'>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += "</div>"
         else:
+            with open('json_files/items.json', 'r') as f:
+                item_data = json.load(f)
             for item in match['final_items']:
-                image = f"<img class='item-img' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png>"
+                item_key = item['key']
+                # item_id = item_data['items']['item_key']
+                item_id = item_methods.get_item_id(item_key)
+                image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += overlay
+                html_string += "<div class='tooltip'></div>"
                 html_string += "</div>"
+
             for item in match['backpack']:
-                image = f"<img class='item-img' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png>"
+                item_key = item['key']
+                item_id = item_methods.get_item_id(item_key)
+                image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += overlay
+                html_string += "<div class='tooltip'></div>"
                 html_string += "</div>"
+
             if match['item_neutral']:
+                item_key = match['item_neutral']
+                item_id = item_methods.get_item_id(item_key)
                 html_string += "<div class='neutral-cell'>"
-                html_string += f"<div class='circle'><img class='item-img' id='neutral-item' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{match['item_neutral']}_lg.png>/></div></div>"
+                html_string += f"<div class='circle'>"
+                html_string += f"<img class='item-img' id='neutral-item' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item_key}_lg.png' data_id='{item_id}' alt='{item_key}'></div>"
+                html_string += "<div class='tooltip'></div></div>"
+
             if match['aghanims_shard']:
-                image = f"<img class='item-img' id='aghanims-shard' src={img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png>"
+                image = f"<img class='item-img' id='aghanims-shard' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png'>"
                 overlay = f"<div class='overlay' id='shard-overlay'>{item['time']}</div>"
                 html_string += "<div class='aghanims-shard-cell'>"
                 html_string += image
                 html_string += overlay
+                html_string += "<div class='tooltip'></div>"
                 html_string += "</div>"
+
         html_string += "</div></a>"
         html_string += "<div class='abilities'>"
+
         for ability in match['abilities']:
             ability_img = f"{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{ability['img']}_hp1.png?v=5933967"
             ability_id = ability['id']
             ability_key = ability['key']
             html_string += "<div class='ability-img-wrapper'>"
+
             if ability['type'] == 'talent':
                 image = f"<img class='table-img' src='/static/talent_img.png' alt = '{ability_key}'/>"
                 html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
@@ -293,15 +312,18 @@ def generate_table(func_name, search, template):
                 html_string += "<div class='tooltip' id='talent-tooltip' style='display:none'>"
                 html_string += "<div class='tooltip-line-one'>"
                 html_string += f"<img src='/static/talent_img.png' height='55'><h3>{ability_key}</div></div></div>"
+
             else:
                 image = f"<img class='table-img' src='{ability_img}' data_id='{ability_id}' data-tooltip='{ability_key}' alt='{ability_key}'>"
                 html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
                 html_string += image
                 html_string += "<div class='tooltip'></div>"
                 html_string += "</div>"
+
         html_string += "</div>"
         html_string += "<div class='draft'>"
         html_string += "<div class='radiant_draft'>"
+
         for item in match['radiant_draft']:
             rep = item.replace("'", '')
             if item == search:
@@ -309,6 +331,7 @@ def generate_table(func_name, search, template):
             else:
                 highlight = ''
             html_string += f"<a href='/hero/{item}'><i class='d2mh {rep} {highlight}'></i></a>"
+
         html_string += "</div>"
         html_string += "<div class='dire_draft'>"
         for item in match['dire_draft']:
@@ -319,12 +342,14 @@ def generate_table(func_name, search, template):
                 highlight = ''
             html_string += f"<a href='/hero/{item}'><i class='d2mh {rep} {highlight}'></i></a>"
         html_string += "</div>"
+
         role_file_path = f"/static/icons/{match['role']}.png"
         role_img = f"<img src='{role_file_path}'"
         if match['win'] == 0:
             row_string.append("<div id='loss-cell'></div>")
         else:
             row_string.append("<div id='win-cell'></div>")
+
         row_string.append(html_string)
         row_string.append(timeago.format(
             match['unix_time'], datetime.datetime.now()))
@@ -636,7 +661,9 @@ def manual_hero_update(name):
 
 if __name__ == '__main__':
     # delete_old_urls()
-    # manual_hero_update('abbadon')
+    # db['parse'].delete_many({})
+    # db['dead_games'].delete_many({})
+    # manual_hero_update('abaddon')
     # get_winrate()
     # opendota_call()
     # do_everything('lich')

@@ -583,6 +583,30 @@ label {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.11);
 }
+.tooltip-title {
+  display: flex;
+  text-align: end;
+  align-items: center;
+}
+.item-tooltip-line-one {
+  display: grid;
+  text-align: start;
+  height: 60px;
+}
+.cost-wrapper {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: gold;
+}
+.cost-wrapper h4 {
+  margin: 0;
+}
+.gold-img {
+  width: 25px;
+  height: 17px;
+}
 .tooltip-img {
   justify-self: start;
   width: 55px;
@@ -590,14 +614,19 @@ label {
 .tooltip-line-one h3 {
   margin: 0;
   justify-self: end;
-  font-size: 20px;
+  font-size: 18px;
   margin-left: auto;
   text-transform: uppercase;
 }
 .tooltip-content {
   padding: 20px;
 }
-
+.item-tooltip-content {
+  color: rgb(190, 190, 190);
+}
+.tooltip-text-highlight {
+  color: white;
+}
 .attribute > p {
   margin: 0;
   margin-top: 2px;
@@ -625,7 +654,12 @@ label {
   width: 15px;
   height: 15px;
 }
-
+.tooltip-components {
+  display: flex;
+}
+.component-img {
+  height: 30px;
+}
 table.dataTable thead .sorting {
   background-image: none;
 }
