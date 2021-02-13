@@ -70,7 +70,7 @@ window.addEventListener("mouseover", (event) => {
         attributes.setAttribute("class", "attributes");
         htmlString = "";
         attributesBody = base["attributes"]
-          .join("<br><br>")
+          .join("<br>")
           .replace(
             /([^h]\d*\.?\d+%?)/gi,
             `<strong><span class='tooltip-text-highlight'>$1</span></strong>`
@@ -158,10 +158,13 @@ window.addEventListener("mouseover", (event) => {
       }
       let tooltipHeight = tooltip.offsetHeight;
       let tooltipTop = tooltip.getBoundingClientRect().top;
-      if (tooltipHeight + tooltipTop > window.innerHeight - 20) {
-        tooltip.style.bottom = `${
-          window.innerHeight - event.target.getBoundingClientRect().top - 5
-        }px`;
+      console.log(tooltipHeight);
+      tooltip.style.top = `-${tooltipHeight / 2}px`;
+      tooltip.style.left = "50px";
+      if (tooltip.getBoundingClientRect().bottom > window.innerHeight) {
+        tooltip.style.top = `-${tooltipHeight}px`;
+        tooltip.style.left = `-0px`;
+        console.log(tooltipHeight / 2 + tooltipTop, window.innerHeight);
       }
     });
   }
@@ -275,10 +278,13 @@ window.addEventListener("mouseover", (event) => {
         }
         let tooltipHeight = tooltip.offsetHeight;
         let tooltipTop = tooltip.getBoundingClientRect().top;
-        if (tooltipHeight + tooltipTop > window.innerHeight - 20) {
-          tooltip.style.bottom = `${
-            window.innerHeight - event.target.getBoundingClientRect().top - 5
-          }px`;
+        tooltip.style.top = `-${tooltipHeight / 2}px`;
+        tooltip.style.left = "50px";
+        if (tooltip.getBoundingClientRect().bottom > window.innerHeight) {
+          imgHeight = parent.children[1].clientHeight;
+          tooltip.style.top = `-${tooltipHeight - imgHeight + imgHeight / 2.5}px`;
+          tooltip.style.left = `-0px`;
+          console.log(tooltipHeight / 2 + tooltipTop, window.innerHeight);
         }
       }
     });
