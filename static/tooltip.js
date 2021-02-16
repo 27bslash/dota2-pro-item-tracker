@@ -47,7 +47,7 @@ window.addEventListener("mouseover", (event) => {
       tooltip = parent.children[2];
       _id = parent.children[0].getAttribute("data_id");
       imgSrc = parent.children[0].src;
-      tooltip.style.background = `linear-gradient(137deg, rgba(15 15 15), rgb(30,30,30) )`;
+      tooltip.style.background = `#182127`;
     }
     const base = result[_id]["language"];
     itemText = base["displayName"];
@@ -108,18 +108,28 @@ window.addEventListener("mouseover", (event) => {
       htmlString = base["description"].join(",");
       description = document.createElement("div");
       description.setAttribute("class", "tooltip-description");
-      descriptionBody = base["description"]
-        .join("")
-        .replace(
-          /([^h]\d*\.?\d+%?)(\s\/)?/gi,
-          `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
-        )
-        .replace(/<h1>/g, "<h3 class='tooltip-text-highlight'>");
-      description.innerHTML = descriptionBody;
+
+      active = highlight_numbers(base["description"][0]);
+      passive = highlight_numbers(base["description"][1]);
+      use = "";
+
+      activeDiv = document.createElement("div");
+      passiveDiv = document.createElement("div");
+      activeDiv.setAttribute("class", "active");
+      passiveDiv.setAttribute("class", "passive");
+      activeDiv.innerHTML = active;
+      passiveDiv.innerHTML = passive;
+
+      descriptionBody = highlight_numbers(base["description"]);
+      if (active) description.appendChild(activeDiv);
+      if (passive) description.appendChild(passiveDiv);
+      if (event.target.className === "table-img") {
+        description.innerHTML = descriptionBody;
+      }
       tooltipContent.appendChild(description);
     }
 
-    if (event.target.className == "table-img") {
+    if (event.target.className === "table-img") {
       // tooltipContent.reverse();
       tooltipContent.appendChild(description);
       tooltipContent.appendChild(attributes);
@@ -161,7 +171,12 @@ window.addEventListener("mouseover", (event) => {
       cdText.textContent = stat["cooldown"].join("/");
       cdWrapper.appendChild(cooldowns);
       cdWrapper.appendChild(cdText);
-      tooltipFooter.appendChild(cdWrapper);
+      
+      if (event.target.className === "table-img") {
+        tooltipFooter.appendChild(cdWrapper);
+      } else {
+        description.appendChild(cdWrapper);
+      }
     }
     if (tooltipFooter.children.length == 0) {
       tooltipFooter.style.padding = "0px";
@@ -191,7 +206,6 @@ window.addEventListener("mouseover", (event) => {
     }
     let tooltipHeight = tooltip.offsetHeight;
     let tooltipTop = tooltip.getBoundingClientRect().top;
-    console.log(tooltipHeight);
     tooltip.style.top = `-${tooltipHeight / 2}px`;
     tooltip.style.left = "50px";
     if (tooltip.getBoundingClientRect().bottom > window.innerHeight) {
@@ -201,3 +215,15 @@ window.addEventListener("mouseover", (event) => {
     }
   }
 });
+
+function highlight_numbers(text) {
+  if (typeof text == "object") text = text.join("");
+  return text !== undefined
+    ? text
+        .replace(
+          /([^h]\d*\.?\d+%?)(\s\/)?/gi,
+          `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
+        )
+        .replace(/<h1>/g, "<h3 class='tooltip-text-highlight'>")
+    : "";
+}

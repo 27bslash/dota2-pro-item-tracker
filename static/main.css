@@ -633,11 +633,51 @@ label {
   padding: 20px;
   color: rgb(190, 190, 190);
 }
+.active {
+  background: rgb(25, 32, 48);
+  background: linear-gradient(
+    "to left",
+    rgba(25, 32, 48, 1) 0%,
+    rgba(24, 31, 48, 1) 100%
+  );
+}
+.active h3 {
+  color: rgb(170, 169, 247) !important;
+  background: rgb(24, 31, 48);
+  background: linear-gradient(
+    270deg,
+    rgba(24, 31, 48, 1) 0%,
+    rgba(56, 56, 127, 1) 100%
+  );
+}
+.passive {
+  background: rgb(28, 38, 47);
+  background: linear-gradient(
+    84deg,
+    rgba(28, 38, 47, 1) 0%,
+    rgba(27, 39, 47, 1) 100%
+  );
+}
+.passive h3 {
+  color: rgb(138, 153, 172);
+  background: rgb(38, 53, 64);
+  background: linear-gradient(
+    84deg,
+    rgba(38, 53, 64, 1) 0%,
+    rgba(27, 39, 47, 1) 100%
+  );
+}
 .item-tooltip-content {
   color: rgb(190, 190, 190);
 }
 .tooltip-text-highlight {
   color: white;
+}
+.active .tooltip-text-highlight {
+  color: rgb(150, 150, 195);
+}
+.passive .tooltip-text-highlight {
+  color: rgb(121, 134, 151);
 }
 .attribute > p {
   margin: 0;
