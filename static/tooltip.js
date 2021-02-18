@@ -22,31 +22,20 @@ window.addEventListener("mouseover", (event) => {
       result = abilities;
     }
     let parent, tooltip, _id, imgSrc;
-    if (event.target.parentNode.className == "circle") {
-      parent = event.target.parentNode.parentNode;
-      child = parent.children[0].children[0];
-      tooltip = parent.children[1];
-      _id = parent.children[0].children[0].getAttribute("data_id");
-      imgSrc = parent.children[0].children[0].getAttribute("src");
-      tooltip.style.background = `linear-gradient(137deg, rgba(15 15 15), rgb(30,30,30) )`;
-    } else if (event.target.parentNode.className == "ability-img-wrapper") {
-      parent = event.target.parentNode;
-      _id = parent.children[1].getAttribute("data_id");
-      hero = parent.children[1].getAttribute("data-hero");
-      imgSrc = parent.children[1].getAttribute("src");
-      tooltip = parent.children[2];
+    for (let element of event.target.parentNode.children) {
+      if (element.className === "tooltip") tooltip = element;
+      _id = event.target.getAttribute("data_id");
+      imgSrc = event.target.getAttribute("src");
+    }
+    if (event.target.parentNode.className == "ability-img-wrapper") {
+      hero = event.target.getAttribute("data-hero");
       tooltip.style.background = `linear-gradient(137deg, rgba(35 35 35), rgb(60,60,60) )`;
       for (const i of hero_colors.colors) {
-        if (parent.children[1].getAttribute("src").includes(i.ability)) {
+        if (imgSrc.includes(i.ability)) {
           tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, rgba(19,18,18,1) 160px)`;
         }
       }
     } else {
-      parent = event.target.parentNode;
-      child = parent.children[0];
-      tooltip = parent.children[2];
-      _id = parent.children[0].getAttribute("data_id");
-      imgSrc = parent.children[0].src;
       tooltip.style.background = `#182127`;
     }
     const base = result[_id]["language"];
@@ -108,33 +97,65 @@ window.addEventListener("mouseover", (event) => {
       htmlString = base["description"].join(",");
       description = document.createElement("div");
       description.setAttribute("class", "tooltip-description");
-
-      active = highlight_numbers(base["description"][0]);
-      passive = highlight_numbers(base["description"][1]);
-      use = "";
+      let activeText = "",
+        passiveText = "",
+        useText = "";
 
       activeDiv = document.createElement("div");
       passiveDiv = document.createElement("div");
+      useDiv = document.createElement("div");
+
+      activeWrapper = document.createElement("div");
+      passiveWrapper = document.createElement("div");
+      useWrapper = document.createElement("div");
+
       activeDiv.setAttribute("class", "active");
       passiveDiv.setAttribute("class", "passive");
-      activeDiv.innerHTML = active;
-      passiveDiv.innerHTML = passive;
+      useDiv.setAttribute("class", "use");
+
+      base["description"].forEach((x) => {
+        activeText = highlight_numbers(x.match(/<h1>Active:.*/g));
+        passiveText = highlight_numbers(x.match(/<h1>Passive:.*/g));
+        useText = highlight_numbers(x.match(/<h1>Use:.*/g));
+        if (activeText) {
+          activeText = activeText.replace(
+            /(\/h3>)(.*)/g,
+            `$1<p class='description-text'>$2</p>`
+          );
+          activeWrapper = document.createElement("div");
+          activeWrapper.setAttribute("class", "active-description");
+          activeWrapper.innerHTML = activeText;
+          activeDiv.appendChild(activeWrapper);
+        }
+        if (passiveText) {
+          passiveText = passiveText.replace(
+            /(\/h3>)(.*)/g,
+            `$1<p class='description-text'>$2</p>`
+          );
+          passiveWrapper = document.createElement("div");
+          passiveWrapper.setAttribute("class", "passive-description");
+          passiveWrapper.innerHTML = passiveText;
+          passiveDiv.appendChild(passiveWrapper);
+        }
+        if (useText) {
+          useText = useText.replace(
+            /(\/h3>)(.*)/g,
+            `$1<p class='description-text'>$2</p>`
+          );
+          useWrapper = document.createElement("div");
+          useWrapper.setAttribute("class", "use-description");
+          useWrapper.innerHTML = useText;
+          useDiv.appendChild(useWrapper);
+        }
+      });
 
       descriptionBody = highlight_numbers(base["description"]);
-      if (active) description.appendChild(activeDiv);
-      if (passive) description.appendChild(passiveDiv);
+      description.appendChild(activeDiv);
+      description.appendChild(passiveDiv);
+      description.appendChild(useDiv);
       if (event.target.className === "table-img") {
         description.innerHTML = descriptionBody;
       }
-      tooltipContent.appendChild(description);
-    }
-
-    if (event.target.className === "table-img") {
-      // tooltipContent.reverse();
-      tooltipContent.appendChild(description);
-      tooltipContent.appendChild(attributes);
-    } else {
-      tooltipContent.appendChild(attributes);
       tooltipContent.appendChild(description);
     }
 
@@ -171,11 +192,10 @@ window.addEventListener("mouseover", (event) => {
       cdText.textContent = stat["cooldown"].join("/");
       cdWrapper.appendChild(cooldowns);
       cdWrapper.appendChild(cdText);
-      
-      if (event.target.className === "table-img") {
+      if (event.target.className == "table-img") {
         tooltipFooter.appendChild(cdWrapper);
       } else {
-        description.appendChild(cdWrapper);
+        activeDiv.appendChild(cdWrapper);
       }
     }
     if (tooltipFooter.children.length == 0) {
@@ -198,6 +218,14 @@ window.addEventListener("mouseover", (event) => {
         components.appendChild(componentImg);
       });
     }
+    if (event.target.className === "table-img") {
+      // tooltipContent.reverse();
+      tooltipContent.appendChild(description);
+      tooltipContent.appendChild(attributes);
+    } else {
+      tooltipContent.appendChild(attributes);
+      tooltipContent.appendChild(description);
+    }
     if (!tooltip.children[0]) {
       tooltip.appendChild(tooltipHeader);
       tooltip.appendChild(tooltipContent);
@@ -211,19 +239,19 @@ window.addEventListener("mouseover", (event) => {
     if (tooltip.getBoundingClientRect().bottom > window.innerHeight) {
       tooltip.style.top = `-${tooltipHeight}px`;
       tooltip.style.left = `-0px`;
-      console.log(tooltipHeight / 2 + tooltipTop, window.innerHeight);
     }
   }
 });
 
 function highlight_numbers(text) {
-  if (typeof text == "object") text = text.join("");
-  return text !== undefined
+  if (typeof text == "object" && text != null) text = text.join("");
+  return text
     ? text
         .replace(
           /([^h]\d*\.?\d+%?)(\s\/)?/gi,
           `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
         )
         .replace(/<h1>/g, "<h3 class='tooltip-text-highlight'>")
+        .replace(/<\/h1>/g, "</h3>")
     : "";
 }
