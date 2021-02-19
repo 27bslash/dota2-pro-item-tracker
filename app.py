@@ -370,7 +370,7 @@ def generate_table(func_name, search, template):
                 f"<p class='stats' id='gold'>{match['gold']}</p>")
         else:
             row_string.append(
-                f"<p class='stats' id='gold'>{match['lane_efficiency']*100}%</p>")
+                f"<p class='stats' id='gold'>{match['lane_efficiency']}%</p>")
         row_string.append(f"<p class='stats' id ='gpm'>{match['gpm']}</p>")
         row_string.append(f"<p class='stats' id ='xpm'>{match['xpm']}</p>")
         row_string.append(
