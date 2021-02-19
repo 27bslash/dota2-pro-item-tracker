@@ -583,6 +583,7 @@ label {
   z-index: 3;
   position: absolute;
   width: 300px;
+  border: solid 3px black;
 }
 #talent-tooltip img {
   border: solid 1px rgb(32, 31, 31);
@@ -633,7 +634,18 @@ label {
   padding: 20px;
   color: rgb(190, 190, 190);
 }
-.active {
+.attributes {
+  margin-bottom: 15px;
+}
+.description-text {
+  margin: 0;
+  font-weight: 600;
+  text-shadow: 1px 1px black;
+  padding: 5px 5px 10px 5px;
+}
+.active .description-text {
+  padding: 5px;
+  color: rgb(104, 110, 143);
   background: rgb(25, 32, 48);
   background: linear-gradient(
     "to left",
@@ -641,7 +653,13 @@ label {
     rgba(24, 31, 48, 1) 100%
   );
 }
-.active h3 {
+.active .description-text p {
+  margin-top: 10px;
+}
+
+.test {
+  height: 20px;
+  padding: 5px 5px 5px 5px;
   color: rgb(170, 169, 247) !important;
   background: rgb(24, 31, 48);
   background: linear-gradient(
@@ -649,17 +667,42 @@ label {
     rgba(24, 31, 48, 1) 0%,
     rgba(56, 56, 127, 1) 100%
   );
+  display: flex;
+  align-items: center;
 }
-.passive {
+.statWrapper {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.statWrapper img {
+  height: 15px;
+  margin-left: auto;
+  border: solid 1px black;
+  border-radius: 10%;
+  margin-right: 3px;
+}
+.statWrapper p {
+  color: white;
+  margin-right: 5px;
+}
+.passive-description {
+  color: rgb(103, 112, 124);
+  font-weight: 600;
+  text-shadow: 1px 1px black;
   background: rgb(28, 38, 47);
   background: linear-gradient(
     84deg,
     rgba(28, 38, 47, 1) 0%,
     rgba(27, 39, 47, 1) 100%
   );
+  margin-top: 10px;
 }
 .passive h3 {
-  color: rgb(138, 153, 172);
+  margin: 0;
+  padding: 5px;
+  margin-bottom: 5px;
+  color: rgb(138, 153, 172) !important;
   background: rgb(38, 53, 64);
   background: linear-gradient(
     84deg,
@@ -667,6 +710,33 @@ label {
     rgba(27, 39, 47, 1) 100%
   );
 }
+.use-description {
+  color: #76846e;
+  font-weight: 600;
+  text-shadow: 1px 1px black;
+  background: rgb(24, 38, 35);
+  background: linear-gradient(
+    90deg,
+    rgba(24, 38, 35, 1) 0%,
+    rgba(27, 41, 39, 1) 100%
+  );
+}
+.use h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 5px;
+  background: rgb(27, 42, 39);
+  background: linear-gradient(
+    270deg,
+    rgba(27, 42, 39, 1) 0%,
+    rgba(39, 63, 40, 1) 100%
+  );
+}
+.passive:not(:last-child) {
+  background-color: green !important;
+  margin-bottom: 20px;
+}
+
 .item-tooltip-content {
   color: rgb(190, 190, 190);
 }
@@ -678,6 +748,9 @@ label {
 }
 .passive .tooltip-text-highlight {
   color: rgb(121, 134, 151);
+}
+.use .tooltip-text-highlight {
+  color: rgb(146, 187, 119) !important;
 }
 .attribute > p {
   margin: 0;

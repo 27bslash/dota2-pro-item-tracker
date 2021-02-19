@@ -23,12 +23,10 @@ from flask_minify import minify, decorators
 import urllib.parse
 # TODO
 # add intermediate items
-# add item tooltips
 # redesign ability tooltips
 # add bans
 # redesign scroll bar
-# make tooltips not load off screen
-#
+
 
 cluster = pymongo.MongoClient(
     'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
@@ -249,9 +247,12 @@ def generate_table(func_name, search, template):
         html_string += "<div class='purchases'>"
         if 'start' in template:
             for item in match['starting_items']:
-                image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png'>"
+                item_key = item['key']
+                item_id = item_methods.get_item_id(item_key)
+                image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
+                html_string += "<div class='tooltip'></div>"
                 html_string += "</div>"
         else:
             with open('json_files/items.json', 'r') as f:
@@ -284,8 +285,8 @@ def generate_table(func_name, search, template):
                 item_id = item_methods.get_item_id(item_key)
                 html_string += "<div class='neutral-cell'>"
                 html_string += f"<div class='circle'>"
-                html_string += f"<img class='item-img' id='neutral-item' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item_key}_lg.png' data_id='{item_id}' alt='{item_key}'></div>"
-                html_string += "<div class='tooltip'></div></div>"
+                html_string += f"<img class='item-img' id='neutral-item' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item_key}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                html_string += "<div class='tooltip'></div></div></div>"
 
             if match['aghanims_shard']:
                 image = f"<img class='item-img' id='aghanims-shard' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png'>"

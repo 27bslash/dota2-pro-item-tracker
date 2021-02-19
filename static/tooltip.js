@@ -101,31 +101,65 @@ window.addEventListener("mouseover", (event) => {
         passiveText = "",
         useText = "";
 
-      activeDiv = document.createElement("div");
-      passiveDiv = document.createElement("div");
-      useDiv = document.createElement("div");
-
-      activeWrapper = document.createElement("div");
-      passiveWrapper = document.createElement("div");
-      useWrapper = document.createElement("div");
+      let activeDiv = document.createElement("div");
+      let passiveDiv = document.createElement("div");
+      let useDiv = document.createElement("div");
+      let activeWrapper = document.createElement("div");
+      let passiveWrapper = document.createElement("div");
+      let useWrapper = document.createElement("div");
 
       activeDiv.setAttribute("class", "active");
       passiveDiv.setAttribute("class", "passive");
       useDiv.setAttribute("class", "use");
 
       base["description"].forEach((x) => {
-        activeText = highlight_numbers(x.match(/<h1>Active:.*/g));
-        passiveText = highlight_numbers(x.match(/<h1>Passive:.*/g));
-        useText = highlight_numbers(x.match(/<h1>Use:.*/g));
+        activeText = highlight_numbers(x.match(/.*<h1>Active:.*/g));
+        passiveText = highlight_numbers(x.match(/.*<h1>Passive:.*/g));
+        useText = highlight_numbers(x.match(/.*<h1>Use:.*/g));
         if (activeText) {
-          activeText = activeText.replace(
-            /(\/h3>)(.*)/g,
-            `$1<p class='description-text'>$2</p>`
+          const activeHeader = x.replace(/<h1>(.*)<\/h1>.*/g, "$1");
+          const activeTxt = x.replace(/.*<\/h1>(.*)/g, "$1");
+          let headWrapper = document.createElement("div");
+          let head = document.createElement("h3");
+          let desc = document.createElement("p");
+          let statWrapper = document.createElement("div");
+          headWrapper.setAttribute("class", "test");
+          head.textContent = activeHeader;
+          desc.setAttribute("class", "description-text");
+          desc.innerHTML = highlight_numbers(activeTxt);
+          statWrapper.setAttribute("class", "statWrapper");
+
+          let mc = document.createElement("img");
+          mc.setAttribute(
+            "src",
+            "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/mana.png"
           );
-          activeWrapper = document.createElement("div");
-          activeWrapper.setAttribute("class", "active-description");
-          activeWrapper.innerHTML = activeText;
-          activeDiv.appendChild(activeWrapper);
+          headWrapper.appendChild(head);
+
+          let mcText = document.createElement("p");
+          let manaCost = result[_id]["stat"]["manaCost"] || false;
+          if (manaCost) {
+            mcText.textContent = manaCost;
+            statWrapper.appendChild(mc);
+            statWrapper.appendChild(mcText);
+          }
+
+          let cd = document.createElement("img");
+          cd.setAttribute(
+            "src",
+            "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/cooldown.png"
+          );
+          let cdText = document.createElement("p");
+          let cooldown = result[_id]["stat"]["cooldown"] || false;
+
+          if (cooldown) {
+            cdText.textContent = cooldown;
+            statWrapper.appendChild(cd);
+            statWrapper.appendChild(cdText);
+          }
+          headWrapper.appendChild(statWrapper);
+          activeDiv.appendChild(headWrapper);
+          activeDiv.appendChild(desc);
         }
         if (passiveText) {
           passiveText = passiveText.replace(
@@ -150,9 +184,9 @@ window.addEventListener("mouseover", (event) => {
       });
 
       descriptionBody = highlight_numbers(base["description"]);
-      description.appendChild(activeDiv);
-      description.appendChild(passiveDiv);
-      description.appendChild(useDiv);
+      if (activeDiv.children.length > 0) description.appendChild(activeDiv);
+      if (passiveDiv.children.length > 0) description.appendChild(passiveDiv);
+      if (useDiv.children.length > 0) description.appendChild(useDiv);
       if (event.target.className === "table-img") {
         description.innerHTML = descriptionBody;
       }
@@ -176,7 +210,9 @@ window.addEventListener("mouseover", (event) => {
       mcText.textContent = stat["manaCost"].join("/");
       mcWrapper.appendChild(manaCosts);
       mcWrapper.appendChild(mcText);
-      tooltipFooter.appendChild(mcWrapper);
+      if (event.target.className == "table-img") {
+        tooltipFooter.appendChild(cdWrapper);
+      }
     }
     if ("cooldown" in stat && stat["cooldown"] > 0) {
       cdWrapper = document.createElement("div");
@@ -194,8 +230,6 @@ window.addEventListener("mouseover", (event) => {
       cdWrapper.appendChild(cdText);
       if (event.target.className == "table-img") {
         tooltipFooter.appendChild(cdWrapper);
-      } else {
-        activeDiv.appendChild(cdWrapper);
       }
     }
     if (tooltipFooter.children.length == 0) {
@@ -248,7 +282,7 @@ function highlight_numbers(text) {
   return text
     ? text
         .replace(
-          /([^h]\d*\.?\d+%?)(\s\/)?/gi,
+          /([^a-z>]\d*\.?\d+%?)(\s\/)?/gm,
           `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
         )
         .replace(/<h1>/g, "<h3 class='tooltip-text-highlight'>")
