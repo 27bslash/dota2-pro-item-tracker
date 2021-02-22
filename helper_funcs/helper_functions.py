@@ -217,8 +217,16 @@ class Db_insert:
         for k in list(roles.keys()):
             if roles[k] <= 0:
                 del roles[k]
-        db[collection].find_one_and_replace({key: val},
-                                            {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles})
+        if key == 'bans':
+            db[collection].find_one_and_update(
+                {'hero': val}, {"$set": {'total_bans': hero_output.count_documents({key: val})}})
+        else:
+            db[collection].find_one_and_replace({key: val},
+                                                {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles})
+
+    def insert_bans(self, val):
+        db['hero_picks'].find_one_and_replace(
+            {'hero': val}, {'total_bans': hero_output.count_documents({'bans': val})})
 
     def insert_talent_order(self, hero):
         with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:

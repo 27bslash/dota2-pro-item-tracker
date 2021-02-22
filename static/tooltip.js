@@ -76,11 +76,6 @@ window.addEventListener("mouseover", (event) => {
     tooltipContent = document.createElement("div");
     tooltipContent.setAttribute("class", "tooltip-content");
     let attributesBody, descriptionBody;
-    if (parent == "item-cell")
-      tooltipContent.setAttribute(
-        "class",
-        "item-tooltip-content tooltip-content"
-      );
     if ("attributes" in base) {
       attributes = document.createElement("div");
       attributes.setAttribute("class", "attributes");
@@ -269,7 +264,7 @@ window.addEventListener("mouseover", (event) => {
     let tooltipHeight = tooltip.offsetHeight;
     let tooltipTop = tooltip.getBoundingClientRect().top;
     tooltip.style.top = `-${tooltipHeight / 2}px`;
-    tooltip.style.left = "50px";
+    tooltip.style.left = `${event.target.clientWidth}px`;
     if (tooltip.getBoundingClientRect().bottom > window.innerHeight) {
       tooltip.style.top = `-${tooltipHeight}px`;
       tooltip.style.left = `-0px`;
