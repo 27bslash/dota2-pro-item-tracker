@@ -24,9 +24,8 @@ import urllib.parse
 # TODO
 # add intermediate items
 # redesign ability tooltips
-# add bans
 # redesign scroll bar
-
+# show alex ads
 
 cluster = pymongo.MongoClient(
     'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
@@ -270,8 +269,6 @@ def generate_table(func_name, search, template):
                 html_string += "</div>"
 
             for item in match['backpack']:
-                item_key = item['key']
-                item_id = item_methods.get_item_id(item_key)
                 image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
@@ -289,9 +286,9 @@ def generate_table(func_name, search, template):
                 html_string += "<div class='tooltip'></div></div></div>"
 
             if match['aghanims_shard']:
-                image = f"<img class='item-img' id='aghanims-shard' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png'>"
+                image = f"<img class='item-img' id='aghanims-shard' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png' data_id='609' alt='aghanims_shard'>"
                 overlay = f"<div class='overlay' id='shard-overlay'>{item['time']}</div>"
-                html_string += "<div class='aghanims-shard-cell'>"
+                html_string += "<div class='item-cell' id='aghanims-shard-cell'>"
                 html_string += image
                 html_string += overlay
                 html_string += "<div class='tooltip'></div>"
@@ -407,6 +404,8 @@ def get_winrate():
                 picks = hero_output.count_documents({'hero': hero['name']})
                 total_wins = hero_output.count_documents(
                     {'hero': hero['name'], 'win': 1})
+                total_bans = hero_output.count_documents(
+                    {'bans': hero['name']})
                 if total_wins == 0 or picks == 0:
                     print('hero')
                     total_winrate = 0
@@ -414,7 +413,7 @@ def get_winrate():
                     total_winrate = (total_wins / picks) * 100
 
                 role_dict = {'hero': hero['name'],
-                             'picks': picks, 'wins': total_wins, 'winrate': total_winrate}
+                             'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
                 for role in roles:
                     wins = hero_output.count_documents(
                         {'hero': hero['name'], 'win': 1, 'role': role})
@@ -640,6 +639,7 @@ def opendota_call():
 
             asyncio.run(main(get_urls(hero), hero))
             database_methods.insert_total_picks('hero', hero, 'hero_picks')
+            database_methods.insert_total_picks('bans', hero, 'hero_picks')
             if sleep >= 60:
                 sleep = 60
             print(sleep)
@@ -664,7 +664,9 @@ if __name__ == '__main__':
     # delete_old_urls()
     # db['parse'].delete_many({})
     # db['dead_games'].delete_many({})
-    # manual_hero_update('abaddon')
+    # manual_hero_update('crystal_maiden')
+    # database_methods.insert_total_picks('bans', 'lycan', 'hero_picks')
+    # get_winrate()
     # get_winrate()
     # opendota_call()
     # do_everything('lich')

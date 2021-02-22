@@ -45,7 +45,7 @@ async def async_get(m_id, hero_name):
     url = f'https://api.opendota.com/api/matches/{m_id}'
     dupe_check = hero_output.find_one({'hero': hero_name, 'id': m_id})
     bad_id_check = db['dead_games'].find_one(
-        {'id': m_id, 'count': {"$gt": 1}})
+        {'id': m_id, 'count': {"$gt": 3}})
     if dupe_check is not None or bad_id_check is not None:
         return
     try:
@@ -61,6 +61,8 @@ async def async_get(m_id, hero_name):
                     player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 0 and player['hero_id'] in hero_ids]
                 dire_draft = [hero_methods.hero_name_from_hero_id(
                     player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 1 and player['hero_id'] in hero_ids]
+                hero_bans = [hero_methods.hero_name_from_hero_id(
+                    ban['hero_id']) for ban in resp['picks_bans'] if ban['is_pick'] == False]
                 for i in range(10):
                     p = resp['players'][i]
                     hero_id = p['hero_id']
@@ -107,7 +109,7 @@ async def async_get(m_id, hero_name):
                                 p['duration'] = 0
                             hero_output.insert_one(
                                 {'unix_time': p['start_time'], 'hero': hero_name, 'duration': p['duration'],
-                                 'radiant_draft': rad_draft, 'dire_draft': dire_draft,
+                                 'radiant_draft': rad_draft, 'dire_draft': dire_draft, 'bans': hero_bans,
                                  'name': get_info(match_id, 'name', hero_name), 'account_id': p['account_id'], 'role': role, 'mmr': get_info(match_id, 'mmr', hero_name),
                                  'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
                                  'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
