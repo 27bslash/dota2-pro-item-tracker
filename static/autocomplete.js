@@ -1,11 +1,13 @@
 let cells = document.querySelectorAll(".hero-cell"),
   arr = [],
+  elementsToHide = [],
   search = document.getElementById("search"),
   heroGrid = document.querySelector(".hero-grid"),
   statText = document.querySelectorAll(".win-stats"),
   ul = document.querySelector("ul"),
   heroSuggestionList = document.querySelector("#hero-suggestion-list"),
-  playerSuggestionList = document.querySelector("#player-suggestion-list");
+  playerSuggestionList = document.querySelector("#player-suggestion-list"),
+  titleText;
 
 document.querySelector(".suggestions").style.display = "none";
 async function get_json(search) {
@@ -29,7 +31,10 @@ const player_data = get_json("accounts");
 const hero_autocomplete = () => {
   hero_data.then((result) => {
     search.addEventListener("input", (e) => {
-      if (e.target.value.length < 2) return;
+      if (e.target.value.length < 2) {
+        reset();
+        return;
+      }
       hideHeroes();
       sort = result.heroes.sort(compWrap(1));
       arr = sort.filter((x) =>
@@ -109,7 +114,7 @@ const hero_name_display = () => {
     linkArr = [];
   ul.innerHTML = "";
   for (let stat of statText) {
-    stat.classList.add("hide");
+    stat.classList.add("search-hide");
   }
   for (let h of arr) {
     linkArr.push(h.name);
@@ -119,6 +124,8 @@ const hero_name_display = () => {
     displayArr = displayArr.slice(0, 15);
     linkArr = linkArr.slice(0, 15);
   }
+  displayArr = displayArr.sort();
+  console.log(displayArr);
   for (let i = 0; i < displayArr.length; i++) {
     let div = document.createElement("div"),
       a = document.createElement("a"),
@@ -134,12 +141,22 @@ const hero_name_display = () => {
     if (link && search.value.length > 1) {
       link.classList.remove("hide");
       linkContainer = link.parentNode.parentNode;
-      linkContainer.style.order = i;
+      linkContainer.classList.remove("search-hide");
+      linkContainer.style.order = null;
+      if (linkContainer.classList.contains("hide")) {
+        console.log(elementsToHide, linkContainer);
+        elementsToHide.push(linkContainer);
+      }
       linkContainer.classList.remove("hide");
-      linkContainer.style.display = "block";
       heroGrid.classList.add("right");
     }
   }
+  cells.forEach((x) => {
+    base = x.children[0].href.split("?")[0];
+    if (search.value.length > 1 && !x.classList.contains("search-hide")) {
+      x.children[0].href = base;
+    }
+  });
 };
 
 const hideHeroes = () => {
@@ -151,7 +168,7 @@ const hideHeroes = () => {
   ) {
   }
   for (let hero of cells) {
-    hero.classList.add("hide");
+    hero.classList.add("search-hide");
     hero.style.gridArea = null;
   }
 };
@@ -186,11 +203,12 @@ let x = 0,
   currList = heroSuggestionList;
 window.addEventListener("keydown", (event) => {
   autoFocus(event);
-  if (!heroSuggestionList.children.length) return;
   if (event.keyCode == 27 || search.value.length < 1) {
     // esc clears search
+    search.value = "";
     reset();
   }
+  if (!heroSuggestionList.children.length) reset();
   // arrow key selection of autocomplete suggestions
   switch (event.keyCode) {
     case 37:
@@ -208,10 +226,40 @@ window.addEventListener("keydown", (event) => {
     case 40:
       count++;
       x = x < currList.children.length - 1 && count > 1 ? x + 1 : 0;
+      shownEls = [];
+      if (currList === heroSuggestionList) {
+        document.querySelectorAll(".hero-cell").forEach((el) => {
+          if (!el.classList.contains("search-hide")) {
+            shownEls.push(el);
+          }
+        });
+        shownEls.forEach((el, i) => {
+          if (i === x) {
+            el.classList.add("hero-highlight");
+          } else {
+            el.classList.remove("hero-highlight");
+          }
+        });
+      }
       break;
     case 38:
       count++;
       x = x > 0 && count > 1 ? x - 1 : currList.children.length - 1;
+      shownEls = [];
+      if (currList === heroSuggestionList) {
+        document.querySelectorAll(".hero-cell").forEach((el) => {
+          if (!el.classList.contains("search-hide")) {
+            shownEls.push(el);
+          }
+        });
+        shownEls.forEach((el, i) => {
+          if (i === x) {
+            el.classList.add("hero-highlight");
+          } else {
+            el.classList.remove("hero-highlight");
+          }
+        });
+      }
       break;
     case 13:
       search.value = currList.children[x].children[0].textContent;
@@ -235,24 +283,29 @@ window.addEventListener("keydown", (event) => {
 const reset = () => {
   ul.innerHTML = "";
   playerSuggestionList.innerHTML = "";
-  search.value = "";
+  document.querySelector(".sort-title").textContent = titleText;
   document.querySelector(".suggestions").style.display = "none";
+  for (let el of elementsToHide) {
+    el.classList.add("hide");
+  }
   if (heroGrid) {
     heroGrid.classList.remove("right");
     heroGrid.classList.remove("hide");
   }
   for (let hero of cells) {
-    hero.classList.remove("hide");
+    hero.classList.remove("search-hide");
   }
   for (let stat of statText) {
-    stat.classList.remove("hide");
+    stat.classList.remove("search-hide");
   }
 };
+
 const closeAllTooltips = () => {
   document.querySelectorAll(".tooltip").forEach((x, i) => {
     x.style.display = "none";
   });
 };
+
 window.addEventListener("mouseover", (event) => {
   closeAllTooltips();
   if (event.target.id === "main-talent-img") {

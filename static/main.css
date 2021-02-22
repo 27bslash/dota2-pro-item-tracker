@@ -508,6 +508,11 @@ label {
 .search-container {
   display: flex;
 }
+.sort-title {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
 .grid-container {
   width: 100%;
 }
@@ -519,6 +524,9 @@ label {
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
 }
+.hero-highlight {
+  box-shadow: 0px 0px 25px #fff;
+}
 .col {
   text-align: center;
   margin-right: 6px;
@@ -527,10 +535,12 @@ label {
   grid-row: 1;
   grid-column: 1;
 }
+.search-hide {
+  display: none;
+}
 .hide {
   display: none !important;
 }
-
 .right {
   margin: 2px 0px 0px 405px;
   display: grid;

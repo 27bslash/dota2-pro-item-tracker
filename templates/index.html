@@ -74,6 +74,9 @@
           <button class="sort-button" onclick="pickSort(null,'winrate')">
             WINRATE
           </button>
+          <button class="sort-button" onclick="pickSort(null,'bans')">
+            BANS
+          </button>
         </div>
       </div>
     </div>
@@ -92,6 +95,7 @@
       }
     };
   </script>
+  <h1 class='sort-title'></h1>
   <div class="grid-container">
     <div class="hero-grid">
       {%set x = 0%} {%for j in range(links|length)%}

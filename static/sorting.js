@@ -1,43 +1,53 @@
 let winData;
 
-const pickSort = (role, x) => {
+const pickSort = (role, sort_query) => {
   picksArr = [];
   amountOfHeroes = 119;
   pickBox = document.getElementById("pick-box");
   winBox = document.getElementById("win-box");
   winrateBox = document.getElementById("win-rate-box");
+  banBox = document.getElementById("win-rate-box");
   stats = get_json("win-stats");
   stats.then((data) => {
     if (pickBox.checked) {
-      x = "picks";
+      sort_query = "picks";
     } else if (winBox.checked) {
-      x = "wins";
+      sort_query = "wins";
     } else if (winrateBox.checked) {
-      x = "winrate";
+      sort_query = "winrate";
+    } else if (banBox.checked) {
+      sort_query = "bans";
     }
     if (role) {
-      console.log(`${role}_${x}`);
-      let filtered = data.filter((item) => item[`${role}_${x}`] > 0);
-      data = filtered.sort((a, b) => b[`${role}_${x}`] - a[`${role}_${x}`]);
+      console.log(`${role}_${sort_query}`);
+      let filtered = data.filter((item) => item[`${role}_${sort_query}`] > 0);
+      data = filtered.sort(
+        (a, b) => b[`${role}_${sort_query}`] - a[`${role}_${sort_query}`]
+      );
     } else {
       console.log("false");
-      data.sort((a, b) => b[`${x}`] - a[`${x}`]);
+      data.sort((a, b) => b[sort_query] - a[sort_query]);
     }
     heroCounter = 0;
     grid_position(data, role);
+    let titleText = "most";
+    if (sort_query === "winrate") titleText = "highest";
+    document.querySelector(".sort-title").textContent = `${titleText} ${
+      role || ""
+    } ${sort_query}`;
   });
 };
 
 function grid_position(data, role) {
   document.querySelectorAll(".hero-cell").forEach((x) => {
-    x.style.display = "None";
+    x.classList.add("hide");
   });
   for (let i = 0; i < data.length; i++) {
     if (document.getElementById(data[i].hero)) {
       currCell = document.getElementById(data[i].hero).parentNode.parentNode;
       change_stat_text(data, currCell, role, i);
       currCell.style.order = i;
-      currCell.style.display = "block";
+      currCell.classList.remove("hide");
       colour_wins();
     }
   }
