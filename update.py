@@ -48,8 +48,6 @@ def chunk_stratz_abilites():
                 d = {}
                 for k in data:
                     if 'name' in data[k]:
-                        if hero['name'] == 'hoodwink':
-                            print(data[k]['name'])
                         if switcher(hero['name']) in data[k]['name'] or hero['name'].lower() in data[k]['name']:
                             d[k] = data[k]
                 with open(f'json_files/detailed_ability_info/{hero["name"]}.json', 'w') as w:
@@ -184,4 +182,4 @@ def update_talents():
 
 if __name__ == '__main__':
     # update_app()
-    get_dominant_color()
+    chunk_stratz_abilites()
