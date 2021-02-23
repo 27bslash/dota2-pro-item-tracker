@@ -1,6 +1,8 @@
 let cells = document.querySelectorAll(".hero-cell"),
   arr = [],
   elementsToHide = [],
+  order = [],
+  orderSet = new Set(),
   search = document.getElementById("search"),
   heroGrid = document.querySelector(".hero-grid"),
   statText = document.querySelectorAll(".win-stats"),
@@ -113,6 +115,8 @@ const hero_name_display = () => {
     displayArr = [],
     linkArr = [];
   ul.innerHTML = "";
+  document.querySelector(".sort-title").textContent = "";
+  document.querySelector(".arrow-button").classList.add("search-hide");
   for (let stat of statText) {
     stat.classList.add("search-hide");
   }
@@ -125,7 +129,6 @@ const hero_name_display = () => {
     linkArr = linkArr.slice(0, 15);
   }
   displayArr = displayArr.sort();
-  console.log(displayArr);
   for (let i = 0; i < displayArr.length; i++) {
     let div = document.createElement("div"),
       a = document.createElement("a"),
@@ -142,11 +145,17 @@ const hero_name_display = () => {
       link.classList.remove("hide");
       linkContainer = link.parentNode.parentNode;
       linkContainer.classList.remove("search-hide");
-      linkContainer.style.order = null;
       if (linkContainer.classList.contains("hide")) {
-        console.log(elementsToHide, linkContainer);
         elementsToHide.push(linkContainer);
+      } else {
+        _id = linkContainer.children[0].children[0].id;
+        if (!orderSet.has(_id)) {
+          orderSet.add(_id);
+          el_order = linkContainer.style.order;
+          order.push({ id: _id, order: el_order });
+        }
       }
+      linkContainer.style.order = null;
       linkContainer.classList.remove("hide");
       heroGrid.classList.add("right");
     }
@@ -207,6 +216,7 @@ window.addEventListener("keydown", (event) => {
     // esc clears search
     search.value = "";
     reset();
+    return;
   }
   if (!heroSuggestionList.children.length) reset();
   // arrow key selection of autocomplete suggestions
@@ -283,10 +293,19 @@ window.addEventListener("keydown", (event) => {
 const reset = () => {
   ul.innerHTML = "";
   playerSuggestionList.innerHTML = "";
-  document.querySelector(".sort-title").textContent = titleText;
+  document.querySelector(".sort-title").textContent = document.querySelector(
+    ".sort-title"
+  ).id;
   document.querySelector(".suggestions").style.display = "none";
+  document.querySelector(".arrow-button").classList.remove("search-hide");
   for (let el of elementsToHide) {
+    // re hide elements
     el.classList.add("hide");
+  }
+  for (let i of order) {
+    // re order elements
+    document.getElementById(i["id"]).parentNode.parentElement.style.order =
+      i["order"];
   }
   if (heroGrid) {
     heroGrid.classList.remove("right");
@@ -294,10 +313,14 @@ const reset = () => {
   }
   for (let hero of cells) {
     hero.classList.remove("search-hide");
+    hero.classList.remove("hero-highlight");
   }
   for (let stat of statText) {
     stat.classList.remove("search-hide");
   }
+  elementsToHide = [];
+  order = [];
+  orderSet = new Set();
 };
 
 const closeAllTooltips = () => {
@@ -337,7 +360,6 @@ window.addEventListener("mouseover", (event) => {
 });
 document.querySelectorAll(".sort-button").forEach((x) => {
   x.addEventListener("click", (event) => {
-    console.log(event.target.id);
     cells.forEach((i) => {
       base = i.children[0].href.split("?")[0];
       i.children[0].href = base;

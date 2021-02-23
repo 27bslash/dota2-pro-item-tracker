@@ -19,7 +19,6 @@ const pickSort = (role, sort_query) => {
       sort_query = "bans";
     }
     if (role) {
-      console.log(`${role}_${sort_query}`);
       let filtered = data.filter((item) => item[`${role}_${sort_query}`] > 0);
       data = filtered.sort(
         (a, b) => b[`${role}_${sort_query}`] - a[`${role}_${sort_query}`]
@@ -32,9 +31,9 @@ const pickSort = (role, sort_query) => {
     grid_position(data, role);
     let titleText = "most";
     if (sort_query === "winrate") titleText = "highest";
-    document.querySelector(".sort-title").textContent = `${titleText} ${
-      role || ""
-    } ${sort_query}`;
+    let titleString = `${titleText} ${role || ""} ${sort_query}`;
+    document.querySelector(".sort-title").textContent = titleString;
+    document.querySelector(".sort-title").id = titleString;
   });
 };
 
