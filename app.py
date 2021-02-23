@@ -26,6 +26,7 @@ import urllib.parse
 # redesign ability tooltips
 # redesign scroll bar
 # show alex ads
+# remove hero highlight
 
 cluster = pymongo.MongoClient(
     'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
@@ -304,7 +305,7 @@ def generate_table(func_name, search, template):
             html_string += "<div class='ability-img-wrapper'>"
 
             if ability['type'] == 'talent':
-                image = f"<img class='table-img' src='/static/talent_img.png' alt = '{ability_key}'/>"
+                image = f"<img class='table-img' src='/static/talent_img.png' data_id='{ability_id}'alt='{ability_key}'/>"
                 html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
                 html_string += image
                 html_string += "<div class='tooltip' id='talent-tooltip' style='display:none'>"
@@ -438,32 +439,7 @@ def get_winrate():
         print(traceback.format_exc())
 
 
-def switcher(name):
-    switch = {
-        'necrophos': 'necrolyte',
-        'clockwerk': 'rattletrap',
-        "nature's_prophet": 'furion',
-        'timbersaw': 'shredder',
-        'io': 'wisp',
-        'queen_of_pain': 'queenofpain',
-        'doom': 'doom_bringer',
-        'shadow_fiend': 'nevermore',
-        'wraith_king': 'skeleton_king',
-        'magnus': 'magnataur',
-        'underlord': 'abyssal_underlord',
-        'anti-mage': 'antimage',
-        'outworld_devourer': 'obsidian_destroyer',
-        'windranger': 'windrunner',
-        'zeus': 'zuus',
-        'vengeful_spirit': 'vengefulspirit',
-        'treant_protector': 'treant',
-        'centaur_warrunner': 'centaur'
-    }
-    # print(h, switch.get(h))
-    if switch.get(name):
-        return switch.get(name)
-    else:
-        return name
+
 
 
 def get_hero_name_colour(hero_name):
