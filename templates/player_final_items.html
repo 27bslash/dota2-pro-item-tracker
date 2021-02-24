@@ -39,7 +39,7 @@
       });
   });
 </script>
-<title>{{player_name}}</title>
+<title>{{display_name}}</title>
 <main>
   <div class="content" style="margin-top: 40px;">
     <a
@@ -52,13 +52,10 @@
       alt="starter items"
   /></a>
   <div class="pick-counter" style="display: flex;">
-      <a href="/player/{{display_name}}">
         <p class='bold-name'id="player-name" style="color: white">
           <strong style="text-transform: capitalize;">{{display_name}}</strong>
-        </p></a
-      >
-      <p style="color: white;">
-        has played {{total}} times. He mostly plays:
+        </p>
+      <p style="color: white;">has played {{total}} times. He mostly plays:
       </p>
       {%for k,v in roles.items()%}
       <a href="/player/{{display_name}}?role={{k}}">
@@ -111,7 +108,9 @@
                   width="100"
                   height="80"
                   alt="{{item.key}}"
+                  data_id ="{{item.id}}"
                 />
+                <div class="tooltip" style='margin-left: auto;'></div>
                 <div class="overlay" aria-label="{{item.time}}">
                   {{item.time}}
                 </div>
@@ -125,11 +124,13 @@
             }}_lg.png"
                   width="100"
                   height="80"
+                  data_id ="{{item.id}}"
                   alt="{{item.key}}"
                 />
                 <div class="overlay" aria-label="{{item.time}}">
                   {{item.time}}
                 </div>
+                <div class="tooltip" style='margin-left: auto;'></div>
               </div>
               {% endfor %}
               <div class="neutral-cell">
@@ -149,7 +150,7 @@
                 <!-- <div class="overlay" id="neutral-overlay"></div> -->
                 {%endif%}
               
-              <div class="aghanims-shard-cell">
+              <div class='item-cell' id="aghanims-shard-cell">
                 {%if dict_item['aghanims_shard'] != None%}
                   <img
                   id='aghanims-shard'
@@ -158,10 +159,12 @@
                     src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{dict_item['aghanims_shard'][0]['key']}}_lg.png"
                     width="100"
                     height="80"
+                    data_id ="609"
                     alt="{{dict_item['aghanims_shard'][0]['key']}}"
                   />
-                <div class="overlay" id="shard-overlay">{{dict_item['aghanims_shard'][0]['time']}}</div>
-                {%endif%}</div>
+                  <div class="tooltip"></div>
+                  <div class="overlay" id="shard-overlay">{{dict_item['aghanims_shard'][0]['time']}}</div>
+                  {%endif%}</div>
             </div></div>
               </div>
             </div>

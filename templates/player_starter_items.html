@@ -39,7 +39,7 @@
       });
   });
 </script>
-<title>{{player_name}}</title>
+<title>{{display_name}}</title>
 <main>
   <div class="content" style="margin-top: 40px">
     <a
@@ -52,14 +52,12 @@
         alt="final items"
     /></a>
     <div class="pick-counter" style="display: flex">
-      <a href="/player/{{display_name}}">
         <p class="bold-name" id="player-name" style="color: white">
-          <strong style="text-transform: capitalize">{{player_name}}</strong>
-        </p></a
-      >
+          <strong style="text-transform: capitalize">{{display_name}}</strong>
+        </p>
       <p style="color: white">has played {{total}} times. He mostly plays:</p>
       {%for k,v in roles.items()%}
-      <a href="/player/{{player_name}}/starter_items?role={{k}}">
+      <a href="/player/{{display_name}}/starter_items?role={{k}}">
         <p class="total-picks">
           {{k}} ({{v}}){{"," if not loop.last else "." }}
         </p>
@@ -108,9 +106,12 @@
               }}_lg.png"
                     width="100"
                     height="80"
+                    data_id="{{item.id}}"
                     alt="{{item.key}}" />
                   <div class="overlay" style="background-color: inherit"></div
-                ></a>
+                ><div class='tooltip'></div>
+              </a>
+                
               </div>
               {% endfor %}
             </div>
