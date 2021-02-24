@@ -45,6 +45,7 @@ window.addEventListener("mouseover", (event) => {
     const base = result[_id]["language"];
     const headerTextContent = base["displayName"];
     tooltip.style.display = "block";
+    tooltip.style.border = "3px solid black";
     let tooltipLineOne = document.createElement("div");
     tooltipLineOne.setAttribute("class", "tooltip-title");
     let tooltipHeader = document.createElement("div");
@@ -90,7 +91,7 @@ window.addEventListener("mouseover", (event) => {
           /([^h]\d*\.?\d+%?)(\s\/)?/gi,
           `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
         );
-      attributes.innerHTML = attributesBody;
+      attributes.innerHTML = `<p>${attributesBody}</p>`;
     }
     if ("description" in base) {
       htmlString = base["description"].join(",");
@@ -235,6 +236,14 @@ window.addEventListener("mouseover", (event) => {
       tooltipFooter.style.padding = "0px";
       tooltipFooter.style.borderTop = "0px";
     }
+    lore = document.createElement("div");
+    lore.setAttribute("class", "tooltip-lore");
+    loreText =
+      typeof base["lore"][0] === "string" ? base["lore"] : base["lore"][0];
+    console.log(typeof base["lore"][0]);
+    loreTextEl = document.createElement("p");
+    loreTextEl.textContent = loreText;
+    lore.appendChild(loreTextEl);
     // components = document.createElement("div");
     // components.setAttribute("class", "tooltip-components");
     // if ("components" in result[_id]) {
@@ -254,6 +263,11 @@ window.addEventListener("mouseover", (event) => {
     if (event.target.className === "table-img") {
       tooltipContent.appendChild(description);
       tooltipContent.appendChild(attributes);
+      tooltipContent.appendChild(lore);
+    } else {
+      tooltipContent.appendChild(attributes);
+      tooltipContent.appendChild(description);
+      tooltipContent.appendChild(lore);
     }
     if (!tooltip.children[0]) {
       tooltip.appendChild(tooltipHeader);
