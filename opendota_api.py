@@ -84,6 +84,8 @@ async def async_get(m_id, hero_name):
                             aghanims_shard = None
                             starting_items = []
                             for purchase in purchase_log:
+                                purchase['id'] = item_methods.get_item_id(
+                                    purchase['key'])
                                 if purchase['time'] <= 0:
                                     starting_items.append(purchase)
                                 if purchase['key'] == 'aghanims_shard':

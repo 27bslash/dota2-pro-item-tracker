@@ -108,7 +108,8 @@ class Items():
                     if len(output) < 10:
                         done.add(purchase['key'])
                         output.append(
-                            {'key': item, 'time': purchase['time']})
+                            {'key': item, 'time': purchase['time'], 'id': self.get_item_id(
+                                purchase['key'])})
         return self.convert_time(sort_dict(output))
 
     def remove_buildup_items(self, starting_items):
