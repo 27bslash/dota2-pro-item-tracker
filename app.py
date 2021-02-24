@@ -23,10 +23,8 @@ from flask_minify import minify, decorators
 import urllib.parse
 # TODO
 # add intermediate items
-# redesign ability tooltips
 # redesign scroll bar
 # show alex ads
-# remove hero highlight
 
 cluster = pymongo.MongoClient(
     'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
@@ -244,8 +242,8 @@ def generate_table(func_name, search, template):
     for match in match_data:
         row_string = []
         html_string = f"<a href=https://www.opendota.com/matches/{match['id']}>"
-        html_string += "<div class='purchases'>"
         if 'start' in template:
+            html_string += "<div class='starting_items'>"
             for item in match['starting_items']:
                 item_key = item['key']
                 item_id = item_methods.get_item_id(item_key)
@@ -254,7 +252,31 @@ def generate_table(func_name, search, template):
                 html_string += image
                 html_string += "<div class='tooltip'></div>"
                 html_string += "</div>"
+            html_string += "</div>"
+            html_string += "<div class='intermediate_items'>"
+            for item in match['items']:
+                intermediate_items = ['bottle', 'vanguard', 'hood_of_defiance', 'orb_of_corrosion',
+                                      'soul_ring', 'buckler', 'urn', 'fluffy_hat', 'wind_lace', 'infused_raindrop', 'crown', 'bracer', 'null_talisman', 'wraith_band',
+                                      'ring_of_basilius', 'headress', 'magic_wand']
+                consumables = ['tango', 'flask', 'ward_observer',
+                               'ward_sentry', 'smoke_of_deceit', 'enchanted_mango', 'clarity','tpscroll','dust']
+                item_key = item['key']
+                item_id = item_methods.get_item_id(item_key)
+                print(item['time'])
+                if item['time'] > 600:
+                    break
+                if item['key'] not in consumables and item['time'] < 600 and item['time'] > 0:
+                    image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                    overlay = f"<div class='overlay'>{str(datetime.timedelta(seconds=item['time']))}</div>"
+                    html_string += "<div class='item-cell'>"
+                    html_string += image
+                    html_string += overlay
+                    html_string += "<div class='tooltip'></div>"
+                    html_string += "</div>"
+            html_string += "</div></a>"
+
         else:
+            html_string += "<div class='purchases'>"
             with open('json_files/items.json', 'r') as f:
                 item_data = json.load(f)
             for item in match['final_items']:
@@ -295,7 +317,7 @@ def generate_table(func_name, search, template):
                 html_string += "<div class='tooltip'></div>"
                 html_string += "</div>"
 
-        html_string += "</div></a>"
+            html_string += "</div></a>"
         html_string += "<div class='abilities'>"
 
         for ability in match['abilities']:
@@ -437,9 +459,6 @@ def get_winrate():
                 {}, {'stats': wins}, None, None, True)
     except Exception as e:
         print(traceback.format_exc())
-
-
-
 
 
 def get_hero_name_colour(hero_name):
