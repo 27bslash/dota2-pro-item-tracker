@@ -5,7 +5,7 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 459,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+3 Doom Duration",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 459,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +50,7 @@
         "name": "special_bonus_unique_doom_8",
         "language": {
             "abilityId": 594,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Permanent Scorched Earth",
             "description": [],
@@ -58,7 +59,7 @@
         },
         "stat": {
             "abilityId": 594,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -83,7 +84,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "733": {
+        "id": 733,
+        "name": "special_bonus_unique_doom_9",
+        "language": {
+            "abilityId": 733,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-10s Scorched Earth Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 733,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -94,26 +141,26 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 5339,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Devour",
             "description": [
-                "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If autocast is deactivated, Doom will not acquire the creep's abilities. Provides bonus health regeneration for the duration of the spell. Duration is equal to the cooldown."
+                "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If autocast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown."
             ],
             "attributes": [
                 "CREEP MAX LEVEL: 4 / 5 / 6 / 6",
-                "BONUS GOLD: 50 / 100 / 150 / 200",
-                "HEALTH REGEN: 1 / 5 / 9 / 13"
+                "BONUS GOLD: 60 / 120 / 180 / 240"
             ],
             "lore": "Lucifer's appetite and greed are never sated.",
             "notes": [
                 "Gives Doom the original bounty of the creep, along with the bonus gold.",
                 "If you devour a creep without abilities, you'll keep the abilities you had previously."
-            ]
+            ],
+            "shardDescription": "Allows Devour to be cast on enemy heroes, reducing their maximum health by 15%  for the duration of the devour and provides Doom with a passive basic ability they have."
         },
         "stat": {
             "abilityId": 5339,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 163848,
             "unitTargetType": 8,
@@ -159,7 +206,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -170,7 +218,7 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 5340,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Scorched Earth",
             "description": [
@@ -189,7 +237,7 @@
         },
         "stat": {
             "abilityId": 5340,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -238,7 +286,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -249,7 +298,7 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 5341,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Infernal Blade",
             "description": [
@@ -266,11 +315,12 @@
             "lore": "Lucifer shares the fire branding bestowed upon him at the time of his exile.",
             "notes": [
                 "Interrupts channeling abilities."
-            ]
+            ],
+            "shardDescription": "Infernal Blade stun duration is increased from 0.6 to 1.2 seconds. If the enemy's level is a multiple of 3, or above level 24, they will be stunned for an additional 0.6 seconds and take 150 bonus damage."
         },
         "stat": {
             "abilityId": 5341,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -313,7 +363,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -324,7 +375,7 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 5342,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Doom",
             "description": [
@@ -337,13 +388,14 @@
                 "DAMAGE PER SECOND: 25 / 40 / 55"
             ],
             "lore": "When a name is tolled from the bell of Vashundol, doom is sure to follow.",
+            "aghanimDescription": "Doom applies Break and increases duration by 6 seconds.",
             "notes": [
                 "Units afflicted by Doom can be denied when their HP drops below 25%."
             ]
         },
         "stat": {
             "abilityId": 5342,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -384,7 +436,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -394,7 +447,7 @@
         "name": "doom_bringer_empty1",
         "language": {
             "abilityId": 5343,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Devoured Ability",
             "description": [
@@ -405,7 +458,7 @@
         },
         "stat": {
             "abilityId": 5343,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 66,
             "unitTargetType": 0,
@@ -430,7 +483,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -440,7 +494,7 @@
         "name": "doom_bringer_empty2",
         "language": {
             "abilityId": 5344,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Devoured Ability",
             "description": [
@@ -451,7 +505,7 @@
         },
         "stat": {
             "abilityId": 5344,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 66,
             "unitTargetType": 0,
@@ -476,7 +530,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -487,7 +542,7 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 6073,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2.4% Infernal Blade Damage",
             "description": [],
@@ -496,7 +551,7 @@
         },
         "stat": {
             "abilityId": 6073,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -521,7 +576,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -532,7 +588,7 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 6314,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Devour Can Target Ancients",
             "description": [],
@@ -541,7 +597,7 @@
         },
         "stat": {
             "abilityId": 6314,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -566,7 +622,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -577,7 +634,7 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 6369,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+120 Devour Bonus Gold",
             "description": [],
@@ -586,7 +643,7 @@
         },
         "stat": {
             "abilityId": 6369,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -611,7 +668,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -622,16 +680,16 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 6370,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+30 Scorched Earth Damage",
+            "displayName": "+20 Scorched Earth Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6370,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -656,7 +714,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -667,7 +726,7 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 6371,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30 Doom DPS",
             "description": [],
@@ -676,7 +735,7 @@
         },
         "stat": {
             "abilityId": 6371,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -701,7 +760,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -712,16 +772,16 @@
         "uri": "doom_bringer",
         "language": {
             "abilityId": 7123,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+10% Scorched Earth Movement Speed",
+            "displayName": "+15% Scorched Earth Movement Speed",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7123,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -746,7 +806,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

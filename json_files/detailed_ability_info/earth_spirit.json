@@ -5,7 +5,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 324,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+325 Rolling Boulder Distance",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 324,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,7 +51,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 5608,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Boulder Smash",
             "description": [
@@ -60,7 +61,7 @@
                 "REMNANT SMASH RADIUS: 200",
                 "DAMAGE: 105 / 170 / 235 / 300",
                 "SLOW DURATION: 1.25 / 2.5 / 3.25 / 4",
-                "SLOW AMOUNT: 60%",
+                "SLOW AMOUNT: 50%",
                 "TRAVEL SPEED: 900",
                 "DISTANCE: 500.0 / 600.0 / 700.0 / 800.0",
                 "DISTANCE (REMNANT): 2000.0"
@@ -70,7 +71,7 @@
         },
         "stat": {
             "abilityId": 5608,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16408,
             "unitTargetType": 5,
@@ -110,7 +111,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -121,7 +123,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 5609,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Rolling Boulder",
             "description": [
@@ -130,8 +132,8 @@
             "attributes": [
                 "SPEED: 800",
                 "SPEED (REMNANT): 1600",
-                "DAMAGE: 70 / 80 / 90 / 100",
-                "DISTANCE: 800.0",
+                "DAMAGE: 70 / 90 / 110 / 130",
+                "DISTANCE: 750.0",
                 "DISTANCE (REMNANT):%rock_distance%",
                 "STUN DURATION: 0.4 / 0.6 / 0.8 / 1.0",
                 "ROCK BONUS STUN DURATION: 0.4 / 0.6 / 0.8 / 1.0"
@@ -144,7 +146,7 @@
         },
         "stat": {
             "abilityId": 5609,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 20496,
             "unitTargetType": 0,
@@ -184,7 +186,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -195,7 +198,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 5610,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Geomagnetic Grip",
             "description": [
@@ -204,7 +207,7 @@
             "attributes": [
                 "SILENCE DURATION: 2 / 2.5 / 3 / 3.5",
                 "REMNANT DAMAGE: 50 / 100 / 150 / 200",
-                "REMNANT PULL SPEED: 1000",
+                "REMNANT PULL SPEED: 900",
                 "HERO PULL SPEED: 600"
             ],
             "lore": "Like calls to like. Even the minerals found in the blood and bones of living beings are not immune to the call of the Earth Spirit.",
@@ -215,7 +218,7 @@
         },
         "stat": {
             "abilityId": 5610,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16408,
             "unitTargetType": 5,
@@ -252,7 +255,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -263,21 +267,22 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 5611,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Stone Remnant",
             "description": [
                 "Call a Stone Remnant to the target location.  Stone Remnants have no vision and are invulnerable, and can be used with Earth Spirit's abilities.  Calling a Stone Remnant consumes a charge, which recharge over time."
             ],
             "attributes": [
-                "DURATION: 120.0"
+                "DURATION: 60.0"
             ],
             "lore": "Earth Spirit calls forth a remnant of his stone army, long buried with him in the dark embrace of the Earth.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Causes Stone Remnant to provide 375 ground vision. Increases charge count by 4."
         },
         "stat": {
             "abilityId": 5611,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -314,7 +319,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "7",
-            "chargeRestoreTime": "25"
+            "chargeRestoreTime": "25",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -325,7 +331,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 5612,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Magnetize",
             "description": [
@@ -343,7 +349,7 @@
         },
         "stat": {
             "abilityId": 5612,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 16388,
             "unitTargetType": 0,
@@ -382,7 +388,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -393,7 +400,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 5648,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Enchant Remnant",
             "description": [
@@ -401,15 +408,15 @@
             ],
             "attributes": [
                 "REMNANT DURATION: 3",
-                "SHATTER DAMAGE: 300",
-                "SHATTER RADIUS: 300"
+                "SHATTER DAMAGE: 450",
+                "SHATTER RADIUS: 450"
             ],
             "lore": "Kaolin uses the elemental power of the Earth to temporarily petrify living beings, so that they might be conscripted into his stone funerary army.",
             "notes": []
         },
         "stat": {
             "abilityId": 5648,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 8,
@@ -446,7 +453,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -457,7 +465,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 6203,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+120 Rolling Boulder Damage",
             "description": [],
@@ -466,7 +474,7 @@
         },
         "stat": {
             "abilityId": 6203,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -491,7 +499,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -502,7 +511,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 6514,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Geomagnetic Grip Targets Allies",
             "description": [],
@@ -511,7 +520,7 @@
         },
         "stat": {
             "abilityId": 6514,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -536,7 +545,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -547,7 +557,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 6640,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.6s Rolling Boulder Stun Duration",
             "description": [],
@@ -556,7 +566,7 @@
         },
         "stat": {
             "abilityId": 6640,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -581,7 +591,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -592,7 +603,7 @@
         "uri": "earth_spirit",
         "language": {
             "abilityId": 7657,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+3 Geomagnetic Grip Silence",
             "description": [],
@@ -601,7 +612,7 @@
         },
         "stat": {
             "abilityId": 7657,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -626,7 +637,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true

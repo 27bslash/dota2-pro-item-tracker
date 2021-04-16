@@ -1,11 +1,101 @@
 {
+    "759": {
+        "id": 759,
+        "name": "special_bonus_unique_morphling_9",
+        "language": {
+            "abilityId": 759,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-7 Adaptive Strike Armor Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 759,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "903": {
+        "id": 903,
+        "name": "special_bonus_unique_morphling_10",
+        "language": {
+            "abilityId": 903,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "Attribute Shift While Stunned",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 903,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
     "5052": {
         "id": 5052,
         "name": "morphling_waveform",
         "uri": "morphling",
         "language": {
             "abilityId": 5052,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Waveform",
             "description": [
@@ -19,7 +109,7 @@
         },
         "stat": {
             "abilityId": 5052,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 20496,
             "unitTargetType": 0,
@@ -63,15 +153,13 @@
                 300.0
             ],
             "manaCost": [
-                150.0,
-                155.0,
-                160.0,
-                165.0
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -82,7 +170,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5053,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Adaptive Strike (Agility)",
             "description": [
@@ -98,11 +186,12 @@
             "lore": "The Morphling calls upon his elements to crush his opponents with waves.",
             "notes": [
                 "Projectile moves at 1150 speed."
-            ]
+            ],
+            "shardDescription": "Causes Adaptive Strike to have +1 Multishot and increases the stun duration by 1 second. Multishot prioritizes heroes."
         },
         "stat": {
             "abilityId": 5053,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -137,12 +226,16 @@
                 10.0
             ],
             "manaCost": [
+                50.0,
+                60.0,
+                70.0,
                 80.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -152,7 +245,7 @@
         "name": "morphling_morph",
         "language": {
             "abilityId": 5054,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [
@@ -163,7 +256,7 @@
         },
         "stat": {
             "abilityId": 5054,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1,
             "unitTargetType": 0,
@@ -188,7 +281,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -199,14 +293,14 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5055,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Attribute Shift (Agility Gain)",
             "description": [
                 "Morphling shifts its form, pulling points from Strength and pouring them into Agility. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.  Passively grants bonus Agility."
             ],
             "attributes": [
-                "SHIFT RATE: 1 / 4 / 10 / 25",
+                "SHIFT RATE: 3 / 6 / 12 / 24",
                 "BONUS AGILITY: 3 / 5 / 7 / 9"
             ],
             "lore": "Shifting water makes it difficult to discern the nature of Morphling.",
@@ -217,7 +311,7 @@
         },
         "stat": {
             "abilityId": 5055,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 516,
             "unitTargetType": 0,
@@ -245,7 +339,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -256,14 +351,14 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5056,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Attribute Shift (Strength Gain)",
             "description": [
                 "Morphling shifts its form, pulling points from Agility and pouring them into Strength. The process is reversible.  Additional points in Attribute Shift increase the rate of stat change.  Passively grants bonus Strength."
             ],
             "attributes": [
-                "SHIFT RATE: 1 / 4 / 10 / 25",
+                "SHIFT RATE: 3 / 6 / 12 / 24",
                 "BONUS STRENGTH: 3 / 5 / 7 / 9"
             ],
             "lore": "Shifting water makes it difficult to discern the nature of Morphling.",
@@ -274,7 +369,7 @@
         },
         "stat": {
             "abilityId": 5056,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 516,
             "unitTargetType": 0,
@@ -302,7 +397,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -313,7 +409,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5057,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Morph",
             "description": [
@@ -322,16 +418,17 @@
             "attributes": [
                 "DURATION: 20",
                 "MANA COST REDUCTION: 50%",
-                "SCEPTER BONUS CAST RANGE: 600"
+                "SCEPTER BONUS CAST RANGE: 300"
             ],
             "lore": "Staring into Morphling produces a reflection that mimics the beholder.",
+            "aghanimDescription": "Allows targeting allied heroes. While Morphed, Morphling gains Cast Range increase.",
             "notes": [
                 "You can't target yourself with Morph."
             ]
         },
         "stat": {
             "abilityId": 5057,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 8,
@@ -362,9 +459,9 @@
                 0.25
             ],
             "cooldown": [
-                160.0,
+                140.0,
                 100.0,
-                40.0
+                60.0
             ],
             "manaCost": [
                 50.0
@@ -372,7 +469,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -383,7 +481,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5058,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Morph Replicate",
             "description": [
@@ -394,7 +492,7 @@
         },
         "stat": {
             "abilityId": 5058,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 59397,
             "unitTargetType": 0,
@@ -428,7 +526,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -439,7 +538,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 5674,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Hybrid",
             "description": [
@@ -452,7 +551,7 @@
         },
         "stat": {
             "abilityId": 5674,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 9,
             "unitTargetType": 8,
@@ -489,7 +588,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -500,16 +600,16 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6062,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+275 Waveform Range",
+            "displayName": "+250 Waveform Range",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6062,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -534,7 +634,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -545,7 +646,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6225,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-50 Morph Cooldown",
             "description": [],
@@ -554,7 +655,7 @@
         },
         "stat": {
             "abilityId": 6225,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -579,7 +680,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -590,7 +692,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6698,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+3 Multishot Adaptive Strike",
             "description": [
@@ -601,7 +703,7 @@
         },
         "stat": {
             "abilityId": 6698,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -626,7 +728,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -637,7 +740,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6840,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Waveform Attacks Targets",
             "description": [
@@ -648,7 +751,7 @@
         },
         "stat": {
             "abilityId": 6840,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -673,7 +776,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -684,7 +788,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 6927,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Morph Targets Allies",
             "description": [],
@@ -693,7 +797,7 @@
         },
         "stat": {
             "abilityId": 6927,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -718,7 +822,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -729,7 +834,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 7000,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Adaptive Strike (Strength)",
             "description": [
@@ -750,7 +855,7 @@
         },
         "stat": {
             "abilityId": 7000,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -785,12 +890,16 @@
                 10.0
             ],
             "manaCost": [
+                50.0,
+                60.0,
+                70.0,
                 80.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -801,7 +910,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 7052,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "2 Waveform Charges",
             "description": [],
@@ -810,7 +919,7 @@
         },
         "stat": {
             "abilityId": 7052,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -835,7 +944,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -845,7 +955,7 @@
         "name": "special_bonus_unique_morphling_7",
         "language": {
             "abilityId": 7056,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-5s Adaptive Strike Cooldown",
             "description": [],
@@ -854,7 +964,7 @@
         },
         "stat": {
             "abilityId": 7056,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -879,7 +989,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -890,7 +1001,7 @@
         "uri": "morphling",
         "language": {
             "abilityId": 7060,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+16s Morph Duration",
             "description": [],
@@ -899,7 +1010,7 @@
         },
         "stat": {
             "abilityId": 7060,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -924,7 +1035,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

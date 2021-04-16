@@ -5,16 +5,16 @@
         "uri": "magnataur",
         "language": {
             "abilityId": 525,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+0.3s Shockwave Slow Duration",
+            "displayName": "+0.5s Shockwave Slow Duration",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 525,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +50,7 @@
         "name": "magnataur_greater_shockwave",
         "language": {
             "abilityId": 538,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Rolling Shockwave",
             "description": [
@@ -60,7 +61,7 @@
         },
         "stat": {
             "abilityId": 538,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -97,7 +98,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -105,24 +107,25 @@
     "649": {
         "id": 649,
         "name": "magnataur_horn_toss",
+        "uri": "magnataur",
         "language": {
             "abilityId": 649,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Horn Toss",
             "description": [
-                "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend 0.6 seconds in the air, then take 150 damage and are stunned for 0.25 seconds upon landing."
+                "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend 0.6 seconds in the air, then take 200 damage and are stunned for 0.75 seconds upon landing."
             ],
             "attributes": [
                 "AIR DURATION: 0.6",
-                "DAMAGE: 150",
-                "STUN DURATION: 0.25"
+                "DAMAGE: 200",
+                "STUN DURATION: 0.75"
             ],
             "notes": []
         },
         "stat": {
             "abilityId": 649,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -156,7 +159,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -164,18 +168,19 @@
     "712": {
         "id": 712,
         "name": "special_bonus_unique_magnus_7",
+        "uri": "magnataur",
         "language": {
             "abilityId": 712,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-5s Skewer Cooldown",
+            "displayName": "-7s Skewer Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 712,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -200,7 +205,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -211,7 +217,7 @@
         "uri": "magnataur",
         "language": {
             "abilityId": 5518,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shockwave",
             "description": [
@@ -223,11 +229,12 @@
                 "SLOW DURATION: 0.9"
             ],
             "lore": "Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations.",
+            "aghanimDescription": "Magnus releases 3 Shockwaves traveling away from him at 30-degree angles. After reaching their limit, the Shockwaves return to their origin, dealing 75%% damage and pulling a second time.",
             "notes": []
         },
         "stat": {
             "abilityId": 5518,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 24,
             "unitTargetType": 3,
@@ -265,15 +272,16 @@
                 10.0
             ],
             "manaCost": [
+                80.0,
                 90.0,
                 100.0,
-                110.0,
-                120.0
+                110.0
             ],
             "isUltimate": false,
             "duration": "0.6875 0.6875 0.6875 0.6875",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -284,7 +292,7 @@
         "uri": "magnataur",
         "language": {
             "abilityId": 5519,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Empower",
             "description": [
@@ -292,7 +300,7 @@
             ],
             "attributes": [
                 "DURATION: 40",
-                "BONUS DAMAGE: 11% / 18% / 25% / 32%",
+                "BONUS DAMAGE: 12% / 20% / 28% / 36%",
                 "CLEAVE DAMAGE: 10% / 20% / 30% / 40%"
             ],
             "lore": "With a deep bellow, Magnus displays his true power.",
@@ -304,7 +312,7 @@
         },
         "stat": {
             "abilityId": 5519,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 3,
@@ -347,7 +355,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -358,7 +367,7 @@
         "uri": "magnataur",
         "language": {
             "abilityId": 5520,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Skewer",
             "description": [
@@ -366,10 +375,10 @@
             ],
             "attributes": [
                 "DISTANCE: 900 / 1000 / 1100 / 1200",
-                "SPEED: 950",
+                "SPEED: 900",
                 "SLOW DURATION: 3.25",
                 "SLOW: 10% / 20% / 30% / 40%",
-                "DAMAGE: 70 / 140 / 210 / 280",
+                "DAMAGE: 70 / 150 / 230 / 310",
                 "ATTACK SPEED SLOW: 10 / 20 / 30 / 40",
                 "SCEPTER COOLDOWN: 6",
                 "SCEPTER MANACOST: 40"
@@ -381,7 +390,7 @@
         },
         "stat": {
             "abilityId": 5520,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4112,
             "unitTargetType": 1,
@@ -395,7 +404,7 @@
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -424,7 +433,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -435,7 +445,7 @@
         "uri": "magnataur",
         "language": {
             "abilityId": 5521,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Reverse Polarity",
             "description": [
@@ -451,7 +461,7 @@
         },
         "stat": {
             "abilityId": 5521,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -487,14 +497,15 @@
                 130.0
             ],
             "manaCost": [
-                200.0,
-                250.0,
+                150.0,
+                225.0,
                 300.0
             ],
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -505,7 +516,7 @@
         "uri": "Magnus",
         "language": {
             "abilityId": 6199,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4s Shockwave Cooldown",
             "description": [],
@@ -514,7 +525,7 @@
         },
         "stat": {
             "abilityId": 6199,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -539,7 +550,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -550,7 +562,7 @@
         "uri": "magnataur",
         "language": {
             "abilityId": 6390,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+10% Empower Damage/Cleave",
             "description": [],
@@ -559,7 +571,7 @@
         },
         "stat": {
             "abilityId": 6390,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -584,7 +596,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -595,7 +608,7 @@
         "uri": "magnataur",
         "language": {
             "abilityId": 6507,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+425 Skewer Range",
             "description": [],
@@ -604,7 +617,7 @@
         },
         "stat": {
             "abilityId": 6507,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -629,7 +642,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -640,7 +654,7 @@
         "uri": "magnataur",
         "language": {
             "abilityId": 6690,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+110 Shockwave Damage",
             "description": [],
@@ -649,7 +663,7 @@
         },
         "stat": {
             "abilityId": 6690,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -674,7 +688,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -685,7 +700,7 @@
         "uri": "magnataur",
         "language": {
             "abilityId": 6691,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1s Reverse Polarity Stun Duration",
             "description": [],
@@ -694,7 +709,7 @@
         },
         "stat": {
             "abilityId": 6691,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -719,7 +734,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

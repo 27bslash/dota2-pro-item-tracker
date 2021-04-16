@@ -5,7 +5,7 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 351,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+50 Chemical Rage Movement Speed",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 351,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -47,9 +48,10 @@
     "642": {
         "id": 642,
         "name": "alchemist_berserk_potion",
+        "uri": "alchemist",
         "language": {
             "abilityId": 642,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Berserk Potion",
             "description": [
@@ -64,7 +66,7 @@
         },
         "stat": {
             "abilityId": 642,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -93,7 +95,7 @@
                 0.2
             ],
             "cooldown": [
-                45.0
+                35.0
             ],
             "manaCost": [
                 125.0
@@ -101,7 +103,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -112,7 +115,7 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 5365,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Acid Spray",
             "description": [
@@ -129,7 +132,7 @@
         },
         "stat": {
             "abilityId": 5365,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -169,7 +172,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -180,7 +184,7 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 5366,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Unstable Concoction",
             "description": [
@@ -202,7 +206,7 @@
         },
         "stat": {
             "abilityId": 5366,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -242,7 +246,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -253,7 +258,7 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 5367,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Unstable Concoction Throw",
             "description": [
@@ -264,7 +269,7 @@
         },
         "stat": {
             "abilityId": 5367,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 41,
             "unitTargetType": 1,
@@ -295,7 +300,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -306,17 +312,17 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 5368,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Greevil's Greed",
             "description": [
-                "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 40 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold."
+                "Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next 36 seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold."
             ],
             "attributes": [
-                "RECENT KILL WINDOW: 40",
+                "RECENT KILL WINDOW: 36",
                 "BASE BONUS GOLD: 3",
                 "EXTRA BONUS GOLD: 3",
-                "MAX BONUS GOLD PER KILL: 18 / 21 / 24 / 27",
+                "MAX BONUS GOLD PER KILL: 15 / 18 / 21 / 24",
                 "BOUNTY RUNE MULTIPLIER: 1.5 / 2.0 / 2.5 / 3.0"
             ],
             "lore": "While it is not a mountain, Razzil has mastered the conversion of smaller compounds to line his pockets.",
@@ -324,7 +330,7 @@
         },
         "stat": {
             "abilityId": 5368,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 1,
@@ -355,7 +361,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -366,7 +373,7 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 5369,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Chemical Rage",
             "description": [
@@ -383,13 +390,14 @@
                 "SCEPTER SPELL AMP: 5%"
             ],
             "lore": "The brew Razzil gave to the Ogre during their prison bust has become a useful potion in the midst of combat.",
+            "aghanimDescription": "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. When you have a Scepter of your own, you will gain bonus damage and spell amplification for each gifted Scepter.",
             "notes": [
                 "Has a 0.35 second transformation time, which can be used to dodge projectiles and stuns."
             ]
         },
         "stat": {
             "abilityId": 5369,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -425,7 +433,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -436,7 +445,7 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 6101,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-6s Unstable Concoction Cooldown",
             "description": [],
@@ -445,7 +454,7 @@
         },
         "stat": {
             "abilityId": 6101,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -470,7 +479,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -481,7 +491,7 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 6350,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+400 Unstable Concoction Damage",
             "description": [],
@@ -490,7 +500,7 @@
         },
         "stat": {
             "abilityId": 6350,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -515,7 +525,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -526,7 +537,7 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 6604,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-0.15 Chemical Rage Base Attack Time",
             "description": [],
@@ -535,7 +546,7 @@
         },
         "stat": {
             "abilityId": 6604,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -560,7 +571,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -571,7 +583,7 @@
         "uri": "alchemist",
         "language": {
             "abilityId": 7054,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+50 Chemical Rage Regeneration",
             "description": [],
@@ -580,7 +592,7 @@
         },
         "stat": {
             "abilityId": 7054,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -605,7 +617,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -615,7 +628,7 @@
         "name": "special_bonus_unique_alchemist_5",
         "language": {
             "abilityId": 7144,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3 Acid Spray Armor Reduction",
             "description": [],
@@ -624,7 +637,7 @@
         },
         "stat": {
             "abilityId": 7144,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -649,7 +662,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

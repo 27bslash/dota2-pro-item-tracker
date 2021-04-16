@@ -5,25 +5,27 @@
         "uri": "faceless_void",
         "language": {
             "abilityId": 5182,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Time Walk",
             "description": [
                 "Rushes to a target location while backtracking any damage taken the last 2.0 seconds."
             ],
             "attributes": [
-                "RANGE: 675",
+                "RANGE: 650",
                 "BACKTRACK DURATION: 2.0",
                 "SCEPTER TIMELOCK RADIUS: 350"
             ],
             "lore": "Darkterror tears a hole in time, passing through Claszureme, and appearing back in an instant.",
+            "aghanimDescription": "Applies a Time Lock proc to all units at the landing destination.",
             "notes": [
                 "Faceless Void is invulnerable while using Time Walk."
-            ]
+            ],
+            "shardDescription": "Grants Reverse Time Walk and increases Time Walk cast range by 400."
         },
         "stat": {
             "abilityId": 5182,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 5136,
             "unitTargetType": 0,
@@ -63,7 +65,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -73,7 +76,7 @@
         "name": "faceless_void_backtrack",
         "language": {
             "abilityId": 5183,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -81,7 +84,7 @@
         },
         "stat": {
             "abilityId": 5183,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -106,7 +109,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -117,7 +121,7 @@
         "uri": "faceless_void",
         "language": {
             "abilityId": 5184,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Time Lock",
             "description": [
@@ -126,7 +130,7 @@
             "attributes": [
                 "CHANCE: 12% / 16% / 20% / 24%",
                 "DURATION: 0.65",
-                "BONUS DAMAGE: 10 / 15 / 20 / 25"
+                "BONUS DAMAGE: 15 / 20 / 25 / 30"
             ],
             "lore": "The strike of the Faceless Void lands with dimension shifting force.",
             "notes": [
@@ -135,7 +139,7 @@
         },
         "stat": {
             "abilityId": 5184,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -160,7 +164,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -171,14 +176,14 @@
         "uri": "faceless_void",
         "language": {
             "abilityId": 5185,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Chronosphere",
             "description": [
                 "Creates a blister in spacetime, trapping all units caught in its sphere of influence and causes you to move very quickly inside it.  Only Faceless Void and any units he controls are unaffected.  Invisible enemies in the sphere will be revealed."
             ],
             "attributes": [
-                "RADIUS: 450",
+                "RADIUS: 500",
                 "DURATION: 4.0 / 4.5 / 5.0"
             ],
             "lore": "When a rift opens to Claszureme, all poor souls caught within will likely never return.",
@@ -189,7 +194,7 @@
         },
         "stat": {
             "abilityId": 5185,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 48,
             "unitTargetType": 0,
@@ -209,7 +214,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                600
+                500
             ],
             "castRangeBuffer": [
                 250
@@ -230,7 +235,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -241,17 +247,18 @@
         "uri": "faceless_void",
         "language": {
             "abilityId": 5691,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Time Dilation",
             "description": [
-                "Faceless Void traps all nearby enemies in a time dilation field for 8 / 10 / 12 / 14 seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended."
+                "Faceless Void traps all nearby enemies in a time dilation field for 8 / 9 / 10 / 11 seconds, extending their cooldowns and slowing their movement and attack speed by 10% for each cooldown extended. Deals damage per second for each cooldown."
             ],
             "attributes": [
                 "RADIUS: 775",
-                "DURATION: 8 / 10 / 12 / 14",
+                "DURATION: 8 / 9 / 10 / 11",
                 "SLOW PER COOLDOWN: 10%",
-                "COOLDOWN PROGRESSION SLOW: 75%"
+                "COOLDOWN PROGRESSION SLOW: 60%",
+                "DPS PER COOLDOWN: 10 / 11 / 12 / 13"
             ],
             "lore": "For those facing off against Darkterror, each moment seems to stretch into eternity.",
             "notes": [
@@ -260,7 +267,7 @@
         },
         "stat": {
             "abilityId": 5691,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -286,18 +293,22 @@
                 0.1
             ],
             "cooldown": [
-                40.0,
-                34.0,
                 28.0,
-                22.0
+                24.0,
+                20.0,
+                16.0
             ],
             "manaCost": [
-                75.0
+                60.0,
+                70.0,
+                80.0,
+                90.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -308,7 +319,7 @@
         "uri": "faceless_void",
         "language": {
             "abilityId": 6128,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+250 Timewalk Cast Range",
             "description": [],
@@ -317,7 +328,7 @@
         },
         "stat": {
             "abilityId": 6128,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -342,7 +353,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -353,7 +365,7 @@
         "uri": "faceless_void",
         "language": {
             "abilityId": 6651,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+140 Chronosphere AoE",
             "description": [],
@@ -362,7 +374,7 @@
         },
         "stat": {
             "abilityId": 6651,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -387,7 +399,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -398,7 +411,7 @@
         "uri": "faceless_void",
         "language": {
             "abilityId": 6807,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+55 Time Lock Damage",
             "description": [],
@@ -407,7 +420,7 @@
         },
         "stat": {
             "abilityId": 6807,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -432,7 +445,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -443,7 +457,7 @@
         "uri": "faceless_void",
         "language": {
             "abilityId": 7001,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+20% Backtrack",
             "description": [
@@ -454,7 +468,7 @@
         },
         "stat": {
             "abilityId": 7001,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -479,7 +493,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -490,16 +505,16 @@
         "uri": "faceless_void",
         "language": {
             "abilityId": 7388,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-1.75s Time Walk",
+            "displayName": "-2s Time Walk",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7388,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -524,7 +539,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -532,9 +548,10 @@
     "8030": {
         "id": 8030,
         "name": "faceless_void_time_walk_reverse",
+        "uri": "faceless_void",
         "language": {
             "abilityId": 8030,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Reverse Time Walk",
             "description": [
@@ -545,7 +562,7 @@
         },
         "stat": {
             "abilityId": 8030,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -582,7 +599,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false

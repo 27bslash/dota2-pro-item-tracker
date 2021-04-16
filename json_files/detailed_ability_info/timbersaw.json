@@ -2,23 +2,24 @@
     "651": {
         "id": 651,
         "name": "shredder_flamethrower",
+        "uri": "shredder",
         "language": {
             "abilityId": 651,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Flamethrower",
             "description": [
-                "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 75 damage per second and slows by 20%. Lasts 7 seconds. Debuff lingers for 3 seconds."
+                "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 90 damage per second and slows by 30%. Affects buildings for 40% damage. Lasts 7 seconds. Debuff lingers for 3 seconds."
             ],
             "attributes": [
                 "DURATION: 7",
-                "DAMAGE PER SECOND: 75"
+                "DAMAGE PER SECOND: 90"
             ],
             "notes": []
         },
         "stat": {
             "abilityId": 651,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -52,7 +53,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -63,7 +65,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5524,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Whirling Death",
             "description": [
@@ -74,14 +76,14 @@
                 "TREE BONUS DAMAGE: 12 / 18 / 24 / 30",
                 "RADIUS: 325",
                 "STAT LOSS PERCENT: 13% / 14% / 15% / 16%",
-                "STAT LOSS DURATION: 14.0"
+                "STAT LOSS DURATION: 12 / 13 / 14 / 15"
             ],
             "lore": "In the case that Rizzrack gets surrounded by the vines and plants of his nightmares, he has an immediate chainsaw defense.",
             "notes": []
         },
         "stat": {
             "abilityId": 5524,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 18436,
             "unitTargetType": 0,
@@ -116,12 +118,13 @@
                 6.0
             ],
             "manaCost": [
-                70.0
+                80.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -132,7 +135,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5525,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Timber Chain",
             "description": [
@@ -140,16 +143,16 @@
             ],
             "attributes": [
                 "DAMAGE: 100 / 140 / 180 / 220",
-                "LATCH RANGE: 850 / 1050 / 1250 / 1450",
+                "LATCH RANGE: 800 / 950 / 1100 / 1250",
                 "RADIUS: 225 / 225 / 225 / 225",
-                "SPEED: 1900 / 2200 / 2500 / 2800"
+                "SPEED: 2200 / 2400 / 2600 / 2800"
             ],
             "lore": "You never know when you might need to escape from malevolent saplings.",
             "notes": []
         },
         "stat": {
             "abilityId": 5525,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 20496,
             "unitTargetType": 0,
@@ -195,7 +198,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -206,7 +210,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5526,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Reactive Armor",
             "description": [
@@ -214,16 +218,16 @@
             ],
             "attributes": [
                 "BONUS ARMOR: 0.9 / 1 / 1.1 / 1.2",
-                "BONUS HP REGEN: 1 / 1.1 / 1.2 / 1.3",
+                "BONUS HP REGEN: 0.7 / 0.9 / 1.1 / 1.3",
                 "MAX STACKS: 6 / 12 / 18 / 24",
-                "STACK DURATION: 10 / 13 / 16 / 19"
+                "STACK DURATION: 10 / 12 / 14 / 16"
             ],
             "lore": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
             "notes": []
         },
         "stat": {
             "abilityId": 5526,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -248,7 +252,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -259,7 +264,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5527,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Chakram",
             "description": [
@@ -284,7 +289,7 @@
         },
         "stat": {
             "abilityId": 5527,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -327,7 +332,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -338,7 +344,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5528,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Return Chakram",
             "description": [
@@ -349,7 +355,7 @@
         },
         "stat": {
             "abilityId": 5528,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 575557,
             "unitTargetType": 0,
@@ -385,7 +391,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -396,7 +403,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5645,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Second Chakram",
             "description": [
@@ -417,7 +424,7 @@
         },
         "stat": {
             "abilityId": 5645,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -460,7 +467,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -471,7 +479,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 5646,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Return Chakram",
             "description": [
@@ -482,7 +490,7 @@
         },
         "stat": {
             "abilityId": 5646,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 575557,
             "unitTargetType": 0,
@@ -518,7 +526,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -529,7 +538,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 6223,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+10% Whirling Death Attribute Reduction",
             "description": [],
@@ -538,7 +547,7 @@
         },
         "stat": {
             "abilityId": 6223,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -563,7 +572,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -574,7 +584,7 @@
         "uri": "snapfire",
         "language": {
             "abilityId": 6488,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Lil' Shredder",
             "description": [
@@ -582,9 +592,9 @@
             ],
             "attributes": [
                 "BONUS RANGE: 75 / 150 / 225 / 300",
-                "FIXED DAMAGE PER SHOT: 20 / 40 / 60 / 80",
+                "FIXED DAMAGE PER SHOT: 20 / 45 / 70 / 95",
                 "ARMOR LOSS PER STACK: 1",
-                "ARMOR LOSS DURATION: 4.0"
+                "ARMOR LOSS DURATION: 5.0"
             ],
             "lore": "Beadie constantly tinkers with a design she first dreamed up plotting an exodus from her old gang.",
             "notes": [
@@ -594,7 +604,7 @@
         },
         "stat": {
             "abilityId": 6488,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16388,
             "unitTargetType": 0,
@@ -629,15 +639,16 @@
                 12.0
             ],
             "manaCost": [
-                75.0,
-                80.0,
-                85.0,
-                90.0
+                50.0,
+                60.0,
+                70.0,
+                80.0
             ],
             "isUltimate": false,
             "duration": "8",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -648,16 +659,16 @@
         "uri": "shredder",
         "language": {
             "abilityId": 6948,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+8 Reactive Armor Stacks",
+            "displayName": "+6 Reactive Armor Stacks and Duration",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6948,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -682,7 +693,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -693,7 +705,7 @@
         "uri": "shredder",
         "language": {
             "abilityId": 6949,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1125 Timber Chain Range",
             "description": [],
@@ -702,7 +714,7 @@
         },
         "stat": {
             "abilityId": 6949,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -727,7 +739,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

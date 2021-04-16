@@ -2,20 +2,21 @@
     "660": {
         "id": 660,
         "name": "dragon_knight_fireball",
+        "uri": "dragon_knight",
         "language": {
             "abilityId": 660,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fireball",
             "description": [
-                "Provided to Elder Dragon Form. Ignites a 450 AoE area for 10.0 seconds, dealing 80 damage per second to enemies in it."
+                "Ignites a 450 AoE area for 10.0 seconds, dealing 80 damage per second to enemies in it. Has reduced cast range when melee."
             ],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 660,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -47,15 +48,106 @@
                 20.0
             ],
             "manaCost": [
-                150.0
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "740": {
+        "id": 740,
+        "name": "special_bonus_unique_dragon_knight_7",
+        "language": {
+            "abilityId": 740,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+150 Elder Dragon Form Attack Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 740,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "742": {
+        "id": 742,
+        "name": "special_bonus_unique_dragon_knight_8",
+        "language": {
+            "abilityId": 742,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+375 AoE Dragon Tail During Elder Dragon Form",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 742,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5226": {
         "id": 5226,
@@ -63,7 +155,7 @@
         "uri": "dragon_knight",
         "language": {
             "abilityId": 5226,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Breathe Fire",
             "description": [
@@ -80,7 +172,7 @@
         },
         "stat": {
             "abilityId": 5226,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1048,
             "unitTargetType": 3,
@@ -129,7 +221,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -140,7 +233,7 @@
         "uri": "dragon_knight",
         "language": {
             "abilityId": 5227,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dragon Tail",
             "description": [
@@ -154,7 +247,7 @@
         },
         "stat": {
             "abilityId": 5227,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -186,27 +279,28 @@
                 0.0
             ],
             "cooldown": [
+                16.0,
+                14.0,
                 12.0,
-                11.0,
-                10.0,
-                9.0
+                10.0
             ],
             "damage": [
-                50.0,
-                75.0,
+                70.0,
                 100.0,
-                125.0
+                130.0,
+                160.0
             ],
             "manaCost": [
-                100.0,
-                100.0,
-                100.0,
+                70.0,
+                80.0,
+                90.0,
                 100.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -217,7 +311,7 @@
         "uri": "dragon_knight",
         "language": {
             "abilityId": 5228,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dragon Blood",
             "description": [
@@ -232,7 +326,7 @@
         },
         "stat": {
             "abilityId": 5228,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -257,7 +351,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -268,7 +363,7 @@
         "uri": "dragon_knight",
         "language": {
             "abilityId": 5229,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Elder Dragon Form",
             "description": [
@@ -283,14 +378,16 @@
                 "BONUS ATTACK RANGE: 350 / 350 / 350 / 350"
             ],
             "lore": "The dormant dragon power springs forth from within Davion, combining the powers of a legendary knight with a legendary Eldwurm.",
+            "aghanimDescription": "Increases the level of Dragon Knight's ultimate. Adds a 4th level, Black Dragon. Black Dragon has bonus Corrosive Damage, Splash Damage and Slow amount, increased Magic Resistance and free pathing.",
             "notes": [
                 "Corrosive Breath poison damage is lethal.",
                 "Cooldowns of items that are different for ranged and melee units will be based on which form Dragon Knight was in when the item was used."
-            ]
+            ],
+            "shardDescription": "Grants Elder Dragon Form the Fireball ability."
         },
         "stat": {
             "abilityId": 5229,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -323,7 +420,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -333,7 +431,7 @@
         "name": "dragon_knight_frost_breath",
         "language": {
             "abilityId": 5232,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -341,7 +439,7 @@
         },
         "stat": {
             "abilityId": 5232,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -366,7 +464,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -377,16 +476,16 @@
         "uri": "dragon_knight",
         "language": {
             "abilityId": 6090,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "1.8x Dragon Blood HP Regen/Armor",
+            "displayName": "+12 Dragon Blood HP Regen/Armor",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6090,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -411,7 +510,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -422,16 +522,16 @@
         "uri": "dragon_knight",
         "language": {
             "abilityId": 6635,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+1.6s Dragon Tail",
+            "displayName": "+0.5s Dragon Tail",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6635,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -456,7 +556,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -467,16 +568,16 @@
         "uri": "dragon_knight",
         "language": {
             "abilityId": 7113,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-24% Breathe Fire Damage Reduction",
+            "displayName": "-30% Breathe Fire Damage Reduction",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7113,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -501,7 +602,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -511,7 +613,7 @@
         "name": "special_bonus_unique_dragon_knight_4",
         "language": {
             "abilityId": 7114,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dragon Blood Aura",
             "description": [],
@@ -520,7 +622,7 @@
         },
         "stat": {
             "abilityId": 7114,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -545,7 +647,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -555,7 +658,7 @@
         "name": "special_bonus_unique_dragon_knight_5",
         "language": {
             "abilityId": 7380,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+-30% Frost Breath Slow",
             "description": [],
@@ -564,7 +667,7 @@
         },
         "stat": {
             "abilityId": 7380,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -589,7 +692,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -599,7 +703,7 @@
         "name": "special_bonus_unique_dragon_knight_6",
         "language": {
             "abilityId": 7381,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+60% Splash Attack Damage",
             "description": [],
@@ -608,7 +712,7 @@
         },
         "stat": {
             "abilityId": 7381,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -633,7 +737,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

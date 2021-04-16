@@ -5,7 +5,7 @@
         "uri": "techies",
         "language": {
             "abilityId": 412,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-22s Blast Off! Cooldown",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 412,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,7 +51,7 @@
         "uri": "techies",
         "language": {
             "abilityId": 5599,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Proximity Mines",
             "description": [
@@ -64,6 +65,7 @@
                 "BONUS SCEPTER CAST RANGE: 300"
             ],
             "lore": "The bane of Toterin!",
+            "aghanimDescription": "Increases cast range.",
             "notes": [
                 "Cannot be placed within active AoE of another Proximity Mine.",
                 "Proximity Mines do not block neutral creep camps from spawning.",
@@ -76,7 +78,7 @@
         },
         "stat": {
             "abilityId": 5599,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -119,7 +121,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "3",
-            "chargeRestoreTime": "23"
+            "chargeRestoreTime": "23",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -130,7 +133,7 @@
         "uri": "techies",
         "language": {
             "abilityId": 5600,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Stasis Trap",
             "description": [
@@ -144,6 +147,7 @@
                 "BONUS SCEPTER CAST RANGE: 300"
             ],
             "lore": "The scourge of Trapper Town!",
+            "aghanimDescription": "Increases cast range.",
             "notes": [
                 "Stasis Traps destroy all other Stasis Traps in their area of effect when they detonate.",
                 "Stasis Traps are not triggered by invisible units.",
@@ -152,7 +156,7 @@
         },
         "stat": {
             "abilityId": 5600,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2097200,
             "unitTargetType": 0,
@@ -195,7 +199,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -206,7 +211,7 @@
         "uri": "techies",
         "language": {
             "abilityId": 5601,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Blast Off!",
             "description": [
@@ -223,11 +228,12 @@
                 "Dying from this ability counts as suicide, and does not award gold or experience to the enemy team.",
                 "Techies still earn experience for suicide kills made with this ability.",
                 "This ability destroys trees."
-            ]
+            ],
+            "shardDescription": "Increases Blast Off! cast range by 300 and applies a 1.75 second stun to affected enemies."
         },
         "stat": {
             "abilityId": 5601,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2097200,
             "unitTargetType": 0,
@@ -267,7 +273,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -278,7 +285,7 @@
         "uri": "techies",
         "language": {
             "abilityId": 5602,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Remote Mines",
             "description": [
@@ -293,13 +300,14 @@
                 "SCEPTER DAMAGE: 450 / 600 / 750"
             ],
             "lore": "The downfall of Dredger's Bight!",
+            "aghanimDescription": "Increases damage and cast range.",
             "notes": [
                 "Grants 10 gold if destroyed by an enemy hero."
             ]
         },
         "stat": {
             "abilityId": 5602,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2097168,
             "unitTargetType": 0,
@@ -325,7 +333,7 @@
                 250
             ],
             "castPoint": [
-                1.0
+                0.75
             ],
             "cooldown": [
                 8.0
@@ -338,7 +346,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -349,7 +358,7 @@
         "uri": "techies",
         "language": {
             "abilityId": 5635,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Focused Detonate",
             "description": [
@@ -363,7 +372,7 @@
         },
         "stat": {
             "abilityId": 5635,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -396,7 +405,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -406,7 +416,7 @@
         "name": "techies_remote_mines_self_detonate",
         "language": {
             "abilityId": 5636,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "PINPOINT DETONATE",
             "description": [
@@ -418,7 +428,7 @@
         },
         "stat": {
             "abilityId": 5636,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -446,7 +456,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -457,7 +468,7 @@
         "uri": "techies",
         "language": {
             "abilityId": 5644,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Minefield Sign",
             "description": [
@@ -468,11 +479,12 @@
                 "EFFECT RADIUS: 125"
             ],
             "lore": "Watch your step!",
+            "aghanimDescription": "Allows Minefield Sign to hide any Proximity Mines, Stasis Traps, and Remote Mines in an area around the sign from True Sight.",
             "notes": []
         },
         "stat": {
             "abilityId": 5644,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -512,7 +524,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -523,16 +536,16 @@
         "uri": "techies",
         "language": {
             "abilityId": 6282,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+240 Blast Off! Damage",
+            "displayName": "+300 Blast Off! Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6282,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -557,7 +570,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -567,7 +581,7 @@
         "name": "special_bonus_unique_techies_2",
         "language": {
             "abilityId": 6552,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1 Extra Minefield Sign",
             "description": [],
@@ -576,7 +590,7 @@
         },
         "stat": {
             "abilityId": 6552,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -601,7 +615,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -612,7 +627,7 @@
         "uri": "techies",
         "language": {
             "abilityId": 6997,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3s Proximity Mines Cooldown",
             "description": [],
@@ -621,7 +636,7 @@
         },
         "stat": {
             "abilityId": 6997,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -646,7 +661,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -657,7 +673,7 @@
         "uri": "techies",
         "language": {
             "abilityId": 6998,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+{s:value} Mines Movement Speed",
             "description": [
@@ -668,7 +684,7 @@
         },
         "stat": {
             "abilityId": 6998,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -693,7 +709,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

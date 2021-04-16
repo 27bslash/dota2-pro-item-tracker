@@ -5,7 +5,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 492,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5 Fervor Attack Speed",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 492,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -47,9 +48,10 @@
     "704": {
         "id": 704,
         "name": "special_bonus_unique_troll_warlord_7",
+        "uri": "troll_warlord",
         "language": {
             "abilityId": 704,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2s Battle Trance Duration",
             "description": [],
@@ -58,7 +60,7 @@
         },
         "stat": {
             "abilityId": 704,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -83,17 +85,74 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
+    },
+    "728": {
+        "id": 728,
+        "name": "troll_warlord_rampage",
+        "language": {
+            "abilityId": 728,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "Rampage",
+            "description": [
+                "Global active. Grants all allied heroes 70 Attack Speed or 25 Status Resistance for 5 seconds based on whichever stance Troll is currently in. Ranged provides attack speed and melee provides status resistance."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 728,
+            "gameVersionId": 141,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                80.0
+            ],
+            "manaCost": [
+                75.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
+        },
+        "drawMatchPage": false,
+        "isTalent": false
     },
     "5305": {
         "id": 5305,
         "name": "dark_troll_warlord_ensnare",
         "language": {
             "abilityId": 5305,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ensnare",
             "description": [
@@ -106,7 +165,7 @@
         },
         "stat": {
             "abilityId": 5305,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -143,7 +202,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -153,7 +213,7 @@
         "name": "dark_troll_warlord_raise_dead",
         "language": {
             "abilityId": 5306,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Raise Dead",
             "description": [
@@ -166,7 +226,7 @@
         },
         "stat": {
             "abilityId": 5306,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -200,7 +260,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -211,7 +272,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5508,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Berserker's Rage",
             "description": [
@@ -221,7 +282,7 @@
             ],
             "attributes": [
                 "BONUS MOVE SPEED: 15 / 25 / 35 / 45",
-                "BONUS ARMOR: 6",
+                "BONUS ARMOR: 4 / 5 / 6 / 7",
                 "MELEE BASE ATTACK TIME: 1.45",
                 "ENSNARE CHANCE: 14% / 16% / 18% / 20%",
                 "ENSNARE DURATION: 0.8 / 1.2 / 1.6 / 2.0"
@@ -233,7 +294,7 @@
         },
         "stat": {
             "abilityId": 5508,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2564,
             "unitTargetType": 0,
@@ -264,7 +325,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -275,11 +337,11 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5509,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Whirling Axes (Ranged)",
             "description": [
-                "Troll hurls a fistful of five axes in a cone shape over 1000.0 range, slowing and damaging enemy units."
+                "Troll hurls a fistful of five axes in a cone shape over 950.0 range, slowing and damaging enemy units."
             ],
             "attributes": [
                 "AXE DAMAGE: 75",
@@ -287,13 +349,14 @@
                 "MOVEMENT SLOW: 40%"
             ],
             "lore": "Only axes fueled by hate whirl with such a deadly spin.",
+            "aghanimDescription": "Causes Ranged Axes to dispel enemies. Reduces cooldown and manacost.",
             "notes": [
                 "Does not affect Roshan."
             ]
         },
         "stat": {
             "abilityId": 5509,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16408,
             "unitTargetType": 3,
@@ -313,7 +376,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                1000
+                950
             ],
             "castRangeBuffer": [
                 250
@@ -328,12 +391,13 @@
                 9.0
             ],
             "manaCost": [
-                50.0
+                60.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -344,7 +408,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5510,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Whirling Axes (Melee)",
             "description": [
@@ -358,13 +422,14 @@
                 "WHIRL DURATION: 3.0"
             ],
             "lore": "Keep your enemies close.",
+            "aghanimDescription": "Causes Melee Axes to dispel Troll Warlord. Reduces cooldown and manacost.",
             "notes": [
                 "Does not affect Roshan."
             ]
         },
         "stat": {
             "abilityId": 5510,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -398,7 +463,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -409,7 +475,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5511,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fervor",
             "description": [
@@ -424,7 +490,7 @@
         },
         "stat": {
             "abilityId": 5511,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -449,7 +515,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -460,7 +527,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5512,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Battle Trance",
             "description": [
@@ -469,7 +536,7 @@
             "attributes": [
                 "TRANCE DURATION: 6.5",
                 "LIFESTEAL: 40% / 60% / 80%",
-                "MOVEMENT SPEED: 30% / 35% / 40%",
+                "MOVEMENT SPEED: 25% / 30% / 35%",
                 "ATTACK SPEED: 140 / 170 / 200",
                 "SCEPTER COOLDOWN: 35",
                 "SCEPTER ENEMY DURATION: 3.25",
@@ -479,11 +546,12 @@
             "notes": [
                 "Troll can still use his abilities while affected by Battle Trance.",
                 "Troll can still be killed with Axe's Culling Blade."
-            ]
+            ],
+            "shardDescription": "Casting Battle Trance now gives Troll Warlord a global aura that gives allied heroes (including himself) +60 Attack Speed."
         },
         "stat": {
             "abilityId": 5512,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 0,
             "unitTargetType": 1,
@@ -522,7 +590,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -533,7 +602,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 6154,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-5s Whirling Axes Cooldown",
             "description": [],
@@ -542,7 +611,7 @@
         },
         "stat": {
             "abilityId": 6154,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -567,7 +636,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -578,7 +648,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 6958,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+3 Max Fervor Stacks",
             "description": [],
@@ -587,7 +657,7 @@
         },
         "stat": {
             "abilityId": 6958,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -612,7 +682,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -623,7 +694,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 6959,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+90 Whirling Axes Damage",
             "description": [],
@@ -632,7 +703,7 @@
         },
         "stat": {
             "abilityId": 6959,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -657,7 +728,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -668,7 +740,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 6960,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Battle Trance Strong Dispels",
             "description": [
@@ -679,7 +751,7 @@
         },
         "stat": {
             "abilityId": 6960,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -704,7 +776,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -714,7 +787,7 @@
         "name": "troll_warlord_scepter",
         "language": {
             "abilityId": 7865,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -722,7 +795,7 @@
         },
         "stat": {
             "abilityId": 7865,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 1,
@@ -759,7 +832,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

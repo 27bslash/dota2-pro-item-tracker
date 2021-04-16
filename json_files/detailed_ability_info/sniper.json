@@ -2,20 +2,21 @@
     "694": {
         "id": 694,
         "name": "sniper_concussive_grenade",
+        "uri": "sniper",
         "language": {
             "abilityId": 694,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Concussive Grenade",
             "description": [
-                "Grants Concussive Grenade. Knocks enemies back 425 distance, slowing them by 50%% and disarming them for 3 seconds. Radius: 375"
+                "Grants Concussive Grenade. Deals 125 damage, knocking enemies back 425 distance, slowing them by 50%% and disarming them for 3 seconds. Radius: 375. Knocks you back 450 units on cast."
             ],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 694,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -35,7 +36,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                550
+                600
             ],
             "castRangeBuffer": [
                 250
@@ -44,15 +45,16 @@
                 0.1
             ],
             "cooldown": [
-                20.0
+                16.0
             ],
             "manaCost": [
-                75.0
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -63,7 +65,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 5154,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shrapnel",
             "description": [
@@ -84,7 +86,7 @@
         },
         "stat": {
             "abilityId": 5154,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -124,7 +126,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "3",
-            "chargeRestoreTime": "35"
+            "chargeRestoreTime": "35",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -135,7 +138,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 5155,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Headshot",
             "description": [
@@ -152,7 +155,7 @@
         },
         "stat": {
             "abilityId": 5155,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -183,7 +186,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -194,11 +198,11 @@
         "uri": "sniper",
         "language": {
             "abilityId": 5156,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Take Aim",
             "description": [
-                "Extends the attack range of Sniper's rifle. Can be activated to double the attack range bonus for 1 attack. Goes on cooldown after the attack is used."
+                "Extends the attack range of Sniper's rifle. Can be activated to provided True Strike and +30%% Headshot chance for 4 seconds. Slows you by 30%% for the duration."
             ],
             "attributes": [
                 "BONUS RANGE: 100 / 200 / 300 / 400"
@@ -208,7 +212,7 @@
         },
         "stat": {
             "abilityId": 5156,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -240,18 +244,19 @@
                 0.0
             ],
             "cooldown": [
-                9.0,
-                8.0,
-                7.0,
-                6.0
+                35.0,
+                30.0,
+                25.0,
+                20.0
             ],
             "manaCost": [
-                30.0
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -262,7 +267,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 5157,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Assassinate",
             "description": [
@@ -274,6 +279,7 @@
                 "SCEPTER AIM DURATION: 0.5"
             ],
             "lore": "In order to fulfill the prophecy and return to his home town, Kardel must make another shot as perfect as the one on the day of his ancient test.",
+            "aghanimDescription": "Causes Assassinate to fire quicker and disable the enemy target.",
             "notes": [
                 "Crosshair effect is only visible to allies.",
                 "Invisibility doesn't disjoint the projectile.",
@@ -282,7 +288,7 @@
         },
         "stat": {
             "abilityId": 5157,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2097160,
             "unitTargetType": 3,
@@ -308,8 +314,6 @@
                 600
             ],
             "castPoint": [
-                2.0,
-                2.0,
                 2.0
             ],
             "cooldown": [
@@ -330,7 +334,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -341,16 +346,16 @@
         "uri": "sniper",
         "language": {
             "abilityId": 6198,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+5 Shrapnel Charges",
+            "displayName": "+6 Shrapnel Charges",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6198,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -375,7 +380,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -386,7 +392,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 6305,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+24 Shrapnel DPS",
             "description": [],
@@ -395,7 +401,7 @@
         },
         "stat": {
             "abilityId": 6305,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -420,7 +426,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -431,7 +438,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 6896,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+28 Knockback Distance Headshot",
             "description": [],
@@ -440,7 +447,7 @@
         },
         "stat": {
             "abilityId": 6896,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -465,7 +472,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -476,7 +484,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 6897,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-1.5s Assassinate Cast Time",
             "description": [],
@@ -485,7 +493,7 @@
         },
         "stat": {
             "abilityId": 6897,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -510,7 +518,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -521,7 +530,7 @@
         "uri": "sniper",
         "language": {
             "abilityId": 7396,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-14% Shrapnel Slow",
             "description": [],
@@ -530,7 +539,7 @@
         },
         "stat": {
             "abilityId": 7396,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -555,7 +564,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -565,7 +575,7 @@
         "name": "special_bonus_unique_sniper_6",
         "language": {
             "abilityId": 7892,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+125 Take Aim Range",
             "description": [],
@@ -574,7 +584,7 @@
         },
         "stat": {
             "abilityId": 7892,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -599,7 +609,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

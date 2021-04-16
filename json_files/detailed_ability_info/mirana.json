@@ -4,7 +4,7 @@
         "name": "special_bonus_unique_mirana_5",
         "language": {
             "abilityId": 702,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+4s Moonlight Shadow Duration",
             "description": [],
@@ -13,7 +13,7 @@
         },
         "stat": {
             "abilityId": 702,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -38,7 +38,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +50,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 5048,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Sacred Arrow",
             "description": [
@@ -62,6 +63,7 @@
                 "MAXIMUM BONUS DAMAGE: 180"
             ],
             "lore": "Lunar energies make the Princess of the Moon's arrows more deadly than most.",
+            "aghanimDescription": "Causes Sacred Arrow to release a Starstorm on enemies within 500 AoE along the travel path of the primary arrow, releasing a second starfall that deals 50% damage to the impacted unit.",
             "notes": [
                 "For every 150 distance the arrow travels, the stun duration upon impact increases by 0.5 seconds, and the bonus damage added increases by 14.",
                 "Sacred Arrow can hit invisible units."
@@ -69,7 +71,7 @@
         },
         "stat": {
             "abilityId": 5048,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 17424,
             "unitTargetType": 0,
@@ -121,7 +123,8 @@
             "isUltimate": false,
             "duration": "3.11 3.11 3.11 3.11",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -132,7 +135,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 5049,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Moonlight Shadow",
             "description": [
@@ -151,7 +154,7 @@
         },
         "stat": {
             "abilityId": 5049,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 49156,
             "unitTargetType": 0,
@@ -192,7 +195,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -203,7 +207,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 5050,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Leap",
             "description": [
@@ -215,11 +219,12 @@
                 "ATTACK SPEED BONUS: 25 / 50 / 75 / 100"
             ],
             "lore": "None can fail to recognize Mirana's iconic white beast in the heat of battle.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Grants +1 Leap Charge. Leap buff grants Mirana 1.5x Critical Strike attacks for its duration."
         },
         "stat": {
             "abilityId": 5050,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 20484,
             "unitTargetType": 0,
@@ -250,7 +255,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "3",
-            "chargeRestoreTime": "45 40 35 30"
+            "chargeRestoreTime": "45 40 35 30",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -261,15 +267,14 @@
         "uri": "mirana",
         "language": {
             "abilityId": 5051,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Starstorm",
             "description": [
                 "Calls down a wave of meteors to damage nearby enemy units. The closest enemy unit to Mirana in a 425 radius will be struck a second time for 75% of the damage."
             ],
             "attributes": [
-                "RADIUS: 650",
-                "SCEPTER INTERVAL: 8.0"
+                "RADIUS: 650"
             ],
             "lore": "The Goddess breaks the strata to empower her Princess in the time of need.",
             "notes": [
@@ -280,7 +285,7 @@
         },
         "stat": {
             "abilityId": 5051,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16388,
             "unitTargetType": 0,
@@ -294,7 +299,7 @@
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -326,7 +331,8 @@
             "isUltimate": false,
             "duration": "10.0 10.0 10.0 10.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -337,7 +343,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 6013,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+75 Leap Attack Speed",
             "description": [],
@@ -346,7 +352,7 @@
         },
         "stat": {
             "abilityId": 6013,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -371,7 +377,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -382,7 +389,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 6242,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2 Multishot Sacred Arrows",
             "description": [
@@ -393,7 +400,7 @@
         },
         "stat": {
             "abilityId": 6242,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -418,7 +425,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -429,16 +437,16 @@
         "uri": "mirana",
         "language": {
             "abilityId": 6397,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-3.5s Sacred Arrow cooldown",
+            "displayName": "-3s Sacred Arrow cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6397,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -463,7 +471,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -474,7 +483,7 @@
         "uri": "mirana",
         "language": {
             "abilityId": 6692,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-60s Moonlight Shadow Cooldown",
             "description": [],
@@ -483,7 +492,7 @@
         },
         "stat": {
             "abilityId": 6692,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -508,7 +517,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

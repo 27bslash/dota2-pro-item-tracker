@@ -5,7 +5,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 512,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5 Sticky Napalm Damage",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 512,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -47,9 +48,10 @@
     "572": {
         "id": 572,
         "name": "special_bonus_unique_batrider_5",
+        "uri": "batrider",
         "language": {
             "abilityId": 572,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "2 Flamebreak Charges",
             "description": [],
@@ -58,7 +60,7 @@
         },
         "stat": {
             "abilityId": 572,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -83,7 +85,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -91,9 +94,10 @@
     "658": {
         "id": 658,
         "name": "special_bonus_unique_batrider_6",
+        "uri": "batrider",
         "language": {
             "abilityId": 658,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-35s Flaming Lasso Cooldown",
             "description": [],
@@ -102,7 +106,7 @@
         },
         "stat": {
             "abilityId": 658,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -127,7 +131,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "714": {
+        "id": 714,
+        "name": "special_bonus_unique_batrider_7",
+        "language": {
+            "abilityId": 714,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+4% Sticky Napalm Slow",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 714,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -138,7 +188,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 5320,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Sticky Napalm",
             "description": [
@@ -159,7 +209,7 @@
         },
         "stat": {
             "abilityId": 5320,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -202,7 +252,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -213,7 +264,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 5321,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Flamebreak",
             "description": [
@@ -226,11 +277,12 @@
                 "RADIUS: 500"
             ],
             "lore": "A molotov cocktail is the weapon of choice for Batrider.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Causes Flamebreak to have two charges and apply a Sticky Napalm charge on impact."
         },
         "stat": {
             "abilityId": 5321,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -250,7 +302,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                1500
+                1300
             ],
             "castRangeBuffer": [
                 250
@@ -276,7 +328,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -287,7 +340,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 5322,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Firefly",
             "description": [
@@ -309,7 +362,7 @@
         },
         "stat": {
             "abilityId": 5322,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -349,7 +402,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -360,7 +414,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 5323,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Flaming Lasso",
             "description": [
@@ -368,19 +422,21 @@
             ],
             "attributes": [
                 "DURATION: 3.0 / 3.5 / 4.0",
-                "DAMAGE PER SECOND: 40 / 60 / 80",
+                "DAMAGE PER SECOND: 35 / 55 / 75",
                 "SCEPTER TETHER RANGE: 600"
             ],
             "lore": "Few dare to ask to ride on the bat, as Batrider gives them free of charge.",
+            "aghanimDescription": "Flaming Lasso grabs both its target, as well as the target's nearest allied hero within range. The secondary target is tethered to the first.",
             "notes": [
                 "Killing the target or the Batrider will break the lasso before its expiration.",
                 "If Batrider moves more than 400 units in 0.05 seconds the lasso breaks.",
                 "Batrider cannot attack while using Flaming Lasso."
-            ]
+            ],
+            "shardDescription": "Allows Flaming Lasso to be cast on an allied hero, granting them 80%% damage reduction. Has 20 second cooldown when used on allies."
         },
         "stat": {
             "abilityId": 5323,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -422,7 +478,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -433,7 +490,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 6087,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+6.5s Firefly Duration",
             "description": [],
@@ -442,7 +499,7 @@
         },
         "stat": {
             "abilityId": 6087,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -467,7 +524,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -478,7 +536,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 6229,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-10s Flamebreak Cooldown",
             "description": [],
@@ -487,7 +545,7 @@
         },
         "stat": {
             "abilityId": 6229,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -512,7 +570,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -523,7 +582,7 @@
         "uri": "batrider",
         "language": {
             "abilityId": 6610,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.0s Flamebreak Burn Duration",
             "description": [],
@@ -532,7 +591,7 @@
         },
         "stat": {
             "abilityId": 6610,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -557,7 +616,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

@@ -5,7 +5,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 514,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-2s Shadow Realm Cooldown",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 514,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,7 +51,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 515,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.6s Cursed Crown Stun Duration",
             "description": [],
@@ -59,7 +60,7 @@
         },
         "stat": {
             "abilityId": 515,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -84,7 +85,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "780": {
+        "id": 780,
+        "name": "special_bonus_unique_dark_willow_7",
+        "language": {
+            "abilityId": 780,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+160 Cursed Crown AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 780,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -95,7 +142,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 6339,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Bramble Maze",
             "description": [
@@ -105,7 +152,7 @@
                 "BRAMBLE COUNT: 8",
                 "PLACEMENT DURATION: 15",
                 "LATCH ROOT DURATION: 1.0 / 1.5 / 2.0 / 2.5",
-                "LATCH DAMAGE: 125 / 150 / 175 / 200",
+                "LATCH DAMAGE: 120 / 160 / 200 / 240",
                 "BRAMBLE LATCH RADIUS: 90",
                 "MAZE RADIUS: 500"
             ],
@@ -117,7 +164,7 @@
         },
         "stat": {
             "abilityId": 6339,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 3,
@@ -137,10 +184,10 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
+                1000,
                 1100,
                 1200,
-                1300,
-                1400
+                1300
             ],
             "castRangeBuffer": [
                 250
@@ -163,7 +210,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -174,7 +222,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 6340,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Bedlam",
             "description": [
@@ -193,7 +241,7 @@
         },
         "stat": {
             "abilityId": 6340,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -226,7 +274,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -237,7 +286,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 6341,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shadow Realm",
             "description": [
@@ -250,6 +299,7 @@
                 "MAX DAMAGE DURATION: 3.5"
             ],
             "lore": "What you can't see will most definitely hurt you.",
+            "aghanimDescription": "Attacking no longer takes Dark Willow out of Shadow Realm. Each attack still has bonus damage based on the duration of the buff.",
             "notes": [
                 "Disjoints projectiles upon cast.",
                 "Grants phased movement.",
@@ -258,7 +308,7 @@
         },
         "stat": {
             "abilityId": 6341,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 526340,
             "unitTargetType": 0,
@@ -284,9 +334,9 @@
                 0.0
             ],
             "cooldown": [
-                32.0,
                 26.0,
-                20.0,
+                22.0,
+                18.0,
                 14.0
             ],
             "manaCost": [
@@ -298,7 +348,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -309,7 +360,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 6342,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Cursed Crown",
             "description": [
@@ -321,11 +372,12 @@
                 "STUN RADIUS: 360"
             ],
             "lore": "Didn't anyone ever tell you? Never strike a deal with a fairy...",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Cursed Crown creates four brambles around the target after the counter ends. Triggers even upon dispel. Reduces cooldown by 3 seconds and stun delay by 1 second."
         },
         "stat": {
             "abilityId": 6342,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -371,7 +423,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -382,7 +435,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 6464,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+300 Shadow Realm Max Damage",
             "description": [],
@@ -391,7 +444,7 @@
         },
         "stat": {
             "abilityId": 6464,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -416,7 +469,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -427,7 +481,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 6465,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.5 Terrorize Duration",
             "description": [],
@@ -436,7 +490,7 @@
         },
         "stat": {
             "abilityId": 6465,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -461,7 +515,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -472,7 +527,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 7655,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+32 Bedlam Damage",
             "description": [],
@@ -481,7 +536,7 @@
         },
         "stat": {
             "abilityId": 7655,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -506,7 +561,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -517,7 +573,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 7859,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-8s Bramble Maze CD",
             "description": [],
@@ -526,7 +582,7 @@
         },
         "stat": {
             "abilityId": 7859,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -551,7 +607,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -562,7 +619,7 @@
         "uri": "dark_willow",
         "language": {
             "abilityId": 8340,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Terrorize",
             "description": [
@@ -578,7 +635,7 @@
         },
         "stat": {
             "abilityId": 8340,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2097200,
             "unitTargetType": 0,
@@ -598,7 +655,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                1300
+                1200
             ],
             "castRangeBuffer": [
                 250
@@ -617,7 +674,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

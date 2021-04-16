@@ -4,7 +4,7 @@
         "name": "brewmaster_primal_split_cancel",
         "language": {
             "abilityId": 537,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Primal Split Cancel",
             "description": [
@@ -15,7 +15,7 @@
         },
         "stat": {
             "abilityId": 537,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -49,7 +49,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -57,9 +58,10 @@
     "646": {
         "id": 646,
         "name": "special_bonus_unique_brewmaster_6",
+        "uri": "brewmaster",
         "language": {
             "abilityId": 646,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Brewlings Gain Drunken Brawler Passive",
             "description": [],
@@ -68,7 +70,7 @@
         },
         "stat": {
             "abilityId": 646,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -93,7 +95,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -101,9 +104,10 @@
     "654": {
         "id": 654,
         "name": "special_bonus_unique_brewmaster_5",
+        "uri": "brewmaster",
         "language": {
             "abilityId": 654,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30% Cinder Brew Damage/Duration",
             "description": [],
@@ -112,7 +116,7 @@
         },
         "stat": {
             "abilityId": 654,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -137,7 +141,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -147,7 +152,7 @@
         "name": "brewmaster_void_astral_pulse",
         "language": {
             "abilityId": 693,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -155,7 +160,7 @@
         },
         "stat": {
             "abilityId": 693,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 5,
@@ -181,18 +186,64 @@
                 250
             ],
             "castPoint": [
-                0.25
+                0.15
             ],
             "cooldown": [
-                20.0
+                12.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "732": {
+        "id": 732,
+        "name": "special_bonus_unique_brewmaster_7",
+        "language": {
+            "abilityId": 732,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+200 Thunder Clap AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 732,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5400": {
         "id": 5400,
@@ -200,7 +251,7 @@
         "uri": "brewmaster",
         "language": {
             "abilityId": 5400,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Thunder Clap",
             "description": [
@@ -218,7 +269,7 @@
         },
         "stat": {
             "abilityId": 5400,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -257,7 +308,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -268,7 +320,7 @@
         "uri": "brewmaster",
         "language": {
             "abilityId": 5401,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Drunken Haze",
             "description": [
@@ -286,7 +338,7 @@
         },
         "stat": {
             "abilityId": 5401,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 5,
@@ -329,7 +381,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -340,14 +393,14 @@
         "uri": "brewmaster",
         "language": {
             "abilityId": 5402,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Drunken Brawler",
             "description": [
                 "Brewmaster passively gains a chance to evade physical attacks and deal critical damage when attacking. When activated, Brewmaster goes into a drunken brawler state, granting him increased chance to evade or deal critical damage. Brewmaster moves with a varying amount of movement speed, alternating between -20 slower and 40% faster. Lasts 5 seconds."
             ],
             "attributes": [
-                "DODGE CHANCE: 6% / 12% / 18% / 24%",
+                "DODGE CHANCE: 10% / 15% / 20% / 25%",
                 "CRITICAL CHANCE: 24%",
                 "CRITICAL DAMAGE: 145% / 160% / 175% / 190%",
                 "ACTIVE MULTIPLIER: 3",
@@ -360,7 +413,7 @@
         },
         "stat": {
             "abilityId": 5402,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -397,7 +450,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -408,7 +462,7 @@
         "uri": "brewmaster",
         "language": {
             "abilityId": 5403,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Primal Split",
             "description": [
@@ -418,15 +472,17 @@
                 "DURATION: 16 / 18 / 20"
             ],
             "lore": "It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor.",
+            "aghanimDescription": "Primal Split has 2 charges and can be canceled at any time. Charge replenish time is equal to the normal cooldown.",
             "notes": [
                 "The Earth Element will carry all auras that the Brewmaster has, as well as True Sight.",
                 "The Fire Element has phased movement.",
                 "When the spell ends, Brewmaster will take the place of an element in this order, assuming they are alive: Earth, Storm, Fire."
-            ]
+            ],
+            "shardDescription": "Primal Split now creates a Void brewling. Has Astral Pulse ability, affecting enemies in 500 AoE. Applies a 20/30/40% slow and Disarm for 2 seconds. "
         },
         "stat": {
             "abilityId": 5403,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -449,7 +505,7 @@
                 250
             ],
             "castPoint": [
-                0.65
+                0.55
             ],
             "cooldown": [
                 140.0,
@@ -464,7 +520,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -474,7 +531,7 @@
         "name": "brewmaster_earth_hurl_boulder",
         "language": {
             "abilityId": 5404,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Hurl Boulder",
             "description": [
@@ -489,7 +546,7 @@
         },
         "stat": {
             "abilityId": 5404,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 5,
@@ -529,7 +586,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -539,7 +597,7 @@
         "name": "brewmaster_earth_spell_immunity",
         "language": {
             "abilityId": 5405,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Spell Immunity",
             "description": [
@@ -551,7 +609,7 @@
         },
         "stat": {
             "abilityId": 5405,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -576,7 +634,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -586,7 +645,7 @@
         "name": "brewmaster_earth_pulverize",
         "language": {
             "abilityId": 5406,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Demolish",
             "description": [
@@ -600,7 +659,7 @@
         },
         "stat": {
             "abilityId": 5406,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -625,7 +684,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -635,7 +695,7 @@
         "name": "brewmaster_storm_dispel_magic",
         "language": {
             "abilityId": 5408,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dispel Magic",
             "description": [
@@ -652,7 +712,7 @@
         },
         "stat": {
             "abilityId": 5408,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -695,7 +755,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -705,7 +766,7 @@
         "name": "brewmaster_storm_cyclone",
         "language": {
             "abilityId": 5409,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Cyclone",
             "description": [
@@ -720,7 +781,7 @@
         },
         "stat": {
             "abilityId": 5409,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 5,
@@ -763,7 +824,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -773,7 +835,7 @@
         "name": "brewmaster_storm_wind_walk",
         "language": {
             "abilityId": 5410,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Wind Walk",
             "description": [
@@ -789,7 +851,7 @@
         },
         "stat": {
             "abilityId": 5410,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 34820,
             "unitTargetType": 0,
@@ -823,7 +885,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -833,7 +896,7 @@
         "name": "brewmaster_fire_permanent_immolation",
         "language": {
             "abilityId": 5411,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Permanent Immolation",
             "description": [
@@ -848,7 +911,7 @@
         },
         "stat": {
             "abilityId": 5411,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -873,7 +936,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -884,7 +948,7 @@
         "uri": "brewmaster",
         "language": {
             "abilityId": 6082,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1400 Brewlings Health",
             "description": [],
@@ -893,7 +957,7 @@
         },
         "stat": {
             "abilityId": 6082,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -918,7 +982,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -929,7 +994,7 @@
         "uri": "brewmaster",
         "language": {
             "abilityId": 6359,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-65s Primal Split Cooldown",
             "description": [],
@@ -938,7 +1003,7 @@
         },
         "stat": {
             "abilityId": 6359,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -963,7 +1028,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -974,7 +1040,7 @@
         "uri": "brewmaster",
         "language": {
             "abilityId": 6516,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1s Thunder Clap Slow",
             "description": [],
@@ -983,7 +1049,7 @@
         },
         "stat": {
             "abilityId": 6516,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -1008,7 +1074,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -1019,7 +1086,7 @@
         "uri": "brewmaster",
         "language": {
             "abilityId": 6614,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+80% Drunken Brawler Critical Strike Damage",
             "description": [],
@@ -1028,7 +1095,7 @@
         },
         "stat": {
             "abilityId": 6614,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -1053,7 +1120,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -1064,7 +1132,7 @@
         "uri": "brewmaster",
         "language": {
             "abilityId": 7310,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Cinder Brew",
             "description": [
@@ -1080,7 +1148,7 @@
         },
         "stat": {
             "abilityId": 7310,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -1126,7 +1194,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

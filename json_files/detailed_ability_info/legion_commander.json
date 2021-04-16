@@ -5,7 +5,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 463,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-9s Overwhelming Odds Cooldown",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 463,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,14 +51,14 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 5595,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Overwhelming Odds",
             "description": [
                 "Turns the enemies' numbers against them, dealing damage and granting you bonus movement speed per unit or per hero.  Deals bonus damage to illusions and summoned units as a percent of their current health."
             ],
             "attributes": [
-                "RADIUS: 330",
+                "RADIUS: 330 / 340 / 350 / 360",
                 "BASE DAMAGE: 40 / 60 / 80 / 100",
                 "DAMAGE PER CREEP: 14 / 16 / 18 / 20",
                 "DAMAGE PER HERO: 30 / 60 / 90 / 120",
@@ -71,7 +72,7 @@
         },
         "stat": {
             "abilityId": 5595,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -114,7 +115,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -125,7 +127,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 5596,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Press The Attack",
             "description": [
@@ -139,11 +141,12 @@
                 "HP REGEN: 30 / 40 / 50 / 60"
             ],
             "lore": "The rallying horn of the Bronze Legion is able to inspire any heart.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Press The Attack targets now gain Spell Immunity for 1.75 seconds. Reduces cooldown by 3 seconds."
         },
         "stat": {
             "abilityId": 5596,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -183,7 +186,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -194,7 +198,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 5597,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Moment of Courage",
             "description": [
@@ -209,7 +213,7 @@
         },
         "stat": {
             "abilityId": 5597,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -240,7 +244,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -251,7 +256,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 5598,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Duel",
             "description": [
@@ -263,14 +268,16 @@
                 "SCEPTER DURATION: 6 / 7 / 8"
             ],
             "lore": "To face a soldier of Stonehall in single combat is a challenge few can resist.",
+            "aghanimDescription": "Increases Duel duration, and makes Legion Commander and her opponent only take 50% damage from other sources. Reduces cooldown by 20 seconds.",
             "notes": [
                 "Duels will end if the units are pushed 2000 units apart.",
                 "Winning a Duel automatically casts Press the Attack on yourself."
-            ]
+            ],
+            "shardDescription": "While Dueling, immediately and every 2 seconds, an Overwhelming Odds is cast centered on a random enemy unit within 900 radius. Does not center on the same target twice. Prioritizes heroes."
         },
         "stat": {
             "abilityId": 5598,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 1,
@@ -314,7 +321,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -325,7 +333,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 6218,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30 Duel Damage Bonus",
             "description": [],
@@ -334,7 +342,7 @@
         },
         "stat": {
             "abilityId": 6218,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -359,7 +367,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -370,7 +379,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 6449,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-10s Press The Attack Cooldown",
             "description": [],
@@ -379,7 +388,7 @@
         },
         "stat": {
             "abilityId": 6449,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -404,7 +413,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -415,7 +425,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 6526,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+8% Moment Proc Chance",
             "description": [],
@@ -424,7 +434,7 @@
         },
         "stat": {
             "abilityId": 6526,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -449,7 +459,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -460,16 +471,16 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 6671,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+65 Overwhelming Odds Hero Damage",
+            "displayName": "+75 Overwhelming Odds Hero Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6671,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -494,7 +505,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -505,7 +517,7 @@
         "uri": "legion_commander",
         "language": {
             "abilityId": 7395,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "400 AoE Press The Attack",
             "description": [],
@@ -514,7 +526,7 @@
         },
         "stat": {
             "abilityId": 7395,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -539,7 +551,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

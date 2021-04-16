@@ -2,24 +2,30 @@
     "639": {
         "id": 639,
         "name": "broodmother_silken_bola",
+        "uri": "broodmother",
         "language": {
             "abilityId": 639,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Silken Bola",
             "description": [
-                "Consumes a Spin Web charge and roots the target enemy for 2 seconds."
+                "Slows the target enemy, causes them to miss and deals impact damage. Units that attack the target deal bonus magic damage."
             ],
             "attributes": [
-                "DURATION: 2"
+                "DURATION: 6",
+                "SLOW: 25% / 35% / 45% / 55%",
+                "IMPACT DAMAGE: 100 / 120 / 140 / 160",
+                "ATTACK BONUS: 5 / 6 / 7 / 8",
+                "MISS CHANCE: 40%"
             ],
-            "notes": []
+            "notes": [],
+            "shardDescription": "Causes Silken Bola to be a 550 AoE spell and increases the miss chance to 80%"
         },
         "stat": {
             "abilityId": 639,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
-            "behavior": 0,
+            "behavior": 8,
             "unitTargetType": 3,
             "unitTargetTeam": 1,
             "unitTargetFlags": 0,
@@ -32,12 +38,12 @@
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
-            "maxLevel": 1,
+            "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                900
+                750
             ],
             "castRangeBuffer": [
                 250
@@ -46,15 +52,22 @@
                 0.1
             ],
             "cooldown": [
+                24.0,
+                20.0,
+                16.0,
                 12.0
             ],
             "manaCost": [
-                50.0
+                70.0,
+                75.0,
+                80.0,
+                85.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -65,7 +78,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 5279,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Spawn Spiderlings",
             "description": [
@@ -73,19 +86,19 @@
             ],
             "attributes": [
                 "LIFETIME: 60.0 / 60.0 / 60.0 / 60.0",
-                "DAMAGE: 70 / 140 / 210 / 280",
-                "COUNT: 1 / 2 / 3 / 4"
+                "DAMAGE: 300 / 370 / 440",
+                "COUNT: 3 / 4 / 5"
             ],
             "lore": "Black Arachnia continues to raise her young, even amidst the field of combat.  The brood quickly learns how to support their mother.",
             "notes": [
-                "If the target is killed within 2.0 / 2.0 / 2.0 / 2.0 seconds of being hit with this skill, the Spiderlings will spawn.",
+                "If the target is killed within 20 seconds of being hit with this skill, the Spiderlings will spawn.",
                 "Units killed by Spiderlings will then give birth to Spiderites, smaller and less powerful versions of the Spiderlings."
             ]
         },
         "stat": {
             "abilityId": 5279,
-            "gameVersionId": 137,
-            "type": 0,
+            "gameVersionId": 141,
+            "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
             "unitTargetTeam": 1,
@@ -104,7 +117,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                700
+                900
             ],
             "castRangeBuffer": [
                 250
@@ -116,18 +129,18 @@
                 0.2
             ],
             "cooldown": [
-                11.0,
-                10.0,
                 9.0,
-                8.0
+                8.0,
+                7.0
             ],
             "manaCost": [
                 100.0
             ],
-            "isUltimate": false,
+            "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -138,21 +151,22 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 5280,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Spin Web",
             "description": [
                 "Spins a large web that grants Broodmother a passive movement speed increase, gives free movement, and boosts regeneration while in its vicinity. Spin Web charges restore every %charge_restore_time% seconds. Spin Web can be cast from anywhere as long as the new web touches an existing web. Webs never expire, and can be manually destroyed. When the maximum limit of webs is exceeded, the oldest web disappears."
             ],
             "attributes": [
-                "MAX WEBS: 2 / 4 / 6 / 8",
+                "MAX WEBS: 3 / 5 / 7 / 9",
                 "HEALTH REGEN: 3 / 5 / 7 / 9",
-                "MOVE INCREASE: 25% / 35% / 45% / 55%",
+                "MOVE INCREASE: 18% / 30% / 42% / 54%",
                 "SCEPTER MAX WEBS: 6 / 10 / 14 / 18",
                 "SCEPTER MAX WEB CHARGES: 6 / 10 / 14 / 18",
                 "SCEPTER MOVE SPEED: 35% / 50% / 65% / 80%"
             ],
             "lore": "Weaving a bed of silken fibers, Arachnia's web both protects her and her offspring, as well as giving advancing opponents a sense of forboding.",
+            "aghanimDescription": "Increases movement speed, removes movement speed limit, and increases Spin Web max count",
             "notes": [
                 "Also affects Spiderling and Spiderites.",
                 "If free movement is disabled, you will destroy nearby trees."
@@ -160,7 +174,7 @@
         },
         "stat": {
             "abilityId": 5280,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -196,8 +210,9 @@
             ],
             "isUltimate": false,
             "duration": "",
-            "charges": "2 4 6 8",
-            "chargeRestoreTime": "45.0"
+            "charges": "3 5 7 9",
+            "chargeRestoreTime": "40.0",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -208,7 +223,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 5281,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Incapacitating Bite",
             "description": [
@@ -226,7 +241,7 @@
         },
         "stat": {
             "abilityId": 5281,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -251,7 +266,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -262,16 +278,16 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 5282,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Insatiable Hunger",
             "description": [
                 "A violent lust for vital fluids increases Broodmother's attack damage and gives her a vampiric attack."
             ],
             "attributes": [
-                "BONUS DAMAGE: 60 / 100 / 140",
-                "LIFESTEAL: 60% / 100% / 140%",
-                "DURATION: 14.0 / 14.0 / 14.0"
+                "BONUS DAMAGE: 35 / 40 / 45 / 50",
+                "LIFESTEAL: 70% / 80% / 90% / 100%",
+                "DURATION: 8 / 10 / 12 / 14"
             ],
             "lore": "While most of her prey is wrapped in silken cocoons and saved for her young, the Broodmother herself has a taste for wandering heroes.",
             "notes": [
@@ -280,8 +296,8 @@
         },
         "stat": {
             "abilityId": 5282,
-            "gameVersionId": 137,
-            "type": 1,
+            "gameVersionId": 141,
+            "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
@@ -308,19 +324,22 @@
                 0.2
             ],
             "cooldown": [
-                45.0,
-                45.0,
-                45.0
+                40.0,
+                35.0,
+                30.0,
+                25.0
             ],
             "manaCost": [
-                100.0,
-                100.0,
-                100.0
+                50.0,
+                60.0,
+                70.0,
+                80.0
             ],
-            "isUltimate": true,
+            "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -330,7 +349,7 @@
         "name": "broodmother_spawn_spiderite",
         "language": {
             "abilityId": 5283,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Spawn Spiderite",
             "description": [
@@ -344,7 +363,7 @@
         },
         "stat": {
             "abilityId": 5283,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -369,7 +388,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -379,7 +399,7 @@
         "name": "broodmother_poison_sting",
         "language": {
             "abilityId": 5284,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Poison Sting",
             "description": [
@@ -395,7 +415,7 @@
         },
         "stat": {
             "abilityId": 5284,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -420,7 +440,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -430,7 +451,7 @@
         "name": "broodmother_spin_web_destroy",
         "language": {
             "abilityId": 5643,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Destroy Spin Web",
             "description": [
@@ -441,7 +462,7 @@
         },
         "stat": {
             "abilityId": 5643,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2116,
             "unitTargetType": 0,
@@ -475,7 +496,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -486,7 +508,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 6257,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+50 Insatiable Hunger Damage/Lifesteal",
             "description": [],
@@ -495,7 +517,7 @@
         },
         "stat": {
             "abilityId": 6257,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -520,7 +542,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -531,7 +554,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 6258,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+350 Spiders Health",
             "description": [],
@@ -540,7 +563,7 @@
         },
         "stat": {
             "abilityId": 6258,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -565,7 +588,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -576,7 +600,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 6361,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+80 Spawn Spiderlings Damage",
             "description": [],
@@ -585,7 +609,7 @@
         },
         "stat": {
             "abilityId": 6361,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -610,7 +634,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -621,7 +646,7 @@
         "uri": "broodmother",
         "language": {
             "abilityId": 6362,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+18 Spiders Attack Damage",
             "description": [],
@@ -630,7 +655,7 @@
         },
         "stat": {
             "abilityId": 6362,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -655,7 +680,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

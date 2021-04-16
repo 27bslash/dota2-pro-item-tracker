@@ -2,9 +2,10 @@
     "319": {
         "id": 319,
         "name": "kunkka_torrent_storm",
+        "uri": "kunkka",
         "language": {
             "abilityId": 319,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Torrent Storm",
             "description": [
@@ -16,7 +17,7 @@
         },
         "stat": {
             "abilityId": 319,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -50,7 +51,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -58,13 +60,14 @@
     "605": {
         "id": 605,
         "name": "kunkka_tidal_wave",
+        "uri": "kunkka",
         "language": {
             "abilityId": 605,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Tidal Wave",
             "description": [
-                "Releases a Tidal Wave that spawns behind Kunkka. Deals 225 damage and drags enemies along it for 600 distance."
+                "Releases a Tidal Wave that spawns behind Kunkka. Deals 250 damage and drags enemies along it for 600 distance. Enemies cannot attack while being dragged."
             ],
             "attributes": [
                 "SPEED: 700",
@@ -75,7 +78,7 @@
         },
         "stat": {
             "abilityId": 605,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -104,18 +107,109 @@
                 0.2
             ],
             "cooldown": [
-                16.0
+                12.0
             ],
             "manaCost": [
-                150.0
+                75.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "745": {
+        "id": 745,
+        "name": "special_bonus_unique_kunkka_6",
+        "language": {
+            "abilityId": 745,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+150 Tidebringer Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 745,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "766": {
+        "id": 766,
+        "name": "special_bonus_unique_kunkka_7",
+        "language": {
+            "abilityId": 766,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+0.4s Torrent Knock Up/Stun Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 766,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5031": {
         "id": 5031,
@@ -123,7 +217,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5031,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Torrent",
             "description": [
@@ -145,7 +239,7 @@
         },
         "stat": {
             "abilityId": 5031,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -165,7 +259,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                1500
+                1300
             ],
             "castRangeBuffer": [
                 250
@@ -188,7 +282,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -199,7 +294,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5032,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Tidebringer",
             "description": [
@@ -217,7 +312,7 @@
         },
         "stat": {
             "abilityId": 5032,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -257,7 +352,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -268,7 +364,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5033,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "X Marks the Spot",
             "description": [
@@ -286,7 +382,7 @@
         },
         "stat": {
             "abilityId": 5033,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 1,
@@ -332,7 +428,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -343,7 +440,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5034,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Return",
             "description": [
@@ -354,7 +451,7 @@
         },
         "stat": {
             "abilityId": 5034,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16389,
             "unitTargetType": 0,
@@ -391,7 +488,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -402,7 +500,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 5035,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ghostship",
             "description": [
@@ -426,7 +524,7 @@
         },
         "stat": {
             "abilityId": 5035,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 17424,
             "unitTargetType": 0,
@@ -472,7 +570,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -483,7 +582,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 6089,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+80 Torrent AoE",
             "description": [],
@@ -492,7 +591,7 @@
         },
         "stat": {
             "abilityId": 6089,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -517,7 +616,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -528,7 +628,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 6385,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Torrent Damage",
             "description": [],
@@ -537,7 +637,7 @@
         },
         "stat": {
             "abilityId": 6385,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -562,7 +662,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -573,7 +674,7 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 6666,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ghostship Fleet",
             "description": [
@@ -584,7 +685,7 @@
         },
         "stat": {
             "abilityId": 6666,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -609,7 +710,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -620,16 +722,16 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 6667,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+140% Tidebringer Cleave",
+            "displayName": "+70% Tidebringer Cleave",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6667,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -654,7 +756,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -665,16 +768,16 @@
         "uri": "kunkka",
         "language": {
             "abilityId": 7131,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-1.5s Tidebringer Cooldown",
+            "displayName": "-2s Tidebringer Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7131,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -699,7 +802,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

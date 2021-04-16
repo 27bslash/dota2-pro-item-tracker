@@ -2,9 +2,10 @@
     "627": {
         "id": 627,
         "name": "special_bonus_unique_storm_spirit_7",
+        "uri": "storm_spirit",
         "language": {
             "abilityId": 627,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "2x Overload Attack Bounce",
             "description": [],
@@ -13,7 +14,7 @@
         },
         "stat": {
             "abilityId": 627,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -38,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -46,9 +48,10 @@
     "682": {
         "id": 682,
         "name": "storm_spirit_electric_rave",
+        "uri": "storm_spirit",
         "language": {
             "abilityId": 682,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Electric Rave",
             "description": [
@@ -59,7 +62,7 @@
         },
         "stat": {
             "abilityId": 682,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -93,10 +96,56 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "762": {
+        "id": 762,
+        "name": "special_bonus_unique_storm_spirit_8",
+        "language": {
+            "abilityId": 762,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-1.25s Static Remnant Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 762,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5098": {
         "id": 5098,
@@ -104,7 +153,7 @@
         "uri": "storm_spirit",
         "language": {
             "abilityId": 5098,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Static Remnant",
             "description": [
@@ -123,7 +172,7 @@
         },
         "stat": {
             "abilityId": 5098,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -163,7 +212,8 @@
             "isUltimate": false,
             "duration": "12.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -174,7 +224,7 @@
         "uri": "storm_spirit",
         "language": {
             "abilityId": 5099,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Electric Vortex",
             "description": [
@@ -186,11 +236,12 @@
                 "SCEPTER RADIUS: 475"
             ],
             "lore": "Raijin's thunderous, boisterous energy often draws others into an electrifying situation.",
+            "aghanimDescription": "Electric Vortex affects all enemies within a radius around Storm Spirit.",
             "notes": []
         },
         "stat": {
             "abilityId": 5099,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -233,7 +284,8 @@
             "isUltimate": false,
             "duration": "1.4 1.8 2.2 2.6",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -244,7 +296,7 @@
         "uri": "storm_spirit",
         "language": {
             "abilityId": 5100,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Overload",
             "description": [
@@ -260,11 +312,12 @@
             "notes": [
                 "Using items doesn't trigger Overload.",
                 "Overload charges do not stack."
-            ]
+            ],
+            "shardDescription": "Can be activated to grant Storm Spirit and allied heroes within 750 AoE of him 3 Overload charges. Provides 40 Attack Speed. Lasts up to 12 seconds or until the charges are depleted."
         },
         "stat": {
             "abilityId": 5100,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -289,7 +342,8 @@
             "isUltimate": false,
             "duration": "0.6 0.6 0.6 0.6",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -300,14 +354,14 @@
         "uri": "storm_spirit",
         "language": {
             "abilityId": 5101,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ball Lightning",
             "description": [
                 "Storm Spirit becomes volatile electricity, charging across the battlefield until he depletes his mana or reaches his target. The activation mana cost is 30+ 8% of his total mana pool, and the cost per 100 units traveled is 10+ 0.65 of his total mana pool. Damage is expressed in damage per 100 units traveled."
             ],
             "attributes": [
-                "SPEED: 1250 / 1875 / 2500",
+                "SPEED: 1400 / 1850 / 2300",
                 "RADIUS: 200",
                 "MANA DRAIN PER UNIT: 0.65%"
             ],
@@ -320,7 +374,7 @@
         },
         "stat": {
             "abilityId": 5101,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4112,
             "unitTargetType": 0,
@@ -358,7 +412,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -369,7 +424,7 @@
         "uri": "storm_spirit",
         "language": {
             "abilityId": 6167,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.4s Electric Vortex",
             "description": [],
@@ -378,7 +433,7 @@
         },
         "stat": {
             "abilityId": 6167,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -403,7 +458,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -413,7 +469,7 @@
         "name": "special_bonus_unique_storm_spirit_2",
         "language": {
             "abilityId": 6906,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+6 Ball Lightning Damage",
             "description": [],
@@ -422,7 +478,7 @@
         },
         "stat": {
             "abilityId": 6906,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -447,7 +503,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -458,7 +515,7 @@
         "uri": "storm_spirit",
         "language": {
             "abilityId": 6907,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Overload Pierces Immunity",
             "description": [],
@@ -467,7 +524,7 @@
         },
         "stat": {
             "abilityId": 6907,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -492,7 +549,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -503,7 +561,7 @@
         "uri": "storm_spirit",
         "language": {
             "abilityId": 6908,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "{s:value} Distance Auto Remnant in Ball Lightning",
             "description": [
@@ -514,7 +572,7 @@
         },
         "stat": {
             "abilityId": 6908,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -539,7 +597,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -550,7 +609,7 @@
         "uri": "storm_spirit",
         "language": {
             "abilityId": 6916,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+65 Static Remnant Damage",
             "description": [],
@@ -559,7 +618,7 @@
         },
         "stat": {
             "abilityId": 6916,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -584,7 +643,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -595,7 +655,7 @@
         "uri": "storm_spirit",
         "language": {
             "abilityId": 7936,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+24 Overload Damage",
             "description": [],
@@ -604,7 +664,7 @@
         },
         "stat": {
             "abilityId": 7936,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -629,7 +689,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

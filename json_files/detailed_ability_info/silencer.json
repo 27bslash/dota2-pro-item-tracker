@@ -5,7 +5,7 @@
         "uri": "silencer",
         "language": {
             "abilityId": 410,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+20% Arcane Curse Slow",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 410,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +50,7 @@
         "name": "special_bonus_unique_silencer_7",
         "language": {
             "abilityId": 721,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3s Arcane Curse Cooldown",
             "description": [],
@@ -58,7 +59,7 @@
         },
         "stat": {
             "abilityId": 721,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -83,7 +84,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -94,14 +96,14 @@
         "uri": "silencer",
         "language": {
             "abilityId": 5377,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Arcane Curse",
             "description": [
                 "Curses the target area, causing enemy heroes to take damage and slowing their movement speed. Anytime affected enemies cast a spell, the duration is increased."
             ],
             "attributes": [
-                "DAMAGE: 16 / 26 / 36 / 46",
+                "DAMAGE: 16 / 24 / 32 / 40",
                 "BASE DURATION: 6",
                 "PENALTY DURATION: 5",
                 "RADIUS: 425",
@@ -109,13 +111,13 @@
             ],
             "lore": "Nortrom's lack of incantations is less of a problem for him than it is for his adversaries.",
             "notes": [
-                "If an enemy hero affected by Arcane Curse is silenced, Arcane Curse will pause damage, slow and duration.",
+                "If an enemy hero affected by Arcane Curse is silenced, Arcane Curse will pause the duration.",
                 "Affects creeps."
             ]
         },
         "stat": {
             "abilityId": 5377,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -161,7 +163,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -172,7 +175,7 @@
         "uri": "silencer",
         "language": {
             "abilityId": 5378,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Glaives of Wisdom",
             "description": [
@@ -184,11 +187,12 @@
                 "INT STEAL DURATION: 10 / 20 / 30 / 40"
             ],
             "lore": "Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Causes Glaives to bounce once towards the closest enemy unit, dealing 50%% of Silencer's attack damage. Bounce range is 600."
         },
         "stat": {
             "abilityId": 5378,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -222,7 +226,8 @@
             "isUltimate": false,
             "duration": "0.0 0.0 0.0 0.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -233,7 +238,7 @@
         "uri": "silencer",
         "language": {
             "abilityId": 5379,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Last Word",
             "description": [
@@ -247,13 +252,14 @@
                 "SCEPTER RADIUS: 650"
             ],
             "lore": "Nortrom ensures that spells uttered by his opponents will be their last.",
+            "aghanimDescription": "Causes Last Word to become an AoE ability.",
             "notes": [
                 "Channeling abilities will trigger this effect once the caster finishes its channel."
             ]
         },
         "stat": {
             "abilityId": 5379,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -288,12 +294,16 @@
                 10.0
             ],
             "manaCost": [
+                100.0,
+                105.0,
+                110.0,
                 115.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -304,7 +314,7 @@
         "uri": "silencer",
         "language": {
             "abilityId": 5380,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Global Silence",
             "description": [
@@ -320,7 +330,7 @@
         },
         "stat": {
             "abilityId": 5380,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -360,7 +370,8 @@
             "isUltimate": true,
             "duration": "4.5 5.25 6.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -371,7 +382,7 @@
         "uri": "silencer",
         "language": {
             "abilityId": 6184,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30 Arcane Curse Damage",
             "description": [],
@@ -380,7 +391,7 @@
         },
         "stat": {
             "abilityId": 6184,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -405,7 +416,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -416,7 +428,7 @@
         "uri": "silencer",
         "language": {
             "abilityId": 6878,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2 Permanent Intelligence Steal",
             "description": [],
@@ -425,7 +437,7 @@
         },
         "stat": {
             "abilityId": 6878,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -450,7 +462,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -461,7 +474,7 @@
         "uri": "silencer",
         "language": {
             "abilityId": 6879,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+15% Glaives of Wisdom Damage",
             "description": [],
@@ -470,7 +483,7 @@
         },
         "stat": {
             "abilityId": 6879,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -495,7 +508,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -506,7 +520,7 @@
         "uri": "silencer",
         "language": {
             "abilityId": 6880,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.5s Global Silence",
             "description": [],
@@ -515,7 +529,7 @@
         },
         "stat": {
             "abilityId": 6880,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -540,7 +554,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -550,7 +565,7 @@
         "name": "special_bonus_unique_silencer_5",
         "language": {
             "abilityId": 7048,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1s Glaives Silence",
             "description": [],
@@ -559,7 +574,7 @@
         },
         "stat": {
             "abilityId": 7048,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -584,7 +599,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

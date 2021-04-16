@@ -5,7 +5,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 5361,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Rocket Barrage",
             "description": [
@@ -19,11 +19,12 @@
             "lore": "Aurel's new craft has an increased payload for rockets, enhancing their rapid-fire capabilities.",
             "notes": [
                 "Rocket Barrage can't hit units Gyrocopter has no vision over."
-            ]
+            ],
+            "shardDescription": "Rocket Barrage hits an extra target and increases duration by 1 second."
         },
         "stat": {
             "abilityId": 5361,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -63,7 +64,8 @@
             "isUltimate": false,
             "duration": "3",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -74,7 +76,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 5362,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Homing Missile",
             "description": [
@@ -94,7 +96,7 @@
         },
         "stat": {
             "abilityId": 5362,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 3,
@@ -143,7 +145,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -154,7 +157,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 5363,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Flak Cannon",
             "description": [
@@ -162,18 +165,19 @@
             ],
             "attributes": [
                 "RADIUS: 1250",
-                "MAX ATTACKS: 2 / 3 / 4 / 5",
+                "MAX ATTACKS: 3 / 4 / 5 / 6",
                 "SIDE GUNNER FIRE RATE: 1.2",
                 "SIDE GUNNER ATTACK RADIUS: 700"
             ],
             "lore": "This newly revamped Gyrocopter has attached enough armaments to assault in a 360 degree radius.",
+            "aghanimDescription": "Adds a Side Gunner that at random attacks enemy units near Gyrocopter. Prioritizes furthest unit away within its range.",
             "notes": [
                 "Attack range for the primary attack is unchanged."
             ]
         },
         "stat": {
             "abilityId": 5363,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -202,6 +206,9 @@
                 0.0
             ],
             "cooldown": [
+                24.0,
+                22.0,
+                20.0,
                 18.0
             ],
             "manaCost": [
@@ -213,7 +220,8 @@
             "isUltimate": false,
             "duration": "10",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -224,7 +232,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 5364,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Call Down",
             "description": [
@@ -244,7 +252,7 @@
         },
         "stat": {
             "abilityId": 5364,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 48,
             "unitTargetType": 0,
@@ -285,7 +293,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -296,7 +305,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6216,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "3 Homing Missile Charges",
             "description": [],
@@ -305,7 +314,7 @@
         },
         "stat": {
             "abilityId": 6216,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -330,7 +339,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -341,7 +351,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6312,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+3 Flak Cannon Attacks",
             "description": [],
@@ -350,7 +360,7 @@
         },
         "stat": {
             "abilityId": 6312,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -375,7 +385,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -386,7 +397,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6652,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+16 Rocket Barrage Damage",
             "description": [],
@@ -395,7 +406,7 @@
         },
         "stat": {
             "abilityId": 6652,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -420,7 +431,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -431,7 +443,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6653,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-40s Call Down Cooldown",
             "description": [],
@@ -440,7 +452,7 @@
         },
         "stat": {
             "abilityId": 6653,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -465,7 +477,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -476,7 +489,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 6654,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Global Call Down",
             "description": [],
@@ -485,7 +498,7 @@
         },
         "stat": {
             "abilityId": 6654,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -510,7 +523,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -521,7 +535,7 @@
         "uri": "gyrocopter",
         "language": {
             "abilityId": 7141,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.4s Homing Missile Stun Duration",
             "description": [],
@@ -530,7 +544,7 @@
         },
         "stat": {
             "abilityId": 7141,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -555,7 +569,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

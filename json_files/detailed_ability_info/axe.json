@@ -5,7 +5,7 @@
         "uri": "axe",
         "language": {
             "abilityId": 562,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+150 Culling Blade Threshold",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 562,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +50,7 @@
         "name": "special_bonus_unique_axe_6",
         "language": {
             "abilityId": 670,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-1.5s Berserker's Call Cooldown",
             "description": [],
@@ -58,7 +59,7 @@
         },
         "stat": {
             "abilityId": 670,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -83,7 +84,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -94,7 +96,7 @@
         "uri": "axe",
         "language": {
             "abilityId": 5007,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Berserker's Call",
             "description": [
@@ -106,11 +108,12 @@
                 "DURATION: 2.0 / 2.4 / 2.8 / 3.2"
             ],
             "lore": "Mogul Khan's warcry taunts opponents into engaging in an unconquerable battle with the Axe.",
+            "aghanimDescription": "Berserker's Call applies Battle Hunger to affected units. Battle Hunger also reduces enemy armor by 7 and grants Axe 7 armor per affected target. \\n\\nReduces Berserker's Call cooldown by 3.",
             "notes": []
         },
         "stat": {
             "abilityId": 5007,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8196,
             "unitTargetType": 0,
@@ -156,7 +159,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -167,7 +171,7 @@
         "uri": "axe",
         "language": {
             "abilityId": 5008,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Battle Hunger",
             "description": [
@@ -186,7 +190,7 @@
         },
         "stat": {
             "abilityId": 5008,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -235,7 +239,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -246,7 +251,7 @@
         "uri": "axe",
         "language": {
             "abilityId": 5009,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Counter Helix",
             "description": [
@@ -260,11 +265,12 @@
             "lore": "Axe is the only reinforcement this army needs.",
             "notes": [
                 "Counter Helix triggers when the attack hits."
-            ]
+            ],
+            "shardDescription": "Causes Axe's attacks to have a chance to proc a Counter Helix. Attack procs ignore Counter Helix cooldown. Increases attack speed by 35 and proc chance by 10%."
         },
         "stat": {
             "abilityId": 5009,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -292,7 +298,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -303,7 +310,7 @@
         "uri": "axe",
         "language": {
             "abilityId": 5010,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Culling Blade",
             "description": [
@@ -322,7 +329,7 @@
         },
         "stat": {
             "abilityId": 5010,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -363,7 +370,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -374,7 +382,7 @@
         "uri": "beastmaster",
         "language": {
             "abilityId": 5168,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Wild Axes",
             "description": [
@@ -387,13 +395,14 @@
                 "SCEPTER COOLDOWN: 0"
             ],
             "lore": "While learning to maneuver in nature alone, the Beastmaster also mastered the use of a pair of tomahawks, adept at cutting down trees as well as adversaries.",
+            "aghanimDescription": "Causes Wild Axes to have no cooldown and can be used again once they come back. Increases damage by 40.",
             "notes": [
                 "This ability destroys trees."
             ]
         },
         "stat": {
             "abilityId": 5168,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 3,
@@ -425,12 +434,13 @@
                 8.0
             ],
             "manaCost": [
-                80.0
+                65.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -441,11 +451,11 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5509,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Whirling Axes (Ranged)",
             "description": [
-                "Troll hurls a fistful of five axes in a cone shape over 1000.0 range, slowing and damaging enemy units."
+                "Troll hurls a fistful of five axes in a cone shape over 950.0 range, slowing and damaging enemy units."
             ],
             "attributes": [
                 "AXE DAMAGE: 75",
@@ -453,13 +463,14 @@
                 "MOVEMENT SLOW: 40%"
             ],
             "lore": "Only axes fueled by hate whirl with such a deadly spin.",
+            "aghanimDescription": "Causes Ranged Axes to dispel enemies. Reduces cooldown and manacost.",
             "notes": [
                 "Does not affect Roshan."
             ]
         },
         "stat": {
             "abilityId": 5509,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16408,
             "unitTargetType": 3,
@@ -479,7 +490,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                1000
+                950
             ],
             "castRangeBuffer": [
                 250
@@ -494,12 +505,13 @@
                 9.0
             ],
             "manaCost": [
-                50.0
+                60.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -510,7 +522,7 @@
         "uri": "troll_warlord",
         "language": {
             "abilityId": 5510,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Whirling Axes (Melee)",
             "description": [
@@ -524,13 +536,14 @@
                 "WHIRL DURATION: 3.0"
             ],
             "lore": "Keep your enemies close.",
+            "aghanimDescription": "Causes Melee Axes to dispel Troll Warlord. Reduces cooldown and manacost.",
             "notes": [
                 "Does not affect Roshan."
             ]
         },
         "stat": {
             "abilityId": 5510,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -564,7 +577,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -575,7 +589,7 @@
         "uri": "axe",
         "language": {
             "abilityId": 6102,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Battle Hunger DPS",
             "description": [],
@@ -584,7 +598,7 @@
         },
         "stat": {
             "abilityId": 6102,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -609,7 +623,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -620,7 +635,7 @@
         "uri": "axe",
         "language": {
             "abilityId": 6608,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Berserker's Call AoE",
             "description": [],
@@ -629,7 +644,7 @@
         },
         "stat": {
             "abilityId": 6608,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -654,7 +669,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -665,7 +681,7 @@
         "uri": "axe",
         "language": {
             "abilityId": 6815,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Attacking Procs Counter Helix",
             "description": [
@@ -676,7 +692,7 @@
         },
         "stat": {
             "abilityId": 6815,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -701,7 +717,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -711,7 +728,7 @@
         "name": "special_bonus_unique_axe_4",
         "language": {
             "abilityId": 6991,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+15 Counter Helix Damage",
             "description": [],
@@ -720,7 +737,7 @@
         },
         "stat": {
             "abilityId": 6991,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -745,7 +762,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

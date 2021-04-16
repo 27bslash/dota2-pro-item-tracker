@@ -2,9 +2,10 @@
     "701": {
         "id": 701,
         "name": "medusa_cold_blooded",
+        "uri": "medusa",
         "language": {
             "abilityId": 701,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Cold Blooded",
             "description": [
@@ -15,7 +16,7 @@
         },
         "stat": {
             "abilityId": 701,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -43,7 +44,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -54,7 +56,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 5504,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Split Shot",
             "description": [
@@ -74,7 +76,7 @@
         },
         "stat": {
             "abilityId": 5504,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2564,
             "unitTargetType": 0,
@@ -105,7 +107,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -116,7 +119,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 5505,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Mystic Snake",
             "description": [
@@ -131,17 +134,18 @@
                 "MOVEMENT SLOW: 30%",
                 "TURN SLOW: 50%",
                 "SLOW DURATION: 3",
-                "SCEPTER BASE DURATION: 1.0",
-                "SCEPTER DURATION BOUNCE INCREASE: 0.3"
+                "SCEPTER BASE DURATION: 1.5",
+                "SCEPTER DURATION BOUNCE INCREASE: 0.2"
             ],
             "lore": "The Gorgon's curse is her greatest strength.",
+            "aghanimDescription": "Causes Mystic Snake to turn enemies hit into stone. Stone duration increases with each bounce of the Mystic Snake.",
             "notes": [
                 "Mystic Snake cannot be disjointed."
             ]
         },
         "stat": {
             "abilityId": 5505,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -181,7 +185,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -192,15 +197,16 @@
         "uri": "medusa",
         "language": {
             "abilityId": 5506,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Mana Shield",
             "description": [
-                "Creates a shield that absorbs 70% of incoming damage in exchange for Medusa's mana."
+                "Creates a shield that absorbs 70% of incoming damage in exchange for Medusa's mana. Provides bonus mana capacity."
             ],
             "attributes": [
                 "DAMAGE PER MANA: 1.6 / 1.9 / 2.2 / 2.5",
-                "DAMAGE ABSORBED: 70%"
+                "DAMAGE ABSORBED: 70%",
+                "BONUS MANA: 100 / 150 / 200 / 250"
             ],
             "lore": "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers.",
             "notes": [
@@ -209,7 +215,7 @@
         },
         "stat": {
             "abilityId": 5506,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2564,
             "unitTargetType": 0,
@@ -240,7 +246,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -251,7 +258,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 5507,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Stone Gaze",
             "description": [
@@ -272,7 +279,7 @@
         },
         "stat": {
             "abilityId": 5507,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -309,7 +316,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -320,7 +328,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 6182,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2s Stone Gaze Duration",
             "description": [
@@ -331,7 +339,7 @@
         },
         "stat": {
             "abilityId": 6182,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -356,7 +364,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -367,7 +376,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 6392,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+7 Split Shot Targets",
             "description": [],
@@ -376,7 +385,7 @@
         },
         "stat": {
             "abilityId": 6392,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -401,7 +410,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -412,16 +422,16 @@
         "uri": "medusa",
         "language": {
             "abilityId": 6687,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+32% Mystic Snake Mana Gain",
+            "displayName": "+35% Mystic Snake Mana Gain",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6687,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -446,7 +456,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -457,7 +468,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 6803,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Split Shot Uses Modifiers",
             "description": [
@@ -468,7 +479,7 @@
         },
         "stat": {
             "abilityId": 6803,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -493,7 +504,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -504,7 +516,7 @@
         "uri": "medusa",
         "language": {
             "abilityId": 7389,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3s Mystic Snake Cooldown",
             "description": [],
@@ -513,7 +525,7 @@
         },
         "stat": {
             "abilityId": 7389,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -538,7 +550,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

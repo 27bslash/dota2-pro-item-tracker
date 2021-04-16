@@ -5,7 +5,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 318,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Chain Frost Unlimited Bounces",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 318,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,16 +51,16 @@
         "uri": "lich",
         "language": {
             "abilityId": 530,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+90 Frost Blast AoE Damage",
+            "displayName": "+125 Frost Blast Radius and Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 530,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -84,7 +85,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -95,7 +97,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 531,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Chain Frost Damage",
             "description": [],
@@ -104,7 +106,7 @@
         },
         "stat": {
             "abilityId": 531,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -129,7 +131,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "775": {
+        "id": 775,
+        "name": "special_bonus_unique_lich_8",
+        "language": {
+            "abilityId": 775,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+10% Frost Shield Damage Reduction",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 775,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -140,14 +188,14 @@
         "uri": "lich",
         "language": {
             "abilityId": 5134,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Frost Blast",
             "description": [
                 "Blasts the target enemy unit with damaging frost, dealing area damage and slowing movement and attack rates for 4.0 seconds. The primary target receives both base and area damage."
             ],
             "attributes": [
-                "AREA DAMAGE: 75 / 100 / 125 / 150",
+                "AREA DAMAGE: 80 / 120 / 160 / 200",
                 "RADIUS: 200 / 200 / 200 / 200",
                 "MOVEMENT SLOW: -30%",
                 "ATTACK SLOW: -30"
@@ -157,7 +205,7 @@
         },
         "stat": {
             "abilityId": 5134,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 40,
             "unitTargetType": 3,
@@ -189,21 +237,22 @@
                 7.0
             ],
             "damage": [
-                50.0,
-                100.0,
-                150.0,
-                200.0
+                40.0,
+                80.0,
+                120.0,
+                160.0
             ],
             "manaCost": [
                 115.0,
-                140.0,
-                165.0,
-                190.0
+                135.0,
+                155.0,
+                175.0
             ],
             "isUltimate": false,
             "duration": "4.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -214,7 +263,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 5135,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ice Armor",
             "description": [
@@ -233,7 +282,7 @@
         },
         "stat": {
             "abilityId": 5135,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 163848,
             "unitTargetType": 35,
@@ -279,7 +328,8 @@
             "isUltimate": false,
             "duration": "40.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -290,7 +340,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 5136,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Frost Shield",
             "description": [
@@ -311,7 +361,7 @@
         },
         "stat": {
             "abilityId": 5136,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 35,
@@ -354,7 +404,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -365,7 +416,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 5137,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Chain Frost",
             "description": [
@@ -389,7 +440,7 @@
         },
         "stat": {
             "abilityId": 5137,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -424,13 +475,14 @@
             ],
             "manaCost": [
                 200.0,
-                325.0,
+                350.0,
                 500.0
             ],
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -441,7 +493,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 6039,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Frost Shield Provides +50 HP Regen",
             "description": [],
@@ -450,7 +502,7 @@
         },
         "stat": {
             "abilityId": 6039,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -475,7 +527,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -486,7 +539,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 6292,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Attacks Apply 60% MS and AS Slow",
             "description": [],
@@ -495,7 +548,7 @@
         },
         "stat": {
             "abilityId": 6292,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -520,7 +573,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -531,7 +585,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 6387,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3s Frost Blast Cooldown",
             "description": [],
@@ -540,7 +594,7 @@
         },
         "stat": {
             "abilityId": 6387,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -565,7 +619,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -575,7 +630,7 @@
         "name": "lich_dark_sorcery",
         "language": {
             "abilityId": 7311,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Unholy Pact",
             "description": [
@@ -591,7 +646,7 @@
         },
         "stat": {
             "abilityId": 7311,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -622,7 +677,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -632,7 +688,7 @@
         "name": "lich_frost_aura",
         "language": {
             "abilityId": 7312,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Frost Aura",
             "description": [
@@ -647,7 +703,7 @@
         },
         "stat": {
             "abilityId": 7312,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 0,
@@ -675,7 +731,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -686,7 +743,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 7325,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Sinister Gaze",
             "description": [
@@ -699,11 +756,12 @@
                 "SCEPTER AOE: 400"
             ],
             "lore": "Mind the cold...",
+            "aghanimDescription": "Casts Sinister Gaze in a target area.",
             "notes": []
         },
         "stat": {
             "abilityId": 7325,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 67109000,
             "unitTargetType": 3,
@@ -746,7 +804,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -757,7 +816,7 @@
         "uri": "lich",
         "language": {
             "abilityId": 7360,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+4s Frost Shield Duration",
             "description": [],
@@ -766,7 +825,7 @@
         },
         "stat": {
             "abilityId": 7360,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -791,7 +850,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -799,20 +859,21 @@
     "8028": {
         "id": 8028,
         "name": "lich_ice_spire",
+        "uri": "lich",
         "language": {
             "abilityId": 8028,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ice Spire",
             "description": [
-                "Creates an icicle at the target spot for 15.0 seconds, slowing enemies within 500 range by -20%. Has 300 health.<br><br>Chain Frost can bounce to the Icicle if there are no other enemies in range.<br><br>Can cast Frost Shield on it."
+                "Creates an icicle at the target spot for 15.0 seconds, slowing enemies within 750 range by -30%. Has 800 health.<br><br>Chain Frost can bounce to the Icicle if there are no other enemies in range.<br><br>Can cast Frost Shield on it."
             ],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 8028,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -849,7 +910,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false

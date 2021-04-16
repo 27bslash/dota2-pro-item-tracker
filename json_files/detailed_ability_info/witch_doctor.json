@@ -5,16 +5,16 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 417,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+80 Maledict AoE",
+            "displayName": "+100 Maledict AoE",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 417,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,7 +51,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 555,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+15% Maledict Burst Damage",
             "description": [],
@@ -59,7 +60,7 @@
         },
         "stat": {
             "abilityId": 555,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -84,7 +85,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -92,9 +94,10 @@
     "632": {
         "id": 632,
         "name": "witch_doctor_voodoo_switcheroo",
+        "uri": "witch_doctor",
         "language": {
             "abilityId": 632,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Voodoo Switcheroo",
             "description": [
@@ -107,7 +110,7 @@
         },
         "stat": {
             "abilityId": 632,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -141,7 +144,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -152,7 +156,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5138,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Paralyzing Cask",
             "description": [
@@ -162,7 +166,7 @@
                 "BOUNCES: 2 / 4 / 6 / 8",
                 "HERO STUN DURATION: 1.0 / 1.0 / 1.0 / 1.0",
                 "CREEP STUN DURATION: 5.0 / 5.0 / 5.0 / 5.0",
-                "HERO DAMAGE: 50"
+                "HERO DAMAGE: 50 / 60 / 70 / 80"
             ],
             "lore": "The Witch Doctor recycles the bones of fallen friends and foes, using the powder as part of his arsenal of charms and alchemy.",
             "notes": [
@@ -171,7 +175,7 @@
         },
         "stat": {
             "abilityId": 5138,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -223,7 +227,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -234,7 +239,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5139,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Voodoo Restoration",
             "description": [
@@ -253,7 +258,7 @@
         },
         "stat": {
             "abilityId": 5139,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 524804,
             "unitTargetType": 0,
@@ -290,7 +295,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -301,7 +307,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5140,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Maledict",
             "description": [
@@ -318,7 +324,7 @@
         },
         "stat": {
             "abilityId": 5140,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 1,
@@ -370,7 +376,8 @@
             "isUltimate": false,
             "duration": "12.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -381,7 +388,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5141,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Death Ward",
             "description": [
@@ -392,6 +399,7 @@
                 "ATTACK RANGE: 700"
             ],
             "lore": "Witch Doctor performs a ritualistic dance, one that haunts the dreams of those who live to recount it.",
+            "aghanimDescription": "Death Ward attacks have True Strike and bounce between nearby enemies.",
             "notes": [
                 "The Death Ward is invulnerable, and is only destroyed if Witch Doctor is interrupted or its duration expires.",
                 "The Death Ward can be controlled, and made to attack a specific target.",
@@ -400,7 +408,7 @@
         },
         "stat": {
             "abilityId": 5141,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 144,
             "unitTargetType": 1,
@@ -444,7 +452,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -455,7 +464,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 5998,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Death Ward Attack Range",
             "description": [],
@@ -464,7 +473,7 @@
         },
         "stat": {
             "abilityId": 5998,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -489,7 +498,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -500,16 +510,16 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 6298,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+1.2% Max Health Voodoo Restoration",
+            "displayName": "+1.5% Max Health Voodoo Restoration",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6298,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -534,7 +544,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -545,7 +556,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 6524,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2 Cask Bounces",
             "description": [],
@@ -554,7 +565,7 @@
         },
         "stat": {
             "abilityId": 6524,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -579,7 +590,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -590,7 +602,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 6995,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1 Maledict Tick",
             "description": [],
@@ -599,7 +611,7 @@
         },
         "stat": {
             "abilityId": 6995,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -624,7 +636,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -635,7 +648,7 @@
         "uri": "witch_doctor",
         "language": {
             "abilityId": 6996,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+60 Death Ward Damage",
             "description": [],
@@ -644,7 +657,7 @@
         },
         "stat": {
             "abilityId": 6996,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -669,7 +682,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

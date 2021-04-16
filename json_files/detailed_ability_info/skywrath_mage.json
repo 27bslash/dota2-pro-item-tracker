@@ -5,17 +5,18 @@
         "uri": "Skywrath_Mage",
         "language": {
             "abilityId": 5581,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Arcane Bolt",
             "description": [
                 "Skywrath Mage launches a slow-moving bolt of arcane magic, dealing damage to an enemy unit based on Skywrath Mage's intelligence."
             ],
             "attributes": [
-                "BASE DAMAGE: 60 / 80 / 100 / 120",
-                "INT DAMAGE MULTIPLIER: 1.6"
+                "BASE DAMAGE: 60 / 85 / 110 / 135",
+                "INT DAMAGE MULTIPLIER: 1.4"
             ],
             "lore": "Within the Ghastly Eyrie's endless intrigue, only the clever and calm can hope to survive.",
+            "aghanimDescription": "When Skywrath Mage casts Arcane Bolt, a different random target within %scepter_radius% range willl be hit with the same ability. Heroes will take priority.",
             "notes": [
                 "The projectile moves very slowly (500 ms), providing 325 vision around it.  Upon impact, it will reveal the target area for 3.34 seconds.",
                 "Arcane Bolt cannot be disjointed."
@@ -23,7 +24,7 @@
         },
         "stat": {
             "abilityId": 5581,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -66,7 +67,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -77,7 +79,7 @@
         "uri": "Skywrath_Mage",
         "language": {
             "abilityId": 5582,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Concussive Shot",
             "description": [
@@ -91,6 +93,7 @@
                 "SLOW: 30% / 35% / 40% / 45%"
             ],
             "lore": "Those who serve the court of the Ghastly Eyrie are ever locked in covert war. One must always know where danger lurks nearest.",
+            "aghanimDescription": "When Skywrath Mage casts Concussive Shot, a different random target within cast range will be hit with the same ability. Heroes will take priority.",
             "notes": [
                 "If no enemy heroes are in range or they are in fog, Concussive Shot targets the nearest enemy creep.",
                 "Damages creeps around the impact area.",
@@ -99,7 +102,7 @@
         },
         "stat": {
             "abilityId": 5582,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -131,9 +134,9 @@
                 0.0
             ],
             "cooldown": [
-                18.0,
-                16.0,
+                15.0,
                 14.0,
+                13.0,
                 12.0
             ],
             "manaCost": [
@@ -145,7 +148,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -156,7 +160,7 @@
         "uri": "Skywrath_Mage",
         "language": {
             "abilityId": 5583,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ancient Seal",
             "description": [
@@ -167,13 +171,15 @@
                 "DURATION: 3.0 / 4.0 / 5.0 / 6.0"
             ],
             "lore": "A holy incantation, whosoever finds themselves touched by Avilliva's sigil must suffer in penitent silence.",
+            "aghanimDescription": "Anytime Skywrath Mage casts Ancient Seal, a different random target within %scepter_radius% range will be affected by the same ability. Heroes will take priority.",
             "notes": [
                 "The magic damage resistance reduction doesn't affect creeps."
-            ]
+            ],
+            "shardDescription": "Ancient Seal debuff now causes other debuffs applied to last 50%% longer. Grants vision over the target."
         },
         "stat": {
             "abilityId": 5583,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -219,7 +225,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -230,7 +237,7 @@
         "uri": "Skywrath_Mage",
         "language": {
             "abilityId": 5584,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Mystic Flare",
             "description": [
@@ -242,15 +249,17 @@
                 "DAMAGE: 750 / 1175 / 1600"
             ],
             "lore": "Only the most practiced of Skywrath sorcerers could hope to shape the skies into such a storm.",
+            "aghanimDescription": "When Skywrath Mage casts Mystic Flare, another Mystic Flare will be created on the position of a different random target enemy within %scepter_radius% range. Heroes will take priority",
             "notes": [
                 "Mystic Flare only affects Heroes; it does not damage illusions or creep heroes.",
                 "Spell immune enemies do not count toward the damage distribution.",
                 "Mystic Flare will damage enemy creeps if no enemy heroes are present."
-            ]
+            ],
+            "shardDescription": "Causes Mystic Flare to not split its damage and affect creeps as well."
         },
         "stat": {
             "abilityId": 5584,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 16432,
             "unitTargetType": 1,
@@ -294,7 +303,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

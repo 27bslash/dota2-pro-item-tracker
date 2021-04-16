@@ -1,11 +1,56 @@
 {
+    "757": {
+        "id": 757,
+        "name": "special_bonus_unique_templar_assassin_8",
+        "language": {
+            "abilityId": 757,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+80 Psi Blades Range",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 757,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
     "5194": {
         "id": 5194,
         "name": "templar_assassin_refraction",
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5194,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Refraction",
             "description": [
@@ -25,7 +70,7 @@
         },
         "stat": {
             "abilityId": 5194,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -65,7 +110,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -76,14 +122,14 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5195,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Meld",
             "description": [
                 "Templar Assassin conceals herself, becoming invisible as long as she remains still. If Meld's invisibility is broken by attacking an enemy, Lanaya will deal bonus damage to the enemy and reduce their armor for 12 seconds."
             ],
             "attributes": [
-                "BONUS DAMAGE: 50 / 100 / 150 / 200",
+                "BONUS DAMAGE: 80 / 120 / 160 / 200",
                 "ARMOR REDUCTION: -5 / -6 / -7 / -8"
             ],
             "lore": "Lanaya is as elusive as her covenant with the Hidden Temple.",
@@ -94,7 +140,7 @@
         },
         "stat": {
             "abilityId": 5195,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 40964,
             "unitTargetType": 0,
@@ -123,21 +169,22 @@
                 0.0
             ],
             "cooldown": [
+                15.0,
                 12.0,
-                10.0,
-                8.0,
+                9.0,
                 6.0
             ],
             "manaCost": [
-                50.0,
-                50.0,
-                50.0,
+                35.0,
+                40.0,
+                45.0,
                 50.0
             ],
             "isUltimate": false,
             "duration": "12",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -148,7 +195,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5196,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Psi Blades",
             "description": [
@@ -167,7 +214,7 @@
         },
         "stat": {
             "abilityId": 5196,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -192,7 +239,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -203,7 +251,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5197,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Psionic Trap",
             "description": [
@@ -221,11 +269,12 @@
                 "Traps last indefinitely.",
                 "They have invisibility that fades in over 2.0 / 2.0 / 2.0 seconds, spell immunity, and 100 HP.",
                 "Traps have 400/400 vision range and don't prevent neutral camps from spawning."
-            ]
+            ],
+            "shardDescription": "Causes Psionic Traps to silence enemies for up to 3.5 seconds based on how long the trap has been charged. Increases max trap count by 4 and vision by 125."
         },
         "stat": {
             "abilityId": 5197,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 16400,
             "unitTargetType": 0,
@@ -245,7 +294,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                2000
+                1800
             ],
             "castRangeBuffer": [
                 250
@@ -269,7 +318,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -280,7 +330,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 5198,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Trap",
             "description": [
@@ -293,7 +343,7 @@
         },
         "stat": {
             "abilityId": 5198,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 526404,
             "unitTargetType": 0,
@@ -327,7 +377,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -337,7 +388,7 @@
         "name": "templar_assassin_self_trap",
         "language": {
             "abilityId": 5199,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Trap",
             "description": [
@@ -348,7 +399,7 @@
         },
         "stat": {
             "abilityId": 5199,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2116,
             "unitTargetType": 0,
@@ -382,7 +433,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -393,16 +445,16 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6071,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+6 Refraction Instances",
+            "displayName": "+8 Refraction Instances",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6071,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -427,7 +479,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -438,7 +491,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6545,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3 Meld Armor Reduction",
             "description": [],
@@ -447,7 +500,7 @@
         },
         "stat": {
             "abilityId": 6545,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -472,7 +525,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -483,16 +537,16 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6938,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+160 Psionic Trap Damage",
+            "displayName": "+180 Psionic Trap Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6938,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -517,7 +571,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -528,7 +583,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6939,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Meld Dispels",
             "description": [
@@ -539,7 +594,7 @@
         },
         "stat": {
             "abilityId": 6939,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -564,7 +619,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -575,7 +631,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 6940,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Psi Blades Spill Paralyzes",
             "description": [
@@ -586,7 +642,7 @@
         },
         "stat": {
             "abilityId": 6940,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -611,7 +667,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -622,7 +679,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 7058,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+3 Psionic Traps",
             "description": [],
@@ -631,7 +688,7 @@
         },
         "stat": {
             "abilityId": 7058,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -656,7 +713,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -667,7 +725,7 @@
         "uri": "templar_assassin",
         "language": {
             "abilityId": 7371,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "1s Meld Hit Bash",
             "description": [],
@@ -676,7 +734,7 @@
         },
         "stat": {
             "abilityId": 7371,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -701,7 +759,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -709,9 +768,10 @@
     "7853": {
         "id": 7853,
         "name": "templar_assassin_trap_teleport",
+        "uri": "templar_assassin",
         "language": {
             "abilityId": 7853,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Psionic Projection",
             "description": [
@@ -727,7 +787,7 @@
         },
         "stat": {
             "abilityId": 7853,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -756,15 +816,16 @@
                 1.0
             ],
             "cooldown": [
-                15.0
+                10.0
             ],
             "manaCost": [
-                100.0
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

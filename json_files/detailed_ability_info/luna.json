@@ -4,7 +4,7 @@
         "name": "luna_lunar_grace",
         "language": {
             "abilityId": 337,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Lunar Blessing",
             "description": [
@@ -20,7 +20,7 @@
         },
         "stat": {
             "abilityId": 337,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -54,10 +54,56 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "770": {
+        "id": 770,
+        "name": "special_bonus_unique_luna_6",
+        "language": {
+            "abilityId": 770,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-35s Eclipse Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 770,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5222": {
         "id": 5222,
@@ -65,7 +111,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 5222,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Lucent Beam",
             "description": [
@@ -76,11 +122,12 @@
                 "BEAM DAMAGE: 75 / 150 / 225 / 300"
             ],
             "lore": "Selemene smites those who encroach upon the Nightsilver Woods.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Allows Lucent beam to be ground targeted with a 325 target search radius. Also releases attacks on up to two random targets within 500 range of the Lucent Beam. Reduces mancost by 50."
         },
         "stat": {
             "abilityId": 5222,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -123,7 +170,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -134,7 +182,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 5223,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Moon Glaives",
             "description": [
@@ -152,7 +200,7 @@
         },
         "stat": {
             "abilityId": 5223,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -177,7 +225,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -188,7 +237,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 5224,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Lunar Blessing",
             "description": [
@@ -204,7 +253,7 @@
         },
         "stat": {
             "abilityId": 5224,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -229,7 +278,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -240,7 +290,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 5225,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Eclipse",
             "description": [
@@ -255,6 +305,7 @@
                 "SCEPTER CAST RANGE: 2500"
             ],
             "lore": "In times of great need, Selemene herself descends into the world, blocking out the light and hope of the opposed.",
+            "aghanimDescription": "Allows Luna to cast Eclipse on an allied unit or herself and have its effects follow them, or cast it on an area. Also increases total beams and duration, removes the limit on beams per unit, and makes the beams appear twice as fast.",
             "notes": [
                 "Eclipse doesn't work if Luna doesn't have any points in Lucent Beam.",
                 "Beams will stop if Luna is killed.",
@@ -264,7 +315,7 @@
         },
         "stat": {
             "abilityId": 5225,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 3,
@@ -290,9 +341,7 @@
                 250
             ],
             "castPoint": [
-                0.6,
-                0.6,
-                0.6
+                0.5
             ],
             "cooldown": [
                 140.0
@@ -305,7 +354,8 @@
             "isUltimate": true,
             "duration": "2.4 4.2 6.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -316,7 +366,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 6127,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3.5s Lucent Beam Cooldown",
             "description": [],
@@ -325,7 +375,7 @@
         },
         "stat": {
             "abilityId": 6127,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -350,7 +400,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -361,7 +412,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 6180,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Lucent Beam Damage",
             "description": [],
@@ -370,7 +421,7 @@
         },
         "stat": {
             "abilityId": 6180,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -395,7 +446,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -406,7 +458,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 6682,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+14 Lunar Blessing Attributes",
             "description": [],
@@ -415,7 +467,7 @@
         },
         "stat": {
             "abilityId": 6682,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -440,7 +492,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -450,16 +503,16 @@
         "name": "special_bonus_unique_luna_4",
         "language": {
             "abilityId": 7047,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+0.25s Lucent Beam Ministun",
+            "displayName": "+0.4s Lucent Beam Ministun",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7047,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -484,7 +537,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -495,7 +549,7 @@
         "uri": "luna",
         "language": {
             "abilityId": 7055,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.2s Eclipse Lucent Ministun",
             "description": [],
@@ -504,7 +558,7 @@
         },
         "stat": {
             "abilityId": 7055,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -529,7 +583,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

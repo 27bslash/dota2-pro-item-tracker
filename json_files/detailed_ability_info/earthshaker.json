@@ -1,11 +1,56 @@
 {
+    "744": {
+        "id": 744,
+        "name": "special_bonus_unique_earthshaker_4",
+        "language": {
+            "abilityId": 744,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+35% Enchant Totem Cleave",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 744,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
     "5023": {
         "id": 5023,
         "name": "earthshaker_fissure",
         "uri": "earthshaker",
         "language": {
             "abilityId": 5023,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fissure",
             "description": [
@@ -20,11 +65,12 @@
             "notes": [
                 "Creeps will wait for Fissure to disappear. They will not attempt to walk around it.",
                 "Fissure is not blocked by Linken's Sphere."
-            ]
+            ],
+            "shardDescription": "Reduces Fissure cooldown by 2 seconds and allows Earthshaker to walk on it. When he casts any ability, an Aftershock is released along its path that stuns for half the duration."
         },
         "stat": {
             "abilityId": 5023,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16400,
             "unitTargetType": 3,
@@ -76,7 +122,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -87,7 +134,7 @@
         "uri": "earthshaker",
         "language": {
             "abilityId": 5024,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Enchant Totem",
             "description": [
@@ -95,9 +142,10 @@
             ],
             "attributes": [
                 "BONUS: 100% / 200% / 300% / 400%",
-                "SCEPTER JUMP DISTANCE: 1100"
+                "SCEPTER JUMP DISTANCE: 950"
             ],
             "lore": "Raigor's gorilla strength can destroy mountains.",
+            "aghanimDescription": "Enchant Totem becomes a %distance_scepter% range ground target ability, causing Earthshaker to jump in the air and land at the target spot, casting Enchant Totem there.  Self-casting the ability will behave in the original form, without jumping. Grants Enchant Totem a 40%% cleave hit.",
             "notes": [
                 "Bonus damage is based on base damage and that given by primary attribute.",
                 "Self-cast with Scepter will make it behave in the non-Scepter form, without jumping."
@@ -105,7 +153,7 @@
         },
         "stat": {
             "abilityId": 5024,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 3,
@@ -154,7 +202,8 @@
             "isUltimate": false,
             "duration": "14",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -165,7 +214,7 @@
         "uri": "earthshaker",
         "language": {
             "abilityId": 5025,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Aftershock",
             "description": [
@@ -181,7 +230,7 @@
         },
         "stat": {
             "abilityId": 5025,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -212,7 +261,8 @@
             "isUltimate": false,
             "duration": "0.6 0.9 1.2 1.5",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -223,7 +273,7 @@
         "uri": "earthshaker",
         "language": {
             "abilityId": 5026,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Echo Slam",
             "description": [
@@ -239,7 +289,7 @@
         },
         "stat": {
             "abilityId": 5026,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -280,7 +330,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -291,7 +342,7 @@
         "uri": "earthshaker",
         "language": {
             "abilityId": 6035,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-1.5s Enchant Totem Cooldown",
             "description": [],
@@ -300,7 +351,7 @@
         },
         "stat": {
             "abilityId": 6035,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -325,7 +376,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -336,7 +388,7 @@
         "uri": "earthshaker",
         "language": {
             "abilityId": 6425,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+40 Echo Damage",
             "description": [],
@@ -345,7 +397,7 @@
         },
         "stat": {
             "abilityId": 6425,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -370,7 +422,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -381,7 +434,7 @@
         "uri": "earthshaker",
         "language": {
             "abilityId": 6511,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+320 Fissure Range",
             "description": [],
@@ -390,7 +443,7 @@
         },
         "stat": {
             "abilityId": 6511,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -415,7 +468,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

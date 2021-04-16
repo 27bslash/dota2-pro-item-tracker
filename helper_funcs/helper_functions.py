@@ -16,6 +16,7 @@ db = cluster['pro-item-tracker']
 hero_urls = db['urls']
 hero_output = db['heroes']
 parse = db['parse']
+dead_games = db['dead_games']
 
 
 class Hero:
@@ -220,14 +221,14 @@ class Db_insert:
                 del roles[k]
         if key == 'bans':
             db[collection].find_one_and_update(
-                {'hero': val}, {"$set": {'total_bans': hero_output.count_documents({key: val})}})
+                {'hero': val}, {"$set": {'total_bans': hero_output.count_documents({key: val})}}, upsert=True)
         else:
             db[collection].find_one_and_replace({key: val},
-                                                {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles})
+                                                {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles}, upsert=True)
 
     def insert_bans(self, val):
         db['hero_picks'].find_one_and_replace(
-            {'hero': val}, {'total_bans': hero_output.count_documents({'bans': val})})
+            {'hero': val}, {'total_bans': hero_output.count_documents({'bans': val})}, upsert=True)
 
     def insert_talent_order(self, hero):
         with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
@@ -238,7 +239,7 @@ class Db_insert:
             talents = [detailed_ability_info(
                 [x['abilityId']], hero_methods.get_id(hero))[0] for x in data_talents]
             db['talents'].find_one_and_update(
-                {'hero': hero}, {'$set': {'hero': hero, 'talents': talents}})
+                {'hero': hero}, {'$set': {'hero': hero, 'talents': talents}}, upsert=True)
 
     def insert_best_games(self):
         print('INSERT BEST GAMES')
@@ -306,6 +307,7 @@ def get_urls(hero_name):
     try:
         urls = [match['id'] for match in data if hero_output.find_one(
             {'hero': hero_name, 'id': match['id']}) is None and parse.find_one(
+            {'hero': hero_name, 'id': match['id']}) is None and dead_games.find_one(
             {'hero': hero_name, 'id': match['id']}) is None]
     except Exception as e:
         pass
@@ -363,6 +365,8 @@ def detailed_ability_info(arr, h_id):
             _id = str(_id)
             if _id in data:
                 # print(_id)
+                if int(_id) == 730:
+                    continue
                 try:
                     start = time.perf_counter()
                     d = {}
@@ -373,25 +377,25 @@ def detailed_ability_info(arr, h_id):
                     level = i+1
                     if 'uri' in data[_id]:
                         if data[_id]['uri'] != 'invoker':
-                            if level > 16:
-                                gap += 1
-                            if level > 17:
-                                gap += 1
-                            if level > 18:
-                                gap += 4
-                            d['level'] = i+1+gap
+                            # if level > 16:
+                            #     gap += 1
+                            # if level > 17:
+                            #     gap += 1
+                            # if level > 18:
+                            #     gap += 4
+                            d['level'] = i+1
                         else:
                             # invoker edge case
                             level = i+1
-                            d['level'] = i+1+gap
+                            d['level'] = i+1
                     else:
-                        if level > 16:
-                            gap += 1
-                        if level > 17:
-                            gap += 1
-                        if level > 18:
-                            gap += 4
-                        d['level'] = i+1+gap
+                        # if level > 16:
+                        #     gap += 1
+                        # if level > 17:
+                        #     gap += 1
+                        # if level > 18:
+                        #     gap += 4
+                        d['level'] = i+1
                     if 'special_bonus' in data[_id]['name']:
                         d['type'] = 'talent'
                         with open('json_files/stratz_talents.json', 'r', encoding='utf') as f:
@@ -408,7 +412,7 @@ def detailed_ability_info(arr, h_id):
                     sli = slice(0, 19)
                     output = output[sli]
                 except Exception as e:
-                    print(traceback.format_exc())
+                    print(_id, traceback.format_exc())
     end = time.time()
     return output
 

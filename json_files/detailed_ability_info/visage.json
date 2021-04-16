@@ -4,7 +4,7 @@
         "name": "special_bonus_unique_visage_7",
         "language": {
             "abilityId": 626,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2 Grave Chill Duration",
             "description": [],
@@ -13,7 +13,7 @@
         },
         "stat": {
             "abilityId": 626,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -38,7 +38,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -48,11 +49,11 @@
         "name": "visage_silent_as_the_grave",
         "language": {
             "abilityId": 683,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Silent as the Grave",
             "description": [
-                "Turns Visage and familiars invisible, granting Visage 20% movement speed and upgrading its movement type to flying. When Visage or its familiars leave invisibility they deal 30% more damage for 4 seconds. Lasts 40 seconds. Invisibility ends when attacking or casting."
+                "Turns Visage and familiars invisible, granting Visage 20% movement speed and upgrading its movement type to flying. When Visage or its familiars leave invisibility they deal 30% more damage for 4 seconds. Lasts 35.0 seconds. Invisibility ends when attacking or casting."
             ],
             "attributes": [
                 "BONUS DAMAGE DURATION: 4",
@@ -62,7 +63,7 @@
         },
         "stat": {
             "abilityId": 683,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 526341,
             "unitTargetType": 0,
@@ -96,10 +97,56 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "776": {
+        "id": 776,
+        "name": "special_bonus_unique_visage_8",
+        "language": {
+            "abilityId": 776,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-3s Grave Chill Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 776,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5480": {
         "id": 5480,
@@ -107,7 +154,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 5480,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Grave Chill",
             "description": [
@@ -127,7 +174,7 @@
         },
         "stat": {
             "abilityId": 5480,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -170,7 +217,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -181,7 +229,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 5481,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Soul Assumption",
             "description": [
@@ -203,7 +251,7 @@
         },
         "stat": {
             "abilityId": 5481,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -241,15 +289,13 @@
                 4.0
             ],
             "manaCost": [
-                135.0,
-                140.0,
-                145.0,
-                150.0
+                125.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -260,7 +306,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 5482,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Gravekeeper's Cloak",
             "description": [
@@ -277,11 +323,12 @@
             "notes": [
                 "Each time Visage receives damage greater than the Minimum Damage that was not self-inflicted and was from a player owned source, a layer is removed.",
                 "Familiars within 1200 range of Visage will receive the current damage reduction from Gravekeeper's Cloak."
-            ]
+            ],
+            "shardDescription": "Grants Visage the ability to cast Stone Form. Restores up to 35% of your health. Cooldown: 60. Manacost: 125."
         },
         "stat": {
             "abilityId": 5482,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -306,7 +353,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -317,7 +365,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 5483,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Summon Familiars",
             "description": [
@@ -325,7 +373,7 @@
             ],
             "attributes": [
                 "FAMILIAR SPEED: 430",
-                "FAMILIAR ATTACK DAMAGE: 20 / 50 / 75",
+                "FAMILIAR ATTACK DAMAGE: 25 / 50 / 75",
                 "HP: 500 / 600 / 700"
             ],
             "lore": "Guardians of the Narrow Maze, Necro'lic's Familiars stand watch over his domain.",
@@ -336,7 +384,7 @@
         },
         "stat": {
             "abilityId": 5483,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -374,7 +422,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -384,7 +433,7 @@
         "name": "visage_summon_familiars_stone_form",
         "language": {
             "abilityId": 5484,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Stone Form",
             "description": [
@@ -401,7 +450,7 @@
         },
         "stat": {
             "abilityId": 5484,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 101,
             "unitTargetType": 0,
@@ -435,7 +484,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -445,7 +495,7 @@
         "name": "special_bonus_unique_visage_1",
         "language": {
             "abilityId": 6031,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+18 Familiar Attack Per Charge",
             "description": [],
@@ -454,7 +504,7 @@
         },
         "stat": {
             "abilityId": 6031,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -479,7 +529,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -490,7 +541,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6320,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+40 Familiars Movement Speed",
             "description": [],
@@ -499,7 +550,7 @@
         },
         "stat": {
             "abilityId": 6320,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -524,7 +575,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -535,7 +587,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6522,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Soul Assumption Hits 2 Targets",
             "description": [
@@ -546,7 +598,7 @@
         },
         "stat": {
             "abilityId": 6522,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -571,7 +623,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -582,7 +635,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6983,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+20 Soul Assumption Damage Per Charge",
             "description": [],
@@ -591,7 +644,7 @@
         },
         "stat": {
             "abilityId": 6983,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -616,7 +669,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -627,7 +681,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6984,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5 Gravekeeper's Cloak Stacks",
             "description": [],
@@ -636,7 +690,7 @@
         },
         "stat": {
             "abilityId": 6984,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -661,7 +715,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -672,7 +727,7 @@
         "uri": "visage",
         "language": {
             "abilityId": 6985,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1 Familiar",
             "description": [],
@@ -681,7 +736,7 @@
         },
         "stat": {
             "abilityId": 6985,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -706,7 +761,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -716,7 +772,7 @@
         "name": "visage_stone_form_self_cast",
         "language": {
             "abilityId": 7116,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Stone Form",
             "description": [
@@ -735,7 +791,7 @@
         },
         "stat": {
             "abilityId": 7116,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 591940,
             "unitTargetType": 0,
@@ -769,7 +825,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

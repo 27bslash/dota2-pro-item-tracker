@@ -5,7 +5,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 477,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-1s Wraithfire Blast Cooldown",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 477,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -47,9 +48,10 @@
     "741": {
         "id": 741,
         "name": "special_bonus_unique_wraith_king_10",
+        "uri": "skeleton_king",
         "language": {
             "abilityId": 741,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-2s Mortal Strike Cooldown",
             "description": [],
@@ -58,7 +60,7 @@
         },
         "stat": {
             "abilityId": 741,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -83,7 +85,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "809": {
+        "id": 809,
+        "name": "special_bonus_unique_wraith_king_11",
+        "language": {
+            "abilityId": 809,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+0.5s Wraithfire Blast Stun Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 809,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -94,7 +142,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 5086,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Wraithfire Blast",
             "description": [
@@ -113,7 +161,7 @@
         },
         "stat": {
             "abilityId": 5086,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -145,9 +193,9 @@
                 0.35
             ],
             "cooldown": [
+                17.0,
                 14.0,
-                12.0,
-                10.0,
+                11.0,
                 8.0
             ],
             "damage": [
@@ -165,7 +213,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -176,7 +225,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 5087,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Vampiric Spirit",
             "description": [
@@ -198,7 +247,7 @@
         },
         "stat": {
             "abilityId": 5087,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -227,15 +276,16 @@
                 50.0
             ],
             "manaCost": [
-                50.0,
-                60.0,
+                65.0,
                 70.0,
+                75.0,
                 80.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -246,14 +296,14 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 5088,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Mortal Strike",
             "description": [
                 "Wraith King passively deals bonus damage on an attack with a cooldown. "
             ],
             "attributes": [
-                "CRITICAL DAMAGE: 150% / 190% / 230% / 270%"
+                "CRITICAL DAMAGE: 140% / 180% / 220% / 260%"
             ],
             "lore": "One blow to crush a foe.",
             "notes": [
@@ -262,7 +312,7 @@
         },
         "stat": {
             "abilityId": 5088,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 1,
@@ -290,7 +340,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -301,7 +352,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 5089,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Reincarnation",
             "description": [
@@ -316,17 +367,19 @@
                 "SCEPTER DEATH DELAY RADIUS: 1200"
             ],
             "lore": "Conspirators against the Wraith King wonder why he never stays dead.",
+            "aghanimDescription": "If a nearby allied hero is slain, they will be transformed into a wraith and have their death delayed for %scepter_duration% seconds. Buffs the transformed units with +70 attack speed and +25%% movement speed.",
             "notes": [
                 "Wraith King won't revive if he doesn't have enough mana.",
                 "If Wraith King has an Aegis and Reincarnation off cooldown, Reincarnation will trigger first.",
                 "Revives with full HP and Mana.",
                 "Credit for allies whose death was delayed will go to whoever struck the original killing blow.",
                 "Wraith Delay affects Wraith King's actual deaths, not Reincarnate deaths."
-            ]
+            ],
+            "shardDescription": "Causes Reincarnation to have no mana cost and spawn three skeletons to attack each nearby enemy hero when Reincarnation is triggered."
         },
         "stat": {
             "abilityId": 5089,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 1,
@@ -354,12 +407,13 @@
                 40.0
             ],
             "manaCost": [
-                160.0
+                180.0
             ],
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -370,7 +424,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6088,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+20% Vampiric Aura Lifesteal",
             "description": [],
@@ -379,7 +433,7 @@
         },
         "stat": {
             "abilityId": 6088,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -404,7 +458,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -415,7 +470,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6201,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "No Reincarnation Manacost",
             "description": [],
@@ -424,7 +479,7 @@
         },
         "stat": {
             "abilityId": 6201,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -449,7 +504,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -460,7 +516,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6414,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+40 Wraithfire Blast DPS",
             "description": [],
@@ -469,7 +525,7 @@
         },
         "stat": {
             "abilityId": 6414,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -494,7 +550,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -505,7 +562,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6566,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Reincarnation Casts Wraithfire Blast",
             "description": [
@@ -516,7 +573,7 @@
         },
         "stat": {
             "abilityId": 6566,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -541,7 +598,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -552,16 +610,16 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6821,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+6 Skeletons Spawned",
+            "displayName": "+6 Minimum Skeletons Spawned",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6821,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -586,7 +644,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -597,7 +656,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 6822,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+24 Skeletons Attack Damage",
             "description": [],
@@ -606,7 +665,7 @@
         },
         "stat": {
             "abilityId": 6822,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -631,7 +690,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -642,7 +702,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 7107,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.2s Wraithfire Blast Slow Duration",
             "description": [],
@@ -651,7 +711,7 @@
         },
         "stat": {
             "abilityId": 7107,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -676,7 +736,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -687,7 +748,7 @@
         "uri": "skeleton_king",
         "language": {
             "abilityId": 7108,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+80% Skeletons Spawned",
             "description": [],
@@ -696,7 +757,7 @@
         },
         "stat": {
             "abilityId": 7108,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -721,7 +782,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

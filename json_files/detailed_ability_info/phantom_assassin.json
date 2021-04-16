@@ -5,7 +5,7 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 483,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100% Coup de Grace Critical Damage",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 483,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,16 +51,16 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 490,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+300 Phantom Strike Cast Range",
+            "displayName": "+250 Phantom Strike Cast Range",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 490,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -84,7 +85,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -94,7 +96,7 @@
         "name": "special_bonus_unique_phantom_assassin_5",
         "language": {
             "abilityId": 491,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1s Stifling Dagger Slow",
             "description": [],
@@ -103,7 +105,7 @@
         },
         "stat": {
             "abilityId": 491,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -128,7 +130,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -139,16 +142,16 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 559,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-1s Stifling Dagger Cooldown",
+            "displayName": "-1.5s Stifling Dagger Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 559,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -173,7 +176,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -181,20 +185,21 @@
     "662": {
         "id": 662,
         "name": "phantom_assassin_fan_of_knives",
+        "uri": "phantom_assassin",
         "language": {
             "abilityId": 662,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fan of Knives",
             "description": [
-                "Phantom Assassin releases sharp blades around her in a 550 AoE, dealing 12% of a victim's max health on impact and applying break for 3 seconds."
+                "Phantom Assassin releases sharp blades around her in a 550 AoE, dealing 16% of a victim's max health on impact and applying break for 3 seconds."
             ],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 662,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -223,15 +228,61 @@
                 20.0
             ],
             "manaCost": [
-                125.0
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "798": {
+        "id": 798,
+        "name": "special_bonus_unique_phantom_assassin_9",
+        "language": {
+            "abilityId": 798,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "2 Phantom Strike Charges",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 798,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5190": {
         "id": 5190,
@@ -239,7 +290,7 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 5190,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Stifling Dagger",
             "description": [
@@ -259,7 +310,7 @@
         },
         "stat": {
             "abilityId": 5190,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 5,
@@ -279,10 +330,10 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                525,
+                550,
                 750,
-                975,
-                1200
+                950,
+                1150
             ],
             "castRangeBuffer": [
                 250
@@ -302,7 +353,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -313,7 +365,7 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 5191,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Phantom Strike",
             "description": [
@@ -321,7 +373,7 @@
             ],
             "attributes": [
                 "DURATION: 2.0",
-                "BONUS ATTACK SPEED: 100 / 125 / 150 / 175",
+                "BONUS ATTACK SPEED: 75 / 100 / 125 / 150",
                 "CAST RANGE: "
             ],
             "lore": "Mortred's silken veil is the last thing her unfortunate target sees.",
@@ -329,7 +381,7 @@
         },
         "stat": {
             "abilityId": 5191,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4104,
             "unitTargetType": 8,
@@ -375,7 +427,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -386,7 +439,7 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 5192,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Blur",
             "description": [
@@ -402,11 +455,13 @@
                 "SCEPTER COOLDOWN: 10"
             ],
             "lore": "Meditation allows a Veiled Sister to carefully anticipate her opponents in combat.",
-            "notes": []
+            "aghanimDescription": "Causes Blur to have instant cast time and applies a dispel. Anytime Phantom Assassin gets a hero kill, her abilities are refreshed. Reduces Blur cooldown and increases Fade Time to 0.75.",
+            "notes": [],
+            "shardDescription": "Increases your movement speed by 40% while in Blur's active."
         },
         "stat": {
             "abilityId": 5192,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 1,
@@ -446,7 +501,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -457,7 +513,7 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 5193,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Coup de Grace",
             "description": [
@@ -472,7 +528,7 @@
         },
         "stat": {
             "abilityId": 5193,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -497,7 +553,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -508,7 +565,7 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 6192,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Triple Strike Stifling Dagger",
             "description": [
@@ -519,7 +576,7 @@
         },
         "stat": {
             "abilityId": 6192,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -544,7 +601,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -555,7 +613,7 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 6847,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+7% Coup de Grace chance",
             "description": [],
@@ -564,7 +622,7 @@
         },
         "stat": {
             "abilityId": 6847,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -589,7 +647,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -600,7 +659,7 @@
         "uri": "phantom_assassin",
         "language": {
             "abilityId": 6848,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+35% Blur Evasion",
             "description": [],
@@ -609,7 +668,7 @@
         },
         "stat": {
             "abilityId": 6848,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -634,7 +693,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -644,7 +704,7 @@
         "name": "special_bonus_unique_phantom_assassin_8",
         "language": {
             "abilityId": 8026,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+700 Range and Ground Target Stifling Dagger",
             "description": [
@@ -655,7 +715,7 @@
         },
         "stat": {
             "abilityId": 8026,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -680,7 +740,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true

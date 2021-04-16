@@ -5,16 +5,16 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 517,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+1.5s Static Storm Duration",
+            "displayName": "+2s Static Storm Duration",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 517,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,98 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "737": {
+        "id": 737,
+        "name": "special_bonus_unique_disruptor_8",
+        "language": {
+            "abilityId": 737,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+275 Static Storm AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 737,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "788": {
+        "id": 788,
+        "name": "special_bonus_unique_disruptor_9",
+        "language": {
+            "abilityId": 788,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+275 Glimpse Arrival Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 788,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,7 +141,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 5458,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Thunder Strike",
             "description": [
@@ -63,11 +154,12 @@
                 "STRIKE DAMAGE: 45 / 70 / 95 / 120"
             ],
             "lore": "Disruptor's charged coils occasionally overload, and a singed armor plate or tuft of fur is the enemy's result.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Allows Thunder Strike to be cast on allies, follows the ally and deals damage around them. Each strike gives a short 1.25 second buff that provides +50%% Movement Speed and +75 Attack Speed. Increases radius to 650."
         },
         "stat": {
             "abilityId": 5458,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 3,
@@ -116,7 +208,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -127,7 +220,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 5459,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Glimpse",
             "description": [
@@ -143,7 +236,7 @@
         },
         "stat": {
             "abilityId": 5459,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 1,
@@ -178,9 +271,9 @@
                 0.05
             ],
             "cooldown": [
-                60.0,
-                46.0,
-                32.0,
+                48.0,
+                38.0,
+                28.0,
                 18.0
             ],
             "manaCost": [
@@ -189,7 +282,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -200,7 +294,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 5460,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Kinetic Field",
             "description": [
@@ -218,7 +312,7 @@
         },
         "stat": {
             "abilityId": 5460,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -267,7 +361,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -278,7 +373,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 5461,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Static Storm",
             "description": [
@@ -291,11 +386,12 @@
                 "SCEPTER DURATION:%duration_scepter%"
             ],
             "lore": "A summer squall in Druud is a hardship that only an Oglodi can survive.",
+            "aghanimDescription": "Mutes items.",
             "notes": []
         },
         "stat": {
             "abilityId": 5461,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -342,7 +438,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -353,7 +450,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 6215,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+3 Thunder Strike Hits",
             "description": [],
@@ -362,7 +459,7 @@
         },
         "stat": {
             "abilityId": 6215,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -387,7 +484,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -398,7 +496,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 6368,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3s Kinetic Field Cooldown",
             "description": [],
@@ -407,7 +505,7 @@
         },
         "stat": {
             "abilityId": 6368,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -432,7 +530,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -443,7 +542,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 6536,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30 Thunder Strike Damage",
             "description": [],
@@ -452,7 +551,7 @@
         },
         "stat": {
             "abilityId": 6536,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -477,7 +576,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -488,16 +588,16 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 6630,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-8s Glimpse Cooldown",
+            "displayName": "-11s Glimpse Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6630,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -522,7 +622,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -533,16 +634,16 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 6812,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+3s Kinetic Field Duration",
+            "displayName": "+2s Kinetic Field Duration",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6812,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -567,7 +668,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -578,7 +680,7 @@
         "uri": "disruptor",
         "language": {
             "abilityId": 7656,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Kinetic Field Grants True Sight",
             "description": [],
@@ -587,7 +689,7 @@
         },
         "stat": {
             "abilityId": 7656,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -612,7 +714,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true

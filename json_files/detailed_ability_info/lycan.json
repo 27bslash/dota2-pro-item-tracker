@@ -2,9 +2,10 @@
     "333": {
         "id": 333,
         "name": "lycan_wolf_bite",
+        "uri": "lycan",
         "language": {
             "abilityId": 333,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Wolf Bite",
             "description": [
@@ -16,12 +17,12 @@
         },
         "stat": {
             "abilityId": 333,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 1,
             "unitTargetTeam": 2,
-            "unitTargetFlags": 16,
+            "unitTargetFlags": 0,
             "unitDamageType": 0,
             "spellImmunity": 4,
             "modifierSupportValue": 1.0,
@@ -56,7 +57,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -64,9 +66,10 @@
     "621": {
         "id": 621,
         "name": "special_bonus_unique_lycan_6",
+        "uri": "lycan",
         "language": {
             "abilityId": 621,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+75 Shapeshift Movement Speed",
             "description": [],
@@ -75,7 +78,7 @@
         },
         "stat": {
             "abilityId": 621,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -100,7 +103,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "794": {
+        "id": 794,
+        "name": "special_bonus_unique_lycan_7",
+        "language": {
+            "abilityId": 794,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+175 Summon Wolves Health",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 794,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -111,14 +160,14 @@
         "uri": "lycan",
         "language": {
             "abilityId": 5395,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Summon Wolves",
             "description": [
-                "Summons two wolves to fight for Lycan.  Level 3-4 wolves have Cripple, and level 4 wolves have permanent invisibility."
+                "Summons two wolves to fight for Lycan.  Level 3-4 wolves have Permanent Invisibility, and level 4 wolves have Cripple."
             ],
             "attributes": [
-                "DURATION: 55.0 / 55.0 / 55.0 / 55.0",
+                "DURATION: 50",
                 "BASE ATTACK TIME: 1.2 / 1.1 / 1.0 / 0.9",
                 "DAMAGE: 26 / 34 / 42 / 50",
                 "HP: 300 / 350 / 400 / 450",
@@ -128,11 +177,12 @@
             "notes": [
                 "Spirit Wolves have 70% magic damage resistance.",
                 "Using this spell will replace currently active Spirit Wolves."
-            ]
+            ],
+            "shardDescription": "Causes one of your creep waves to include one uncontrollable wolf that moves with the wave."
         },
         "stat": {
             "abilityId": 5395,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -167,12 +217,16 @@
                 30.0
             ],
             "manaCost": [
-                145.0
+                125.0,
+                130.0,
+                135.0,
+                140.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -183,7 +237,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 5396,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Howl",
             "description": [
@@ -199,7 +253,7 @@
         },
         "stat": {
             "abilityId": 5396,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16388,
             "unitTargetType": 0,
@@ -239,7 +293,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -250,14 +305,14 @@
         "uri": "lycan",
         "language": {
             "abilityId": 5397,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Feral Impulse",
             "description": [
                 "Increases the HP regeneration and damage of Lycan and all units under his control."
             ],
             "attributes": [
-                "BONUS DAMAGE: 14% / 26% / 38% / 50%",
+                "BONUS DAMAGE: 12% / 24% / 36% / 48%",
                 "BONUS HP REGEN: 2 / 4 / 6 / 8"
             ],
             "lore": "His animalistic symbiosis with canine kind gives Banehallow enhanced reflexes and hunting capabilities.",
@@ -265,7 +320,7 @@
         },
         "stat": {
             "abilityId": 5397,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -290,7 +345,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -301,19 +357,20 @@
         "uri": "lycan",
         "language": {
             "abilityId": 5398,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shapeshift",
             "description": [
                 "Lycan assumes his lupine form, granting him and his units critical strikes and added vision at night. During Shapeshift, Lycan and all units under his control move at increased speed, cannot be slowed and have a 40% chance to deal a critical strike doing 150 / 175 / 200% damage."
             ],
             "attributes": [
-                "DURATION: 22",
-                "SHAPESHIFT MOVE SPEED: 650",
+                "DURATION: 28",
+                "SHAPESHIFT MOVE SPEED: 550",
                 "BONUS NIGHT VISION: 1000",
+                "HEALTH BONUS: 150 / 250 / 350",
                 "CRITICAL CHANCE: 40%",
                 "CRITICAL DAMAGE: 150% / 175% / 200%",
-                "TRANSFORM TIME: 1.25"
+                "TRANSFORM TIME: 1.1"
             ],
             "lore": "Forever a slave to his lycanthropy, Banehallow has come to accept his curse, and embrace his own savagery.",
             "notes": [
@@ -323,7 +380,7 @@
         },
         "stat": {
             "abilityId": 5398,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -356,7 +413,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -366,7 +424,7 @@
         "name": "lycan_summon_wolves_critical_strike",
         "language": {
             "abilityId": 5399,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Cripple",
             "description": [
@@ -382,7 +440,7 @@
         },
         "stat": {
             "abilityId": 5399,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -407,7 +465,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -417,7 +476,7 @@
         "name": "lycan_summon_wolves_invisibility",
         "language": {
             "abilityId": 5500,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Invisibility",
             "description": [
@@ -428,7 +487,7 @@
         },
         "stat": {
             "abilityId": 5500,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -453,7 +512,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -464,7 +524,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6134,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5s Shapeshift Duration",
             "description": [],
@@ -473,7 +533,7 @@
         },
         "stat": {
             "abilityId": 6134,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -498,7 +558,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -509,7 +570,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6140,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2 Wolves Summoned",
             "description": [],
@@ -518,7 +579,7 @@
         },
         "stat": {
             "abilityId": 6140,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -543,7 +604,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -554,7 +616,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6519,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+8 Feral HP Regen",
             "description": [],
@@ -563,7 +625,7 @@
         },
         "stat": {
             "abilityId": 6519,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -588,7 +650,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -599,7 +662,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6684,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+25% Feral Impulse Damage",
             "description": [],
@@ -608,7 +671,7 @@
         },
         "stat": {
             "abilityId": 6684,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -633,7 +696,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -644,7 +708,7 @@
         "uri": "lycan",
         "language": {
             "abilityId": 6685,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+32% Chance Shapeshift Critical Strike",
             "description": [],
@@ -653,7 +717,7 @@
         },
         "stat": {
             "abilityId": 6685,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -678,7 +742,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

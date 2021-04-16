@@ -22,9 +22,10 @@ from io import BytesIO as IO
 from flask_minify import minify, decorators
 import urllib.parse
 # TODO
-# add intermediate items
+
 # redesign scroll bar
 # show alex ads
+# make levels accurate
 
 cluster = pymongo.MongoClient(
     'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
@@ -259,7 +260,7 @@ def generate_table(func_name, search, template):
                                       'soul_ring', 'buckler', 'urn', 'fluffy_hat', 'wind_lace', 'infused_raindrop', 'crown', 'bracer', 'null_talisman', 'wraith_band',
                                       'ring_of_basilius', 'headress', 'magic_wand']
                 consumables = ['tango', 'flask', 'ward_observer',
-                               'ward_sentry', 'smoke_of_deceit', 'enchanted_mango', 'clarity','tpscroll','dust']
+                               'ward_sentry', 'smoke_of_deceit', 'enchanted_mango', 'clarity', 'tpscroll', 'dust']
                 item_key = item['key']
                 item_id = item_methods.get_item_id(item_key)
                 print(item['time'])
@@ -321,7 +322,7 @@ def generate_table(func_name, search, template):
         html_string += "<div class='abilities'>"
 
         for ability in match['abilities']:
-            ability_img = f"{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{ability['img']}_hp1.png?v=5933967"
+            ability_img = f"{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability['img']}.png"
             ability_id = ability['id']
             ability_key = ability['key']
             html_string += "<div class='ability-img-wrapper'>"
@@ -650,23 +651,10 @@ def opendota_call():
 def manual_hero_update(name):
     hero_output.delete_many({'hero': name})
     # hero_urls.delete_many({'hero': name})
-    # asyncio.run(single_request(name))
     asyncio.run(main(get_urls(name), name))
-    # get_winrate()
 
 
 if __name__ == '__main__':
-    # delete_old_urls()
-    # db['parse'].delete_many({})
-    # db['dead_games'].delete_many({})
-    # manual_hero_update('crystal_maiden')
-    # database_methods.insert_total_picks('bans', 'lycan', 'hero_picks')
-    # get_winrate()
-    # get_winrate()
+    # manual_hero_update('dawnbreaker')
     # opendota_call()
-    # do_everything('lich')
-    # database_methods.insert_talent_order('hoodwink')
-    # database_methods.insert_best_games()
     app.run(debug=False)
-    # database_methods.insert_total_picks('hero', 'hoodwink', 'hero_picks')
-    pass

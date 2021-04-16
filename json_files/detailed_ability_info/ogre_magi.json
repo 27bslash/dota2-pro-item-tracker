@@ -5,7 +5,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 403,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+16 Ignite DPS",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 403,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -47,13 +48,14 @@
     "648": {
         "id": 648,
         "name": "ogre_magi_smash",
+        "uri": "ogre_magi",
         "language": {
             "abilityId": 648,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fire Shield",
             "description": [
-                "Creates a shield around the target ally, absorbing 70% of the damage of next 3 attacks. Launches fireballs at the attacker, dealing 125 damage.<br><br>Lasts 25 seconds."
+                "Creates a shield around the target ally, absorbing 85% of the damage of next 3 attacks. Launches fireballs at the attacker, dealing 125 damage.<br><br>Lasts 25 seconds."
             ],
             "attributes": [
                 "DURATION: 25",
@@ -64,7 +66,7 @@
         },
         "stat": {
             "abilityId": 648,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 35,
@@ -93,25 +95,71 @@
                 0.2
             ],
             "cooldown": [
-                18.0
+                16.0
             ],
             "manaCost": [
-                125.0
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "801": {
+        "id": 801,
+        "name": "special_bonus_unique_ogre_magi_5",
+        "language": {
+            "abilityId": 801,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-1s Fireblast Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 801,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5304": {
         "id": 5304,
         "name": "ogre_magi_frost_armor",
         "language": {
             "abilityId": 5304,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ice Armor",
             "description": [
@@ -128,7 +176,7 @@
         },
         "stat": {
             "abilityId": 5304,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 3,
@@ -165,7 +213,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -176,7 +225,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5438,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fireblast",
             "description": [
@@ -193,7 +242,7 @@
         },
         "stat": {
             "abilityId": 5438,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -207,7 +256,7 @@
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -236,7 +285,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -247,14 +297,14 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5439,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ignite",
             "description": [
                 "Drenches the target and another random unit in volatile chemicals, causing it to burst into flames. The target is in immense pain, taking damage and moving more slowly."
             ],
             "attributes": [
-                "BURN DAMAGE: 26 / 34 / 42 / 50",
+                "BURN DAMAGE: 20 / 30 / 40 / 50",
                 "DURATION: 5 / 6 / 7 / 8",
                 "SLOW: -20% / -22% / -24% / -26%"
             ],
@@ -266,7 +316,7 @@
         },
         "stat": {
             "abilityId": 5439,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 40,
             "unitTargetType": 3,
@@ -295,18 +345,19 @@
                 250
             ],
             "castPoint": [
-                0.45
+                0.35
             ],
             "cooldown": [
                 15.0
             ],
             "manaCost": [
-                100.0
+                110.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -317,7 +368,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5440,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Bloodlust",
             "description": [
@@ -336,7 +387,7 @@
         },
         "stat": {
             "abilityId": 5440,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 163848,
             "unitTargetType": 35,
@@ -371,12 +422,16 @@
                 14.0
             ],
             "manaCost": [
+                50.0,
+                55.0,
+                60.0,
                 65.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -387,7 +442,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5441,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Multicast",
             "description": [
@@ -406,7 +461,7 @@
         },
         "stat": {
             "abilityId": 5441,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -431,7 +486,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -442,7 +498,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 5466,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Unrefined Fireblast",
             "description": [
@@ -459,7 +515,7 @@
         },
         "stat": {
             "abilityId": 5466,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -496,7 +552,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -507,16 +564,16 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 6183,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+40 Bloodlust AS",
+            "displayName": "+30 Bloodlust AS",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6183,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -541,7 +598,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -552,7 +610,7 @@
         "uri": "ogre_magi",
         "language": {
             "abilityId": 6707,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+240 Fireblast Damage",
             "description": [],
@@ -561,7 +619,7 @@
         },
         "stat": {
             "abilityId": 6707,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -586,7 +644,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -596,7 +655,7 @@
         "name": "special_bonus_unique_ogre_magi_3",
         "language": {
             "abilityId": 7030,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -604,7 +663,7 @@
         },
         "stat": {
             "abilityId": 7030,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -629,7 +688,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

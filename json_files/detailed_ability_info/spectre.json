@@ -5,7 +5,7 @@
         "uri": "spectre",
         "language": {
             "abilityId": 5334,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Spectral Dagger",
             "description": [
@@ -23,7 +23,7 @@
         },
         "stat": {
             "abilityId": 5334,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 24,
             "unitTargetType": 1,
@@ -43,10 +43,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                2000,
-                2000,
-                2000,
-                2000
+                1800
             ],
             "castRangeBuffer": [
                 250
@@ -72,7 +69,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -83,14 +81,14 @@
         "uri": "spectre",
         "language": {
             "abilityId": 5335,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Desolate",
             "description": [
                 "Deals bonus damage whenever Spectre attacks an enemy that does not have any allied units within a 425 radius around them."
             ],
             "attributes": [
-                "BONUS DAMAGE: 15 / 30 / 45 / 60",
+                "BONUS DAMAGE: 18 / 32 / 46 / 60",
                 "RADIUS: 425"
             ],
             "lore": "Often times, warriors find themselves alone with a vision of Mercurial - the fated question is if it is the true Spectre.",
@@ -101,7 +99,7 @@
         },
         "stat": {
             "abilityId": 5335,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -126,7 +124,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -137,7 +136,7 @@
         "uri": "spectre",
         "language": {
             "abilityId": 5336,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dispersion",
             "description": [
@@ -153,11 +152,12 @@
                 "The reflected damage is not dealt to Spectre.",
                 "Illusions don't get this ability.",
                 "Damage is reflected before reductions, and is returned as the same damage type."
-            ]
+            ],
+            "shardDescription": "Can cast Dispersion on a hero that damaged you in the last 8 seconds.  Illusion lasts 5 seconds. Cooldown: 25"
         },
         "stat": {
             "abilityId": 5336,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -182,7 +182,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -193,7 +194,7 @@
         "uri": "spectre",
         "language": {
             "abilityId": 5337,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Haunt",
             "description": [
@@ -214,7 +215,7 @@
         },
         "stat": {
             "abilityId": 5337,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -254,7 +255,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -265,7 +267,7 @@
         "uri": "spectre",
         "language": {
             "abilityId": 5338,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Reality",
             "description": [
@@ -277,7 +279,7 @@
         },
         "stat": {
             "abilityId": 5338,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 80,
             "unitTargetType": 0,
@@ -308,7 +310,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -319,7 +322,7 @@
         "uri": "spectre",
         "language": {
             "abilityId": 6148,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-8s Spectral Dagger Cooldown",
             "description": [],
@@ -328,7 +331,7 @@
         },
         "stat": {
             "abilityId": 6148,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -353,7 +356,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -364,7 +368,7 @@
         "uri": "spectre",
         "language": {
             "abilityId": 6900,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+12 Desolate Damage",
             "description": [],
@@ -373,7 +377,7 @@
         },
         "stat": {
             "abilityId": 6900,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -398,7 +402,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -409,7 +414,7 @@
         "uri": "spectre",
         "language": {
             "abilityId": 6901,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+14% Spectral Dagger Slow/Bonus",
             "description": [],
@@ -418,7 +423,7 @@
         },
         "stat": {
             "abilityId": 6901,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -443,7 +448,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -454,7 +460,7 @@
         "uri": "spectre",
         "language": {
             "abilityId": 6902,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+32% Haunt Illusion Damage",
             "description": [],
@@ -463,7 +469,7 @@
         },
         "stat": {
             "abilityId": 6902,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -488,7 +494,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -499,7 +506,7 @@
         "uri": "spectre",
         "language": {
             "abilityId": 6903,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5% Dispersion",
             "description": [],
@@ -508,7 +515,7 @@
         },
         "stat": {
             "abilityId": 6903,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -533,7 +540,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -541,9 +549,10 @@
     "7851": {
         "id": 7851,
         "name": "spectre_haunt_single",
+        "uri": "spectre",
         "language": {
             "abilityId": 7851,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shadow Step",
             "description": [
@@ -560,7 +569,7 @@
         },
         "stat": {
             "abilityId": 7851,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 1,
@@ -588,7 +597,7 @@
                 0.3
             ],
             "cooldown": [
-                35.0
+                30.0
             ],
             "manaCost": [
                 180.0
@@ -596,7 +605,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

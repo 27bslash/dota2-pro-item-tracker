@@ -5,7 +5,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 482,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30 Bloodrage Attack Speed",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 482,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,7 +51,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 5015,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Bloodrage",
             "description": [
@@ -65,11 +66,12 @@
             "lore": "Strygwyr shares his animalistic thirst for bloodshed.",
             "notes": [
                 "Bloodrage can be cast on yourself or an enemy units."
-            ]
+            ],
+            "shardDescription": "Bloodrage attacks now deal 2% of the target\u2019s max health as pure damage and heals Bloodseeker for that amount. Only works for Bloodseeker."
         },
         "stat": {
             "abilityId": 5015,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2056,
             "unitTargetType": 1,
@@ -109,7 +111,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -120,7 +123,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 5016,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Blood Rite",
             "description": [
@@ -138,7 +141,7 @@
         },
         "stat": {
             "abilityId": 5016,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -181,7 +184,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -192,7 +196,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 5017,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Thirst",
             "description": [
@@ -215,7 +219,7 @@
         },
         "stat": {
             "abilityId": 5017,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -240,7 +244,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -251,25 +256,27 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 5018,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Rupture",
             "description": [
-                "Causes an enemy unit's skin to rupture. If the unit moves, it takes damage based on the distance moved.  The damage is dealt through spell immunity."
+                "Causes an enemy unit's skin to rupture, dealing initial damage based on its current health. If the unit moves, it takes damage based on the distance moved.  The damage is dealt through spell immunity."
             ],
             "attributes": [
                 "DURATION: 10 / 11 / 12",
-                "MOVE DAMAGE: 36% / 48% / 60%",
+                "MOVE DAMAGE: 33% / 44% / 55%",
+                "HEALTH DAMAGE: 10%",
                 "CAST RANGE: ",
                 "SCEPTER CHARGES: 2",
                 "SCEPTER REPLENISH TIME: 40"
             ],
             "lore": "When the Bloodseeker hunts you, injuries become fatalities.",
+            "aghanimDescription": "Grants Bloodseeker two charges of Rupture",
             "notes": []
         },
         "stat": {
             "abilityId": 5018,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -308,7 +315,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -319,7 +327,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 6230,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4s Blood Rite Cooldown",
             "description": [],
@@ -328,7 +336,7 @@
         },
         "stat": {
             "abilityId": 6230,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -353,7 +361,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -364,16 +373,16 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 6356,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+75 Blood Rite Damage",
+            "displayName": "+85 Blood Rite Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6356,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -398,7 +407,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -409,7 +419,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 6357,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+475 Rupture Cast Range",
             "description": [],
@@ -418,7 +428,7 @@
         },
         "stat": {
             "abilityId": 6357,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -443,7 +453,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -454,7 +465,7 @@
         "uri": "bloodseeker",
         "language": {
             "abilityId": 6809,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+14% Max Thirst MS",
             "description": [],
@@ -463,7 +474,7 @@
         },
         "stat": {
             "abilityId": 6809,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -488,7 +499,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

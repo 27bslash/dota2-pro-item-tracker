@@ -2,18 +2,19 @@
     "616": {
         "id": 616,
         "name": "special_bonus_unique_undying_6",
+        "uri": "undying",
         "language": {
             "abilityId": 616,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+10 Soul Rip Damage/Heal",
+            "displayName": "+12 Soul Rip Damage/Heal",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 616,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -38,7 +39,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "807": {
+        "id": 807,
+        "name": "special_bonus_unique_undying_7",
+        "language": {
+            "abilityId": 807,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-15s Tombstone Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 807,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +96,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 5442,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Decay",
             "description": [
@@ -63,15 +110,17 @@
                 "SCEPTER STRENGTH STEAL: 10"
             ],
             "lore": "The strength of the living is simply borrowed from the strength of the dead.",
+            "aghanimDescription": "Increases strength steal.",
             "notes": [
                 "The strength stolen stacks, but can't cause a hero to have strength below 1.",
                 "The strength steal takes effect before the damage is dealt.",
                 "Affects invisible units."
-            ]
+            ],
+            "shardDescription": "Increases Decay radius by 100 and spawns a zombie around each hero target."
         },
         "stat": {
             "abilityId": 5442,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 5,
@@ -110,14 +159,15 @@
             ],
             "manaCost": [
                 85.0,
+                90.0,
                 95.0,
-                105.0,
-                115.0
+                100.0
             ],
             "isUltimate": false,
             "duration": "21.0 24.0 27.0 30.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -128,7 +178,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 5443,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Soul Rip",
             "description": [
@@ -148,7 +198,7 @@
         },
         "stat": {
             "abilityId": 5443,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 8,
@@ -191,7 +241,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -202,7 +253,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 5444,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Tombstone",
             "description": [
@@ -225,7 +276,7 @@
         },
         "stat": {
             "abilityId": 5444,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16400,
             "unitTargetType": 0,
@@ -271,7 +322,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -281,7 +333,7 @@
         "name": "undying_tombstone_zombie_aura",
         "language": {
             "abilityId": 5445,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -289,7 +341,7 @@
         },
         "stat": {
             "abilityId": 5445,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1048579,
             "unitTargetType": 0,
@@ -314,7 +366,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -324,7 +377,7 @@
         "name": "undying_tombstone_zombie_deathstrike",
         "language": {
             "abilityId": 5446,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Deathlust",
             "description": [
@@ -341,7 +394,7 @@
         },
         "stat": {
             "abilityId": 5446,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -366,7 +419,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -377,7 +431,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 5447,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Flesh Golem",
             "description": [
@@ -396,7 +450,7 @@
         },
         "stat": {
             "abilityId": 5447,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -429,7 +483,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -440,7 +495,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 6155,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+25 Tombstone Zombie Damage",
             "description": [],
@@ -449,7 +504,7 @@
         },
         "stat": {
             "abilityId": 6155,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -474,7 +529,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -485,7 +541,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 6420,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-1.5s Decay Cooldown",
             "description": [],
@@ -494,7 +550,7 @@
         },
         "stat": {
             "abilityId": 6420,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -519,7 +575,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -530,7 +587,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 6546,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Tombstone On Death",
             "description": [],
@@ -539,7 +596,7 @@
         },
         "stat": {
             "abilityId": 6546,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -564,7 +621,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -575,7 +633,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 6971,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+40 Decay Duration",
             "description": [],
@@ -584,7 +642,7 @@
         },
         "stat": {
             "abilityId": 6971,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -609,7 +667,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -620,7 +679,7 @@
         "uri": "undying",
         "language": {
             "abilityId": 6972,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+6 Tombstone Attacks to Destroy",
             "description": [],
@@ -629,7 +688,7 @@
         },
         "stat": {
             "abilityId": 6972,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -654,7 +713,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

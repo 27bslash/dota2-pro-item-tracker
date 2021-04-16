@@ -4,7 +4,7 @@
         "name": "special_bonus_unique_shadow_demon_8",
         "language": {
             "abilityId": 667,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5s Soul Catcher Duration",
             "description": [],
@@ -13,7 +13,7 @@
         },
         "stat": {
             "abilityId": 667,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -38,7 +38,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "752": {
+        "id": 752,
+        "name": "special_bonus_unique_shadow_demon_9",
+        "language": {
+            "abilityId": 752,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-30s Demonic Purge Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 752,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +95,7 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 5421,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Disruption",
             "description": [
@@ -66,7 +112,7 @@
         },
         "stat": {
             "abilityId": 5421,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 1,
@@ -112,7 +158,8 @@
             "isUltimate": false,
             "duration": "2.75",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -123,7 +170,7 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 5422,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Soul Catcher",
             "description": [
@@ -139,7 +186,7 @@
         },
         "stat": {
             "abilityId": 5422,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -185,7 +232,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -196,7 +244,7 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 5423,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shadow Poison",
             "description": [
@@ -215,7 +263,7 @@
         },
         "stat": {
             "abilityId": 5423,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -255,7 +303,8 @@
             "isUltimate": false,
             "duration": "10",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -266,7 +315,7 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 5424,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shadow Poison Release",
             "description": [
@@ -277,7 +326,7 @@
         },
         "stat": {
             "abilityId": 5424,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16452,
             "unitTargetType": 0,
@@ -308,7 +357,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -319,7 +369,7 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 5425,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Demonic Purge",
             "description": [
@@ -333,14 +383,16 @@
                 "SCEPTER MAX CHARGES: 3"
             ],
             "lore": "Once Shadow Demon no longer has any need for his collected cultist, he releases it from its subservience - and its life.",
+            "aghanimDescription": "Cooldown is removed, replaced with %max_charges% charges that replenish every %charge_restore_time_tooltip_scepter% seconds. Also causes Demonic Purge to break its target's passive abilities while active.",
             "notes": [
                 "The slow starts at 100.0% decreases over time to 20.0%.",
                 "Positive buffs are continously removed from the target for the duration of the Purge."
-            ]
+            ],
+            "shardDescription": "Allows Demonic Purge to be cast on allies, continuously dispelling them and healing for its damage values. Does not slow allies."
         },
         "stat": {
             "abilityId": 5425,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -381,7 +433,8 @@
             "isUltimate": true,
             "duration": "7.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -392,16 +445,16 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 6208,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+400 Demonic Purge Damage",
+            "displayName": "+200 Demonic Purge Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6208,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -426,7 +479,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -437,16 +491,16 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 6293,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-5s Soul Catcher Cooldown",
+            "displayName": "-6s Soul Catcher Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6293,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -471,7 +525,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -482,7 +537,7 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 6542,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-1.25s Shadow Poison Cooldown",
             "description": [],
@@ -491,7 +546,7 @@
         },
         "stat": {
             "abilityId": 6542,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -516,7 +571,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -527,16 +583,16 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 6873,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+20% Shadow Poison Damage",
+            "displayName": "+15% Shadow Poison Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6873,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -561,7 +617,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -572,7 +629,7 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 7002,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5s Disruption Banish Duration",
             "description": [],
@@ -581,7 +638,7 @@
         },
         "stat": {
             "abilityId": 7002,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -606,7 +663,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -617,7 +675,7 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 7061,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Soul Catcher Creates 2 Illusion On Death",
             "description": [],
@@ -626,7 +684,7 @@
         },
         "stat": {
             "abilityId": 7061,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -651,7 +709,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -662,7 +721,7 @@
         "uri": "shadow_demon",
         "language": {
             "abilityId": 7118,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "2 Charges of Disruption",
             "description": [],
@@ -671,7 +730,7 @@
         },
         "stat": {
             "abilityId": 7118,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -696,7 +755,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

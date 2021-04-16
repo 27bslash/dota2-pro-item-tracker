@@ -5,7 +5,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 508,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+20% Ink Swell Movement Speed",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 508,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -47,25 +48,26 @@
     "561": {
         "id": 561,
         "name": "grimstroke_ink_over",
+        "uri": "grimstroke",
         "language": {
             "abilityId": 561,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ink Over",
             "description": [
-                "Covers an enemy in ink for 6 seconds, slowing their attack speed by 50, movement speed by 20 and dealing a total of 240 damage over its duration."
+                "Covers an enemy in ink for 6 seconds, slowing their attack speed by 50, movement speed by 25 and dealing a total of 320 damage over its duration."
             ],
             "attributes": [
                 "DURATION: 6",
-                "TOTAL DAMAGE: 240",
+                "TOTAL DAMAGE: 320",
                 "ATTACK SPEED SLOW: 50",
-                "MOVE SPEED SLOW: 20"
+                "MOVE SPEED SLOW: 25"
             ],
             "notes": []
         },
         "stat": {
             "abilityId": 561,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -85,7 +87,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                700
+                950
             ],
             "castRangeBuffer": [
                 250
@@ -102,7 +104,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -110,18 +113,19 @@
     "705": {
         "id": 705,
         "name": "special_bonus_unique_grimstroke_7",
+        "uri": "grimstroke",
         "language": {
             "abilityId": 705,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-4s Ink Swell Cooldown",
+            "displayName": "-6s Ink Swell Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 705,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -146,7 +150,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "774": {
+        "id": 774,
+        "name": "special_bonus_unique_grimstroke_8",
+        "language": {
+            "abilityId": 774,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+50 Phantom's Embrace DPS",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 774,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -157,7 +207,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 6491,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Soulbind",
             "description": [
@@ -165,7 +215,7 @@
             ],
             "attributes": [
                 "DURATION: 6.0 / 7.0 / 8.0",
-                "BIND RADIUS: 550"
+                "BIND RADIUS: 600"
             ],
             "lore": "The Ascended were chosen sons of Ashkavor, granted immense power by the bonds forged between their own souls and those they were charged with protecting. In the years that followed the ruination of his kin, Grimstroke discovered much more sinister applications for the binding rituals...",
             "notes": [
@@ -175,7 +225,7 @@
         },
         "stat": {
             "abilityId": 6491,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 40,
             "unitTargetType": 1,
@@ -218,7 +268,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -229,7 +280,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 7659,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+80 Ink Swell Max Damage",
             "description": [],
@@ -238,7 +289,7 @@
         },
         "stat": {
             "abilityId": 7659,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -263,7 +314,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -271,9 +323,10 @@
     "7852": {
         "id": 7852,
         "name": "grimstroke_dark_portrait",
+        "uri": "grimstroke",
         "language": {
             "abilityId": 7852,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dark Portrait",
             "description": [
@@ -290,7 +343,7 @@
         },
         "stat": {
             "abilityId": 7852,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 1,
@@ -327,7 +380,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -338,7 +392,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8000,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Stroke of Fate",
             "description": [
@@ -356,7 +410,7 @@
         },
         "stat": {
             "abilityId": 8000,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 0,
@@ -399,7 +453,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -410,7 +465,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8001,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+150 Ink Swell Radius",
             "description": [],
@@ -419,7 +474,7 @@
         },
         "stat": {
             "abilityId": 8001,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -444,7 +499,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -455,7 +511,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8002,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+40% Stroke of Fate Damage",
             "description": [],
@@ -464,7 +520,7 @@
         },
         "stat": {
             "abilityId": 8002,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -489,7 +545,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -500,7 +557,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8003,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+800 Stroke of Fate Cast Range",
             "description": [],
@@ -509,7 +566,7 @@
         },
         "stat": {
             "abilityId": 8003,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -534,7 +591,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -545,7 +603,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8004,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+3 Hits to Kill Phantom",
             "description": [],
@@ -554,7 +612,7 @@
         },
         "stat": {
             "abilityId": 8004,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -579,7 +637,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -590,7 +649,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8006,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Phantom's Embrace",
             "description": [
@@ -600,7 +659,7 @@
             ],
             "attributes": [
                 "LATCH DURATION: 5",
-                "PHANTOM DPS: 6 / 14 / 22 / 30",
+                "PHANTOM DPS: 10 / 20 / 30 / 40",
                 "REND DAMAGE: 120 / 200 / 280 / 360",
                 "ATTACKS TO DESTROY: 6 / 6 / 9 / 9"
             ],
@@ -612,7 +671,7 @@
         },
         "stat": {
             "abilityId": 8006,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 3,
@@ -655,7 +714,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -666,7 +726,7 @@
         "uri": "grimstroke",
         "language": {
             "abilityId": 8007,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ink Swell",
             "description": [
@@ -682,11 +742,12 @@
                 "INK TENDRILS DPS: 25 / 35 / 45 / 55"
             ],
             "lore": "Now that the rise of the ink tide no longer threatens to overwhelm Grimstroke, its tendrils of power are never far from his hand.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Causes Ink Swell to deal 50% more damage and heal the target for 50% of the damage Ink Swell deals. Upon expiration, the target will receive a strong dispell."
         },
         "stat": {
             "abilityId": 8007,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 3,
@@ -732,7 +793,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

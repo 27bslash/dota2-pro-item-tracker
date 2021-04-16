@@ -2,9 +2,10 @@
     "543": {
         "id": 543,
         "name": "antimage_mana_overload",
+        "uri": "antimage",
         "language": {
             "abilityId": 543,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Blink Fragment",
             "description": [
@@ -15,7 +16,7 @@
         },
         "stat": {
             "abilityId": 543,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -52,7 +53,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -60,18 +62,19 @@
     "665": {
         "id": 665,
         "name": "special_bonus_unique_antimage_6",
+        "uri": "antimage",
         "language": {
             "abilityId": 665,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+0.1s Mana Void Damage Multiplier",
+            "displayName": "+0.1 Mana Void Damage Multiplier",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 665,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -96,7 +99,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -106,16 +110,16 @@
         "name": "special_bonus_unique_antimage_7",
         "language": {
             "abilityId": 666,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+0.8% Max Mana Mana Burn",
+            "displayName": "+0.6% Max Mana Mana Burn",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 666,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -140,7 +144,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "735": {
+        "id": 735,
+        "name": "special_bonus_unique_antimage_8",
+        "language": {
+            "abilityId": 735,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+1s Mana Void Stun",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 735,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -151,7 +201,7 @@
         "uri": "antimage",
         "language": {
             "abilityId": 5003,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Mana Break",
             "description": [
@@ -166,7 +216,7 @@
         },
         "stat": {
             "abilityId": 5003,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -191,7 +241,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -202,7 +253,7 @@
         "uri": "antimage",
         "language": {
             "abilityId": 5004,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Blink",
             "description": [
@@ -214,11 +265,12 @@
             "lore": "In his encounter with the Dead Gods, Anti-Mage learned the value of being elusive.",
             "notes": [
                 "You can use Blink to dodge incoming projectiles."
-            ]
+            ],
+            "shardDescription": "Increases range by 300 and reduces cooldown by 2."
         },
         "stat": {
             "abilityId": 5004,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4112,
             "unitTargetType": 0,
@@ -232,7 +284,7 @@
             "isOnLearnbar": true,
             "fightRecapLevel": 0,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -258,7 +310,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -269,7 +322,7 @@
         "uri": "antimage",
         "language": {
             "abilityId": 5005,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Spell Shield",
             "description": [
@@ -285,7 +338,7 @@
         },
         "stat": {
             "abilityId": 5005,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -310,7 +363,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -321,7 +375,7 @@
         "uri": "antimage",
         "language": {
             "abilityId": 5006,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Mana Void",
             "description": [
@@ -330,9 +384,7 @@
             "attributes": [
                 "DAMAGE: 0.8 / 0.95 / 1.1",
                 "STUN DURATION: 0.3",
-                "RADIUS: 500",
-                "SCEPTER COOLDOWN INCREASE: 100",
-                "SCEPTER STUN DURATION: 1.3"
+                "RADIUS: 500"
             ],
             "lore": "After bringing enemies to their knees, Anti-Mage punishes them for their use of the arcane arts.",
             "notes": [
@@ -341,7 +393,7 @@
         },
         "stat": {
             "abilityId": 5006,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 40,
             "unitTargetType": 3,
@@ -378,14 +430,15 @@
                 70.0
             ],
             "manaCost": [
-                125.0,
+                100.0,
                 200.0,
-                275.0
+                300.0
             ],
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -396,7 +449,7 @@
         "uri": "antimage",
         "language": {
             "abilityId": 6012,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-2.0s Blink Cooldown",
             "description": [],
@@ -405,7 +458,7 @@
         },
         "stat": {
             "abilityId": 6012,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -430,7 +483,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -441,7 +495,7 @@
         "uri": "antimage",
         "language": {
             "abilityId": 6353,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-50s Mana Void Cooldown",
             "description": [],
@@ -450,7 +504,7 @@
         },
         "stat": {
             "abilityId": 6353,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -475,7 +529,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -486,16 +541,16 @@
         "uri": "antimage",
         "language": {
             "abilityId": 6606,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+300 Blink Cast Range",
+            "displayName": "+250 Blink Cast Range",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6606,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -520,7 +575,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -531,7 +587,7 @@
         "uri": "antimage",
         "language": {
             "abilityId": 6607,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+20% Counterspell Magic Resistance",
             "description": [],
@@ -540,7 +596,7 @@
         },
         "stat": {
             "abilityId": 6607,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -565,7 +621,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -576,7 +633,7 @@
         "uri": "antimage",
         "language": {
             "abilityId": 6800,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Blink Uncontrollable Illusion",
             "description": [
@@ -587,7 +644,7 @@
         },
         "stat": {
             "abilityId": 6800,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -612,7 +669,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -623,7 +681,7 @@
         "uri": "antimage",
         "language": {
             "abilityId": 7314,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Counterspell",
             "description": [
@@ -634,11 +692,12 @@
                 "DURATION: 1.2"
             ],
             "lore": "With the proper focus, Anti-Mage turns innate resistance into calculated retaliation.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Successful Counterspell creates an illusion attacking the caster for 5 seconds. Removes Counterspell manacost."
         },
         "stat": {
             "abilityId": 7314,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -684,7 +743,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

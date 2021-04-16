@@ -5,7 +5,7 @@
         "uri": "pugna",
         "language": {
             "abilityId": 5186,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Nether Blast",
             "description": [
@@ -13,17 +13,17 @@
             ],
             "attributes": [
                 "RADIUS: 400 / 400 / 400 / 400",
-                "BLAST DELAY: 0.9 / 0.9 / 0.9 / 0.9",
+                "BLAST DELAY: 0.8",
                 "BLAST DAMAGE: 100 / 175 / 250 / 325"
             ],
             "lore": "The Arts of Oblivion include a deafening blast of emerald flames from the Nether Reaches.",
             "notes": [
-                "Damage is delayed by 0.9 / 0.9 / 0.9 / 0.9 seconds."
+                "Damage is delayed by 0.8 seconds."
             ]
         },
         "stat": {
             "abilityId": 5186,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -66,7 +66,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -77,7 +78,7 @@
         "uri": "pugna",
         "language": {
             "abilityId": 5187,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Decrepify",
             "description": [
@@ -98,7 +99,7 @@
         },
         "stat": {
             "abilityId": 5187,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 8,
@@ -144,7 +145,8 @@
             "isUltimate": false,
             "duration": "3.5",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -155,7 +157,7 @@
         "uri": "pugna",
         "language": {
             "abilityId": 5188,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Nether Ward",
             "description": [
@@ -177,7 +179,7 @@
         },
         "stat": {
             "abilityId": 5188,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 0,
@@ -223,7 +225,8 @@
             "isUltimate": false,
             "duration": "18 22 26 30",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -234,7 +237,7 @@
         "uri": "pugna",
         "language": {
             "abilityId": 5189,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Life Drain",
             "description": [
@@ -248,14 +251,16 @@
                 "SCEPTER COOLDOWN: 0"
             ],
             "lore": "Pugna has truly become more powerful than even the grandmaster of Oblivion.",
+            "aghanimDescription": "Removes cooldown and increases damage.",
             "notes": [
                 "Health gained depends on the actual damage dealt.",
                 "Illusions are destroyed on the first tick of damage."
-            ]
+            ],
+            "shardDescription": "For every 1.5 seconds of channel, another secondary Life Drain is created targeting another random enemy hero."
         },
         "stat": {
             "abilityId": 5189,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 16520,
             "unitTargetType": 3,
@@ -299,7 +304,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -310,7 +316,7 @@
         "uri": "pugna",
         "language": {
             "abilityId": 6220,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+20% Life Drain Heal",
             "description": [],
@@ -319,7 +325,7 @@
         },
         "stat": {
             "abilityId": 6220,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -344,7 +350,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -355,7 +362,7 @@
         "uri": "pugna",
         "language": {
             "abilityId": 6238,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+160 Nether Blast Damage",
             "description": [],
@@ -364,7 +371,7 @@
         },
         "stat": {
             "abilityId": 6238,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -389,7 +396,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -400,16 +408,16 @@
         "uri": "pugna",
         "language": {
             "abilityId": 6403,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+1.5 Netherward Damage Per Mana",
+            "displayName": "+1.75 Netherward Damage Per Mana",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6403,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -434,7 +442,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -445,7 +454,7 @@
         "uri": "pugna",
         "language": {
             "abilityId": 6448,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-0.8s Netherblast Cooldown",
             "description": [],
@@ -454,7 +463,7 @@
         },
         "stat": {
             "abilityId": 6448,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -479,7 +488,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -490,7 +500,7 @@
         "uri": "pugna",
         "language": {
             "abilityId": 6541,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.5s Decrepify Duration",
             "description": [],
@@ -499,7 +509,7 @@
         },
         "stat": {
             "abilityId": 6541,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -524,7 +534,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -535,7 +546,7 @@
         "uri": "pugna",
         "language": {
             "abilityId": 6859,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+3 Nether Ward Health",
             "description": [],
@@ -544,7 +555,7 @@
         },
         "stat": {
             "abilityId": 6859,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -569,7 +580,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

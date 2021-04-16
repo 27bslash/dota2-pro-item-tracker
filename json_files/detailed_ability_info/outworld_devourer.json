@@ -1,18 +1,63 @@
 {
+    "750": {
+        "id": 750,
+        "name": "special_bonus_unique_outworld_devourer_5",
+        "language": {
+            "abilityId": 750,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-60s Sanity's Eclipse Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 750,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
     "5391": {
         "id": 5391,
         "name": "obsidian_destroyer_arcane_orb",
         "uri": "obsidian_destroyer",
         "language": {
             "abilityId": 5391,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Arcane Orb",
             "description": [
                 "Adds extra pure damage to Outworld Destroyer's attacks, based on his remaining mana pool."
             ],
             "attributes": [
-                "MANA POOL TO DAMAGE: 14%",
+                "MANA POOL TO DAMAGE: 16%",
                 "CURRENT MANA COST: 20%"
             ],
             "lore": "Harbinger's outworldly knowledge allows it to tap into the ebb and flow of all spiritual energy, infusing it into his being.",
@@ -22,7 +67,7 @@
         },
         "stat": {
             "abilityId": 5391,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -59,7 +104,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -70,27 +116,30 @@
         "uri": "obsidian_destroyer",
         "language": {
             "abilityId": 5392,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Astral Imprisonment",
             "description": [
-                "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals damage to the target."
+                "Places a target unit into an astral prison. The hidden unit is invulnerable and disabled. When the astral prison implodes, it deals damage to the target and steals a percentage of their max mana."
             ],
             "attributes": [
-                "DAMAGE: 120 / 190 / 260 / 330",
+                "DAMAGE: 120 / 200 / 280 / 360",
                 "DURATION: 1.75 / 2.5 / 3.25 / 4",
-                "MANA CAPACITY STEAL: 14% / 16% / 18% / 20%",
+                "MANA CAPACITY STEAL: 16% / 18% / 20% / 22%",
+                "MANA STEAL DURATION: 30 / 40 / 50 / 60",
                 "SCEPTER MAX CHARGES: 2",
                 "SCEPTER CHARGE RESTORE TIME: 12"
             ],
             "lore": "Locked away in the pocket between this world and the Outworld, victims realize their infantile knowledge and mortality.",
+            "aghanimDescription": "Grants charges to Astral Imprisonment, increases damage by 140 and applies the damage in an area.",
             "notes": [
-                "Imprisoned units can still be hit by Sanity's Eclipse."
+                "Imprisoned units can still be hit by Sanity's Eclipse.",
+                "Max mana steal does not increase Outworld Destroyer's current mana values or directly reduce the victim's mana values."
             ]
         },
         "stat": {
             "abilityId": 5392,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32808,
             "unitTargetType": 3,
@@ -116,10 +165,7 @@
                 250
             ],
             "castPoint": [
-                0.25,
-                0.25,
-                0.25,
-                0.25
+                0.3
             ],
             "cooldown": [
                 24.0,
@@ -128,12 +174,13 @@
                 12.0
             ],
             "manaCost": [
-                120.0
+                150.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -144,7 +191,7 @@
         "uri": "obsidian_destroyer",
         "language": {
             "abilityId": 5393,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Essence Aura",
             "description": [
@@ -163,7 +210,7 @@
         },
         "stat": {
             "abilityId": 5393,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 1,
@@ -188,7 +235,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -199,16 +247,16 @@
         "uri": "obsidian_destroyer",
         "language": {
             "abilityId": 5394,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Sanity's Eclipse",
             "description": [
                 "Unleashes a psychic blast that deals to enemies based on the difference between your mana and the target's mana. Sanity's Eclipse can hit units trapped by Astral Imprisonment."
             ],
             "attributes": [
-                "BASE DAMAGE: 200 / 275 / 350",
+                "BASE DAMAGE: 200 / 300 / 400",
                 "MANA DIFFERENCE MULTIPLIER: 0.4",
-                "RADIUS: 375 / 475 / 575",
+                "RADIUS: 400 / 500 / 600",
                 "CAST RANGE: 700"
             ],
             "lore": "When an Outworld crystal ruptures, cataclysmic energies are released, and the reverberations of this power are felt interdimensionally.",
@@ -218,7 +266,7 @@
         },
         "stat": {
             "abilityId": 5394,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 48,
             "unitTargetType": 0,
@@ -261,7 +309,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -272,22 +321,23 @@
         "uri": "obsidian_destroyer",
         "language": {
             "abilityId": 5684,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Essence Flux",
             "description": [
                 "Passively grants you a chance to restore a percentage of your max mana each time you cast an ability."
             ],
             "attributes": [
-                "CHANCE: 25%",
+                "CHANCE: 30%",
                 "MAX MANA RESTORE: 20% / 30% / 40% / 50%"
             ],
             "lore": "The Outworld is awash in arcane energy, inclined to diffuse through any of Harbinger's rifts.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Essence Flux becomes castable ability with 0.75 cast time. Swaps Outworld Destroyer's current Life and Mana totals. Cooldown: 45"
         },
         "stat": {
             "abilityId": 5684,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -309,13 +359,14 @@
             "castRangeBuffer": [
                 250
             ],
-            "channelTime": [
-                1.5
+            "castPoint": [
+                0.75
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -326,16 +377,16 @@
         "uri": "obsidian_destroyer",
         "language": {
             "abilityId": 6241,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+1.6% Arcane Orb Damage",
+            "displayName": "+2% Arcane Orb Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6241,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -360,7 +411,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -371,7 +423,7 @@
         "uri": "obsidian_destroyer",
         "language": {
             "abilityId": 6711,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30% Mind Over Matter Slow",
             "description": [],
@@ -380,7 +432,7 @@
         },
         "stat": {
             "abilityId": 6711,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -405,7 +457,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -416,7 +469,7 @@
         "uri": "obsidian_destroyer",
         "language": {
             "abilityId": 6712,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+150 Astral Imprisonment Damage",
             "description": [],
@@ -425,7 +478,7 @@
         },
         "stat": {
             "abilityId": 6712,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -450,7 +503,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -461,16 +515,16 @@
         "uri": "obsidian_destroyer",
         "language": {
             "abilityId": 7375,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+0.1 Sanity's Eclipse Mana Difference Multiplier",
+            "displayName": "+0.15 Sanity's Eclipse Mana Difference Multiplier",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7375,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -495,7 +549,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

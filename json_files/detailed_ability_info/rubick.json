@@ -5,7 +5,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 518,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fade Bolt Borrows Hero Damage",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 518,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +50,7 @@
         "name": "rubick_telekinesis_land_self",
         "language": {
             "abilityId": 647,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Telekinesis Land",
             "description": [
@@ -61,7 +62,7 @@
         },
         "stat": {
             "abilityId": 647,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 67633,
             "unitTargetType": 0,
@@ -86,10 +87,101 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "787": {
+        "id": 787,
+        "name": "special_bonus_unique_rubick_7",
+        "language": {
+            "abilityId": 787,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+0.6s Telekinesis Lift Duration",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 787,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "897": {
+        "id": 897,
+        "name": "special_bonus_unique_rubick_8",
+        "language": {
+            "abilityId": 897,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+175 Telekinesis Landing Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 897,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5448": {
         "id": 5448,
@@ -97,7 +189,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5448,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Telekinesis",
             "description": [
@@ -114,11 +206,12 @@
                 "While the target is in the air, Rubick may use a secondary ability to throw the enemy in a targeted direction.",
                 "When the unit lands, it isn't affected by the area of effect stun.",
                 "The farthest you can throw an enemy is 375."
-            ]
+            ],
+            "shardDescription": "Allows you to target yourself or allies with Telekinesis. Throw range is 85% longer and cooldown is reduced by 30%% when targeting allies. Throw delay reduced to 0.5 seconds."
         },
         "stat": {
             "abilityId": 5448,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -153,9 +246,9 @@
                 0.1
             ],
             "cooldown": [
-                34.0,
-                30.0,
+                28.0,
                 26.0,
+                24.0,
                 22.0
             ],
             "manaCost": [
@@ -164,7 +257,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -175,7 +269,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5449,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Telekinesis Land",
             "description": [
@@ -187,7 +281,7 @@
         },
         "stat": {
             "abilityId": 5449,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 49,
             "unitTargetType": 0,
@@ -212,7 +306,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -223,7 +318,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5450,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fade Bolt",
             "description": [
@@ -240,7 +335,7 @@
         },
         "stat": {
             "abilityId": 5450,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -289,7 +384,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -300,7 +396,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5451,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Null Field",
             "description": [
@@ -317,7 +413,7 @@
         },
         "stat": {
             "abilityId": 5451,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 526340,
             "unitTargetType": 0,
@@ -345,7 +441,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -356,7 +453,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 5452,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Spell Steal",
             "description": [
@@ -368,13 +465,14 @@
                 "STOLEN DEBUFF AMP: 10% / 20% / 30%"
             ],
             "lore": "...but even their lesser magics can be a source of much utility.",
+            "aghanimDescription": "Decreases cooldown, increases cast range and upgrades the spell to the Scepter level.",
             "notes": [
                 "Cannot steal item abilities."
             ]
         },
         "stat": {
             "abilityId": 5452,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 1,
@@ -420,7 +518,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -430,7 +529,7 @@
         "name": "rubick_empty1",
         "language": {
             "abilityId": 5453,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Stolen Spell",
             "description": [
@@ -441,7 +540,7 @@
         },
         "stat": {
             "abilityId": 5453,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 66,
             "unitTargetType": 0,
@@ -466,7 +565,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -476,7 +576,7 @@
         "name": "rubick_empty2",
         "language": {
             "abilityId": 5454,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Stolen Spell",
             "description": [
@@ -487,7 +587,7 @@
         },
         "stat": {
             "abilityId": 5454,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 66,
             "unitTargetType": 0,
@@ -512,7 +612,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -522,7 +623,7 @@
         "name": "rubick_hidden1",
         "language": {
             "abilityId": 5455,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -530,7 +631,7 @@
         },
         "stat": {
             "abilityId": 5455,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 65,
             "unitTargetType": 0,
@@ -555,7 +656,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -565,7 +667,7 @@
         "name": "rubick_hidden2",
         "language": {
             "abilityId": 5456,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -573,7 +675,7 @@
         },
         "stat": {
             "abilityId": 5456,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 65,
             "unitTargetType": 0,
@@ -598,7 +700,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -608,7 +711,7 @@
         "name": "rubick_hidden3",
         "language": {
             "abilityId": 5457,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -616,7 +719,7 @@
         },
         "stat": {
             "abilityId": 5457,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 65,
             "unitTargetType": 0,
@@ -641,7 +744,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -652,7 +756,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6041,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+240 Telekinesis Land Distance",
             "description": [],
@@ -661,7 +765,7 @@
         },
         "stat": {
             "abilityId": 6041,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -686,7 +790,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -697,16 +802,16 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6862,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-15% Fade Bolt Damage Reduction",
+            "displayName": "-24% Fade Bolt Damage Reduction",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6862,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -731,7 +836,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -742,7 +848,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6863,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4s Fade Bolt Cooldown",
             "description": [],
@@ -751,7 +857,7 @@
         },
         "stat": {
             "abilityId": 6863,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -776,7 +882,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -787,7 +894,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6864,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-12s Telekinesis Cooldown",
             "description": [],
@@ -796,7 +903,7 @@
         },
         "stat": {
             "abilityId": 6864,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -821,7 +928,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -832,7 +940,7 @@
         "uri": "rubick",
         "language": {
             "abilityId": 6870,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+40% Spell Amp For Stolen Spells",
             "description": [],
@@ -841,7 +949,7 @@
         },
         "stat": {
             "abilityId": 6870,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -866,7 +974,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -877,14 +986,14 @@
         "uri": "rubick",
         "language": {
             "abilityId": 7320,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Arcane Supremacy",
             "description": [
                 "Rubick's mastery of the arcane allows him to have a larger cast range and increased potency."
             ],
             "attributes": [
-                "CAST RANGE: 75 / 125 / 175 / 225",
+                "CAST RANGE: 100 / 150 / 200 / 250",
                 "SPELL AMP: 14% / 18% / 22% / 26%"
             ],
             "lore": "Not every magus can be a Grand Magus...",
@@ -892,7 +1001,7 @@
         },
         "stat": {
             "abilityId": 7320,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -917,7 +1026,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

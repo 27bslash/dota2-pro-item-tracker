@@ -5,7 +5,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 556,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4s Firestorm Cooldown",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 556,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,7 +51,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 557,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+75 Pit of Malice AoE",
             "description": [],
@@ -59,7 +60,7 @@
         },
         "stat": {
             "abilityId": 557,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -84,7 +85,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -92,9 +94,10 @@
     "663": {
         "id": 663,
         "name": "special_bonus_unique_underlord_7",
+        "uri": "abyssal_underlord",
         "language": {
             "abilityId": 663,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2 Firestorm Wave Count",
             "description": [],
@@ -103,7 +106,7 @@
         },
         "stat": {
             "abilityId": 663,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -128,7 +131,98 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "710": {
+        "id": 710,
+        "name": "special_bonus_unique_underlord_8",
+        "language": {
+            "abilityId": 710,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+125 Firestorm Radius",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 710,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "805": {
+        "id": 805,
+        "name": "special_bonus_unique_underlord_9",
+        "language": {
+            "abilityId": 805,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+40% Atrophy Allied Hero Bonus",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 805,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -139,14 +233,14 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 5613,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Firestorm",
             "description": [
                 "Calls down waves of fire that damage enemy units in the target area, burning for additional damage over time."
             ],
             "attributes": [
-                "RADIUS: 400 / 430 / 460 / 490",
+                "RADIUS: 425",
                 "WAVE COUNT: 6",
                 "WAVE DAMAGE: 25 / 40 / 55 / 70",
                 "WAVE INTERVAL 1.0",
@@ -154,11 +248,12 @@
                 "BURN DURATION: 2.0"
             ],
             "lore": "The flames of conquest blaze forth from the darkest depths of the abyss.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Firestorm can be self-targeted. When used that way, the Firestorm follows Underlord around. Increases the wave count by 3. Reduces cast point by half."
         },
         "stat": {
             "abilityId": 5613,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -201,7 +296,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -212,7 +308,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 5614,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Pit of Malice",
             "description": [
@@ -229,7 +325,7 @@
         },
         "stat": {
             "abilityId": 5614,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -272,7 +368,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -283,7 +380,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 5615,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Atrophy Aura",
             "description": [
@@ -301,7 +398,7 @@
         },
         "stat": {
             "abilityId": 5615,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 0,
@@ -329,7 +426,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -340,7 +438,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 5616,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dark Rift",
             "description": [
@@ -351,13 +449,14 @@
                 "TELEPORT DELAY: 6.0 / 5.0 / 4.0"
             ],
             "lore": "They come without warning, leaving fire and blood where kingdoms once flourished.",
+            "aghanimDescription": "Dark Rift has two charges and can be cast on allied heroes. Reduces cast delay by 1 second.",
             "notes": [
                 "Double-click to teleport to your team's base fountain."
             ]
         },
         "stat": {
             "abilityId": 5616,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 24,
             "unitTargetType": 36,
@@ -398,7 +497,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -409,7 +509,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 5617,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Cancel Dark Rift",
             "description": [
@@ -420,7 +520,7 @@
         },
         "stat": {
             "abilityId": 5617,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 32837,
             "unitTargetType": 0,
@@ -451,7 +551,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -462,7 +563,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 6019,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.65s Pit of Malice Root",
             "description": [],
@@ -471,7 +572,7 @@
         },
         "stat": {
             "abilityId": 6019,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -496,7 +597,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -507,7 +609,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 6967,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+14 Firestorm Wave Damage",
             "description": [],
@@ -516,7 +618,7 @@
         },
         "stat": {
             "abilityId": 6967,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -541,7 +643,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -552,7 +655,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 6968,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5 Atrophy Permanent Bonus Damage ",
             "description": [],
@@ -561,7 +664,7 @@
         },
         "stat": {
             "abilityId": 6968,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -586,7 +689,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -597,7 +701,7 @@
         "uri": "abyssal_underlord",
         "language": {
             "abilityId": 6969,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "15% Firestorm Building Damage",
             "description": [],
@@ -606,7 +710,7 @@
         },
         "stat": {
             "abilityId": 6969,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -631,7 +735,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

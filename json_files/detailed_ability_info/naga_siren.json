@@ -2,9 +2,10 @@
     "601": {
         "id": 601,
         "name": "special_bonus_unique_naga_siren_5",
+        "uri": "naga_siren",
         "language": {
             "abilityId": 601,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-30s Song of the Siren Cooldown",
             "description": [],
@@ -13,7 +14,7 @@
         },
         "stat": {
             "abilityId": 601,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -38,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -48,7 +50,7 @@
         "name": "naga_siren_crit",
         "language": {
             "abilityId": 622,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Critical Strike",
             "description": [
@@ -64,7 +66,7 @@
         },
         "stat": {
             "abilityId": 622,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -95,10 +97,56 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "761": {
+        "id": 761,
+        "name": "special_bonus_unique_naga_siren_6",
+        "language": {
+            "abilityId": 761,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-10s Mirror Image Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 761,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5467": {
         "id": 5467,
@@ -106,7 +154,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 5467,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Mirror Image",
             "description": [
@@ -129,7 +177,7 @@
         },
         "stat": {
             "abilityId": 5467,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -169,7 +217,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -180,21 +229,22 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 5468,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ensnare",
             "description": [
                 "Interrupts the target and traps them in place, preventing movement or blinking."
             ],
             "attributes": [
-                "DURATION: 2.0 / 3.0 / 4.0 / 5.0"
+                "DURATION: 2.75 / 3.5 / 4.25 / 5.0"
             ],
             "lore": "The only way to escape the onslaught of a Slithereen is to never oppose one in the first place.",
+            "aghanimDescription": "Allows Ensnare to target Spell Immune or sleeping units. Reduces the Ensnare cooldown by 6 seconds and increases cast range by 400.",
             "notes": []
         },
         "stat": {
             "abilityId": 5468,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -214,9 +264,9 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                650,
-                650,
-                650,
+                575,
+                600,
+                625,
                 650
             ],
             "castRangeBuffer": [
@@ -226,6 +276,9 @@
                 0.4
             ],
             "cooldown": [
+                23.0,
+                20.0,
+                17.0,
                 14.0
             ],
             "manaCost": [
@@ -237,7 +290,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -248,7 +302,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 5469,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Rip Tide",
             "description": [
@@ -261,11 +315,12 @@
                 "DURATION: 4.0"
             ],
             "lore": "A torrent from the Deep Ones crushes the defenses of the Siren's enemies.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Adds 20% slow and increases the base armor reduction by 4."
         },
         "stat": {
             "abilityId": 5469,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -296,7 +351,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -307,7 +363,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 5470,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Song of the Siren",
             "description": [
@@ -326,7 +382,7 @@
         },
         "stat": {
             "abilityId": 5470,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 4,
             "unitTargetType": 0,
@@ -369,7 +425,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -380,7 +437,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 5478,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Song of the Siren End",
             "description": [
@@ -391,7 +448,7 @@
         },
         "stat": {
             "abilityId": 5478,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 5,
             "unitTargetType": 0,
@@ -426,7 +483,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -437,7 +495,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 6205,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1 Mirror Image Illusion",
             "description": [],
@@ -446,7 +504,7 @@
         },
         "stat": {
             "abilityId": 6205,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -471,7 +529,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -482,7 +541,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 6398,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-6s Ensnare Cooldown",
             "description": [],
@@ -491,7 +550,7 @@
         },
         "stat": {
             "abilityId": 6398,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -516,7 +575,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -527,7 +587,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 6701,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-5 Rip Tide Armor",
             "description": [],
@@ -536,7 +596,7 @@
         },
         "stat": {
             "abilityId": 6701,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -561,7 +621,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -572,7 +633,7 @@
         "uri": "naga_siren",
         "language": {
             "abilityId": 7029,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+9% Mirror Image Damage",
             "description": [],
@@ -581,7 +642,7 @@
         },
         "stat": {
             "abilityId": 7029,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -606,7 +667,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

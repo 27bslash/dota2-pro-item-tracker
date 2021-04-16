@@ -5,16 +5,16 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 526,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-1.5s Ice Path Cooldown",
+            "displayName": "-2.5s Ice Path Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 526,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,16 +50,16 @@
         "name": "special_bonus_unique_jakiro_7",
         "language": {
             "abilityId": 542,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+25 Macropyre Damage",
+            "displayName": "+30 Macropyre Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 542,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -83,7 +84,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -91,17 +93,18 @@
     "553": {
         "id": 553,
         "name": "jakiro_liquid_ice",
+        "uri": "jakiro",
         "language": {
             "abilityId": 553,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Liquid Frost",
             "description": [
-                "Applies a frost debuff that slows enemy movement speed by 30 and causes them to lose 20 plus 2.5 of their max health per second for 4.0 seconds."
+                "Stuns enemies for 0.4 seconds and applies a frost debuff that slows enemy movement speed by 20 and take 20 plus 2.5 of their max health per second as damage for 4.0 seconds."
             ],
             "attributes": [
                 "DURATION: 4.0",
-                "MOVEMENT SLOW: 30%",
+                "MOVEMENT SLOW: 20%",
                 "BASE DAMAGE: 20",
                 "MAX HEALTH DAMAGE: 2.5%"
             ],
@@ -109,7 +112,7 @@
         },
         "stat": {
             "abilityId": 553,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 35,
@@ -146,10 +149,56 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "899": {
+        "id": 899,
+        "name": "special_bonus_unique_jakiro_8",
+        "language": {
+            "abilityId": 899,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+12 Liquid Fire Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 899,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5297": {
         "id": 5297,
@@ -157,7 +206,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 5297,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dual Breath",
             "description": [
@@ -173,12 +222,12 @@
             "lore": "Pyrexae dragons have tremendously dangerous breath for each branch of the species; combining them is unimaginable.",
             "notes": [
                 "Can hit units up to 1025 range away.",
-                "Has a 0.3 / 0.3 / 0.3 / 0.3 second interval between each breath."
+                "Has a 0.2 second interval between each breath."
             ]
         },
         "stat": {
             "abilityId": 5297,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 24,
             "unitTargetType": 3,
@@ -224,7 +273,8 @@
             "isUltimate": false,
             "duration": "5.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -235,7 +285,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 5298,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ice Path",
             "description": [
@@ -254,7 +304,7 @@
         },
         "stat": {
             "abilityId": 5298,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 3,
@@ -297,7 +347,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -308,7 +359,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 5299,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Liquid Fire",
             "description": [
@@ -326,7 +377,7 @@
         },
         "stat": {
             "abilityId": 5299,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 35,
@@ -366,7 +417,8 @@
             "isUltimate": false,
             "duration": "5.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -377,7 +429,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 5300,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Macropyre",
             "description": [
@@ -387,19 +439,19 @@
                 "DAMAGE PER SECOND: 100 / 140 / 180",
                 "FLAME WIDTH: 260",
                 "DURATION: 10",
-                "SCEPTER DAMAGE PER SECOND: 125 / 175 / 225",
+                "SCEPTER DAMAGE PER SECOND:%damage_scepter%",
                 "SCEPTER FLAME LENGTH:%cast_range_scepter%",
                 "SCEPTER DURATION:%duration_scepter%"
             ],
             "lore": "Ice and fire combine to rip the battlefield to shreds with extreme temperatures.",
+            "aghanimDescription": "Increases Macropyre distance by +400 range, duration by +20 seconds and causes it to become Pure damage and pierce Spell Immunity.",
             "notes": [
-                "Macropyre destroys trees in its path.",
                 "Units hit by Macropyre will continue to be affected after they leave the area for 2 additional seconds."
             ]
         },
         "stat": {
             "abilityId": 5300,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 16,
             "unitTargetType": 3,
@@ -440,7 +492,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -451,16 +504,16 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 6064,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+1s Ice Path Duration",
+            "displayName": "+0.5s Ice Path Duration",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6064,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -485,7 +538,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -496,16 +550,16 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 6381,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+25 Dual Breath Burn Damage",
+            "displayName": "2x Dual Breath Damage and Range",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6381,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -530,7 +584,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -541,7 +596,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 6538,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Macropyre Pure and Pierces Immunity",
             "description": [],
@@ -550,7 +605,7 @@
         },
         "stat": {
             "abilityId": 6538,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -575,7 +630,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -586,7 +642,7 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 6661,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-50 Liquid Fire Attack Speed",
             "description": [],
@@ -595,7 +651,7 @@
         },
         "stat": {
             "abilityId": 6661,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -620,7 +676,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -631,16 +688,16 @@
         "uri": "jakiro",
         "language": {
             "abilityId": 7660,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+325 Dual Breath Range",
+            "displayName": "+800 Dual Breath Range",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7660,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -665,7 +722,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true

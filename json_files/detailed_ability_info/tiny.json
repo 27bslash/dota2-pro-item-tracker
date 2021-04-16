@@ -5,7 +5,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 296,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Craggy Exterior",
             "description": [
@@ -20,7 +20,7 @@
         },
         "stat": {
             "abilityId": 296,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -45,7 +45,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -56,7 +57,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 558,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5 Tree Grab Attack Charges",
             "description": [],
@@ -65,7 +66,7 @@
         },
         "stat": {
             "abilityId": 558,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -90,7 +91,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "718": {
+        "id": 718,
+        "name": "special_bonus_unique_tiny_7",
+        "language": {
+            "abilityId": 718,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+15% Tree Grab Unit Damage Bonus",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 718,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -101,7 +148,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 5106,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Avalanche",
             "description": [
@@ -117,7 +164,7 @@
         },
         "stat": {
             "abilityId": 5106,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -163,7 +210,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -174,7 +222,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 5107,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Toss",
             "description": [
@@ -193,7 +241,7 @@
         },
         "stat": {
             "abilityId": 5107,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4194344,
             "unitTargetType": 8,
@@ -213,10 +261,10 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                850,
+                900,
                 1000,
-                1150,
-                1300
+                1100,
+                1200
             ],
             "castRangeBuffer": [
                 250
@@ -242,7 +290,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -253,7 +302,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 5108,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Tree Grab",
             "description": [
@@ -270,11 +319,12 @@
             "lore": "Sticks and stones break all the bones, with structures sure to follow.",
             "notes": [
                 "The cooldown begins when the tree is thrown."
-            ]
+            ],
+            "shardDescription": "Causes Tree Grab to have no charge limit."
         },
         "stat": {
             "abilityId": 5108,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 72,
@@ -309,12 +359,13 @@
                 10.0
             ],
             "manaCost": [
-                50.0
+                40.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -325,14 +376,14 @@
         "uri": "tiny",
         "language": {
             "abilityId": 5109,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Grow",
             "description": [
                 "Tiny gains craggy mass, increasing his attack damage, and armor, while slowing his attack speed."
             ],
             "attributes": [
-                "BONUS ARMOR: 10 / 16 / 22",
+                "BONUS ARMOR: 12 / 18 / 24",
                 "BONUS DAMAGE: 30 / 70 / 110",
                 "ATTACK SPEED REDUCTION: 20 / 35 / 50"
             ],
@@ -341,7 +392,7 @@
         },
         "stat": {
             "abilityId": 5109,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -366,7 +417,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -377,7 +429,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 6153,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+80 Avalanche Damage",
             "description": [],
@@ -386,7 +438,7 @@
         },
         "stat": {
             "abilityId": 6153,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -411,7 +463,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -422,7 +475,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 6932,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "3 Toss Charges",
             "description": [],
@@ -431,7 +484,7 @@
         },
         "stat": {
             "abilityId": 6932,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -456,7 +509,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -467,7 +521,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 6933,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-8s Avalanche Cooldown",
             "description": [],
@@ -476,7 +530,7 @@
         },
         "stat": {
             "abilityId": 6933,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -501,7 +555,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -512,7 +567,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 6934,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-7s Tree Grab CD",
             "description": [],
@@ -521,7 +576,7 @@
         },
         "stat": {
             "abilityId": 6934,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -546,7 +601,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -554,16 +610,17 @@
     "6937": {
         "id": 6937,
         "name": "tiny_toss_tree",
+        "uri": "tiny",
         "language": {
             "abilityId": 6937,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Tree Throw",
             "description": [
                 "Throws the tree at the target unit, proccing your attack on it and splashing damage around the target."
             ],
             "attributes": [
-                "CAST RANGE: 1300",
+                "CAST RANGE: 1200",
                 "SPLASH RADIUS: 275",
                 "SPLASH DAMAGE: 150%"
             ],
@@ -572,7 +629,7 @@
         },
         "stat": {
             "abilityId": 6937,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -592,7 +649,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                1300
+                1200
             ],
             "castRangeBuffer": [
                 250
@@ -603,7 +660,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -614,7 +672,7 @@
         "uri": "tiny",
         "language": {
             "abilityId": 7005,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Toss Requires No Target",
             "description": [
@@ -625,7 +683,7 @@
         },
         "stat": {
             "abilityId": 7005,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -650,7 +708,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -658,9 +717,10 @@
     "7850": {
         "id": 7850,
         "name": "tiny_tree_channel",
+        "uri": "tiny",
         "language": {
             "abilityId": 7850,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Tree Volley",
             "description": [
@@ -677,7 +737,7 @@
         },
         "stat": {
             "abilityId": 7850,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -697,7 +757,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                1300
+                1200
             ],
             "castRangeBuffer": [
                 250
@@ -717,7 +777,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

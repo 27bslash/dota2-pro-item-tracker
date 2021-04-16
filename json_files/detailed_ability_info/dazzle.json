@@ -4,7 +4,7 @@
         "name": "dazzle_rain_of_vermin",
         "language": {
             "abilityId": 579,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -12,7 +12,7 @@
         },
         "stat": {
             "abilityId": 579,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -49,10 +49,56 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "789": {
+        "id": 789,
+        "name": "special_bonus_unique_dazzle_5",
+        "language": {
+            "abilityId": 789,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+250 Heal On Shallow Grave End",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 789,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5233": {
         "id": 5233,
@@ -60,7 +106,7 @@
         "uri": "dazzle",
         "language": {
             "abilityId": 5233,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Poison Touch",
             "description": [
@@ -75,11 +121,12 @@
             "lore": "One of the few Dezun rites used for offensive purposes, the paralytic enchantment often proves useful.",
             "notes": [
                 "The damage is not reduced by damage block abilities."
-            ]
+            ],
+            "shardDescription": "Causes Poison Touch to hex affected targets for 1.25 seconds."
         },
         "stat": {
             "abilityId": 5233,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -128,7 +175,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -139,7 +187,7 @@
         "uri": "dazzle",
         "language": {
             "abilityId": 5234,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shallow Grave",
             "description": [
@@ -155,7 +203,7 @@
         },
         "stat": {
             "abilityId": 5234,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 49160,
             "unitTargetType": 1,
@@ -184,12 +232,12 @@
                 250
             ],
             "castPoint": [
-                0.4
+                0.3
             ],
             "cooldown": [
-                42.0,
-                34.0,
-                26.0,
+                36.0,
+                30.0,
+                24.0,
                 18.0
             ],
             "manaCost": [
@@ -198,7 +246,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -209,7 +258,7 @@
         "uri": "dazzle",
         "language": {
             "abilityId": 5235,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shadow Wave",
             "description": [
@@ -222,6 +271,7 @@
                 "DAMAGE: 80 / 100 / 120 / 140"
             ],
             "lore": "While it is a simplistic and routine rite among Shadow Priests, the Shadow Wave is also the most critical for success.",
+            "aghanimDescription": "Causes Shadow Wave to dispel allies. Increases heal by +100 and damage by +100.",
             "notes": [
                 "Prioritizes allied heroes over creeps.",
                 "If enemies are near multiple allied units affected by Shadow Wave, they will take multiple instances of damage."
@@ -229,7 +279,7 @@
         },
         "stat": {
             "abilityId": 5235,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 3,
@@ -275,7 +325,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -286,7 +337,7 @@
         "uri": "dazzle",
         "language": {
             "abilityId": 5236,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Weave",
             "description": [
@@ -304,7 +355,7 @@
         },
         "stat": {
             "abilityId": 5236,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 48,
             "unitTargetType": 0,
@@ -347,7 +398,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -358,7 +410,7 @@
         "uri": "dazzle",
         "language": {
             "abilityId": 6049,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-32% Poison Touch Slow",
             "description": [],
@@ -367,7 +419,7 @@
         },
         "stat": {
             "abilityId": 6049,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -392,7 +444,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -403,7 +456,7 @@
         "uri": "dazzle",
         "language": {
             "abilityId": 6232,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30 Shadow Wave Heal / Damage",
             "description": [],
@@ -412,7 +465,7 @@
         },
         "stat": {
             "abilityId": 6232,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -437,7 +490,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -448,7 +502,7 @@
         "uri": "dazzle",
         "language": {
             "abilityId": 6528,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+36 Poison Touch DPS",
             "description": [],
@@ -457,7 +511,7 @@
         },
         "stat": {
             "abilityId": 6528,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -482,7 +536,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -493,7 +548,7 @@
         "uri": "dazzle",
         "language": {
             "abilityId": 6626,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.5 Bad Juju Armor Reduction",
             "description": [],
@@ -502,7 +557,7 @@
         },
         "stat": {
             "abilityId": 6626,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -527,7 +582,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -538,7 +594,7 @@
         "uri": "dazzle",
         "language": {
             "abilityId": 7304,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Bad Juju",
             "description": [
@@ -551,11 +607,12 @@
                 "RADIUS: 1200"
             ],
             "lore": "Each invocation of the Nothl realm helps it further permeate the surroundings of our own.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Causes Dazzle to launch an attack at the three closest enemies within 1200 range each time he casts an ability."
         },
         "stat": {
             "abilityId": 7304,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -583,7 +640,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

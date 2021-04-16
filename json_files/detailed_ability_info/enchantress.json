@@ -2,9 +2,10 @@
     "320": {
         "id": 320,
         "name": "enchantress_bunny_hop",
+        "uri": "enchantress",
         "language": {
             "abilityId": 320,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Sproink",
             "description": [
@@ -18,7 +19,7 @@
         },
         "stat": {
             "abilityId": 320,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 64,
@@ -49,7 +50,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -60,14 +62,14 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 5267,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Untouchable",
             "description": [
                 "Enchantress beguiles her enemies, slowing their attacks when she is attacked."
             ],
             "attributes": [
-                "ATTACK SLOW: -100 / -140 / -180"
+                "ATTACK SLOW: -120 / -160 / -200"
             ],
             "lore": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty.",
             "notes": [
@@ -77,7 +79,7 @@
         },
         "stat": {
             "abilityId": 5267,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -102,7 +104,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -113,7 +116,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 5268,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Enchant",
             "description": [
@@ -135,7 +138,7 @@
         },
         "stat": {
             "abilityId": 5268,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -181,7 +184,8 @@
             "isUltimate": false,
             "duration": "3.75 4.5 5.25 6",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -192,26 +196,27 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 5269,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Nature's Attendants",
             "description": [
-                "A cloud of wisps heals Enchantress and any friendly units nearby. Lasts 11 seconds."
+                "A cloud of wisps heals Enchantress and any friendly units nearby. Lasts 12 seconds."
             ],
             "attributes": [
-                "WISPS: 4 / 6 / 8 / 10",
-                "HEAL PER SECOND: 7 / 9 / 11 / 13",
+                "WISPS: 8",
+                "HEAL PER SECOND: 4 / 8 / 12 / 16",
                 "RADIUS: 275 / 275 / 275 / 275"
             ],
             "lore": "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers.",
             "notes": [
                 "Units with full HP will not be selected for the heal.",
                 "Can heal units with spell immunity."
-            ]
+            ],
+            "shardDescription": "Adds 3 permanent Nature's Attendants that follow Enchantress around."
         },
         "stat": {
             "abilityId": 5269,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -249,9 +254,10 @@
                 140.0
             ],
             "isUltimate": false,
-            "duration": "11",
+            "duration": "12",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -262,7 +268,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 5270,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Impetus",
             "description": [
@@ -279,7 +285,7 @@
         },
         "stat": {
             "abilityId": 5270,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -321,7 +327,8 @@
             "isUltimate": false,
             "duration": "1.5 1.5 1.5",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -332,7 +339,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 6086,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+6 Nature's Attendants Wisps",
             "description": [],
@@ -341,7 +348,7 @@
         },
         "stat": {
             "abilityId": 6086,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -366,7 +373,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -377,7 +385,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 6331,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Enchant Affects Ancients",
             "description": [],
@@ -386,7 +394,7 @@
         },
         "stat": {
             "abilityId": 6331,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -411,7 +419,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -422,7 +431,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 6379,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-65 Untouchable Slow",
             "description": [],
@@ -431,7 +440,7 @@
         },
         "stat": {
             "abilityId": 6379,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -456,7 +465,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -467,7 +477,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 6515,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+6.5% Impetus Damage",
             "description": [],
@@ -476,7 +486,7 @@
         },
         "stat": {
             "abilityId": 6515,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -501,7 +511,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -512,7 +523,7 @@
         "uri": "enchantress",
         "language": {
             "abilityId": 6648,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+20 Nature's Attendants Heal",
             "description": [],
@@ -521,7 +532,7 @@
         },
         "stat": {
             "abilityId": 6648,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -546,7 +557,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

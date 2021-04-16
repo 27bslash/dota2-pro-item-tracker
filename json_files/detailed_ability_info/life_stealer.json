@@ -2,16 +2,17 @@
     "631": {
         "id": 631,
         "name": "life_stealer_ghoul_frenzy",
+        "uri": "life_stealer",
         "language": {
             "abilityId": 631,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ghoul Frenzy",
             "description": [
                 "Passively causes Lifestealer's attacks to significantly slow enemy movement speed for 1.5 seconds. Grants you Attack Speed."
             ],
             "attributes": [
-                "MOVEMENT SLOW: 6% / 12% / 18% / 24%",
+                "MOVEMENT SLOW: 10% / 15% / 20% / 25%",
                 "DURATION: 1.5",
                 "BONUS ATTACK SPEED: 20 / 30 / 40 / 50"
             ],
@@ -19,7 +20,7 @@
         },
         "stat": {
             "abilityId": 631,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 3,
@@ -44,9 +45,10 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
-        "drawMatchPage": false,
+        "drawMatchPage": true,
         "isTalent": false
     },
     "5249": {
@@ -55,7 +57,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5249,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Rage",
             "description": [
@@ -64,7 +66,7 @@
                 "DISPEL TYPE: Basic Dispel"
             ],
             "attributes": [
-                "MOVE SPEED BONUS: 15%",
+                "MOVE SPEED BONUS: 15% / 16% / 17% / 18%",
                 "DURATION: 3.0 / 4.0 / 5.0 / 6.0"
             ],
             "lore": "The madness and brutality of N'aix makes him a vicious and unrelenting foe in combat.",
@@ -74,7 +76,7 @@
         },
         "stat": {
             "abilityId": 5249,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -114,7 +116,8 @@
             "isUltimate": false,
             "duration": "3 4 5 6",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -125,14 +128,15 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5250,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Feast",
             "description": [
-                "Lifestealer's attacks heal himself for a percentage of his target's max health."
+                "Lifestealer's attacks deal damage and provide heal for a percentage of his target's max health."
             ],
             "attributes": [
-                "MAX HEALTH LIFE STEAL: 1.6% / 2.2% / 2.8% / 3.4%"
+                "MAX HEALTH LIFE STEAL: 1.8% / 2.4% / 3.0% / 3.6%",
+                "MAX HEALTH DAMAGE: 0.6% / 0.8% / 1% / 1.2%"
             ],
             "lore": "After escaping from his cell in Devarque, N'aix subsisted on flesh and bones of those unfortunate to cross his path.",
             "notes": [
@@ -144,7 +148,7 @@
         },
         "stat": {
             "abilityId": 5250,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -169,7 +173,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -180,11 +185,11 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5251,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Open Wounds",
             "description": [
-                "Lifestealer rends an enemy unit, slowing the victim's movement speed and allowing all allies to regain health for a percentage of the damage they deal to that unit. All damage dealt will steal life, including damage from spells. The victim recovers movement speed over the duration."
+                "Lifestealer rends an enemy unit, slowing the victim's movement speed and allowing all allies to regain health for a percentage of the damage they deal to that unit. All damage dealt will steal life, including damage from spells. The victim recovers movement speed over the duration. Deals 2% of the target's max health per attack on the target from real heroes."
             ],
             "attributes": [
                 "LIFE STEAL: 50%",
@@ -199,7 +204,7 @@
         },
         "stat": {
             "abilityId": 5251,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -228,15 +233,16 @@
                 0.2
             ],
             "cooldown": [
-                25.0
+                15.0
             ],
             "manaCost": [
-                125.0
+                75.0
             ],
             "isUltimate": false,
             "duration": "8",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -247,7 +253,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5252,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Infest",
             "description": [
@@ -261,10 +267,11 @@
                 "SELF MAX HP REGEN: 3% / 4% / 5%",
                 "MOVEMENT SPEED: 15% / 20% / 25%",
                 "HEALTH BONUS: 400 / 800 / 1200",
-                "SCEPTER COOLDOWN: 25",
+                "SCEPTER COOLDOWN: 20",
                 "SCEPTER CAST RANGE: 500"
             ],
             "lore": "With this infestation, N'aix consumes the life blood of the host, restoring him back to full unholy power.",
+            "aghanimDescription": "Allows Infesting enemy heroes for 5 seconds, attacking their insides once every 1.25 seconds and doubling Lifestealer's regen rate. Increases cast range to 500 and reduces cooldown to 20 seconds.",
             "notes": [
                 "If the infested unit dies before Lifestealer consumes it, no health is gained.",
                 "Lifestealer gains experience while under the effects of Infest.",
@@ -274,7 +281,7 @@
         },
         "stat": {
             "abilityId": 5252,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 32776,
             "unitTargetType": 8,
@@ -315,7 +322,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -326,7 +334,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5253,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Consume",
             "description": [
@@ -337,7 +345,7 @@
         },
         "stat": {
             "abilityId": 5253,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8390661,
             "unitTargetType": 0,
@@ -365,7 +373,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -376,7 +385,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5655,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Control",
             "description": [
@@ -387,7 +396,7 @@
         },
         "stat": {
             "abilityId": 5655,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8390725,
             "unitTargetType": 0,
@@ -418,7 +427,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -428,7 +438,7 @@
         "name": "life_stealer_empty_1",
         "language": {
             "abilityId": 5657,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "",
             "description": [],
@@ -437,7 +447,7 @@
         },
         "stat": {
             "abilityId": 5657,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 67,
             "unitTargetType": 0,
@@ -462,7 +472,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -472,7 +483,7 @@
         "name": "life_stealer_empty_2",
         "language": {
             "abilityId": 5658,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "",
             "description": [],
@@ -481,7 +492,7 @@
         },
         "stat": {
             "abilityId": 5658,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 67,
             "unitTargetType": 0,
@@ -506,7 +517,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -516,7 +528,7 @@
         "name": "life_stealer_empty_3",
         "language": {
             "abilityId": 5659,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "",
             "description": [],
@@ -525,7 +537,7 @@
         },
         "stat": {
             "abilityId": 5659,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 67,
             "unitTargetType": 0,
@@ -550,7 +562,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -560,7 +573,7 @@
         "name": "life_stealer_empty_4",
         "language": {
             "abilityId": 5660,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "",
             "description": [],
@@ -569,7 +582,7 @@
         },
         "stat": {
             "abilityId": 5660,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 67,
             "unitTargetType": 0,
@@ -594,7 +607,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -605,7 +619,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5671,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Assimilate",
             "description": [
@@ -624,7 +638,7 @@
         },
         "stat": {
             "abilityId": 5671,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 9,
             "unitTargetType": 1,
@@ -661,7 +675,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -672,7 +687,7 @@
         "uri": "life_stealer",
         "language": {
             "abilityId": 5675,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Eject",
             "description": [
@@ -686,7 +701,7 @@
         },
         "stat": {
             "abilityId": 5675,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2117,
             "unitTargetType": 0,
@@ -717,7 +732,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false

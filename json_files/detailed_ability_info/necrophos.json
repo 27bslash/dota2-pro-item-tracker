@@ -5,7 +5,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 350,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+32% Heartstopper Regen Reduction",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 350,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -47,20 +48,21 @@
     "661": {
         "id": 661,
         "name": "necrolyte_death_seeker",
+        "uri": "necrolyte",
         "language": {
             "abilityId": 661,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Death Seeker",
             "description": [
-                "Spawns a fast moving large Death Pulse towards the target enemy or ally, dealing 50% more damage/heal and causing it to spread a normal Death Pulse towards nearby enemies and allies."
+                "Spawns a fast moving large Death Pulse towards the target enemy or ally, causing the target to become ethereal for 2.5 seconds. Reduces enemy magic resistance by 25%. Spreads towards nearby enemies and allies after impact."
             ],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 661,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -89,15 +91,16 @@
                 0.2
             ],
             "cooldown": [
-                20.0
+                14.0
             ],
             "manaCost": [
-                150.0
+                100.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -108,7 +111,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 5158,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Death Pulse",
             "description": [
@@ -126,7 +129,7 @@
         },
         "stat": {
             "abilityId": 5158,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -178,7 +181,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -189,22 +193,23 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 5159,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Heartstopper Aura",
             "description": [
-                "Necrophos stills the hearts of his opponents, causing nearby enemy units to lose a percentage of their max health over time. Passively provides regen for 7 seconds for each unit Necrophos kills."
+                "Necrophos stills the hearts of his opponents, causing nearby enemy units to lose a percentage of their max health over time. Passively provides regen for 8 seconds for each unit Necrophos kills."
             ],
             "attributes": [
                 "RADIUS: 800",
                 "HEALTH DECAY: 0.6% / 1.2% / 1.8% / 2.4%",
-                "HEALTH REGEN PER KILL: 3.5 / 4.5 / 5.5 / 6.5",
-                "MANA REGEN PER KILL: 3.5 / 4.5 / 5.5 / 6.5",
+                "HEALTH REGEN PER KILL: 4 / 5 / 6 / 7",
+                "MANA REGEN PER KILL: 4 / 5 / 6 / 7",
                 "HERO KILL REGEN MULTIPLIER: 6",
-                "REGEN DURATION: 7",
+                "REGEN DURATION: 8",
                 "SCEPTER DAMAGE MULTIPLIER: 2"
             ],
             "lore": "Those who come within a short distance of Necrophos can feel pestilence and plague in the air.",
+            "aghanimDescription": "Increases Heartstopper Aura damage while Ghost Shroud is active.",
             "notes": [
                 "Damage won't disable items like Blink Dagger.",
                 "Does not affect ancient creeps."
@@ -212,7 +217,7 @@
         },
         "stat": {
             "abilityId": 5159,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 0,
@@ -237,7 +242,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -248,7 +254,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 5160,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ghost Shroud",
             "description": [
@@ -257,17 +263,18 @@
             "attributes": [
                 "DURATION: 3 / 3.5 / 4 / 4.5",
                 "RESTORATION AMPLIFICATION: 75%",
-                "MOVEMENT SLOW: 6% / 12% / 18% / 24%",
+                "MOVEMENT SLOW: 12% / 16% / 20% / 24%",
                 "SLOW RADIUS: 750",
                 "INCREASED MAGIC DAMAGE: -40%",
                 "SCEPTER COOLDOWN: 10"
             ],
             "lore": "Rotund'jere uses the souls of his victims as bridge from life to afterlife.",
+            "aghanimDescription": "Reduces Ghost Shroud cooldown.",
             "notes": []
         },
         "stat": {
             "abilityId": 5160,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -304,7 +311,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -315,7 +323,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 5161,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Reaper's Scythe",
             "description": [
@@ -333,7 +341,7 @@
         },
         "stat": {
             "abilityId": 5161,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 1,
@@ -359,7 +367,7 @@
                 250
             ],
             "castPoint": [
-                0.55
+                0.45
             ],
             "cooldown": [
                 120.0
@@ -372,7 +380,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -383,7 +392,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 6010,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-2.5s Death Pulse Cooldown",
             "description": [],
@@ -392,7 +401,7 @@
         },
         "stat": {
             "abilityId": 6010,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -417,7 +426,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -427,7 +437,7 @@
         "name": "necrolyte_sadist_stop",
         "language": {
             "abilityId": 6316,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -435,7 +445,7 @@
         },
         "stat": {
             "abilityId": 6316,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 67589,
             "unitTargetType": 0,
@@ -466,7 +476,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -477,7 +488,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 6703,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.5  Heartstopper Aura",
             "description": [],
@@ -486,7 +497,7 @@
         },
         "stat": {
             "abilityId": 6703,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -511,7 +522,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -522,7 +534,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 7110,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+24% Ghost Shroud Slow",
             "description": [],
@@ -531,7 +543,7 @@
         },
         "stat": {
             "abilityId": 7110,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -556,7 +568,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -567,7 +580,7 @@
         "uri": "necrolyte",
         "language": {
             "abilityId": 7111,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+32 Death Pulse Heal",
             "description": [],
@@ -576,7 +589,7 @@
         },
         "stat": {
             "abilityId": 7111,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -601,7 +614,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

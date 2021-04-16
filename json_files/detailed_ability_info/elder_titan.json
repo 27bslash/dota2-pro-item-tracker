@@ -5,7 +5,7 @@
         "uri": "elder_titan",
         "language": {
             "abilityId": 5589,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Echo Stomp",
             "description": [
@@ -15,7 +15,7 @@
                 "CAST TIME: 1.7",
                 "RADIUS: 500",
                 "STOMP DAMAGE: 70 / 100 / 130 / 160",
-                "SLEEP DURATION: 2.0 / 3.0 / 4.0 / 5.0",
+                "SLEEP DURATION: 2 / 3 / 4 / 5",
                 "WAKEUP DAMAGE THRESHOLD: 50 / 100 / 150 / 200",
                 "CAST TIME:%spirit_cast_time%",
                 "RADIUS:%spirit_radius%",
@@ -26,11 +26,12 @@
             "lore": "The force of creation still echoes in the stomp of the Titan.",
             "notes": [
                 "If a unit is hit by Astral Spirit and Elder Titan, they will take both instances of damage."
-            ]
+            ],
+            "shardDescription": "Allows you to switch Echo Stomp to autocast. When cast while on autocast, Elder Titan will take the place of the Astral Spirit as it completes its stomp."
         },
         "stat": {
             "abilityId": 5589,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 132,
             "unitTargetType": 0,
@@ -68,15 +69,13 @@
                 11.0
             ],
             "manaCost": [
-                85.0,
-                90.0,
-                95.0,
                 100.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -86,7 +85,7 @@
         "name": "elder_titan_echo_stomp_spirit",
         "language": {
             "abilityId": 5590,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Echo Stomp",
             "description": [
@@ -96,14 +95,14 @@
                 "CAST TIME: 1.7",
                 "RADIUS: 500",
                 "STOMP DAMAGE: 70 / 100 / 130 / 160",
-                "SLEEP DURATION: 2.0 / 3.0 / 4.0 / 5.0"
+                "SLEEP DURATION: 2 / 3 / 4 / 5"
             ],
             "lore": "The force of creation still echoes in the stomp of the Titan.",
             "notes": []
         },
         "stat": {
             "abilityId": 5590,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 132,
             "unitTargetType": 8,
@@ -149,7 +148,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -160,7 +160,7 @@
         "uri": "elder_titan",
         "language": {
             "abilityId": 5591,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Astral Spirit",
             "description": [
@@ -181,11 +181,12 @@
                 "BONUS ARMOR (HEROES): 1.5 / 3 / 4.5 / 6"
             ],
             "lore": "Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need.",
+            "aghanimDescription": "Causes you to become Spell Immune for %scepter_magic_immune_per_hero% seconds per affected enemy hero when the spirit returns to you.",
             "notes": []
         },
         "stat": {
             "abilityId": 5591,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -231,7 +232,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -242,7 +244,7 @@
         "uri": "elder_titan",
         "language": {
             "abilityId": 5592,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Return Astral Spirit",
             "description": [
@@ -253,7 +255,7 @@
         },
         "stat": {
             "abilityId": 5592,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 575557,
             "unitTargetType": 0,
@@ -289,7 +291,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -300,7 +303,7 @@
         "uri": "elder_titan",
         "language": {
             "abilityId": 5593,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Natural Order",
             "description": [
@@ -321,7 +324,7 @@
         },
         "stat": {
             "abilityId": 5593,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 3,
@@ -346,7 +349,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -357,14 +361,16 @@
         "uri": "elder_titan",
         "language": {
             "abilityId": 5594,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Earth Splitter",
-            "description": [],
+            "description": [
+                "Sends forth a jagged crack in front of Elder Titan. After 3 seconds, the crack implodes, slowing movement while dealing damage to each enemy based on their maximum life. Half of the damage dealt is Magical damage, while the other half is Physical damage."
+            ],
             "attributes": [
                 "CRACK WIDTH: 315",
                 "CRACK LENGTH: 2400",
-                "IMPLODE DELAY: 3.14",
+                "IMPLODE DELAY: 2.8",
                 "SLOW DURATION: 3.0 / 4.0 / 5.0",
                 "MAX HP AS DAMAGE: 30% / 40% / 50%",
                 "MOVEMENT SLOW: 30% / 40% / 50%"
@@ -374,7 +380,7 @@
         },
         "stat": {
             "abilityId": 5594,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 16,
             "unitTargetType": 3,
@@ -405,8 +411,8 @@
                 0.4
             ],
             "cooldown": [
-                100.0,
-                100.0,
+                120.0,
+                110.0,
                 100.0
             ],
             "manaCost": [
@@ -417,7 +423,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -427,7 +434,7 @@
         "name": "elder_titan_natural_order_spirit",
         "language": {
             "abilityId": 5750,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Natural Order",
             "description": [
@@ -445,7 +452,7 @@
         },
         "stat": {
             "abilityId": 5750,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 3,
@@ -470,7 +477,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -481,7 +489,7 @@
         "uri": "elder_titan",
         "language": {
             "abilityId": 6171,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+25 Astral Spirit Hero Attack",
             "description": [],
@@ -490,7 +498,7 @@
         },
         "stat": {
             "abilityId": 6171,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -515,7 +523,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -526,7 +535,7 @@
         "uri": "elder_titan",
         "language": {
             "abilityId": 6378,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Echo Stomp Damage",
             "description": [],
@@ -535,7 +544,7 @@
         },
         "stat": {
             "abilityId": 6378,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -560,7 +569,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -571,7 +581,7 @@
         "uri": "elder_titan",
         "language": {
             "abilityId": 6720,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-60 Earth Splitter Cooldown",
             "description": [],
@@ -580,7 +590,7 @@
         },
         "stat": {
             "abilityId": 6720,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -605,7 +615,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -616,7 +627,7 @@
         "uri": "elder_titan",
         "language": {
             "abilityId": 7350,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+450 Echo Stomp Wake Damage",
             "description": [],
@@ -625,7 +636,7 @@
         },
         "stat": {
             "abilityId": 7350,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -650,7 +661,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

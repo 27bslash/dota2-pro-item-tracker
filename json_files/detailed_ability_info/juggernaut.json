@@ -4,7 +4,7 @@
         "name": "juggernaut_swift_slash",
         "language": {
             "abilityId": 419,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Swiftslash",
             "description": [
@@ -17,7 +17,7 @@
         },
         "stat": {
             "abilityId": 419,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 32776,
             "unitTargetType": 3,
@@ -37,7 +37,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                650
+                550
             ],
             "castRangeBuffer": [
                 250
@@ -48,15 +48,16 @@
                 0.3
             ],
             "cooldown": [
-                15.0
+                20.0
             ],
             "manaCost": [
-                100.0
+                125.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -64,9 +65,10 @@
     "628": {
         "id": 628,
         "name": "special_bonus_unique_juggernaut_5",
+        "uri": "juggernaut",
         "language": {
             "abilityId": 628,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-20s Healing Ward Cooldown",
             "description": [],
@@ -75,7 +77,7 @@
         },
         "stat": {
             "abilityId": 628,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -100,7 +102,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -111,7 +114,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 5027,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Blade Dance",
             "description": [
@@ -126,7 +129,7 @@
         },
         "stat": {
             "abilityId": 5027,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -151,7 +154,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -162,7 +166,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 5028,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Blade Fury",
             "description": [
@@ -179,11 +183,12 @@
             "notes": [
                 "You can use items during Blade Fury.",
                 "Juggernaut can still perform attacks while in Blade Fury. However, only units that are not affected by Blade Fury, such as wards or structures, will take damage from these attacks."
-            ]
+            ],
+            "shardDescription": "Increases movement speed during Blade Fury by 100 and attacks a random nearby unit once per second dealing 75% damage."
         },
         "stat": {
             "abilityId": 5028,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 526340,
             "unitTargetType": 0,
@@ -229,7 +234,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -240,7 +246,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 5029,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Healing Ward",
             "description": [
@@ -257,7 +263,7 @@
         },
         "stat": {
             "abilityId": 5029,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -300,7 +306,8 @@
             "isUltimate": false,
             "duration": "25.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -311,14 +318,14 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 5030,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Omnislash",
             "description": [
                 "Juggernaut leaps towards the target enemy units, and then slashes the target and other nearby enemy units at an increased attack rate. Juggernaut is invulnerable for the duration."
             ],
             "attributes": [
-                "SLASHES RATE MULTIPLIER: 1.6",
+                "SLASHES RATE MULTIPLIER: 1.5",
                 "BONUS DAMAGE: 30 / 40 / 50",
                 "BONUS ATTACK SPEED: 40",
                 "DURATION: 3 / 3.25 / 3.5",
@@ -334,7 +341,7 @@
         },
         "stat": {
             "abilityId": 5030,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 32776,
             "unitTargetType": 3,
@@ -375,7 +382,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -386,7 +394,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 6105,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1s Blade Fury",
             "description": [],
@@ -395,7 +403,7 @@
         },
         "stat": {
             "abilityId": 6105,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -420,7 +428,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -431,7 +440,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 6662,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.0s Omnislash Duration",
             "description": [],
@@ -440,7 +449,7 @@
         },
         "stat": {
             "abilityId": 6662,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -465,7 +474,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -476,7 +486,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 7021,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+160 Blade Fury DPS",
             "description": [],
@@ -485,7 +495,7 @@
         },
         "stat": {
             "abilityId": 7021,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -510,7 +520,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -521,7 +532,7 @@
         "uri": "juggernaut",
         "language": {
             "abilityId": 7394,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Blade Fury Movement Speed",
             "description": [],
@@ -530,7 +541,7 @@
         },
         "stat": {
             "abilityId": 7394,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -555,7 +566,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

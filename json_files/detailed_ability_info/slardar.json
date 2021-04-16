@@ -5,7 +5,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 504,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4 Corrosive Haze Armor",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 504,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +50,7 @@
         "name": "special_bonus_unique_slardar_6",
         "language": {
             "abilityId": 695,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Slithereen Crush AoE",
             "description": [],
@@ -58,7 +59,7 @@
         },
         "stat": {
             "abilityId": 695,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -83,7 +84,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -94,28 +96,29 @@
         "uri": "slardar",
         "language": {
             "abilityId": 5114,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Guardian Sprint",
             "description": [
-                "Slardar slithers ahead, moving significantly faster and passing through units. Slardar has unlocked max speed and grants movement speed while in the river."
+                "Slardar slithers ahead, moving significantly faster and passing through units. Slardar gains movement speed bonus while in the river."
             ],
             "attributes": [
                 "BONUS MOVE SPEED: 16% / 24% / 32% / 40%",
                 "DURATION: 10",
-                "BONUS RIVER MOVE SPEED: 26% / 44% / 62% / 80%",
+                "BONUS RIVER MOVE SPEED: 41% / 49% / 57% / 65%",
                 "SCEPTER RIVER HP REGEN: 30",
                 "SCEPTER RIVER BONUS ARMOR: 10",
                 "SCEPTER RIVER STATUS RESISTANCE: 40%"
             ],
             "lore": "As Slardar has made the transition from the Deeps, it has been necessary to use his powerful tail for sprinting instead of swimming.",
+            "aghanimDescription": "Provides additional HP Regen, Armor and Status Resistance while in a puddle or in the river.",
             "notes": [
                 "Activating this skill doesn't interrupt channeling abilities."
             ]
         },
         "stat": {
             "abilityId": 5114,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 526340,
             "unitTargetType": 0,
@@ -155,7 +158,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -166,7 +170,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 5115,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Slithereen Crush",
             "description": [
@@ -182,11 +186,13 @@
                 "SCEPTER PUDDLE AOE: 600"
             ],
             "lore": "A swift crush of might and water breaks even the toughest of defenses.",
-            "notes": []
+            "aghanimDescription": "Whenever Slardar casts Slithereen Crush, he creates a puddle of water that is considered a river for movement and bonuses.",
+            "notes": [],
+            "shardDescription": "Causes Slithereen Crush to apply Corrosive Haze for 5 seconds to units affected. Increases radius by 75."
         },
         "stat": {
             "abilityId": 5115,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 0,
@@ -235,7 +241,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -246,11 +253,11 @@
         "uri": "slardar",
         "language": {
             "abilityId": 5116,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Bash of the Deep",
             "description": [
-                "After 3 attacks, your next attack will bash the target."
+                "After 3 attacks, your next attack will bash the target. Deals double damage against creeps."
             ],
             "attributes": [
                 "BONUS DAMAGE: 50 / 100 / 150 / 200",
@@ -263,7 +270,7 @@
         },
         "stat": {
             "abilityId": 5116,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -288,7 +295,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -299,7 +307,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 5117,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Corrosive Haze",
             "description": [
@@ -314,7 +322,7 @@
         },
         "stat": {
             "abilityId": 5117,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 3,
@@ -353,7 +361,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -364,7 +373,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 6211,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.25s Slithereen Crush Stun",
             "description": [],
@@ -373,7 +382,7 @@
         },
         "stat": {
             "abilityId": 6211,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -398,7 +407,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -409,7 +419,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 6889,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+60 Bash Damage",
             "description": [],
@@ -418,7 +428,7 @@
         },
         "stat": {
             "abilityId": 6889,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -443,7 +453,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -454,7 +465,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 6890,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Corrosive Haze Undispellable",
             "description": [],
@@ -463,7 +474,7 @@
         },
         "stat": {
             "abilityId": 6890,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -488,7 +499,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -498,7 +510,7 @@
         "name": "slardar_scepter",
         "language": {
             "abilityId": 7864,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "description": [],
             "attributes": [],
@@ -506,7 +518,7 @@
         },
         "stat": {
             "abilityId": 7864,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -543,7 +555,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -554,7 +567,7 @@
         "uri": "slardar",
         "language": {
             "abilityId": 7871,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4s Slithereen Crush Cooldown",
             "description": [],
@@ -563,7 +576,7 @@
         },
         "stat": {
             "abilityId": 7871,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -588,7 +601,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

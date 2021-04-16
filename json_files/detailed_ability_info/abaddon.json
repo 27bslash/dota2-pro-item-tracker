@@ -5,15 +5,15 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 5585,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Mist Coil",
             "description": [
                 "Abaddon releases a coil of deathly mist that can damage an enemy unit or heal a friendly unit at the cost of some of Abaddon's health."
             ],
             "attributes": [
-                "DAMAGE/HEAL: 120 / 165 / 210 / 255",
-                "SELF DAMAGE: 75 / 100 / 125 / 150"
+                "DAMAGE/HEAL: 110 / 160 / 210 / 260",
+                "SELF DAMAGE: 50%"
             ],
             "lore": "A mysterious vapor from the Font of Avernus now infuses the breath of Abaddon, who releases it at will.",
             "notes": [
@@ -22,7 +22,7 @@
         },
         "stat": {
             "abilityId": 5585,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 5,
@@ -59,7 +59,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -70,7 +71,7 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 5586,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Aphotic Shield",
             "description": [
@@ -91,7 +92,7 @@
         },
         "stat": {
             "abilityId": 5586,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -127,14 +128,15 @@
             ],
             "manaCost": [
                 100.0,
-                105.0,
                 110.0,
-                115.0
+                120.0,
+                130.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -145,7 +147,7 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 5587,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Curse of Avernus",
             "description": [
@@ -159,11 +161,12 @@
                 "CURSE ATTACK SPEED: 40 / 60 / 80 / 100"
             ],
             "lore": "While the baptized draw strength from the Font, the gifts of Avernus are debilitating to the uninitiated.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Causes Mist Coil and Aphotic Shield to apply a Curse of Avernus stack on enemies. Increase base slow by 10%%. Lowers Cooldown for Mist Coil and Aphotic Shield by 1 second."
         },
         "stat": {
             "abilityId": 5587,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -188,7 +191,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -199,7 +203,7 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 5588,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Borrowed Time",
             "description": [
@@ -210,11 +214,12 @@
             "attributes": [
                 "HEALTH THRESHOLD: 400",
                 "DURATION: 4.0 / 5.0 / 6.0",
-                "SCEPTER DURATION: 6 / 7 / 8",
+                "SCEPTER DURATION: 7 / 8 / 9",
                 "SCEPTER RANGE: 1600",
                 "SCEPTER DAMAGE THRESHOLD: 525"
             ],
             "lore": "The most unnatural of all the gifts of the Font of Avernus, this power defies mortal understanding.  What should hurt, instead heals; and what should kill gives strength anew.",
+            "aghanimDescription": "Increases duration. While Borrowed Time is active, anytime an ally takes more than %ally_threshold_scepter% damage while within %redirect_range_scepter% range of Abaddon, an individual Mist Coil will automatically fire towards that ally.",
             "notes": [
                 "Borrowed Time can be manually activated while Abaddon is disabled, but not while silenced.  The passive activation can still occur while silenced.",
                 "Aphotic Shield does not block any damage to Abaddon when Borrowed Time is active, allowing him to heal."
@@ -222,7 +227,7 @@
         },
         "stat": {
             "abilityId": 5588,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 67588,
             "unitTargetType": 0,
@@ -257,7 +262,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -268,7 +274,7 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 6100,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+180 Aphotic Shield Health",
             "description": [],
@@ -277,7 +283,7 @@
         },
         "stat": {
             "abilityId": 6100,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -302,7 +308,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -313,16 +320,16 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 6601,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+50 Mist Coil Heal/Damage",
+            "displayName": "+55 Mist Coil Heal/Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6601,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -347,7 +354,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -358,7 +366,7 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 6602,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+60 Curse of Avernus Attack Speed",
             "description": [],
@@ -367,7 +375,7 @@
         },
         "stat": {
             "abilityId": 6602,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -392,7 +400,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -403,16 +412,16 @@
         "uri": "abaddon",
         "language": {
             "abilityId": 7335,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "425 AoE Mist Coil",
+            "displayName": "500 AoE Mist Coil",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 7335,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -437,7 +446,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -447,7 +457,7 @@
         "name": "special_bonus_unique_abaddon_5",
         "language": {
             "abilityId": 7340,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Curse of Avernus Affects Towers",
             "description": [],
@@ -456,7 +466,7 @@
         },
         "stat": {
             "abilityId": 7340,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -481,7 +491,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

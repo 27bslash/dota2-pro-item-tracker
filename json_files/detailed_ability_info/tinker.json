@@ -5,7 +5,7 @@
         "uri": "tinker",
         "language": {
             "abilityId": 413,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2.5s March of the Machines Duration",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 413,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +50,7 @@
         "name": "tinker_shrink_ray",
         "language": {
             "abilityId": 535,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shrink Ray",
             "description": [
@@ -64,7 +65,7 @@
         },
         "stat": {
             "abilityId": 535,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -101,7 +102,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -109,20 +111,21 @@
     "650": {
         "id": 650,
         "name": "tinker_defense_matrix",
+        "uri": "tinker",
         "language": {
             "abilityId": 650,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Defense Matrix",
             "description": [
-                "Targets an allied unit, applying a barrier to them that blocks the next 200 damage and provides 40 Status Resistance. Barrier lasts up to 10 seconds."
+                "Targets an allied unit, applying a barrier to them that blocks the next 350 damage and provides 50 Status Resistance. Barrier lasts up to 15 seconds."
             ],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 650,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -159,10 +162,56 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "765": {
+        "id": 765,
+        "name": "special_bonus_unique_tinker_6",
+        "language": {
+            "abilityId": 765,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+1 Heat-Seeking Missile Count",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 765,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5150": {
         "id": 5150,
@@ -170,7 +219,7 @@
         "uri": "tinker",
         "language": {
             "abilityId": 5150,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Laser",
             "description": [
@@ -184,11 +233,12 @@
                 "LASER DAMAGE: 80 / 160 / 240 / 320"
             ],
             "lore": "Boush perfected this rock cutting laser in his subterranean laboratory, never considering its combat utility.",
+            "aghanimDescription": "Upgrades Tinker's Laser into a Shrink Ray, granting +400 cast range and reducing the enemy hero's size and current health by 15% (stacking). The laser bounces once on the farthest target up to 700 range from the primary one, prioritizing heroes.",
             "notes": []
         },
         "stat": {
             "abilityId": 5150,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -231,7 +281,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -242,7 +293,7 @@
         "uri": "tinker",
         "language": {
             "abilityId": 5151,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Heat-Seeking Missile",
             "description": [
@@ -251,7 +302,6 @@
             "attributes": [
                 "DAMAGE: 125 / 200 / 275 / 350",
                 "TARGETS: 2 / 2 / 2 / 2",
-                "SCEPTER TARGETS: 4 / 4 / 4 / 4",
                 "MISSILE SPEED: 700"
             ],
             "lore": "The last contraption Boush was able to save was a retrofitted rocket launcher with a homing mechanism.",
@@ -259,7 +309,7 @@
         },
         "stat": {
             "abilityId": 5151,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 1,
@@ -273,7 +323,7 @@
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -292,14 +342,15 @@
             ],
             "manaCost": [
                 80.0,
-                100.0,
-                120.0,
-                140.0
+                95.0,
+                110.0,
+                125.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -310,7 +361,7 @@
         "uri": "tinker",
         "language": {
             "abilityId": 5152,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "March of the Machines",
             "description": [
@@ -328,7 +379,7 @@
         },
         "stat": {
             "abilityId": 5152,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -377,7 +428,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -388,7 +440,7 @@
         "uri": "tinker",
         "language": {
             "abilityId": 5153,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Rearm",
             "description": [
@@ -402,7 +454,7 @@
         },
         "stat": {
             "abilityId": 5153,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 132,
             "unitTargetType": 0,
@@ -425,15 +477,12 @@
                 250
             ],
             "castPoint": [
-                0.53,
-                0.53,
-                0.53,
-                0.53
+                0.0
             ],
             "channelTime": [
-                3.0,
-                1.5,
-                0.75
+                3.5,
+                2.0,
+                1.25
             ],
             "cooldown": [
                 0.0,
@@ -442,13 +491,14 @@
             ],
             "manaCost": [
                 100.0,
-                200.0,
-                300.0
+                210.0,
+                320.0
             ],
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -459,7 +509,7 @@
         "uri": "tinker",
         "language": {
             "abilityId": 6152,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+80 Laser Damage",
             "description": [],
@@ -468,7 +518,7 @@
         },
         "stat": {
             "abilityId": 6152,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -493,7 +543,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -504,7 +555,7 @@
         "uri": "tinker",
         "language": {
             "abilityId": 6952,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+8 March of the Machines Damage",
             "description": [],
@@ -513,7 +564,7 @@
         },
         "stat": {
             "abilityId": 6952,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -538,7 +589,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -549,7 +601,7 @@
         "uri": "tinker",
         "language": {
             "abilityId": 6953,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.25s Heat-Seeking Missile Ministun",
             "description": [],
@@ -558,7 +610,7 @@
         },
         "stat": {
             "abilityId": 6953,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -583,7 +635,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -593,7 +646,7 @@
         "name": "special_bonus_unique_tinker_4",
         "language": {
             "abilityId": 7898,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.5s Laser Blind Duration",
             "description": [],
@@ -602,7 +655,7 @@
         },
         "stat": {
             "abilityId": 7898,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -627,7 +680,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

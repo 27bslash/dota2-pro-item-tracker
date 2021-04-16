@@ -5,16 +5,16 @@
         "uri": "oracle",
         "language": {
             "abilityId": 405,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-1.0s Purifying Flames Cooldown",
+            "displayName": "-1.25s Purifying Flames Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 405,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,7 +51,7 @@
         "uri": "oracle",
         "language": {
             "abilityId": 471,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-20s False Promise Cooldown",
             "description": [],
@@ -59,7 +60,7 @@
         },
         "stat": {
             "abilityId": 471,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -84,7 +85,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -95,16 +97,16 @@
         "uri": "oracle",
         "language": {
             "abilityId": 544,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-1.5s Fortune's End Max Channel Time",
+            "displayName": "Instant Fortune's End",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 544,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -129,7 +131,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -137,18 +140,19 @@
     "681": {
         "id": 681,
         "name": "special_bonus_unique_oracle_8",
+        "uri": "oracle",
         "language": {
             "abilityId": 681,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-50% Purifying Flames Allied Damage",
+            "displayName": "+30% Purifying Flames Enemy Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 681,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -173,7 +177,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "791": {
+        "id": 791,
+        "name": "special_bonus_unique_oracle_9",
+        "language": {
+            "abilityId": 791,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+15 Armor False Promise",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 791,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -184,7 +234,7 @@
         "uri": "oracle",
         "language": {
             "abilityId": 5637,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fortune's End",
             "description": [
@@ -194,7 +244,7 @@
             ],
             "attributes": [
                 "MAX CHANNEL TIME: 2.5",
-                "DAMAGE: 120 / 150 / 180 / 210",
+                "DAMAGE: 100 / 160 / 220 / 280",
                 "RADIUS: 300",
                 "MIN ROOT DURATION: 0.5",
                 "MAX ROOT DURATION: 2.5",
@@ -207,7 +257,7 @@
         },
         "stat": {
             "abilityId": 5637,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 67109032,
             "unitTargetType": 3,
@@ -247,7 +297,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -258,7 +309,7 @@
         "uri": "oracle",
         "language": {
             "abilityId": 5638,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fate's Edict",
             "description": [
@@ -268,11 +319,12 @@
                 "DURATION: 3.0 / 3.5 / 4.0 / 4.5"
             ],
             "lore": "An unbreakable prophecy resounds: a chosen ally shall briefly suffer no magics.  Other kinds of suffering however...",
+            "aghanimDescription": "Fate's Edict no longer causes allies to be disarmed or enemies to be immune to magic damage.",
             "notes": []
         },
         "stat": {
             "abilityId": 5638,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -315,7 +367,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -326,7 +379,7 @@
         "uri": "oracle",
         "language": {
             "abilityId": 5639,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Purifying Flames",
             "description": [
@@ -345,7 +398,7 @@
         },
         "stat": {
             "abilityId": 5639,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -385,7 +438,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -396,7 +450,7 @@
         "uri": "oracle",
         "language": {
             "abilityId": 5640,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "False Promise",
             "description": [
@@ -411,11 +465,12 @@
             "notes": [
                 "Delayed damage and healing will take armor and magic resistance reductions into account when received.",
                 "The delayed damage and healing takes effect as soon as the target becomes vulnerable."
-            ]
+            ],
+            "shardDescription": "Causes False Promise to have a 0.15-second fade delay invisibility."
         },
         "stat": {
             "abilityId": 5640,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 1,
@@ -446,9 +501,9 @@
                 0.3
             ],
             "cooldown": [
-                115.0,
-                80.0,
-                45.0
+                120.0,
+                90.0,
+                60.0
             ],
             "manaCost": [
                 100.0,
@@ -458,7 +513,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -469,7 +525,7 @@
         "uri": "oracle",
         "language": {
             "abilityId": 6206,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.5 False Promise Duration",
             "description": [],
@@ -478,7 +534,7 @@
         },
         "stat": {
             "abilityId": 6206,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -503,7 +559,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -514,7 +571,7 @@
         "uri": "oracle",
         "language": {
             "abilityId": 6540,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.4s Fortune's End Duration",
             "description": [],
@@ -523,7 +580,7 @@
         },
         "stat": {
             "abilityId": 6540,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -548,7 +605,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -559,7 +617,7 @@
         "uri": "oracle",
         "language": {
             "abilityId": 6710,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4.0s Fate's Edict Cooldown",
             "description": [],
@@ -568,7 +626,7 @@
         },
         "stat": {
             "abilityId": 6710,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -593,7 +651,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -604,7 +663,7 @@
         "uri": "oracle",
         "language": {
             "abilityId": 6970,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "False Promise Invisibility",
             "description": [
@@ -615,7 +674,7 @@
         },
         "stat": {
             "abilityId": 6970,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -640,7 +699,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

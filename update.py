@@ -3,6 +3,20 @@ import json
 from colorthief import ColorThief
 from helper_funcs.helper_functions import *
 from contrast import *
+import shutil
+
+
+def update_hero_list():
+    with open(f"json_files/hero_ids.json", 'w') as f:
+        data = json.loads(requests.get(
+            'https://api.stratz.com/api/v1/Hero').text)
+        hero_dict = {'heroes': []}
+        for k in data:
+            hero_name = data[k]['shortName']
+            hero_id = int(k)
+            hero_dict['heroes'].append({'name': hero_name, 'id': hero_id})
+
+        json.dump(hero_dict, f, indent=4)
 
 
 def make_dir():
@@ -33,7 +47,7 @@ def get_ability_imgs():
                         ability_name = ability['img']
                         with open(f'json_files/hero_abilities/{hero_name}/{ability_name}.jpg', 'wb') as f:
                             f.write(requests.get(
-                                f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/abilities/{ability_name}_hp1.png?v=5933967").content)
+                                f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability_name}.png").content)
                             print(ability_name)
             except Exception as e:
                 print('img err', hero_name)
@@ -159,6 +173,8 @@ def get_dominant_color():
 
 
 def update_app():
+    print('updating hero list')
+    # update_hero_list()
     print('updating json....')
     update_stratz_json()
     print('updating ability images....')
@@ -181,5 +197,6 @@ def update_talents():
 
 
 if __name__ == '__main__':
-    # update_app()
-    chunk_stratz_abilites()
+    update_app()
+    # chunk_stratz_abilites()
+    # update_hero_list()

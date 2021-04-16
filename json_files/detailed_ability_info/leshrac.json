@@ -5,7 +5,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 509,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+40 Split Earth Radius",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 509,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,16 +51,16 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 516,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+175 Lightning Storm Damage",
+            "displayName": "+100 Lightning Storm Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 516,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -84,7 +85,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -92,13 +94,14 @@
     "539": {
         "id": 539,
         "name": "leshrac_greater_lightning_storm",
+        "uri": "leshrac",
         "language": {
             "abilityId": 539,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Nihilism",
             "description": [
-                "Causes all nearby enemies in 450 AoE to turn ethereal, preventing them from attacking, causing them to take 30% more magic damage and be slowed by 30 for 4 seconds. Increases Leshrac's speed rather than reducing it."
+                "Causes all nearby enemies in 450 AoE to turn ethereal, preventing them from attacking, causing them to take 30% more magic damage and be slowed by 30 for 4 seconds. Increases Leshrac's speed rather than reducing it. Does not cause you to take amplified damage."
             ],
             "attributes": [
                 "DURATION: 4",
@@ -109,7 +112,7 @@
         },
         "stat": {
             "abilityId": 539,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -140,7 +143,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -151,7 +155,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 5241,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Split Earth",
             "description": [
@@ -166,11 +170,12 @@
             "notes": [
                 "Split Earth will destroy trees in its area of effect.",
                 "There is a 0.35 second delay before the effect is applied."
-            ]
+            ],
+            "shardDescription": "Causes Split Earth to repeat in the same location three additional times, with a 5 second delay between each one. Each time the radius increases by 75. Split Earth echo location is visible to both teams."
         },
         "stat": {
             "abilityId": 5241,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 3,
@@ -222,7 +227,8 @@
             "isUltimate": false,
             "duration": "2",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -233,7 +239,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 5242,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Diabolic Edict",
             "description": [
@@ -252,7 +258,7 @@
         },
         "stat": {
             "abilityId": 5242,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4,
             "unitTargetType": 35,
@@ -298,7 +304,8 @@
             "isUltimate": false,
             "duration": "10",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -309,7 +316,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 5243,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Lightning Storm",
             "description": [
@@ -329,7 +336,7 @@
         },
         "stat": {
             "abilityId": 5243,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -343,7 +350,7 @@
             "isOnLearnbar": true,
             "fightRecapLevel": 1,
             "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
+            "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
@@ -355,7 +362,7 @@
                 250
             ],
             "castPoint": [
-                0.4
+                0.3
             ],
             "cooldown": [
                 4.0
@@ -369,7 +376,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -380,14 +388,14 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 5244,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Pulse Nova",
             "description": [
                 "Creates waves of damaging energy around Leshrac, one per second, to damage nearby enemy units. Drains Leshrac's mana with each pulse."
             ],
             "attributes": [
-                "RADIUS: 475",
+                "RADIUS: 525",
                 "MANA/SEC: 20 / 40 / 60",
                 "DAMAGE: 100 / 150 / 200"
             ],
@@ -396,7 +404,7 @@
         },
         "stat": {
             "abilityId": 5244,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 524804,
             "unitTargetType": 3,
@@ -436,7 +444,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -447,7 +456,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 6063,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30 Diabolic Edict Explosions",
             "description": [],
@@ -456,7 +465,7 @@
         },
         "stat": {
             "abilityId": 6063,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -481,7 +490,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -492,7 +502,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 6240,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.0s Lightning Storm Slow Duration",
             "description": [],
@@ -501,7 +511,7 @@
         },
         "stat": {
             "abilityId": 6240,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -526,7 +536,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -537,7 +548,7 @@
         "uri": "leshrac",
         "language": {
             "abilityId": 6672,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+40 Pulse Nova Damage",
             "description": [],
@@ -546,7 +557,7 @@
         },
         "stat": {
             "abilityId": 6672,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -571,7 +582,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -581,7 +593,7 @@
         "name": "special_bonus_unique_leshrac_4",
         "language": {
             "abilityId": 7101,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Diabolic Edict Gains Ethereal",
             "description": [],
@@ -590,7 +602,7 @@
         },
         "stat": {
             "abilityId": 7101,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -615,7 +627,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

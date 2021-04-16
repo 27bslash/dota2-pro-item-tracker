@@ -5,7 +5,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 5345,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Cold Feet",
             "description": [
@@ -23,7 +23,7 @@
         },
         "stat": {
             "abilityId": 5345,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16392,
             "unitTargetType": 3,
@@ -69,7 +69,8 @@
             "isUltimate": false,
             "duration": "4.0 4.0 4.0 4.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -80,7 +81,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 5346,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ice Vortex",
             "description": [
@@ -95,11 +96,12 @@
             "lore": "Frozen, caustic winds are at the whim of Kaldr, chilling the field of battle.",
             "notes": [
                 "Provides vision in a small area where it is placed."
-            ]
+            ],
+            "shardDescription": "Causes Ice Vortex to deal 40 DPS and reduces attack speed by 20."
         },
         "stat": {
             "abilityId": 5346,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -134,18 +136,22 @@
                 0.01
             ],
             "cooldown": [
+                7.0,
+                6.0,
+                5.0,
                 4.0
             ],
             "manaCost": [
                 40.0,
-                55.0,
-                70.0,
-                85.0
+                50.0,
+                60.0,
+                70.0
             ],
             "isUltimate": false,
             "duration": "16",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -156,7 +162,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 5347,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Chilling Touch",
             "description": [
@@ -169,11 +175,12 @@
                 "ATTACK RANGE BONUS: 60 / 120 / 180 / 240"
             ],
             "lore": "The Ancient Apparition's eternal knowledge brings a frigid enchantment to his attacks.",
+            "aghanimDescription": "Removes cooldown and reduces manacost by half.",
             "notes": []
         },
         "stat": {
             "abilityId": 5347,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -210,7 +217,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -221,7 +229,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 5348,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Ice Blast",
             "description": [
@@ -244,7 +252,7 @@
         },
         "stat": {
             "abilityId": 5348,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 48,
             "unitTargetType": 0,
@@ -288,7 +296,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -299,7 +308,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 5349,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Release",
             "description": [
@@ -310,7 +319,7 @@
         },
         "stat": {
             "abilityId": 5349,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 5,
             "unitTargetType": 0,
@@ -345,7 +354,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -356,7 +366,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 6214,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "4 Charges of Cold Feet",
             "description": [],
@@ -365,7 +375,7 @@
         },
         "stat": {
             "abilityId": 6214,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -390,7 +400,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -401,7 +412,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 6291,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+70 Chilling Touch Damage",
             "description": [],
@@ -410,7 +421,7 @@
         },
         "stat": {
             "abilityId": 6291,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -435,7 +446,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -446,7 +458,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 6352,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-2s Ice Vortex Cooldown",
             "description": [],
@@ -455,7 +467,7 @@
         },
         "stat": {
             "abilityId": 6352,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -480,7 +492,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -491,7 +504,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 6534,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-6% Ice Vortex Slow/Resistance",
             "description": [],
@@ -500,7 +513,7 @@
         },
         "stat": {
             "abilityId": 6534,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -525,7 +538,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -536,7 +550,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 6810,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+4% Ice Blast Kill Threshold",
             "description": [],
@@ -545,7 +559,7 @@
         },
         "stat": {
             "abilityId": 6810,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -570,7 +584,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -581,7 +596,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 7106,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "500 AoE Cold Feet",
             "description": [],
@@ -590,7 +605,7 @@
         },
         "stat": {
             "abilityId": 7106,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -615,7 +630,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -626,7 +642,7 @@
         "uri": "ancient_apparition",
         "language": {
             "abilityId": 7652,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+175 Chilling Touch Attack Range",
             "description": [],
@@ -635,7 +651,7 @@
         },
         "stat": {
             "abilityId": 7652,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -660,7 +676,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true

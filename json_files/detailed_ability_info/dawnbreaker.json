@@ -1,45 +1,168 @@
 {
-    "6343": {
-        "id": 6343,
-        "name": "pangolier_gyroshell",
-        "uri": "pangolier",
+    "7902": {
+        "id": 7902,
+        "name": "dawnbreaker_fire_wreath",
         "language": {
-            "abilityId": 6343,
+            "abilityId": 7902,
             "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "Rolling Thunder",
+            "displayName": "Starbreaker",
             "description": [
-                "Pangolier curls into a spell-immune ball and rolls out. When rolling, he moves at an increased speed and can move through trees, but has a decreased ability to turn. Striking enemies knocks them back, inflicting damage and stunning them when they land. ",
-                "",
-                "Colliding with walls or cliffs will cause a temporary pause while Pangolier reverses in direction.",
-                "",
-                "DISPEL TYPE: Basic Dispel"
+                "Dawnbreaker whirls her hammer around 3 times, damaging enemies with her attack plus bonus damage. On the final strike, she smashes her hammer down, stunning and damaging enemies in front of her."
             ],
             "attributes": [
-                "TRANSFORM TIME: 1.2",
-                "ROLL SPEED: 550",
-                "RADIUS: 150",
-                "KNOCKBACK DISTANCE: 150",
-                "STUN DURATION: 1.0 / 1.25 / 1.5",
-                "DURATION: 10.0"
+                "COMBO DURATION: 1.1",
+                "SWIPE RADIUS: 360",
+                "SWIPE BONUS DAMAGE: 25 / 35 / 45 / 55",
+                "SMASH BONUS DAMAGE: 40 / 65 / 90 / 115",
+                "SMASH RADIUS: 250",
+                "SMASH STUN DURATION: 0.8 / 1.0 / 1.2 / 1.4"
             ],
-            "lore": "Where his ancestors sought only refuge, the Pangolier saw opportunity...",
+            "lore": "Across the vast lineage of star progeny, there were multitudes unwilling to align with the aims of the Children of Light. To those who dared organize defiance, the Children would dispatch Valora and her hammer to show a measure of their power--to leave the rebels either shattered or set back to rights.",
             "notes": [
-                "Enemies can be stunned multiple times per use, but cannot be affected a subsequent time until the previous stun duration ends.",
-                "If Pangolier is disabled while rolling, he will continue to stun and knock enemies that come within range."
-            ]
+                "Dawnbreaker travels at a rate of 215 for the duration of the ability and takes a brief 0.3s to recover after the final strike.",
+                "Celestial Hammer or Solar Guardian cannot be cast during the combo.",
+                "Cleave does not work with this ability.",
+                "Can be self-cast to move forward"
+            ],
+            "shardDescription": "Magic immunity during Starbreaker"
         },
         "stat": {
-            "abilityId": 6343,
+            "abilityId": 7902,
             "gameVersionId": 141,
-            "type": 1,
-            "behavior": 20484,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 3,
+            "unitTargetTeam": 1,
+            "unitTargetFlags": 0,
+            "unitDamageType": 3,
+            "spellImmunity": 3,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                17.0,
+                15.0,
+                13.0,
+                11.0
+            ],
+            "manaCost": [
+                80.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": true,
+        "isTalent": false
+    },
+    "7903": {
+        "id": 7903,
+        "name": "dawnbreaker_converge",
+        "language": {
+            "abilityId": 7903,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "Converge",
+            "description": [
+                "Dawnbreaker recalls her hammer, pulling them together so they meet in the middle."
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7903,
+            "gameVersionId": 141,
+            "type": 0,
+            "behavior": 10309,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
-            "unitDamageType": 1,
+            "unitDamageType": 0,
             "spellImmunity": 1,
             "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                375
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                0.25
+            ],
+            "manaCost": [
+                0.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "7906": {
+        "id": 7906,
+        "name": "dawnbreaker_solar_guardian",
+        "language": {
+            "abilityId": 7906,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "Solar Guardian",
+            "description": [
+                "Dawnbreaker creates a pulsing effect at a location within 350 units of an allied hero anywhere on the map, damaging enemies and healing allies with each pulse. After a short duration, she flies to the target location, dealing additional damage and stunning enemies upon landing. Once channeled, Dawnbreaker cannot stop the ability."
+            ],
+            "attributes": [
+                "LAND RADIUS: 400",
+                "DAMAGE PER PULSE: 30 / 50 / 70",
+                "HEAL PER PULSE: 40 / 55 / 70",
+                "LANDING DAMAGE: 130 / 160 / 190",
+                "LANDING STUN DURATION: 1.1 / 1.3 / 1.5"
+            ],
+            "lore": "Only in defense of an ally will Valora relent to call upon the last reserves of her old powers that still allow cosmic flight.",
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7906,
+            "gameVersionId": 141,
+            "type": 1,
+            "behavior": 144,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 0.25,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
@@ -57,20 +180,23 @@
                 250
             ],
             "castPoint": [
-                1.2
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ],
+            "channelTime": [
+                1.7
             ],
             "cooldown": [
-                70.0
-            ],
-            "damage": [
-                180.0,
-                260.0,
-                340.0
+                120.0,
+                110.0,
+                100.0
             ],
             "manaCost": [
-                100.0,
                 150.0,
-                200.0
+                200.0,
+                250.0
             ],
             "isUltimate": true,
             "duration": "",
@@ -81,73 +207,65 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6344": {
-        "id": 6344,
-        "name": "pangolier_swashbuckle",
-        "uri": "pangolier",
+    "7914": {
+        "id": 7914,
+        "name": "dawnbreaker_celestial_hammer",
         "language": {
-            "abilityId": 6344,
+            "abilityId": 7914,
             "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "Swashbuckle",
+            "displayName": "Celestial Hammer",
             "description": [
-                "Vector Targeted. Pangolier dashes along the target line, then slashes all enemies in the drawn direction with several quick swipes.",
-                "",
-                "Lucky Shot has a chance to activate from this damage."
+                "Dawnbreaker hurls her weapon at a target, damaging enemies struck along the way. The hammer pauses for 2 seconds at the destination before flying back to her, leaving a trail of fire that slows enemies. Dawnbreaker can recall the hammer at any time, pulling her towards it so they meet in the middle."
             ],
             "attributes": [
-                "DASH RANGE: 850",
-                "SLASH RANGE: 1000",
-                "SLASH WIDTH: 125",
-                "DAMAGE PER STRIKE: 24 / 42 / 60 / 78",
-                "STRIKES: 4"
+                "HAMMER DAMAGE: 60 / 90 / 120 / 150",
+                "FIRE TRAIL RADIUS: 150",
+                "FIRE TRAIL MOVEMENT SLOW: 35",
+                "FIRE TRAIL BURN DPS: 20",
+                "FIRE TRAIL DURATION: 2.5",
+                "CAST RANGE: 1000 / 1100 / 1200 / 1300"
             ],
-            "lore": "The Pangolier's blade is even nimbler than his tongue.",
+            "lore": "The Brightmaul is Valora's oldest companion and sole remaining connection to the glow of her creators.",
             "notes": [
-                "Attack modifiers have a chance to proc on Swashbuckle attacks.",
-                "Casting Swashbuckle during Rolling Thunder ends Rolling Thunder."
+                "The hammer damages enemies both when thrown and when returning to Dawnbreaker.",
+                "Dawnbreaker's movement distance is capped at the ability's cast range."
             ]
         },
         "stat": {
-            "abilityId": 6344,
+            "abilityId": 7914,
             "gameVersionId": 141,
             "type": 0,
-            "behavior": 0,
+            "behavior": 16,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
-            "unitDamageType": 3,
-            "spellImmunity": 3,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
             "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
             "isOnLearnbar": true,
-            "fightRecapLevel": 0,
+            "fightRecapLevel": 1,
             "isGrantedByScepter": false,
             "hasScepterUpgrade": false,
             "maxLevel": 0,
             "levelsBetweenUpgrade": 0,
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
-            "castRange": [
-                850
-            ],
             "castRangeBuffer": [
                 250
             ],
             "castPoint": [
-                0.0
+                0.25
             ],
             "cooldown": [
-                20.0,
+                18.0,
                 16.0,
-                12.0,
-                8.0
+                14.0,
+                12.0
             ],
             "manaCost": [
-                80.0,
-                90.0,
-                100.0,
                 110.0
             ],
             "isUltimate": false,
@@ -159,87 +277,35 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6346": {
-        "id": 6346,
-        "name": "pangolier_heartpiercer",
-        "uri": "pangolier",
+    "7918": {
+        "id": 7918,
+        "name": "dawnbreaker_luminosity",
         "language": {
-            "abilityId": 6346,
+            "abilityId": 7918,
             "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "Heartpiercer",
+            "displayName": "Luminosity",
             "description": [
-                "Pangolier reads his enemies perfectly, deftly slipping his blade past defenses. Each attack has a chance to negate enemy armor and slow the target for a duration, activating after a short delay."
+                "After 3 attacks, Dawnbreaker powers up, charging her next attack with a critical hit that heals all allied heroes within 650 units around her for a portion of attack damage dealt. Creeps and neutral enemies provide less healing. Allies are healed for 35% of the amount."
             ],
             "attributes": [
-                "PIERCE CHANCE: 15%",
-                "DURATION: 2 / 3 / 4 / 5",
-                "MOVE SLOW: -35 / -40 / -45 / -50",
-                "DEBUFF DELAY: 2.0"
+                "%CRITICAL STRIKE DAMAGE:%DOTA_Tooltip_Ability_dawnbreaker_luminosity_bonus_damage%",
+                "%HEALING FROM HEROES:%DOTA_Tooltip_Ability_dawnbreaker_luminosity_heal_pct%",
+                "%CREEP HEAL PENALTY:%DOTA_Tooltip_Ability_dawnbreaker_luminosity_heal_from_creeps%"
             ],
-            "lore": "These fools know nothing of real armor...",
-            "notes": [
-                "Does not proc when attacking Roshan or buildings."
-            ]
+            "lore": "Diminished in power without access to the Children's replenishing light, Valora can still recharge herself and her allies by creating order from the chaos which resides within each fight.",
+            "notes": []
         },
         "stat": {
-            "abilityId": 6346,
+            "abilityId": 7918,
             "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
-            "unitTargetTeam": 0,
+            "unitTargetTeam": 2,
             "unitTargetFlags": 0,
             "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "6459": {
-        "id": 6459,
-        "name": "pangolier_gyroshell_stop",
-        "language": {
-            "abilityId": 6459,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Stop Rolling",
-            "description": [
-                "Halt!"
-            ],
-            "attributes": [],
-            "lore": "Dont\u00e9 Panlin stops when he pleases.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6459,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 34885,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
+            "spellImmunity": 4,
             "modifierSupportValue": 1.0,
             "modifierSupportBonus": 0,
             "isOnCastbar": true,
@@ -260,84 +326,6 @@
                 0.0,
                 0.0
             ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "6461": {
-        "id": 6461,
-        "name": "pangolier_shield_crash",
-        "uri": "pangolier",
-        "language": {
-            "abilityId": 6461,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Shield Crash",
-            "description": [
-                "Pangolier jumps in the air and slams back to the ground in front of his current position, damaging all enemies in a radius. For each enemy hero hit, he gains a percentage of incoming damage reduction for a short time.",
-                "",
-                "Forward movement is maintained if Shield Crash is used while Rolling Thunder is active, and allows Rolling Thunder to clear walls or cliffs."
-            ],
-            "attributes": [
-                "DAMAGE: 90 / 160 / 230 / 300",
-                "RADIUS: 500",
-                "REDUCTION DURATION: 10.0",
-                "REDUCTION PER HERO: 12% / 14% / 16% / 18%"
-            ],
-            "lore": "Only in the midst of his enemies does the Pangolier truly thrive.",
-            "aghanimDescription": "Causes Shield Crash to cast a 2-attack Swashbuckle in every 90 degrees around your hero.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6461,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2052,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                0
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                18.0,
-                16.0,
-                14.0,
-                12.0
-            ],
-            "manaCost": [
-                60.0,
-                70.0,
-                80.0,
-                90.0
-            ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
@@ -347,21 +335,20 @@
         "drawMatchPage": true,
         "isTalent": false
     },
-    "6463": {
-        "id": 6463,
-        "name": "special_bonus_unique_pangolier_2",
-        "uri": "pangolier",
+    "7930": {
+        "id": 7930,
+        "name": "special_bonus_unique_dawnbreaker_solar_guardian_radius",
         "language": {
-            "abilityId": 6463,
+            "abilityId": 7930,
             "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "2.5s Shield Crash CD in Ball",
+            "displayName": "+200 Solar Guardian Radius",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 6463,
+            "abilityId": 7930,
             "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
@@ -383,176 +370,6 @@
             "displayAdditionalHeroes": false,
             "castRangeBuffer": [
                 250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7307": {
-        "id": 7307,
-        "name": "pangolier_lucky_shot",
-        "uri": "pangolier",
-        "language": {
-            "abilityId": 7307,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Lucky Shot",
-            "description": [
-                "Pangolier rolls the dice and lets fate decide the outcome for his enemies. Grants a chance to slow, apply a Disarm and reduce armor."
-            ],
-            "attributes": [
-                "CHANCE: 17%",
-                "DURATION: 2 / 3 / 4 / 5",
-                "SLOW: 35%",
-                "ARMOR REDUCTION: 3 / 4 / 5 / 6"
-            ],
-            "lore": "The Pangolier's blade is guided more often by whim than reason.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7307,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "8027": {
-        "id": 8027,
-        "name": "pangolier_rollup",
-        "uri": "pangolier",
-        "language": {
-            "abilityId": 8027,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Roll Up",
-            "description": [
-                "Pangolier curls into an immobile protective ball for up to 4 seconds, gaining magic immunity and allowing him to turn. Can be cast during Rolling Thunder to temporarily hit the brakes. Can cast Rolling Thunder and Shield Crash during Roll Up. If enemies attack Pangolier during this, he will roll away from the attacker for 0.75 seconds, applying Rolling Thunder damage/stun if there are enemies in the way. Cooldown: 30"
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 8027,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                0
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.1
-            ],
-            "cooldown": [
-                30.0
-            ],
-            "damage": [
-                200.0
-            ],
-            "manaCost": [
-                50.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": true
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
-    "8029": {
-        "id": 8029,
-        "name": "pangolier_rollup_stop",
-        "language": {
-            "abilityId": 8029,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "End Roll Up",
-            "description": [
-                "Ends Pangolier's Roll Up early."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 8029,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 34885,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
             ],
             "isUltimate": false,
             "duration": "",
@@ -561,69 +378,22 @@
             "isGrantedByShard": false
         },
         "drawMatchPage": false,
-        "isTalent": false
-    },
-    "9060": {
-        "id": 9060,
-        "name": "special_bonus_unique_pangolier_3",
-        "uri": "pangolier",
-        "language": {
-            "abilityId": 9060,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+30 Swashbuckle Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 9060,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
         "isTalent": true
     },
-    "9061": {
-        "id": 9061,
-        "name": "special_bonus_unique_pangolier_4",
-        "uri": "pangolier",
+    "7931": {
+        "id": 7931,
+        "name": "special_bonus_unique_dawnbreaker_fire_wreath_magic_immunity",
         "language": {
-            "abilityId": 9061,
+            "abilityId": 7931,
             "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-2.5s Swashbuckle Cooldown",
+            "displayName": "Magic Immunity during Starbreaker",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 9061,
+            "abilityId": 7931,
             "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
@@ -652,24 +422,22 @@
             "chargeRestoreTime": "",
             "isGrantedByShard": false
         },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
         "isTalent": true
     },
-    "9062": {
-        "id": 9062,
-        "name": "special_bonus_unique_pangolier_5",
-        "uri": "pangolier",
+    "7932": {
+        "id": 7932,
+        "name": "special_bonus_unique_dawnbreaker_converge_slow",
         "language": {
-            "abilityId": 9062,
+            "abilityId": 7932,
             "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-28.0s Rolling Thunder Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 9062,
+            "abilityId": 7932,
             "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
@@ -698,24 +466,23 @@
             "chargeRestoreTime": "",
             "isGrantedByShard": false
         },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
         "isTalent": true
     },
-    "9135": {
-        "id": 9135,
-        "name": "special_bonus_unique_pangolier_6",
-        "uri": "pangolier",
+    "7933": {
+        "id": 7933,
+        "name": "special_bonus_unique_dawnbreaker_celestial_hammer_damage",
         "language": {
-            "abilityId": 9135,
+            "abilityId": 7933,
             "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+3s Rolling Thunder Duration",
+            "displayName": "+60 Celestial Hammer damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 9135,
+            "abilityId": 7933,
             "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
@@ -744,24 +511,23 @@
             "chargeRestoreTime": "",
             "isGrantedByShard": false
         },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
         "isTalent": true
     },
-    "9391": {
-        "id": 9391,
-        "name": "special_bonus_unique_pangolier_7",
-        "uri": "pangolier",
+    "7934": {
+        "id": 7934,
+        "name": "special_bonus_unique_dawnbreaker_celestial_hammer_cast_range",
         "language": {
-            "abilityId": 9391,
+            "abilityId": 7934,
             "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+400 Swashbuckle Slash Range",
+            "displayName": "+1100 Celestial Hammer Cast Range",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
-            "abilityId": 9391,
+            "abilityId": 7934,
             "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
@@ -790,7 +556,186 @@
             "chargeRestoreTime": "",
             "isGrantedByShard": false
         },
-        "drawMatchPage": true,
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "7935": {
+        "id": 7935,
+        "name": "special_bonus_unique_dawnbreaker_fire_wreath_ministun",
+        "language": {
+            "abilityId": 7935,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7935,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "7937": {
+        "id": 7937,
+        "name": "special_bonus_unique_dawnbreaker_luminosity_crit",
+        "language": {
+            "abilityId": 7937,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+40% Luminosity Crit",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7937,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "7938": {
+        "id": 7938,
+        "name": "special_bonus_unique_dawnbreaker_solar_guardian_cooldown",
+        "language": {
+            "abilityId": 7938,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-20s Solar Guardian Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7938,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "7939": {
+        "id": 7939,
+        "name": "special_bonus_unique_dawnbreaker_fire_wreath_charges",
+        "language": {
+            "abilityId": 7939,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "2 Starbreaker charges",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 7939,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
         "isTalent": true
     }
 }

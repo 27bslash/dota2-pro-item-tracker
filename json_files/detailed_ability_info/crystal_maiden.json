@@ -4,7 +4,7 @@
         "name": "crystal_maiden_let_it_go",
         "language": {
             "abilityId": 595,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Let It Go",
             "description": [
@@ -19,7 +19,7 @@
         },
         "stat": {
             "abilityId": 595,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 0,
@@ -56,10 +56,56 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "772": {
+        "id": 772,
+        "name": "special_bonus_unique_crystal_maiden_6",
+        "language": {
+            "abilityId": 772,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+125 Crystal Nova AoE",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 772,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5126": {
         "id": 5126,
@@ -67,7 +113,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 5126,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Crystal Nova",
             "description": [
@@ -85,7 +131,7 @@
         },
         "stat": {
             "abilityId": 5126,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -131,7 +177,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -142,7 +189,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 5127,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Frostbite",
             "description": [
@@ -160,7 +207,7 @@
         },
         "stat": {
             "abilityId": 5127,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -206,7 +253,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -217,7 +265,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 5128,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Arcane Aura",
             "description": [
@@ -232,7 +280,7 @@
         },
         "stat": {
             "abilityId": 5128,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -260,7 +308,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -271,7 +320,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 5129,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Freezing Field",
             "description": [
@@ -287,14 +336,16 @@
                 "SCEPTER FROSTBITE DELAY: 1.75"
             ],
             "lore": "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught.",
+            "aghanimDescription": "Applies Frostbite to any unit that has been standing in the Freezing Field for over a set amount of time.",
             "notes": [
                 "The slow is applied on all enemies in the radius, even if they aren't hit by an explosion (lasts 1.0 second).",
                 "Explosions occur every 0.1 seconds."
-            ]
+            ],
+            "shardDescription": "Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move 75% slower during this."
         },
         "stat": {
             "abilityId": 5129,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 32900,
             "unitTargetType": 0,
@@ -335,7 +386,8 @@
             "isUltimate": true,
             "duration": "10.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -346,7 +398,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 6072,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.25s Frostbite Duration",
             "description": [],
@@ -355,7 +407,7 @@
         },
         "stat": {
             "abilityId": 6072,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -380,7 +432,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -391,7 +444,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 6234,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+240 Crystal Nova Damage",
             "description": [],
@@ -400,7 +453,7 @@
         },
         "stat": {
             "abilityId": 6234,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -425,7 +478,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -436,7 +490,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 6520,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+50 Freezing Field Damage",
             "description": [],
@@ -445,7 +499,7 @@
         },
         "stat": {
             "abilityId": 6520,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -470,7 +524,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -481,7 +536,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 7042,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+6% Magic Resistance Arcane Aura",
             "description": [],
@@ -490,7 +545,7 @@
         },
         "stat": {
             "abilityId": 7042,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -515,7 +570,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -526,7 +582,7 @@
         "uri": "crystal_maiden",
         "language": {
             "abilityId": 7654,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3s Crystal Nova Cooldown",
             "description": [],
@@ -535,7 +591,7 @@
         },
         "stat": {
             "abilityId": 7654,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -560,7 +616,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true

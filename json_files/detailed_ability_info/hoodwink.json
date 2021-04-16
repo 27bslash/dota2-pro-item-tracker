@@ -2,29 +2,32 @@
     "8106": {
         "id": 8106,
         "name": "hoodwink_sharpshooter",
+        "uri": "hoodwink",
         "language": {
             "abilityId": 8106,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Sharpshooter",
             "description": [
-                "Hoodwink charges up and fires a deadly bolt from her crossbow, dealing heavy damage, slow, and Break to an enemy Hero. The damage and debuff duration scale up to max after 3.0 seconds, and the bolt is fired automatically after 5.0 seconds.",
+                "Hoodwink charges up and fires a deadly bolt from her crossbow, dealing heavy damage and slow to an enemy Hero. The damage and debuff duration scale up to max after 3.0 seconds, and the bolt is fired automatically after 5.0 seconds.",
                 "Hoodwink is knocked backwards for a distance of 350 from the force of the shot."
             ],
             "attributes": [
                 "MAX WIND-UP TIME: 3.0",
-                "MAX DAMAGE: 600 / 1000 / 1400",
-                "MAX DEBUFF DURATION: 6.0",
-                "MOVE SLOW: 50%"
+                "MAX DAMAGE: 550 / 900 / 1250",
+                "MAX DEBUFF DURATION: 5.0",
+                "MOVE SLOW: 30% / 40% / 50%",
+                "SCEPTER MAX WIND-UP TIME:%max_charge_time_scepter%",
+                "SCEPTER ARROW SPEED:%arrow_speed_scepter%"
             ],
             "lore": "While her first arbalest was a chance discovery, Hoodwink now takes great care in carving and caring for her own -- of course with some necessary components pilfered or otherwise cleverly procured.",
             "notes": []
         },
         "stat": {
             "abilityId": 8106,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
-            "behavior": 16,
+            "behavior": 16400,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
             "unitTargetFlags": 0,
@@ -54,31 +57,98 @@
                 45.0
             ],
             "manaCost": [
-                150.0
+                125.0,
+                175.0,
+                225.0
             ],
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
+        "isTalent": false
+    },
+    "8107": {
+        "id": 8107,
+        "name": "hoodwink_decoy",
+        "language": {
+            "abilityId": 8107,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "Decoy",
+            "description": [
+                "Hoodwink sends a decoy illusion to the target location.  When the illusion is attacked or hit by a targeted ability, it is destroyed and plants a tree in its place that applies a lesser Bushwhack to enemy heroes around it."
+            ],
+            "attributes": [
+                "ILLUSION DURATION: 12.0",
+                "BUSHWHACK DURATION: 1.0",
+                "BUSHWHACK RADIUS: 250"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 8107,
+            "gameVersionId": 141,
+            "type": 0,
+            "behavior": 526417,
+            "unitTargetType": 1,
+            "unitTargetTeam": 2,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                0
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.0
+            ],
+            "cooldown": [
+                60.0
+            ],
+            "manaCost": [
+                50.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
+        },
+        "drawMatchPage": false,
         "isTalent": false
     },
     "8158": {
         "id": 8158,
         "name": "hoodwink_bushwhack",
+        "uri": "hoodwink",
         "language": {
             "abilityId": 8158,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Bushwhack",
             "description": [
                 "Tosses a net trap that stuns enemy heroes if they are near a tree in the area.  Affected enemies take damage and are pulled towards the tree nearest to them, and have their vision reduced to 0 for the duration of the stun."
             ],
             "attributes": [
-                "RADIUS: 325",
-                "STUN DURATION: 1.3 / 1.6 / 1.9 / 2.2",
-                "DAMAGE: 90 / 180 / 270 / 360"
+                "RADIUS: 250",
+                "STUN DURATION: 1.4 / 1.7 / 2.0 / 2.3",
+                "DAMAGE: 75 / 150 / 225 / 300"
             ],
             "lore": "Hoodwink favors Ironwood groves for ambushes, but the wary step carefully in all areas of the mistwoods.",
             "notes": [
@@ -87,7 +157,7 @@
         },
         "stat": {
             "abilityId": 8158,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 69,
@@ -107,7 +177,7 @@
             "requiredLevel": 0,
             "displayAdditionalHeroes": false,
             "castRange": [
-                1200
+                1000
             ],
             "castRangeBuffer": [
                 250
@@ -127,7 +197,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -137,7 +208,7 @@
         "name": "hoodwink_sharpshooter_release",
         "language": {
             "abilityId": 8159,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "End Sharpshooter",
             "description": [
@@ -149,8 +220,8 @@
         },
         "stat": {
             "abilityId": 8159,
-            "gameVersionId": 137,
-            "type": 0,
+            "gameVersionId": 141,
+            "type": 1,
             "behavior": 51269,
             "unitTargetType": 0,
             "unitTargetTeam": 0,
@@ -177,10 +248,11 @@
             "castPoint": [
                 0.0
             ],
-            "isUltimate": false,
+            "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -188,21 +260,23 @@
     "8429": {
         "id": 8429,
         "name": "hoodwink_acorn_shot",
+        "uri": "hoodwink",
         "language": {
             "abilityId": 8429,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Acorn Shot",
             "description": [
-                "Fires Hoodwink's attack with an acorn at the target unit.  The acorn bounces to nearby targets, slowing them and dealing bonus damage.",
-                "If point targeted, a tree is created at the target position and the acorn will bounce to nearby targets."
+                "Fires Hoodwink's attack with an acorn at the target unit.  The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage.",
+                "If point targeted, a tree is created at the target position and the acorn will bounce to nearby targets.  The ability may be placed on auto-cast to force this behavior."
             ],
             "attributes": [
                 "BONUS ATTACK RANGE: 125 / 200 / 275 / 350",
-                "BOUNCE COUNT: 3 / 4 / 5 / 6",
+                "BOUNCE COUNT: 2 / 3 / 4 / 5",
                 "SLOW DURATION: 0.25",
                 "MOVEMENT SLOW: 100%",
-                "BONUS DAMAGE: 25 / 50 / 75 / 100"
+                "BONUS DAMAGE: 50 / 75 / 100 / 125",
+                "BASE DAMAGE: 65%"
             ],
             "lore": "Though she'll make do with almost anything, Oak and Ironwood acorns make the most effective projectiles -- and the bulk of Hoodwink's stash.",
             "notes": [
@@ -214,9 +288,9 @@
         },
         "stat": {
             "abilityId": 8429,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
-            "behavior": 24,
+            "behavior": 147480,
             "unitTargetType": 5,
             "unitTargetTeam": 1,
             "unitTargetFlags": 4,
@@ -257,7 +331,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -265,16 +340,17 @@
     "9501": {
         "id": 9501,
         "name": "hoodwink_scurry",
+        "uri": "hoodwink",
         "language": {
             "abilityId": 9501,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Scurry",
             "description": [
                 "Hoodwink passively has a chance to evade physical attacks while near trees.  When activated, Hoodwink gains bonus movement speed, phased collision, and tree-walking for a brief time."
             ],
             "attributes": [
-                "BONUS MOVEMENT SPEED: 25% / 30% / 35% / 40%",
+                "BONUS MOVEMENT SPEED: 20% / 25% / 30% / 35%",
                 "BUFF DURATION: 4.0",
                 "EVASION: 8% / 16% / 24% / 32%",
                 "EVASION RADIUS: 275"
@@ -284,7 +360,7 @@
         },
         "stat": {
             "abilityId": 9501,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -321,7 +397,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "2",
-            "chargeRestoreTime": "30 25 20 15"
+            "chargeRestoreTime": "30 24 18 12",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -329,9 +406,10 @@
     "9505": {
         "id": 9505,
         "name": "special_bonus_unique_hoodwink_camouflage",
+        "uri": "hoodwink",
         "language": {
             "abilityId": 9505,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Scurry Camouflage",
             "description": [
@@ -342,7 +420,7 @@
         },
         "stat": {
             "abilityId": 9505,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -367,7 +445,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -375,9 +454,10 @@
     "9506": {
         "id": 9506,
         "name": "special_bonus_unique_hoodwink_sharpshooter_speed",
+        "uri": "hoodwink",
         "language": {
             "abilityId": 9506,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "25.0% Sharpshooter Faster Projectile / Charge Time",
             "description": [],
@@ -386,7 +466,7 @@
         },
         "stat": {
             "abilityId": 9506,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -411,7 +491,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -419,9 +500,10 @@
     "9507": {
         "id": 9507,
         "name": "special_bonus_unique_hoodwink_sharpshooter_pure_damage",
+        "uri": "hoodwink",
         "language": {
             "abilityId": 9507,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Sharpshooter Pure Damage and Pierces Spell Immunity",
             "description": [],
@@ -430,7 +512,7 @@
         },
         "stat": {
             "abilityId": 9507,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -455,7 +537,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -463,9 +546,10 @@
     "9509": {
         "id": 9509,
         "name": "special_bonus_unique_hoodwink_acorn_shot_charges",
+        "uri": "hoodwink",
         "language": {
             "abilityId": 9509,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "2 Acorn Shot Charges",
             "description": [],
@@ -474,7 +558,7 @@
         },
         "stat": {
             "abilityId": 9509,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -499,7 +583,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -507,9 +592,10 @@
     "9510": {
         "id": 9510,
         "name": "special_bonus_unique_hoodwink_bushwhack_cooldown",
+        "uri": "hoodwink",
         "language": {
             "abilityId": 9510,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-3s Bushwhack Cooldown",
             "description": [],
@@ -518,7 +604,7 @@
         },
         "stat": {
             "abilityId": 9510,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -543,9 +629,121 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
+    },
+    "9511": {
+        "id": 9511,
+        "name": "special_bonus_unique_hoodwink_bushwhack_damage",
+        "language": {
+            "abilityId": 9511,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+60 Bushwhack Damage",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9511,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "9627": {
+        "id": 9627,
+        "name": "hoodwink_hunters_boomerang",
+        "language": {
+            "abilityId": 9627,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "Hunter's Boomerang",
+            "description": [
+                "Tosses a boomerang at the target enemy in an arc. Upon contact, it returns to Hoodwink.  The boomerang will deal damage as it passes through or hits enemies, and apply a Hunter's Mark that causes affected enemies to be slowed and be more vulnerable to spell damage and have reduced status resistance."
+            ],
+            "attributes": [
+                "DAMAGE: 350",
+                "RADIUS: 150",
+                "MARK DURATION: 7.0",
+                "STATUS RESISTANCE: 25%",
+                "INCOMING SPELL DAMAGE: 25%",
+                "MOVEMENT SLOW: 20%"
+            ],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 9627,
+            "gameVersionId": 141,
+            "type": 0,
+            "behavior": 73,
+            "unitTargetType": 3,
+            "unitTargetTeam": 4,
+            "unitTargetFlags": 0,
+            "unitDamageType": 1,
+            "spellImmunity": 1,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": true,
+            "hasScepterUpgrade": true,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                1000
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.2
+            ],
+            "cooldown": [
+                18.0
+            ],
+            "manaCost": [
+                125.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": false
     }
 }

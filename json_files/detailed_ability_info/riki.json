@@ -5,7 +5,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 316,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Permanent Invisibility",
             "description": [
@@ -24,7 +24,7 @@
         },
         "stat": {
             "abilityId": 316,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -49,7 +49,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -60,16 +61,16 @@
         "uri": "riki",
         "language": {
             "abilityId": 347,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-6 Tricks of the Trade Cooldown",
+            "displayName": "-4 Tricks of the Trade Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 347,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -94,7 +95,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -105,16 +107,16 @@
         "uri": "riki",
         "language": {
             "abilityId": 474,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+125 Smoke Screen AoE",
+            "displayName": "+175 Smoke Screen AoE",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 474,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -139,7 +141,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -147,23 +150,24 @@
     "550": {
         "id": 550,
         "name": "riki_poison_dart",
+        "uri": "riki",
         "language": {
             "abilityId": 550,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Sleeping Dart",
             "description": [
-                "Fires a dart at the target enemy, putting them to sleep for 3 seconds. At the end of the duration, the target wakes up and takes 150 damage and is slowed by 25 for 4 seconds."
+                "Fires a dart at the target enemy, putting them to sleep for 4 seconds or if they take 200 damage. At the end of the duration, the target wakes up and takes 150 damage, and is slowed by 30 for 4 seconds."
             ],
             "attributes": [
-                "SLEEP DURATION: 3",
+                "SLEEP DURATION: 4",
                 "SLOW DURATION: 4"
             ],
             "notes": []
         },
         "stat": {
             "abilityId": 550,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -192,18 +196,109 @@
                 0.2
             ],
             "cooldown": [
-                20.0
+                12.0
             ],
             "manaCost": [
-                125.0
+                85.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
+    },
+    "782": {
+        "id": 782,
+        "name": "special_bonus_unique_riki_8",
+        "language": {
+            "abilityId": 782,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "8% Cloak and Dagger Movement Speed",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 782,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "795": {
+        "id": 795,
+        "name": "special_bonus_unique_riki_9",
+        "language": {
+            "abilityId": 795,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-4s Blink Strike Replenish Time",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 795,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
     },
     "5142": {
         "id": 5142,
@@ -211,7 +306,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 5142,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Smoke Screen",
             "description": [
@@ -230,7 +325,7 @@
         },
         "stat": {
             "abilityId": 5142,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16432,
             "unitTargetType": 0,
@@ -270,7 +365,8 @@
             "isUltimate": false,
             "duration": "6",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -281,7 +377,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 5143,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Blink Strike",
             "description": [
@@ -300,7 +396,7 @@
         },
         "stat": {
             "abilityId": 5143,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 20488,
             "unitTargetType": 8,
@@ -340,7 +436,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "2",
-            "chargeRestoreTime": "25 20 15 10"
+            "chargeRestoreTime": "25 20 15 10",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -351,7 +448,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 5144,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Cloak and Dagger",
             "description": [
@@ -369,7 +466,7 @@
         },
         "stat": {
             "abilityId": 5144,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -394,7 +491,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -405,7 +503,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 5145,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Tricks of the Trade",
             "description": [
@@ -414,19 +512,19 @@
             "attributes": [
                 "RADIUS: 450",
                 "ATTACK COUNT: 4",
-                "ATTACK DAMAGE: 70% / 80% / 90% / 100%",
-                "SCEPTER DURATION: 3",
-                "SCEPTER ATTACKS: 6",
+                "ATTACK DAMAGE REDUCTION: 50%",
+                "AGILITY INCREASE: 55% / 70% / 85% / 100%",
                 "SCEPTER CAST RANGE: 700"
             ],
             "lore": "The Stealth Assassin is not afraid to fight dirty, and specializes in attacking his opponents from behind.",
+            "aghanimDescription": "Increases cast range and allows you to target an allied hero, hiding inside them for the duration.",
             "notes": [
                 "Moving while phased out will cancel the ability."
             ]
         },
         "stat": {
             "abilityId": 5145,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4272,
             "unitTargetType": 1,
@@ -469,7 +567,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -480,7 +579,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 6193,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4s Smoke Screen Cooldown",
             "description": [],
@@ -489,7 +588,7 @@
         },
         "stat": {
             "abilityId": 6193,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -514,7 +613,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -525,7 +625,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 6330,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.5 Backstab Multiplier",
             "description": [],
@@ -534,7 +634,7 @@
         },
         "stat": {
             "abilityId": 6330,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -559,7 +659,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -570,7 +671,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 6865,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+475 Blink Strike Cast Range",
             "description": [],
@@ -579,7 +680,7 @@
         },
         "stat": {
             "abilityId": 6865,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -604,7 +705,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -615,7 +717,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 6866,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+300 Tricks of the Trade AoE",
             "description": [],
@@ -624,7 +726,7 @@
         },
         "stat": {
             "abilityId": 6866,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -649,7 +751,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -660,7 +763,7 @@
         "uri": "riki",
         "language": {
             "abilityId": 6867,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Cloak and Dagger Doesn't Reveal",
             "description": [
@@ -671,7 +774,7 @@
         },
         "stat": {
             "abilityId": 6867,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -696,7 +799,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

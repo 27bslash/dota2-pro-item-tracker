@@ -5,7 +5,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 343,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Multishot",
             "description": [
@@ -24,7 +24,7 @@
         },
         "stat": {
             "abilityId": 343,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1040,
             "unitTargetType": 3,
@@ -67,7 +67,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -78,16 +79,16 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 486,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-6s Multishot Cooldown",
+            "displayName": "-8s Multishot Cooldown",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 486,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -112,7 +113,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -120,9 +122,10 @@
     "580": {
         "id": 580,
         "name": "special_bonus_unique_drow_ranger_7",
+        "uri": "drow_ranger",
         "language": {
             "abilityId": 580,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4s Gust Cooldown",
             "description": [],
@@ -131,7 +134,7 @@
         },
         "stat": {
             "abilityId": 580,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -156,7 +159,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "739": {
+        "id": 739,
+        "name": "special_bonus_unique_drow_ranger_8",
+        "language": {
+            "abilityId": 739,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "+2s Gust Disarm",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 739,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -167,7 +216,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 5019,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Frost Arrows",
             "description": [
@@ -180,11 +229,12 @@
             "lore": "Ice-encased arrows pierce the silence, chilling their victims to the core.",
             "notes": [
                 "The slow duration is refreshed on successive casts."
-            ]
+            ],
+            "shardDescription": "Frost Arrows now apply a Hypothermia stack to enemy heroes, reducing their regeneration by 10% per stack. Increases damage by 5 per stack. Lasts 7 seconds. If an enemy hero dies with Hypothermia stacks, they burst and deal 60 magic damage per stack and 40%% slow for 2 seconds to enemies within 650 radius. Max Stacks: 7"
         },
         "stat": {
             "abilityId": 5019,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 393224,
             "unitTargetType": 3,
@@ -236,7 +286,8 @@
             "isUltimate": false,
             "duration": "1.5",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -246,7 +297,7 @@
         "name": "drow_ranger_silence",
         "language": {
             "abilityId": 5020,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Silence",
             "description": [
@@ -262,7 +313,7 @@
         },
         "stat": {
             "abilityId": 5020,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -314,7 +365,8 @@
             "isUltimate": false,
             "duration": "3.0 4.0 5.0 6.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -325,7 +377,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 5021,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Precision Aura",
             "description": [
@@ -340,7 +392,7 @@
         },
         "stat": {
             "abilityId": 5021,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -377,7 +429,8 @@
             "isUltimate": false,
             "duration": "30.0",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -388,7 +441,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 5022,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Marksmanship",
             "description": [
@@ -403,13 +456,14 @@
                 "AGILITY RADIUS: 1200"
             ],
             "lore": "The Drow Ranger is the epitome of archery prowess.",
+            "aghanimDescription": "Causes Drow Ranger's attacks to splinter on the target, hitting nearby units with normal attacks that deal reduced damage.",
             "notes": [
                 "Marksmanship procs have true strike."
             ]
         },
         "stat": {
             "abilityId": 5022,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2,
             "unitTargetType": 0,
@@ -437,7 +491,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -448,7 +503,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 5632,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Gust",
             "description": [
@@ -465,7 +520,7 @@
         },
         "stat": {
             "abilityId": 5632,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 0,
@@ -500,12 +555,13 @@
                 13.0
             ],
             "manaCost": [
-                90.0
+                70.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -516,7 +572,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 6202,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+28% Multishot Damage",
             "description": [],
@@ -525,7 +581,7 @@
         },
         "stat": {
             "abilityId": 6202,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -550,7 +606,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -561,7 +618,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 6209,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+550 Gust Distance/Knockback",
             "description": [],
@@ -570,7 +627,7 @@
         },
         "stat": {
             "abilityId": 6209,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -595,7 +652,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -606,7 +664,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 6280,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+12 Marksmanship Chance",
             "description": [],
@@ -615,7 +673,7 @@
         },
         "stat": {
             "abilityId": 6280,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -640,7 +698,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -651,7 +710,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 6634,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+2.5s Gust Silence Duration",
             "description": [],
@@ -660,7 +719,7 @@
         },
         "stat": {
             "abilityId": 6634,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -685,7 +744,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -696,7 +756,7 @@
         "uri": "drow_ranger",
         "language": {
             "abilityId": 8010,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+50% Gust Blind",
             "description": [],
@@ -705,7 +765,7 @@
         },
         "stat": {
             "abilityId": 8010,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -730,7 +790,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true

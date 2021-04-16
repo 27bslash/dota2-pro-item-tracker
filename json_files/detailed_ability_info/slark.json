@@ -2,20 +2,21 @@
     "668": {
         "id": 668,
         "name": "slark_fish_bait",
+        "uri": "slark",
         "language": {
             "abilityId": 668,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Fish Bait",
             "description": [
-                "Reduce movement speed of an enemy by 30% for 4 seconds and provide true sight vision over them. If Slark pounces on the enemy during that time, he will be rewarded with 50 Attack Speed for the duration of the Leash."
+                "Reduce movement speed of an enemy by 30% for 6 seconds and provide true sight vision over them. If Slark pounces on the enemy during that time, he will be rewarded with 75 Attack Speed for the duration of the Leash."
             ],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 668,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -44,15 +45,75 @@
                 0.2
             ],
             "cooldown": [
-                20.0
+                9.0
             ],
             "manaCost": [
-                100.0
+                50.0
             ],
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
+        },
+        "drawMatchPage": false,
+        "isTalent": false
+    },
+    "729": {
+        "id": 729,
+        "name": "slark_depth_shroud",
+        "language": {
+            "abilityId": 729,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "Depth Shroud",
+            "description": [
+                "Creates a 300 AoE cloud at the target location for 3 seconds. All allies inside the radius are hidden and affected by Shadow Dance. Cast Range: 800. Cooldown: 75. Manacost: 150"
+            ],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 729,
+            "gameVersionId": 141,
+            "type": 0,
+            "behavior": 0,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 1,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 1,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRange": [
+                800
+            ],
+            "castRangeBuffer": [
+                250
+            ],
+            "castPoint": [
+                0.1
+            ],
+            "cooldown": [
+                75.0
+            ],
+            "manaCost": [
+                75.0
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": true
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -63,7 +124,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 5494,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dark Pact",
             "description": [
@@ -86,7 +147,7 @@
         },
         "stat": {
             "abilityId": 5494,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -129,7 +190,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -140,7 +202,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 5495,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Pounce",
             "description": [
@@ -153,6 +215,7 @@
                 "LEASH RADIUS: 400"
             ],
             "lore": "Time in the Dark Reef made Slark a dangerous assassin; aggressive and fearless.",
+            "aghanimDescription": "Provides %max_charges% charges and increases pounce range.",
             "notes": [
                 "On cast, Slark leaps forward at a speed of 933.33, stopping when he latches onto an enemy hero or has traveled 700 distance.",
                 "Spell Immune units cannot be leashed.",
@@ -161,7 +224,7 @@
         },
         "stat": {
             "abilityId": 5495,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 4100,
             "unitTargetType": 0,
@@ -198,7 +261,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -209,7 +273,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 5496,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Essence Shift",
             "description": [
@@ -229,7 +293,7 @@
         },
         "stat": {
             "abilityId": 5496,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -254,7 +318,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -265,7 +330,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 5497,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Shadow Dance",
             "description": [
@@ -273,7 +338,7 @@
             ],
             "attributes": [
                 "DURATION: 4 / 4.25 / 4.5",
-                "BONUS MOVEMENT SPEED: 20% / 35% / 50%",
+                "BONUS MOVEMENT SPEED: 24% / 36% / 48%",
                 "HEALTH GAINED PER SECOND: 5% / 6% / 7%"
             ],
             "lore": "The hidden Thirteenth is a slippery foe.",
@@ -284,7 +349,7 @@
         },
         "stat": {
             "abilityId": 5497,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 2052,
             "unitTargetType": 0,
@@ -319,7 +384,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -330,7 +396,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 6147,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.8s Pounce Leash",
             "description": [],
@@ -339,7 +405,7 @@
         },
         "stat": {
             "abilityId": 6147,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -364,7 +430,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -375,7 +442,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 6892,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+120 Dark Pact Damage",
             "description": [],
@@ -384,7 +451,7 @@
         },
         "stat": {
             "abilityId": 6892,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -409,7 +476,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -420,7 +488,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 6893,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1s Shadow Dance Duration",
             "description": [],
@@ -429,7 +497,7 @@
         },
         "stat": {
             "abilityId": 6893,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -454,7 +522,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -465,7 +534,7 @@
         "uri": "slark",
         "language": {
             "abilityId": 6894,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+65 Essence Shift Duration",
             "description": [],
@@ -474,7 +543,7 @@
         },
         "stat": {
             "abilityId": 6894,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -499,7 +568,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

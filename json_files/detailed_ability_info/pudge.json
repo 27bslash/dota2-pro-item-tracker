@@ -2,9 +2,10 @@
     "322": {
         "id": 322,
         "name": "pudge_eject",
+        "uri": "pudge",
         "language": {
             "abilityId": 322,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Eject",
             "description": [
@@ -16,7 +17,7 @@
         },
         "stat": {
             "abilityId": 322,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 0,
@@ -41,7 +42,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -52,7 +54,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 332,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4 Meat Hook Cooldown",
             "description": [],
@@ -61,7 +63,7 @@
         },
         "stat": {
             "abilityId": 332,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -86,7 +88,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -97,7 +100,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 408,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+0.8s Dismember Duration",
             "description": [],
@@ -106,7 +109,7 @@
         },
         "stat": {
             "abilityId": 408,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -131,7 +134,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -139,9 +143,10 @@
     "507": {
         "id": 507,
         "name": "special_bonus_unique_pudge_7",
+        "uri": "pudge",
         "language": {
             "abilityId": 507,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+120 Meat Hook Damage",
             "description": [],
@@ -150,7 +155,7 @@
         },
         "stat": {
             "abilityId": 507,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -175,7 +180,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -186,7 +192,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 5074,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Flesh Heap",
             "description": [
@@ -202,7 +208,7 @@
         },
         "stat": {
             "abilityId": 5074,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2,
             "unitTargetType": 0,
@@ -227,7 +233,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -238,7 +245,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 5075,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Meat Hook",
             "description": [
@@ -259,7 +266,7 @@
         },
         "stat": {
             "abilityId": 5075,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16400,
             "unitTargetType": 0,
@@ -291,16 +298,10 @@
                 0.3
             ],
             "cooldown": [
-                21.0,
                 18.0,
-                15.0,
+                16.0,
+                14.0,
                 12.0
-            ],
-            "damage": [
-                150.0,
-                220.0,
-                290.0,
-                360.0
             ],
             "manaCost": [
                 125.0,
@@ -311,7 +312,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -322,7 +324,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 5076,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Rot",
             "description": [
@@ -332,10 +334,11 @@
                 "RADIUS: 250",
                 "MOVE SLOW: -14% / -20% / -26% / -32%",
                 "DAMAGE: 30 / 60 / 90 / 120",
-                "SCEPTER BONUS DAMAGE: 80",
-                "SCEPTER BONUS RADIUS: 200"
+                "SCEPTER BONUS DAMAGE: 100",
+                "SCEPTER BONUS RADIUS: 225"
             ],
             "lore": "A foul odor precedes a toxic, choking gas, emanating from the Butcher's putrid, ever-swelling mass.",
+            "aghanimDescription": "Increases Rot radius by %scepter_rot_radius_bonus% and damage by %scepter_rot_damage_bonus%.\n\nReduces health regen on affected enemies by 25%%.",
             "notes": [
                 "Using Rot doesn't interrupt channeling.",
                 "Rot hits invisible units.",
@@ -344,7 +347,7 @@
         },
         "stat": {
             "abilityId": 5076,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 541188,
             "unitTargetType": 0,
@@ -375,7 +378,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -386,7 +390,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 5077,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Dismember",
             "description": [
@@ -399,11 +403,12 @@
             "lore": "'When I'm through with these vermin, they'll be fit for a pie!'",
             "notes": [
                 "If a unit becomes invisible while Dismembered, it will still be under the effects of Dismember."
-            ]
+            ],
+            "shardDescription": "Allows targeting an ally to swallow them and heal them for %scepter_regen_pct%%% of their max health per second. Reduces cooldown by 10 seconds."
         },
         "stat": {
             "abilityId": 5077,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 16520,
             "unitTargetType": 3,
@@ -451,7 +456,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -462,7 +468,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 6023,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+1.5 Flesh Heap Stack Str",
             "description": [],
@@ -471,7 +477,7 @@
         },
         "stat": {
             "abilityId": 6023,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -496,7 +502,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -507,7 +514,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 6245,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+30 Rot Damage",
             "description": [],
@@ -516,7 +523,7 @@
         },
         "stat": {
             "abilityId": 6245,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -541,7 +548,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -552,7 +560,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 6506,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "1.8x Dismember Damage/Heal",
             "description": [],
@@ -561,7 +569,7 @@
         },
         "stat": {
             "abilityId": 6506,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -586,7 +594,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -597,7 +606,7 @@
         "uri": "pudge",
         "language": {
             "abilityId": 7142,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-14% Rot Slow",
             "description": [],
@@ -606,7 +615,7 @@
         },
         "stat": {
             "abilityId": 7142,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -631,7 +640,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

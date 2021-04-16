@@ -5,16 +5,16 @@
         "uri": "furion",
         "language": {
             "abilityId": 470,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "+25 Wrath of Nature Base Damage",
+            "displayName": "+30 Wrath of Nature Base Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 470,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -49,7 +50,7 @@
         "name": "furion_greater_sprout",
         "language": {
             "abilityId": 625,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Greater Sprout",
             "description": [
@@ -62,7 +63,7 @@
         },
         "stat": {
             "abilityId": 625,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 0,
             "unitTargetType": 3,
@@ -99,7 +100,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": false
@@ -110,7 +112,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 5245,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Sprout",
             "description": [
@@ -123,11 +125,12 @@
             "notes": [
                 "Sprout can be cast on any unit, or the ground.",
                 "Trees created by Sprout have the same interactions with abilities as regular trees."
-            ]
+            ],
+            "shardDescription": "Causes the first two trees destroyed with Sprout to summon Greater Treants. Can only have two Greater Treants alive."
         },
         "stat": {
             "abilityId": 5245,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 24,
             "unitTargetType": 3,
@@ -173,7 +176,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -184,7 +188,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 5246,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Teleportation",
             "description": [
@@ -199,7 +203,7 @@
         },
         "stat": {
             "abilityId": 5246,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 2101264,
             "unitTargetType": 0,
@@ -231,9 +235,9 @@
                 3.0
             ],
             "cooldown": [
+                65.0,
                 50.0,
-                40.0,
-                30.0,
+                35.0,
                 20.0
             ],
             "manaCost": [
@@ -245,7 +249,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -256,7 +261,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 5247,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Nature's Call",
             "description": [
@@ -266,7 +271,7 @@
                 "TREANT DURATION: 60 / 60 / 60 / 60",
                 "TREANT COUNT: 2 / 3 / 4 / 5",
                 "TREANT HEALTH: 550",
-                "TREANT DAMAGE: 22 / 26 / 30 / 34"
+                "TREANT DAMAGE: 18 / 24 / 30 / 36"
             ],
             "lore": "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild.",
             "notes": [
@@ -275,7 +280,7 @@
         },
         "stat": {
             "abilityId": 5247,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 48,
             "unitTargetType": 0,
@@ -307,9 +312,6 @@
                 0.5
             ],
             "cooldown": [
-                37.0,
-                37.0,
-                37.0,
                 37.0
             ],
             "manaCost": [
@@ -321,7 +323,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -332,7 +335,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 5248,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Wrath of Nature",
             "description": [
@@ -340,12 +343,13 @@
             ],
             "attributes": [
                 "MAX TARGETS: 18",
-                "DAMAGE: 110 / 140 / 170",
-                "ADDED DAMAGE PER BOUNCE: 9%",
+                "DAMAGE: 115 / 150 / 185",
+                "ADDED DAMAGE PER BOUNCE: 10%",
                 "BONUS DAMAGE PER UNIT: 4 / 5 / 6",
                 "BONUS DAMAGE DURATION: 50"
             ],
             "lore": "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness.",
+            "aghanimDescription": "Lowers cooldown from 85 to 60. Entangles all enemies it hits. Duration scales from 2 up to 3.8 seconds at max bounce.",
             "notes": [
                 "Wrath of Nature will not hit units out of vision.",
                 "Can be cast through the minimap; the nearest valid target will be selected."
@@ -353,7 +357,7 @@
         },
         "stat": {
             "abilityId": 5248,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 24,
             "unitTargetType": 5,
@@ -394,7 +398,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -405,16 +410,16 @@
         "uri": "furion",
         "language": {
             "abilityId": 6084,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "2x Treant HP/Damage",
+            "displayName": "2.5x Treant HP/Damage",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6084,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -439,7 +444,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -450,7 +456,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 6500,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+5 Treants Summoned",
             "description": [],
@@ -459,7 +465,7 @@
         },
         "stat": {
             "abilityId": 6500,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -484,7 +490,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -495,7 +502,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 6539,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Removed Teleportation Cooldown",
             "description": [],
@@ -504,7 +511,7 @@
         },
         "stat": {
             "abilityId": 6539,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -529,7 +536,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -540,7 +548,7 @@
         "uri": "furion",
         "language": {
             "abilityId": 6702,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-4s Sprout Cooldown",
             "description": [],
@@ -549,7 +557,7 @@
         },
         "stat": {
             "abilityId": 6702,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -574,7 +582,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true

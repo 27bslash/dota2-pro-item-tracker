@@ -5,7 +5,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 323,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Vengeance Aura Illusion Casts Spells",
             "description": [],
@@ -14,7 +14,7 @@
         },
         "stat": {
             "abilityId": 323,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -39,7 +39,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -50,7 +51,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 493,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+100 Vengeance Aura Attack Range",
             "description": [],
@@ -59,7 +60,7 @@
         },
         "stat": {
             "abilityId": 493,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -84,7 +85,53 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
+        },
+        "drawMatchPage": false,
+        "isTalent": true
+    },
+    "790": {
+        "id": 790,
+        "name": "special_bonus_unique_vengeful_spirit_9",
+        "language": {
+            "abilityId": 790,
+            "gameVersionId": 141,
+            "languageId": 0,
+            "displayName": "-15s Nether Swap Cooldown",
+            "description": [],
+            "attributes": [],
+            "notes": []
+        },
+        "stat": {
+            "abilityId": 790,
+            "gameVersionId": 141,
+            "type": 2,
+            "behavior": 2,
+            "unitTargetType": 0,
+            "unitTargetTeam": 0,
+            "unitTargetFlags": 0,
+            "unitDamageType": 0,
+            "spellImmunity": 0,
+            "modifierSupportValue": 1.0,
+            "modifierSupportBonus": 0,
+            "isOnCastbar": true,
+            "isOnLearnbar": true,
+            "fightRecapLevel": 0,
+            "isGrantedByScepter": false,
+            "hasScepterUpgrade": false,
+            "maxLevel": 0,
+            "levelsBetweenUpgrade": 0,
+            "requiredLevel": 0,
+            "displayAdditionalHeroes": false,
+            "castRangeBuffer": [
+                250
+            ],
+            "isUltimate": false,
+            "duration": "",
+            "charges": "",
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": false,
         "isTalent": true
@@ -95,7 +142,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 5122,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Magic Missile",
             "description": [
@@ -110,7 +157,7 @@
         },
         "stat": {
             "abilityId": 5122,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 8,
             "unitTargetType": 3,
@@ -159,7 +206,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -170,17 +218,18 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 5123,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Vengeance Aura",
             "description": [
                 "Vengeful Spirit's presence increases the damage of nearby friendly heroes."
             ],
             "attributes": [
-                "BASE DAMAGE BONUS: 8% / 16% / 24% / 32%",
+                "BASE DAMAGE BONUS: 11% / 18% / 25% / 32%",
                 "RADIUS: 1200"
             ],
             "lore": "Although they may not share her undying passion for revenge, allies do draw on her fanaticism in combat.",
+            "aghanimDescription": "Upon death, creates a strong illusion of Vengeful Spirit that deals and takes 100%% damage and can cast all of her spells. Illusion has 25%% movement speed bonus. If the illusion is alive when Vengeful Spirit respawn, she will take its place. XP earned by her illusion is given to her.",
             "notes": [
                 "Vengeance Illusion keeps providing the Vengeance Aura after Vengeful Spirit's death.",
                 "Strong Illusions are not instantly killed by spells."
@@ -188,7 +237,7 @@
         },
         "stat": {
             "abilityId": 5123,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 1048578,
             "unitTargetType": 0,
@@ -216,7 +265,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -227,7 +277,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 5124,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Wave of Terror",
             "description": [
@@ -238,11 +288,12 @@
                 "VISION DURATION: 4"
             ],
             "lore": "Shendel's haunting voice hints at her approaching vindication.",
-            "notes": []
+            "notes": [],
+            "shardDescription": "Wave of Terror steals 20%% of enemy hero base damage and base armor, granting it to Vengeful Spirit for the debuff duration."
         },
         "stat": {
             "abilityId": 5124,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 0,
             "behavior": 16,
             "unitTargetType": 0,
@@ -280,10 +331,10 @@
                 10.0
             ],
             "damage": [
-                60.0,
-                80.0,
-                100.0,
-                120.0
+                70.0,
+                90.0,
+                110.0,
+                130.0
             ],
             "manaCost": [
                 25.0,
@@ -294,7 +345,8 @@
             "isUltimate": false,
             "duration": "8",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -305,7 +357,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 5125,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Nether Swap",
             "description": [
@@ -321,7 +373,7 @@
         },
         "stat": {
             "abilityId": 5125,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 1,
             "behavior": 8,
             "unitTargetType": 8,
@@ -352,8 +404,8 @@
                 0.4
             ],
             "cooldown": [
-                60.0,
-                45.0,
+                50.0,
+                40.0,
                 30.0
             ],
             "manaCost": [
@@ -364,7 +416,8 @@
             "isUltimate": true,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": false
@@ -375,7 +428,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6057,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "Magic Missile Pierces Spell Immunity",
             "description": [],
@@ -384,7 +437,7 @@
         },
         "stat": {
             "abilityId": 6057,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -409,7 +462,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -420,7 +474,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6237,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+16% Vengeance Aura Base Damage Bonus",
             "description": [],
@@ -429,7 +483,7 @@
         },
         "stat": {
             "abilityId": 6237,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -454,7 +508,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -465,7 +520,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6310,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "+200 Magic Missile Damage",
             "description": [],
@@ -474,7 +529,7 @@
         },
         "stat": {
             "abilityId": 6310,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -499,7 +554,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -510,16 +566,16 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6977,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
-            "displayName": "-1 Wave of Terror Armor",
+            "displayName": "-2 Wave of Terror Armor",
             "description": [],
             "attributes": [],
             "notes": []
         },
         "stat": {
             "abilityId": 6977,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -544,7 +600,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -555,7 +612,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 6978,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-2.75s Magic Missile Cooldown",
             "description": [],
@@ -564,7 +621,7 @@
         },
         "stat": {
             "abilityId": 6978,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -589,7 +646,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
@@ -600,7 +658,7 @@
         "uri": "vengefulspirit",
         "language": {
             "abilityId": 7018,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "languageId": 0,
             "displayName": "-6s Wave of Terror Cooldown",
             "description": [],
@@ -609,7 +667,7 @@
         },
         "stat": {
             "abilityId": 7018,
-            "gameVersionId": 137,
+            "gameVersionId": 141,
             "type": 2,
             "behavior": 2,
             "unitTargetType": 0,
@@ -634,7 +692,8 @@
             "isUltimate": false,
             "duration": "",
             "charges": "",
-            "chargeRestoreTime": ""
+            "chargeRestoreTime": "",
+            "isGrantedByShard": false
         },
         "drawMatchPage": true,
         "isTalent": true
