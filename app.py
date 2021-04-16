@@ -311,7 +311,8 @@ def generate_table(func_name, search, template):
 
             if match['aghanims_shard']:
                 image = f"<img class='item-img' id='aghanims-shard' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png' data_id='609' alt='aghanims_shard'>"
-                overlay = f"<div class='overlay' id='shard-overlay'>{item['time']}</div>"
+                shard_time = match['aghanims_shard'][0]['time']
+                overlay = f"<div class='overlay' id='shard-overlay'>{shard_time}</div>"
                 html_string += "<div class='item-cell' id='aghanims-shard-cell'>"
                 html_string += image
                 html_string += overlay
@@ -649,12 +650,14 @@ def opendota_call():
 
 
 def manual_hero_update(name):
-    hero_output.delete_many({'hero': name})
+    # hero_output.delete_many({'hero': name})
     # hero_urls.delete_many({'hero': name})
-    asyncio.run(main(get_urls(name), name))
+    hero_output.find_one_and_delete({'hero': 'phantom_lancer','id': 5947565447})
+    asyncio.run(main([5947565447],'phantom_lancer'))
 
 
 if __name__ == '__main__':
     # manual_hero_update('dawnbreaker')
+    # manual_hero_update('f')
     # opendota_call()
     app.run(debug=False)
