@@ -1,5 +1,6 @@
 {% extends 'search.html' %} {%block content %}
 <main>
+  <title>Index</title>
   <div class="controls-wrapper">
     <div class="controls-container">
       <div class="advanced-controls hide">
@@ -95,7 +96,7 @@
       }
     };
   </script>
-  <h1 class='sort-title'></h1>
+  <h1 class="sort-title"></h1>
   <div class="grid-container">
     <div class="hero-grid">
       {%set x = 0%} {%for j in range(links|length)%}
