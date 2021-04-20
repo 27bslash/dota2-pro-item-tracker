@@ -207,11 +207,11 @@ def player_get(player_name):
         return render_template(template, display_name=display_name, data=[], time=time, roles=roles, total=0)
 
 
-def generate_table(func_name, search, template):
-    # print('generate table', func_name, search, template)
+def generate_table(func_name, query, template):
     # print(request.args)
-    display_name = search.replace('_', ' ').capitalize()
-    check_response = hero_output.find_one({'hero': search})
+    display_name = query.replace('_', ' ').capitalize()
+    key = 'name' if func_name == 'player_get' else 'hero'
+    check_response = hero_output.find_one({key: query})
     match_data = None
     item_data = ''
     img_cache = 'https://ailhumfakp.cloudimg.io/v7/'
@@ -219,26 +219,30 @@ def generate_table(func_name, search, template):
                '10': 'last_hits', '11': 'gold', '12': 'gpm', '13': 'xpm', '14': 'hero_damage', '15': 'tower_damage', '16': 'duration', '17': 'mmr'}
     sort_direction = -1 if request.args['order[0][dir]'] == 'desc' else 1
     column = columns[request.args['order[0][column]']]
+    searchable = request.args['search[value]']
+    search_value = mongo_search(searchable)
     records_to_skip = int(request.args['start'])
     length = int(request.args['length'])
-    key = 'name' if func_name == 'player_get' else 'hero'
-    if 'start' in template:
-        if column == 'gold':
-            column = 'lane_efficiency'
+    if 'start' in template and column == 'gold':
+        column = 'lane_efficiency'
     if check_response:
         if 'role' in request.args:
             role = request.args.get('role').replace('%20', ' ').title()
             data = hero_output.find(
-                {key: search, 'role': role}).sort(column, sort_direction).limit(length).skip(records_to_skip)
+                {key: query, 'role': role}).sort(column, sort_direction).limit(length).skip(records_to_skip)
             match_data = [match for match in data]
             total_entries = [entry for entry in hero_output.find(
-                {key: search, 'role': role})]
+                {key: query, 'role': role})]
         else:
+            if len(searchable) > 0 and len(search_value) > 0:
+                aggregate = {key: query, 'hero': {"$in": search_value}}
+            else:
+                aggregate = {key: query}
             data = hero_output.find(
-                {key: search}).sort(column, sort_direction).limit(length).skip(records_to_skip)
+                aggregate).sort(column, sort_direction).limit(length).skip(records_to_skip)
             match_data = [match for match in data]
             total_entries = [
-                entry for entry in hero_output.find({key: search})]
+                entry for entry in hero_output.find({key: query})]
     result = {"draw": request.args['draw'],
               "recordsTotal": len(total_entries), "recordsFiltered": len(total_entries), "data": []}
     for match in match_data:
@@ -264,7 +268,6 @@ def generate_table(func_name, search, template):
                                'ward_sentry', 'smoke_of_deceit', 'enchanted_mango', 'clarity', 'tpscroll', 'dust']
                 item_key = item['key']
                 item_id = item_methods.get_item_id(item_key)
-                print(item['time'])
                 if item['time'] > 600:
                     break
                 if item['key'] not in consumables and item['time'] < 600 and item['time'] > 0:
@@ -351,7 +354,7 @@ def generate_table(func_name, search, template):
         for hero in match['radiant_draft']:
             rep = hero.replace("'", '')
             highlight = ''
-            if hero == search:
+            if hero == query:
                 highlight = 'icon-highlight'
             html_string += f"<a href='/hero/{hero}'><i class='d2mh {rep} {highlight}'></i></a>"
 
@@ -360,7 +363,7 @@ def generate_table(func_name, search, template):
         for hero in match['dire_draft']:
             rep = hero.replace("'", '')
             highlight = ''
-            if hero == search:
+            if hero == query:
                 highlight = 'icon-highlight'
             html_string += f"<a href='/hero/{hero}'><i class='d2mh {rep} {highlight}'></i></a>"
         html_string += "</div>"
@@ -375,8 +378,12 @@ def generate_table(func_name, search, template):
         row_string.append(html_string)
         row_string.append(timeago.format(
             match['unix_time'], datetime.datetime.now()))
-        row_string.append(
-            f"<a href='/player/{match['name']}'><p class='stats'>{match['name']}</p></a>")
+        if func_name != 'player_get':
+            row_string.append(
+                f"<a href='/player/{match['name']}'><p class='stats'>{match['name']}</p></a>")
+        else:
+            row_string.append(
+                f"<a href='/hero/{match['hero']}'><i class='d2mh {match['hero']}'></i></a>")
         row_string.append(f"<i class='fas fa-copy' id='{match['id']}'></i>")
         row_string.append(
             f"<a href=\'?role={match['role']}\'><img src='{role_file_path}'/></a>")
@@ -470,6 +477,15 @@ def get_hero_name_colour(hero_name):
         for item in data['colors']:
             if item['hero'] == hero_name:
                 return tuple(item['color'])
+
+
+def mongo_search(query):
+    print('quer', query)
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        matches = [hero['name']
+                   for hero in data['heroes'] if query in hero['name']]
+        return matches
 
 
 @ app.route('/cron')
