@@ -115,7 +115,9 @@ const hero_name_display = () => {
     displayArr = [],
     linkArr = [];
   ul.innerHTML = "";
-  document.querySelector(".sort-title").textContent = "";
+  if (!window.location.pathname.includes("hero")) {
+    document.querySelector(".sort-title").textContent = "";
+  }
   document.querySelector(".arrow-button").classList.add("search-hide");
   for (let stat of statText) {
     stat.classList.add("search-hide");
@@ -293,9 +295,11 @@ window.addEventListener("keydown", (event) => {
 const reset = () => {
   ul.innerHTML = "";
   playerSuggestionList.innerHTML = "";
-  document.querySelector(".sort-title").textContent = document.querySelector(
-    ".sort-title"
-  ).id;
+  if (!window.location.pathname.includes("hero")) {
+    document.querySelector(".sort-title").textContent = document.querySelector(
+      ".sort-title"
+    ).id;
+  }
   document.querySelector(".suggestions").style.display = "none";
   document.querySelector(".arrow-button").classList.remove("search-hide");
   for (let el of elementsToHide) {
