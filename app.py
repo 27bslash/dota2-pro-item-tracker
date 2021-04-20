@@ -208,7 +208,8 @@ def player_get(player_name):
 
 
 def generate_table(func_name, search, template):
-    print('generate table')
+    # print('generate table', func_name, search, template)
+    # print(request.args)
     display_name = search.replace('_', ' ').capitalize()
     check_response = hero_output.find_one({'hero': search})
     match_data = None
@@ -248,7 +249,7 @@ def generate_table(func_name, search, template):
             for item in match['starting_items']:
                 item_key = item['key']
                 item_id = item_methods.get_item_id(item_key)
-                image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += "<div class='tooltip'></div>"
@@ -267,7 +268,7 @@ def generate_table(func_name, search, template):
                 if item['time'] > 600:
                     break
                 if item['key'] not in consumables and item['time'] < 600 and item['time'] > 0:
-                    image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                    image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                     overlay = f"<div class='overlay'>{str(datetime.timedelta(seconds=item['time']))}</div>"
                     html_string += "<div class='item-cell'>"
                     html_string += image
@@ -284,7 +285,7 @@ def generate_table(func_name, search, template):
                 item_key = item['key']
                 # item_id = item_data['items']['item_key']
                 item_id = item_methods.get_item_id(item_key)
-                image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
@@ -293,7 +294,7 @@ def generate_table(func_name, search, template):
                 html_string += "</div>"
 
             for item in match['backpack']:
-                image = f"<img class='item-img' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
@@ -306,11 +307,11 @@ def generate_table(func_name, search, template):
                 item_id = item_methods.get_item_id(item_key)
                 html_string += "<div class='neutral-cell'>"
                 html_string += f"<div class='circle'>"
-                html_string += f"<img class='item-img' id='neutral-item' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item_key}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                html_string += f"<img class='item-img' id='neutral-item' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item_key}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 html_string += "<div class='tooltip'></div></div></div>"
 
             if match['aghanims_shard']:
-                image = f"<img class='item-img' id='aghanims-shard' src='{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png' data_id='609' alt='aghanims_shard'>"
+                image = f"<img class='item-img' id='aghanims-shard' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png' data_id='609' alt='aghanims_shard'>"
                 shard_time = match['aghanims_shard'][0]['time']
                 overlay = f"<div class='overlay' id='shard-overlay'>{shard_time}</div>"
                 html_string += "<div class='item-cell' id='aghanims-shard-cell'>"
@@ -323,7 +324,7 @@ def generate_table(func_name, search, template):
         html_string += "<div class='abilities'>"
 
         for ability in match['abilities']:
-            ability_img = f"{img_cache}https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability['img']}.png"
+            ability_img = f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability['img']}.png"
             ability_id = ability['id']
             ability_key = ability['key']
             html_string += "<div class='ability-img-wrapper'>"
@@ -347,23 +348,21 @@ def generate_table(func_name, search, template):
         html_string += "<div class='draft'>"
         html_string += "<div class='radiant_draft'>"
 
-        for item in match['radiant_draft']:
-            rep = item.replace("'", '')
-            if item == search:
+        for hero in match['radiant_draft']:
+            rep = hero.replace("'", '')
+            highlight = ''
+            if hero == search:
                 highlight = 'icon-highlight'
-            else:
-                highlight = ''
-            html_string += f"<a href='/hero/{item}'><i class='d2mh {rep} {highlight}'></i></a>"
+            html_string += f"<a href='/hero/{hero}'><i class='d2mh {rep} {highlight}'></i></a>"
 
         html_string += "</div>"
         html_string += "<div class='dire_draft'>"
-        for item in match['dire_draft']:
-            rep = item.replace("'", '')
-            if item == search:
+        for hero in match['dire_draft']:
+            rep = hero.replace("'", '')
+            highlight = ''
+            if hero == search:
                 highlight = 'icon-highlight'
-            else:
-                highlight = ''
-            html_string += f"<a href='/hero/{item}'><i class='d2mh {rep} {highlight}'></i></a>"
+            html_string += f"<a href='/hero/{hero}'><i class='d2mh {rep} {highlight}'></i></a>"
         html_string += "</div>"
 
         role_file_path = f"/static/icons/{match['role']}.png"
@@ -376,9 +375,11 @@ def generate_table(func_name, search, template):
         row_string.append(html_string)
         row_string.append(timeago.format(
             match['unix_time'], datetime.datetime.now()))
-        row_string.append(f"<p class='stats'>{match['name']}</p>")
+        row_string.append(
+            f"<a href='/player/{match['name']}'><p class='stats'>{match['name']}</p></a>")
         row_string.append(f"<i class='fas fa-copy' id='{match['id']}'></i>")
-        row_string.append(f"<img src='{role_file_path}'/>")
+        row_string.append(
+            f"<a href=\'?role={match['role']}\'><img src='{role_file_path}'/></a>")
         row_string.append(f"<p class='stats' id='level'>{match['lvl']}</p>")
         row_string.append(f"<p class='stats' id='kills'>{match['kills']}</p>")
         row_string.append(
@@ -652,8 +653,9 @@ def opendota_call():
 def manual_hero_update(name):
     # hero_output.delete_many({'hero': name})
     # hero_urls.delete_many({'hero': name})
-    hero_output.find_one_and_delete({'hero': 'phantom_lancer','id': 5947565447})
-    asyncio.run(main([5947565447],'phantom_lancer'))
+    hero_output.find_one_and_delete(
+        {'hero': 'dragon_knight', 'id': 5942550592})
+    asyncio.run(main([5942550592], 'dragon_knight'))
 
 
 if __name__ == '__main__':
