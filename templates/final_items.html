@@ -118,7 +118,7 @@
                   {% for dict_item in best_games %}
                   <tr class='best-games-row' id="{{dict_item['id']}}">
                     <td class="benchmark-cell">
-                      <a class = 'player-name' href="{{url_for('player_get', player_name=dict_item['name'])}}">{{dict_item['name']}}
+                      <a class = 'player-name' href="/player/{{dict_item['name']}}">{{dict_item['name']}}
                       </a>
                     </td>
                     <td class="benchmark-cell">
