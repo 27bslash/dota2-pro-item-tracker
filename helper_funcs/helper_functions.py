@@ -134,6 +134,37 @@ class Items():
                         starting_items, buildup_item)]
         return starting_items
 
+    def bots(self, purchase_log, purchase):
+        bots_recipes = {'recipe_travel_boots': 'travel_boots',
+                        'recipe_travel_boots_2': 'travel_boots_2'}
+        search_key = self.extract_key(purchase, bots_recipes)
+        for dic in purchase_log:
+            if dic['key'] == search_key[0] and search_key[0] is not None:
+                bots_time = dic['time']
+                if search_key[1] == 1:
+                    bots_time = int(bots_time) - 60
+                else:
+                    bots_time = int(bots_time) + 60
+                bots_entry = {'time': bots_time,
+                              'key': search_key[2]}
+                purchase_log.append(bots_entry)
+        return purchase_log
+
+    def extract_key(self, purchase, bots_recipes):
+        search_key = None
+        nxt = 0
+        boots = None
+        for key in list(purchase.keys()):
+            if key in bots_recipes.keys():
+                try:
+                    search_key = list(purchase)[list(purchase).index(key)+1]
+                    nxt = 1
+                except:
+                    search_key = list(purchase)[list(purchase).index(key)-1]
+                    nxt = -1
+                boots = bots_recipes[key]
+        return (search_key, nxt, boots)
+
     def item_charges(self, starting_items):
         max_charges = 1
         temp = []
@@ -453,6 +484,7 @@ if __name__ == "__main__":
     # get_id('lih')
     # get_talent_order('jakiro')
     detailed_ability_info(ab_arr, 78)
+
     # loop_test()
     # parse_request()
     pass

@@ -91,6 +91,7 @@ async def async_get(m_id, hero_name):
                                 if purchase['key'] == 'aghanims_shard':
                                     aghanims_shard = item_methods.convert_time(
                                         [purchase])
+                            purchase_log = item_methods.bots(purchase_log, p['purchase'])
                             # starting_items = [
                             #     purchase for purchase in purchase_log if purchase['time'] <= 0]
                             starting_items = item_methods.clean_items(
