@@ -124,14 +124,15 @@ class Items():
             {'key': 'ring_of_basilius', 'items': ['sobi_mask']},
             {'key': 'buckler', 'items': ['ring_of_protection']},
             {'key': 'headdress', 'items': ['ring_of_regen']}]
-
         for item in starting_items:
             item_idx = find_index(build_up, item['key'])
+            if not item_idx:
+                continue
             items = build_up[item_idx]['items']
-            if item_idx >= 0:
-                for buildup_item in items:
-                    del starting_items[find_index(
-                        starting_items, buildup_item)]
+            for buildup_item in items:
+                matching_idx = find_index(starting_items, buildup_item)
+                if matching_idx:
+                    del starting_items[matching_idx]
         return starting_items
 
     def bots(self, purchase_log, purchase):
@@ -349,7 +350,7 @@ def find_index(lst, value):
     for i, dic in enumerate(lst):
         if dic['key'] == value:
             return i
-    return -1
+    return None
 
 
 def parse_request():

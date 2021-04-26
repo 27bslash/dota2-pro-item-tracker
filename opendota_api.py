@@ -83,6 +83,7 @@ async def async_get(m_id, hero_name):
                             print(f"{hero_name} should reach here.")
                             aghanims_shard = None
                             starting_items = []
+                            purchase_log = item_methods.bots(purchase_log, p['purchase'])
                             for purchase in purchase_log:
                                 purchase['id'] = item_methods.get_item_id(
                                     purchase['key'])
@@ -91,7 +92,6 @@ async def async_get(m_id, hero_name):
                                 if purchase['key'] == 'aghanims_shard':
                                     aghanims_shard = item_methods.convert_time(
                                         [purchase])
-                            purchase_log = item_methods.bots(purchase_log, p['purchase'])
                             # starting_items = [
                             #     purchase for purchase in purchase_log if purchase['time'] <= 0]
                             starting_items = item_methods.clean_items(
@@ -126,7 +126,7 @@ async def async_get(m_id, hero_name):
                             add_to_dead_games(m_id)
 
     except Exception as e:
-        print("Unable to get url", traceback.format_exc())
+        print("Unable to get url: ",m_id, traceback.format_exc())
         add_to_dead_games(m_id)
 
 
