@@ -401,7 +401,6 @@ def detailed_ability_info(arr, h_id):
         for i, _id in enumerate(arr):
             _id = str(_id)
             if _id in data:
-                # print(_id)
                 if int(_id) == 730:
                     continue
                 try:
@@ -414,25 +413,25 @@ def detailed_ability_info(arr, h_id):
                     level = i+1
                     if 'uri' in data[_id]:
                         if data[_id]['uri'] != 'invoker':
-                            # if level > 16:
-                            #     gap += 1
-                            # if level > 17:
-                            #     gap += 1
-                            # if level > 18:
-                            #     gap += 4
-                            d['level'] = i+1
+                            if level > 16:
+                                gap += 1
+                            if level > 17:
+                                gap += 1
+                            if level > 18:
+                                gap += 4
+                            d['level'] = level+gap
                         else:
                             # invoker edge case
                             level = i+1
-                            d['level'] = i+1
+                            d['level'] = level+gap
                     else:
-                        # if level > 16:
-                        #     gap += 1
-                        # if level > 17:
-                        #     gap += 1
-                        # if level > 18:
-                        #     gap += 4
-                        d['level'] = i+1
+                        if level > 16:
+                            gap += 1
+                        if level > 17:
+                            gap += 1
+                        if level > 18:
+                            gap += 4
+                        d['level'] = level+gap
                     if 'special_bonus' in data[_id]['name']:
                         d['type'] = 'talent'
                         with open('json_files/stratz_talents.json', 'r', encoding='utf') as f:
