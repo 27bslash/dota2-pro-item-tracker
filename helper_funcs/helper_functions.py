@@ -139,7 +139,8 @@ class Items():
         bots_recipes = {'recipe_travel_boots': 'travel_boots',
                         'recipe_travel_boots_2': 'travel_boots_2'}
         search_key = self.extract_key(purchase, bots_recipes)
-        for dic in purchase_log:
+        # print(purchase_log)
+        for dic in purchase_log[::-1]:
             if dic['key'] == search_key[0] and search_key[0] is not None:
                 bots_time = dic['time']
                 if search_key[1] == 1:
@@ -155,7 +156,7 @@ class Items():
         search_key = None
         nxt = 0
         boots = None
-        for key in list(purchase.keys()):
+        for key in list(purchase.keys())[::-1]:
             if key in bots_recipes.keys():
                 try:
                     search_key = list(purchase)[list(purchase).index(key)+1]
@@ -164,6 +165,10 @@ class Items():
                     search_key = list(purchase)[list(purchase).index(key)-1]
                     nxt = -1
                 boots = bots_recipes[key]
+                if purchase[key] > 1:
+                    search_key = list(purchase.keys())[-1]
+                    nxt = -1
+                    boots = 'travel_boots_2'
         return (search_key, nxt, boots)
 
     def item_charges(self, starting_items):
