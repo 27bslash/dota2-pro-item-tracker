@@ -390,38 +390,60 @@ def delete_old_urls():
             print(f"Deleted {d['id']}")
 
 
-def detailed_ability_info(arr, h_id):
+def detailed_ability_info(ability_list, hero_id):
     output = []
     talents = []
     start = time.time()
     count = 0
-    # print(arr)
+    # print('list: ', ability_list)
+    stats_count = [i for i in ability_list[slice(0, 18)] if i == 730]
+    # print(len(stat_count))
     with open('json_files/stratz_abilities.json', 'r') as f:
         data = json.load(f)
-        for i, _id in enumerate(arr):
+        for i, _id in enumerate(ability_list):
             _id = str(_id)
             if _id in data:
                 if int(_id) == 730:
+                    # print(i,gap)
                     continue
+                # print(i+1,gap,i+1+gap)
+                # print(i+1 + gap,i, data[_id]['language']['displayName'])
                 try:
                     start = time.perf_counter()
                     d = {}
                     d['img'] = data[_id]['name']
                     d['key'] = data[_id]['language']['displayName']
                     d['id'] = _id
-                    gap = 0
                     level = i+1
+                    gap = 0
+                    
                     if 'uri' in data[_id]:
-                        if data[_id]['uri'] != 'invoker':
+                        if data[str(ability_list[0])]['uri'] != 'invoker' and len(stats_count) < 7:
                             if level > 16:
-                                gap += 1
+                                stat_count = [
+                                    _ for _ in ability_list[slice(0, i)] if _ == 730]
+                                # print('16', len(stat_count), gap)
+                                if len(stat_count) < 1:
+                                    gap += 1
                             if level > 17:
-                                gap += 1
-                            if level > 18:
-                                gap += 4
+                                stat_count = [
+                                    _ for _ in ability_list[slice(0, i)] if _ == 730]
+                                # print('17', len(stat_count))
+                                if len(stat_count) < 1:
+                                    gap += 1
+                            if level >= 19:
+                                stat_count = [
+                                    _ for _ in ability_list[slice(0, i+1)] if _ == 730]
+                                # print('18', 'stat_coutn: ',len(stat_count))
+                                if len(stat_count) < 2:
+                                    gap += 4
+                            if level > 20:
+                                if len(stat_count) >= 2:
+                                    gap += 4
                             d['level'] = level+gap
                         else:
                             # invoker edge case
+                            # print('oiv',gap)
                             level = i+1
                             d['level'] = level+gap
                     else:
@@ -429,14 +451,12 @@ def detailed_ability_info(arr, h_id):
                             gap += 1
                         if level > 17:
                             gap += 1
-                        if level > 18:
-                            gap += 4
                         d['level'] = level+gap
                     if 'special_bonus' in data[_id]['name']:
                         d['type'] = 'talent'
                         with open('json_files/stratz_talents.json', 'r', encoding='utf') as f:
                             talent_data = json.load(f)
-                            talents = talent_data[str(h_id)]['talents']
+                            talents = talent_data[str(hero_id)]['talents']
                             for t in talents:
                                 # print(t)
                                 if int(_id) in t.values():
@@ -445,8 +465,8 @@ def detailed_ability_info(arr, h_id):
                     else:
                         d['type'] = 'ability'
                     output.append(d)
-                    sli = slice(0, 19)
-                    output = output[sli]
+                    if data[str(ability_list[0])]['uri'] != 'invoker':
+                        output = output[slice(0, 19)]
                 except Exception as e:
                     print(_id, traceback.format_exc())
     end = time.time()
