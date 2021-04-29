@@ -390,21 +390,34 @@ def delete_old_urls():
             print(f"Deleted {d['id']}")
 
 
+def get_hero_name_from_ability(ability_list):
+    for ability in ability_list:
+        with open('json_files/stratz_abilities.json', 'r') as f:
+            data = json.load(f)
+            if 'uri' in data[str(ability)]:
+                return data[str(ability)]['uri']
+
+
 def detailed_ability_info(ability_list, hero_id):
     output = []
     talents = []
     start = time.time()
     count = 0
-    # print('list: ', ability_list)
     stats_count = [i for i in ability_list[slice(0, 18)] if i == 730]
+    hero_name = get_hero_name_from_ability(ability_list)
     # print(len(stat_count))
+    st_count = 0
+    temp_st_count = 0
     with open('json_files/stratz_abilities.json', 'r') as f:
         data = json.load(f)
+        gap = 0
         for i, _id in enumerate(ability_list):
             _id = str(_id)
             if _id in data:
                 if int(_id) == 730:
                     # print(i,gap)
+                    st_count += 1
+                    temp_st_count += 1
                     continue
                 # print(i+1,gap,i+1+gap)
                 # print(i+1 + gap,i, data[_id]['language']['displayName'])
@@ -415,42 +428,69 @@ def detailed_ability_info(ability_list, hero_id):
                     d['key'] = data[_id]['language']['displayName']
                     d['id'] = _id
                     level = i+1
-                    gap = 0
-                    
-                    if 'uri' in data[_id]:
-                        if data[str(ability_list[0])]['uri'] != 'invoker' and len(stats_count) < 7:
-                            if level > 16:
-                                stat_count = [
-                                    _ for _ in ability_list[slice(0, i)] if _ == 730]
-                                # print('16', len(stat_count), gap)
-                                if len(stat_count) < 1:
-                                    gap += 1
-                            if level > 17:
-                                stat_count = [
-                                    _ for _ in ability_list[slice(0, i)] if _ == 730]
-                                # print('17', len(stat_count))
-                                if len(stat_count) < 1:
-                                    gap += 1
-                            if level >= 19:
-                                stat_count = [
-                                    _ for _ in ability_list[slice(0, i+1)] if _ == 730]
-                                # print('18', 'stat_coutn: ',len(stat_count))
-                                if len(stat_count) < 2:
-                                    gap += 4
-                            if level > 20:
-                                if len(stat_count) >= 2:
-                                    gap += 4
-                            d['level'] = level+gap
-                        else:
-                            # invoker edge case
-                            # print('oiv',gap)
-                            level = i+1
-                            d['level'] = level+gap
+                    if hero_name != 'invoker':
+                        if level+gap == 17:
+                            # print('17', d['key'], st_count)
+                            if temp_st_count == 0:
+                                gap += 1
+                            else:
+                                temp_st_count -= 1
+                            # print('17: ',d['key'], level, gap)
+                        # print(level+gap, d['key'])
+                        if level+gap == 19:
+                            if temp_st_count == 0:
+                                gap += 1
+                            else:
+                                temp_st_count -= 1
+                                # print('19: ',d['key'], level, gap)
+                        # if level > 17:
+                        #     stat_count = [
+                        #         _ for _ in ability_list[slice(0, i)] if _ == 730]
+                        #     # print('17', len(stat_count))
+                        #     if len(stat_count) < 1:
+                        #         gap += 1
+                        if level+gap == 20:
+                            # print(level,gap,d['key'])
+                            pass
+
+                        if level+gap > 20:
+                            # print(level+gap, gap, d['key'], st_count)
+                            if 'special_bonus' in data[_id]['name'] and st_count > 0:
+                                # print('llv: ', d['key'],level, temp_st_count, st_count,gap)
+                                gap += 25 - level
+                            if 25 - level + gap == temp_st_count:
+                                # print(d['key'],level+gap,temp_st_count)
+                                if 'special_bonus' in data[_id]['name']:
+                                    gap += temp_st_count
+                            if st_count == 0:
+                                # print('gay')
+                                gap += 4
+                        # if level+gap == 21:
+                        #     # print('true')]
+                        #     # print(st_count)
+                        #     # print(level + gap,d['key'])
+                        #     if st_count < 6:
+                        #         temp = 4 - 7 - st_count
+                        #         # print('gap: ', temp)
+                        #         if temp < 0:
+                        #             gap += 4
+                        #     else:
+                        #         pass
+                        # if level + gap > 16:
+                        # if level >= 19:
+                        #     stat_count = [
+                        #         _ for _ in ability_list[slice(0, i+1)] if _ == 730]
+                        #     # print('18', 'stat_coutn: ',len(stat_count))
+                        #     if len(stat_count) < 2:
+                        #         gap += 4
+                        # if level > 20:
+                        #     if len(stat_count) >= 2:
+                        #         gap += 4
+                        d['level'] = level+gap
                     else:
-                        if level > 16:
-                            gap += 1
-                        if level > 17:
-                            gap += 1
+                        # invoker edge case
+                        # print('oiv',gap)
+                        level = i+1
                         d['level'] = level+gap
                     if 'special_bonus' in data[_id]['name']:
                         d['type'] = 'talent'
@@ -465,7 +505,7 @@ def detailed_ability_info(ability_list, hero_id):
                     else:
                         d['type'] = 'ability'
                     output.append(d)
-                    if data[str(ability_list[0])]['uri'] != 'invoker':
+                    if hero_name != 'invoker':
                         output = output[slice(0, 19)]
                 except Exception as e:
                     print(_id, traceback.format_exc())
@@ -501,14 +541,34 @@ def switcher(name):
         return name
 
 
-ab_arr = [654
-          ]
+ab_arr = [
+    # jugg start stats
+    [730, 5028, 5028, 5029, 5028, 5030, 5028, 5027, 5029, 5921,
+        730, 5030, 5027, 5029, 5906, 5027, 730, 5030, 5027, 5934],
+    # no stats
+    [5603, 5605, 5605, 5604, 5605, 5606, 5605, 5604, 5604, 5604,
+        6172, 5603, 5603, 5603, 6647, 5606, 5606, 353, 7051, 5938],
+    # max stats
+    [5028, 5028, 5027, 5028, 5029, 730, 5028, 730, 5030, 5921, 5029, 5030,
+     730, 730, 628, 730, 730, 5030, 5029, 5934, 5029, 730, 5027, 5027],
+    # med stats
+    [5028, 5029, 5028, 5027, 5028, 5030, 5028, 730, 730, 5921, 730, 5030, 730,
+        730, 5906, 730, 730, 5030, 5029, 7021, 5029, 5029, 5027, 5027, 429],
+
+    [5028, 5029, 5028, 5027, 5028, 5030, 5028, 730, 730, 5921,
+        5029, 5030, 5029, 5027, 628, 5029, 5027, 5030, 5027, 7021],
+
+    [5028, 5027, 5028, 5029, 5028, 5030, 5028, 730, 730, 5921, 730, 5030, 730,
+        5029, 628, 5029, 5029, 5030, 5027, 7021, 5027, 5027, 429, 5918, 5906],
+    [5028, 5027, 5029, 5028, 5028, 5030, 5028, 730, 5029, 5921, 730, 730, 730, 5030, 5906, 730, 5029, 5030, 5027, 7021, 5029, 5027, 5027]
+]
 if __name__ == "__main__":
     # insert_player_picks()
     # get_hero_name('jakiro')
     # get_id('lih')
     # get_talent_order('jakiro')
-    detailed_ability_info(ab_arr, 78)
+    for lst in ab_arr:
+        detailed_ability_info(lst, 78)
 
     # loop_test()
     # parse_request()
