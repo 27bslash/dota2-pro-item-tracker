@@ -23,10 +23,8 @@ from flask_minify import minify, decorators
 import urllib.parse
 # TODO
 
-# redesign scroll bar
 # show alex ads
 # make levels accurate
-
 cluster = pymongo.MongoClient(
     'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
 db = cluster['pro-item-tracker']
@@ -256,7 +254,7 @@ def generate_table(func_name, query, template):
                 image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
-                html_string += "<div class='tooltip'></div>"
+                html_string += "<div class='tooltip' id='item-tooltip'></div>"
                 html_string += "</div>"
             html_string += "</div>"
             html_string += "<div class='intermediate_items'>"
@@ -276,7 +274,7 @@ def generate_table(func_name, query, template):
                     html_string += "<div class='item-cell'>"
                     html_string += image
                     html_string += overlay
-                    html_string += "<div class='tooltip'></div>"
+                    html_string += "<div class='tooltip' id='item-tooltip'></div>"
                     html_string += "</div>"
             html_string += "</div></a>"
 
@@ -293,7 +291,7 @@ def generate_table(func_name, query, template):
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += overlay
-                html_string += "<div class='tooltip'></div>"
+                html_string += "<div class='tooltip' id='item-tooltip'></div>"
                 html_string += "</div>"
 
             for item in match['backpack']:
@@ -302,7 +300,7 @@ def generate_table(func_name, query, template):
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += overlay
-                html_string += "<div class='tooltip'></div>"
+                html_string += "<div class='tooltip' id='item-tooltip'></div>"
                 html_string += "</div>"
 
             if match['item_neutral']:
@@ -311,7 +309,7 @@ def generate_table(func_name, query, template):
                 html_string += "<div class='neutral-cell'>"
                 html_string += f"<div class='circle'>"
                 html_string += f"<img class='item-img' id='neutral-item' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item_key}_lg.png' data_id='{item_id}' alt='{item_key}'>"
-                html_string += "<div class='tooltip'></div></div></div>"
+                html_string += "<div class='tooltip' id='item-tooltip'></div></div></div>"
 
             if match['aghanims_shard']:
                 image = f"<img class='item-img' id='aghanims-shard' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png' data_id='609' alt='aghanims_shard'>"
@@ -320,7 +318,7 @@ def generate_table(func_name, query, template):
                 html_string += "<div class='item-cell' id='aghanims-shard-cell'>"
                 html_string += image
                 html_string += overlay
-                html_string += "<div class='tooltip'></div>"
+                html_string += "<div class='tooltip' id='item-tooltip'></div>"
                 html_string += "</div>"
 
             html_string += "</div></a>"
@@ -333,18 +331,16 @@ def generate_table(func_name, query, template):
             html_string += "<div class='ability-img-wrapper'>"
 
             if ability['type'] == 'talent':
-                image = f"<img class='table-img' src='/static/talent_img.png' data_id='{ability_id}'alt='{ability_key}'/>"
+                image = f"<img class='table-img' src='/static/talent_img.png' data_id='{ability_id}'alt='{ability_key}'>"
                 html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
                 html_string += image
-                html_string += "<div class='tooltip' id='talent-tooltip' style='display:none'>"
-                html_string += "<div class='tooltip-line-one'>"
-                html_string += f"<img src='/static/talent_img.png' height='55'><h3>{ability_key}</div></div></div>"
-
+                html_string += "<div class='tooltip' id='talent-tooltip'></div>"
+                html_string += "</div>"
             else:
                 image = f"<img class='table-img' src='{ability_img}' data_id='{ability_id}' data-tooltip='{ability_key}' alt='{ability_key}'>"
                 html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
                 html_string += image
-                html_string += "<div class='tooltip'></div>"
+                html_string += "<div class='tooltip' id='ability-tooltip'></div>"
                 html_string += "</div>"
 
         html_string += "</div>"
@@ -667,15 +663,24 @@ def opendota_call():
 
 
 def manual_hero_update(name):
-    # hero_output.delete_many({'hero': name})
+    hero_output.delete_many({'hero': name})
     # hero_urls.delete_many({'hero': name})
-    hero_output.find_one_and_delete(
-        {'hero': 'dragon_knight', 'id': 5942550592})
-    asyncio.run(main([5942550592], 'dragon_knight'))
+    # hero_output.find_one_and_delete(
+    #     {'hero': 'batrider', 'id': 5947766247})
+    asyncio.run(main(get_urls(name), name))
+
+
+def update_one_entry(hero, id):
+    hero_output.delete_many({'hero': hero, 'id': id})
+    # hero_output.find_one_and_delete(
+    #     {'hero': hero, 'id': id})
+    asyncio.run(main([id], hero))
 
 
 if __name__ == '__main__':
-    # manual_hero_update('dawnbreaker')
+    # manual_hero_update('ember_spirit')
+    # update_one_entry('juggernaut', 5968007100)
     # manual_hero_update('f')
     # opendota_call()
     app.run(debug=False)
+    pass
