@@ -266,7 +266,8 @@ def generate_table(func_name, query, template):
                                'ward_sentry', 'smoke_of_deceit', 'enchanted_mango', 'clarity', 'tpscroll', 'dust']
                 item_key = item['key']
                 item_id = item_methods.get_item_id(item_key)
-                if item['time'] > 600:
+                # print('ty', match['id'], item['time'], item)
+                if type(item['time']) is not int or item['time'] > 600:
                     break
                 if item['key'] not in consumables and item['time'] < 600 and item['time'] > 0:
                     image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
@@ -678,8 +679,8 @@ def update_one_entry(hero, id):
 
 
 if __name__ == '__main__':
-    # manual_hero_update('ember_spirit')
-    # update_one_entry('juggernaut', 5968007100)
+    # manual_hero_update('grimstroke')
+    # update_one_entry('batrider', 5965228394)
     # manual_hero_update('f')
     # opendota_call()
     app.run(debug=False)
