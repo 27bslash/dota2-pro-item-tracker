@@ -46,7 +46,7 @@ window.addEventListener("mouseover", (event) => {
         } else if (tooltip.id === "shard-tooltip") {
           for (let ability in result) {
             if (i.ability.includes(result[ability]["name"])) {
-              const hasShard = result[ability]["ability_has_shard"];
+              const hasShard = result[ability]["ability_has_shard"] || result[ability]['ability_is_granted_by_shard']
               if (hasShard) {
                 tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
               }
