@@ -1,0 +1,1231 @@
+{
+    "5126": {
+        "id": 5126,
+        "name": "crystal_maiden_crystal_nova",
+        "name_loc": "Crystal Nova",
+        "desc_loc": "A burst of damaging frost slows enemy movement and attack rate in the targeted area.",
+        "lore_loc": "The air temperature around Rylai drops rapidly, chilling all around her to the core.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "48",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            700
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            11,
+            10,
+            9,
+            8
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            130,
+            145,
+            160,
+            175
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    425
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "movespeed_slow",
+                "values_float": [],
+                "values_int": [
+                    -20,
+                    -30,
+                    -40,
+                    -50
+                ],
+                "is_percentage": true,
+                "heading_loc": "MOVEMENT SLOW:"
+            },
+            {
+                "name": "attackspeed_slow",
+                "values_float": [],
+                "values_int": [
+                    -20,
+                    -30,
+                    -40,
+                    -50
+                ],
+                "is_percentage": false,
+                "heading_loc": "ATTACK SLOW:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    4.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "vision_duration",
+                "values_float": [
+                    6
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "nova_damage",
+                "values_float": [],
+                "values_int": [
+                    130,
+                    170,
+                    210,
+                    260
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    700
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5127": {
+        "id": 5127,
+        "name": "crystal_maiden_frostbite",
+        "name_loc": "Frostbite",
+        "desc_loc": "Encases an enemy unit in ice, prohibiting movement and attack, while dealing damage over time. Lasts %creep_duration% seconds on creeps level 6 or lower.",
+        "lore_loc": "Rylai channels winds from the Blueheart Glacier, imprisoning attackers in thick blocks of ice.",
+        "notes_loc": [
+            "Frostbite is considered a root."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            550
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            9,
+            8,
+            7,
+            6
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            140,
+            145,
+            150,
+            155
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage_per_second",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE PER SECOND:"
+            },
+            {
+                "name": "creep_damage_per_second",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    1.5,
+                    2,
+                    2.5,
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "HERO DURATION:"
+            },
+            {
+                "name": "creep_duration",
+                "values_float": [
+                    10
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "CREEP DURATION:"
+            },
+            {
+                "name": "tick_interval",
+                "values_float": [
+                    0.25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    550
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5128": {
+        "id": 5128,
+        "name": "crystal_maiden_brilliance_aura",
+        "name_loc": "Arcane Aura",
+        "desc_loc": "Gives additional mana regeneration to all friendly units on the map. This bonus is increased for Crystal Maiden.",
+        "lore_loc": "Cold temperatures promote the essence of magic, causing Rylai's presence to allow spell usage in abundance.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2",
+        "target_team": 1,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 1,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.20000000298023
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "mana_regen",
+                "values_float": [
+                    0.5,
+                    1,
+                    1.5,
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "MANA REGEN:"
+            },
+            {
+                "name": "self_factor",
+                "values_float": [
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SELF BONUS FACTOR:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5129": {
+        "id": 5129,
+        "name": "crystal_maiden_freezing_field",
+        "name_loc": "Freezing Field",
+        "desc_loc": "CHANNELED - Surrounds Crystal Maiden with random icy explosions that slow enemies and deal massive damage. Grants bonus armor while channeling. Lasts %abilitychanneltime% seconds.",
+        "lore_loc": "Once the place of her exile, Icewrack has become an anchor for Rylai's frigid onslaught.",
+        "notes_loc": [
+            "The slow is applied on all enemies in the radius, even if they aren't hit by an explosion (lasts %slow_duration% second).",
+            "Explosions occur every %explosion_interval% seconds."
+        ],
+        "shard_loc": "Allows you to move, cast and attack during Freezing Field. Can still be interrupted by enemies. You move 75% slower during this.",
+        "scepter_loc": "Applies Frostbite to any unit that has been standing in the Freezing Field for over a set amount of time.",
+        "type": 1,
+        "behavior": "33554564",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 3,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0
+        ],
+        "channel_times": [
+            10
+        ],
+        "cooldowns": [
+            110,
+            100,
+            90
+        ],
+        "durations": [
+            10
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            200,
+            400,
+            600
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    810
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "explosion_radius",
+                "values_float": [],
+                "values_int": [
+                    300
+                ],
+                "is_percentage": false,
+                "heading_loc": "EXPLOSION RADIUS:"
+            },
+            {
+                "name": "bonus_armor",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS ARMOR:"
+            },
+            {
+                "name": "explosion_interval",
+                "values_float": [
+                    0.10000000149012
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "movespeed_slow",
+                "values_float": [],
+                "values_int": [
+                    -30
+                ],
+                "is_percentage": true,
+                "heading_loc": "MOVEMENT SLOW:"
+            },
+            {
+                "name": "attack_slow",
+                "values_float": [],
+                "values_int": [
+                    -60
+                ],
+                "is_percentage": false,
+                "heading_loc": "ATTACK SLOW:"
+            },
+            {
+                "name": "slow_duration",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "explosion_min_dist",
+                "values_float": [],
+                "values_int": [
+                    195
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "explosion_max_dist",
+                "values_float": [],
+                "values_int": [
+                    785
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    105,
+                    170,
+                    250
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "scepter_delay",
+                "values_float": [
+                    1.75
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER FROSTBITE DELAY:"
+            },
+            {
+                "name": "AbilityChannelTime",
+                "values_float": [
+                    10
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    10
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5959": {
+        "id": 5959,
+        "name": "special_bonus_hp_200",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "772": {
+        "id": 772,
+        "name": "special_bonus_unique_crystal_maiden_6",
+        "name_loc": "+{s:value} Crystal Nova AoE",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    125
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7042": {
+        "id": 7042,
+        "name": "special_bonus_unique_crystal_maiden_4",
+        "name_loc": "+{s:value}% Magic Resistance Arcane Aura",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7654": {
+        "id": 7654,
+        "name": "special_bonus_unique_crystal_maiden_5",
+        "name_loc": "-{s:value}s Crystal Nova Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6622": {
+        "id": 6622,
+        "name": "special_bonus_attack_speed_200",
+        "name_loc": "+{s:value} Attack Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6520": {
+        "id": 6520,
+        "name": "special_bonus_unique_crystal_maiden_3",
+        "name_loc": "+{s:value} Freezing Field Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    50
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6072": {
+        "id": 6072,
+        "name": "special_bonus_unique_crystal_maiden_1",
+        "name_loc": "+{s:value}s Frostbite Duration",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    1.25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6234": {
+        "id": 6234,
+        "name": "special_bonus_unique_crystal_maiden_2",
+        "name_loc": "+{s:value} Crystal Nova Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    240
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    }
+}

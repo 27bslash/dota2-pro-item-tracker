@@ -1,0 +1,1140 @@
+{
+    "5412": {
+        "id": 5412,
+        "name": "lone_druid_spirit_bear",
+        "name_loc": "Summon Spirit Bear",
+        "desc_loc": "Summons a powerful Spirit Bear companion that can equip items.  If the bear moves 1100 distance away from the Lone Druid, it cannot attack.  Lone Druid suffers %backlash_damage%%% of his max health as backlash damage if the Spirit Bear dies. Spirit Bear does not benefit from attributes.\nSpirit Bear has the Return, Demolish and Entangling Roots abilities.",
+        "lore_loc": "Sylla's lifelong companion is symbiotic with his spirit and heart, coming to aid him in any time of need.",
+        "notes_loc": [
+            "Most spells interact with the Spirit Bear in the same way as they do with heroes."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "Allows Spirit Bear to attack at any range from Lone Druid, and to survive if Lone Druid dies.",
+        "type": 0,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            120
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            75,
+            75,
+            75,
+            75
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bear_hp",
+                "values_float": [],
+                "values_int": [
+                    1100,
+                    1400,
+                    1700,
+                    2000
+                ],
+                "is_percentage": false,
+                "heading_loc": "BEAR HP:"
+            },
+            {
+                "name": "bear_regen_tooltip",
+                "values_float": [],
+                "values_int": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": "BEAR HP REGEN:"
+            },
+            {
+                "name": "bear_bat",
+                "values_float": [
+                    1.75,
+                    1.6499999761581,
+                    1.5499999523163,
+                    1.4500000476837
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BEAR BASE ATTACK TIME:"
+            },
+            {
+                "name": "bear_armor",
+                "values_float": [],
+                "values_int": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": "BEAR ARMOR:"
+            },
+            {
+                "name": "backlash_damage",
+                "values_float": [
+                    20
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "cooldown_scepter",
+                "values_float": [
+                    120
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "movespeed_tooltip",
+                "values_float": [],
+                "values_int": [
+                    340,
+                    360,
+                    380,
+                    400
+                ],
+                "is_percentage": false,
+                "heading_loc": "BEAR MOVESPEED:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7309": {
+        "id": 7309,
+        "name": "lone_druid_spirit_link",
+        "name_loc": "Spirit Link",
+        "desc_loc": "Links Lone Druid and the Spirit Bear, increasing the attack speed of both and causing damage dealt by the Spirit Bear to heal Lone Druid.",
+        "lore_loc": "Sylla is emboldened by the presence of his companion, his vitality replenished with each swipe of the Spirit Bear's claws.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bonus_attack_speed",
+                "values_float": [],
+                "values_int": [
+                    15,
+                    30,
+                    45,
+                    60
+                ],
+                "is_percentage": false,
+                "heading_loc": "ATTACK SPEED:"
+            },
+            {
+                "name": "lifesteal_percent",
+                "values_float": [],
+                "values_int": [
+                    20,
+                    35,
+                    50,
+                    65
+                ],
+                "is_percentage": true,
+                "heading_loc": "SHARED LIFESTEAL:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5414": {
+        "id": 5414,
+        "name": "lone_druid_savage_roar",
+        "name_loc": "Savage Roar",
+        "desc_loc": "Lone Druid and the Spirit Bear roar fiercely causing nearby enemies to flee towards their base in terror. Their movement speed is increased by %bonus_speed%%%.",
+        "lore_loc": "Sylla studies and masters the arts of the lost Bear Clan, enhancing his attunement with the wild.",
+        "notes_loc": [
+            "An entangled hero will not be able to move.",
+            "Cooldown is shared with Spirit Bear."
+        ],
+        "shard_loc": "Savage Roar now empowers allies in 700 AoE with +20% Movement Speed and +60 Attack Speed for 5 seconds. Applies a basic dispel. Replicates between Lone Druid and Spirit Bear regardless of castability on the other.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.10000000149012
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            38,
+            32,
+            26,
+            20
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    375
+                ],
+                "is_percentage": false,
+                "heading_loc": "RANGE:"
+            },
+            {
+                "name": "bonus_speed",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": true,
+                "heading_loc": "ENEMY MOVEMENT SPEED BONUS:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    1.3999999761581,
+                    1.7999999523163,
+                    2.2000000476837,
+                    2.5999999046326
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "only_affects_player_units",
+                "values_float": [],
+                "values_int": [
+                    1
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.10000000149012
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5415": {
+        "id": 5415,
+        "name": "lone_druid_true_form",
+        "name_loc": "True Form",
+        "desc_loc": "Lone Druid learns to morph himself into a raging bear, losing his ranged advantage, but gaining increased resistance, Entangling Roots and Demolish.",
+        "lore_loc": "The mighty bear is the king of the forest, possessing the throne through raw power.",
+        "notes_loc": [
+            "Cooldowns of items that are different for ranged and melee units will be based on which form Lone Druid was in when the item was used."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 3,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            100
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            200
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bonus_armor",
+                "values_float": [],
+                "values_int": [
+                    8,
+                    10,
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS ARMOR:"
+            },
+            {
+                "name": "bonus_hp",
+                "values_float": [],
+                "values_int": [
+                    500,
+                    1000,
+                    1500
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS HP:"
+            },
+            {
+                "name": "base_attack_time",
+                "values_float": [
+                    1.7000000476837
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BASE ATTACK TIME:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    40
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "transformation_time",
+                "values_float": [
+                    1.9329999685287
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "TRANSFORM TIME:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5959": {
+        "id": 5959,
+        "name": "special_bonus_hp_200",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "423": {
+        "id": 423,
+        "name": "special_bonus_unique_lone_druid_11",
+        "name_loc": "+{s:value} Spirit Bear Movement Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    25
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6268": {
+        "id": 6268,
+        "name": "special_bonus_unique_lone_druid_4",
+        "name_loc": "-{s:value} Savage Roar Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    10
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6262": {
+        "id": 6262,
+        "name": "special_bonus_unique_lone_druid_2",
+        "name_loc": "+{s:value} Spirit Bear Armor",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6806": {
+        "id": 6806,
+        "name": "special_bonus_unique_lone_druid_8",
+        "name_loc": "-{s:value}s True Form Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    50
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7036": {
+        "id": 7036,
+        "name": "special_bonus_unique_lone_druid_9",
+        "name_loc": "0 Entangle Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7382": {
+        "id": 7382,
+        "name": "special_bonus_unique_lone_druid_10",
+        "name_loc": "{s:value} Spirit Bear Attack Time",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    -0.10000000149012
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6680": {
+        "id": 6680,
+        "name": "special_bonus_unique_lone_druid_7",
+        "name_loc": "+{s:value} True Form and Spirit Bear Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    }
+}

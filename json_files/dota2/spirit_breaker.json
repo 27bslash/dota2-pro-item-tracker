@@ -1,0 +1,1168 @@
+{
+    "5353": {
+        "id": 5353,
+        "name": "spirit_breaker_charge_of_darkness",
+        "name_loc": "Charge of Darkness",
+        "desc_loc": "Spirit Breaker fixes his sight on an enemy unit and starts charging through all objects.  All enemy units passed through and the targeted unit will be hit by a Greater Bash.  If the targeted unit dies, Spirit Breaker will change his target to the nearest enemy unit to that location.",
+        "lore_loc": "Barathrum erupts from the darkness with unwieldy force.",
+        "notes_loc": [
+            "Spirit Breaker passes through trees, cliffs, and units.",
+            "The charge indicator is visible only to allies.",
+            "Spirit Breaker gains shared vision of the target."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "Increases Charge of Darkness movement speed and reduces cooldown.",
+        "type": 0,
+        "behavior": "17301512",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            17,
+            15,
+            13,
+            11
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            70,
+            80,
+            90,
+            100
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "movement_speed",
+                "values_float": [],
+                "values_int": [
+                    300,
+                    325,
+                    350,
+                    375
+                ],
+                "is_percentage": false,
+                "heading_loc": "CHARGE BONUS SPEED:"
+            },
+            {
+                "name": "stun_duration",
+                "values_float": [
+                    1.2000000476837,
+                    1.6000000238419,
+                    2,
+                    2.4000000953674
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "bash_radius",
+                "values_float": [],
+                "values_int": [
+                    300
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_radius",
+                "values_float": [],
+                "values_int": [
+                    400
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_duration",
+                "values_float": [
+                    0.93999999761581
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "scepter_cooldown",
+                "values_float": [
+                    7
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER COOLDOWN:"
+            },
+            {
+                "name": "scepter_speed",
+                "values_float": [],
+                "values_int": [
+                    175
+                ],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER SPEED BONUS:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7301": {
+        "id": 7301,
+        "name": "spirit_breaker_bulldoze",
+        "name_loc": "Bulldoze",
+        "desc_loc": "Spirit Breaker gains movement speed and status resistance to ram through enemies. Can be used while charging.",
+        "lore_loc": "Barathrum warps the fabric of reality around him, lessening its influence on his physical form.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2052",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            22,
+            20,
+            18,
+            16
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            30,
+            40,
+            50,
+            60
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "movement_speed",
+                "values_float": [],
+                "values_int": [
+                    10,
+                    16,
+                    22,
+                    28
+                ],
+                "is_percentage": true,
+                "heading_loc": "MOVEMENT SPEED:"
+            },
+            {
+                "name": "status_resistance",
+                "values_float": [],
+                "values_int": [
+                    34,
+                    46,
+                    58,
+                    70
+                ],
+                "is_percentage": true,
+                "heading_loc": "STATUS RESISTANCE:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    8
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5355": {
+        "id": 5355,
+        "name": "spirit_breaker_greater_bash",
+        "name_loc": "Greater Bash",
+        "desc_loc": "Gives a chance to stun and knockback an enemy unit on an attack. Deals a percentage of movement speed as damage.",
+        "lore_loc": "The signature strike of Barathrum's ghostly ball and chain.",
+        "notes_loc": [
+            "Does not stack with Skull Basher."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 3,
+        "dispellable": 1,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            1.5,
+            1.5,
+            1.5,
+            1.5
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "chance_pct",
+                "values_float": [],
+                "values_int": [
+                    17
+                ],
+                "is_percentage": true,
+                "heading_loc": "CHANCE TO BASH:"
+            },
+            {
+                "name": "damage",
+                "values_float": [
+                    14,
+                    20,
+                    26,
+                    32
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "MOVEMENT SPEED AS DAMAGE:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    0.89999997615814,
+                    1.2000000476837,
+                    1.5,
+                    1.7999999523163
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "knockback_duration",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "KNOCKBACK DURATION:"
+            },
+            {
+                "name": "knockback_distance",
+                "values_float": [],
+                "values_int": [
+                    143,
+                    152,
+                    158,
+                    162
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "knockback_height",
+                "values_float": [],
+                "values_int": [
+                    50
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bonus_movespeed_pct",
+                "values_float": [],
+                "values_int": [
+                    17
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "movespeed_duration",
+                "values_float": [
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5356": {
+        "id": 5356,
+        "name": "spirit_breaker_nether_strike",
+        "name_loc": "Nether Strike",
+        "desc_loc": "Spirit Breaker slips into the nether realm, reappearing next to his hapless victim. Upon reappearing, a Greater Bash of the current level occurs and deals bonus damage. Knocks back for double the normal distance.",
+        "lore_loc": "Barathrum temporarily returns to the realm from where he came, bringing with him the retribution of both worlds.",
+        "notes_loc": [
+            "Spirit Breaker appears behind the target to deliver the bash."
+        ],
+        "shard_loc": "Causes Nether Strike to deal 200 extra damage, and apply a 4-second break. Grants you Spell Immunity for 2 seconds.",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "134742024",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 16,
+        "damage": 2,
+        "immunity": 3,
+        "dispellable": 1,
+        "max_level": 3,
+        "cast_ranges": [
+            700
+        ],
+        "cast_points": [
+            1
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            90,
+            70,
+            50
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            125,
+            150,
+            175
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    100,
+                    175,
+                    250
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS DAMAGE:"
+            },
+            {
+                "name": "fade_time",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    700
+                ],
+                "is_percentage": false,
+                "heading_loc": "CAST RANGE:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7022": {
+        "id": 7022,
+        "name": "special_bonus_night_vision_500",
+        "name_loc": "+{s:value} Night Vision",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5931": {
+        "id": 5931,
+        "name": "special_bonus_armor_4",
+        "name_loc": "+{s:value} Armor",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    4
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5912": {
+        "id": 5912,
+        "name": "special_bonus_hp_regen_10",
+        "name_loc": "+{s:value} Health Regen",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    10
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5940": {
+        "id": 5940,
+        "name": "special_bonus_attack_damage_40",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6543": {
+        "id": 6543,
+        "name": "special_bonus_unique_spirit_breaker_3",
+        "name_loc": "+{s:value}% Greater Bash Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6296": {
+        "id": 6296,
+        "name": "special_bonus_unique_spirit_breaker_2",
+        "name_loc": "-{s:value}s Bulldoze Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    5.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6149": {
+        "id": 6149,
+        "name": "special_bonus_unique_spirit_breaker_1",
+        "name_loc": "+{s:value}% Greater Bash Chance",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6905": {
+        "id": 6905,
+        "name": "special_bonus_hp_800",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    }
+}

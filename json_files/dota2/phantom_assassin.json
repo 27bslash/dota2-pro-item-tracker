@@ -1,0 +1,1273 @@
+{
+    "5190": {
+        "id": 5190,
+        "name": "phantom_assassin_stifling_dagger",
+        "name_loc": "Stifling Dagger",
+        "desc_loc": "Throws a dagger slowing the enemy unit's movement speed, dealing %base_damage%+%attack_factor_tooltip%%% of Phantom Assassin's attack damage as physical damage and applying attack effects from items and abilities.",
+        "lore_loc": "The first skill learned by the Sisters of the Veil often signals an incoming hit.",
+        "notes_loc": [
+            "If an attack effect is chance-based, the chance of its application will be the same as its chance to occur.",
+            "Spell-immune enemies are not affected by Stifling Dagger's slow."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 3,
+        "flags": 16,
+        "damage": 1,
+        "immunity": 3,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            550,
+            750,
+            950,
+            1150
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            6
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            30
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "move_slow",
+                "values_float": [],
+                "values_int": [
+                    -50
+                ],
+                "is_percentage": true,
+                "heading_loc": "MOVE SLOW:"
+            },
+            {
+                "name": "dagger_speed",
+                "values_float": [],
+                "values_int": [
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    1.75,
+                    2.5,
+                    3.25,
+                    4
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SLOW DURATION:"
+            },
+            {
+                "name": "base_damage",
+                "values_float": [],
+                "values_int": [
+                    65
+                ],
+                "is_percentage": false,
+                "heading_loc": "BASE DAMAGE:"
+            },
+            {
+                "name": "attack_factor",
+                "values_float": [],
+                "values_int": [
+                    -75,
+                    -60,
+                    -45,
+                    -30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "attack_factor_tooltip",
+                "values_float": [],
+                "values_int": [
+                    25,
+                    40,
+                    55,
+                    70
+                ],
+                "is_percentage": true,
+                "heading_loc": "ATTACK DAMAGE:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    550,
+                    750,
+                    950,
+                    1150
+                ],
+                "is_percentage": false,
+                "heading_loc": "CAST RANGE:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5191": {
+        "id": 5191,
+        "name": "phantom_assassin_phantom_strike",
+        "name_loc": "Phantom Strike",
+        "desc_loc": "Teleports to a unit, friendly or enemy, and grants bonus attack speed while attacking if it's an enemy unit.",
+        "lore_loc": "Mortred's silken veil is the last thing her unfortunate target sees.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "524296",
+        "target_team": 4,
+        "target_type": 128,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 3,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            1000,
+            1000,
+            1000,
+            1000
+        ],
+        "cast_points": [
+            0.25
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            11,
+            9,
+            7,
+            5
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            35,
+            40,
+            45,
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bonus_attack_speed",
+                "values_float": [],
+                "values_int": [
+                    75,
+                    100,
+                    125,
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS ATTACK SPEED:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1000,
+                    1000,
+                    1000,
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": "CAST RANGE:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5192": {
+        "id": 5192,
+        "name": "phantom_assassin_blur",
+        "name_loc": "Blur",
+        "desc_loc": "Phantom Assassin focuses inward, increasing her ability to evade enemy attacks. Can be activated to blur her body, causing her to be impossible to see until near enemy heroes.\n\nStacks diminishingly with other sources of Evasion.",
+        "lore_loc": "Meditation allows a Veiled Sister to carefully anticipate her opponents in combat.",
+        "notes_loc": [],
+        "shard_loc": "Increases your movement speed by 40% while in Blur's active.",
+        "scepter_loc": "Causes Blur to have instant cast time and applies a dispel. Anytime Phantom Assassin gets a hero kill, her abilities are refreshed. Reduces Blur cooldown and increases Fade Time to 0.75.",
+        "type": 0,
+        "behavior": "4",
+        "target_team": 1,
+        "target_type": 1,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            600
+        ],
+        "cast_points": [
+            0.40000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            60,
+            55,
+            50,
+            45
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bonus_evasion",
+                "values_float": [],
+                "values_int": [
+                    15,
+                    25,
+                    35,
+                    45
+                ],
+                "is_percentage": true,
+                "heading_loc": "EVASION:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": "VANISH RADIUS:"
+            },
+            {
+                "name": "fade_duration",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "VANISH BUFFER:"
+            },
+            {
+                "name": "scepter_cooldown",
+                "values_float": [],
+                "values_int": [
+                    10
+                ],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER COOLDOWN:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "662": {
+        "id": 662,
+        "name": "phantom_assassin_fan_of_knives",
+        "name_loc": "Fan of Knives",
+        "desc_loc": "Phantom Assassin releases sharp blades around her in a 550 AoE, dealing 16% of a victim's max health on impact and applying break for 3 seconds.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934597",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 4,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 1,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.15000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            20
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "pct_health_damage_initial",
+                "values_float": [
+                    16
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "pct_health_damage",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "degen",
+                "values_float": [],
+                "values_int": [
+                    -50
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    550
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "projectile_speed",
+                "values_float": [],
+                "values_int": [
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.15000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5193": {
+        "id": 5193,
+        "name": "phantom_assassin_coup_de_grace",
+        "name_loc": "Coup de Grace",
+        "desc_loc": "Phantom Assassin refines her combat abilities, gaining a chance of delivering a devastating critical strike to enemy units. Stifling Dagger shares the same critical strike chance.",
+        "lore_loc": "A divine strike, Mortred honors her opponent by choosing them for death.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 3,
+        "dispellable": 0,
+        "max_level": 3,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "crit_chance",
+                "values_float": [],
+                "values_int": [
+                    15
+                ],
+                "is_percentage": true,
+                "heading_loc": "CRITICAL CHANCE:"
+            },
+            {
+                "name": "crit_bonus",
+                "values_float": [],
+                "values_int": [
+                    200,
+                    325,
+                    450
+                ],
+                "is_percentage": true,
+                "heading_loc": "CRITICAL DAMAGE:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6034": {
+        "id": 6034,
+        "name": "special_bonus_hp_175",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    175
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "559": {
+        "id": 559,
+        "name": "special_bonus_unique_phantom_assassin_7",
+        "name_loc": "-{s:value}s Stifling Dagger Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "433": {
+        "id": 433,
+        "name": "special_bonus_lifesteal_12",
+        "name_loc": "{s:value}% Lifesteal",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "490": {
+        "id": 490,
+        "name": "special_bonus_unique_phantom_assassin_6",
+        "name_loc": "+{s:value} Phantom Strike Cast Range",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    250
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7383": {
+        "id": 7383,
+        "name": "special_bonus_corruption_3",
+        "name_loc": "-{s:value} Armor Corruption",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    3
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6848": {
+        "id": 6848,
+        "name": "special_bonus_unique_phantom_assassin_3",
+        "name_loc": "+{s:value}% Blur Evasion",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    35
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6847": {
+        "id": 6847,
+        "name": "special_bonus_unique_phantom_assassin_2",
+        "name_loc": "+{s:value}% Coup de Grace chance",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    7
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6192": {
+        "id": 6192,
+        "name": "special_bonus_unique_phantom_assassin",
+        "name_loc": "Triple Strike Stifling Dagger",
+        "desc_loc": "Launches a two extra Stifling Daggers towards random visible enemies within the cast range.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    3
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    }
+}

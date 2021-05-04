@@ -1,0 +1,1356 @@
+{
+    "6583": {
+        "id": 6583,
+        "name": "mars_spear",
+        "name_loc": "Spear of Mars",
+        "desc_loc": "Mars throws his legendary Spear with deadly precision, damaging each enemy unit it strikes. The first enemy hero it hits is skewered on the spear, pushing it back. If a skewered hero hits a tree, building, or cliff, they will be impaled to it and stunned.",
+        "lore_loc": "The legendary Spear of Mars still glows with the heat of the forge god's fires.",
+        "notes_loc": [
+            "Spear of Mars can hit invisible units and reveals them if they are stunned.",
+            "Spear of Mars will only pin a units to cliffs onto elevated areas, otherwise it will push them off onto lower ground."
+        ],
+        "shard_loc": "Spear of Mars impales up to two units and leaves a fire trail behind for 10 seconds. Deals 35 damage per second and slows by 20%%. Debuff lingers for 2 seconds.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "1040",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 1,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.25
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            14
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            110,
+            120,
+            130,
+            140
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    100,
+                    175,
+                    250,
+                    325
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "spear_speed",
+                "values_float": [
+                    1400
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "spear_width",
+                "values_float": [],
+                "values_int": [
+                    125
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "spear_vision",
+                "values_float": [],
+                "values_int": [
+                    300
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "spear_range",
+                "values_float": [],
+                "values_int": [
+                    900,
+                    1000,
+                    1100,
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": "CAST RANGE:"
+            },
+            {
+                "name": "activity_duration",
+                "values_float": [
+                    1.7000000476837
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "stun_duration",
+                "values_float": [
+                    1.6000000238419,
+                    2,
+                    2.4000000953674,
+                    2.7999999523163
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "knockback_duration",
+                "values_float": [
+                    0.25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "knockback_distance",
+                "values_float": [
+                    75
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "scepter_cooldown",
+                "values_float": [
+                    7
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6495": {
+        "id": 6495,
+        "name": "mars_gods_rebuke",
+        "name_loc": "God's Rebuke",
+        "desc_loc": "Mars smashes enemies in front of him with his shield, knocking them back and damaging them with a critical hit based on his attack. Bonus damage is added when hitting heroes. Has True Strike.",
+        "lore_loc": "There isn't a warrior alive who can stand unmoved by the sting of Mars' rebuke.",
+        "notes_loc": [
+            "Attack modifiers have a chance to proc on God's Rebuke attacks."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "67108880",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 1,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            500
+        ],
+        "cast_points": [
+            0.20000000298023
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            16,
+            14,
+            12,
+            10
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            80
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "crit_mult",
+                "values_float": [],
+                "values_int": [
+                    150,
+                    190,
+                    230,
+                    270
+                ],
+                "is_percentage": true,
+                "heading_loc": "CRITICAL DAMAGE:"
+            },
+            {
+                "name": "angle",
+                "values_float": [],
+                "values_int": [
+                    140
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": "DISTANCE:"
+            },
+            {
+                "name": "knockback_duration",
+                "values_float": [
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "knockback_distance",
+                "values_float": [
+                    150
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "knockback_slow",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": true,
+                "heading_loc": "KNOCKBACK SLOW:"
+            },
+            {
+                "name": "knockback_slow_duration",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "KNOCKBACK SLOW DURATION:"
+            },
+            {
+                "name": "activity_duration",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bonus_damage_vs_heroes",
+                "values_float": [],
+                "values_int": [
+                    20,
+                    25,
+                    30,
+                    35
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS DAMAGE VS HEROES:"
+            },
+            {
+                "name": "scepter_cooldown",
+                "values_float": [
+                    3.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER COOLDOWN:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6582": {
+        "id": 6582,
+        "name": "mars_bulwark",
+        "name_loc": "Bulwark",
+        "desc_loc": "Mars wields his massive shield to block a portion of each physical attack when hit from the front or sides.<br><br> Can be toggled, removing Mars's ability to attack, and locking the direction he is facing. When active, reduces movement speed and re-directs %redirect_chance%%% of the attack projectiles aimed at Mars's allies towards Mars instead.",
+        "lore_loc": "Only the very foolish dare to fight fair with the god of war.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "Creates invulnerable soldiers around Mars' front while Bulwark is toggled on. Soldiers move alongside Mars, dealing his full damage +75 and applying procs. Attacks slow enemies by 30% for 1 second. An enemy can only be attacked by one soldier at a time.",
+        "type": 0,
+        "behavior": "516",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "physical_damage_reduction",
+                "values_float": [],
+                "values_int": [
+                    40,
+                    50,
+                    60,
+                    70
+                ],
+                "is_percentage": true,
+                "heading_loc": "FRONT REDUCTION:"
+            },
+            {
+                "name": "forward_angle",
+                "values_float": [],
+                "values_int": [
+                    140
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "physical_damage_reduction_side",
+                "values_float": [],
+                "values_int": [
+                    20,
+                    25,
+                    30,
+                    35
+                ],
+                "is_percentage": true,
+                "heading_loc": "SIDE REDUCTION:"
+            },
+            {
+                "name": "side_angle",
+                "values_float": [],
+                "values_int": [
+                    240
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "redirect_chance",
+                "values_float": [],
+                "values_int": [
+                    70
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "redirect_range",
+                "values_float": [],
+                "values_int": [
+                    800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "redirect_speed_penatly",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": true,
+                "heading_loc": "SPEED PENALTY WHEN ACTIVE:"
+            },
+            {
+                "name": "soldier_count",
+                "values_float": [],
+                "values_int": [
+                    5
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "soldier_offset",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6598": {
+        "id": 6598,
+        "name": "mars_arena_of_blood",
+        "name_loc": "Arena Of Blood",
+        "desc_loc": "After a short formation time, Mars summons an arena lined with the undead warriors of the Ash Legion, who block enemy attacks and movement. Enemy heroes near the inside edge of the arena will be attacked by spears, dealing damage and knocking them back.",
+        "lore_loc": "The long-dead members of the Ash Legion, assembled from the finest warriors to ever test the might of Mars, still revel in the thrill of combat, gladly beholden to the hand that fell them for as long as he so commands.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "48",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 3,
+        "cast_ranges": [
+            400
+        ],
+        "cast_points": [
+            0.20000000298023
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            90,
+            75,
+            60
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            150,
+            175,
+            200
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "duration",
+                "values_float": [
+                    5,
+                    6,
+                    7
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    550
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "width",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "spear_damage",
+                "values_float": [],
+                "values_int": [
+                    100,
+                    160,
+                    220
+                ],
+                "is_percentage": false,
+                "heading_loc": "SPEAR DAMAGE:"
+            },
+            {
+                "name": "formation_time",
+                "values_float": [
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "FORMATION TIME:"
+            },
+            {
+                "name": "spear_distance_from_wall",
+                "values_float": [],
+                "values_int": [
+                    160
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "spear_attack_interval",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "warrior_count",
+                "values_float": [],
+                "values_int": [
+                    14
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "first_warrior_angle",
+                "values_float": [
+                    0
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "warrior_fade_min_dist",
+                "values_float": [
+                    350
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "warrior_fade_max_dist",
+                "values_float": [
+                    450
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    400
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5938": {
+        "id": 5938,
+        "name": "special_bonus_attack_damage_15",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    15
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5918": {
+        "id": 5918,
+        "name": "special_bonus_movement_speed_20",
+        "name_loc": "+{s:value} Movement Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "545": {
+        "id": 545,
+        "name": "special_bonus_unique_mars_rebuke_cooldown",
+        "name_loc": "-{s:value}s God's Rebuke Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    4
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5934": {
+        "id": 5934,
+        "name": "special_bonus_armor_8",
+        "name_loc": "+{s:value} Armor",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6759": {
+        "id": 6759,
+        "name": "special_bonus_unique_mars_spear_bonus_damage",
+        "name_loc": "+{s:value} Spear Of Mars Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    160
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6584": {
+        "id": 6584,
+        "name": "special_bonus_unique_mars_spear_stun_duration",
+        "name_loc": "+{s:value}s Spear of Mars Stun",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    0.80000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6756": {
+        "id": 6756,
+        "name": "special_bonus_unique_mars_gods_rebuke_extra_crit",
+        "name_loc": "God's Rebuke +{s:value}% Crit",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    65
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6766": {
+        "id": 6766,
+        "name": "special_bonus_unique_mars_arena_of_blood_hp_regen",
+        "name_loc": "Arena Of Blood Grants Team +{s:value} HP Regen",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    180
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    }
+}

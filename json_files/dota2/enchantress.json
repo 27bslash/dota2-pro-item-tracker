@@ -1,0 +1,1242 @@
+{
+    "5270": {
+        "id": 5270,
+        "name": "enchantress_impetus",
+        "name_loc": "Impetus",
+        "desc_loc": "Places an enchantment on each attack while activated, causing it to deal additional damage based on how far away the target is.  The farther the target, the greater the damage dealt.",
+        "lore_loc": "While Aiushtha favors peaceful means, she is capable of a magical onslaught from a distance, her spears gaining energy from the natural life around her.",
+        "notes_loc": [
+            "The damage is capped at %distance_cap% distance.",
+            "Distance to target is measured when the projectile hits."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "135176",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 4,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            575
+        ],
+        "cast_points": [
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            6,
+            4,
+            2,
+            0
+        ],
+        "durations": [
+            1.5,
+            1.5,
+            1.5
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            65
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "distance_damage_pct",
+                "values_float": [
+                    8,
+                    12,
+                    16,
+                    20
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "DISTANCE DAMAGE:"
+            },
+            {
+                "name": "distance_cap",
+                "values_float": [],
+                "values_int": [
+                    1750
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    575
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    1.5,
+                    1.5,
+                    1.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5268": {
+        "id": 5268,
+        "name": "enchantress_enchant",
+        "name_loc": "Enchant",
+        "desc_loc": "Enchantress charms an enemy. If the enemy is a hero, they are slowed. If the enemy is a creep, she brings it under her control, increasing it's attack damage and max health.\n\nDISPEL TYPE: Basic Dispel",
+        "lore_loc": "A true steward of the forest, Aiushtha befriends all within it - from lowly trolls to powerful centaurs.",
+        "notes_loc": [
+            "Illusions can be converted."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            700
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            28,
+            24,
+            20,
+            16
+        ],
+        "durations": [
+            3.75,
+            4.5,
+            5.25,
+            6
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            40,
+            50,
+            60,
+            70
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "dominate_duration",
+                "values_float": [
+                    30,
+                    60,
+                    90,
+                    120
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "CREEP ENCHANT DURATION:"
+            },
+            {
+                "name": "enchant_health",
+                "values_float": [],
+                "values_int": [
+                    200,
+                    300,
+                    400,
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": "CREEP MAX HEALTH BONUS:"
+            },
+            {
+                "name": "enchant_armor",
+                "values_float": [],
+                "values_int": [
+                    2,
+                    4,
+                    6,
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": "CREEP ARMOR BONUS:"
+            },
+            {
+                "name": "enchant_damage",
+                "values_float": [],
+                "values_int": [
+                    10,
+                    30,
+                    50,
+                    70
+                ],
+                "is_percentage": false,
+                "heading_loc": "CREEP ATTACK DAMAGE BONUS:"
+            },
+            {
+                "name": "slow_movement_speed",
+                "values_float": [],
+                "values_int": [
+                    -55
+                ],
+                "is_percentage": true,
+                "heading_loc": "HERO MOVE SLOW:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    700
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    3.75,
+                    4.5,
+                    5.25,
+                    6
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "HERO SLOW DURATION:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5269": {
+        "id": 5269,
+        "name": "enchantress_natures_attendants",
+        "name_loc": "Nature's Attendants",
+        "desc_loc": "A cloud of wisps heals Enchantress and any friendly units nearby. Lasts %abilityduration% seconds.",
+        "lore_loc": "Whimsical spirits of the woods possess a healing power that is quite subtle, but gains strength in numbers.",
+        "notes_loc": [
+            "Units with full HP will not be selected for the heal.",
+            "Can heal units with spell immunity."
+        ],
+        "shard_loc": "Adds 3 permanent Nature's Attendants that follow Enchantress around.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 1,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            35
+        ],
+        "durations": [
+            12
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            170,
+            160,
+            150,
+            140
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "heal_interval",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "heal",
+                "values_float": [
+                    4,
+                    8,
+                    12,
+                    16
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "HEAL PER SECOND:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    275
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "wisp_count",
+                "values_float": [],
+                "values_int": [
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": "WISPS:"
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    12
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "320": {
+        "id": 320,
+        "name": "enchantress_bunny_hop",
+        "name_loc": "Sproink",
+        "desc_loc": "Leaps backward, dodges incoming projectiles, and launches an Impetus attack on the 3 furthest enemy units within Enchantress' attack range + 200.",
+        "lore_loc": "Sproink is as Sproink does.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589936645",
+        "target_team": 0,
+        "target_type": 64,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 1,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            5
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "hop_distance",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": "DISTANCE:"
+            },
+            {
+                "name": "hop_duration",
+                "values_float": [
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "hop_height",
+                "values_float": [],
+                "values_int": [
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": true,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5267": {
+        "id": 5267,
+        "name": "enchantress_untouchable",
+        "name_loc": "Untouchable",
+        "desc_loc": "Enchantress beguiles her enemies, slowing their attacks when she is attacked.",
+        "lore_loc": "After attacking Aiushtha, most opponents are overwhelmed with guilt having attacked such a natural beauty.",
+        "notes_loc": [
+            "All units who directly attack Enchantress will get slowed.",
+            "The slow is applied on the attacking unit when the attack starts, not when damage is applied."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 3,
+        "dispellable": 2,
+        "max_level": 3,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "slow_attack_speed",
+                "values_float": [],
+                "values_int": [
+                    -120,
+                    -160,
+                    -200
+                ],
+                "is_percentage": false,
+                "heading_loc": "ATTACK SLOW:"
+            },
+            {
+                "name": "slow_duration",
+                "values_float": [],
+                "values_int": [
+                    4
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6299": {
+        "id": 6299,
+        "name": "special_bonus_magic_resistance_12",
+        "name_loc": "+{s:value}% Magic Resistance",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5918": {
+        "id": 5918,
+        "name": "special_bonus_movement_speed_20",
+        "name_loc": "+{s:value} Movement Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5940": {
+        "id": 5940,
+        "name": "special_bonus_attack_damage_40",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6086": {
+        "id": 6086,
+        "name": "special_bonus_unique_enchantress_2",
+        "name_loc": "+{s:value} Nature's Attendants Wisps",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6379": {
+        "id": 6379,
+        "name": "special_bonus_unique_enchantress_3",
+        "name_loc": "{s:value} Untouchable Slow",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    -65
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6331": {
+        "id": 6331,
+        "name": "special_bonus_unique_enchantress_1",
+        "name_loc": "Enchant Affects Ancients",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    1
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6515": {
+        "id": 6515,
+        "name": "special_bonus_unique_enchantress_4",
+        "name_loc": "+{s:value}% Impetus Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    6.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6648": {
+        "id": 6648,
+        "name": "special_bonus_unique_enchantress_5",
+        "name_loc": "+{s:value} Nature's Attendants Heal",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    }
+}

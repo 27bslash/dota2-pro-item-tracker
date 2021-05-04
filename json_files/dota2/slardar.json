@@ -1,0 +1,1164 @@
+{
+    "5114": {
+        "id": 5114,
+        "name": "slardar_sprint",
+        "name_loc": "Guardian Sprint",
+        "desc_loc": "Slardar slithers ahead, moving significantly faster and passing through units. Slardar gains movement speed bonus while in the river.",
+        "lore_loc": "As Slardar has made the transition from the Deeps, it has been necessary to use his powerful tail for sprinting instead of swimming.",
+        "notes_loc": [
+            "Activating this skill doesn't interrupt channeling abilities."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "Provides additional HP Regen, Armor and Status Resistance while in a puddle or in the river.",
+        "type": 0,
+        "behavior": "4196356",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            17
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            25
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bonus_speed",
+                "values_float": [],
+                "values_int": [
+                    16,
+                    24,
+                    32,
+                    40
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS MOVE SPEED:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    10
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "river_speed",
+                "values_float": [],
+                "values_int": [
+                    25
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "puddle_regen",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER RIVER HP REGEN:"
+            },
+            {
+                "name": "puddle_armor",
+                "values_float": [],
+                "values_int": [
+                    10
+                ],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER RIVER BONUS ARMOR:"
+            },
+            {
+                "name": "puddle_status_resistance",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": true,
+                "heading_loc": "SCEPTER RIVER STATUS RESISTANCE:"
+            },
+            {
+                "name": "river_speed_tooltip",
+                "values_float": [],
+                "values_int": [
+                    41,
+                    49,
+                    57,
+                    65
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS RIVER MOVE SPEED:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5115": {
+        "id": 5115,
+        "name": "slardar_slithereen_crush",
+        "name_loc": "Slithereen Crush",
+        "desc_loc": "Slams the ground, stunning and damaging nearby enemy land units.  After the stun, the affected units are slowed.",
+        "lore_loc": "A swift crush of might and water breaks even the toughest of defenses.",
+        "notes_loc": [],
+        "shard_loc": "Causes Slithereen Crush to apply Corrosive Haze for 5 seconds to units affected. Increases radius by 75.",
+        "scepter_loc": "Whenever Slardar casts Slithereen Crush, he creates a puddle of water that is considered a river for movement and bonuses.",
+        "type": 0,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 1,
+        "immunity": 4,
+        "dispellable": 1,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.34999999403954,
+            0.34999999403954,
+            0.34999999403954,
+            0.34999999403954
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            8
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            80,
+            140,
+            200,
+            260
+        ],
+        "mana_costs": [
+            90,
+            100,
+            110,
+            120
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "crush_radius",
+                "values_float": [],
+                "values_int": [
+                    350
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "crush_extra_slow",
+                "values_float": [],
+                "values_int": [
+                    -20,
+                    -25,
+                    -30,
+                    -35
+                ],
+                "is_percentage": true,
+                "heading_loc": "MOVEMENT SLOW:"
+            },
+            {
+                "name": "crush_attack_slow_tooltip",
+                "values_float": [],
+                "values_int": [
+                    -20,
+                    -25,
+                    -30,
+                    -35
+                ],
+                "is_percentage": false,
+                "heading_loc": "ATTACK SLOW:"
+            },
+            {
+                "name": "crush_extra_slow_duration",
+                "values_float": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SLOW DURATION:"
+            },
+            {
+                "name": "stun_duration",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "puddle_duration",
+                "values_float": [
+                    25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER PUDDLE DURATION:"
+            },
+            {
+                "name": "puddle_radius",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER PUDDLE AOE:"
+            },
+            {
+                "name": "#AbilityDamage",
+                "values_float": [],
+                "values_int": [
+                    80,
+                    140,
+                    200,
+                    260
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.34999999403954,
+                    0.34999999403954,
+                    0.34999999403954,
+                    0.34999999403954
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5116": {
+        "id": 5116,
+        "name": "slardar_bash",
+        "name_loc": "Bash of the Deep",
+        "desc_loc": "After %attack_count% attacks, your next attack will bash the target. Deals double damage against creeps.",
+        "lore_loc": "Thieves of the wealth of the Deep Ones meet the brutality of the Slithereen Guard in melee combat.",
+        "notes_loc": [
+            "Does not stack with Skull Basher."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 1,
+        "immunity": 3,
+        "dispellable": 1,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bonus_damage",
+                "values_float": [],
+                "values_int": [
+                    50,
+                    100,
+                    150,
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS DAMAGE:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    1,
+                    1.1000000238419,
+                    1.2000000476837,
+                    1.2999999523163
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BASH DURATION:"
+            },
+            {
+                "name": "attack_count",
+                "values_float": [],
+                "values_int": [
+                    3
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5117": {
+        "id": 5117,
+        "name": "slardar_amplify_damage",
+        "name_loc": "Corrosive Haze",
+        "desc_loc": "Reduces enemy armor to amplify physical damage and provides True Sight and vision of the targeted unit, revealing invisibility.",
+        "lore_loc": "Even the strongest armor counts for little when left to the brine of the sea.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 16,
+        "damage": 0,
+        "immunity": 3,
+        "dispellable": 2,
+        "max_level": 3,
+        "cast_ranges": [
+            700,
+            800,
+            900
+        ],
+        "cast_points": [
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            5
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            25
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "armor_reduction",
+                "values_float": [],
+                "values_int": [
+                    -10,
+                    -15,
+                    -20
+                ],
+                "is_percentage": false,
+                "heading_loc": "ARMOR REDUCTION:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    18
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    700,
+                    800,
+                    900
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5966": {
+        "id": 5966,
+        "name": "special_bonus_hp_regen_7",
+        "name_loc": "+{s:value} Health Regen",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    7
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5960": {
+        "id": 5960,
+        "name": "special_bonus_attack_damage_20",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6423": {
+        "id": 6423,
+        "name": "special_bonus_hp_325",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    325
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6889": {
+        "id": 6889,
+        "name": "special_bonus_unique_slardar_2",
+        "name_loc": "+{s:value} Bash Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    60
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6111": {
+        "id": 6111,
+        "name": "special_bonus_lifesteal_25",
+        "name_loc": "{s:value}% Lifesteal",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    25
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "504": {
+        "id": 504,
+        "name": "special_bonus_unique_slardar_5",
+        "name_loc": "{s:value} Corrosive Haze Armor",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    -4
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7871": {
+        "id": 7871,
+        "name": "special_bonus_unique_slardar_4",
+        "name_loc": "-{s:value}s Slithereen Crush Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    4
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6890": {
+        "id": 6890,
+        "name": "special_bonus_unique_slardar_3",
+        "name_loc": "Corrosive Haze Undispellable",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    }
+}
