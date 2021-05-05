@@ -1,23 +1,50 @@
 let hero_colors;
-let h_id;
+let h_id, gloab;
 const hero_name = window.location.href.split("/").pop();
-
-async function get_json_data() {
+let files_downloaded = false;
+let file_set = new Set();
+let files_len = 0;
+let abilities = {};
+async function get_json_data(hero_name) {
   // have to download files differently or just give up on shards for players
-  if (hero_name.length > 0) {
-    hero_colors = await get_json("ability_colours");
-    abilities = await get_json("abilities", hero_name);
+  if (hero_name) {
+    abilities[hero_name] = await get_json("abilities", hero_name);
+  } else {
     items = await get_json("items");
+    hero_colors = await get_json("ability_colours");
   }
 }
+const json_wrapper = (p, start) => {
+  if (!files_downloaded) {
+    for (let i = start; i < p.size; i++) {
+      get_json_data([...p][i]);
+    }
+    files_downloaded = true;
+  }
+};
+
 get_json_data();
 window.addEventListener("mouseover", (event) => {
+  gloab = "test";
+  collection = document.getElementsByClassName("abilities");
+  let start_point;
+  for (let item of collection) {
+    file_set.add(item.getAttribute("data-hero"));
+    if (file_set.size > files_len) {
+      files_downloaded = false;
+      start_point = files_len;
+    }
+  }
+  files_len = file_set.size;
+  json_wrapper(file_set, start_point);
+
   let tooltipType;
   if (
     event.target.className === "item-img" ||
     event.target.className === "table-img"
   ) {
     let result;
+
     if (
       event.target.className === "item-img" &&
       event.target.id !== "aghanims-shard"
@@ -25,13 +52,17 @@ window.addEventListener("mouseover", (event) => {
       result = items;
       tooltipType = "item";
     } else {
-      result = abilities;
+      tooltipHero =
+        event.target.parentNode.parentNode.getAttribute("data-hero") ||
+        event.target.getAttribute("data-hero");
+      result = abilities[tooltipHero];
       tooltipType = "ability";
     }
     let tooltip, _id, imgSrc;
     for (let element of event.target.parentNode.children) {
       if (element.className === "tooltip") tooltip = element;
       _id = event.target.getAttribute("data_id");
+      if (_id == "5631") _id = "5625";
       imgSrc = event.target.getAttribute("src");
     }
     if (
@@ -41,12 +72,18 @@ window.addEventListener("mouseover", (event) => {
       hero = event.target.getAttribute("data-hero");
       tooltip.style.background = `linear-gradient(137deg, rgba(35 35 35), rgb(60,60,60) )`;
       for (const i of hero_colors.colors) {
+        if (imgSrc.includes("launch_fire_spirit")) {
+          // phoenix edge case
+          imgSrc = "phoenix_fire_spirits";
+        }
         if (imgSrc.includes(i.ability)) {
           tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
         } else if (tooltip.id === "shard-tooltip") {
           for (let ability in result) {
             if (i.ability.includes(result[ability]["name"])) {
-              const hasShard = result[ability]["ability_has_shard"] || result[ability]['ability_is_granted_by_shard']
+              const hasShard =
+                result[ability]["ability_has_shard"] ||
+                result[ability]["ability_is_granted_by_shard"];
               if (hasShard) {
                 tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
               }
@@ -218,11 +255,9 @@ class Tooltip {
               int = int.map((el) => (el += "%"));
             }
             sp[sp.indexOf(x["name"])] = `${float || ""}${int || ""}`;
-            // console.log(x["values_float"][0]);
           }
           shardDescriptionText = highlight_numbers(sp.join(""));
         });
-        // console.log("sp,", sp);
       }
       let shardDescription = document.createElement("div");
       shardDescription.setAttribute("class", "shard-description");

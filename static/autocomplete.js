@@ -12,16 +12,13 @@ let cells = document.querySelectorAll(".hero-cell"),
   titleText;
 
 document.querySelector(".suggestions").style.display = "none";
-async function get_json(search) {
+async function get_json(search, hero_name) {
   let url = `${window.location.origin}/files/${search}`;
   if (
-    window.location.href.includes("hero") &&
     !window.location.href.includes("starter_items") &&
     search === "abilities"
   ) {
-    url = `${
-      window.location.origin
-    }/files/abilities/${window.location.href.split("/").pop()}`;
+    url = `${window.location.origin}/files/abilities/${hero_name}`;
   }
   const res = await fetch(url);
   const data = await res.json();
