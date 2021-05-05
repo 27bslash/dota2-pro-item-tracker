@@ -221,6 +221,7 @@ def generate_table(func_name, query, template):
     search_value = mongo_search(searchable)
     records_to_skip = int(request.args['start'])
     length = int(request.args['length'])
+    total_entries = []
     if 'start' in template and column == 'gold':
         column = 'lane_efficiency'
     if check_response:
@@ -243,6 +244,8 @@ def generate_table(func_name, query, template):
                 entry for entry in hero_output.find({key: query})]
     result = {"draw": request.args['draw'],
               "recordsTotal": len(total_entries), "recordsFiltered": len(total_entries), "data": []}
+    if len(total_entries) == 0:
+        return result
     for match in match_data:
         row_string = []
         html_string = f"<a href=https://www.opendota.com/matches/{match['id']}>"
@@ -313,7 +316,7 @@ def generate_table(func_name, query, template):
                 html_string += "<div class='tooltip' id='item-tooltip'></div></div></div>"
 
             if match['aghanims_shard']:
-                image = f"<img class='item-img' id='aghanims-shard' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png' data_id='609' alt='aghanims_shard'>"
+                image = f"<img class='item-img' id='aghanims-shard' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png' data_id='609' data-hero=\"{match['hero']}\" alt='aghanims_shard'>"
                 shard_time = match['aghanims_shard'][0]['time']
                 overlay = f"<div class='overlay' id='shard-overlay'>{shard_time}</div>"
                 html_string += f"<div class='item-cell' id='aghanims-shard-cell'>"
@@ -323,7 +326,7 @@ def generate_table(func_name, query, template):
                 html_string += "</div>"
 
             html_string += "</div></a>"
-        html_string += f"<div class='abilities' data-hero=\'{match['hero']}\'>"
+        html_string += f"<div class='abilities' data-hero=\"{match['hero']}\">"
 
         for ability in match['abilities']:
             ability_img = f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability['img']}.png"
@@ -683,5 +686,5 @@ if __name__ == '__main__':
     # update_one_entry('batrider', 5965228394)
     # manual_hero_update('f')
     # opendota_call()
-    app.run(debug=True)
+    app.run(debug=False)
     pass
