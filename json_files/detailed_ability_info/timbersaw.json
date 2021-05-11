@@ -1,748 +1,1544 @@
 {
-    "651": {
-        "id": 651,
-        "name": "shredder_flamethrower",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 651,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Flamethrower",
-            "description": [
-                "Releases a 275 width flame that extends 400 range in the direction Timbersaw is facing. Applies a debuff that deals 90 damage per second and slows by 30%. Affects buildings for 40% damage. Lasts 7 seconds. Debuff lingers for 3 seconds."
-            ],
-            "attributes": [
-                "DURATION: 7",
-                "DAMAGE PER SECOND: 90"
-            ],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 651,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0
-            ],
-            "cooldown": [
-                15.0
-            ],
-            "manaCost": [
-                100.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": true
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
     "5524": {
         "id": 5524,
         "name": "shredder_whirling_death",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 5524,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Whirling Death",
-            "description": [
-                "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area.  If an enemy hero is affected, it loses some of its primary attribute for a short duration.  Whirling Death will deal bonus damage per tree destroyed."
-            ],
-            "attributes": [
-                "DAMAGE: 80 / 120 / 160 / 200",
-                "TREE BONUS DAMAGE: 12 / 18 / 24 / 30",
-                "RADIUS: 325",
-                "STAT LOSS PERCENT: 13% / 14% / 15% / 16%",
-                "STAT LOSS DURATION: 12 / 13 / 14 / 15"
-            ],
-            "lore": "In the case that Rizzrack gets surrounded by the vines and plants of his nightmares, he has an immediate chainsaw defense.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5524,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 18436,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 2,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                300
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                6.0
-            ],
-            "manaCost": [
-                80.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Whirling Death",
+        "desc_loc": "Timbersaw whirls extremely sharp edges, damaging enemies and destroying trees around him in an area.  If an enemy hero is affected, it loses some of its primary attribute for a short duration.  Whirling Death will deal bonus damage per tree destroyed.",
+        "lore_loc": "In the case that Rizzrack gets surrounded by the vines and plants of his nightmares, he has an immediate chainsaw defense.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "134219780",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 4,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            300
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            6
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            80
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "whirling_radius",
+                "values_float": [],
+                "values_int": [
+                    325
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "whirling_damage",
+                "values_float": [],
+                "values_int": [
+                    80,
+                    120,
+                    160,
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "tree_damage_scale",
+                "values_float": [],
+                "values_int": [
+                    12,
+                    18,
+                    24,
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": "TREE BONUS DAMAGE:"
+            },
+            {
+                "name": "whirling_tick",
+                "values_float": [
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "stat_loss_pct",
+                "values_float": [],
+                "values_int": [
+                    13,
+                    14,
+                    15,
+                    16
+                ],
+                "is_percentage": true,
+                "heading_loc": "STAT LOSS PERCENT:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    12,
+                    13,
+                    14,
+                    15
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STAT LOSS DURATION:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    300
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5525": {
         "id": 5525,
         "name": "shredder_timber_chain",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 5525,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Timber Chain",
-            "description": [
-                "Timbersaw fires a chain that embeds itself in the first tree it hits, pulling him towards it.  Any enemy in the path takes damage."
-            ],
-            "attributes": [
-                "DAMAGE: 100 / 140 / 180 / 220",
-                "LATCH RANGE: 800 / 950 / 1100 / 1250",
-                "RADIUS: 225 / 225 / 225 / 225",
-                "SPEED: 2200 / 2400 / 2600 / 2800"
-            ],
-            "lore": "You never know when you might need to escape from malevolent saplings.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5525,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 20496,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 2,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                850,
-                1050,
-                1250,
-                1450
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                4.0
-            ],
-            "manaCost": [
-                60.0,
-                70.0,
-                80.0,
-                90.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Timber Chain",
+        "desc_loc": "Timbersaw fires a chain that embeds itself in the first tree it hits, pulling him towards it.  Any enemy in the path takes damage.",
+        "lore_loc": "You never know when you might need to escape from malevolent saplings.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "134742032",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 4,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            850,
+            1050,
+            1250,
+            1450
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            4
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            60,
+            70,
+            80,
+            90
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "chain_radius",
+                "values_float": [],
+                "values_int": [
+                    90
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "range",
+                "values_float": [],
+                "values_int": [
+                    800,
+                    950,
+                    1100,
+                    1250
+                ],
+                "is_percentage": false,
+                "heading_loc": "LATCH RANGE:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    225
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "speed",
+                "values_float": [],
+                "values_int": [
+                    2200,
+                    2400,
+                    2600,
+                    2800
+                ],
+                "is_percentage": false,
+                "heading_loc": "SPEED:"
+            },
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    100,
+                    140,
+                    180,
+                    220
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    850,
+                    1050,
+                    1250,
+                    1450
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5526": {
         "id": 5526,
         "name": "shredder_reactive_armor",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 5526,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Reactive Armor",
-            "description": [
-                "Each time Timbersaw is attacked, he gains increased health regen and armor."
-            ],
-            "attributes": [
-                "BONUS ARMOR: 0.9 / 1 / 1.1 / 1.2",
-                "BONUS HP REGEN: 0.7 / 0.9 / 1.1 / 1.3",
-                "MAX STACKS: 6 / 12 / 18 / 24",
-                "STACK DURATION: 10 / 12 / 14 / 16"
-            ],
-            "lore": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5526,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5527": {
-        "id": 5527,
-        "name": "shredder_chakram",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 5527,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Chakram",
-            "description": [
-                "Fires Timbersaw's main saw blade at the target location where it will spin in place, dealing damage in an area around it. Enemies caught in the saw blade will move more slowly for every 5% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted. While active the ability costs mana, and Timbersaw loses the ability to attack."
-            ],
-            "attributes": [
-                "RADIUS: 200",
-                "PASS DAMAGE: 100 / 140 / 180",
-                "DAMAGE PER SECOND: 50 / 75 / 100",
-                "SLOW: 5%",
-                "MANA COST PER SECOND: 16 / 23 / 30",
-                "RADIUS:%2_radius%",
-                "PASS DAMAGE:%2_pass_damage%",
-                "DAMAGE PER SECOND:%2_damage_per_second%",
-                "%SLOW:%2_slow%",
-                "MANA COST PER SECOND:%2_mana_per_second%"
-            ],
-            "lore": "The ultimate in anti-flora weaponry.",
-            "notes": [
-                "The Chakram will return if Timbersaw runs out of mana or moves over 2000.0 distance away."
-            ]
-        },
-        "stat": {
-            "abilityId": 5527,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 16432,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 2,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1200,
-                1200,
-                1200
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.15
-            ],
-            "cooldown": [
-                8.0,
-                8.0,
-                8.0
-            ],
-            "manaCost": [
-                80.0,
-                140.0,
-                200.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5528": {
-        "id": 5528,
-        "name": "shredder_return_chakram",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 5528,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Return Chakram",
-            "description": [
-                "Returns the Chakram to Timbersaw."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5528,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 575557,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Reactive Armor",
+        "desc_loc": "Each time Timbersaw is attacked, he gains increased health regen and armor.",
+        "lore_loc": "The saw-suit is equipped to react to the slightest touch with fortified defenses.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bonus_armor",
+                "values_float": [
+                    0.89999997615814,
+                    1,
+                    1.1000000238419,
+                    1.2000000476837
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BONUS ARMOR:"
+            },
+            {
+                "name": "bonus_hp_regen",
+                "values_float": [
+                    0.69999998807907,
+                    0.89999997615814,
+                    1.1000000238419,
+                    1.2999999523163
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BONUS HP REGEN:"
+            },
+            {
+                "name": "stack_limit",
+                "values_float": [],
+                "values_int": [
+                    6,
+                    12,
+                    18,
+                    24
+                ],
+                "is_percentage": false,
+                "heading_loc": "MAX STACKS:"
+            },
+            {
+                "name": "stack_duration",
+                "values_float": [
+                    10,
+                    12,
+                    14,
+                    16
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STACK DURATION:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5645": {
         "id": 5645,
         "name": "shredder_chakram_2",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 5645,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Second Chakram",
-            "description": [
-                "Fires a secondary saw blade at the target location where it will spin in place, dealing damage in an area around it.  Additionally, for each 5% of health missing, enemies caught in the saw blade move more slowly. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and Timbersaw loses the ability to attack."
-            ],
-            "attributes": [
-                "RADIUS: 200",
-                "PASS DAMAGE: 100 / 140 / 180",
-                "DAMAGE PER SECOND: 50 / 75 / 100",
-                "SLOW: 5%",
-                "MANA COST PER SECOND: 16 / 23 / 30"
-            ],
-            "lore": "Cut cut cut cut cut cut cut cut cut cut cut!",
-            "notes": [
-                "The Chakram will return if Timbersaw runs out of mana or moves over 2000.0 distance away.",
-                "Slow effects from two chakrams do not stack."
-            ]
-        },
-        "stat": {
-            "abilityId": 5645,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 2,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": true,
-            "hasScepterUpgrade": true,
-            "maxLevel": 3,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1200,
-                1200,
-                1200
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.15
-            ],
-            "cooldown": [
-                8.0,
-                8.0,
-                8.0
-            ],
-            "manaCost": [
-                80.0,
-                140.0,
-                200.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Second Chakram",
+        "desc_loc": "Fires a secondary saw blade at the target location where it will spin in place, dealing damage in an area around it.  Additionally, for each 5% of health missing, enemies caught in the saw blade move more slowly. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and Timbersaw loses the ability to attack.",
+        "lore_loc": "Cut cut cut cut cut cut cut cut cut cut cut!",
+        "notes_loc": [
+            "The Chakram will return if Timbersaw runs out of mana or moves over %break_distance% distance away.",
+            "Slow effects from two chakrams do not stack."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8724152433",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 4,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 3,
+        "cast_ranges": [
+            1200,
+            1200,
+            1200
+        ],
+        "cast_points": [
+            0.15000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            8,
+            8,
+            8
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            80,
+            140,
+            200
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "speed",
+                "values_float": [
+                    900
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "pass_damage",
+                "values_float": [],
+                "values_int": [
+                    100,
+                    140,
+                    180
+                ],
+                "is_percentage": false,
+                "heading_loc": "PASS DAMAGE:"
+            },
+            {
+                "name": "damage_per_second",
+                "values_float": [],
+                "values_int": [
+                    50,
+                    75,
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE PER SECOND:"
+            },
+            {
+                "name": "slow",
+                "values_float": [],
+                "values_int": [
+                    5
+                ],
+                "is_percentage": true,
+                "heading_loc": "SLOW:"
+            },
+            {
+                "name": "damage_interval",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "break_distance",
+                "values_float": [
+                    2000
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "mana_per_second",
+                "values_float": [
+                    16,
+                    23,
+                    30
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "MANA COST PER SECOND:"
+            },
+            {
+                "name": "pass_slow_duration",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "slow_health_percentage",
+                "values_float": [],
+                "values_int": [
+                    5
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1200,
+                    1200,
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.15000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": true,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "5646": {
-        "id": 5646,
-        "name": "shredder_return_chakram_2",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 5646,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Return Chakram",
-            "description": [
-                "Returns the Chakram to Timbersaw."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5646,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 575557,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 3,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+    "651": {
+        "id": 651,
+        "name": "shredder_flamethrower",
+        "name_loc": "Flamethrower",
+        "desc_loc": "Releases a %width% width flame that extends %length% range in the direction Timbersaw is facing. Applies a debuff that deals %damage_per_second% damage per second and slows by 30%%. Affects buildings for 40%% damage. Lasts %duration% seconds. Debuff lingers for 2 seconds.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589936645",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 1,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            18
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            100
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage_per_second",
+                "values_float": [],
+                "values_int": [
+                    90
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE PER SECOND:"
+            },
+            {
+                "name": "duration",
+                "values_float": [],
+                "values_int": [
+                    7
+                ],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "width",
+                "values_float": [],
+                "values_int": [
+                    275
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "length",
+                "values_float": [],
+                "values_int": [
+                    400
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6223": {
-        "id": 6223,
-        "name": "special_bonus_unique_timbersaw",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 6223,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+10% Whirling Death Attribute Reduction",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6223,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "5527": {
+        "id": 5527,
+        "name": "shredder_chakram",
+        "name_loc": "Chakram",
+        "desc_loc": "Fires Timbersaw's main saw blade at the target location where it will spin in place, dealing damage in an area around it.  Enemies caught in the saw blade will move more slowly for every %slow_health_percentage%%% of health missing. The blade deals damage and cuts down trees in its path when fired and retracted.  While active the ability costs mana, and Timbersaw loses the ability to attack.",
+        "lore_loc": "The ultimate in anti-flora weaponry.",
+        "notes_loc": [
+            "The Chakram will return if Timbersaw runs out of mana or moves over %break_distance% distance away."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "134217776",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 4,
+        "immunity": 4,
+        "dispellable": 3,
+        "max_level": 3,
+        "cast_ranges": [
+            1200,
+            1200,
+            1200
+        ],
+        "cast_points": [
+            0.15000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            8,
+            8,
+            8
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            80,
+            140,
+            200
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "speed",
+                "values_float": [
+                    900
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "pass_damage",
+                "values_float": [],
+                "values_int": [
+                    100,
+                    140,
+                    180
+                ],
+                "is_percentage": false,
+                "heading_loc": "PASS DAMAGE:"
+            },
+            {
+                "name": "damage_per_second",
+                "values_float": [],
+                "values_int": [
+                    50,
+                    75,
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE PER SECOND:"
+            },
+            {
+                "name": "slow",
+                "values_float": [],
+                "values_int": [
+                    5
+                ],
+                "is_percentage": true,
+                "heading_loc": "SLOW:"
+            },
+            {
+                "name": "damage_interval",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "break_distance",
+                "values_float": [
+                    2000
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "mana_per_second",
+                "values_float": [
+                    16,
+                    23,
+                    30
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "MANA COST PER SECOND:"
+            },
+            {
+                "name": "pass_slow_duration",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "slow_health_percentage",
+                "values_float": [],
+                "values_int": [
+                    5
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "castpoint_scepter",
+                "values_float": [
+                    0.10000000149012
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1200,
+                    1200,
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.15000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6488": {
-        "id": 6488,
-        "name": "snapfire_lil_shredder",
-        "uri": "snapfire",
-        "language": {
-            "abilityId": 6488,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Lil' Shredder",
-            "description": [
-                "Snapfire heats up her mounted turret to rapidly fire 6 fixed-damage attacks. Each attack reduces the enemy's armor. Provides bonus attack range for the duration."
-            ],
-            "attributes": [
-                "BONUS RANGE: 75 / 150 / 225 / 300",
-                "FIXED DAMAGE PER SHOT: 20 / 45 / 70 / 95",
-                "ARMOR LOSS PER STACK: 1",
-                "ARMOR LOSS DURATION: 5.0"
-            ],
-            "lore": "Beadie constantly tinkers with a design she first dreamed up plotting an exodus from her old gang.",
-            "notes": [
-                "Sets 1.0 base attack rate for the duration.",
-                "Attack modifiers have a chance to proc on Lil' Shredder attacks."
-            ]
-        },
-        "stat": {
-            "abilityId": 6488,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 16388,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 3,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                800
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0
-            ],
-            "cooldown": [
-                24.0,
-                20.0,
-                16.0,
-                12.0
-            ],
-            "manaCost": [
-                50.0,
-                60.0,
-                70.0,
-                80.0
-            ],
-            "isUltimate": false,
-            "duration": "8",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+    "5959": {
+        "id": 5959,
+        "name": "special_bonus_hp_200",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7132": {
+        "id": 7132,
+        "name": "special_bonus_mp_regen_150",
+        "name_loc": "+{s:value} Mana Regen",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    1.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5949": {
+        "id": 5949,
+        "name": "special_bonus_spell_amplify_8",
+        "name_loc": "+{s:value}% Spell Amplification",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6948": {
         "id": 6948,
         "name": "special_bonus_unique_timbersaw_2",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 6948,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+6 Reactive Armor Stacks and Duration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6948,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Reactive Armor Stacks and Duration",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "447": {
+        "id": 447,
+        "name": "special_bonus_strength_16",
+        "name_loc": "+{s:value} Strength",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    16
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6190": {
+        "id": 6190,
+        "name": "special_bonus_cooldown_reduction_12",
+        "name_loc": "{s:value}% Cooldown Reduction",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6223": {
+        "id": 6223,
+        "name": "special_bonus_unique_timbersaw",
+        "name_loc": "+{s:value}% Whirling Death Attribute Reduction",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    10
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6949": {
         "id": 6949,
         "name": "special_bonus_unique_timbersaw_3",
-        "uri": "shredder",
-        "language": {
-            "abilityId": 6949,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+1125 Timber Chain Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6949,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Timber Chain Range",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    1125
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

@@ -1,556 +1,1188 @@
 {
-    "773": {
-        "id": 773,
-        "name": "special_bonus_unique_lina_5",
-        "language": {
-            "abilityId": 773,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+90 Laguna Blade Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 773,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "844": {
-        "id": 844,
-        "name": "special_bonus_unique_lina_6",
-        "language": {
-            "abilityId": 844,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-25s Laguna Blade Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 844,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "5040": {
         "id": 5040,
         "name": "lina_dragon_slave",
-        "uri": "lina",
-        "language": {
-            "abilityId": 5040,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Dragon Slave",
-            "description": [
-                "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its path."
-            ],
-            "attributes": [],
-            "lore": "In the scorched barren of Misrule, Lina learned to manipulate the fiery breath of the Desert Wyrm as a form of entertainment.",
-            "notes": [
-                "Dragon Slave can hit units up to 1225 units away."
-            ]
-        },
-        "stat": {
-            "abilityId": 5040,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 24,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1075
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.45,
-                0.45,
-                0.45,
-                0.45
-            ],
-            "cooldown": [
-                8.0
-            ],
-            "damage": [
-                85.0,
-                160.0,
-                235.0,
-                310.0
-            ],
-            "manaCost": [
-                100.0,
-                115.0,
-                130.0,
-                145.0
-            ],
-            "isUltimate": false,
-            "duration": "0.6875 0.6875 0.6875 0.6875",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Dragon Slave",
+        "desc_loc": "Lina channels the breath of a dragon, sending out a wave of fire that scorches every enemy in its path.",
+        "lore_loc": "In the scorched barren of Misrule, Lina learned to manipulate the fiery breath of the Desert Wyrm as a form of entertainment.",
+        "notes_loc": [
+            "Dragon Slave can hit units up to 1225 units away."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "24",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            1075
+        ],
+        "cast_points": [
+            0.44999998807907
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            8
+        ],
+        "durations": [
+            0.6875,
+            0.6875,
+            0.6875,
+            0.6875
+        ],
+        "damages": [
+            85,
+            160,
+            235,
+            310
+        ],
+        "mana_costs": [
+            100,
+            115,
+            130,
+            145
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "dragon_slave_speed",
+                "values_float": [],
+                "values_int": [
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "dragon_slave_width_initial",
+                "values_float": [],
+                "values_int": [
+                    275
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "dragon_slave_width_end",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "dragon_slave_distance",
+                "values_float": [],
+                "values_int": [
+                    1075
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "#AbilityDamage",
+                "values_float": [],
+                "values_int": [
+                    85,
+                    160,
+                    235,
+                    310
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1075
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    0.6875,
+                    0.6875,
+                    0.6875,
+                    0.6875
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.44999998807907
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5041": {
         "id": 5041,
         "name": "lina_light_strike_array",
-        "uri": "lina",
-        "language": {
-            "abilityId": 5041,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Light Strike Array",
-            "description": [
-                "Summons a column of flames that damages and stuns enemies."
-            ],
-            "attributes": [
-                "RADIUS: 225",
-                "STUN DURATION: 1.6 / 1.9 / 2.2 / 2.5",
-                "CAST DELAY: 0.5",
-                "DAMAGE: 80 / 130 / 180 / 230"
-            ],
-            "lore": "Lina's essence allows her to focus the sun's energies, causing air to combust at will.",
-            "notes": [
-                "Light Strike Array will destroy trees in its area of effect."
-            ]
-        },
-        "stat": {
-            "abilityId": 5041,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 48,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                625
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.45,
-                0.45,
-                0.45,
-                0.45
-            ],
-            "cooldown": [
-                10.0,
-                9.0,
-                8.0,
-                7.0
-            ],
-            "manaCost": [
-                100.0,
-                110.0,
-                120.0,
-                130.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Light Strike Array",
+        "desc_loc": "Summons a column of flames that damages and stuns enemies.",
+        "lore_loc": "Lina's essence allows her to focus the sun's energies, causing air to combust at will.",
+        "notes_loc": [
+            "Light Strike Array will destroy trees in its area of effect."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "48",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 1,
+        "max_level": 4,
+        "cast_ranges": [
+            625
+        ],
+        "cast_points": [
+            0.44999998807907,
+            0.44999998807907,
+            0.44999998807907,
+            0.44999998807907
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            10,
+            9,
+            8,
+            7
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            100,
+            105,
+            110,
+            115
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "light_strike_array_aoe",
+                "values_float": [],
+                "values_int": [
+                    250
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "light_strike_array_delay_time",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "CAST DELAY:"
+            },
+            {
+                "name": "light_strike_array_stun_duration",
+                "values_float": [
+                    1.6000000238419,
+                    1.8999999761581,
+                    2.2000000476837,
+                    2.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "light_strike_array_damage",
+                "values_float": [],
+                "values_int": [
+                    80,
+                    130,
+                    180,
+                    230
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    625
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.44999998807907,
+                    0.44999998807907,
+                    0.44999998807907,
+                    0.44999998807907
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5042": {
         "id": 5042,
         "name": "lina_fiery_soul",
-        "uri": "lina",
-        "language": {
-            "abilityId": 5042,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Fiery Soul",
-            "description": [
-                "Grants bonus attack and movement speed each time Lina casts a spell. Stacks with itself. Lasts 10 seconds."
-            ],
-            "attributes": [
-                "ATTACK SPEED BONUS: 40 / 60 / 80 / 100",
-                "MAX STACKS: 3",
-                "DURATION: 10"
-            ],
-            "lore": "Dancing flames embody Lina's playful nature, bringing out her true blazing self.",
-            "notes": [
-                "Duration refreshes each time a new spell is cast.",
-                "Using items does not trigger Fiery Soul."
-            ]
-        },
-        "stat": {
-            "abilityId": 5042,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Fiery Soul",
+        "desc_loc": "Grants bonus attack and movement speed each time Lina casts a spell. Stacks with itself. Lasts %fiery_soul_stack_duration% seconds.",
+        "lore_loc": "Dancing flames embody Lina's playful nature, bringing out her true blazing self.",
+        "notes_loc": [
+            "Duration refreshes each time a new spell is cast.",
+            "Using items does not trigger Fiery Soul."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "fiery_soul_attack_speed_bonus",
+                "values_float": [],
+                "values_int": [
+                    40,
+                    60,
+                    80,
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": "ATTACK SPEED BONUS:"
+            },
+            {
+                "name": "fiery_soul_move_speed_bonus",
+                "values_float": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "MOVE SPEED BONUS:"
+            },
+            {
+                "name": "fiery_soul_max_stacks",
+                "values_float": [],
+                "values_int": [
+                    3
+                ],
+                "is_percentage": false,
+                "heading_loc": "MAX STACKS:"
+            },
+            {
+                "name": "fiery_soul_stack_duration",
+                "values_float": [],
+                "values_int": [
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5043": {
         "id": 5043,
         "name": "lina_laguna_blade",
-        "uri": "lina",
-        "language": {
-            "abilityId": 5043,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Laguna Blade",
-            "description": [
-                "Fires off a bolt of lightning at a single enemy unit, dealing massive damage."
-            ],
-            "attributes": [
-                "DAMAGE: 500 / 700 / 900"
-            ],
-            "lore": "The air around Lina becomes so intensely torrid that it scorches a foe that comes too close with white-hot lightning.",
-            "aghanimDescription": "Changes Laguna Blade's damage type to Pure, and allows it to slice through spell immunity.",
-            "notes": [
-                "Laguna Blade has a 0.25 delay before the damage is applied after the spell is cast, allowing certain abilities to avoid the damage."
-            ],
-            "shardDescription": "Increases Laguna Blade's cast range by 250 and causes it to go the full cast length and hit all units along the way. Can be ground targeted."
-        },
-        "stat": {
-            "abilityId": 5043,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 8,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 4,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 0.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                600
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.45,
-                0.45,
-                0.45
-            ],
-            "cooldown": [
-                70.0,
-                60.0,
-                50.0
-            ],
-            "manaCost": [
-                250.0,
-                400.0,
-                550.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Laguna Blade",
+        "desc_loc": "Fires off a bolt of lightning at a single enemy unit, dealing massive damage.",
+        "lore_loc": "The air around Lina becomes so intensely torrid that it scorches a foe that comes too close with white-hot lightning.",
+        "notes_loc": [
+            "Laguna Blade has a %damage_delay% delay before the damage is applied after the spell is cast, allowing certain abilities to avoid the damage."
+        ],
+        "shard_loc": "Increases Laguna Blade's cast range by 250 and causes it to go the full cast length and hit all units along the way. Can be ground targeted.",
+        "scepter_loc": "Changes Laguna Blade's damage type to Pure, and allows it to slice through spell immunity.",
+        "type": 1,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 16,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 3,
+        "cast_ranges": [
+            600
+        ],
+        "cast_points": [
+            0.44999998807907,
+            0.44999998807907,
+            0.44999998807907
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            70,
+            60,
+            50
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            250,
+            400,
+            550
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    500,
+                    700,
+                    900
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "cast_range_scepter",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "damage_delay",
+                "values_float": [
+                    0.25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "scepter_width",
+                "values_float": [],
+                "values_int": [
+                    125
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.44999998807907,
+                    0.44999998807907,
+                    0.44999998807907
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5939": {
+        "id": 5939,
+        "name": "special_bonus_attack_damage_30",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6212": {
         "id": 6212,
         "name": "special_bonus_unique_lina_1",
-        "uri": "lina",
-        "language": {
-            "abilityId": 6212,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-2s Dragon Slave Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6212,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "-{s:value}s Dragon Slave Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    2.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6313": {
-        "id": 6313,
-        "name": "special_bonus_unique_lina_2",
-        "uri": "lina",
-        "language": {
-            "abilityId": 6313,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+30/2% Fiery Soul Per Stack",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6313,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "6195": {
+        "id": 6195,
+        "name": "special_bonus_hp_350",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    350
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6388": {
         "id": 6388,
         "name": "special_bonus_unique_lina_3",
-        "uri": "lina",
-        "language": {
-            "abilityId": 6388,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+130 Light Strike Array Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6388,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Light Strike Array Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    130
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6509": {
-        "id": 6509,
-        "name": "special_bonus_unique_lina_4",
-        "language": {
-            "abilityId": 6509,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+75 Light Strike AoE",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6509,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "444": {
+        "id": 444,
+        "name": "special_bonus_spell_amplify_11",
+        "name_loc": "+{s:value}% Spell Amplification",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    11
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6313": {
+        "id": 6313,
+        "name": "special_bonus_unique_lina_2",
+        "name_loc": "+{s:value}/{s:value2}% Fiery Soul Per Stack",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "value2",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "844": {
+        "id": 844,
+        "name": "special_bonus_unique_lina_6",
+        "name_loc": "-{s:value}s Laguna Blade Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5963": {
+        "id": 5963,
+        "name": "special_bonus_attack_range_150",
+        "name_loc": "+{s:value} Attack Range",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

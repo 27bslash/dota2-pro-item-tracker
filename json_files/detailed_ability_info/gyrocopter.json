@@ -2,577 +2,1262 @@
     "5361": {
         "id": 5361,
         "name": "gyrocopter_rocket_barrage",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 5361,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Rocket Barrage",
-            "description": [
-                "Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter. Lasts 3 seconds."
-            ],
-            "attributes": [
-                "ROCKETS PER SECOND: 10",
-                "RADIUS: 400",
-                "ROCKET DAMAGE: 7 / 12 / 17 / 22"
-            ],
-            "lore": "Aurel's new craft has an increased payload for rockets, enhancing their rapid-fire capabilities.",
-            "notes": [
-                "Rocket Barrage can't hit units Gyrocopter has no vision over."
-            ],
-            "shardDescription": "Rocket Barrage hits an extra target and increases duration by 1 second."
-        },
-        "stat": {
-            "abilityId": 5361,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2052,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                0
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0
-            ],
-            "cooldown": [
-                7.0,
-                6.5,
-                6.0,
-                5.5
-            ],
-            "manaCost": [
-                90.0
-            ],
-            "isUltimate": false,
-            "duration": "3",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Rocket Barrage",
+        "desc_loc": "Launches a salvo of rockets at nearby enemy units in a radius around the Gyrocopter.  Lasts %abilityduration% seconds.",
+        "lore_loc": "Aurel's new craft has an increased payload for rockets, enhancing their rapid-fire capabilities.",
+        "notes_loc": [
+            "Rocket Barrage can't hit units Gyrocopter has no vision over."
+        ],
+        "shard_loc": "Rocket Barrage hits an extra target and increases duration by 1 second.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2052",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            7,
+            6.5,
+            6,
+            5.5
+        ],
+        "durations": [
+            3
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            90
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    400
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "rockets_per_second",
+                "values_float": [],
+                "values_int": [
+                    10
+                ],
+                "is_percentage": false,
+                "heading_loc": "ROCKETS PER SECOND:"
+            },
+            {
+                "name": "rocket_damage",
+                "values_float": [],
+                "values_int": [
+                    7,
+                    12,
+                    17,
+                    22
+                ],
+                "is_percentage": false,
+                "heading_loc": "ROCKET DAMAGE:"
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5362": {
         "id": 5362,
         "name": "gyrocopter_homing_missile",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 5362,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Homing Missile",
-            "description": [
-                "Fires a homing missile to seek the targeted enemy unit. The missile gains speed over time, dealing damage and stunning when it impacts the target. Enemy units can destroy the missile before it reaches its target."
-            ],
-            "attributes": [
-                "HITS TO DESTROY: 3",
-                "TOWER HITS TO DESTROY: 6",
-                "STUN DURATION: 2.25 / 2.5 / 2.75 / 3.0"
-            ],
-            "lore": "The biggest missile Aurel could possibly attach to his craft, The Bomb\u2122 has carefully calculated aerodynamics and explosives for maximum impact.",
-            "notes": [
-                "Towers do half damage to the missile.",
-                "The crosshair effect is visible to allies only.",
-                "The missile will follow and hit invisible units."
-            ]
-        },
-        "stat": {
-            "abilityId": 5362,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 16392,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1050
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0
-            ],
-            "cooldown": [
-                26.0,
-                21.0,
-                16.0,
-                11.0
-            ],
-            "damage": [
-                100.0,
-                175.0,
-                250.0,
-                325.0
-            ],
-            "manaCost": [
-                120.0,
-                130.0,
-                140.0,
-                150.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Homing Missile",
+        "desc_loc": "Fires a homing missile to seek the targeted enemy unit. The missile gains speed over time, dealing damage and stunning when it impacts the target. Enemy units can destroy the missile before it reaches its target.",
+        "lore_loc": "The biggest missile Aurel could possibly attach to his craft, The Bomb\u2122 has carefully calculated aerodynamics and explosives for maximum impact.",
+        "notes_loc": [
+            "Towers do half damage to the missile.",
+            "The crosshair effect is visible to allies only.",
+            "The missile will follow and hit invisible units."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "134217736",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 1,
+        "max_level": 4,
+        "cast_ranges": [
+            1050
+        ],
+        "cast_points": [
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            26,
+            21,
+            16,
+            11
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            100,
+            175,
+            250,
+            325
+        ],
+        "mana_costs": [
+            120,
+            130,
+            140,
+            150
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "hits_to_kill_tooltip",
+                "values_float": [],
+                "values_int": [
+                    3
+                ],
+                "is_percentage": false,
+                "heading_loc": "HITS TO DESTROY:"
+            },
+            {
+                "name": "tower_hits_to_kill_tooltip",
+                "values_float": [],
+                "values_int": [
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": "TOWER HITS TO DESTROY:"
+            },
+            {
+                "name": "stun_duration",
+                "values_float": [
+                    2.25,
+                    2.5,
+                    2.75,
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "attack_speed_bonus_pct",
+                "values_float": [],
+                "values_int": [
+                    400
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "min_damage",
+                "values_float": [],
+                "values_int": [
+                    50
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "max_distance",
+                "values_float": [],
+                "values_int": [
+                    1500
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "pre_flight_time",
+                "values_float": [
+                    2.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "hero_damage",
+                "values_float": [],
+                "values_int": [
+                    34
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "speed",
+                "values_float": [
+                    500
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "acceleration",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "enemy_vision_time",
+                "values_float": [],
+                "values_int": [
+                    4
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "#AbilityDamage",
+                "values_float": [],
+                "values_int": [
+                    100,
+                    175,
+                    250,
+                    325
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1050
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5363": {
         "id": 5363,
         "name": "gyrocopter_flak_cannon",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 5363,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Flak Cannon",
-            "description": [
-                "Gyrocopter's attacks hit all enemy units in an area around it for a limited number of attacks. Only the main target of attacks will receive attack bonuses such as Critical Strike. Lasts 10 seconds or until the attacks are used."
-            ],
-            "attributes": [
-                "RADIUS: 1250",
-                "MAX ATTACKS: 3 / 4 / 5 / 6",
-                "SIDE GUNNER FIRE RATE: 1.2",
-                "SIDE GUNNER ATTACK RADIUS: 700"
-            ],
-            "lore": "This newly revamped Gyrocopter has attached enough armaments to assault in a 360 degree radius.",
-            "aghanimDescription": "Adds a Side Gunner that at random attacks enemy units near Gyrocopter. Prioritizes furthest unit away within its range.",
-            "notes": [
-                "Attack range for the primary attack is unchanged."
-            ]
-        },
-        "stat": {
-            "abilityId": 5363,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2052,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 3,
-            "spellImmunity": 3,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                24.0,
-                22.0,
-                20.0,
-                18.0
-            ],
-            "manaCost": [
-                50.0,
-                50.0,
-                50.0,
-                50.0
-            ],
-            "isUltimate": false,
-            "duration": "10",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Flak Cannon",
+        "desc_loc": "Gyrocopter's attacks hit all enemy units in an area around it for a limited number of attacks.  Only the main target of attacks will receive attack bonuses such as Critical Strike.  Lasts %abilityduration% seconds or until the attacks are used.",
+        "lore_loc": "This newly revamped Gyrocopter has attached enough armaments to assault in a 360 degree radius.",
+        "notes_loc": [
+            "Attack range for the primary attack is unchanged."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "Adds a Side Gunner that at random attacks enemy units near Gyrocopter. Prioritizes furthest unit away within its range.",
+        "type": 0,
+        "behavior": "2052",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 1,
+        "immunity": 3,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            24,
+            22,
+            20,
+            18
+        ],
+        "durations": [
+            10
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            50,
+            50,
+            50,
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    1250
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "max_attacks",
+                "values_float": [],
+                "values_int": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": "MAX ATTACKS:"
+            },
+            {
+                "name": "projectile_speed",
+                "values_float": [],
+                "values_int": [
+                    800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "fire_rate",
+                "values_float": [
+                    1.2000000476837
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SIDE GUNNER FIRE RATE:"
+            },
+            {
+                "name": "scepter_radius",
+                "values_float": [],
+                "values_int": [
+                    700
+                ],
+                "is_percentage": false,
+                "heading_loc": "SIDE GUNNER ATTACK RADIUS:"
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    10
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5364": {
         "id": 5364,
         "name": "gyrocopter_call_down",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 5364,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Call Down",
-            "description": [
-                "Call down an aerial missile strike on enemy units in a target area. After 2 seconds, two missiles arrive in succession, with 2 seconds between them."
-            ],
-            "attributes": [
-                "MISSILE ONE DAMAGE: 150 / 250 / 350",
-                "MISSILE TWO DAMAGE: 200 / 275 / 350",
-                "MISSILE ONE SLOW: 30%",
-                "MISSILE TWO SLOW: 60%",
-                "RADIUS: 600"
-            ],
-            "lore": "'Bombs Away!'",
-            "notes": [
-                "The visual indicator is visible to allies only."
-            ]
-        },
-        "stat": {
-            "abilityId": 5364,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 48,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1000
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                90.0
-            ],
-            "manaCost": [
-                125.0,
-                125.0,
-                125.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Call Down",
+        "desc_loc": "Call down an aerial missile strike on enemy units in a target area. After %missile_delay_tooltip% seconds, two missiles arrive in succession, with %missile_delay_tooltip% seconds between them.",
+        "lore_loc": "'Bombs Away!'",
+        "notes_loc": [
+            "The visual indicator is visible to allies only."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "48",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 3,
+        "cast_ranges": [
+            1000
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            90
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            125,
+            125,
+            125
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "slow_duration_first",
+                "values_float": [],
+                "values_int": [
+                    2
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "slow_duration_second",
+                "values_float": [],
+                "values_int": [
+                    4
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "damage_first",
+                "values_float": [],
+                "values_int": [
+                    150,
+                    250,
+                    350
+                ],
+                "is_percentage": false,
+                "heading_loc": "MISSILE ONE DAMAGE:"
+            },
+            {
+                "name": "damage_second",
+                "values_float": [],
+                "values_int": [
+                    200,
+                    275,
+                    350
+                ],
+                "is_percentage": false,
+                "heading_loc": "MISSILE TWO DAMAGE:"
+            },
+            {
+                "name": "slow_first",
+                "values_float": [
+                    30
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "MISSILE ONE SLOW:"
+            },
+            {
+                "name": "slow_second",
+                "values_float": [
+                    60
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "MISSILE TWO SLOW:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "range_scepter",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "damage_second_scepter",
+                "values_float": [],
+                "values_int": [
+                    175,
+                    225,
+                    275
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "missile_delay_tooltip",
+                "values_float": [],
+                "values_int": [
+                    2
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6216": {
-        "id": 6216,
-        "name": "special_bonus_unique_gyrocopter_1",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 6216,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "3 Homing Missile Charges",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6216,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "487": {
+        "id": 487,
+        "name": "special_bonus_attack_damage_16",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    16
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6312": {
-        "id": 6312,
-        "name": "special_bonus_unique_gyrocopter_2",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 6312,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+3 Flak Cannon Attacks",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6312,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6652": {
-        "id": 6652,
-        "name": "special_bonus_unique_gyrocopter_3",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 6652,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+16 Rocket Barrage Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6652,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6653": {
-        "id": 6653,
-        "name": "special_bonus_unique_gyrocopter_4",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 6653,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-40s Call Down Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6653,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6654": {
-        "id": 6654,
-        "name": "special_bonus_unique_gyrocopter_5",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 6654,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Global Call Down",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6654,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "5959": {
+        "id": 5959,
+        "name": "special_bonus_hp_200",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "7141": {
         "id": 7141,
         "name": "special_bonus_unique_gyrocopter_6",
-        "uri": "gyrocopter",
-        "language": {
-            "abilityId": 7141,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+0.4s Homing Missile Stun Duration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7141,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value}s Homing Missile Stun Duration",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6653": {
+        "id": 6653,
+        "name": "special_bonus_unique_gyrocopter_4",
+        "name_loc": "-{s:value}s Call Down Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6141": {
+        "id": 6141,
+        "name": "special_bonus_movement_speed_30",
+        "name_loc": "+{s:value} Movement Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6652": {
+        "id": 6652,
+        "name": "special_bonus_unique_gyrocopter_3",
+        "name_loc": "+{s:value} Rocket Barrage Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    16
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6216": {
+        "id": 6216,
+        "name": "special_bonus_unique_gyrocopter_1",
+        "name_loc": "{s:value} Homing Missile Charges",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    3
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6654": {
+        "id": 6654,
+        "name": "special_bonus_unique_gyrocopter_5",
+        "name_loc": "Global Call Down",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

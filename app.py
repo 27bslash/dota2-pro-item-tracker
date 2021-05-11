@@ -1,35 +1,21 @@
 import timeago
 import datetime
-import os
-import re
-import threading
 import time
+import asyncio
+import json
+import itertools
 from operator import itemgetter
-import pymongo
-from apscheduler.schedulers.background import BackgroundScheduler
+
 from flask import Flask, redirect, render_template, request, url_for, after_this_request
 from flask_caching import Cache
 from flask_compress import Compress
-from parsel import Selector
-from pymongo import MongoClient
-from helper_funcs.helper_functions import *
-from opendota_api import *
-from test import *
-import itertools
-import gzip
-import functools
-from io import BytesIO as IO
-from flask_minify import minify, decorators
-import urllib.parse
-# TODO
 
+from helper_funcs.helper_imports import *
+from opendota_api import main
+import math
+# TODO
 # show alex ads
 # make levels accurate
-cluster = pymongo.MongoClient(
-    'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
-db = cluster['pro-item-tracker']
-hero_urls = db['urls']
-hero_output = db['heroes']
 
 COMPRESS_MIMETYPES = ['text/html', 'text/css', 'text/xml',
                       'application/json', 'application/javascript']
@@ -45,10 +31,6 @@ compress.init_app(app)
 # minify(app=app, html=True, js=False, cssless=False)
 
 # classes
-hero_methods = Hero()
-item_methods = Items()
-database_methods = Db_insert()
-talent_methods = Talents()
 
 
 @app.route('/', methods=['GET'])
@@ -424,8 +406,6 @@ def find_hero(query, hero):
 
 
 def get_winrate():
-    print('running....')
-    d = {}
     output = []
     roles = ['Hard Support', 'Support', 'Safelane',
              'Offlane', 'Midlane', 'Roaming']
@@ -440,7 +420,6 @@ def get_winrate():
                 total_bans = hero_output.count_documents(
                     {'bans': hero['name']})
                 if total_wins == 0 or picks == 0:
-                    print('hero')
                     total_winrate = 0
                 else:
                     total_winrate = (total_wins / picks) * 100
@@ -480,7 +459,6 @@ def get_hero_name_colour(hero_name):
 
 
 def mongo_search(query):
-    print('quer', query)
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         matches = [hero['name']
@@ -526,14 +504,14 @@ def items_json():
 
 @ app.route('/files/colors')
 def color_json():
-    with open('json_files/hero_colours.json', 'r') as f:
+    with open('colours/hero_colours.json', 'r') as f:
         data = json.load(f)
         return data
 
 
 @ app.route('/files/ability_colours')
 def ability_color_json():
-    with open('json_files/ability_colours.json', 'r') as f:
+    with open('colours/ability_colours.json', 'r') as f:
         data = json.load(f)
         return data
 
@@ -634,23 +612,15 @@ async def single_request(name):
 def opendota_call():
     heroes = []
     start = time.time()
-    db['most-common-items'].delete_many({'hero': 'anti-mage'})
     delete_old_urls()
     print('input')
+    strt = time.perf_counter()
+    print('1st', time.perf_counter() - strt)
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
-        for i in data['heroes']:
-            heroes.append(i['name'])
-            database_methods.insert_talent_order(i['name'])
-        strt = time.perf_counter()
-        print('1st', time.perf_counter() - strt)
-    with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
-        for hero in heroes:
+        for hero in data['heroes']:
+            hero = hero['name']
             sleep = len(get_urls(hero))
-
-            # hero_output.delete_many({'hero': hero})
-
             asyncio.run(main(get_urls(hero), hero))
             database_methods.insert_total_picks('hero', hero, 'hero_picks')
             database_methods.insert_total_picks('bans', hero, 'hero_picks')
@@ -682,9 +652,10 @@ def update_one_entry(hero, id):
 
 
 if __name__ == '__main__':
-    # manual_hero_update('grimstroke')
+    # manual_hero_update('lich')
     # update_one_entry('batrider', 5965228394)
     # manual_hero_update('f')
     # opendota_call()
+    # get_winrate()
     app.run(debug=False)
     pass

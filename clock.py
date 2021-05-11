@@ -1,12 +1,6 @@
 from apscheduler.schedulers.background import BlockingScheduler
 import datetime
-import time
-from app import *
-from opendota_api import *
-from helper_funcs.helper_functions import *
-import asyncio
-
-
+from app import opendota_call
 scheduler = BlockingScheduler()
 if __name__ == '__main__':
     try:

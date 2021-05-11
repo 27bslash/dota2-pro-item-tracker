@@ -1,743 +1,1465 @@
 {
-    "525": {
-        "id": 525,
-        "name": "special_bonus_unique_magnus_6",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 525,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+0.5s Shockwave Slow Duration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 525,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "538": {
-        "id": 538,
-        "name": "magnataur_greater_shockwave",
-        "language": {
-            "abilityId": 538,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Rolling Shockwave",
-            "description": [
-                "."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 538,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 0,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 3,
-            "spellImmunity": 3,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": true,
-            "hasScepterUpgrade": true,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1500
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.1
-            ],
-            "cooldown": [
-                16.0
-            ],
-            "manaCost": [
-                100.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
-    "649": {
-        "id": 649,
-        "name": "magnataur_horn_toss",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 649,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Horn Toss",
-            "description": [
-                "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend 0.6 seconds in the air, then take 200 damage and are stunned for 0.75 seconds upon landing."
-            ],
-            "attributes": [
-                "AIR DURATION: 0.6",
-                "DAMAGE: 200",
-                "STUN DURATION: 0.75"
-            ],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 649,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.2
-            ],
-            "cooldown": [
-                30.0
-            ],
-            "manaCost": [
-                125.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": true
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
-    "712": {
-        "id": 712,
-        "name": "special_bonus_unique_magnus_7",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 712,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-7s Skewer Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 712,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "5518": {
         "id": 5518,
         "name": "magnataur_shockwave",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 5518,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Shockwave",
-            "description": [
-                "Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him and slowing them for a brief period."
-            ],
-            "attributes": [
-                "DAMAGE: 75 / 150 / 225 / 300",
-                "MOVEMENT SLOW: 75%",
-                "SLOW DURATION: 0.9"
-            ],
-            "lore": "Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations.",
-            "aghanimDescription": "Magnus releases 3 Shockwaves traveling away from him at 30-degree angles. After reaching their limit, the Shockwaves return to their origin, dealing 75%% damage and pulling a second time.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5518,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 24,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1200
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                13.0,
-                12.0,
-                11.0,
-                10.0
-            ],
-            "manaCost": [
-                80.0,
-                90.0,
-                100.0,
-                110.0
-            ],
-            "isUltimate": false,
-            "duration": "0.6875 0.6875 0.6875 0.6875",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Shockwave",
+        "desc_loc": "Magnus sends out a wave of force, damaging enemy units in a line, pulling them towards him and slowing them for a brief period.",
+        "lore_loc": "Mt. Joerlak was a somewhat unstable mass, and Magnus has learned to channel its reverberations.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "Magnus releases 3 Shockwaves traveling away from him at 30-degree angles. After reaching their limit, the Shockwaves return to their origin, dealing 75%% damage and pulling a second time.",
+        "type": 0,
+        "behavior": "24",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            1200
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            13,
+            12,
+            11,
+            10
+        ],
+        "durations": [
+            0.6875,
+            0.6875,
+            0.6875,
+            0.6875
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            80,
+            90,
+            100,
+            110
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "shock_speed",
+                "values_float": [],
+                "values_int": [
+                    900
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "shock_width",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "shock_damage",
+                "values_float": [],
+                "values_int": [
+                    75,
+                    150,
+                    225,
+                    300
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "pull_duration",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "movement_slow",
+                "values_float": [],
+                "values_int": [
+                    75
+                ],
+                "is_percentage": true,
+                "heading_loc": "MOVEMENT SLOW:"
+            },
+            {
+                "name": "slow_duration",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "pull_distance",
+                "values_float": [],
+                "values_int": [
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "basic_slow_duration",
+                "values_float": [
+                    0.89999997615814
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SLOW DURATION:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    0.6875,
+                    0.6875,
+                    0.6875,
+                    0.6875
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5519": {
         "id": 5519,
         "name": "magnataur_empower",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 5519,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Empower",
-            "description": [
-                "Gives an allied unit bonus damage and cleave on attack. Magnus receives 75% larger bonus."
-            ],
-            "attributes": [
-                "DURATION: 40",
-                "BONUS DAMAGE: 12% / 20% / 28% / 36%",
-                "CLEAVE DAMAGE: 10% / 20% / 30% / 40%"
-            ],
-            "lore": "With a deep bellow, Magnus displays his true power.",
-            "notes": [
-                "The bonus damage is based only on base damage and damage from primary attributes.",
-                "Cleave damage goes through spell immunity.",
-                "Ranged units cannot Cleave."
-            ]
-        },
-        "stat": {
-            "abilityId": 5519,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 32776,
-            "unitTargetType": 3,
-            "unitTargetTeam": 2,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 4,
-            "modifierSupportValue": 0.30000001192092896,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                800
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                8.0
-            ],
-            "manaCost": [
-                45.0,
-                60.0,
-                75.0,
-                90.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Empower",
+        "desc_loc": "Gives an allied unit bonus damage and cleave on attack. Magnus receives %self_multiplier%%% larger bonus.",
+        "lore_loc": "With a deep bellow, Magnus displays his true power.",
+        "notes_loc": [
+            "The bonus damage is based only on base damage and damage from primary attributes.",
+            "Cleave damage goes through spell immunity.",
+            "Ranged units cannot Cleave."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "33554440",
+        "target_team": 1,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 1,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            800
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            8
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            45,
+            60,
+            75,
+            90
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "empower_duration",
+                "values_float": [
+                    40
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "bonus_damage_pct",
+                "values_float": [],
+                "values_int": [
+                    12,
+                    20,
+                    28,
+                    36
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS DAMAGE:"
+            },
+            {
+                "name": "cleave_damage_pct",
+                "values_float": [
+                    10,
+                    20,
+                    30,
+                    40
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "CLEAVE DAMAGE:"
+            },
+            {
+                "name": "cleave_starting_width",
+                "values_float": [],
+                "values_int": [
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "cleave_ending_width",
+                "values_float": [],
+                "values_int": [
+                    360
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "cleave_distance",
+                "values_float": [],
+                "values_int": [
+                    650
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "aura_radius",
+                "values_float": [],
+                "values_int": [
+                    900
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "self_multiplier",
+                "values_float": [
+                    75
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5520": {
         "id": 5520,
         "name": "magnataur_skewer",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 5520,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Skewer",
-            "description": [
-                "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed."
-            ],
-            "attributes": [
-                "DISTANCE: 900 / 1000 / 1100 / 1200",
-                "SPEED: 900",
-                "SLOW DURATION: 3.25",
-                "SLOW: 10% / 20% / 30% / 40%",
-                "DAMAGE: 70 / 150 / 230 / 310",
-                "ATTACK SPEED SLOW: 10 / 20 / 30 / 40",
-                "SCEPTER COOLDOWN: 6",
-                "SCEPTER MANACOST: 40"
-            ],
-            "lore": "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants.",
-            "notes": [
-                "Doesn't affect Spell Immune units."
-            ]
-        },
-        "stat": {
-            "abilityId": 5520,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 4112,
-            "unitTargetType": 1,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                22.0,
-                20.0,
-                18.0,
-                16.0
-            ],
-            "manaCost": [
-                80.0,
-                80.0,
-                80.0,
-                80.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Skewer",
+        "desc_loc": "Magnus rushes forward, goring enemy units on his massive tusk. Heroes hit on the way will be dragged to the destination, then damaged and affected by slowed movement and attack speed.",
+        "lore_loc": "Magnoceros horns are valuable in direct proportion to their danger to prospective merchants.",
+        "notes_loc": [
+            "Doesn't affect Spell Immune units."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "524304",
+        "target_team": 0,
+        "target_type": 1,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            22,
+            20,
+            18,
+            16
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            80,
+            80,
+            80,
+            80
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "skewer_speed",
+                "values_float": [],
+                "values_int": [
+                    900
+                ],
+                "is_percentage": false,
+                "heading_loc": "SPEED:"
+            },
+            {
+                "name": "range",
+                "values_float": [],
+                "values_int": [
+                    900,
+                    1000,
+                    1100,
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": "DISTANCE:"
+            },
+            {
+                "name": "slow_pct",
+                "values_float": [],
+                "values_int": [
+                    10,
+                    20,
+                    30,
+                    40
+                ],
+                "is_percentage": true,
+                "heading_loc": "SLOW:"
+            },
+            {
+                "name": "skewer_radius",
+                "values_float": [],
+                "values_int": [
+                    145
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "slow_duration",
+                "values_float": [
+                    3.25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SLOW DURATION:"
+            },
+            {
+                "name": "skewer_damage",
+                "values_float": [],
+                "values_int": [
+                    70,
+                    150,
+                    230,
+                    310
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "tree_radius",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "tool_attack_slow",
+                "values_float": [],
+                "values_int": [
+                    10,
+                    20,
+                    30,
+                    40
+                ],
+                "is_percentage": false,
+                "heading_loc": "ATTACK SPEED SLOW:"
+            },
+            {
+                "name": "skewer_cooldown",
+                "values_float": [
+                    6
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER COOLDOWN:"
+            },
+            {
+                "name": "skewer_manacost",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER MANACOST:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "649": {
+        "id": 649,
+        "name": "magnataur_horn_toss",
+        "name_loc": "Horn Toss",
+        "desc_loc": "Magnus tosses any enemies in front of him, launching them to his rear. Enemies spend %air_duration% seconds in the air, then take %damage% damage and are stunned for %stun_duration% seconds upon landing.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934597",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 1,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.20000000298023
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            30
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            125
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    325
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "air_duration",
+                "values_float": [
+                    0.60000002384186
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "AIR DURATION:"
+            },
+            {
+                "name": "air_height",
+                "values_float": [],
+                "values_int": [
+                    300
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "stun_duration",
+                "values_float": [
+                    0.75
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "pull_offset",
+                "values_float": [],
+                "values_int": [
+                    75
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "destination_offset",
+                "values_float": [],
+                "values_int": [
+                    175
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "pull_angle",
+                "values_float": [],
+                "values_int": [
+                    230
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5521": {
         "id": 5521,
         "name": "magnataur_reverse_polarity",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 5521,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Reverse Polarity",
-            "description": [
-                "Magnus changes properties of matter, sucking all nearby enemies in front of him and stunning them with a powerful slam and dealing damage."
-            ],
-            "attributes": [
-                "PULL RADIUS: 410",
-                "DAMAGE: 50 / 125 / 200",
-                "STUN DURATION: 2.75 / 3.25 / 3.75"
-            ],
-            "lore": "Magnus fights with the fury of the erupting Mt. Joerlak.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5521,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 4,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 3,
-            "modifierSupportValue": 0.5,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                410,
-                410,
-                410
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                130.0
-            ],
-            "manaCost": [
-                150.0,
-                225.0,
-                300.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Reverse Polarity",
+        "desc_loc": "Magnus changes properties of matter, sucking all nearby enemies in front of him and stunning them with a powerful slam and dealing damage.",
+        "lore_loc": "Magnus fights with the fury of the erupting Mt. Joerlak.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 3,
+        "dispellable": 1,
+        "max_level": 3,
+        "cast_ranges": [
+            410,
+            410,
+            410
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            130
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            150,
+            225,
+            300
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "pull_radius",
+                "values_float": [],
+                "values_int": [
+                    410
+                ],
+                "is_percentage": false,
+                "heading_loc": "PULL RADIUS:"
+            },
+            {
+                "name": "polarity_damage",
+                "values_float": [],
+                "values_int": [
+                    75,
+                    150,
+                    225
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "hero_stun_duration",
+                "values_float": [
+                    2.75,
+                    3.25,
+                    3.75
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "pull_duration",
+                "values_float": [
+                    0
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    410,
+                    410,
+                    410
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6199": {
-        "id": 6199,
-        "name": "special_bonus_unique_magnus",
-        "uri": "Magnus",
-        "language": {
-            "abilityId": 6199,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-4s Shockwave Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6199,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "5960": {
+        "id": 5960,
+        "name": "special_bonus_attack_damage_20",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6390": {
-        "id": 6390,
-        "name": "special_bonus_unique_magnus_2",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 6390,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+10% Empower Damage/Cleave",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6390,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "525": {
+        "id": 525,
+        "name": "special_bonus_unique_magnus_6",
+        "name_loc": "+{s:value}s Shockwave Slow Duration",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5928": {
+        "id": 5928,
+        "name": "special_bonus_strength_12",
+        "name_loc": "+{s:value} Strength",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "712": {
+        "id": 712,
+        "name": "special_bonus_unique_magnus_7",
+        "name_loc": "-{s:value}s Skewer Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    7
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6195": {
+        "id": 6195,
+        "name": "special_bonus_hp_350",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    350
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6507": {
         "id": 6507,
         "name": "special_bonus_unique_magnus_3",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 6507,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+425 Skewer Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6507,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Skewer Range",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    425
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6690": {
-        "id": 6690,
-        "name": "special_bonus_unique_magnus_4",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 6690,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+110 Shockwave Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6690,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "6390": {
+        "id": 6390,
+        "name": "special_bonus_unique_magnus_2",
+        "name_loc": "+{s:value}% Empower Damage/Cleave",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    10
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6691": {
         "id": 6691,
         "name": "special_bonus_unique_magnus_5",
-        "uri": "magnataur",
-        "language": {
-            "abilityId": 6691,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+1s Reverse Polarity Stun Duration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6691,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value}s Reverse Polarity Stun Duration",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

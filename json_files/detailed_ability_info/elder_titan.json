@@ -2,669 +2,1353 @@
     "5589": {
         "id": 5589,
         "name": "elder_titan_echo_stomp",
-        "uri": "elder_titan",
-        "language": {
-            "abilityId": 5589,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Echo Stomp",
-            "description": [
-                "Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations.  The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage."
-            ],
-            "attributes": [
-                "CAST TIME: 1.7",
-                "RADIUS: 500",
-                "STOMP DAMAGE: 70 / 100 / 130 / 160",
-                "SLEEP DURATION: 2 / 3 / 4 / 5",
-                "WAKEUP DAMAGE THRESHOLD: 50 / 100 / 150 / 200",
-                "CAST TIME:%spirit_cast_time%",
-                "RADIUS:%spirit_radius%",
-                "STOMP DAMAGE:%spirit_stomp_damage%",
-                "SLEEP DURATION:%spirit_sleep_duration%",
-                "WAKE THRESHOLD:%spirit_wake_damage_limit%"
-            ],
-            "lore": "The force of creation still echoes in the stomp of the Titan.",
-            "notes": [
-                "If a unit is hit by Astral Spirit and Elder Titan, they will take both instances of damage."
-            ],
-            "shardDescription": "Allows you to switch Echo Stomp to autocast. When cast while on autocast, Elder Titan will take the place of the Astral Spirit as it completes its stomp."
-        },
-        "stat": {
-            "abilityId": 5589,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 132,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 3,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                500
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.4
-            ],
-            "channelTime": [
-                1.3
-            ],
-            "cooldown": [
-                14.0,
-                13.0,
-                12.0,
-                11.0
-            ],
-            "manaCost": [
-                100.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5590": {
-        "id": 5590,
-        "name": "elder_titan_echo_stomp_spirit",
-        "language": {
-            "abilityId": 5590,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Echo Stomp",
-            "description": [
-                "Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations.  The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage.  Unconscious enemies will wake if they take damage."
-            ],
-            "attributes": [
-                "CAST TIME: 1.7",
-                "RADIUS: 500",
-                "STOMP DAMAGE: 70 / 100 / 130 / 160",
-                "SLEEP DURATION: 2 / 3 / 4 / 5"
-            ],
-            "lore": "The force of creation still echoes in the stomp of the Titan.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5590,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 132,
-            "unitTargetType": 8,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                500
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0
-            ],
-            "channelTime": [
-                1.3
-            ],
-            "cooldown": [
-                14.0,
-                13.0,
-                12.0,
-                11.0
-            ],
-            "manaCost": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Echo Stomp",
+        "desc_loc": "Elder Titan and his Astral Spirit both stomp the ground, damaging and knocking nearby enemy units unconscious around their locations.  The Elder Titan stomp deals physical damage, while the Spirit stomp deals magical damage.",
+        "lore_loc": "The force of creation still echoes in the stomp of the Titan.",
+        "notes_loc": [
+            "If a unit is hit by Astral Spirit and Elder Titan, they will take both instances of damage."
+        ],
+        "shard_loc": "Allows you to switch Echo Stomp to autocast. When cast while on autocast, Elder Titan will take the place of the Astral Spirit as it completes its stomp.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "132",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 1,
+        "immunity": 4,
+        "dispellable": 1,
+        "max_level": 4,
+        "cast_ranges": [
+            500
+        ],
+        "cast_points": [
+            0.40000000596046
+        ],
+        "channel_times": [
+            1.2999999523163
+        ],
+        "cooldowns": [
+            14,
+            13,
+            12,
+            11
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            100
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "cast_time",
+                "values_float": [
+                    1.7000000476837
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "CAST TIME:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "sleep_duration",
+                "values_float": [
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SLEEP DURATION:"
+            },
+            {
+                "name": "stomp_damage",
+                "values_float": [],
+                "values_int": [
+                    70,
+                    100,
+                    130,
+                    160
+                ],
+                "is_percentage": false,
+                "heading_loc": "STOMP DAMAGE:"
+            },
+            {
+                "name": "initial_stun_duration",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "animation_rate",
+                "values_float": [
+                    0
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "wake_damage_limit",
+                "values_float": [],
+                "values_int": [
+                    50,
+                    100,
+                    150,
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": "WAKEUP DAMAGE THRESHOLD:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityChannelTime",
+                "values_float": [
+                    1.2999999523163
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5591": {
         "id": 5591,
         "name": "elder_titan_ancestral_spirit",
-        "uri": "elder_titan",
-        "language": {
-            "abilityId": 5591,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Astral Spirit",
-            "description": [
-                "Elder Titan sends forth his Astral Spirit, damaging any units it passes through.  When the spirit rejoins the Titan, it grants bonus damage and movement speed for each unit it passed through.",
-                "",
-                "The Astral Spirit can be controlled and possesses the Echo Stomp, Return Spirit, and Natural Order abilities."
-            ],
-            "attributes": [
-                "DURATION: 8.0",
-                "BUFF DURATION: 10.0",
-                "DAMAGE: 50",
-                "RADIUS: 275",
-                "BONUS SPEED (CREEPS): 1%",
-                "BONUS SPEED (HEROES): 7%",
-                "BONUS DAMAGE (CREEPS): 3 / 7 / 11 / 15",
-                "BONUS DAMAGE (HEROES): 20 / 40 / 60 / 80",
-                "BONUS ARMOR (CREEPS): 0.5",
-                "BONUS ARMOR (HEROES): 1.5 / 3 / 4.5 / 6"
-            ],
-            "lore": "Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need.",
-            "aghanimDescription": "Causes you to become Spell Immune for %scepter_magic_immune_per_hero% seconds per affected enemy hero when the spirit returns to you.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5591,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 16432,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 3,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1200
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.4,
-                0.4,
-                0.4,
-                0.4
-            ],
-            "cooldown": [
-                23.0,
-                21.0,
-                19.0,
-                17.0
-            ],
-            "manaCost": [
-                80.0,
-                90.0,
-                100.0,
-                110.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5592": {
-        "id": 5592,
-        "name": "elder_titan_return_spirit",
-        "uri": "elder_titan",
-        "language": {
-            "abilityId": 5592,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Return Astral Spirit",
-            "description": [
-                "Returns the Astral Spirit to Elder Titan."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5592,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 575557,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                0.0,
-                0.0,
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Astral Spirit",
+        "desc_loc": "Elder Titan sends forth his Astral Spirit, damaging any units it passes through.  When the spirit rejoins the Titan, it grants bonus damage and movement speed for each unit it passed through.\n\nThe Astral Spirit can be controlled and possesses the Echo Stomp, Return Spirit, and Natural Order abilities.",
+        "lore_loc": "Like the four fundamentals, Elder Titan exists across all planes at once and can draw other aspects of himself to assist in times of need.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "Causes you to become Spell Immune for %scepter_magic_immune_per_hero% seconds per affected enemy hero when the spirit returns to you.",
+        "type": 0,
+        "behavior": "134217776",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 3,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            1200
+        ],
+        "cast_points": [
+            0.40000000596046,
+            0.40000000596046,
+            0.40000000596046,
+            0.40000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            23,
+            21,
+            19,
+            17
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            80,
+            90,
+            100,
+            110
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    275
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "pass_damage",
+                "values_float": [],
+                "values_int": [
+                    50
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "spirit_duration",
+                "values_float": [
+                    8
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "buff_duration",
+                "values_float": [
+                    10
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BUFF DURATION:"
+            },
+            {
+                "name": "speed",
+                "values_float": [],
+                "values_int": [
+                    900
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "move_pct_creeps",
+                "values_float": [],
+                "values_int": [
+                    1
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS SPEED (CREEPS):"
+            },
+            {
+                "name": "move_pct_heroes",
+                "values_float": [],
+                "values_int": [
+                    7
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS SPEED (HEROES):"
+            },
+            {
+                "name": "damage_creeps",
+                "values_float": [],
+                "values_int": [
+                    3,
+                    7,
+                    11,
+                    15
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS DAMAGE (CREEPS):"
+            },
+            {
+                "name": "damage_heroes",
+                "values_float": [],
+                "values_int": [
+                    20,
+                    40,
+                    60,
+                    80
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS DAMAGE (HEROES):"
+            },
+            {
+                "name": "armor_creeps",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BONUS ARMOR (CREEPS):"
+            },
+            {
+                "name": "armor_heroes",
+                "values_float": [
+                    1.5,
+                    3,
+                    4.5,
+                    6
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BONUS ARMOR (HEROES):"
+            },
+            {
+                "name": "move_pct_cap",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "scepter_magic_immune_per_hero",
+                "values_float": [],
+                "values_int": [
+                    2
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.40000000596046,
+                    0.40000000596046,
+                    0.40000000596046,
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5593": {
         "id": 5593,
         "name": "elder_titan_natural_order",
-        "uri": "elder_titan",
-        "language": {
-            "abilityId": 5593,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Natural Order",
-            "description": [
-                "Reduces all elements to their basic levels, removing base armor and magic damage resistance from nearby enemy units. The armor reduction is centered around the hero, while the magic armor reduction is centered around Astral Spirit."
-            ],
-            "attributes": [
-                "RADIUS: 350",
-                "BASE ARMOR REDUCTION: 40% / 60% / 80% / 100%",
-                "BASE RESIST REDUCTION: 40% / 60% / 80% / 100%",
-                "RADIUS:%spirit_radius%",
-                "%BASE ARMOR REDUCTION:%spirit_armor_reduction_pct%",
-                "%BASE RESIST REDUCTION:%spirit_magic_resistance_pct%"
-            ],
-            "lore": "As it was at the beginning, Elder Titan makes it so again.",
-            "notes": [
-                "When the Astral Spirit isn't present, both the armor and magic armor reduction is centered around Elder Titan."
-            ]
-        },
-        "stat": {
-            "abilityId": 5593,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 1048578,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Natural Order",
+        "desc_loc": "Reduces all elements to their basic levels, removing base armor and magic damage resistance from nearby enemy units. The armor reduction is centered around the hero, while the magic armor reduction is centered around Astral Spirit.",
+        "lore_loc": "As it was at the beginning, Elder Titan makes it so again.",
+        "notes_loc": [
+            "When the Astral Spirit isn't present, both the armor and magic armor reduction is centered around Elder Titan."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "65538",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    350
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "armor_reduction_pct",
+                "values_float": [],
+                "values_int": [
+                    40,
+                    60,
+                    80,
+                    100
+                ],
+                "is_percentage": true,
+                "heading_loc": "BASE ARMOR REDUCTION:"
+            },
+            {
+                "name": "magic_resistance_pct",
+                "values_float": [],
+                "values_int": [
+                    40,
+                    60,
+                    80,
+                    100
+                ],
+                "is_percentage": true,
+                "heading_loc": "BASE RESIST REDUCTION:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5594": {
         "id": 5594,
         "name": "elder_titan_earth_splitter",
-        "uri": "elder_titan",
-        "language": {
-            "abilityId": 5594,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Earth Splitter",
-            "description": [
-                "Sends forth a jagged crack in front of Elder Titan. After 3 seconds, the crack implodes, slowing movement while dealing damage to each enemy based on their maximum life. Half of the damage dealt is Magical damage, while the other half is Physical damage."
-            ],
-            "attributes": [
-                "CRACK WIDTH: 315",
-                "CRACK LENGTH: 2400",
-                "IMPLODE DELAY: 2.8",
-                "SLOW DURATION: 3.0 / 4.0 / 5.0",
-                "MAX HP AS DAMAGE: 30% / 40% / 50%",
-                "MOVEMENT SLOW: 30% / 40% / 50%"
-            ],
-            "lore": "That which he created, the titan tears asunder.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5594,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 16,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 3,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                2400
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.4,
-                0.4,
-                0.4
-            ],
-            "cooldown": [
-                120.0,
-                110.0,
-                100.0
-            ],
-            "manaCost": [
-                125.0,
-                175.0,
-                225.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Earth Splitter",
+        "desc_loc": "Sends forth a jagged crack in front of Elder Titan. After 3 seconds, the crack implodes, slowing movement while dealing damage to each enemy based on their maximum life. Half of the damage dealt is Magical damage, while the other half is Physical damage.",
+        "lore_loc": "That which he created, the titan tears asunder.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "16",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 3,
+        "dispellable": 2,
+        "max_level": 3,
+        "cast_ranges": [
+            2400
+        ],
+        "cast_points": [
+            0.40000000596046,
+            0.40000000596046,
+            0.40000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            120,
+            110,
+            100
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            125,
+            175,
+            225
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "crack_time",
+                "values_float": [
+                    2.718199968338
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "IMPLODE DELAY:"
+            },
+            {
+                "name": "crack_width",
+                "values_float": [],
+                "values_int": [
+                    315
+                ],
+                "is_percentage": false,
+                "heading_loc": "CRACK WIDTH:"
+            },
+            {
+                "name": "crack_distance",
+                "values_float": [],
+                "values_int": [
+                    2400
+                ],
+                "is_percentage": false,
+                "heading_loc": "CRACK LENGTH:"
+            },
+            {
+                "name": "slow_pct",
+                "values_float": [],
+                "values_int": [
+                    30,
+                    40,
+                    50
+                ],
+                "is_percentage": true,
+                "heading_loc": "MOVEMENT SLOW:"
+            },
+            {
+                "name": "slow_duration",
+                "values_float": [
+                    3,
+                    4,
+                    5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SLOW DURATION:"
+            },
+            {
+                "name": "speed",
+                "values_float": [],
+                "values_int": [
+                    1100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "damage_pct",
+                "values_float": [],
+                "values_int": [
+                    30,
+                    40,
+                    50
+                ],
+                "is_percentage": true,
+                "heading_loc": "MAX HP AS DAMAGE:"
+            },
+            {
+                "name": "vision_width",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_interval",
+                "values_float": [
+                    0.21999999880791
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_duration",
+                "values_float": [
+                    4
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_step",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "total_steps",
+                "values_float": [],
+                "values_int": [
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "slow_duration_scepter",
+                "values_float": [
+                    4,
+                    5,
+                    6
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    2400
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.40000000596046,
+                    0.40000000596046,
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "5750": {
-        "id": 5750,
-        "name": "elder_titan_natural_order_spirit",
-        "language": {
-            "abilityId": 5750,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Natural Order",
-            "description": [
-                "Reduces all elements to their basic levels, removing base armor and magic damage resistance from nearby enemy units. The armor reduction is centered around the hero, while the magic armor reduction is centered around Astral Spirit."
-            ],
-            "attributes": [
-                "RADIUS: 350",
-                "BASE ARMOR REDUCTION: 40% / 60% / 80% / 100%",
-                "BASE RESIST REDUCTION: 40% / 60% / 80% / 100%"
-            ],
-            "lore": "As it was at the beginning, Elder Titan makes it so again.",
-            "notes": [
-                "When the Astral Spirit isn't present, both the armor and magic armor reduction is centered around Elder Titan."
-            ]
-        },
-        "stat": {
-            "abilityId": 5750,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 1048578,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+    "5917": {
+        "id": 5917,
+        "name": "special_bonus_movement_speed_15",
+        "name_loc": "+{s:value} Movement Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    15
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5906": {
+        "id": 5906,
+        "name": "special_bonus_attack_speed_20",
+        "name_loc": "+{s:value} Attack Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6138": {
+        "id": 6138,
+        "name": "special_bonus_magic_resistance_15",
+        "name_loc": "+{s:value}% Magic Resistance",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    15
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6171": {
         "id": 6171,
         "name": "special_bonus_unique_elder_titan",
-        "uri": "elder_titan",
-        "language": {
-            "abilityId": 6171,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+25 Astral Spirit Hero Attack",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6171,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Astral Spirit Hero Attack",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    25
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6827": {
+        "id": 6827,
+        "name": "special_bonus_cleave_100",
+        "name_loc": "+{s:value}% Cleave",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6378": {
         "id": 6378,
         "name": "special_bonus_unique_elder_titan_2",
-        "uri": "elder_titan",
-        "language": {
-            "abilityId": 6378,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+100 Echo Stomp Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6378,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Echo Stomp Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6720": {
         "id": 6720,
         "name": "special_bonus_unique_elder_titan_3",
-        "uri": "elder_titan",
-        "language": {
-            "abilityId": 6720,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-60 Earth Splitter Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6720,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "-{s:value} Earth Splitter Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    60
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "7350": {
         "id": 7350,
         "name": "special_bonus_unique_elder_titan_4",
-        "uri": "elder_titan",
-        "language": {
-            "abilityId": 7350,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+450 Echo Stomp Wake Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7350,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Echo Stomp Wake Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    450
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

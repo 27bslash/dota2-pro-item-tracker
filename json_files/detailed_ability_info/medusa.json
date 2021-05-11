@@ -1,559 +1,1347 @@
 {
-    "701": {
-        "id": 701,
-        "name": "medusa_cold_blooded",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 701,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Cold Blooded",
-            "description": [
-                "When Medusa is targeted with a spell, a single-target Mystic Snake is sent back towards the enemy. Cooldown: 12."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 701,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "cooldown": [
-                12.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": true
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
     "5504": {
         "id": 5504,
         "name": "medusa_split_shot",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 5504,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Split Shot",
-            "description": [
-                "Medusa magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage.",
-                "",
-                "The extra targets will not receive other attack effects (such as critical strike)."
-            ],
-            "attributes": [
-                "OUTGOING DAMAGE: 50% / 60% / 70% / 80%",
-                "EXTRA TARGETS: 4"
-            ],
-            "lore": "All who encounter the cursed Gorgon will feel her rage.",
-            "notes": [
-                "Secondary targets will be the closest enemy units excluding the primary target.",
-                "If illusions of Medusa are created while Split Shot is active, they will also have this ability."
-            ]
-        },
-        "stat": {
-            "abilityId": 5504,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2564,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 3,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.4,
-                0.4,
-                0.4,
-                0.4
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Split Shot",
+        "desc_loc": "Medusa magically splits her shot into several arrows. These arrows deal a lower percent of her normal damage.\n\nThe extra targets will not receive other attack effects (such as critical strike).",
+        "lore_loc": "All who encounter the cursed Gorgon will feel her rage.",
+        "notes_loc": [
+            "Secondary targets will be the closest enemy units excluding the primary target.",
+            "If illusions of Medusa are created while Split Shot is active, they will also have this ability."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2564",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 3,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.40000000596046,
+            0.40000000596046,
+            0.40000000596046,
+            0.40000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage_modifier",
+                "values_float": [],
+                "values_int": [
+                    -50,
+                    -40,
+                    -30,
+                    -20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "damage_modifier_tooltip",
+                "values_float": [],
+                "values_int": [
+                    50,
+                    60,
+                    70,
+                    80
+                ],
+                "is_percentage": true,
+                "heading_loc": "OUTGOING DAMAGE:"
+            },
+            {
+                "name": "arrow_count",
+                "values_float": [],
+                "values_int": [
+                    4
+                ],
+                "is_percentage": false,
+                "heading_loc": "EXTRA TARGETS:"
+            },
+            {
+                "name": "split_shot_bonus_range",
+                "values_float": [],
+                "values_int": [
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.40000000596046,
+                    0.40000000596046,
+                    0.40000000596046,
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5505": {
         "id": 5505,
         "name": "medusa_mystic_snake",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 5505,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Mystic Snake",
-            "description": [
-                "A mystic snake made of energy jumps from target to target dealing damage. After it reaches its last target, it returns to Medusa to replenish her with mana. The snake deals more damage per jump and returns 11 / 14 / 17 / 20% mana based on the targets' total mana."
-            ],
-            "attributes": [
-                "JUMP RADIUS: 475 / 475 / 475 / 475",
-                "JUMPS: 3 / 4 / 5 / 6",
-                "DAMAGE: 80 / 120 / 160 / 200",
-                "DAMAGE INCREASE PER JUMP: 35%",
-                "MANA GAIN: 11% / 14% / 17% / 20%",
-                "MOVEMENT SLOW: 30%",
-                "TURN SLOW: 50%",
-                "SLOW DURATION: 3",
-                "SCEPTER BASE DURATION: 1.5",
-                "SCEPTER DURATION BOUNCE INCREASE: 0.2"
-            ],
-            "lore": "The Gorgon's curse is her greatest strength.",
-            "aghanimDescription": "Causes Mystic Snake to turn enemies hit into stone. Stone duration increases with each bounce of the Mystic Snake.",
-            "notes": [
-                "Mystic Snake cannot be disjointed."
-            ]
-        },
-        "stat": {
-            "abilityId": 5505,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 8,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                700
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.2
-            ],
-            "cooldown": [
-                10.0
-            ],
-            "manaCost": [
-                140.0,
-                150.0,
-                160.0,
-                170.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Mystic Snake",
+        "desc_loc": "A mystic snake made of energy jumps from target to target dealing damage. After it reaches its last target, it returns to Medusa to replenish her with mana. The snake deals more damage per jump and returns %snake_mana_steal%%% mana based on the targets' total mana.",
+        "lore_loc": "The Gorgon's curse is her greatest strength.",
+        "notes_loc": [
+            "Mystic Snake cannot be disjointed."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "Causes Mystic Snake to turn enemies hit into stone. Stone duration increases with each bounce of the Mystic Snake.",
+        "type": 0,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            700
+        ],
+        "cast_points": [
+            0.20000000298023
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            10
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            140,
+            150,
+            160,
+            170
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    475
+                ],
+                "is_percentage": false,
+                "heading_loc": "JUMP RADIUS:"
+            },
+            {
+                "name": "snake_jumps",
+                "values_float": [],
+                "values_int": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": "JUMPS:"
+            },
+            {
+                "name": "jump_delay",
+                "values_float": [
+                    0.25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "snake_damage",
+                "values_float": [],
+                "values_int": [
+                    80,
+                    120,
+                    160,
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "snake_mana_steal",
+                "values_float": [],
+                "values_int": [
+                    11,
+                    14,
+                    17,
+                    20
+                ],
+                "is_percentage": true,
+                "heading_loc": "MANA GAIN:"
+            },
+            {
+                "name": "snake_scale",
+                "values_float": [],
+                "values_int": [
+                    35
+                ],
+                "is_percentage": true,
+                "heading_loc": "DAMAGE INCREASE PER JUMP:"
+            },
+            {
+                "name": "initial_speed",
+                "values_float": [],
+                "values_int": [
+                    800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "return_speed",
+                "values_float": [],
+                "values_int": [
+                    800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "stone_form_scepter_base",
+                "values_float": [
+                    1.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER BASE DURATION:"
+            },
+            {
+                "name": "stone_form_scepter_increment",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER DURATION BOUNCE INCREASE:"
+            },
+            {
+                "name": "movement_slow",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": true,
+                "heading_loc": "MOVEMENT SLOW:"
+            },
+            {
+                "name": "turn_slow",
+                "values_float": [],
+                "values_int": [
+                    50
+                ],
+                "is_percentage": true,
+                "heading_loc": "TURN SLOW:"
+            },
+            {
+                "name": "slow_duration",
+                "values_float": [
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SLOW DURATION:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    700
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5506": {
         "id": 5506,
         "name": "medusa_mana_shield",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 5506,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Mana Shield",
-            "description": [
-                "Creates a shield that absorbs 70% of incoming damage in exchange for Medusa's mana. Provides bonus mana capacity."
-            ],
-            "attributes": [
-                "DAMAGE PER MANA: 1.6 / 1.9 / 2.2 / 2.5",
-                "DAMAGE ABSORBED: 70%",
-                "BONUS MANA: 100 / 150 / 200 / 250"
-            ],
-            "lore": "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers.",
-            "notes": [
-                "Absorbs damage before any damage reduction takes place, meaning that armor will not reduce the amount of mana needed to absorb damage."
-            ]
-        },
-        "stat": {
-            "abilityId": 5506,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2564,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.4,
-                0.4,
-                0.4,
-                0.4
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Mana Shield",
+        "desc_loc": "Creates a shield that absorbs %absorption_pct%%% of incoming damage in exchange for Medusa's mana. Provides bonus mana capacity.",
+        "lore_loc": "While Medusa was not gifted with eternal life upon birth, her curse bestowed her with impressive defensive powers.",
+        "notes_loc": [
+            "Absorbs damage before any damage reduction takes place, meaning that armor will not reduce the amount of mana needed to absorb damage."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2564",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.40000000596046,
+            0.40000000596046,
+            0.40000000596046,
+            0.40000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage_per_mana",
+                "values_float": [
+                    1.6000000238419,
+                    1.8999999761581,
+                    2.2000000476837,
+                    2.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE PER MANA:"
+            },
+            {
+                "name": "absorption_pct",
+                "values_float": [
+                    70
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "DAMAGE ABSORBED:"
+            },
+            {
+                "name": "bonus_mana",
+                "values_float": [],
+                "values_int": [
+                    100,
+                    150,
+                    200,
+                    250
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS MANA:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.40000000596046,
+                    0.40000000596046,
+                    0.40000000596046,
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "701": {
+        "id": 701,
+        "name": "medusa_cold_blooded",
+        "name_loc": "Cold Blooded",
+        "desc_loc": "When Medusa is targeted with a spell, a single-target Mystic Snake is sent back towards the enemy. Cooldown: 12.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934595",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 1,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            12
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5507": {
         "id": 5507,
         "name": "medusa_stone_gaze",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 5507,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Stone Gaze",
-            "description": [
-                "Any enemy units looking at Medusa will have their movement and attack speed slowed. If 2.0 seconds of total time is accumulated looking at Medusa while Stone Gaze is active, that unit will turn to stone. Petrified units are stunned, and take bonus physical damage."
-            ],
-            "attributes": [
-                "RADIUS: 1200",
-                "SLOW: 35%",
-                "BONUS PHYSICAL DAMAGE: 40% / 45% / 50%",
-                "DURATION: 5 / 5.5 / 6",
-                "STONE DURATION: 3.0",
-                "SPEED BOOST: 50%"
-            ],
-            "lore": "The beauty of Medusa is legendary.",
-            "notes": [
-                "Regardless of when a unit receives the Stone Gaze buff while the ability is active on Medusa, it will still receive the full debuff duration."
-            ]
-        },
-        "stat": {
-            "abilityId": 5507,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 4,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 3,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1200
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.4
-            ],
-            "cooldown": [
-                90.0
-            ],
-            "manaCost": [
-                100.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Stone Gaze",
+        "desc_loc": "Any enemy units looking at Medusa will have their movement and attack speed slowed.  If %face_duration% seconds of total time is accumulated looking at Medusa while Stone Gaze is active, that unit will turn to stone.  Petrified units are stunned, and take bonus physical damage.",
+        "lore_loc": "The beauty of Medusa is legendary.",
+        "notes_loc": [
+            "Regardless of when a unit receives the Stone Gaze buff while the ability is active on Medusa, it will still receive the full debuff duration."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 3,
+        "dispellable": 3,
+        "max_level": 3,
+        "cast_ranges": [
+            1200
+        ],
+        "cast_points": [
+            0.40000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            90
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            100
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    5,
+                    5.5,
+                    6
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "slow",
+                "values_float": [],
+                "values_int": [
+                    35
+                ],
+                "is_percentage": true,
+                "heading_loc": "SLOW:"
+            },
+            {
+                "name": "stone_duration",
+                "values_float": [
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STONE DURATION:"
+            },
+            {
+                "name": "face_duration",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_cone",
+                "values_float": [
+                    0.087150000035763
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bonus_physical_damage",
+                "values_float": [],
+                "values_int": [
+                    40,
+                    45,
+                    50
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS PHYSICAL DAMAGE:"
+            },
+            {
+                "name": "speed_boost",
+                "values_float": [],
+                "values_int": [
+                    50
+                ],
+                "is_percentage": true,
+                "heading_loc": "SPEED BOOST:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6182": {
-        "id": 6182,
-        "name": "special_bonus_unique_medusa",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 6182,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+2s Stone Gaze Duration",
-            "description": [
-                "The duration of the stun is not affected."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6182,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "5938": {
+        "id": 5938,
+        "name": "special_bonus_attack_damage_15",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    15
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6392": {
-        "id": 6392,
-        "name": "special_bonus_unique_medusa_2",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 6392,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+7 Split Shot Targets",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6392,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "5972": {
+        "id": 5972,
+        "name": "special_bonus_evasion_15",
+        "name_loc": "{s:value}% Evasion",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    15
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5907": {
+        "id": 5907,
+        "name": "special_bonus_attack_speed_30",
+        "name_loc": "+{s:value} Attack Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6687": {
         "id": 6687,
         "name": "special_bonus_unique_medusa_3",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 6687,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+35% Mystic Snake Mana Gain",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6687,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6803": {
-        "id": 6803,
-        "name": "special_bonus_unique_medusa_4",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 6803,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Split Shot Uses Modifiers",
-            "description": [
-                "Allows on-hit effects to apply to the secondary attacks from Split Shot."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6803,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value}% Mystic Snake Mana Gain",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    35
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "7389": {
         "id": 7389,
         "name": "special_bonus_unique_medusa_5",
-        "uri": "medusa",
-        "language": {
-            "abilityId": 7389,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-3s Mystic Snake Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7389,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "-{s:value}s Mystic Snake Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    3
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6182": {
+        "id": 6182,
+        "name": "special_bonus_unique_medusa",
+        "name_loc": "+{s:value}s Stone Gaze Duration",
+        "desc_loc": "The duration of the stun is not affected.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "528": {
+        "id": 528,
+        "name": "special_bonus_intelligence_75",
+        "name_loc": "+{s:value} Intelligence",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    75
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6803": {
+        "id": 6803,
+        "name": "special_bonus_unique_medusa_4",
+        "name_loc": "Split Shot Uses Modifiers",
+        "desc_loc": "Allows on-hit effects to apply to the secondary attacks from Split Shot.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    1
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

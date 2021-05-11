@@ -1,751 +1,1283 @@
 {
-    "333": {
-        "id": 333,
-        "name": "lycan_wolf_bite",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 333,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Wolf Bite",
-            "description": [
-                "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain 30% Lifesteal and share Lifesteal with each other as long as they are within 1200 range of each other."
-            ],
-            "attributes": [],
-            "lore": "Does this bite look infected?",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 333,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 1,
-            "unitTargetTeam": 2,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 4,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": true,
-            "hasScepterUpgrade": true,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                300
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                80.0
-            ],
-            "manaCost": [
-                150.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
-    "621": {
-        "id": 621,
-        "name": "special_bonus_unique_lycan_6",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 621,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+75 Shapeshift Movement Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 621,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "794": {
-        "id": 794,
-        "name": "special_bonus_unique_lycan_7",
-        "language": {
-            "abilityId": 794,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+175 Summon Wolves Health",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 794,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "5395": {
         "id": 5395,
         "name": "lycan_summon_wolves",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 5395,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Summon Wolves",
-            "description": [
-                "Summons two wolves to fight for Lycan.  Level 3-4 wolves have Permanent Invisibility, and level 4 wolves have Cripple."
-            ],
-            "attributes": [
-                "DURATION: 50",
-                "BASE ATTACK TIME: 1.2 / 1.1 / 1.0 / 0.9",
-                "DAMAGE: 26 / 34 / 42 / 50",
-                "HP: 300 / 350 / 400 / 450",
-                "WOLF COUNT: 2 / 2 / 2 / 2"
-            ],
-            "lore": "The very enchantment that twisted his being also summons canine familiars.",
-            "notes": [
-                "Spirit Wolves have 70% magic damage resistance.",
-                "Using this spell will replace currently active Spirit Wolves."
-            ],
-            "shardDescription": "Causes one of your creep waves to include one uncontrollable wolf that moves with the wave."
-        },
-        "stat": {
-            "abilityId": 5395,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 4,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                30.0,
-                30.0,
-                30.0,
-                30.0
-            ],
-            "manaCost": [
-                125.0,
-                130.0,
-                135.0,
-                140.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Summon Wolves",
+        "desc_loc": "Summons two wolves to fight for Lycan.  Level 3-4 wolves have Permanent Invisibility, and level 4 wolves have Cripple.",
+        "lore_loc": "The very enchantment that twisted his being also summons canine familiars.",
+        "notes_loc": [],
+        "shard_loc": "Causes one of your creep waves to include one uncontrollable wolf that moves with the wave.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            30,
+            30,
+            30,
+            30
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            125,
+            130,
+            135,
+            140
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "wolf_index",
+                "values_float": [],
+                "values_int": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "wolf_duration",
+                "values_float": [
+                    50
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "wolf_bat",
+                "values_float": [
+                    1.2000000476837,
+                    1.1000000238419,
+                    1,
+                    0.89999997615814
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BASE ATTACK TIME:"
+            },
+            {
+                "name": "wolf_damage",
+                "values_float": [],
+                "values_int": [
+                    26,
+                    34,
+                    42,
+                    50
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "wolf_hp",
+                "values_float": [],
+                "values_int": [
+                    325,
+                    375,
+                    425,
+                    475
+                ],
+                "is_percentage": false,
+                "heading_loc": "HP:"
+            },
+            {
+                "name": "bash_chance",
+                "values_float": [],
+                "values_int": [
+                    15
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bash_duration",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "tooltip_wolf_count",
+                "values_float": [],
+                "values_int": [
+                    2
+                ],
+                "is_percentage": false,
+                "heading_loc": "WOLF COUNT:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5396": {
         "id": 5396,
         "name": "lycan_howl",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 5396,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Howl",
-            "description": [
-                "Strikes fear into enemies, reducing armor and attack damage to all enemies within 2000 range of Lycan and his wolves."
-            ],
-            "attributes": [
-                "DURATION: 5 / 6 / 7 / 8",
-                "ATTACK DAMAGE REDUCTION: 25% / 30% / 35% / 40%",
-                "ARMOR REDUCTION: 5 / 6 / 7 / 8"
-            ],
-            "lore": "Blood-curdling wolf cries signal to opponents that Banehallow is among them.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5396,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 16388,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 5,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                18.0
-            ],
-            "manaCost": [
-                35.0,
-                40.0,
-                45.0,
-                50.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Howl",
+        "desc_loc": "Strikes fear into enemies, reducing armor and attack damage to all enemies within %radius% range of Lycan and his wolves.",
+        "lore_loc": "Blood-curdling wolf cries signal to opponents that Banehallow is among them.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "134217732",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            18
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            35,
+            40,
+            45,
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "howl_duration",
+                "values_float": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "attack_damage_reduction",
+                "values_float": [],
+                "values_int": [
+                    25,
+                    30,
+                    35,
+                    40
+                ],
+                "is_percentage": true,
+                "heading_loc": "ATTACK DAMAGE REDUCTION:"
+            },
+            {
+                "name": "armor",
+                "values_float": [],
+                "values_int": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": "ARMOR REDUCTION:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    2000
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5397": {
         "id": 5397,
         "name": "lycan_feral_impulse",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 5397,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Feral Impulse",
-            "description": [
-                "Increases the HP regeneration and damage of Lycan and all units under his control."
-            ],
-            "attributes": [
-                "BONUS DAMAGE: 12% / 24% / 36% / 48%",
-                "BONUS HP REGEN: 2 / 4 / 6 / 8"
-            ],
-            "lore": "His animalistic symbiosis with canine kind gives Banehallow enhanced reflexes and hunting capabilities.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5397,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Feral Impulse",
+        "desc_loc": "Increases the HP regeneration and damage of Lycan and all units under his control.",
+        "lore_loc": "His animalistic symbiosis with canine kind gives Banehallow enhanced reflexes and hunting capabilities.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bonus_damage",
+                "values_float": [],
+                "values_int": [
+                    12,
+                    24,
+                    36,
+                    48
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS DAMAGE:"
+            },
+            {
+                "name": "bonus_hp_regen",
+                "values_float": [],
+                "values_int": [
+                    2,
+                    4,
+                    6,
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS HP REGEN:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "333": {
+        "id": 333,
+        "name": "lycan_wolf_bite",
+        "name_loc": "Wolf Bite",
+        "desc_loc": "Lycan bites an ally, granting them Shapeshift properties. Lycan and the bitten target gain %lifesteal_percent%%% Lifesteal and share %lifesteal%%% Lifesteal with each other as long as they are within %lifesteal_range% range of each other.",
+        "lore_loc": "Does this bite look infected?",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934601",
+        "target_team": 1,
+        "target_type": 1,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 1,
+        "dispellable": 3,
+        "max_level": 1,
+        "cast_ranges": [
+            300
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            80
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            150
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "lifesteal_percent",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "lifesteal_range",
+                "values_float": [],
+                "values_int": [
+                    1200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    300
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": true,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5398": {
         "id": 5398,
         "name": "lycan_shapeshift",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 5398,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Shapeshift",
-            "description": [
-                "Lycan assumes his lupine form, granting him and his units critical strikes and added vision at night. During Shapeshift, Lycan and all units under his control move at increased speed, cannot be slowed and have a 40% chance to deal a critical strike doing 150 / 175 / 200% damage."
-            ],
-            "attributes": [
-                "DURATION: 28",
-                "SHAPESHIFT MOVE SPEED: 550",
-                "BONUS NIGHT VISION: 1000",
-                "HEALTH BONUS: 150 / 250 / 350",
-                "CRITICAL CHANCE: 40%",
-                "CRITICAL DAMAGE: 150% / 175% / 200%",
-                "TRANSFORM TIME: 1.1"
-            ],
-            "lore": "Forever a slave to his lycanthropy, Banehallow has come to accept his curse, and embrace his own savagery.",
-            "notes": [
-                "Hex doesn't remove Lycan's movement speed.",
-                "Lycan has a smaller collision size in this state."
-            ]
-        },
-        "stat": {
-            "abilityId": 5398,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 4,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "cooldown": [
-                125.0,
-                110.0,
-                95.0
-            ],
-            "manaCost": [
-                100.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5399": {
-        "id": 5399,
-        "name": "lycan_summon_wolves_critical_strike",
-        "language": {
-            "abilityId": 5399,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Cripple",
-            "description": [
-                "Gives 20% to cripple the target, causing 8 damage per second and lose 60 Attack Speed for 4.0 seconds."
-            ],
-            "attributes": [
-                "CRIPPLE CHANCE: 20%",
-                "DAMAGE PER SECOND: 8",
-                "ATTACK SPEED SLOW: 60",
-                "DURATION: 4.0"
-            ],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5399,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5500": {
-        "id": 5500,
-        "name": "lycan_summon_wolves_invisibility",
-        "language": {
-            "abilityId": 5500,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Invisibility",
-            "description": [
-                "Permanently invisible when not attacking."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5500,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "6134": {
-        "id": 6134,
-        "name": "special_bonus_unique_lycan_1",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 6134,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+5s Shapeshift Duration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6134,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6140": {
-        "id": 6140,
-        "name": "special_bonus_unique_lycan_2",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 6140,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+2 Wolves Summoned",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6140,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "Shapeshift",
+        "desc_loc": "Lycan assumes his lupine form, granting him and his units critical strikes and added vision at night. During Shapeshift, Lycan and all units under his control move at increased speed, cannot be slowed and have a %crit_chance%%% chance to deal a critical strike doing %crit_multiplier%%% damage.",
+        "lore_loc": "Forever a slave to his lycanthropy, Banehallow has come to accept his curse, and embrace his own savagery.",
+        "notes_loc": [
+            "Hex doesn't remove Lycan's movement speed.",
+            "Lycan has a smaller collision size in this state."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 3,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            125,
+            110,
+            95
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            100
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "duration",
+                "values_float": [
+                    28
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "speed",
+                "values_float": [],
+                "values_int": [
+                    550
+                ],
+                "is_percentage": false,
+                "heading_loc": "SHAPESHIFT MOVE SPEED:"
+            },
+            {
+                "name": "bonus_night_vision",
+                "values_float": [],
+                "values_int": [
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS NIGHT VISION:"
+            },
+            {
+                "name": "transformation_time",
+                "values_float": [
+                    1.1000000238419
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "TRANSFORM TIME:"
+            },
+            {
+                "name": "crit_chance",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": true,
+                "heading_loc": "CRITICAL CHANCE:"
+            },
+            {
+                "name": "crit_multiplier",
+                "values_float": [],
+                "values_int": [
+                    150,
+                    175,
+                    200
+                ],
+                "is_percentage": true,
+                "heading_loc": "CRITICAL DAMAGE:"
+            },
+            {
+                "name": "health_bonus",
+                "values_float": [],
+                "values_int": [
+                    200,
+                    300,
+                    400
+                ],
+                "is_percentage": false,
+                "heading_loc": "HEALTH BONUS:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6519": {
         "id": 6519,
         "name": "special_bonus_unique_lycan_3",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 6519,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+8 Feral HP Regen",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6519,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Feral HP Regen",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5960": {
+        "id": 5960,
+        "name": "special_bonus_attack_damage_20",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "794": {
+        "id": 794,
+        "name": "special_bonus_unique_lycan_7",
+        "name_loc": "+{s:value} Summon Wolves Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6190": {
+        "id": 6190,
+        "name": "special_bonus_cooldown_reduction_12",
+        "name_loc": "{s:value}% Cooldown Reduction",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6134": {
+        "id": 6134,
+        "name": "special_bonus_unique_lycan_1",
+        "name_loc": "+{s:value}s Shapeshift Duration",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6684": {
         "id": 6684,
         "name": "special_bonus_unique_lycan_4",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 6684,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+25% Feral Impulse Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6684,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value}% Feral Impulse Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6685": {
         "id": 6685,
         "name": "special_bonus_unique_lycan_5",
-        "uri": "lycan",
-        "language": {
-            "abilityId": 6685,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+32% Chance Shapeshift Critical Strike",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6685,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value}% Chance Shapeshift Critical Strike",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    32
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6140": {
+        "id": 6140,
+        "name": "special_bonus_unique_lycan_2",
+        "name_loc": "+{s:value} Wolves Summoned",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    2
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

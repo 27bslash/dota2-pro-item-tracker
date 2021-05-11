@@ -1,815 +1,1171 @@
 {
-    "459": {
-        "id": 459,
-        "name": "special_bonus_unique_doom_7",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 459,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+3 Doom Duration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 459,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "594": {
-        "id": 594,
-        "name": "special_bonus_unique_doom_8",
-        "language": {
-            "abilityId": 594,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Permanent Scorched Earth",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 594,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "733": {
-        "id": 733,
-        "name": "special_bonus_unique_doom_9",
-        "language": {
-            "abilityId": 733,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-10s Scorched Earth Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 733,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "5339": {
         "id": 5339,
         "name": "doom_bringer_devour",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 5339,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Devour",
-            "description": [
-                "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If autocast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown."
-            ],
-            "attributes": [
-                "CREEP MAX LEVEL: 4 / 5 / 6 / 6",
-                "BONUS GOLD: 60 / 120 / 180 / 240"
-            ],
-            "lore": "Lucifer's appetite and greed are never sated.",
-            "notes": [
-                "Gives Doom the original bounty of the creep, along with the bonus gold.",
-                "If you devour a creep without abilities, you'll keep the abilities you had previously."
-            ],
-            "shardDescription": "Allows Devour to be cast on enemy heroes, reducing their maximum health by 15%  for the duration of the devour and provides Doom with a passive basic ability they have."
-        },
-        "stat": {
-            "abilityId": 5339,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 163848,
-            "unitTargetType": 8,
-            "unitTargetTeam": 8,
-            "unitTargetFlags": 16,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                300,
-                300,
-                300,
-                300
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                70.0
-            ],
-            "manaCost": [
-                40.0,
-                50.0,
-                60.0,
-                70.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Devour",
+        "desc_loc": "Consumes an enemy or neutral creep, acquiring any special abilities that it possessed. If autocast is deactivated, Doom will not acquire the creep's abilities. Duration is equal to the cooldown.",
+        "lore_loc": "Lucifer's appetite and greed are never sated.",
+        "notes_loc": [
+            "Gives Doom the original bounty of the creep, along with the bonus gold.",
+            "If you devour a creep without abilities, you'll keep the abilities you had previously."
+        ],
+        "shard_loc": "Allows Devour to be cast on enemy heroes, reducing their maximum health by 15%  for the duration of the devour and provides Doom with a passive basic ability they have.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "33558536",
+        "target_team": 4,
+        "target_type": 128,
+        "flags": 131072,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            300,
+            300,
+            300,
+            300
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            60
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            40,
+            50,
+            60,
+            70
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "bonus_gold",
+                "values_float": [],
+                "values_int": [
+                    60,
+                    120,
+                    180,
+                    240
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS GOLD:"
+            },
+            {
+                "name": "regen",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "creep_level",
+                "values_float": [],
+                "values_int": [
+                    4,
+                    5,
+                    6,
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": "CREEP MAX LEVEL:"
+            },
+            {
+                "name": "hero_ability_steal_time",
+                "values_float": [
+                    99999
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    300,
+                    300,
+                    300,
+                    300
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5340": {
         "id": 5340,
         "name": "doom_bringer_scorched_earth",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 5340,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Scorched Earth",
-            "description": [
-                "Carpets the nearby earth in flames which damage enemies, while also granting him increased movement speed."
-            ],
-            "attributes": [
-                "DAMAGE: 15 / 30 / 45 / 60",
-                "RADIUS: 600 / 600 / 600 / 600",
-                "BONUS MOVE SPEED: 9% / 11% / 13% / 15%",
-                "DURATION: 15.0"
-            ],
-            "lore": "The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him.",
-            "notes": [
-                "Scorched Earth follows Doom, centered on his location."
-            ]
-        },
-        "stat": {
-            "abilityId": 5340,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 4,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                600,
-                600,
-                600,
-                600
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                50.0,
-                45.0,
-                40.0,
-                35.0
-            ],
-            "manaCost": [
-                60.0,
-                70.0,
-                80.0,
-                90.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Scorched Earth",
+        "desc_loc": "Carpets the nearby earth in flames which damage enemies, while also granting him increased movement speed.",
+        "lore_loc": "The Fallen One spreads destruction in his wake, sparing none from the flame which sustains him.",
+        "notes_loc": [
+            "Scorched Earth follows Doom, centered on his location."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            600,
+            600,
+            600,
+            600
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            50,
+            45,
+            40,
+            35
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            60,
+            70,
+            80,
+            90
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage_per_second",
+                "values_float": [],
+                "values_int": [
+                    15,
+                    30,
+                    45,
+                    60
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "bonus_movement_speed_pct",
+                "values_float": [],
+                "values_int": [
+                    9,
+                    11,
+                    13,
+                    15
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS MOVE SPEED:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    15
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    600,
+                    600,
+                    600,
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5341": {
         "id": 5341,
         "name": "doom_bringer_infernal_blade",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 5341,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Infernal Blade",
-            "description": [
-                "Doom swings his burning sword, igniting the enemy. Stuns for 0.6 seconds and applies a 4.0 second burn that deals a base damage plus a percentage of the target's Max HP as damage per second."
-            ],
-            "attributes": [
-                "BASE BURN DAMAGE: 16 / 20 / 24 / 28",
-                "MAX HP AS DAMAGE: 1.25% / 2.5% / 3.75% / 5%",
-                "BURN DURATION: 4.0",
-                "STUN DURATION: 0.6",
-                "BURN DURATION SCEPTER:%burn_duration_scepter%",
-                "STUN DURATION SCEPTER:%ministun_duration_scepter%"
-            ],
-            "lore": "Lucifer shares the fire branding bestowed upon him at the time of his exile.",
-            "notes": [
-                "Interrupts channeling abilities."
-            ],
-            "shardDescription": "Infernal Blade stun duration is increased from 0.6 to 1.2 seconds. If the enemy's level is a multiple of 3, or above level 24, they will be stunned for an additional 0.6 seconds and take 150 bonus damage."
-        },
-        "stat": {
-            "abilityId": 5341,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 393224,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                200
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                16.0,
-                12.0,
-                8.0,
-                4.0
-            ],
-            "manaCost": [
-                40.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Infernal Blade",
+        "desc_loc": "Doom swings his burning sword, igniting the enemy. Stuns for %ministun_duration% seconds and applies a %burn_duration% second burn that deals a base damage plus a percentage of the target's Max HP as damage per second.",
+        "lore_loc": "Lucifer shares the fire branding bestowed upon him at the time of his exile.",
+        "notes_loc": [
+            "Interrupts channeling abilities."
+        ],
+        "shard_loc": "Infernal Blade stun duration is increased from 0.6 to 1.2 seconds. If the enemy's level is a multiple of 3, or above level 24, they will be stunned for an additional 0.6 seconds and take 150 bonus damage.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "135176",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            200
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            16,
+            12,
+            8,
+            4
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            40
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "burn_damage",
+                "values_float": [],
+                "values_int": [
+                    16,
+                    20,
+                    24,
+                    28
+                ],
+                "is_percentage": false,
+                "heading_loc": "BASE BURN DAMAGE:"
+            },
+            {
+                "name": "burn_damage_pct",
+                "values_float": [
+                    1.25,
+                    2.5,
+                    3.75,
+                    5
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "MAX HP AS DAMAGE:"
+            },
+            {
+                "name": "burn_duration",
+                "values_float": [
+                    4
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BURN DURATION:"
+            },
+            {
+                "name": "ministun_duration",
+                "values_float": [
+                    0.60000002384186
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5342": {
         "id": 5342,
         "name": "doom_bringer_doom",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 5342,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Doom",
-            "description": [
-                "Inflicts a curse that dispels an enemy Hero and prevents an them from casting spells or using items, while taking damage over time.",
-                "",
-                "DISPEL TYPE: Basic Dispel"
-            ],
-            "attributes": [
-                "DURATION: 16.0",
-                "DAMAGE PER SECOND: 25 / 40 / 55"
-            ],
-            "lore": "When a name is tolled from the bell of Vashundol, doom is sure to follow.",
-            "aghanimDescription": "Doom applies Break and increases duration by 6 seconds.",
-            "notes": [
-                "Units afflicted by Doom can be denied when their HP drops below 25%."
-            ]
-        },
-        "stat": {
-            "abilityId": 5342,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 8,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 5,
-            "unitDamageType": 2,
-            "spellImmunity": 3,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                550,
-                550,
-                550
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.5
-            ],
-            "cooldown": [
-                145.0
-            ],
-            "manaCost": [
-                150.0,
-                200.0,
-                250.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Doom",
+        "desc_loc": "Inflicts a curse that dispels an enemy Hero and prevents an them from casting spells or using items, while taking damage over time.\n\nDISPEL TYPE: Basic Dispel",
+        "lore_loc": "When a name is tolled from the bell of Vashundol, doom is sure to follow.",
+        "notes_loc": [
+            "Units afflicted by Doom can be denied when their HP drops below 25%."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "Doom applies Break and increases duration by 6 seconds.",
+        "type": 1,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 528,
+        "damage": 4,
+        "immunity": 3,
+        "dispellable": 3,
+        "max_level": 3,
+        "cast_ranges": [
+            550,
+            550,
+            550
+        ],
+        "cast_points": [
+            0.5
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            145
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            150,
+            200,
+            250
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "duration",
+                "values_float": [
+                    16
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    30,
+                    45,
+                    60
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE PER SECOND:"
+            },
+            {
+                "name": "deniable_pct",
+                "values_float": [],
+                "values_int": [
+                    25
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "scepter_cooldown",
+                "values_float": [
+                    100
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    550,
+                    550,
+                    550
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "5343": {
-        "id": 5343,
-        "name": "doom_bringer_empty1",
-        "language": {
-            "abilityId": 5343,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Devoured Ability",
-            "description": [
-                "This slot will be replaced with abilities acquired using Devour."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5343,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 66,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5344": {
-        "id": 5344,
-        "name": "doom_bringer_empty2",
-        "language": {
-            "abilityId": 5344,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Devoured Ability",
-            "description": [
-                "This slot will be replaced with abilities acquired using Devour."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5344,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 66,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "6073": {
-        "id": 6073,
-        "name": "special_bonus_unique_doom_1",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 6073,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+2.4% Infernal Blade Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6073,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6314": {
-        "id": 6314,
-        "name": "special_bonus_unique_doom_2",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 6314,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Devour Can Target Ancients",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6314,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6369": {
-        "id": 6369,
-        "name": "special_bonus_unique_doom_3",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 6369,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+120 Devour Bonus Gold",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6369,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "6299": {
+        "id": 6299,
+        "name": "special_bonus_magic_resistance_12",
+        "name_loc": "+{s:value}% Magic Resistance",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    12
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6370": {
         "id": 6370,
         "name": "special_bonus_unique_doom_4",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 6370,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+20 Scorched Earth Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6370,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Scorched Earth Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "733": {
+        "id": 733,
+        "name": "special_bonus_unique_doom_9",
+        "name_loc": "-{s:value}s Scorched Earth Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    10
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6314": {
+        "id": 6314,
+        "name": "special_bonus_unique_doom_2",
+        "name_loc": "Devour Can Target Ancients",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6371": {
         "id": 6371,
         "name": "special_bonus_unique_doom_5",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 6371,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+30 Doom DPS",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6371,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Doom DPS",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "7123": {
         "id": 7123,
         "name": "special_bonus_unique_doom_6",
-        "uri": "doom_bringer",
-        "language": {
-            "abilityId": 7123,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+15% Scorched Earth Movement Speed",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7123,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value}% Scorched Earth Movement Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    15
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6073": {
+        "id": 6073,
+        "name": "special_bonus_unique_doom_1",
+        "name_loc": "+{s:value}% Infernal Blade Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    2.4000000953674
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7124": {
+        "id": 7124,
+        "name": "special_bonus_cleave_150",
+        "name_loc": "+{s:value}% Cleave",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

@@ -1,591 +1,1181 @@
 {
-    "470": {
-        "id": 470,
-        "name": "special_bonus_unique_furion_5",
-        "uri": "furion",
-        "language": {
-            "abilityId": 470,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+30 Wrath of Nature Base Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 470,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "625": {
-        "id": 625,
-        "name": "furion_greater_sprout",
-        "language": {
-            "abilityId": 625,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Greater Sprout",
-            "description": [
-                "Creates a larger circle of trees in a 300 AoE for 6 seconds. Ensnares enemies inside for 2 seconds, dealing 150 damage per second."
-            ],
-            "attributes": [
-                "DURATION: 6"
-            ],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 625,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 3,
-            "unitTargetTeam": 4,
-            "unitTargetFlags": 1,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": true,
-            "hasScepterUpgrade": true,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                850
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.35
-            ],
-            "cooldown": [
-                30.0
-            ],
-            "manaCost": [
-                130.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
     "5245": {
         "id": 5245,
         "name": "furion_sprout",
-        "uri": "furion",
-        "language": {
-            "abilityId": 5245,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Sprout",
-            "description": [
-                "Sprouts a ring of trees around a unit, trapping it in place, and providing vision in a 500 radius."
-            ],
-            "attributes": [
-                "DURATION: 3 / 4 / 5 / 6"
-            ],
-            "lore": "Verdant overgrowth is a common ailment reported by Nature's Prophet's attackers.",
-            "notes": [
-                "Sprout can be cast on any unit, or the ground.",
-                "Trees created by Sprout have the same interactions with abilities as regular trees."
-            ],
-            "shardDescription": "Causes the first two trees destroyed with Sprout to summon Greater Treants. Can only have two Greater Treants alive."
-        },
-        "stat": {
-            "abilityId": 5245,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 24,
-            "unitTargetType": 3,
-            "unitTargetTeam": 4,
-            "unitTargetFlags": 1,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                625,
-                700,
-                775,
-                850
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.35
-            ],
-            "cooldown": [
-                11.0,
-                10.0,
-                9.0,
-                8.0
-            ],
-            "manaCost": [
-                70.0,
-                90.0,
-                110.0,
-                130.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Sprout",
+        "desc_loc": "Sprouts a ring of trees around a unit, trapping it in place, and providing vision in a %vision_range% radius.",
+        "lore_loc": "Verdant overgrowth is a common ailment reported by Nature's Prophet's attackers.",
+        "notes_loc": [
+            "Sprout can be cast on any unit, or the ground.",
+            "Trees created by Sprout have the same interactions with abilities as regular trees."
+        ],
+        "shard_loc": "Causes the first two trees destroyed with Sprout to summon Greater Treants. Can only have two Greater Treants alive.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "24",
+        "target_team": 3,
+        "target_type": 19,
+        "flags": 512,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            625,
+            700,
+            775,
+            850
+        ],
+        "cast_points": [
+            0.34999999403954
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            11,
+            10,
+            9,
+            8
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            70,
+            90,
+            110,
+            130
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "vision_range",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    625,
+                    700,
+                    775,
+                    850
+                ],
+                "is_percentage": false,
+                "heading_loc": "CAST RANGE:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.34999999403954
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5246": {
         "id": 5246,
         "name": "furion_teleportation",
-        "uri": "furion",
-        "language": {
-            "abilityId": 5246,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Teleportation",
-            "description": [
-                "Teleports to any point on the map."
-            ],
-            "attributes": [],
-            "lore": "The Prophet keeps his sentinel over the forest, protecting it when in need.",
-            "notes": [
-                "Mana and cooldown take effect when the cast is completed.  Nature's Prophet will not use any mana or waste the cooldown if the spell is interrupted while casting.",
-                "When the cast begins, an effect is created at the target location, which is visible to allies and enemies."
-            ]
-        },
-        "stat": {
-            "abilityId": 5246,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2101264,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                0
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                3.0,
-                3.0,
-                3.0,
-                3.0
-            ],
-            "cooldown": [
-                65.0,
-                50.0,
-                35.0,
-                20.0
-            ],
-            "manaCost": [
-                50.0,
-                50.0,
-                50.0,
-                50.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Teleportation",
+        "desc_loc": "Teleports to any point on the map.",
+        "lore_loc": "The Prophet keeps his sentinel over the forest, protecting it when in need.",
+        "notes_loc": [
+            "Mana and cooldown take effect when the cast is completed.  Nature's Prophet will not use any mana or waste the cooldown if the spell is interrupted while casting.",
+            "When the cast begins, an effect is created at the target location, which is visible to allies and enemies."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "67633168",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            3,
+            3,
+            3,
+            3
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            65,
+            50,
+            35,
+            20
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            50,
+            50,
+            50,
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    3,
+                    3,
+                    3,
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "CAST TIME:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5247": {
         "id": 5247,
         "name": "furion_force_of_nature",
-        "uri": "furion",
-        "language": {
-            "abilityId": 5247,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Nature's Call",
-            "description": [
-                "Converts an area of trees into Treants under the command of Nature's Prophet."
-            ],
-            "attributes": [
-                "TREANT DURATION: 60 / 60 / 60 / 60",
-                "TREANT COUNT: 2 / 3 / 4 / 5",
-                "TREANT HEALTH: 550",
-                "TREANT DAMAGE: 18 / 24 / 30 / 36"
-            ],
-            "lore": "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild.",
-            "notes": [
-                "Nature's Call can only create as many treants as there are trees in the target area."
-            ]
-        },
-        "stat": {
-            "abilityId": 5247,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 48,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                750
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.5,
-                0.5,
-                0.5,
-                0.5
-            ],
-            "cooldown": [
-                37.0
-            ],
-            "manaCost": [
-                130.0,
-                140.0,
-                150.0,
-                160.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Nature's Call",
+        "desc_loc": "Converts an area of trees into Treants under the command of Nature's Prophet.",
+        "lore_loc": "Verodicia bestowed the Prophet with the ability to summon the Treant Guard, a mythical sentient army of the wild.",
+        "notes_loc": [
+            "Nature's Call can only create as many treants as there are trees in the target area."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "48",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            750
+        ],
+        "cast_points": [
+            0.5,
+            0.5,
+            0.5,
+            0.5
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            37
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            130,
+            140,
+            150,
+            160
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "area_of_effect",
+                "values_float": [],
+                "values_int": [
+                    150,
+                    225,
+                    300,
+                    375
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "max_treants",
+                "values_float": [],
+                "values_int": [
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "is_percentage": false,
+                "heading_loc": "TREANT COUNT:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    60
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "TREANT DURATION:"
+            },
+            {
+                "name": "treant_health_tooltip",
+                "values_float": [],
+                "values_int": [
+                    550
+                ],
+                "is_percentage": false,
+                "heading_loc": "TREANT HEALTH:"
+            },
+            {
+                "name": "treant_dmg_tooltip",
+                "values_float": [],
+                "values_int": [
+                    18,
+                    26,
+                    34,
+                    42
+                ],
+                "is_percentage": false,
+                "heading_loc": "TREANT DAMAGE:"
+            },
+            {
+                "name": "treant_hp_bonus",
+                "values_float": [],
+                "values_int": [
+                    825
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "treant_damage_bonus",
+                "values_float": [],
+                "values_int": [
+                    27,
+                    39,
+                    51,
+                    63
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "treant_large_hp_bonus",
+                "values_float": [],
+                "values_int": [
+                    1320
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "treant_large_damage_bonus",
+                "values_float": [],
+                "values_int": [
+                    57,
+                    67,
+                    77,
+                    87
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    750
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5248": {
         "id": 5248,
         "name": "furion_wrath_of_nature",
-        "uri": "furion",
-        "language": {
-            "abilityId": 5248,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Wrath of Nature",
-            "description": [
-                "Damaging energy bounces around the map, striking enemies close to the cast point that are in vision. Each enemy hit beyond the first adds damage. Enemies that die under this spell grant you bonus damage for 50 seconds."
-            ],
-            "attributes": [
-                "MAX TARGETS: 18",
-                "DAMAGE: 115 / 150 / 185",
-                "ADDED DAMAGE PER BOUNCE: 10%",
-                "BONUS DAMAGE PER UNIT: 4 / 5 / 6",
-                "BONUS DAMAGE DURATION: 50"
-            ],
-            "lore": "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness.",
-            "aghanimDescription": "Lowers cooldown from 85 to 60. Entangles all enemies it hits. Duration scales from 2 up to 3.8 seconds at max bounce.",
-            "notes": [
-                "Wrath of Nature will not hit units out of vision.",
-                "Can be cast through the minimap; the nearest valid target will be selected."
-            ]
-        },
-        "stat": {
-            "abilityId": 5248,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 24,
-            "unitTargetType": 5,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                0
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.5,
-                0.5,
-                0.5
-            ],
-            "cooldown": [
-                85.0
-            ],
-            "manaCost": [
-                175.0,
-                225.0,
-                275.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Wrath of Nature",
+        "desc_loc": "Damaging energy bounces around the map, striking enemies close to the cast point that are in vision. Each enemy hit beyond the first adds damage. Enemies that die under this spell grant you bonus damage for %kill_damage_duration% seconds.",
+        "lore_loc": "Nature's Prophet calls Verodicia's fury to strike down those who might ravage the wilderness.",
+        "notes_loc": [
+            "Wrath of Nature will not hit units out of vision.",
+            "Can be cast through the minimap; the nearest valid target will be selected."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "Lowers cooldown from 85 to 60. Entangles all enemies it hits. Duration scales from 2 up to 3.8 seconds at max bounce.",
+        "type": 1,
+        "behavior": "24",
+        "target_team": 2,
+        "target_type": 3,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 3,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.5,
+            0.5,
+            0.5
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            85
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            175,
+            225,
+            275
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "max_targets",
+                "values_float": [],
+                "values_int": [
+                    18
+                ],
+                "is_percentage": false,
+                "heading_loc": "MAX TARGETS:"
+            },
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    115,
+                    150,
+                    185
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "damage_percent_add",
+                "values_float": [],
+                "values_int": [
+                    10
+                ],
+                "is_percentage": true,
+                "heading_loc": "ADDED DAMAGE PER BOUNCE:"
+            },
+            {
+                "name": "jump_delay",
+                "values_float": [
+                    0.25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "kill_damage",
+                "values_float": [],
+                "values_int": [
+                    4,
+                    5,
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS DAMAGE PER UNIT:"
+            },
+            {
+                "name": "kill_damage_duration",
+                "values_float": [
+                    50
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "BONUS DAMAGE DURATION:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.5,
+                    0.5,
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6084": {
-        "id": 6084,
-        "name": "special_bonus_unique_furion",
-        "uri": "furion",
-        "language": {
-            "abilityId": 6084,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "2.5x Treant HP/Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6084,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "5960": {
+        "id": 5960,
+        "name": "special_bonus_attack_damage_20",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "470": {
+        "id": 470,
+        "name": "special_bonus_unique_furion_5",
+        "name_loc": "+{s:value} Wrath of Nature Base Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6016": {
+        "id": 6016,
+        "name": "special_bonus_attack_speed_25",
+        "name_loc": "+{s:value} Attack Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    25
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6500": {
         "id": 6500,
         "name": "special_bonus_unique_furion_2",
-        "uri": "furion",
-        "language": {
-            "abilityId": 6500,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+5 Treants Summoned",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6500,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Treants Summoned",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    5
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5934": {
+        "id": 5934,
+        "name": "special_bonus_armor_8",
+        "name_loc": "+{s:value} Armor",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5952": {
+        "id": 5952,
+        "name": "special_bonus_cooldown_reduction_20",
+        "name_loc": "{s:value}% Cooldown Reduction",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6539": {
         "id": 6539,
         "name": "special_bonus_unique_furion_3",
-        "uri": "furion",
-        "language": {
-            "abilityId": 6539,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Removed Teleportation Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6539,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "Removed Teleportation Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    1
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6702": {
-        "id": 6702,
-        "name": "special_bonus_unique_furion_4",
-        "uri": "furion",
-        "language": {
-            "abilityId": 6702,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-4s Sprout Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6702,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "6084": {
+        "id": 6084,
+        "name": "special_bonus_unique_furion",
+        "name_loc": "{s:value}x Treant HP/Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    2.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

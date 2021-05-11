@@ -1,985 +1,1352 @@
 {
-    "747": {
-        "id": 747,
-        "name": "special_bonus_unique_monkey_king_8",
-        "language": {
-            "abilityId": 747,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "0 Cooldown Primal Spring",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 747,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "748": {
-        "id": 748,
-        "name": "special_bonus_unique_monkey_king_9",
-        "language": {
-            "abilityId": 748,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+1s Boundless Strike Stun Duration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 748,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "802": {
-        "id": 802,
-        "name": "special_bonus_unique_monkey_king_10",
-        "language": {
-            "abilityId": 802,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-7s Boundless Strike Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 802,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
     "5716": {
         "id": 5716,
         "name": "monkey_king_boundless_strike",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 5716,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Boundless Strike",
-            "description": [
-                "Monkey King enlarges his staff and slams it against the ground, stunning enemies in a line and damaging them with a critical hit based on his attack. Has True Strike."
-            ],
-            "attributes": [
-                "DISTANCE: 1100",
-                "STUN DURATION: 0.7 / 1.0 / 1.3 / 1.6",
-                "CRITICAL DAMAGE: 150% / 175% / 200% / 225%"
-            ],
-            "lore": "The legendary Jingu Bang grows to match its master's will, ensuring no enemy can escape the Monkey King's reach.",
-            "notes": [
-                "Does not affect spell-immune enemies."
-            ]
-        },
-        "stat": {
-            "abilityId": 5716,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2097168,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 3,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1100
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.4
-            ],
-            "cooldown": [
-                22.0
-            ],
-            "manaCost": [
-                100.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5719": {
-        "id": 5719,
-        "name": "monkey_king_mischief",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 5719,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Mischief",
-            "description": [
-                "Changes Monkey King's shape to deceive opponents, using the environment nearby as inspiration for the disguise. Taking damage, attacking, or using any item or ability breaks Monkey King's disguise. Grants damage immunity for 0.2 upon transforming."
-            ],
-            "attributes": [
-                "MOVE SPEED: 200"
-            ],
-            "lore": "Watch out for that tree.",
-            "notes": [
-                "If transformed into a courier, Monkey King matches the movement speed of the courier."
-            ]
-        },
-        "stat": {
-            "abilityId": 5719,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 41028,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0
-            ],
-            "cooldown": [
-                15.0
-            ],
-            "manaCost": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Boundless Strike",
+        "desc_loc": "Monkey King enlarges his staff and slams it against the ground, stunning enemies in a line and damaging them with a critical hit based on his attack. Has True Strike.",
+        "lore_loc": "The legendary Jingu Bang grows to match its master's will, ensuring no enemy can escape the Monkey King's reach.",
+        "notes_loc": [
+            "Does not affect spell-immune enemies."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "67108880",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 1,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            1100
+        ],
+        "cast_points": [
+            0.40000000596046
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            23,
+            22,
+            21,
+            20
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            100
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "stun_duration",
+                "values_float": [
+                    1,
+                    1.2000000476837,
+                    1.3999999761581,
+                    1.6000000238419
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "strike_crit_mult",
+                "values_float": [],
+                "values_int": [
+                    150,
+                    175,
+                    200,
+                    225
+                ],
+                "is_percentage": true,
+                "heading_loc": "CRITICAL DAMAGE:"
+            },
+            {
+                "name": "strike_radius",
+                "values_float": [],
+                "values_int": [
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "strike_cast_range",
+                "values_float": [],
+                "values_int": [
+                    1100
+                ],
+                "is_percentage": false,
+                "heading_loc": "DISTANCE:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5721": {
         "id": 5721,
         "name": "monkey_king_tree_dance",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 5721,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Tree Dance",
-            "description": [
-                "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for 4 seconds. Taking damage from player controlled units or Roshan while on the ground puts Tree Dance on cooldown."
-            ],
-            "attributes": [
-                "DISTANCE: 1000",
-                "DAMAGE COOLDOWN: 3.0",
-                "PRIMAL SPRING DAMAGE: 140 / 210 / 280 / 350",
-                "PRIMAL SPRING SLOW: 20% / 40% / 60% / 80%"
-            ],
-            "lore": "Sun Wukong dances nimbly along the treetop canopy, always just out of arm's reach.",
-            "notes": [
-                "Tree Dance cooldown starts upon landing.",
-                "Right-clicking the ground will have Monkey King drop from the tree."
-            ],
-            "shardDescription": "Reduces cooldown to 0.4 and cast point to 0.1."
-        },
-        "stat": {
-            "abilityId": 5721,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 4104,
-            "unitTargetType": 64,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1000
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3
-            ],
-            "cooldown": [
-                1.0
-            ],
-            "manaCost": [
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5722": {
-        "id": 5722,
-        "name": "monkey_king_untransform",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 5722,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Revert Form",
-            "description": [
-                "Reverts Monkey King's shape to his original form."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5722,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 41029,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "cooldown": [
-                1.0
-            ],
-            "manaCost": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "10.0 10.0 10.0 10.0",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Tree Dance",
+        "desc_loc": "Monkey King jumps to a tree and perches atop it. While perched, he gains the Primal Spring ability-a channeled leap attack. If Monkey King's tree is destroyed, he falls and is stunned for 4 seconds. Taking damage from player controlled units or Roshan while on the ground puts Tree Dance on cooldown.",
+        "lore_loc": "Sun Wukong dances nimbly along the treetop canopy, always just out of arm's reach.",
+        "notes_loc": [
+            "Tree Dance cooldown starts upon landing.",
+            "Right-clicking the ground will have Monkey King drop from the tree."
+        ],
+        "shard_loc": "Reduces cooldown to 0.3 and cast point to 0.1.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "524296",
+        "target_team": 2,
+        "target_type": 64,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            1000
+        ],
+        "cast_points": [
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            1
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "leap_speed",
+                "values_float": [],
+                "values_int": [
+                    700
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "spring_leap_speed",
+                "values_float": [],
+                "values_int": [
+                    1300
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "give_up_distance",
+                "values_float": [],
+                "values_int": [
+                    1850
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "ground_jump_distance",
+                "values_float": [],
+                "values_int": [
+                    900
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "perched_jump_distance",
+                "values_float": [],
+                "values_int": [
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": "DISTANCE:"
+            },
+            {
+                "name": "jump_damage_cooldown",
+                "values_float": [
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE COOLDOWN:"
+            },
+            {
+                "name": "perched_day_vision",
+                "values_float": [
+                    800
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "perched_night_vision",
+                "values_float": [
+                    600
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "perched_spot_height",
+                "values_float": [
+                    192
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "unperched_stunned_duration",
+                "values_float": [
+                    4
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "top_level_height",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "impact_damage_tooltip",
+                "values_float": [],
+                "values_int": [
+                    140,
+                    210,
+                    280,
+                    350
+                ],
+                "is_percentage": false,
+                "heading_loc": "PRIMAL SPRING DAMAGE:"
+            },
+            {
+                "name": "impact_movement_slow_tooltip",
+                "values_float": [],
+                "values_int": [
+                    20,
+                    40,
+                    60,
+                    80
+                ],
+                "is_percentage": true,
+                "heading_loc": "PRIMAL SPRING SLOW:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5723": {
         "id": 5723,
         "name": "monkey_king_jingu_mastery",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 5723,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Jingu Mastery",
-            "description": [
-                "Monkey King's attacks awaken the Jingu Bang's power. Upon the fourth hit on the same enemy hero, Monkey King earns four charged attacks that have bonus damage and lifesteal."
-            ],
-            "attributes": [
-                "REQUIRED HITS: 4",
-                "COUNTER DURATION: 7 / 8 / 9 / 10",
-                "CHARGES: 4",
-                "BONUS DAMAGE: 40 / 70 / 100 / 130",
-                "BONUS LIFESTEAL: 15% / 30% / 45% / 60%"
-            ],
-            "lore": "Always sensitive to the moods of its master, the Jingu Bang radiates power when Sun Wukong's combat fervor is on full display.",
-            "notes": [
-                "Hitting an enemy with Boundless Strike adds to the hit counter.",
-                "Repeatedly hitting an enemy refreshes the Jingu Mastery debuff duration.",
-                "Hit charges on enemies cannot be dispelled."
-            ]
-        },
-        "stat": {
-            "abilityId": 5723,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 3,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "cooldown": [
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5724": {
-        "id": 5724,
-        "name": "monkey_king_primal_spring",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 5724,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Primal Spring",
-            "description": [
-                "Monkey King springs out from his tree perch, damaging and slowing enemies in the area where he lands. Damage and slow amounts are in proportion to channel duration."
-            ],
-            "attributes": [
-                "DAMAGE: 140 / 210 / 280 / 350",
-                "MOVEMENT SLOW: 20% / 40% / 60% / 80%",
-                "MAX SLOW DURATION: 4.0",
-                "MAX DISTANCE: 1000"
-            ],
-            "lore": "Leaping from the safety of cover into the midst of his enemies, Sun Wukong attacks without mercy.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5724,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 4336,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                0
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0
-            ],
-            "channelTime": [
-                1.7
-            ],
-            "cooldown": [
-                19.0,
-                17.0,
-                15.0,
-                13.0
-            ],
-            "manaCost": [
-                100.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Jingu Mastery",
+        "desc_loc": "Monkey King's attacks awaken the Jingu Bang's power. Upon the fourth hit on the same enemy hero, Monkey King earns four charged attacks that have bonus damage and lifesteal.",
+        "lore_loc": "Always sensitive to the moods of its master, the Jingu Bang radiates power when Sun Wukong's combat fervor is on full display.",
+        "notes_loc": [
+            "Hitting an enemy with Boundless Strike adds to the hit counter.",
+            "Repeatedly hitting an enemy refreshes the Jingu Mastery debuff duration.",
+            "Hit charges on enemies cannot be dispelled."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 3,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "required_hits",
+                "values_float": [],
+                "values_int": [
+                    4
+                ],
+                "is_percentage": false,
+                "heading_loc": "REQUIRED HITS:"
+            },
+            {
+                "name": "counter_duration",
+                "values_float": [],
+                "values_int": [
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "is_percentage": false,
+                "heading_loc": "COUNTER DURATION:"
+            },
+            {
+                "name": "charges",
+                "values_float": [],
+                "values_int": [
+                    4
+                ],
+                "is_percentage": false,
+                "heading_loc": "CHARGES:"
+            },
+            {
+                "name": "bonus_damage",
+                "values_float": [],
+                "values_int": [
+                    40,
+                    70,
+                    100,
+                    130
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS DAMAGE:"
+            },
+            {
+                "name": "lifesteal",
+                "values_float": [],
+                "values_int": [
+                    15,
+                    30,
+                    45,
+                    60
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS LIFESTEAL:"
+            },
+            {
+                "name": "max_duration",
+                "values_float": [],
+                "values_int": [
+                    35
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5725": {
         "id": 5725,
         "name": "monkey_king_wukongs_command",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 5725,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Wukong's Command",
-            "description": [
-                "Monkey King creates a circular formation of soldiers that spread out from his position. If Monkey King leaves the area his soldiers disperse. The soldiers have Monkey King's attack and only target heroes. Monkey King is granted bonus armor for the spell's duration."
-            ],
-            "attributes": [
-                "SOLDIER ATK SPEED: 1.1",
-                "DURATION: 13.0",
-                "BONUS ARMOR: 12 / 18 / 24",
-                "SCEPTER SOLDIER SPAWN INTERVAL: 4",
-                "SCEPTER SOLDIER DURATION: 12"
-            ],
-            "lore": "Monkey King rips out a tuft of fur to blow at his enemies, charging each strand to transform into a copy of himself.",
-            "aghanimDescription": "Spawns a monkey soldier near Monkey King at regular intervals. Soldiers do not spawn while invisible or on trees. Soldiers only attack buildings when Monkey King himself is nearby.",
-            "notes": [
-                "Soldiers do not receive Jingu Mastery bonuses.",
-                "Soldiers do not copy Basher or Abyssal."
-            ]
-        },
-        "stat": {
-            "abilityId": 5725,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 2097200,
-            "unitTargetType": 1,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 3,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                0
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                1.2
-            ],
-            "cooldown": [
-                130.0,
-                110.0,
-                90.0
-            ],
-            "manaCost": [
-                100.0
-            ],
-            "isUltimate": true,
-            "duration": "13.0",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5726": {
-        "id": 5726,
-        "name": "monkey_king_primal_spring_early",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 5726,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Spring Early",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5726,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 67653,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "6303": {
-        "id": 6303,
-        "name": "special_bonus_unique_monkey_king",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 6303,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+40% Boundless Strike Crit",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6303,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6421": {
-        "id": 6421,
-        "name": "special_bonus_unique_monkey_king_2",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 6421,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+100 Jingu Mastery Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6421,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6696": {
-        "id": 6696,
-        "name": "special_bonus_unique_monkey_king_3",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 6696,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+350 Primal Spring Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6696,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6697": {
-        "id": 6697,
-        "name": "special_bonus_unique_monkey_king_4",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 6697,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+200 Armor Wukong's Command",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6697,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "Wukong's Command",
+        "desc_loc": "Monkey King creates a circular formation of soldiers that spread out from his position. If Monkey King leaves the area his soldiers disperse. The soldiers have Monkey King's attack and only target heroes. Monkey King is granted bonus armor for the spell's duration.",
+        "lore_loc": "Monkey King rips out a tuft of fur to blow at his enemies, charging each strand to transform into a copy of himself.",
+        "notes_loc": [
+            "Soldiers do not receive Jingu Mastery bonuses.",
+            "Soldiers do not copy Basher or Abyssal."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "Spawns a monkey soldier near Monkey King at regular intervals. Soldiers do not spawn while invisible or on trees. Soldiers only attack buildings when Monkey King himself is nearby.",
+        "type": 1,
+        "behavior": "67108912",
+        "target_team": 0,
+        "target_type": 1,
+        "flags": 0,
+        "damage": 1,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 3,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            1.2000000476837
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            120,
+            100,
+            80
+        ],
+        "durations": [
+            13
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            100
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "first_radius",
+                "values_float": [],
+                "values_int": [
+                    300
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "second_radius",
+                "values_float": [],
+                "values_int": [
+                    750
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "num_first_soldiers",
+                "values_float": [],
+                "values_int": [
+                    5
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "num_second_soldiers",
+                "values_float": [],
+                "values_int": [
+                    9
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "move_speed",
+                "values_float": [],
+                "values_int": [
+                    700
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bonus_armor",
+                "values_float": [],
+                "values_int": [
+                    12,
+                    18,
+                    24
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS ARMOR:"
+            },
+            {
+                "name": "attack_speed",
+                "values_float": [
+                    1.1000000238419
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SOLDIER ATK SPEED:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    13
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "leadership_radius_buffer",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "cast_range",
+                "values_float": [],
+                "values_int": [
+                    550
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "cast_range_scepter",
+                "values_float": [],
+                "values_int": [
+                    1550
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "outer_attack_buffer",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "cooldown_scepter",
+                "values_float": [],
+                "values_int": [
+                    90,
+                    70,
+                    50
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "scepter_spawn_interval",
+                "values_float": [
+                    4
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER SOLDIER SPAWN INTERVAL:"
+            },
+            {
+                "name": "scepter_spawn_duration",
+                "values_float": [
+                    12
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "SCEPTER SOLDIER DURATION:"
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    13
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    1.2000000476837
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "7024": {
         "id": 7024,
         "name": "special_bonus_unique_monkey_king_5",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 7024,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+400 Tree Dance Vision AoE",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7024,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value}% Tree Dance Vision AoE",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    50
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "7025": {
-        "id": 7025,
-        "name": "special_bonus_unique_monkey_king_6",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 7025,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Additional Wukong's Command Ring",
-            "description": [
-                "Creates an additional ring of 7 soldiers at 1100 range from the center."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7025,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "5906": {
+        "id": 5906,
+        "name": "special_bonus_attack_speed_20",
+        "name_loc": "+{s:value} Attack Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "7038": {
         "id": 7038,
         "name": "special_bonus_unique_monkey_king_7",
-        "uri": "monkey_king",
-        "language": {
-            "abilityId": 7038,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+450 Tree Dance Cast Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7038,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Tree Dance Cast Range",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    450
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6421": {
+        "id": 6421,
+        "name": "special_bonus_unique_monkey_king_2",
+        "name_loc": "+{s:value} Jingu Mastery Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    130
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6303": {
+        "id": 6303,
+        "name": "special_bonus_unique_monkey_king",
+        "name_loc": "+{s:value}% Boundless Strike Crit",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "802": {
+        "id": 802,
+        "name": "special_bonus_unique_monkey_king_10",
+        "name_loc": "-{s:value}s Boundless Strike Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    7
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "747": {
+        "id": 747,
+        "name": "special_bonus_unique_monkey_king_8",
+        "name_loc": "0 Cooldown Primal Spring",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    0
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "7025": {
+        "id": 7025,
+        "name": "special_bonus_unique_monkey_king_6",
+        "name_loc": "Additional Wukong's Command Ring",
+        "desc_loc": "Creates an additional ring of {s:value2} soldiers at {s:value} range from the center.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    1100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "value2",
+                "values_float": [],
+                "values_int": [
+                    7
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

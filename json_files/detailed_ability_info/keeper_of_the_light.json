@@ -1,1486 +1,1821 @@
 {
-    "421": {
-        "id": 421,
-        "name": "special_bonus_unique_keeper_of_the_light_5",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 421,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-8s Blinding Light Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 421,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "422": {
-        "id": 422,
-        "name": "special_bonus_unique_keeper_of_the_light_6",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 422,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+150 Will-O-Wisp AOE",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 422,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "527": {
-        "id": 527,
-        "name": "special_bonus_unique_keeper_of_the_light_7",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 527,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-4s Chakra Magic Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 527,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
+    "5471": {
+        "id": 5471,
+        "name": "keeper_of_the_light_illuminate",
+        "name_loc": "Illuminate",
+        "desc_loc": "Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt.",
+        "lore_loc": "Ezalor's hidden light reveals itself in marvelous fashion.",
+        "notes_loc": [
+            "Gives increasing vision over the channeling time."
+        ],
+        "shard_loc": "Causes Illuminate to heal for 40% of its damage during daytime.",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "144",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            1800
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            2,
+            2.7000000476837,
+            3.4000000953674,
+            4.0999999046326
+        ],
+        "cooldowns": [
+            11
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            100,
+            125,
+            150,
+            175
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "total_damage",
+                "values_float": [],
+                "values_int": [
+                    225,
+                    325,
+                    425,
+                    525
+                ],
+                "is_percentage": false,
+                "heading_loc": "MAX DAMAGE:"
+            },
+            {
+                "name": "max_channel_time",
+                "values_float": [
+                    2,
+                    2.7000000476837,
+                    3.4000000953674,
+                    4.0999999046326
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "MAX CHANNEL TIME:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    375
+                ],
+                "is_percentage": false,
+                "heading_loc": "WIDTH:"
+            },
+            {
+                "name": "range",
+                "values_float": [],
+                "values_int": [
+                    1550
+                ],
+                "is_percentage": false,
+                "heading_loc": "RANGE:"
+            },
+            {
+                "name": "speed",
+                "values_float": [
+                    1050
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_radius",
+                "values_float": [],
+                "values_int": [
+                    800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_duration",
+                "values_float": [
+                    3.3399999141693
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "channel_vision_radius",
+                "values_float": [],
+                "values_int": [
+                    375
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "channel_vision_interval",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "channel_vision_duration",
+                "values_float": [
+                    10.340000152588
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "channel_vision_step",
+                "values_float": [],
+                "values_int": [
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityChannelTime",
+                "values_float": [
+                    2,
+                    2.7000000476837,
+                    3.4000000953674,
+                    4.0999999046326
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "532": {
         "id": 532,
         "name": "keeper_of_the_light_radiant_bind",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 532,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Solar Bind",
-            "description": [
-                "Weakens an enemy's magical resistance, and applies a slow that increases in strength the more the target moves."
-            ],
-            "attributes": [
-                "DURATION: 7",
-                "SLOW PER 100 UNITS: 4% / 5.5% / 7% / 8.5%",
-                "MAGIC RESISTANCE REDUCTION: 15% / 20% / 25% / 30%"
-            ],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 532,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 8,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                700,
-                750,
-                800,
-                850
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.2
-            ],
-            "cooldown": [
-                23.0,
-                20.0,
-                17.0,
-                14.0
-            ],
-            "manaCost": [
-                60.0,
-                80.0,
-                100.0,
-                120.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "624": {
-        "id": 624,
-        "name": "special_bonus_unique_keeper_of_the_light_10",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 624,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+1.2s Blinding Light Stun",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 624,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "657": {
-        "id": 657,
-        "name": "special_bonus_unique_keeper_of_the_light_8",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 657,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+30% Blinding Light Miss",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 657,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "664": {
-        "id": 664,
-        "name": "special_bonus_unique_keeper_of_the_light_11",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 664,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+15s Spirit Form Duration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 664,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "669": {
-        "id": 669,
-        "name": "special_bonus_unique_keeper_of_the_light_9",
-        "language": {
-            "abilityId": 669,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+50% Illuminate Daytime Heal",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 669,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "771": {
-        "id": 771,
-        "name": "special_bonus_unique_keeper_of_the_light_12",
-        "language": {
-            "abilityId": 771,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "2 Blinding Light Charges",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 771,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "804": {
-        "id": 804,
-        "name": "special_bonus_unique_keeper_of_the_light_14",
-        "language": {
-            "abilityId": 804,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Chakra Magic Dispels",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 804,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "881": {
-        "id": 881,
-        "name": "special_bonus_unique_keeper_of_the_light_13",
-        "language": {
-            "abilityId": 881,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "2 Solar Bind Charges",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 881,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "5471": {
-        "id": 5471,
-        "name": "keeper_of_the_light_illuminate",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 5471,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Illuminate",
-            "description": [
-                "Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt."
-            ],
-            "attributes": [
-                "MAX DAMAGE: 225 / 325 / 425 / 525",
-                "MAX CHANNEL TIME: 2 / 2.7 / 3.4 / 4.1",
-                "WIDTH: 375",
-                "RANGE: 1550"
-            ],
-            "lore": "Ezalor's hidden light reveals itself in marvelous fashion.",
-            "notes": [
-                "Gives increasing vision over the channeling time."
-            ],
-            "shardDescription": "Causes Illuminate to heal for 40% of its damage during daytime."
-        },
-        "stat": {
-            "abilityId": 5471,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 144,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1800
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "channelTime": [
-                2.0,
-                2.7,
-                3.4,
-                4.1
-            ],
-            "cooldown": [
-                11.0
-            ],
-            "manaCost": [
-                100.0,
-                125.0,
-                150.0,
-                175.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5472": {
-        "id": 5472,
-        "name": "keeper_of_the_light_mana_leak",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 5472,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Mana Leak",
-            "description": [
-                "Weakens an enemy's magical essence, causing them to lose mana as they move.  If the enemy loses all of its mana, it will be stunned."
-            ],
-            "attributes": [
-                "MANA LEAK PERCENT: 5.0%",
-                "LEAK DURATION: 4.0 / 5.0 / 6.0 / 7.0",
-                "STUN DURATION: 1.5 / 2.0 / 2.5 / 3.0"
-            ],
-            "lore": "Ezalor disrupts Primordial harmony, draining magical energy from those with poor constitution.",
-            "notes": [
-                "If the target travels over 300 distance in less than 0.1 second (by using blink skills, for example), Mana Leak will not decrease its mana for that distance."
-            ]
-        },
-        "stat": {
-            "abilityId": 5472,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 8,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                400,
-                500,
-                600,
-                700
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                16.0,
-                14.0,
-                12.0,
-                10.0
-            ],
-            "manaCost": [
-                160.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Solar Bind",
+        "desc_loc": "Weakens an enemy's magical resistance, and applies a slow that increases in strength the more the target moves.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            700,
+            750,
+            800,
+            850
+        ],
+        "cast_points": [
+            0.20000000298023
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            23,
+            20,
+            17,
+            14
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            60,
+            80,
+            100,
+            120
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "duration",
+                "values_float": [
+                    7
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "slow",
+                "values_float": [
+                    4,
+                    5.5,
+                    7,
+                    8.5
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "SLOW PER 100 UNITS:"
+            },
+            {
+                "name": "magic_resistance",
+                "values_float": [],
+                "values_int": [
+                    15,
+                    20,
+                    25,
+                    30
+                ],
+                "is_percentage": true,
+                "heading_loc": "MAGIC RESISTANCE REDUCTION:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    700,
+                    750,
+                    800,
+                    850
+                ],
+                "is_percentage": false,
+                "heading_loc": "CAST RANGE:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5473": {
         "id": 5473,
         "name": "keeper_of_the_light_chakra_magic",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 5473,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Chakra Magic",
-            "description": [
-                "Restores mana to the target unit and reduces cooldowns of all abilities currently on cooldown by a fixed amount."
-            ],
-            "attributes": [
-                "MANA RESTORE: 100 / 180 / 260 / 340",
-                "COOLDOWN REDUCTION: 3 / 4 / 5 / 6"
-            ],
-            "lore": "In the same vein, Ezalor bestows his harmony among others.",
-            "notes": [
-                "Chakra Magic does not reduce the cooldown of Ultimate abilities"
-            ]
-        },
-        "stat": {
-            "abilityId": 5473,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 8,
-            "unitTargetType": 3,
-            "unitTargetTeam": 2,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 3.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                900,
-                900,
-                900,
-                900
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                20.0,
-                18.0,
-                16.0,
-                14.0
-            ],
-            "manaCost": [
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5474": {
-        "id": 5474,
-        "name": "keeper_of_the_light_spirit_form",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 5474,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Spirit Form",
-            "description": [
-                "Ezalor temporarily turns his body luminescent, gaining bonus movement speed, cast range, grants the Blinding Light ability, and allows Illuminate to be channeled by a separate spirit and heal allies during the day."
-            ],
-            "attributes": [
-                "DURATION: 40.0 / 40.0 / 40.0",
-                "MOVEMENT SPEED: 20% / 25% / 30%",
-                "ILLUMINATE HEAL: 30% / 40% / 50%"
-            ],
-            "lore": "In a flash of light, Ezalor reveals his true nature.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5474,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 4,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 0.3499999940395355,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "cooldown": [
-                90.0,
-                80.0,
-                70.0
-            ],
-            "manaCost": [
-                75.0,
-                125.0,
-                175.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5475": {
-        "id": 5475,
-        "name": "keeper_of_the_light_recall",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 5475,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Recall",
-            "description": [
-                "After a short delay, teleports the targeted friendly hero to your location.  If the targeted friendly hero takes player based damage during this time, the ability is interrupted."
-            ],
-            "attributes": [
-                "TELEPORT DELAY: 3"
-            ],
-            "lore": "Walk towards the light.",
-            "notes": [
-                "If Keeper of the Light dies, the spell effect is interrupted.",
-                "Recall will interrupt channeling spells.",
-                "You can disable help to prevent Keeper from casting this spell on you.",
-                "Can be cast through the minimap, choosing the nearest friendly hero."
-            ]
-        },
-        "stat": {
-            "abilityId": 5475,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 8,
-            "unitTargetTeam": 2,
-            "unitTargetFlags": 32,
-            "unitDamageType": 0,
-            "spellImmunity": 4,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                0
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                15.0
-            ],
-            "manaCost": [
-                150.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": true
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Chakra Magic",
+        "desc_loc": "Restores mana to the target unit and reduces cooldowns of all abilities currently on cooldown by a fixed amount.",
+        "lore_loc": "In the same vein, Ezalor bestows his harmony among others.",
+        "notes_loc": [
+            "Chakra Magic does not reduce the cooldown of Ultimate abilities"
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8",
+        "target_team": 1,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            900,
+            900,
+            900,
+            900
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            20,
+            18,
+            16,
+            14
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "mana_restore",
+                "values_float": [],
+                "values_int": [
+                    100,
+                    180,
+                    260,
+                    340
+                ],
+                "is_percentage": false,
+                "heading_loc": "MANA RESTORE:"
+            },
+            {
+                "name": "cooldown_reduction",
+                "values_float": [],
+                "values_int": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": "COOLDOWN REDUCTION:"
+            },
+            {
+                "name": "mana_leak_pct",
+                "values_float": [
+                    4.5,
+                    5,
+                    5.5,
+                    6
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    900,
+                    900,
+                    900,
+                    900
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5476": {
         "id": 5476,
         "name": "keeper_of_the_light_blinding_light",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 5476,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Blinding Light",
-            "description": [
-                "A blinding light flashes over the targeted area, knocking back and blinding the units in the area, causing them to miss some attacks. Knockback is 400 range over 0.4 seconds,"
-            ],
-            "attributes": [
-                "MISS CHANCE: 40%",
-                "DURATION: 4",
-                "RADIUS: 600",
-                "DAMAGE: 100"
-            ],
-            "lore": "The Primordial light turns the tides of battle in favor of Ezalor and his allies.",
-            "notes": [
-                "Upon landing, units will destroy trees in a 150 radius."
-            ]
-        },
-        "stat": {
-            "abilityId": 5476,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                600
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                18.0
-            ],
-            "manaCost": [
-                150.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5477": {
-        "id": 5477,
-        "name": "keeper_of_the_light_illuminate_end",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 5477,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Release Illuminate",
-            "description": [
-                "Release the channel early."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5477,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 32837,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5479": {
-        "id": 5479,
-        "name": "keeper_of_the_light_spirit_form_illuminate",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 5479,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Illuminate",
-            "description": [
-                "Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt."
-            ],
-            "attributes": [
-                "MAX DAMAGE: 225 / 325 / 425 / 525",
-                "WIDTH: 375",
-                "RANGE: 1550",
-                "MAX CHANNEL TIME: 2 / 2.7 / 3.4 / 4.1"
-            ],
-            "lore": "Ezalor's hidden light reveals itself in marvelous fashion.",
-            "notes": [
-                "Gives increasing vision over the channeling time."
-            ]
-        },
-        "stat": {
-            "abilityId": 5479,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                1800
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.3,
-                0.3,
-                0.3,
-                0.3
-            ],
-            "cooldown": [
-                11.0
-            ],
-            "manaCost": [
-                100.0,
-                125.0,
-                150.0,
-                175.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5501": {
-        "id": 5501,
-        "name": "keeper_of_the_light_empty1",
-        "language": {
-            "abilityId": 5501,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Empty",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5501,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 66,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5502": {
-        "id": 5502,
-        "name": "keeper_of_the_light_empty2",
-        "language": {
-            "abilityId": 5502,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Empty",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5502,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 66,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5503": {
-        "id": 5503,
-        "name": "keeper_of_the_light_spirit_form_illuminate_end",
-        "language": {
-            "abilityId": 5503,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Release Illuminate",
-            "description": [
-                "Release the channel early."
-            ],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5503,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 32837,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "6217": {
-        "id": 6217,
-        "name": "special_bonus_unique_keeper_of_the_light",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 6217,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+180 Illuminate Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6217,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6527": {
-        "id": 6527,
-        "name": "special_bonus_unique_keeper_of_the_light_2",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 6527,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+200 Chakra Magic Mana",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6527,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "6665": {
-        "id": 6665,
-        "name": "special_bonus_unique_keeper_of_the_light_3",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 6665,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+2 Will-O-Wisp Flicker",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6665,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "Blinding Light",
+        "desc_loc": "A blinding light flashes over the targeted area, knocking back and blinding the units in the area, causing them to miss some attacks. Knockback is %knockback_distance% range over %knockback_duration% seconds,",
+        "lore_loc": "The Primordial light turns the tides of battle in favor of Ezalor and his allies.",
+        "notes_loc": [
+            "Upon landing, units will destroy trees in a 150 radius."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934641",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 1,
+        "cast_ranges": [
+            600
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            18
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            150
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "miss_rate",
+                "values_float": [],
+                "values_int": [
+                    40
+                ],
+                "is_percentage": true,
+                "heading_loc": "MISS CHANCE:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    4
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "knockback_duration",
+                "values_float": [
+                    0.40000000596046
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "knockback_distance",
+                "values_float": [
+                    400
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": "CAST RANGE:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "7316": {
         "id": 7316,
         "name": "keeper_of_the_light_will_o_wisp",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 7316,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Will-O-Wisp",
-            "description": [
-                "Summons Ignis Fatuus at the targeted area. Alternates on and off, drawing enemies closer with its mesmerising flicker."
-            ],
-            "attributes": [
-                "RADIUS: 725",
-                "HIT COUNT: 6"
-            ],
-            "lore": "Though he would not claim to 'know' them, Ezalor holds an uncanny influence over many powerful creatures always willing to come to his aid.",
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7316,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 1,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": true,
-            "hasScepterUpgrade": true,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                800
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.1
-            ],
-            "cooldown": [
-                60.0
-            ],
-            "manaCost": [
-                250.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Will-O-Wisp",
+        "desc_loc": "Summons Ignis Fatuus at the targeted area. Alternates on and off, drawing enemies closer with its mesmerising flicker.",
+        "lore_loc": "Though he would not claim to 'know' them, Ezalor holds an uncanny influence over many powerful creatures always willing to come to his aid.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934641",
+        "target_team": 2,
+        "target_type": 1,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 1,
+        "cast_ranges": [
+            800
+        ],
+        "cast_points": [
+            0.10000000149012
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            60
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            250
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "on_count",
+                "values_float": [],
+                "values_int": [
+                    5
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    725
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "hit_count",
+                "values_float": [],
+                "values_int": [
+                    6
+                ],
+                "is_percentage": false,
+                "heading_loc": "HIT COUNT:"
+            },
+            {
+                "name": "off_duration",
+                "values_float": [
+                    1.8500000238419
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "on_duration",
+                "values_float": [
+                    1.2999999523163
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "off_duration_initial",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "fixed_movement_speed",
+                "values_float": [],
+                "values_int": [
+                    60
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bounty",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.10000000149012
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": true,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "7398": {
-        "id": 7398,
-        "name": "special_bonus_unique_keeper_of_the_light_4",
-        "uri": "keeper_of_the_light",
-        "language": {
-            "abilityId": 7398,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+3 Will-O-Wisp Health Count",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7398,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "5474": {
+        "id": 5474,
+        "name": "keeper_of_the_light_spirit_form",
+        "name_loc": "Spirit Form",
+        "desc_loc": "Ezalor temporarily turns his body luminescent, gaining bonus movement speed, cast range, grants the Blinding Light ability, and allows Illuminate to be channeled by a separate spirit and heal allies during the day.",
+        "lore_loc": "In a flash of light, Ezalor reveals his true nature.",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "4",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 3,
+        "max_level": 3,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            70
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            75,
+            125,
+            175
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "duration",
+                "values_float": [
+                    40
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "movement_speed",
+                "values_float": [],
+                "values_int": [
+                    20,
+                    25,
+                    30
+                ],
+                "is_percentage": true,
+                "heading_loc": "MOVEMENT SPEED:"
+            },
+            {
+                "name": "cast_range",
+                "values_float": [],
+                "values_int": [
+                    125,
+                    250,
+                    375
+                ],
+                "is_percentage": false,
+                "heading_loc": "CAST RANGE BONUS:"
+            },
+            {
+                "name": "illuminate_heal",
+                "values_float": [],
+                "values_int": [
+                    30,
+                    45,
+                    60
+                ],
+                "is_percentage": true,
+                "heading_loc": "ILLUMINATE HEAL:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5479": {
+        "id": 5479,
+        "name": "keeper_of_the_light_spirit_form_illuminate",
+        "name_loc": "Illuminate",
+        "desc_loc": "Channels light energy, building power the longer it's channeled.  Once released, a wave is sent forth that deals damage and gives vision in its path.  The longer it is channeled, the more damage is dealt.",
+        "lore_loc": "Ezalor's hidden light reveals itself in marvelous fashion.",
+        "notes_loc": [
+            "Gives increasing vision over the channeling time."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934609",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            1800
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            11
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            100,
+            125,
+            150,
+            175
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "total_damage",
+                "values_float": [],
+                "values_int": [
+                    225,
+                    325,
+                    425,
+                    525
+                ],
+                "is_percentage": false,
+                "heading_loc": "MAX DAMAGE:"
+            },
+            {
+                "name": "max_channel_time",
+                "values_float": [
+                    2,
+                    2.7000000476837,
+                    3.4000000953674,
+                    4.0999999046326
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "MAX CHANNEL TIME:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    375
+                ],
+                "is_percentage": false,
+                "heading_loc": "WIDTH:"
+            },
+            {
+                "name": "range",
+                "values_float": [],
+                "values_int": [
+                    1550
+                ],
+                "is_percentage": false,
+                "heading_loc": "RANGE:"
+            },
+            {
+                "name": "speed",
+                "values_float": [
+                    1050
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_radius",
+                "values_float": [],
+                "values_int": [
+                    800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "vision_duration",
+                "values_float": [
+                    3.3399999141693
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "channel_vision_radius",
+                "values_float": [],
+                "values_int": [
+                    375
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "channel_vision_interval",
+                "values_float": [
+                    0.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "channel_vision_duration",
+                "values_float": [
+                    10.340000152588
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "channel_vision_step",
+                "values_float": [],
+                "values_int": [
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    1800
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5475": {
+        "id": 5475,
+        "name": "keeper_of_the_light_recall",
+        "name_loc": "Recall",
+        "desc_loc": "After a short delay, teleports the targeted friendly hero to your location.  If the targeted friendly hero takes player based damage during this time, the ability is interrupted.",
+        "lore_loc": "Walk towards the light.",
+        "notes_loc": [
+            "If Keeper of the Light dies, the spell effect is interrupted.",
+            "Recall will interrupt channeling spells.",
+            "You can disable help to prevent Keeper from casting this spell on you.",
+            "Can be cast through the minimap, choosing the nearest friendly hero."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8623489245",
+        "target_team": 1,
+        "target_type": 128,
+        "flags": 64,
+        "damage": 0,
+        "immunity": 1,
+        "dispellable": 2,
+        "max_level": 1,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.30000001192093,
+            0.30000001192093,
+            0.30000001192093
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            15
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            150
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "teleport_delay",
+                "values_float": [
+                    3
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "TELEPORT DELAY:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.30000001192093,
+                    0.30000001192093,
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "657": {
+        "id": 657,
+        "name": "special_bonus_unique_keeper_of_the_light_8",
+        "name_loc": "+{s:value}% Blinding Light Miss",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5918": {
+        "id": 5918,
+        "name": "special_bonus_movement_speed_20",
+        "name_loc": "+{s:value} Movement Speed",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "527": {
+        "id": 527,
+        "name": "special_bonus_unique_keeper_of_the_light_7",
+        "name_loc": "-{s:value}s Chakra Magic Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    4
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "881": {
+        "id": 881,
+        "name": "special_bonus_unique_keeper_of_the_light_13",
+        "name_loc": "{s:value} Solar Bind Charges",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    2
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "664": {
+        "id": 664,
+        "name": "special_bonus_unique_keeper_of_the_light_11",
+        "name_loc": "+{s:value}s Spirit Form Duration",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    15
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "804": {
+        "id": 804,
+        "name": "special_bonus_unique_keeper_of_the_light_14",
+        "name_loc": "Chakra Magic Dispels",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    0
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "624": {
+        "id": 624,
+        "name": "special_bonus_unique_keeper_of_the_light_10",
+        "name_loc": "+{s:value}s Blinding Light Stun",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    1.2000000476837
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6217": {
+        "id": 6217,
+        "name": "special_bonus_unique_keeper_of_the_light",
+        "name_loc": "+{s:value} Illuminate Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    180
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

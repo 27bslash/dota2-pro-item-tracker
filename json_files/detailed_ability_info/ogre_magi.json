@@ -1,697 +1,1425 @@
 {
-    "403": {
-        "id": 403,
-        "name": "special_bonus_unique_ogre_magi_4",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 403,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+16 Ignite DPS",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 403,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "648": {
-        "id": 648,
-        "name": "ogre_magi_smash",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 648,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Fire Shield",
-            "description": [
-                "Creates a shield around the target ally, absorbing 85% of the damage of next 3 attacks. Launches fireballs at the attacker, dealing 125 damage.<br><br>Lasts 25 seconds."
-            ],
-            "attributes": [
-                "DURATION: 25",
-                "NUMBER OF ATTACKS: 3",
-                "DAMAGE: 125"
-            ],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 648,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 35,
-            "unitTargetTeam": 2,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                600
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.2
-            ],
-            "cooldown": [
-                16.0
-            ],
-            "manaCost": [
-                50.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": true
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
-    "801": {
-        "id": 801,
-        "name": "special_bonus_unique_ogre_magi_5",
-        "language": {
-            "abilityId": 801,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "-1s Fireblast Cooldown",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 801,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "5304": {
-        "id": 5304,
-        "name": "ogre_magi_frost_armor",
-        "language": {
-            "abilityId": 5304,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Ice Armor",
-            "description": [
-                "The Ogre Frostmage summons an invisible layer of icy air that surrounds the target friendly unit, increasing its armor and temporarily slowing any enemies that dare attack it."
-            ],
-            "attributes": [
-                "ARMOR BONUS: 5",
-                "DURATION: 45.0",
-                "MOVE SLOW: -25%",
-                "ATTACK SLOW: -25",
-                "SLOW DURATION: 5.0"
-            ],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5304,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 32776,
-            "unitTargetType": 3,
-            "unitTargetTeam": 2,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                800
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.56
-            ],
-            "cooldown": [
-                5.0
-            ],
-            "manaCost": [
-                40.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
     "5438": {
         "id": 5438,
         "name": "ogre_magi_fireblast",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 5438,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Fireblast",
-            "description": [
-                "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target."
-            ],
-            "attributes": [
-                "STUN DURATION: 1.5",
-                "FIREBLAST DAMAGE: 60 / 120 / 180 / 240"
-            ],
-            "lore": "The Ogre Magi is easily amused, entertained for hours by playing with fire.",
-            "notes": [
-                "When Multicast, Fireblast hits the same target each time with a 0.6 seconds interval."
-            ]
-        },
-        "stat": {
-            "abilityId": 5438,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 8,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                475
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.45
-            ],
-            "cooldown": [
-                11.0,
-                10.0,
-                9.0,
-                8.0
-            ],
-            "manaCost": [
-                70.0,
-                80.0,
-                90.0,
-                100.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Fireblast",
+        "desc_loc": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target.",
+        "lore_loc": "The Ogre Magi is easily amused, entertained for hours by playing with fire.",
+        "notes_loc": [
+            "When Multicast, Fireblast hits the same target each time with a %multicast_delay% seconds interval."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 1,
+        "max_level": 4,
+        "cast_ranges": [
+            475
+        ],
+        "cast_points": [
+            0.44999998807907
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            11,
+            10,
+            9,
+            8
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            70,
+            80,
+            90,
+            100
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "stun_duration",
+                "values_float": [
+                    1.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "multicast_delay",
+                "values_float": [
+                    0.60000002384186
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "fireblast_damage",
+                "values_float": [],
+                "values_int": [
+                    60,
+                    120,
+                    180,
+                    240
+                ],
+                "is_percentage": false,
+                "heading_loc": "FIREBLAST DAMAGE:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    475
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.44999998807907
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5439": {
         "id": 5439,
         "name": "ogre_magi_ignite",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 5439,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Ignite",
-            "description": [
-                "Drenches the target and another random unit in volatile chemicals, causing it to burst into flames. The target is in immense pain, taking damage and moving more slowly."
-            ],
-            "attributes": [
-                "BURN DAMAGE: 20 / 30 / 40 / 50",
-                "DURATION: 5 / 6 / 7 / 8",
-                "SLOW: -20% / -22% / -24% / -26%"
-            ],
-            "lore": "Batter up!",
-            "notes": [
-                "Multicast makes this spell have a chance to cast multiple times at random enemy units with 1400 area of effect.",
-                "Ignite hitting an already affected unit adds to the burn duration."
-            ]
-        },
-        "stat": {
-            "abilityId": 5439,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 40,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                700,
-                800,
-                900,
-                1000
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.35
-            ],
-            "cooldown": [
-                15.0
-            ],
-            "manaCost": [
-                110.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Ignite",
+        "desc_loc": "Drenches the target and another random unit in volatile chemicals, causing it to burst into flames. The target is in immense pain, taking damage and moving more slowly.",
+        "lore_loc": "Batter up!",
+        "notes_loc": [
+            "Multicast makes this spell have a chance to cast multiple times at random enemy units with 1400 area of effect.",
+            "Ignite hitting an already affected unit adds to the burn duration."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "40",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            700,
+            800,
+            900,
+            1000
+        ],
+        "cast_points": [
+            0.34999999403954
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            15
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            110
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "duration",
+                "values_float": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "burn_damage",
+                "values_float": [],
+                "values_int": [
+                    20,
+                    30,
+                    40,
+                    50
+                ],
+                "is_percentage": false,
+                "heading_loc": "BURN DAMAGE:"
+            },
+            {
+                "name": "slow_movement_speed_pct",
+                "values_float": [],
+                "values_int": [
+                    -20,
+                    -22,
+                    -24,
+                    -26
+                ],
+                "is_percentage": true,
+                "heading_loc": "SLOW:"
+            },
+            {
+                "name": "projectile_speed",
+                "values_float": [],
+                "values_int": [
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "multicast_delay",
+                "values_float": [
+                    0.60000002384186
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    700,
+                    800,
+                    900,
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.34999999403954
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5440": {
         "id": 5440,
         "name": "ogre_magi_bloodlust",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 5440,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Bloodlust",
-            "description": [
-                "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Gives bonus attacks speed if cast on Ogre himself. Can be cast on towers."
-            ],
-            "attributes": [
-                "DURATION: 30",
-                "BONUS MOVE SPEED: 7% / 9% / 11% / 13%",
-                "BONUS ATTACK SPEED: 30 / 40 / 50 / 60",
-                "SELF BONUS ATTACK SPEED: 30 / 50 / 70 / 90"
-            ],
-            "lore": "'Running's not as fun as hitting... Not one bit fun.'",
-            "notes": [
-                "When multicast, nearby allies will be selected randomly in an 700 area of effect to receive Bloodlust."
-            ]
-        },
-        "stat": {
-            "abilityId": 5440,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 163848,
-            "unitTargetType": 35,
-            "unitTargetTeam": 2,
-            "unitTargetFlags": 32,
-            "unitDamageType": 0,
-            "spellImmunity": 4,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                600
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.45
-            ],
-            "cooldown": [
-                20.0,
-                18.0,
-                16.0,
-                14.0
-            ],
-            "manaCost": [
-                50.0,
-                55.0,
-                60.0,
-                65.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
-    },
-    "5441": {
-        "id": 5441,
-        "name": "ogre_magi_multicast",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 5441,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Multicast",
-            "description": [
-                "Enables Ogre Magi to cast his abilities and items multiple times with each use."
-            ],
-            "attributes": [
-                "2X CAST CHANCE: 75% / 75% / 75%",
-                "3X CAST CHANCE: 0% / 30% / 30%",
-                "4X CAST CHANCE: 0% / 0% / 15%"
-            ],
-            "lore": "Despite being largely incapacitated by his IQ, the Ogre Magi's success in battle is attributed to pure skill.",
-            "notes": [
-                "Only targeted abilities and items have a chance to be multicast.",
-                "Targeted abilities and items apply to additional enemies and neutrals in an AoE around Ogre. Fireblast and Unrefined Fireblast hit the same target multiple times."
-            ]
-        },
-        "stat": {
-            "abilityId": 5441,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Bloodlust",
+        "desc_loc": "Incites a frenzy in a friendly unit, increasing its movement speed and attack speed. Gives bonus attacks speed if cast on Ogre himself. Can be cast on towers.",
+        "lore_loc": "'Running's not as fun as hitting... Not one bit fun.'",
+        "notes_loc": [
+            "When multicast, nearby allies will be selected randomly in an %multicast_bloodlust_aoe% area of effect to receive Bloodlust."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "33558536",
+        "target_team": 1,
+        "target_type": 23,
+        "flags": 64,
+        "damage": 0,
+        "immunity": 1,
+        "dispellable": 2,
+        "max_level": 4,
+        "cast_ranges": [
+            600
+        ],
+        "cast_points": [
+            0.44999998807907
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            20,
+            18,
+            16,
+            14
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            50,
+            55,
+            60,
+            65
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "modelscale",
+                "values_float": [
+                    25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bonus_movement_speed",
+                "values_float": [],
+                "values_int": [
+                    7,
+                    9,
+                    11,
+                    13
+                ],
+                "is_percentage": true,
+                "heading_loc": "BONUS MOVE SPEED:"
+            },
+            {
+                "name": "bonus_attack_speed",
+                "values_float": [],
+                "values_int": [
+                    30,
+                    40,
+                    50,
+                    60
+                ],
+                "is_percentage": false,
+                "heading_loc": "BONUS ATTACK SPEED:"
+            },
+            {
+                "name": "self_bonus",
+                "values_float": [],
+                "values_int": [
+                    30,
+                    50,
+                    70,
+                    90
+                ],
+                "is_percentage": false,
+                "heading_loc": "SELF BONUS ATTACK SPEED:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    30
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "multicast_bloodlust_aoe",
+                "values_float": [
+                    700
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.44999998807907
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5466": {
         "id": 5466,
         "name": "ogre_magi_unrefined_fireblast",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 5466,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Unrefined Fireblast",
-            "description": [
-                "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is 30% of Ogre Magi's current mana."
-            ],
-            "attributes": [
-                "STUN DURATION: 1.5",
-                "FIREBLAST DAMAGE: 275"
-            ],
-            "lore": "The 'who-casts-spell-first' argument between himself is solved simply by both casting at once.",
-            "notes": [
-                "When Multicast, Unrefined Fireblast hits the same target each time with a 0.6 seconds interval."
-            ]
-        },
-        "stat": {
-            "abilityId": 5466,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": true,
-            "hasScepterUpgrade": true,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                475
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.45
-            ],
-            "cooldown": [
-                6.0
-            ],
-            "manaCost": [
-                400.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Unrefined Fireblast",
+        "desc_loc": "Blasts an enemy unit with a wave of fire, dealing damage and stunning the target. Its mana cost is %scepter_mana%%% of Ogre Magi's current mana.",
+        "lore_loc": "The 'who-casts-spell-first' argument between himself is solved simply by both casting at once.",
+        "notes_loc": [
+            "When Multicast, Unrefined Fireblast hits the same target each time with a %multicast_delay% seconds interval."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934601",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 1,
+        "max_level": 1,
+        "cast_ranges": [
+            475
+        ],
+        "cast_points": [
+            0.44999998807907
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            6
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            400
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "stun_duration",
+                "values_float": [
+                    1.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "STUN DURATION:"
+            },
+            {
+                "name": "multicast_delay",
+                "values_float": [
+                    0.60000002384186
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "scepter_mana",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "fireblast_damage",
+                "values_float": [],
+                "values_int": [
+                    275
+                ],
+                "is_percentage": false,
+                "heading_loc": "FIREBLAST DAMAGE:"
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    475
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.44999998807907
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": true,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "648": {
+        "id": 648,
+        "name": "ogre_magi_smash",
+        "name_loc": "Fire Shield",
+        "desc_loc": "Creates a shield around the target ally, absorbing 85%% of the damage of next %attacks% attacks. Launches fireballs at the attacker, dealing %damage% damage.<br><br>Lasts %duration% seconds.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934601",
+        "target_team": 1,
+        "target_type": 23,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 2,
+        "max_level": 1,
+        "cast_ranges": [
+            600
+        ],
+        "cast_points": [
+            0.20000000298023
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            16
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    125
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "attacks",
+                "values_float": [],
+                "values_int": [
+                    3
+                ],
+                "is_percentage": false,
+                "heading_loc": "NUMBER OF ATTACKS:"
+            },
+            {
+                "name": "duration",
+                "values_float": [
+                    25
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "multicast_bloodlust_aoe",
+                "values_float": [
+                    1000
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "projectile_speed",
+                "values_float": [],
+                "values_int": [
+                    1400
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.20000000298023
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5441": {
+        "id": 5441,
+        "name": "ogre_magi_multicast",
+        "name_loc": "Multicast",
+        "desc_loc": "Enables Ogre Magi to cast his abilities and items multiple times with each use.",
+        "lore_loc": "Despite being largely incapacitated by his IQ, the Ogre Magi's success in battle is attributed to pure skill.",
+        "notes_loc": [
+            "Only targeted abilities and items have a chance to be multicast.",
+            "Targeted abilities and items apply to additional enemies and neutrals in an AoE around Ogre. Fireblast and Unrefined Fireblast hit the same target multiple times."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 1,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 3,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "multicast_2_times",
+                "values_float": [
+                    75
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "2X CAST CHANCE:"
+            },
+            {
+                "name": "multicast_3_times",
+                "values_float": [
+                    0,
+                    30,
+                    30
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "3X CAST CHANCE:"
+            },
+            {
+                "name": "multicast_4_times",
+                "values_float": [
+                    0,
+                    0,
+                    15
+                ],
+                "values_int": [],
+                "is_percentage": true,
+                "heading_loc": "4X CAST CHANCE:"
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "403": {
+        "id": 403,
+        "name": "special_bonus_unique_ogre_magi_4",
+        "name_loc": "+{s:value} Ignite DPS",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    16
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "801": {
+        "id": 801,
+        "name": "special_bonus_unique_ogre_magi_5",
+        "name_loc": "-{s:value}s Fireblast Cooldown",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "442": {
+        "id": 442,
+        "name": "special_bonus_attack_damage_80",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    80
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6311": {
+        "id": 6311,
+        "name": "special_bonus_hp_275",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    275
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5984": {
+        "id": 5984,
+        "name": "special_bonus_strength_25",
+        "name_loc": "+{s:value} Strength",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    25
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6183": {
         "id": 6183,
         "name": "special_bonus_unique_ogre_magi",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 6183,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+30 Bloodlust AS",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6183,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Bloodlust AS",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    30
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6025": {
+        "id": 6025,
+        "name": "special_bonus_20_bash_2",
+        "name_loc": "+{s:value2}% {s:value}s Bash",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    1.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "value2",
+                "values_float": [
+                    20
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6707": {
         "id": 6707,
         "name": "special_bonus_unique_ogre_magi_2",
-        "uri": "ogre_magi",
-        "language": {
-            "abilityId": 6707,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+240 Fireblast Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6707,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
-    },
-    "7030": {
-        "id": 7030,
-        "name": "special_bonus_unique_ogre_magi_3",
-        "language": {
-            "abilityId": 7030,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 7030,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Fireblast Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    240
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

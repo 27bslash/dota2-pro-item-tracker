@@ -1,691 +1,1323 @@
 {
-    "417": {
-        "id": 417,
-        "name": "special_bonus_unique_witch_doctor_6",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 417,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+100 Maledict AoE",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 417,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "555": {
-        "id": 555,
-        "name": "special_bonus_unique_witch_doctor_7",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 555,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+15% Maledict Burst Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 555,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": false,
-        "isTalent": true
-    },
-    "632": {
-        "id": 632,
-        "name": "witch_doctor_voodoo_switcheroo",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 632,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Voodoo Switcheroo",
-            "description": [
-                "Turns Witch Doctor into a Death Ward for 2 seconds. Death Ward has -30 Attack Speed. He is hidden during this time."
-            ],
-            "attributes": [
-                "DURATION: 2"
-            ],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 632,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 0,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 1,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.1
-            ],
-            "cooldown": [
-                70.0
-            ],
-            "manaCost": [
-                250.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": true
-        },
-        "drawMatchPage": false,
-        "isTalent": false
-    },
     "5138": {
         "id": 5138,
         "name": "witch_doctor_paralyzing_cask",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 5138,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Paralyzing Cask",
-            "description": [
-                "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits."
-            ],
-            "attributes": [
-                "BOUNCES: 2 / 4 / 6 / 8",
-                "HERO STUN DURATION: 1.0 / 1.0 / 1.0 / 1.0",
-                "CREEP STUN DURATION: 5.0 / 5.0 / 5.0 / 5.0",
-                "HERO DAMAGE: 50 / 60 / 70 / 80"
-            ],
-            "lore": "The Witch Doctor recycles the bones of fallen friends and foes, using the powder as part of his arsenal of charms and alchemy.",
-            "notes": [
-                "Targets can be hit multiple times, as long as another unit is struck in between the bounces."
-            ]
-        },
-        "stat": {
-            "abilityId": 5138,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 8,
-            "unitTargetType": 3,
-            "unitTargetTeam": 1,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 0.5,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                700
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.35,
-                0.35,
-                0.35,
-                0.35
-            ],
-            "cooldown": [
-                20.0,
-                18.0,
-                16.0,
-                14.0
-            ],
-            "damage": [
-                75.0,
-                100.0,
-                125.0,
-                150.0
-            ],
-            "manaCost": [
-                80.0,
-                100.0,
-                120.0,
-                140.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Paralyzing Cask",
+        "desc_loc": "Launches a cask of paralyzing powder that ricochets between enemy units, stunning and damaging those it hits.",
+        "lore_loc": "The Witch Doctor recycles the bones of fallen friends and foes, using the powder as part of his arsenal of charms and alchemy.",
+        "notes_loc": [
+            "Targets can be hit multiple times, as long as another unit is struck in between the bounces."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8",
+        "target_team": 2,
+        "target_type": 19,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 1,
+        "max_level": 4,
+        "cast_ranges": [
+            700
+        ],
+        "cast_points": [
+            0.34999999403954,
+            0.34999999403954,
+            0.34999999403954,
+            0.34999999403954
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            20,
+            18,
+            16,
+            14
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            75,
+            100,
+            125,
+            150
+        ],
+        "mana_costs": [
+            80,
+            100,
+            120,
+            140
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "hero_duration",
+                "values_float": [
+                    1
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "HERO STUN DURATION:"
+            },
+            {
+                "name": "creep_duration",
+                "values_float": [
+                    5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "CREEP STUN DURATION:"
+            },
+            {
+                "name": "hero_damage",
+                "values_float": [],
+                "values_int": [
+                    50,
+                    60,
+                    70,
+                    80
+                ],
+                "is_percentage": false,
+                "heading_loc": "HERO DAMAGE:"
+            },
+            {
+                "name": "bounce_range",
+                "values_float": [],
+                "values_int": [
+                    575
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bounces",
+                "values_float": [],
+                "values_int": [
+                    3,
+                    5,
+                    7,
+                    9
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "speed",
+                "values_float": [],
+                "values_int": [
+                    1000
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bounce_delay",
+                "values_float": [
+                    0.30000001192093
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "bounces_tooltip",
+                "values_float": [],
+                "values_int": [
+                    2,
+                    4,
+                    6,
+                    8
+                ],
+                "is_percentage": false,
+                "heading_loc": "BOUNCES:"
+            },
+            {
+                "name": "#AbilityDamage",
+                "values_float": [],
+                "values_int": [
+                    75,
+                    100,
+                    125,
+                    150
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    700
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.34999999403954,
+                    0.34999999403954,
+                    0.34999999403954,
+                    0.34999999403954
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5139": {
         "id": 5139,
         "name": "witch_doctor_voodoo_restoration",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 5139,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Voodoo Restoration",
-            "description": [
-                "Witch Doctor focuses his magic to heal nearby allied units, costing Witch Doctor mana every second Voodoo restoration is active."
-            ],
-            "attributes": [
-                "MANA PER SEC: 8 / 12 / 16 / 20",
-                "HEAL: 16 / 24 / 32 / 40",
-                "RADIUS: 500"
-            ],
-            "lore": "Zharvakko's hocus pocus is not limited only to hexxing his opponents and is quite adept at curing ailments.",
-            "notes": [
-                "Healing is done in 0.33 / 0.33 / 0.33 / 0.33 second intervals.",
-                "Can heal Spell Immune units."
-            ]
-        },
-        "stat": {
-            "abilityId": 5139,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 524804,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 4,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "cooldown": [
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "manaCost": [
-                35.0,
-                40.0,
-                45.0,
-                50.0
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Voodoo Restoration",
+        "desc_loc": "Witch Doctor focuses his magic to heal nearby allied units, costing Witch Doctor mana every second Voodoo restoration is active.",
+        "lore_loc": "Zharvakko's hocus pocus is not limited only to hexxing his opponents and is quite adept at curing ailments.",
+        "notes_loc": [
+            "Healing is done in %heal_interval% second intervals.",
+            "Can heal Spell Immune units."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "4194820",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 1,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            35,
+            40,
+            45,
+            50
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "mana_per_second",
+                "values_float": [],
+                "values_int": [
+                    8,
+                    12,
+                    16,
+                    20
+                ],
+                "is_percentage": false,
+                "heading_loc": "MANA PER SEC:"
+            },
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    500
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "heal",
+                "values_float": [],
+                "values_int": [
+                    16,
+                    24,
+                    32,
+                    40
+                ],
+                "is_percentage": false,
+                "heading_loc": "HEAL:"
+            },
+            {
+                "name": "heal_interval",
+                "values_float": [
+                    0.33000001311302
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5140": {
         "id": 5140,
         "name": "witch_doctor_maledict",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 5140,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Maledict",
-            "description": [
-                "Curses all enemy Heroes in a small area, causing them to take a set amount of damage each second, as well as bursts of damage every 4 seconds based on how much health they have lost since the curse began."
-            ],
-            "attributes": [
-                "RADIUS: 180",
-                "LOST HEALTH BURST DAMAGE: 16% / 24% / 32% / 40%"
-            ],
-            "lore": "Certain voodoo magics can make an enemy regret engaging the Witch Doctor.",
-            "notes": [
-                "If an affected hero's health has increased above the amount they had when Maledict was cast, the burst damage will be 0."
-            ]
-        },
-        "stat": {
-            "abilityId": 5140,
-            "gameVersionId": 141,
-            "type": 0,
-            "behavior": 16432,
-            "unitTargetType": 1,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 1,
-            "spellImmunity": 1,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 1,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                575
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.35,
-                0.35,
-                0.35,
-                0.35
-            ],
-            "cooldown": [
-                30.0,
-                26.0,
-                22.0,
-                18.0
-            ],
-            "damage": [
-                7.0,
-                14.0,
-                21.0,
-                28.0
-            ],
-            "manaCost": [
-                105.0,
-                110.0,
-                115.0,
-                120.0
-            ],
-            "isUltimate": false,
-            "duration": "12.0",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Maledict",
+        "desc_loc": "Curses all enemy Heroes in a small area, causing them to take a set amount of damage each second, as well as bursts of damage every 4 seconds based on how much health they have lost since the curse began.",
+        "lore_loc": "Certain voodoo magics can make an enemy regret engaging the Witch Doctor.",
+        "notes_loc": [
+            "If an affected hero's health has increased above the amount they had when Maledict was cast, the burst damage will be 0."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "134217776",
+        "target_team": 0,
+        "target_type": 1,
+        "flags": 0,
+        "damage": 2,
+        "immunity": 4,
+        "dispellable": 3,
+        "max_level": 4,
+        "cast_ranges": [
+            575
+        ],
+        "cast_points": [
+            0.34999999403954,
+            0.34999999403954,
+            0.34999999403954,
+            0.34999999403954
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            30,
+            26,
+            22,
+            18
+        ],
+        "durations": [
+            12
+        ],
+        "damages": [
+            7,
+            14,
+            21,
+            28
+        ],
+        "mana_costs": [
+            105,
+            110,
+            115,
+            120
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "radius",
+                "values_float": [],
+                "values_int": [
+                    180
+                ],
+                "is_percentage": false,
+                "heading_loc": "RADIUS:"
+            },
+            {
+                "name": "bonus_damage",
+                "values_float": [],
+                "values_int": [
+                    16,
+                    24,
+                    32,
+                    40
+                ],
+                "is_percentage": true,
+                "heading_loc": "LOST HEALTH BURST DAMAGE:"
+            },
+            {
+                "name": "bonus_damage_threshold",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "ticks",
+                "values_float": [],
+                "values_int": [
+                    3
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "#AbilityDamage",
+                "values_float": [],
+                "values_int": [
+                    7,
+                    14,
+                    21,
+                    28
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    575
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityDuration",
+                "values_float": [
+                    12
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.34999999403954,
+                    0.34999999403954,
+                    0.34999999403954,
+                    0.34999999403954
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "632": {
+        "id": 632,
+        "name": "witch_doctor_voodoo_switcheroo",
+        "name_loc": "Voodoo Switcheroo",
+        "desc_loc": "Turns Witch Doctor into a Death Ward for 2 seconds. Death Ward has -30 Attack Speed. He is hidden during this time.",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 0,
+        "behavior": "8589934597",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 1,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0.10000000149012
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            70
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            250
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "duration",
+                "values_float": [
+                    2
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": "DURATION:"
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.10000000149012
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": true,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "5141": {
         "id": 5141,
         "name": "witch_doctor_death_ward",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 5141,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "Death Ward",
-            "description": [
-                "CHANNELED - Summons a deadly ward to attack enemy heroes within it's attack range. Lasts a maximum of 8.0 seconds."
-            ],
-            "attributes": [
-                "DAMAGE: 85 / 135 / 185",
-                "ATTACK RANGE: 700"
-            ],
-            "lore": "Witch Doctor performs a ritualistic dance, one that haunts the dreams of those who live to recount it.",
-            "aghanimDescription": "Death Ward attacks have True Strike and bounce between nearby enemies.",
-            "notes": [
-                "The Death Ward is invulnerable, and is only destroyed if Witch Doctor is interrupted or its duration expires.",
-                "The Death Ward can be controlled, and made to attack a specific target.",
-                "Death Ward attacks once every 0.22 seconds."
-            ]
-        },
-        "stat": {
-            "abilityId": 5141,
-            "gameVersionId": 141,
-            "type": 1,
-            "behavior": 144,
-            "unitTargetType": 1,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 468,
-            "unitDamageType": 3,
-            "spellImmunity": 3,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 2,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": true,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRange": [
-                600
-            ],
-            "castRangeBuffer": [
-                250
-            ],
-            "castPoint": [
-                0.35,
-                0.35,
-                0.35
-            ],
-            "channelTime": [
-                8.0
-            ],
-            "cooldown": [
-                80.0
-            ],
-            "manaCost": [
-                200.0,
-                200.0,
-                200.0
-            ],
-            "isUltimate": true,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": false
+        "name_loc": "Death Ward",
+        "desc_loc": "CHANNELED - Summons a deadly ward to attack enemy heroes within it's attack range. Lasts a maximum of %abilitychanneltime% seconds.",
+        "lore_loc": "Witch Doctor performs a ritualistic dance, one that haunts the dreams of those who live to recount it.",
+        "notes_loc": [
+            "The Death Ward is invulnerable, and is only destroyed if Witch Doctor is interrupted or its duration expires.",
+            "The Death Ward can be controlled, and made to attack a specific target.",
+            "Death Ward attacks once every 0.22 seconds."
+        ],
+        "shard_loc": "",
+        "scepter_loc": "Death Ward attacks have True Strike and bounce between nearby enemies.",
+        "type": 1,
+        "behavior": "144",
+        "target_team": 0,
+        "target_type": 1,
+        "flags": 147856,
+        "damage": 1,
+        "immunity": 3,
+        "dispellable": 0,
+        "max_level": 3,
+        "cast_ranges": [
+            600
+        ],
+        "cast_points": [
+            0.34999999403954,
+            0.34999999403954,
+            0.34999999403954
+        ],
+        "channel_times": [
+            8
+        ],
+        "cooldowns": [
+            80
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            200,
+            200,
+            200
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "damage",
+                "values_float": [],
+                "values_int": [
+                    85,
+                    135,
+                    185
+                ],
+                "is_percentage": false,
+                "heading_loc": "DAMAGE:"
+            },
+            {
+                "name": "attack_range_tooltip",
+                "values_float": [],
+                "values_int": [
+                    700
+                ],
+                "is_percentage": false,
+                "heading_loc": "ATTACK RANGE:"
+            },
+            {
+                "name": "bounce_radius",
+                "values_float": [],
+                "values_int": [
+                    650
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "scepter_lifesteal",
+                "values_float": [],
+                "values_int": [
+                    10
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastRange",
+                "values_float": [],
+                "values_int": [
+                    600
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityChannelTime",
+                "values_float": [
+                    8
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            },
+            {
+                "name": "AbilityCastPoint",
+                "values_float": [
+                    0.34999999403954,
+                    0.34999999403954,
+                    0.34999999403954
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": true,
+        "ability_has_shard": true,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "5998": {
-        "id": 5998,
-        "name": "special_bonus_unique_witch_doctor_1",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 5998,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+100 Death Ward Attack Range",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 5998,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "6366": {
+        "id": 6366,
+        "name": "special_bonus_attack_damage_60",
+        "name_loc": "+{s:value} Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    60
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6298": {
-        "id": 6298,
-        "name": "special_bonus_unique_witch_doctor_2",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 6298,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+1.5% Max Health Voodoo Restoration",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6298,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "5959": {
+        "id": 5959,
+        "name": "special_bonus_hp_200",
+        "name_loc": "+{s:value} Health",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    200
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6524": {
         "id": 6524,
         "name": "special_bonus_unique_witch_doctor_3",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 6524,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+2 Cask Bounces",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6524,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Cask Bounces",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    2
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
-    "6995": {
-        "id": 6995,
-        "name": "special_bonus_unique_witch_doctor_4",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 6995,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+1 Maledict Tick",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6995,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+    "417": {
+        "id": 417,
+        "name": "special_bonus_unique_witch_doctor_6",
+        "name_loc": "+{s:value} Maledict AoE",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "5998": {
+        "id": 5998,
+        "name": "special_bonus_unique_witch_doctor_1",
+        "name_loc": "+{s:value} Death Ward Attack Range",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    100
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "555": {
+        "id": 555,
+        "name": "special_bonus_unique_witch_doctor_7",
+        "name_loc": "+{s:value}% Maledict Burst Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    15
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
+    },
+    "6298": {
+        "id": 6298,
+        "name": "special_bonus_unique_witch_doctor_2",
+        "name_loc": "+{s:value}% Max Health Voodoo Restoration",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [
+                    1.5
+                ],
+                "values_int": [],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     },
     "6996": {
         "id": 6996,
         "name": "special_bonus_unique_witch_doctor_5",
-        "uri": "witch_doctor",
-        "language": {
-            "abilityId": 6996,
-            "gameVersionId": 141,
-            "languageId": 0,
-            "displayName": "+60 Death Ward Damage",
-            "description": [],
-            "attributes": [],
-            "notes": []
-        },
-        "stat": {
-            "abilityId": 6996,
-            "gameVersionId": 141,
-            "type": 2,
-            "behavior": 2,
-            "unitTargetType": 0,
-            "unitTargetTeam": 0,
-            "unitTargetFlags": 0,
-            "unitDamageType": 0,
-            "spellImmunity": 0,
-            "modifierSupportValue": 1.0,
-            "modifierSupportBonus": 0,
-            "isOnCastbar": true,
-            "isOnLearnbar": true,
-            "fightRecapLevel": 0,
-            "isGrantedByScepter": false,
-            "hasScepterUpgrade": false,
-            "maxLevel": 0,
-            "levelsBetweenUpgrade": 0,
-            "requiredLevel": 0,
-            "displayAdditionalHeroes": false,
-            "castRangeBuffer": [
-                250
-            ],
-            "isUltimate": false,
-            "duration": "",
-            "charges": "",
-            "chargeRestoreTime": "",
-            "isGrantedByShard": false
-        },
-        "drawMatchPage": true,
-        "isTalent": true
+        "name_loc": "+{s:value} Death Ward Damage",
+        "desc_loc": "",
+        "lore_loc": "",
+        "notes_loc": [],
+        "shard_loc": "",
+        "scepter_loc": "",
+        "type": 2,
+        "behavior": "2",
+        "target_team": 0,
+        "target_type": 0,
+        "flags": 0,
+        "damage": 0,
+        "immunity": 0,
+        "dispellable": 0,
+        "max_level": 4,
+        "cast_ranges": [
+            0
+        ],
+        "cast_points": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "channel_times": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "cooldowns": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "durations": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "damages": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "mana_costs": [
+            0,
+            0,
+            0,
+            0
+        ],
+        "gold_costs": [],
+        "special_values": [
+            {
+                "name": "value",
+                "values_float": [],
+                "values_int": [
+                    60
+                ],
+                "is_percentage": false,
+                "heading_loc": ""
+            }
+        ],
+        "is_item": false,
+        "ability_has_scepter": false,
+        "ability_has_shard": false,
+        "ability_is_granted_by_scepter": false,
+        "ability_is_granted_by_shard": false,
+        "item_cost": 0,
+        "item_initial_charges": 0,
+        "item_neutral_tier": 4294967295,
+        "item_stock_max": 0,
+        "item_stock_time": 0,
+        "item_quality": 0
     }
 }

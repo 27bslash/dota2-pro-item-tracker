@@ -2,14 +2,13 @@ import json
 import asyncio
 import aiohttp
 import traceback
-from helper_funcs.helper_functions import *
+from helper_funcs.hero import Hero
+from helper_funcs.abilities import Talents, detailed_ability_info
+from helper_funcs.items import Items
+from helper_funcs.database.db import db
+import datetime
 import pymongo
-from pymongo import MongoClient
 
-output = []
-cluster = pymongo.MongoClient(
-    'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
-db = cluster['pro-item-tracker']
 hero_urls = db['urls']
 hero_output = db['heroes']
 acc_ids = db['account_ids']
@@ -140,7 +139,7 @@ def add_to_dead_games(m_id):
         db['dead_games'].find_one_and_update(
             {'id': m_id}, {"$inc": {'count': +1}})
     if db['dead_games'].find_one({'id': m_id})['count'] == 0:
-        parse.insert_one({'id': m_id})
+        db['parse'].insert_one({'id': m_id})
 
 
 def roles(s, p_slot):
@@ -161,7 +160,10 @@ def roles(s, p_slot):
         end = 5
         is_radiant = True
     for i in range(start, end, 1):
-        lane = s[i][0]
+        try:
+            lane = s[i][0]
+        except:
+            return None
         # print(lane)
         if not is_radiant:
             # print('dire', lane)
