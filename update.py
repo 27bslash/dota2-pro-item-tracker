@@ -1,9 +1,12 @@
 import os
 import json
 from colorthief import ColorThief
-from helper_funcs.helper_functions import *
-from contrast import *
+from helper_funcs.helper_imports import *
+from colours.contrast import compute_contrast
+from colours.dominant_colour import get_dominant_colours, get_dominant_color
 import shutil
+import requests
+import traceback
 
 
 def update_hero_list():
@@ -20,8 +23,11 @@ def update_hero_list():
 
 
 def make_dir():
-    for filename in os.listdir("json_files\hero_abilities"):
-        filepath = os.path.join("json_files\hero_abilities", filename)
+    if not os.path.isdir('colours\\ability_images'):
+        print('fg')
+        os.mkdir('colours\\ability_images')
+    for filename in os.listdir("colours\\ability_images"):
+        filepath = os.path.join("colours\\ability_images", filename)
         try:
             shutil.rmtree(filepath)
         except OSError:
@@ -30,27 +36,62 @@ def make_dir():
         data = json.load(d)
         for item in data['heroes']:
             hero_name = item['name']
-            os.mkdir(f"json_files/hero_abilities/{hero_name}")
+            os.mkdir(f"colours/ability_images/{hero_name}")
+
+
+def dl_dota2_abilities():
+    make_dir()
+    datafeed = 'https://www.dota2.com/datafeed/herodata?language=english&hero_id='
+    all_abilities = {}
+    with open('json_files/hero_ids.json', 'r') as heroes:
+        hero_data = json.load(heroes)
+        for hero in hero_data['heroes']:
+            req = requests.get(f"{datafeed}{hero['id']}")
+            with open(f'json_files/detailed_ability_info/{hero["name"]}.json', 'w') as o:
+                ability_json = json.loads(
+                    req.text)['result']['data']['heroes'][0]
+                hero_abilities = {}
+                print(hero['name'])
+                for ability in ability_json['abilities']:
+                    hero_abilities[str(ability['id'])] = ability
+                    all_abilities[str(ability['id'])] = ability
+                    get_ability_img(ability['name'], hero['name'])
+                for talent in ability_json['talents']:
+                    hero_abilities[str(talent['id'])] = talent
+                    all_abilities[str(talent['id'])] = talent
+                json.dump(hero_abilities, o, indent=4)
+        with open('json_files/all_abilities.json', 'w') as d:
+            json.dump(all_abilities, d, indent=4)
+
+
+def get_ability_img(ability_name, hero_name):
+    if ability_name.replace('_', '').startswith(switcher(hero_name).replace('_', '')):
+        with open(f'colours/ability_images/{hero_name}/{ability_name}.jpg', 'wb') as f:
+            f.write(requests.get(
+                f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability_name}.png").content)
+            print(ability_name)
 
 
 def get_ability_imgs():
     make_dir()
     with open('json_files/hero_ids.json', 'r') as d:
         data = json.load(d)
-        for item in data['heroes']:
+        for hero in data['heroes']:
             # print(hero_name)
-            hero_name = item['name']
-            db_out = hero_output.find_one({'hero': hero_name})
-            try:
-                for ability in db_out['abilities']:
-                    if 'special_bonus' not in ability['img']:
-                        ability_name = ability['img']
-                        with open(f'json_files/hero_abilities/{hero_name}/{ability_name}.jpg', 'wb') as f:
-                            f.write(requests.get(
-                                f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability_name}.png").content)
-                            print(ability_name)
-            except Exception as e:
-                print('img err', hero_name)
+            hero_name = hero['name']
+            # db_out = hero_output.find_one({'hero': hero_name})
+            with open('json_files/all_abilities.json', 'r') as f:
+                abilities = json.load(f)
+                try:
+                    for k in abilities:
+                        if 'special_bonus' not in abilities[k]['name'] and abilities[k]['name'].replace('_', '').startswith(switcher(hero_name).replace('_', '')):
+                            ability_name = abilities[k]['name']
+                            with open(f'colours/ability_images/{hero_name}/{ability_name}.jpg', 'wb') as f:
+                                f.write(requests.get(
+                                    f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability_name}.png").content)
+                                print(ability_name)
+                except Exception as e:
+                    print('img err', hero_name, traceback.format_exc())
 
 
 def chunk_stratz_abilites():
@@ -93,83 +134,7 @@ def update_basic_id_json(input, output, dic_name):
             except:
                 print(traceback.format_exc(), data[_id]['shortName'])
     with open(f'json_files/{output}.json', 'w') as f:
-        # print(dictionary)
         json.dump(dictionary, f, indent=2)
-
-
-def get_dominant_ability_color():
-    c_array = []
-    output = {'colors': []}
-    with open('json_files/ability_colours.json', 'w') as outfile:
-        with open('json_files/hero_ids.json', 'r') as f:
-            data = json.load(f)
-            for item in data['heroes']:
-                hero_name = item['name']
-                avg_r = 0
-                avg_b = 0
-                avg_g = 0
-                count = 0
-                for i, filename in enumerate(os.listdir(f'json_files/hero_abilities/{hero_name}')):
-                    try:
-                        c_t = ColorThief(
-                            f"json_files/hero_abilities/{hero_name}/{filename}")
-                        d_c = c_t.get_color(quality=1)
-                        r = d_c[0]
-                        g = d_c[1]
-                        b = d_c[2]
-                        # print(hero_name)
-                    except Exception as e:
-                        print('dir err: ', filename, hero_name, e)
-
-                # print([sum(i) for i in avg_color])
-                    try:
-                        rgb = (r, g, b)
-                        o = {'ability': filename.replace(
-                            '.jpg', ''), 'color': rgb}
-                        output['colors'].append(o)
-                    except Exception as e:
-                        print('output error: ', hero_name, e)
-        json.dump(output, outfile, indent=4)
-
-
-def get_dominant_color():
-    c_array = []
-    output = {'colors': []}
-    with open('json_files/hero_colours.json', 'w') as outfile:
-        with open('json_files/hero_ids.json', 'r') as f:
-            data = json.load(f)
-            for item in data['heroes']:
-                hero_name = item['name']
-                avg_r = 0
-                avg_b = 0
-                avg_g = 0
-                count = 0
-                for i, filename in enumerate(os.listdir(f'json_files/hero_abilities/{hero_name}')):
-                    try:
-                        c_t = ColorThief(
-                            f"json_files/hero_abilities/{hero_name}/{filename}")
-                        d_c = c_t.get_color(quality=1)
-                        r = d_c[0]
-                        g = d_c[1]
-                        b = d_c[2]
-                        avg_r += r
-                        avg_g += g
-                        avg_b += b
-                        count += 1
-                        # print(hero_name)
-                    except Exception as e:
-                        print(filename, hero_name, e)
-                # print([sum(i) for i in avg_color])
-                try:
-                    avg_r /= count
-                    avg_g /= count
-                    avg_b /= count
-                    rgb = (avg_r, avg_g, avg_b)
-                    o = {'hero': hero_name, 'color': rgb}
-                    output['colors'].append(o)
-                except Exception as e:
-                    print(hero_name, e)
-        json.dump(output, outfile, indent=4)
 
 
 def update_app():
@@ -177,14 +142,12 @@ def update_app():
     # update_hero_list()
     print('updating json....')
     update_stratz_json()
-    print('updating ability images....')
-    get_ability_imgs()
+    print('downloading abilities...')
+    dl_dota2_abilities()
+    print('updating_talents...')
+    update_talents()
     print('updating hero colours....')
-    get_dominant_ability_color()
-    get_dominant_color()
     compute_contrast()
-    print('chunking abilites....')
-    chunk_stratz_abilites()
     print('fini')
 
 
@@ -193,7 +156,7 @@ def update_talents():
     with open("json_files/hero_ids.json", 'r') as f:
         data = json.load(f)
         for hero in data['heroes']:
-            db_methods.insert_talent_order(hero['name'])
+            db_methods.insert_talent_order(hero['id'])
 
 
 if __name__ == '__main__':
