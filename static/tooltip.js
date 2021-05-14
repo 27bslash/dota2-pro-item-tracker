@@ -1,8 +1,7 @@
 let hero_colors;
-let h_id, gloab;
 const hero_name = window.location.href.split("/").pop();
 let files_downloaded = false;
-let file_set = new Set();
+const file_set = new Set();
 let files_len = 0;
 let abilities = {};
 async function get_json_data(hero_name) {
@@ -14,7 +13,7 @@ async function get_json_data(hero_name) {
     hero_colors = await get_json("ability_colours");
   }
 }
-const json_wrapper = (p, start) => {
+const download_limiter = (p, start) => {
   if (!files_downloaded) {
     for (let i = start; i < p.size; i++) {
       get_json_data([...p][i]);
@@ -25,7 +24,6 @@ const json_wrapper = (p, start) => {
 
 get_json_data();
 window.addEventListener("mouseover", (event) => {
-  gloab = "test";
   collection = document.getElementsByClassName("abilities");
   let start_point;
   for (let item of collection) {
@@ -36,7 +34,7 @@ window.addEventListener("mouseover", (event) => {
     }
   }
   files_len = file_set.size;
-  json_wrapper(file_set, start_point);
+  download_limiter(file_set, start_point);
 
   let tooltipType;
   if (
@@ -44,10 +42,10 @@ window.addEventListener("mouseover", (event) => {
     event.target.className === "table-img"
   ) {
     let result;
-
     if (
       event.target.className === "item-img" &&
-      event.target.id !== "aghanims-shard"
+      event.target.id !== "aghanims-shard" &&
+      event.target.alt !== "ultimate_scepter"
     ) {
       result = items;
       tooltipType = "item";
@@ -58,7 +56,7 @@ window.addEventListener("mouseover", (event) => {
       result = abilities[tooltipHero];
       tooltipType = "ability";
     }
-    let tooltip, _id, imgSrc;
+    let tooltip, _id, imgSrc, aghanim_ability;
     for (let element of event.target.parentNode.children) {
       if (element.className === "tooltip") tooltip = element;
       _id = event.target.getAttribute("data_id");
@@ -66,8 +64,9 @@ window.addEventListener("mouseover", (event) => {
       imgSrc = event.target.getAttribute("src");
     }
     if (
-      event.target.parentNode.className == "ability-img-wrapper" ||
-      tooltip.id === "shard-tooltip"
+      tooltipType == "ability" ||
+      tooltip.id == "shard-tooltip" ||
+      tooltip.id == "sceptre-tooltip"
     ) {
       hero = event.target.getAttribute("data-hero");
       tooltip.style.background = `linear-gradient(137deg, rgba(35 35 35), rgb(60,60,60) )`;
@@ -78,22 +77,30 @@ window.addEventListener("mouseover", (event) => {
         }
         if (imgSrc.includes(i.ability)) {
           tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
-        } else if (tooltip.id === "shard-tooltip") {
+        } else {
           for (let ability in result) {
             if (i.ability.includes(result[ability]["name"])) {
-              const hasShard =
-                result[ability]["ability_has_shard"] ||
-                result[ability]["ability_is_granted_by_shard"];
-              if (hasShard) {
-                tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
+              if (tooltip.id === "shard-tooltip") {
+                tooltipType = "aghanim-shard";
+                aghanim_ability = extract_aghanim(result, "shard");
+                if (aghanim_ability) {
+                  tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
+                }
+              } else if (tooltip.id === "sceptre-tooltip") {
+                tooltipType = "aghanim-sceptre";
+                aghanim_ability = extract_aghanim(result, "scepter");
+                if (aghanim_ability) {
+                  tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
+                }
               }
             }
           }
         }
       }
-    } else {
+    } else if (tooltipType == "item") {
       tooltip.style.background = `#182127`;
     }
+
     tooltip_method = new Tooltip(
       tooltip,
       event.target.parentNode.className,
@@ -104,27 +111,9 @@ window.addEventListener("mouseover", (event) => {
       tooltip_method.generateLineOne(event.target, "talent");
       return;
     }
-    let shard_ability;
-    if (tooltip.id === "shard-tooltip") {
-      tooltipType = "shard";
-      for (let ability in result) {
-        const newSpell = result[ability]["ability_is_granted_by_shard"];
-        if (newSpell) {
-          shard_ability = result[ability];
-        }
-      }
-      if (!shard_ability) {
-        for (let ability in result) {
-          const hasShard = result[ability]["ability_has_shard"];
-          if (hasShard) {
-            shard_ability = result[ability];
-          }
-        }
-      }
+    tooltip.style.display = "block";
 
-      tooltip.style.display = "block";
-    }
-    const base = shard_ability || result[_id];
+    const base = aghanim_ability || result[_id];
 
     tooltip_method.generateLineOne(base, tooltipType);
     tooltip_method.generateContent(base, tooltipType);
@@ -140,11 +129,22 @@ window.addEventListener("mouseover", (event) => {
     tooltip.style.display = "block";
   }
 });
-
+function extract_aghanim(result, s) {
+  for (let ability in result) {
+    const shard =
+      result[ability][`ability_is_granted_by_${s}`] ||
+      result[ability][`ability_has_${s}`];
+    if (shard) {
+      return result[ability];
+    }
+  }
+}
 function highlight_numbers(text) {
   if (typeof text == "object" && text != null) text = text.join("");
   return text
     ? text
+        .replace(/<font(.*?)>/g, "")
+        .replace(/font/g, "")
         .replace(
           /([^a-z>]\d*\.?\d+%?)(\s\/)?/gm,
           `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
@@ -153,9 +153,23 @@ function highlight_numbers(text) {
         .replace(/<\/h1>/g, "</h3>")
     : "";
 }
-function extract_shards() {
-  return;
+function extract_hidden_values(base, text) {
+  let sp = text.split("%");
+  base["special_values"].forEach((x) => {
+    if (sp.indexOf(x["name"]) > -1) {
+      let float = x["values_float"].map((el) => parseFloat(el).toFixed(2) * 1),
+        int = x["values_int"];
+      if (x["is_percentage"]) {
+        float = float.map((el) => (el += "%"));
+        int = int.map((el) => (el += "%"));
+      }
+      sp[sp.indexOf(x["name"])] = `${float || ""}${int || ""}`;
+    }
+  });
+  return highlight_numbers(sp.join(""));
 }
+
+
 class Tooltip {
   constructor(tooltip, parentNode, result, id) {
     this.tooltip = tooltip;
@@ -172,7 +186,7 @@ class Tooltip {
     } else {
       tooltipHeaderText = base["name_loc"];
     }
-    if (tooltipType !== "shard") {
+    if (!tooltipType.includes("aghanim")) {
       imgSrc = event.target.src;
     } else {
       const ability_base =
@@ -186,8 +200,27 @@ class Tooltip {
     this.tooltip.style.border = "3px solid black";
     let tooltipLineOne = document.createElement("div");
     tooltipLineOne.setAttribute("class", "tooltip-line-one");
+    let tooltipHeaderImg;
+    // if (tooltipType === "aghanim-shard") {
+    //   let subImg = document.createElement("div");
+    //   subImg.setAttribute("class", "scepter-subicon");
+    //   subImg.setAttribute(
+    //     "src",
+    //     "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_scepter.png"
+    //   );
+    //   tooltipHeaderImg.appendChild(subImg);
+    //   tooltipHeaderImg.style.position = "relative";
+    // } else if (tooltipType === "aghanim-sceptre") {
+    //   tooltipHeaderImg = document.createElement("div");
+    //   tooltipHeaderImg.setAttribute("class", "tooltip-aghanim-img");
+    //   tooltipHeaderImg.style.backgroundImage = `url(${imgSrc})`;
+    //   let subImg = document.createElement("img");
+    //   subImg.setAttribute("class", "scepter-subicon");
+    //   subImg.style.backgroundImage =
+    //     'url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_scepter.png")';
+    //   tooltipHeaderImg.appendChild(subImg);
 
-    let tooltipHeaderImg = document.createElement("img");
+    tooltipHeaderImg = document.createElement("img");
     tooltipHeaderImg.setAttribute("class", "tooltip-img");
     tooltipHeaderImg.setAttribute("src", imgSrc);
 
@@ -197,15 +230,22 @@ class Tooltip {
     tooltipTitle.appendChild(tooltipHeaderImg);
     tooltipTitle.appendChild(headerText);
     tooltipLineOne.appendChild(tooltipTitle);
-    if (tooltipType === "shard") {
-      let shardWrapper = document.createElement("div");
-      shardWrapper.setAttribute("class", "shard-wrapper");
-      let shardTitle = document.createElement("div");
-      shardTitle.innerHTML = "SHARD ABILITY UPGRADE";
-      shardTitle.setAttribute("class", "shard-title");
-      shardWrapper.appendChild(shardTitle);
-      tooltipLineOne.appendChild(shardWrapper);
+    let aghanimText = "";
+    if (tooltipType.includes("aghanim")) {
+      if (tooltipType === "aghanim-shard") {
+        aghanimText = "SHARD ABILITY UPGRADE";
+      } else {
+        aghanimText = "SCEPTER ABILITY UPGRADE";
+      }
+      let aghanimWrapper = document.createElement("div");
+      aghanimWrapper.setAttribute("class", "aghanim-wrapper");
+      let aghanimTitle = document.createElement("div");
+      aghanimTitle.setAttribute("class", "aghanim-title");
+      aghanimTitle.innerHTML = aghanimText;
+      aghanimWrapper.appendChild(aghanimTitle);
+      tooltipLineOne.appendChild(aghanimWrapper);
       tooltipLineOne.style.flexDirection = "column";
+      tooltipLineOne.style.padding = "20px 20px 0px 20px";
     }
     if (this.tooltip.id === "item-tooltip") {
       tooltipLineOne.classList.add("item-tooltip-line-one");
@@ -238,31 +278,21 @@ class Tooltip {
       descriptionBody,
       attributes,
       description,
-      lore;
-    if (tooltipType == "shard") {
-      let shardDescriptionText = highlight_numbers(base["shard_loc"]);
-      if (shardDescriptionText.length == 0) {
-        shardDescriptionText = base["desc_loc"];
-        let sp = shardDescriptionText.split("%");
-        base["special_values"].forEach((x) => {
-          if (sp.indexOf(x["name"]) > -1) {
-            let float = x["values_float"].map(
-                (el) => parseFloat(el).toFixed(2) * 1
-              ),
-              int = x["values_int"];
-            if (x["is_percentage"]) {
-              float = float.map((el) => (el += "%"));
-              int = int.map((el) => (el += "%"));
-            }
-            sp[sp.indexOf(x["name"])] = `${float || ""}${int || ""}`;
-          }
-          shardDescriptionText = highlight_numbers(sp.join(""));
-        });
+      lore,
+      aghanimDescriptionText;
+    if (tooltipType.includes("aghanim")) {
+      if (tooltipType === "aghanim-shard") {
+        aghanimDescriptionText = highlight_numbers(base["shard_loc"]);
+      } else {
+        aghanimDescriptionText = highlight_numbers(base["scepter_loc"]);
       }
-      let shardDescription = document.createElement("div");
-      shardDescription.setAttribute("class", "shard-description");
-      shardDescription.innerHTML = shardDescriptionText;
-      tooltipContent.appendChild(shardDescription);
+      if (aghanimDescriptionText.length == 0) {
+        aghanimDescriptionText = extract_hidden_values(base, base["desc_loc"]);
+      }
+      let aghanimDescription = document.createElement("div");
+      aghanimDescription.setAttribute("class", "shard-description");
+      aghanimDescription.innerHTML = aghanimDescriptionText;
+      tooltipContent.appendChild(aghanimDescription);
     }
     if ("special_values" in base || "attributes" in base["language"]) {
       attributes = document.createElement("div");
@@ -340,7 +370,7 @@ class Tooltip {
             let mcText = document.createElement("p");
             let manaCost = this.result[_id]["stat"]["manaCost"] || false;
             if (manaCost) {
-              mcText.textContent = manaCost;
+              mcText.textContent = manaCost[0];
               statWrapper.appendChild(mc);
               statWrapper.appendChild(mcText);
             }
@@ -354,7 +384,7 @@ class Tooltip {
             let cooldown = result[_id]["stat"]["cooldown"] || false;
 
             if (cooldown) {
-              cdText.textContent = cooldown;
+              cdText.textContent = cooldown[0];
               statWrapper.appendChild(cd);
               statWrapper.appendChild(cdText);
             }
@@ -384,12 +414,11 @@ class Tooltip {
           }
         });
       }
-      descriptionBody = highlight_numbers(base["desc_loc"]);
       if (activeDiv.children.length > 0) description.appendChild(activeDiv);
       if (passiveDiv.children.length > 0) description.appendChild(passiveDiv);
       if (useDiv.children.length > 0) description.appendChild(useDiv);
       if (event.target.className === "table-img") {
-        description.innerHTML = descriptionBody;
+        description.innerHTML = extract_hidden_values(base, base["desc_loc"]);
       }
       lore = document.createElement("div");
       lore.setAttribute("class", "tooltip-lore");
@@ -407,7 +436,7 @@ class Tooltip {
         loreTextEl.textContent = loreText;
         lore.appendChild(loreTextEl);
       }
-      if (tooltipType === "shard") {
+      if (tooltipType.includes("aghanim")) {
       } else if (event.target.className === "table-img") {
         tooltipContent.appendChild(description);
         tooltipContent.appendChild(attributes);
@@ -487,13 +516,6 @@ class Tooltip {
       tooltipFooter.style.borderTop = "0px";
     }
     if (!this.tooltip.children[2]) {
-      this.tooltip.appendChild(tooltipFooter);
-    }
-  }
-  append_tooltip(header, content, Footer) {
-    if (!this.tooltip.children[0]) {
-      this.tooltip.appendChild(tooltipHeader);
-      this.tooltip.appendChild(tooltipContent);
       this.tooltip.appendChild(tooltipFooter);
     }
   }
