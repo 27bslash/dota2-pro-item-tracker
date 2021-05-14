@@ -266,27 +266,30 @@ def generate_table(func_name, query, template):
 
         else:
             html_string += "<div class='purchases'>"
-            with open('json_files/items.json', 'r') as f:
-                item_data = json.load(f)
             for item in match['final_items']:
                 item_key = item['key']
-                # item_id = item_data['items']['item_key']
-                item_id = item_methods.get_item_id(item_key)
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item['id']}' alt='{item_key}'data-hero=\"{match['hero']}\">"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += overlay
-                html_string += "<div class='tooltip' id='item-tooltip'></div>"
+                if item['key'] == 'ultimate_scepter':
+                    html_string += "<div class='tooltip' id='sceptre-tooltip'></div>"
+                    print('asdff')
+                else:
+                    html_string += "<div class='tooltip' id='item-tooltip'></div>"
                 html_string += "</div>"
 
             for item in match['backpack']:
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item['id']}' alt='{item_key}'data-hero=\"{match['hero']}\">"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += overlay
-                html_string += "<div class='tooltip' id='item-tooltip'></div>"
+                if item['key'] == 'ultimate_scepter':
+                    html_string += "<div class='tooltip' id='sceptre-tooltip'></div>"
+                else:
+                    html_string += "<div class='tooltip' id='item-tooltip'></div>"
                 html_string += "</div>"
 
             if match['item_neutral']:
@@ -451,7 +454,7 @@ def get_winrate():
 
 
 def get_hero_name_colour(hero_name):
-    with open('json_files/hero_colours.json', 'r') as f:
+    with open('colours/hero_colours.json', 'r') as f:
         data = json.load(f)
         for item in data['colors']:
             if item['hero'] == hero_name:
@@ -478,19 +481,12 @@ def hero_json():
         return data
 
 
-@ app.route('/files/abilities')
-def ability_json():
-    with open('json_files/all_abilities.json', 'r') as f:
-        data = json.load(f)
-        return data
-
-
 @ app.route('/files/abilities/<hero_name>')
 def hero_ability_json(hero_name):
     print(hero_name)
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
-        with open(f"json_files/dota2/{hero_name}.json") as f:
+        with open(f"json_files/detailed_ability_info/{hero_name}.json") as f:
             data = json.load(f)
             return json.dumps(data)
 
@@ -536,61 +532,11 @@ def add_header(response):
     return response
 
 
-def do_everything(hero_name):
-    output = []
-    amount = 100
-    start = time.time()
-    asyncio.run(single_request(hero_name))
-    # asyncio.run(main(get_urls(hero_name), hero_name))
-    names = []
-    end = time.time()
-    print("Took {} seconds to pull {} websites.".format(end - start, amount))
-
-
 def clean_name(h_name):
     h_name = h_name.replace(' ', '_')
     h_name = h_name.lower()
     h_name = switcher(h_name)
     return h_name
-
-
-async def request_shit(hero_name):
-    db_hero_name = hero_name.replace(' ', '_').lower()
-    start = time.time()
-    hero_name = hero_name.capitalize()
-    base = 'http://www.dota2protracker.com/hero/'
-    url = 'http://www.dota2protracker.com/hero/'+hero_name
-    print(url)
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url=url) as response:
-            req = await response.text()
-            text = req
-            selector = Selector(text=text)
-            table = selector.xpath(
-                '//*[@class="display compact"]//tbody//tr')
-            print(table)
-            for i in reversed(range(len(table))):
-                row = table[i]
-                match_id = row.css('a::attr(href)').re(
-                    r".*opendota.*")[0]
-                m_id = re.sub(r"\D", '', match_id)
-                mmr = row.xpath('td')[5].css('::text').extract()[0]
-                name = row.xpath('td')[1].css('::text').extract()[1]
-                # print(mmr)
-                lanes = {'safelane': '1', 'mid': '2', 'roaming': '4',
-                         'offlane': '3', 'unknown': '0', 'jungle': 'jungle'}
-                roles = {'1': 'Safelane', '2': 'Midlane',
-                         '3': 'Offlane', '4': 'Support', '5': 'Hard Support', 'roaming': 'roaming', 'jungle': 'jungle', 'unknown': []}
-                print('m_id')
-                if match_id:
-                    o = {'id': m_id, 'hero': db_hero_name,
-                         'name': name, 'mmr': mmr}
-                    # print(o)
-                    if hero_urls.find_one({'hero': db_hero_name, 'id': m_id}) is None:
-                        print(o)
-                        # hero_urls.insert_one(o)
-            end = time.time()
-            print('protracker', end-start, 'seconds')
 
 
 async def pro_request(names):
@@ -613,7 +559,6 @@ def opendota_call():
     heroes = []
     start = time.time()
     delete_old_urls()
-    print('input')
     strt = time.perf_counter()
     print('1st', time.perf_counter() - strt)
     with open('json_files/hero_ids.json', 'r') as f:
@@ -654,7 +599,7 @@ def update_one_entry(hero, id):
 if __name__ == '__main__':
     # manual_hero_update('lich')
     # update_one_entry('batrider', 5965228394)
-    # manual_hero_update('f')
+    # manual_hero_update('ancient_apparition')
     # opendota_call()
     # get_winrate()
     app.run(debug=False)
