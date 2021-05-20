@@ -78,22 +78,15 @@ window.addEventListener("mouseover", (event) => {
         if (imgSrc.includes(i.ability)) {
           tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
         } else {
-          for (let ability in result) {
-            if (i.ability.includes(result[ability]["name"])) {
-              if (tooltip.id === "shard-tooltip") {
-                tooltipType = "aghanim-shard";
-                aghanim_ability = extract_aghanim(result, "shard");
-                if (aghanim_ability) {
-                  tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
-                }
-              } else if (tooltip.id === "sceptre-tooltip") {
-                tooltipType = "aghanim-sceptre";
-                aghanim_ability = extract_aghanim(result, "scepter");
-                if (aghanim_ability) {
-                  tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
-                }
-              }
-            }
+          if (tooltip.id === "shard-tooltip") {
+            tooltipType = "aghanim-shard";
+            aghanim_ability = extract_aghanim(result, "shard");
+          } else if (tooltip.id === "sceptre-tooltip") {
+            tooltipType = "aghanim-sceptre";
+            aghanim_ability = extract_aghanim(result, "scepter");
+          }
+          if (aghanim_ability && i.ability.includes(aghanim_ability["name"])) {
+            tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
           }
         }
       }
@@ -168,7 +161,6 @@ function extract_hidden_values(base, text) {
   });
   return highlight_numbers(sp.join(""));
 }
-
 
 class Tooltip {
   constructor(tooltip, parentNode, result, id) {

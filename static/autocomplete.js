@@ -1,15 +1,15 @@
-let cells = document.querySelectorAll(".hero-cell"),
-  arr = [],
-  elementsToHide = [],
-  order = [],
-  orderSet = new Set(),
-  search = document.getElementById("search"),
+const search = document.getElementById("search"),
   heroGrid = document.querySelector(".hero-grid"),
   statText = document.querySelectorAll(".win-stats"),
   ul = document.querySelector("ul"),
   heroSuggestionList = document.querySelector("#hero-suggestion-list"),
-  playerSuggestionList = document.querySelector("#player-suggestion-list"),
-  titleText;
+  playerSuggestionList = document.querySelector("#player-suggestion-list");
+let cells = document.querySelectorAll(".hero-cell"),
+  arr = [],
+  elementsToHide = [],
+  order = [],
+  titleText,
+  orderSet = new Set();
 
 document.querySelector(".suggestions").style.display = "none";
 async function get_json(search, hero_name) {
