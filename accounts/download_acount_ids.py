@@ -13,6 +13,7 @@ def get_account_ids():
     output = []
     data = get_player_url_list()
     url = 'http://www.dota2protracker.com/player/'
+
     for player_name in data:
         d = {}
         try:
@@ -29,7 +30,6 @@ def get_account_ids():
             output.append(d)
             db['account_ids'].find_one_and_update({'account_id': d['account_id']}, {"$set": {
                 'name': d['name'], 'account_id': d['account_id']}}, upsert=True)
-            print(player_name)
         except Exception as e:
             print(e, e.__class__, player_name, player_name)
 
