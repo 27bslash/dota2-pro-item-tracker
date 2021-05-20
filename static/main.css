@@ -82,10 +82,12 @@ thead .stats:hover {
 #gpm {
   padding-left: 0px;
   padding-right: 0px;
+  color: gold;
   text-align: right !important;
 }
 #xpm {
   padding-left: 0px;
+  color: gray;
   text-align: left;
 }
 .cell {
@@ -154,18 +156,18 @@ ul {
 #home {
   height: 100%;
 }
-.home-button {
+.nav-button {
   height: 100%;
   background-color: var(--nav-bar);
   margin-right: 10px;
   outline: none;
   border: none;
   color: rgb(136, 136, 136);
-  width: 70px;
   cursor: pointer;
   border-radius: 5px;
+  padding: 10px;
 }
-.home-button:hover {
+.nav-button:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(187, 187, 187);
 }
@@ -488,12 +490,11 @@ label {
 #win-cell {
   background-color: rgb(2 255 2 / 48%);
   width: 10px;
-  height: 219px;
-}
+  height: 260px}
 #loss-cell {
   background-color: rgb(255 2 2 / 65%);
   width: 10px;
-  height: 219px;
+  height: 260px;
 }
 .purchases {
   display: flex;
