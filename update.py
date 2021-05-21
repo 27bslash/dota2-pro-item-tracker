@@ -22,6 +22,14 @@ def update_hero_list():
         json.dump(hero_dict, f, indent=4)
 
 
+def upload_hero_list():
+    with open('json_files/hero_ids.json', 'r') as f:
+        data = json.load(f)
+        print(data['heroes'])
+        db['hero_list'].find_one_and_update(
+            {}, {"$set": {'heroes': data['heroes']}})
+
+
 def make_dir():
     if not os.path.isdir('colours\\ability_images'):
         print('fg')
@@ -42,7 +50,6 @@ def make_dir():
 def dl_dota2_abilities():
     make_dir()
     datafeed = 'https://www.dota2.com/datafeed/herodata?language=english&hero_id='
-    all_abilities = {}
     with open('json_files/hero_ids.json', 'r') as heroes:
         hero_data = json.load(heroes)
         for hero in hero_data['heroes']:
@@ -54,14 +61,10 @@ def dl_dota2_abilities():
                 print(hero['name'])
                 for ability in ability_json['abilities']:
                     hero_abilities[str(ability['id'])] = ability
-                    all_abilities[str(ability['id'])] = ability
                     get_ability_img(ability['name'], hero['name'])
                 for talent in ability_json['talents']:
                     hero_abilities[str(talent['id'])] = talent
-                    all_abilities[str(talent['id'])] = talent
                 json.dump(hero_abilities, o, indent=4)
-        with open('json_files/all_abilities.json', 'w') as d:
-            json.dump(all_abilities, d, indent=4)
 
 
 def get_ability_img(ability_name, hero_name):
@@ -70,28 +73,6 @@ def get_ability_img(ability_name, hero_name):
             f.write(requests.get(
                 f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability_name}.png").content)
             print(ability_name)
-
-
-def get_ability_imgs():
-    make_dir()
-    with open('json_files/hero_ids.json', 'r') as d:
-        data = json.load(d)
-        for hero in data['heroes']:
-            # print(hero_name)
-            hero_name = hero['name']
-            # db_out = hero_output.find_one({'hero': hero_name})
-            with open('json_files/all_abilities.json', 'r') as f:
-                abilities = json.load(f)
-                try:
-                    for k in abilities:
-                        if 'special_bonus' not in abilities[k]['name'] and abilities[k]['name'].replace('_', '').startswith(switcher(hero_name).replace('_', '')):
-                            ability_name = abilities[k]['name']
-                            with open(f'colours/ability_images/{hero_name}/{ability_name}.jpg', 'wb') as f:
-                                f.write(requests.get(
-                                    f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability_name}.png").content)
-                                print(ability_name)
-                except Exception as e:
-                    print('img err', hero_name, traceback.format_exc())
 
 
 def chunk_stratz_abilites():
@@ -137,20 +118,6 @@ def update_basic_id_json(input, output, dic_name):
         json.dump(dictionary, f, indent=2)
 
 
-def update_app():
-    print('updating hero list')
-    # update_hero_list()
-    print('updating json....')
-    update_stratz_json()
-    print('downloading abilities...')
-    dl_dota2_abilities()
-    print('updating_talents...')
-    update_talents()
-    print('updating hero colours....')
-    compute_contrast()
-    print('fini')
-
-
 def update_talents():
     db_methods = Db_insert()
     with open("json_files/hero_ids.json", 'r') as f:
@@ -159,7 +126,34 @@ def update_talents():
             db_methods.insert_talent_order(hero['id'])
 
 
+def update_minimap_icons():
+    import subprocess
+    import shutil
+    subprocess.check_call('npm install dota2-minimap-hero-sprites', shell=True)
+    shutil.copy('node_modules/dota2-minimap-hero-sprites/assets/images/minimap_hero_sheet.png',
+                'static/minimap_icons/images/minimap_hero_sheet.png')
+    shutil.copy('node_modules/dota2-minimap-hero-sprites/assets/stylesheets/dota2minimapheroes.css',
+                'static/minimap_icons/stylesheets/dota2minimapheroes.css')
+    shutil.rmtree('node_modules')
+
+
+def update_app():
+    print('uploading hero list')
+    upload_hero_list()
+    print('updating json....')
+    update_stratz_json()
+    print('downloading abilities...')
+    dl_dota2_abilities()
+    print('updating_talents...')
+    update_talents()
+    print('updating hero colours....')
+    compute_contrast()
+    print('updating minimap icons...')
+    update_minimap_icons()
+    print('fini')
+
 if __name__ == '__main__':
-    update_app()
+    # update_app()
     # chunk_stratz_abilites()
     # update_hero_list()
+    upload_hero_list()
