@@ -162,10 +162,10 @@ def player_get(player_name):
     start = time.perf_counter()
     total = 0
     template = 'player_final_items.html'
-    if 'table' in request.url:
-        return generate_table(player_get.__name__, player_name, template)
     if 'starter_items' in request.url:
         template = 'player_starter_items.html'
+    if 'table' in request.url:
+        return generate_table(player_get.__name__, player_name, template)
     display_name = player_name.replace('%20', ' ')
     roles_db = db['player_picks'].find_one({'name': display_name})
     roles = roles_db['roles']
@@ -185,6 +185,12 @@ def player_get(player_name):
         return render_template(template, display_name=display_name, data=match_data, time=time.time(), total=total, role_total=len(match_data), roles=roles)
     else:
         return render_template(template, display_name=display_name, data=[], time=time, roles=roles, total=0)
+
+
+@app.route('/matchups')
+def matchups_get():
+    
+    return render_template('index.html')
 
 
 def generate_table(func_name, query, template):
