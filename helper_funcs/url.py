@@ -1,6 +1,6 @@
 import time
 import traceback
-
+import requests
 from helper_funcs.database.db import db
 
 hero_urls = db['urls']
@@ -40,15 +40,12 @@ def delete_old_urls():
 
 
 def parse_request():
-    print('run')
     data = parse.find({})
     for match in data:
-        print(match)
         url = f"https://api.opendota.com/api/request/{match['id']}"
         try:
-            requests.post(url)
-            print('hero')
+            req = requests.post(url)
         except Exception as e:
             print(e)
-        print('delete', match['id'])
+        print('parse', match['id'])
         parse.delete_one({'id': match['id']})
