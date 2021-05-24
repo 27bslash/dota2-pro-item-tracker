@@ -138,7 +138,7 @@ def add_to_dead_games(m_id):
     else:
         db['dead_games'].find_one_and_update(
             {'id': m_id}, {"$inc": {'count': +1}})
-    if db['dead_games'].find_one({'id': m_id})['count'] == 0:
+    if db['dead_games'].find_one({'id': m_id})['count'] < 4:
         db['parse'].insert_one({'id': m_id})
 
 
@@ -219,7 +219,6 @@ async def get_acc_ids(urls, hero_name):
 
 
 def get_info(m_id, search, hero):
-    # print(m_id, search, hero)
     data = hero_urls.find_one({'id': m_id, 'hero': hero})
     return data[search]
 
