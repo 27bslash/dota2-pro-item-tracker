@@ -21,8 +21,8 @@ class Db_insert:
 
     def insert_player_picks(self):
         data = db['account_ids'].find({})
+        print('inserting player picks')
         for player in data:
-            print(player['name'])
             self.insert_total_picks('name', player['name'], 'player_picks')
 
     def insert_total_picks(self, key, val, collection):
@@ -119,9 +119,11 @@ class Db_insert:
             player = base['name']
             db['best_games'].insert_one(
                 {'id': match['id'], 'hero': hero, 'name': base['name'], 'role': base['role'], 'display_role': display_role, 'benchmarks': base['benchmarks']})
+
     def add_accouts(self):
         with open('json_files/account_ids.json'):
             pass
-            
-if __name__ == '__main__': 
-    Db_insert.insert_talent_order('self',1)
+
+
+if __name__ == '__main__':
+    Db_insert.insert_talent_order('self', 1)
