@@ -415,6 +415,7 @@ def find_hero(query, hero):
 
 
 def get_winrate():
+    print('get winrate...')
     output = []
     roles = ['Hard Support', 'Support', 'Safelane',
              'Offlane', 'Midlane', 'Roaming']
@@ -422,7 +423,6 @@ def get_winrate():
         with open('json_files/hero_ids.json', 'r') as f:
             data = json.load(f)
             for i, hero in enumerate(data['heroes']):
-                print(hero)
                 picks = hero_output.count_documents({'hero': hero['name']})
                 total_wins = hero_output.count_documents(
                     {'hero': hero['name'], 'win': 1})
@@ -452,11 +452,10 @@ def get_winrate():
                 output.append(role_dict)
                 wins = sorted(output, key=itemgetter('hero'))
             # db['wins'].insert_one({'stats': wins})
-            print(db['wins'])
             db['wins'].find_one_and_replace(
                 {}, {'stats': wins}, None, None, True)
     except Exception as e:
-        print(traceback.format_exc())
+        print(e,e.__class__)
 
 
 def get_hero_name_colour(hero_name):
@@ -607,6 +606,7 @@ if __name__ == '__main__':
     # update_one_entry('batrider', 5965228394)
     # manual_hero_update('ancient_apparition')
     # opendota_call()
+    # parse_request()
     # get_winrate()
     app.run(debug=False)
     pass
