@@ -4,6 +4,7 @@ from colorthief import ColorThief
 from helper_funcs.helper_imports import *
 from colours.contrast import compute_contrast
 from colours.dominant_colour import get_dominant_colours, get_dominant_color
+from accounts.download_acount_ids import get_account_ids
 import shutil
 import requests
 import traceback
@@ -25,7 +26,6 @@ def update_hero_list():
 def upload_hero_list():
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
-        print(data['heroes'])
         db['hero_list'].find_one_and_update(
             {}, {"$set": {'heroes': data['heroes']}})
 
@@ -150,10 +150,13 @@ def update_app():
     compute_contrast()
     print('updating minimap icons...')
     update_minimap_icons()
+    print('updating account ids')
+    get_account_ids()
     print('fini')
 
+
 if __name__ == '__main__':
-    # update_app()
+    update_app()
     # chunk_stratz_abilites()
     # update_hero_list()
-    upload_hero_list()
+    # upload_hero_list()
