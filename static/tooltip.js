@@ -124,10 +124,10 @@ window.addEventListener("mouseover", (event) => {
 });
 function extract_aghanim(result, s) {
   for (let ability in result) {
-    const shard =
+    const aghanim =
       result[ability][`ability_is_granted_by_${s}`] ||
       result[ability][`ability_has_${s}`];
-    if (shard) {
+    if (aghanim && result[ability][`${s}_loc`].length > 0) {
       return result[ability];
     }
   }
