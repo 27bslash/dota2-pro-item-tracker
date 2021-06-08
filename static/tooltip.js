@@ -63,6 +63,13 @@ window.addEventListener("mouseover", (event) => {
       if (_id == "5631") _id = "5625";
       imgSrc = event.target.getAttribute("src");
     }
+
+    if (tooltip.id === "shard-tooltip" || tooltip.id === "sceptre-tooltip") {
+      aghanim_ability = extract_aghanim(
+        result,
+        tooltip.id.replace("-tooltip", "")
+      );
+    }
     if (
       tooltipType == "ability" ||
       tooltip.id == "shard-tooltip" ||
@@ -77,16 +84,16 @@ window.addEventListener("mouseover", (event) => {
         }
         if (imgSrc.includes(i.ability)) {
           tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
+          break
         } else {
           if (tooltip.id === "shard-tooltip") {
             tooltipType = "aghanim-shard";
-            aghanim_ability = extract_aghanim(result, "shard");
           } else if (tooltip.id === "sceptre-tooltip") {
             tooltipType = "aghanim-sceptre";
-            aghanim_ability = extract_aghanim(result, "scepter");
           }
           if (aghanim_ability && i.ability.includes(aghanim_ability["name"])) {
             tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
+            break
           }
         }
       }
@@ -127,7 +134,7 @@ function extract_aghanim(result, s) {
     const aghanim =
       result[ability][`ability_is_granted_by_${s}`] ||
       result[ability][`ability_has_${s}`];
-    if (aghanim && result[ability][`${s}_loc`].length > 0) {
+    if (aghanim || result[ability][`${s}_loc`].length > 0) {
       return result[ability];
     }
   }
@@ -319,9 +326,6 @@ class Tooltip {
       //   htmlString = base["description"].join(",");
       description = document.createElement("div");
       description.setAttribute("class", "tooltip-description");
-      let activeText = "",
-        passiveText = "",
-        useText = "";
 
       let activeDiv = document.createElement("div");
       let passiveDiv = document.createElement("div");
@@ -447,7 +451,6 @@ class Tooltip {
   generateFooter(base) {
     let tooltipFooter = document.createElement("div");
     tooltipFooter.setAttribute("class", "tooltip-footer");
-    let _id = this.id;
     let stat = base["stat"];
     if (
       ("mana_costs" in base && base["mana_costs"].some((x) => x > 0)) ||
