@@ -11,8 +11,8 @@ from flask_caching import Cache
 from flask_compress import Compress
 
 from helper_funcs.helper_imports import *
+from accounts.download_acount_ids import update_pro_accounts
 from opendota_api import main
-import math
 # TODO
 # show alex ads
 # make levels accurate
@@ -577,13 +577,14 @@ def opendota_call():
             database_methods.insert_total_picks('bans', hero, 'hero_picks')
             if sleep >= 60:
                 sleep = 60
-            print('sleeping for: ',sleep)
+            print('sleeping for: ', sleep)
             time.sleep(sleep)
             pass
     parse_request()
     get_winrate()
     database_methods.insert_player_picks()
     database_methods.insert_best_games()
+    update_pro_accounts()
     print('end', (time.time()-start)/60, 'minutes')
 
 
