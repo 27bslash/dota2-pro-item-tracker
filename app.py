@@ -43,7 +43,9 @@ def index():
         img_names = [switcher(i['name']) for i in links]
         win_data = db['wins'].find_one({})
         wins = [item for item in win_data['stats'] if 'stats' in win_data]
-    return render_template('index.html', hero_imgs=img_names, links=links, wins=wins)
+        total_games = hero_output.count_documents({})
+        print(total_games)
+    return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
 
 @app.route('/', methods=['POST'])
@@ -189,7 +191,7 @@ def player_get(player_name):
 
 @app.route('/matchups')
 def matchups_get():
-    
+
     return render_template('index.html')
 
 
@@ -455,7 +457,7 @@ def get_winrate():
             db['wins'].find_one_and_replace(
                 {}, {'stats': wins}, None, None, True)
     except Exception as e:
-        print(e,e.__class__)
+        print(e, e.__class__)
 
 
 def get_hero_name_colour(hero_name):
@@ -565,7 +567,6 @@ def opendota_call():
     start = time.time()
     delete_old_urls()
     strt = time.perf_counter()
-    print('1st', time.perf_counter() - strt)
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for hero in data['heroes']:
@@ -576,7 +577,7 @@ def opendota_call():
             database_methods.insert_total_picks('bans', hero, 'hero_picks')
             if sleep >= 60:
                 sleep = 60
-            print(sleep)
+            print('sleeping for: ',sleep)
             time.sleep(sleep)
             pass
     parse_request()

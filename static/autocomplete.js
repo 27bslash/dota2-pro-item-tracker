@@ -115,13 +115,14 @@ const hero_name_display = () => {
   ) {
     document.querySelector(".sort-title").textContent = "";
     document.querySelector("#controls-arrow").classList.add("search-hide");
+    document.querySelector(".info").classList.add("search-hide");
   }
   for (let stat of statText) {
     stat.classList.add("search-hide");
   }
-  for (let h of arr) {
-    linkArr.push(h.name);
-    displayArr.push(h.name.replace(/_/g, " "));
+  for (let hero of arr) {
+    linkArr.push(hero.name);
+    displayArr.push(hero.name.replace(/_/g, " "));
   }
   if (displayArr.length > 20) {
     displayArr = displayArr.slice(0, 15);
@@ -217,7 +218,14 @@ window.addEventListener("keydown", (event) => {
     reset();
     return;
   }
-  if (!heroSuggestionList.children.length) reset();
+  if (
+    !heroSuggestionList.children.length &&
+    !playerSuggestionList.children.length
+  )
+    return reset();
+  if (!heroSuggestionList.children.length) {
+    currList = playerSuggestionList;
+  }
   // arrow key selection of autocomplete suggestions
   switch (event.keyCode) {
     case 37:
@@ -298,6 +306,7 @@ const reset = () => {
   ) {
     document.querySelector(".sort-title").textContent =
       document.querySelector(".sort-title").id;
+    document.querySelector(".info").classList.remove("search-hide");
     try {
       document.querySelector("#controls-arrow").classList.remove("search-hide");
     } catch (err) {
