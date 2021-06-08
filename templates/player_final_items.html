@@ -27,6 +27,8 @@
       bfilter: false,
       searching: true,
       ajax: {},
+      processing: true, ajax:{},
+      "language": { processing: '<img src=\'../static/icons/loading.gif\'></img> '},
       serverSide: true,
       deferRender: true,
       pageLength: 10,
@@ -38,7 +40,20 @@
     });
   });
 </script>
-<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}">
+<script
+src="{{ url_for('static', filename='copy-match-id.js') }}"
+async
+></script>
+<script
+  src="{{ url_for('static', filename='tooltip.js') }}"
+  async
+  defer
+></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}"
+/>
 <title>{{display_name}}</title>
 <main>
   <div class="content" style="margin-top: 40px">
@@ -88,10 +103,5 @@
     </table>
   </div>
 </main>
-<script
-  src="{{ url_for('static', filename='tooltip.js') }}"
-  async
-  defer
-></script>
-<script src="{{ url_for('static', filename='copy-match-id.js') }}" async></script>
+
 {%endblock%}

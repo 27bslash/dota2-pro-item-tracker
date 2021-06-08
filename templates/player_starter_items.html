@@ -27,6 +27,8 @@
       bfilter: false,
       searching: true,
       ajax: {},
+      processing: true, ajax:{},
+      "language": { processing: '<img src=\'../static/icons/loading.gif\'></img> '},
       serverSide: true,
       deferRender: true,
       pageLength: 10,
@@ -38,8 +40,23 @@
     });
   });
 </script>
-<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}">
+<script
+src="{{ url_for('static', filename='copy-match-id.js') }}"
+async
+defer
+></script>
+<script
+  src="{{ url_for('static', filename='tooltip.js') }}"
+  async
+  defer
+></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}"
+/>
 <title>{{display_name}}</title>
+
 <main>
   <div class="content" style="margin-top: 40px">
     <a
@@ -65,36 +82,28 @@
       {%endfor%}
     </div>
     <table role="main" class="item-table stripe">
-        <thead>
-          <th class="stats" id="win"></th>
-          <th class="stats" id="item-header">ITEMS</th>
-          <th class="stats">PLAYED</th>
-          <th class="stats">HERO</th>
-          <th class="stats no-cursor" id="copy-match-header"></th>
-          <th class="stats no-cursor">ROLE</th>
-          <th class="stats">LVL</th>
-          <th class="stats" id="kills">K</th>
-          <th class="stats" id="deaths">D</th>
-          <th class="stats" id="assists">A</th>
-          <th class="stats">CS</th>
-          <th class="stats" id="gold">NET</th>
-          <th class="stats" id="gpm">GPM</th>
-          <th class="stats" id="xpm">/XPM</th>
-          <th class="stats">HD</th>
-          <th class="stats">TD</th>
-          <th class="stats">LENGTH</th>
-          <th class="stats">MMR</th>
-        </thead>
-      </table>
+      <thead>
+        <th class="stats" id="win"></th>
+        <th class="stats" id="item-header">ITEMS</th>
+        <th class="stats">PLAYED</th>
+        <th class="stats">HERO</th>
+        <th class="stats no-cursor" id="copy-match-header"></th>
+        <th class="stats no-cursor">ROLE</th>
+        <th class="stats">LVL</th>
+        <th class="stats" id="kills">K</th>
+        <th class="stats" id="deaths">D</th>
+        <th class="stats" id="assists">A</th>
+        <th class="stats">CS</th>
+        <th class="stats" id="gold">NET</th>
+        <th class="stats" id="gpm">GPM</th>
+        <th class="stats" id="xpm">/XPM</th>
+        <th class="stats">HD</th>
+        <th class="stats">TD</th>
+        <th class="stats">LENGTH</th>
+        <th class="stats">MMR</th>
+      </thead>
+    </table>
   </div>
 </main>
-<script
-  src="{{ url_for('static', filename='tooltip.js') }}"
-  async
-  defer
-></script>
-<script
-  src="{{ url_for('static', filename='copy-match-id.js') }}"
-  async
-></script>
+
 {%endblock%}

@@ -96,7 +96,10 @@
       }
     };
   </script>
-  <h1 class="sort-title"></h1>
+  <div class="title-wrapper">
+    <h1 class="sort-title"></h1>
+    <p class="info">total games: {{total_games}}</div>
+  </div>
   <div class="grid-container">
     <div class="hero-grid">
       {%set x = 0%} {%for j in range(links|length)%}
