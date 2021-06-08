@@ -282,7 +282,7 @@ def generate_table(func_name, query, template):
                 html_string += image
                 html_string += overlay
                 if item['key'] == 'ultimate_scepter':
-                    html_string += "<div class='tooltip' id='sceptre-tooltip'></div>"
+                    html_string += "<div class='tooltip' id='scepter-tooltip'></div>"
                     print('asdff')
                 else:
                     html_string += "<div class='tooltip' id='item-tooltip'></div>"
@@ -295,7 +295,7 @@ def generate_table(func_name, query, template):
                 html_string += image
                 html_string += overlay
                 if item['key'] == 'ultimate_scepter':
-                    html_string += "<div class='tooltip' id='sceptre-tooltip'></div>"
+                    html_string += "<div class='tooltip' id='scepter-tooltip'></div>"
                 else:
                     html_string += "<div class='tooltip' id='item-tooltip'></div>"
                 html_string += "</div>"

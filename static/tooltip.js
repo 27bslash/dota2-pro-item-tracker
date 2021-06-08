@@ -64,7 +64,7 @@ window.addEventListener("mouseover", (event) => {
       imgSrc = event.target.getAttribute("src");
     }
 
-    if (tooltip.id === "shard-tooltip" || tooltip.id === "sceptre-tooltip") {
+    if (tooltip.id === "shard-tooltip" || tooltip.id === "scepter-tooltip") {
       aghanim_ability = extract_aghanim(
         result,
         tooltip.id.replace("-tooltip", "")
@@ -73,7 +73,7 @@ window.addEventListener("mouseover", (event) => {
     if (
       tooltipType == "ability" ||
       tooltip.id == "shard-tooltip" ||
-      tooltip.id == "sceptre-tooltip"
+      tooltip.id == "scepter-tooltip"
     ) {
       hero = event.target.getAttribute("data-hero");
       tooltip.style.background = `linear-gradient(137deg, rgba(35 35 35), rgb(60,60,60) )`;
@@ -84,16 +84,16 @@ window.addEventListener("mouseover", (event) => {
         }
         if (imgSrc.includes(i.ability)) {
           tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
-          break
+          break;
         } else {
           if (tooltip.id === "shard-tooltip") {
             tooltipType = "aghanim-shard";
-          } else if (tooltip.id === "sceptre-tooltip") {
-            tooltipType = "aghanim-sceptre";
+          } else if (tooltip.id === "scepter-tooltip") {
+            tooltipType = "aghanim-scepter";
           }
           if (aghanim_ability && i.ability.includes(aghanim_ability["name"])) {
             tooltip.style.background = `radial-gradient(circle at top left, rgba(${i.color[0]}, ${i.color[1]}, ${i.color[2]}) 0%, #182127 160px)`;
-            break
+            break;
           }
         }
       }
@@ -209,7 +209,7 @@ class Tooltip {
     //   );
     //   tooltipHeaderImg.appendChild(subImg);
     //   tooltipHeaderImg.style.position = "relative";
-    // } else if (tooltipType === "aghanim-sceptre") {
+    // } else if (tooltipType === "aghanim-scepter") {
     //   tooltipHeaderImg = document.createElement("div");
     //   tooltipHeaderImg.setAttribute("class", "tooltip-aghanim-img");
     //   tooltipHeaderImg.style.backgroundImage = `url(${imgSrc})`;
