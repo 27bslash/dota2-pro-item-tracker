@@ -45,10 +45,10 @@ def get_player_url_list():
     req = requests.get(
         'http://www.dota2protracker.com/static/search_items_595274230.json', headers=headers)
     if req.status_code != 200:
-        print('blocked')
+        print(f'status:{req.status_code} blocked')
         return None
     if 'players' not in req.text:
-        print('blocked')
+        print('misc blocked')
         return None
     players = json.loads(req.text)['players']
     return [k for k in players]
