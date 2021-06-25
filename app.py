@@ -1,18 +1,21 @@
-import timeago
-import datetime
-import time
 import asyncio
-import json
+import datetime
 import itertools
+import json
+import math
+import time
 from operator import itemgetter
 
-from flask import Flask, redirect, render_template, request, url_for, after_this_request
+import timeago
+from flask import (Flask, after_this_request, redirect, render_template,
+                   request, url_for)
 from flask_caching import Cache
 from flask_compress import Compress
 
-from helper_funcs.helper_imports import *
 from accounts.download_acount_ids import update_pro_accounts
+from helper_funcs.helper_imports import *
 from opendota_api import main
+
 # TODO
 # show alex ads
 # make levels accurate
