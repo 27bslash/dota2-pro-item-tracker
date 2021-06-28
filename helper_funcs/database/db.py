@@ -4,9 +4,14 @@ import time
 from helper_funcs.hero import Hero
 from helper_funcs.abilities import detailed_ability_info
 import traceback
+import os
+
+from dotenv import load_dotenv
+load_dotenv()
+connection = os.environ['DB_CONNECTION']
 
 cluster = pymongo.MongoClient(
-    'mongodb+srv://dbuser:a12345@pro-item-tracker.ifybd.mongodb.net/pro-item-tracker?retryWrites=true&w=majority')
+    f"{connection}?retryWrites=true&w=majority")
 db = cluster['pro-item-tracker']
 
 hero_urls = db['urls']
