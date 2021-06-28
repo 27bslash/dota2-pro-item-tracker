@@ -606,12 +606,34 @@ def update_one_entry(hero, id):
     asyncio.run(main([id], hero))
 
 
+def start_instance():
+    from pprint import pprint
+    from googleapiclient import discovery
+    service = discovery.build('compute', 'v1')
+
+    # Project ID for this request.
+    project = 'eastern-rain-283917'
+    # TODO: Update placeholder value.
+
+    # The name of the zone for this request.
+    zone = 'europe-west2-c'  # TODO: Update placeholder value.
+
+    # Name of the instance scoping this request.
+    instance = 'pro-tracker'  # TODO: Update placeholder value.
+
+    request = service.instances().stop(project=project, zone=zone, instance=instance)
+    response = request.execute()
+
+    # TODO: Change code below to process the `response` dict:
+    pprint(response)
+
+
 if __name__ == '__main__':
     # manual_hero_update('lich')
     # update_one_entry('batrider', 5965228394)
     # manual_hero_update('ancient_apparition')
-    # opendota_call()
     # parse_request()
     # get_winrate()
-    app.run(debug=False)
+    start_instance()
+    # app.run(debug=False)
     pass
