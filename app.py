@@ -13,6 +13,7 @@ from flask_caching import Cache
 from flask_compress import Compress
 
 from accounts.download_acount_ids import update_pro_accounts
+from helper_funcs.compute_engine import check_last_day
 from helper_funcs.helper_imports import *
 from opendota_api import main
 
@@ -49,7 +50,6 @@ def index():
         total_games = hero_output.count_documents({})
         print(total_games)
     # start_instance()
-    service_login()
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
 
@@ -572,6 +572,7 @@ def opendota_call():
     start = time.time()
     delete_old_urls()
     strt = time.perf_counter()
+    check_last_day()
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         for hero in data['heroes']:
@@ -608,47 +609,6 @@ def update_one_entry(hero, id):
     asyncio.run(main([id], hero))
 
 
-def start_instance():
-    print('starting instance')
-    from pprint import pprint
-
-    from googleapiclient import discovery
-    service = discovery.build('compute', 'v1')
-
-    # Project ID for this request.
-    project = 'eastern-rain-283917'
-    # TODO: Update placeholder value.
-
-    # The name of the zone for this request.
-    zone = 'europe-west2-c'  # TODO: Update placeholder value.
-
-    # Name of the instance scoping this request.
-    instance = 'pro-tracker'  # TODO: Update placeholder value.
-
-    request = service.instances().stop(project=project, zone=zone, instance=instance)
-    response = request.execute()
-
-    # TODO: Change code below to process the `response` dict:
-    pprint(response)
-
-
-def service_login():
-    from google.oauth2 import service_account
-    import os
-    json_str = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
-    # project name
-    print('credes', json_str)
-
-    # generate json - if there are errors here remove newlines in .env
-    json_data = json.loads(json_str)
-    # the private_key needs to replace \n parsed as string literal with escaped newlines
-    json_data['private_key'] = json_data['private_key'].replace('\\n', '\n')
-
-    # use service_account to generate credentials object
-    credentials = service_account.Credentials.from_service_account_info(
-        json_data)
-    print('creds', credentials)
-    # pass credentials AND project name to new client object (did not work wihout project name)
 
 
 if __name__ == '__main__':
@@ -657,6 +617,5 @@ if __name__ == '__main__':
     # manual_hero_update('ancient_apparition')
     # parse_request()
     # get_winrate()
-    # app.run(debug=False)
-    service_login()
+    app.run(debug=False)
     pass
