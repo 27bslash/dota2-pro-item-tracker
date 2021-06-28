@@ -48,6 +48,7 @@ def index():
         wins = [item for item in win_data['stats'] if 'stats' in win_data]
         total_games = hero_output.count_documents({})
         print(total_games)
+    start_instance()
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
 
@@ -607,6 +608,7 @@ def update_one_entry(hero, id):
 
 
 def start_instance():
+    print('starting instance')
     from pprint import pprint
     from googleapiclient import discovery
     service = discovery.build('compute', 'v1')
@@ -634,6 +636,5 @@ if __name__ == '__main__':
     # manual_hero_update('ancient_apparition')
     # parse_request()
     # get_winrate()
-    start_instance()
-    # app.run(debug=False)
+    app.run(debug=False)
     pass
