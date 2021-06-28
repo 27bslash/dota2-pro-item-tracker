@@ -48,7 +48,8 @@ def index():
         wins = [item for item in win_data['stats'] if 'stats' in win_data]
         total_games = hero_output.count_documents({})
         print(total_games)
-    start_instance()
+    # start_instance()
+    service_login()
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
 
@@ -610,6 +611,7 @@ def update_one_entry(hero, id):
 def start_instance():
     print('starting instance')
     from pprint import pprint
+
     from googleapiclient import discovery
     service = discovery.build('compute', 'v1')
 
@@ -630,11 +632,31 @@ def start_instance():
     pprint(response)
 
 
+def service_login():
+    from google.oauth2 import service_account
+    import os
+    json_str = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
+    # project name
+    print('credes', json_str)
+
+    # generate json - if there are errors here remove newlines in .env
+    json_data = json.loads(json_str)
+    # the private_key needs to replace \n parsed as string literal with escaped newlines
+    json_data['private_key'] = json_data['private_key'].replace('\\n', '\n')
+
+    # use service_account to generate credentials object
+    credentials = service_account.Credentials.from_service_account_info(
+        json_data)
+    print('creds', credentials)
+    # pass credentials AND project name to new client object (did not work wihout project name)
+
+
 if __name__ == '__main__':
     # manual_hero_update('lich')
     # update_one_entry('batrider', 5965228394)
     # manual_hero_update('ancient_apparition')
     # parse_request()
     # get_winrate()
-    app.run(debug=False)
+    # app.run(debug=False)
+    service_login()
     pass
