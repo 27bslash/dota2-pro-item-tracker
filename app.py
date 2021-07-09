@@ -53,55 +53,27 @@ def index():
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
 
+def handle_redirect(request):
+    if request.method == 'POST':
+        text = request.form.get('search')
+        if db['account_ids'].find_one({'name': text}):
+            return '/player/'+text
+        if hero_methods.get_hero_name(text):
+            suggestion = hero_methods.get_hero_name(text)
+            suggestion = sorted(suggestion)
+            return '/hero/'+suggestion[0]
+        else:
+            return request.url
+
+
 @app.route('/', methods=['POST'])
-def index_post():
-    if request.method == 'POST':
-        text = request.form.get('search')
-        if db['account_ids'].find_one({'name': text}):
-            return redirect('/player/'+text)
-        if hero_methods.get_hero_name(text):
-            suggestion = hero_methods.get_hero_name(text)
-            suggestion = sorted(suggestion)
-            return redirect('/hero/'+suggestion[0])
-        else:
-            return redirect('/')
-
-
-@app.route('/hero/<hero_name>/starter_items', methods=['POST'])
-@app.route('/hero/<hero_name>', methods=['POST'])
-def item_post(hero_name):
-    if request.method == 'POST':
-        starter = ''
-        if 'starter_items' in request.url:
-            starter = '/starter_items'
-        text = request.form.get('search')
-        if db['account_ids'].find_one({'name': text}):
-            return redirect('/player/'+text)
-        if hero_methods.get_hero_name(text):
-            suggestion = hero_methods.get_hero_name(text)
-            suggestion = sorted(suggestion)
-            return redirect('/hero/'+suggestion[0])
-        else:
-            return redirect(f'/hero/{hero_name}{starter}')
-
-
-@app.route('/player/<player_name>/starter_items', methods=['POST'])
-@app.route('/player/<player_name>', methods=['POST'])
-def player_post(player_name):
-    print('p', player_name)
-    if request.method == 'POST':
-        starter = ''
-        if 'starter_items' in request.url:
-            starter = '/starter_items'
-        text = request.form.get('search')
-        if db['account_ids'].find_one({'name': text}):
-            return redirect('/player/'+text)
-        if hero_methods.get_hero_name(text):
-            suggestion = hero_methods.get_hero_name(text)
-            suggestion = sorted(suggestion)
-            return redirect('/hero/'+suggestion[0])
-        else:
-            return redirect(f'/hero/{player_name}{starter}')
+@app.route('/chappie', methods=['POST'])
+@app.route('/hero/<query>/starter_items', methods=['POST'])
+@app.route('/hero/<query>', methods=['POST'])
+@app.route('/player/<query>/starter_items', methods=['POST'])
+@app.route('/player/<query>', methods=['POST'])
+def item_post(query=''):
+    return redirect(handle_redirect(request))
 
 
 @app.route('/hero/<hero_name>/starter_items', methods=['GET'])
@@ -123,19 +95,14 @@ def hero_get(hero_name):
     roles_db = db['hero_picks'].find_one({'hero': hero_name})
     roles = roles_db['roles']
     print('roles: ', time.perf_counter() - r_start)
-    # print('roloe', roles, hero_name)
     check_response_time = time.perf_counter()
-    # print(hero_output.find({'hero': hero_name}).explain()['executionStats'])
     check_response = hero_output.find_one({'hero': hero_name})
     print('chk_time: ', time.perf_counter() - check_response_time)
     if check_response:
-        # string = json.dumps(urllib.parse.parse_qs(request.args))
         if request.args:
             role = request.args.get('role').replace('%20', ' ').title()
             data = hero_output.find(
                 {'hero': hero_name, 'role': role})
-            # print(hero_output.find(
-            #     {'hero': hero_name, 'role': role}).sort('unix_time', -1).explain()['executionStats'])
             match_data = [hero for hero in data]
             best_games = [match for match in db['best_games'].find(
                 {'hero': hero_name, 'display_role': role})]
@@ -150,12 +117,10 @@ def hero_get(hero_name):
         talents = talent_methods.get_talent_order(match_data, hero_name)
         misc = time.perf_counter()
         hero_colour = get_hero_name_colour(hero_name)
-        print('misc Time: ', time.perf_counter()-misc)
         print('total Time: ', time.perf_counter()-start)
         template_time = time.perf_counter()
         r_t = render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
                               time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles, best_games=best_games)
-        print('template time: ', time.perf_counter()-template_time)
         return r_t
     else:
         return render_template(template, hero_name=hero_name, hero_img=clean_name(hero_name), display_name=display_name, data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
@@ -194,10 +159,12 @@ def player_get(player_name):
         return render_template(template, display_name=display_name, data=[], time=time, roles=roles, total=0)
 
 
-@app.route('/matchups')
-def matchups_get():
-
-    return render_template('index.html')
+@app.route('/chappie')
+def chappie_get():
+    data = [match for match in db['chappie'].find({})]
+    times = [timeago.format(
+        match['unix_time'], datetime.datetime.now()) for match in data]
+    return render_template('chappie.html', data=data, times=times)
 
 
 def generate_table(func_name, query, template):
@@ -551,20 +518,12 @@ def clean_name(h_name):
     return h_name
 
 
-async def pro_request(names):
-    ret = await asyncio.gather(*[request_shit(hero_name) for hero_name in names])
-
-
 def clean_img(s):
     x = s.split('/')[3]
     x = x.replace('_', '')
     x = x.replace('.png', '')
     x = x.replace('pos', '')
     return x
-
-
-async def single_request(name):
-    ret = await asyncio.gather(request_shit(name))
 
 
 def opendota_call():
@@ -607,8 +566,6 @@ def update_one_entry(hero, id):
     # hero_output.find_one_and_delete(
     #     {'hero': hero, 'id': id})
     asyncio.run(main([id], hero))
-
-
 
 
 if __name__ == '__main__':
