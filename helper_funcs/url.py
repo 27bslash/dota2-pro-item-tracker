@@ -23,20 +23,17 @@ def get_urls(hero_name):
 
 
 def delete_old_urls():
-    data = hero_output.find()
+    data = hero_output.find({})
     for d in data:
         # print(d['id'])
         time_since = time.time() - d["unix_time"]
         # 8 days old
         if time_since > 690000:
-            try:
-                hero_output.delete_many({'id': {"$lte": int(d["id"])}})
-                hero_urls.delete_many({'id': {"$lte": int(d["id"])}})
-                db['non-pro'].delete_many({'id': {"$lte": int(d["id"])}})
-                db['dead_games'].delete_many({'id': {"$lte": int(d["id"])}})
-            except Exception as e:
-                print(traceback.format_exc())
-            print(f"Deleted {d['id']}")
+            collections = db.list_collection_names()
+            for collection in collections:
+                db[collection].delete_many(
+                    {'id': {"$lte": int(d["id"])}})
+            print(f"Deleted: {d['id']}")
 
 
 def parse_request():
@@ -49,3 +46,7 @@ def parse_request():
             print(e)
         print('parse', match['id'])
         parse.delete_one({'id': match['id']})
+
+
+if __name__ == "__main__":
+    delete_old_urls()
