@@ -48,7 +48,6 @@ def index():
         win_data = db['wins'].find_one({})
         wins = [item for item in win_data['stats'] if 'stats' in win_data]
         total_games = hero_output.count_documents({})
-        print(total_games)
     # start_instance()
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
@@ -94,10 +93,8 @@ def hero_get(hero_name):
     r_start = time.perf_counter()
     roles_db = db['hero_picks'].find_one({'hero': hero_name})
     roles = roles_db['roles']
-    print('roles: ', time.perf_counter() - r_start)
     check_response_time = time.perf_counter()
     check_response = hero_output.find_one({'hero': hero_name})
-    print('chk_time: ', time.perf_counter() - check_response_time)
     if check_response:
         if request.args:
             role = request.args.get('role').replace('%20', ' ').title()
@@ -117,7 +114,6 @@ def hero_get(hero_name):
         talents = talent_methods.get_talent_order(match_data, hero_name)
         misc = time.perf_counter()
         hero_colour = get_hero_name_colour(hero_name)
-        print('total Time: ', time.perf_counter()-start)
         template_time = time.perf_counter()
         r_t = render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
                               time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles, best_games=best_games)
@@ -143,7 +139,6 @@ def player_get(player_name):
     roles = roles_db['roles']
     check_response_time = time.perf_counter()
     check_response = hero_output.find_one({'name': display_name})
-    print('chk_time: ', time.perf_counter() - check_response_time)
     if check_response:
         if request.args:
             role = request.args.get('role').replace('%20', ' ').title()
@@ -153,7 +148,6 @@ def player_get(player_name):
         else:
             match_data = find_hero('name', display_name)
         total = len(match_data)
-        print('total Time: ', time.perf_counter()-start)
         return render_template(template, display_name=display_name, data=match_data, time=time.time(), total=total, role_total=len(match_data), roles=roles)
     else:
         return render_template(template, display_name=display_name, data=[], time=time, roles=roles, total=0)
@@ -255,7 +249,6 @@ def generate_table(func_name, query, template):
                 html_string += overlay
                 if item['key'] == 'ultimate_scepter':
                     html_string += "<div class='tooltip' id='scepter-tooltip'></div>"
-                    print('asdff')
                 else:
                     html_string += "<div class='tooltip' id='item-tooltip'></div>"
                 html_string += "</div>"
@@ -384,7 +377,6 @@ def find_hero(query, hero):
     data = hero_output.find({query: hero})
     s = time.perf_counter()
     match_data = [hero for hero in data]
-    print('data time', time.perf_counter() - s)
     return match_data
 
 
@@ -462,7 +454,6 @@ def hero_json():
 
 @ app.route('/files/abilities/<hero_name>')
 def hero_ability_json(hero_name):
-    print(hero_name)
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
         with open(f"json_files/detailed_ability_info/{hero_name}.json") as f:
