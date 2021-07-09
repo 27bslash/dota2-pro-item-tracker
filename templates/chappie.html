@@ -1,0 +1,90 @@
+{% extends 'search.html' %} {%block content%}
+<script>
+  $(document).ready(function () {
+    let table = $(".item-table").DataTable({
+      aoColumns: [
+        { orderSequence: ["desc", "asc"] },
+        { bSortable: false },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["asc", "desc"] },
+        { bSortable: false },
+        { orderSequence: ["asc", "desc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["desc", "asc"] },
+        { orderSequence: ["asc", "desc"] },
+        { orderSequence: ["desc", "asc"] },
+      ],
+      order: [[0, "asc"]],
+      order: [[2, "desc"]],
+      bfilter: false,
+      searching: false,
+      bPaginate: false,
+      bLengthChange: false,
+      bInfo: false,
+      bAutoWidth: false,
+    });
+  });
+</script>
+<script src="{{ url_for('static', filename='tooltip.js') }}" defer></script>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}"
+/>
+<title>chappie</title>
+<body>
+  <h3 style="color: white">{{data|length}} FEEDING PROS THIS WEEK.</h3>
+  <table role="main" class="item-table stripe">
+    <thead>
+      <th class="stats" id="win"></th>
+      <th class="stats" id="item-header">ITEMS</th>
+      <th class="stats">PLAYED</th>
+      <th class="stats">HERO</th>
+      <th class="stats">PLAYER</th>
+      <th class="stats">LVL</th>
+      <th class="stats" id="kills">K</th>
+      <th class="stats" id="deaths">D</th>
+      <th class="stats" id="assists">A</th>
+      <th class="stats" id="duration">DURATION</th>
+    </thead>
+    <tbody>
+      {%for match in data%}
+      <tr>
+        <td id="chappie-cell"></td>
+        <td>
+          <a href="https://www.opendota.com/matches/{{match['id']}}">
+            <div class="purchases">
+              {%for item in match['final_items']%}
+              <div class="item-cell">
+                <img
+                  class="item-img"
+                  src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{item["key"]}}_lg.png'
+                  data_id='{{item["id"]}}'
+                  alt="{{item_key}}"
+                  data-hero="{{match['hero']}}"
+                />
+                <div class="overlay">{{item['time']}}</div>
+                <div class="tooltip" id="item-tooltip"></div>
+              </div>
+              {%endfor%}
+            </div>
+          </a>
+        </td>
+        <td class="played">{{times[loop.index0]}}</td>
+        <td class="hero">
+          <a href='/hero/{{match["hero"]}}'
+            ><i class="d2mh {{match['hero']}}"></i
+          ></a>
+        </td>
+        <td class="player">{{match['name']}}</td>
+        <td class="lvl">{{match['lvl']}}</td>
+        <td id="kills">{{match['kills']}}</td>
+        <td id="deaths">{{match['deaths']}}</td>
+        <td id="assists">{{match['assists']}}</td>
+        <td class="duration">{{match['duration']}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+</body>
+{%endblock%}

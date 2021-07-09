@@ -125,6 +125,8 @@ window.addEventListener("mouseover", (event) => {
     if (tooltip.getBoundingClientRect().bottom > window.innerHeight) {
       tooltip.style.top = `-${tooltipHeight}px`;
       tooltip.style.left = `-0px`;
+    } else if (tooltip.getBoundingClientRect().top < 0) {
+      tooltip.style.top = 0;
     }
     tooltip.style.display = "block";
   }
