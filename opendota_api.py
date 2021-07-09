@@ -210,7 +210,7 @@ def roles(s, p_slot):
 
 async def main(urls, hero_name):
     # urls = ['5527705678']
-    print('main: ', urls, hero_name)
+    print(f"{hero_name}: {urls}" )
     ret = await asyncio.gather(*[async_get(url, hero_name) for url in urls])
 
 
