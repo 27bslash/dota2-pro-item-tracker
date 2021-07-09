@@ -109,10 +109,8 @@ const hero_name_display = () => {
     displayArr = [],
     linkArr = [];
   ul.innerHTML = "";
-  if (
-    !window.location.pathname.includes("hero") &&
-    !window.location.pathname.includes("player")
-  ) {
+  console.log(window.location.pathname);
+  if (window.location.pathname === "/") {
     document.querySelector(".sort-title").textContent = "";
     document.querySelector("#controls-arrow").classList.add("search-hide");
     document.querySelector(".info").classList.add("search-hide");
@@ -300,10 +298,7 @@ window.addEventListener("keydown", (event) => {
 const reset = () => {
   ul.innerHTML = "";
   playerSuggestionList.innerHTML = "";
-  if (
-    !window.location.pathname.includes("hero") &&
-    !window.location.pathname.includes("player")
-  ) {
+  if (window.location.pathname == "/") {
     document.querySelector(".sort-title").textContent =
       document.querySelector(".sort-title").id;
     document.querySelector(".info").classList.remove("search-hide");
