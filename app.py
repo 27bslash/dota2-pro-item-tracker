@@ -518,10 +518,8 @@ def clean_img(s):
 
 
 def opendota_call():
-    heroes = []
     start = time.time()
     delete_old_urls()
-    strt = time.perf_counter()
     check_last_day()
     with open('json_files/hero_ids.json', 'r') as f:
         data = json.load(f)
@@ -538,9 +536,8 @@ def opendota_call():
             pass
     parse_request()
     get_winrate()
-    database_methods.insert_player_picks()
-    database_methods.insert_best_games()
     update_pro_accounts()
+    database_methods.insert_all()
     print('end', (time.time()-start)/60, 'minutes')
 
 

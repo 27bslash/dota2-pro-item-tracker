@@ -125,9 +125,19 @@ class Db_insert:
             db['best_games'].insert_one(
                 {'id': match['id'], 'hero': hero, 'name': base['name'], 'role': base['role'], 'display_role': display_role, 'benchmarks': base['benchmarks']})
 
-    def add_accouts(self):
-        with open('json_files/account_ids.json'):
-            pass
+    def insert_worst_games(self):
+        data = hero_output.find({})
+        for doc in data:
+            items = [item['key']
+                     for item in doc['final_items']]
+            if 'shadow_amulet' in items and len(items) < 3:
+                db['chappie'].find_one_and_update(
+                    {'hero': doc['hero'], "id": doc['id']}, {"$set": doc}, upsert=True)
+
+    def insert_all(self):
+        self.insert_worst_games()
+        self.insert_best_games()
+        self.insert_player_picks()
 
 
 if __name__ == '__main__':
