@@ -14,8 +14,8 @@ def reset_instance():
     credentials = service_login()
     service = discovery.build('compute', 'v1', credentials=credentials)
     project = 'eastern-rain-283917'
-    zone = 'europe-west2-c'
-    instance = 'pro-tracker'
+    zone = 'us-central1-a'
+    instance = 'instance-1'
     request = service.instances().reset(project=project, zone=zone, instance=instance)
     response = request.execute()
     pprint(response)
@@ -33,4 +33,7 @@ def check_last_day():
     sort = db['urls'].find({}).sort('time_stamp', -1)
     time_since = time.time() - sort[0]['time_stamp']
     if time_since > 86400:
+        # print('shite')
         reset_instance()
+if __name__ == "__main__":
+    check_last_day()
