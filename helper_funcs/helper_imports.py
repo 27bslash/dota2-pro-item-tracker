@@ -1,10 +1,10 @@
-from helper_funcs.hero import Hero
-from helper_funcs.abilities import Talents, detailed_ability_info
-from helper_funcs.items import Items
-from helper_funcs.database.db import db, Db_insert
-from helper_funcs.database.collection import *
-from helper_funcs.url import get_urls, delete_old_urls, parse_request
-from helper_funcs.switcher import switcher
+from .abilities import Talents, detailed_ability_info
+from .database.collection import *
+from .database.db import Db_insert, db
+from .hero import Hero
+from .items import Items
+from .switcher import switcher
+from .url import delete_old_urls, get_urls, parse_request
 
 hero_methods = Hero()
 item_methods = Items()

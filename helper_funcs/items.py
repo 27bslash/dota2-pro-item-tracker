@@ -1,12 +1,17 @@
-from collections import OrderedDict,Counter
-from operator import itemgetter
-import time
 import datetime
 import json
+import time
+from collections import Counter, OrderedDict
+from operator import itemgetter
+
+from .database.collection import db
+
 
 class Items():
     def __init__(self):
-        pass
+        # item_lst = db['all_items']
+        collection = db['item_ids']
+        self.item_lst = collection.find_one({}, {'_id': 0})
 
     def pro_items(self, match_data):
         item_lst = []
@@ -24,16 +29,14 @@ class Items():
     def get_item_name(self, item_id):
         if not item_id:
             return
-        with open('json_files/items.json') as json_file:
-            data = json.load(json_file)
-            item = [item['name']
-                    for item in data['items'] if item_id == item['id']]
-            return item[0]
+        data = self.item_lst
+        item = [item['name']
+                for item in data['items'] if item_id == item['id']]
+        return item[0]
 
     def get_item_id(self, item_name):
-        with open('json_files/items.json') as f:
-            data = json.load(f)
-            return [item['id'] for item in data['items'] if item_name == item['name']][0]
+        data = self.item_lst
+        return [item['id'] for item in data['items'] if item_name == item['name']][0]
 
     def convert_time(self, lst):
         for item in lst:

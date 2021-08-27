@@ -24,6 +24,3 @@ def switcher(name):
         return switch.get(name)
     return name
 
-
-if __name__ == "__main__":
-    pass

@@ -1,4 +1,14 @@
-from helper_funcs.database.db import db
+import pymongo
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+connection = os.environ['DB_CONNECTION']
+
+cluster = pymongo.MongoClient(
+    f"{connection}?retryWrites=true&w=majority")
+
+db = cluster['pro-item-tracker']
 
 hero_urls = db['urls']
 hero_output = db['heroes']

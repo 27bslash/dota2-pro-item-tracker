@@ -40,14 +40,13 @@ compress.init_app(app)
 @app.route('/', methods=['GET'])
 @cache.cached(timeout=600)
 def index():
-    with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
-        links = sorted(
-            data['heroes'], key=itemgetter('name'))
-        img_names = [switcher(i['name']) for i in links]
-        win_data = db['wins'].find_one({})
-        wins = [item for item in win_data['stats'] if 'stats' in win_data]
-        total_games = hero_output.count_documents({})
+    data = db['hero_list'].find_one({}, {'_id': 0})
+    links = sorted(
+        data['heroes'], key=itemgetter('name'))
+    img_names = [switcher(i['name']) for i in links]
+    win_data = db['wins'].find_one({})
+    wins = [item for item in win_data['stats'] if 'stats' in win_data]
+    total_games = hero_output.count_documents({})
     # start_instance()
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
@@ -386,40 +385,38 @@ def get_winrate():
     roles = ['Hard Support', 'Support', 'Safelane',
              'Offlane', 'Midlane', 'Roaming']
     try:
-        with open('json_files/hero_ids.json', 'r') as f:
-            data = json.load(f)
-            for i, hero in enumerate(data['heroes']):
-                picks = hero_output.count_documents({'hero': hero['name']})
-                total_wins = hero_output.count_documents(
-                    {'hero': hero['name'], 'win': 1})
-                total_bans = hero_output.count_documents(
-                    {'bans': hero['name']})
-                if total_wins == 0 or picks == 0:
-                    total_winrate = 0
+        data = db['hero_list'].find_one({})
+        for i, hero in enumerate(data['heroes']):
+            picks = hero_output.count_documents({'hero': hero['name']})
+            total_wins = hero_output.count_documents(
+                {'hero': hero['name'], 'win': 1})
+            total_bans = hero_output.count_documents(
+                {'bans': hero['name']})
+            if total_wins == 0 or picks == 0:
+                total_winrate = 0
+            else:
+                total_winrate = (total_wins / picks) * 100
+            role_dict = {'hero': hero['name'],
+                         'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
+            for role in roles:
+                wins = hero_output.count_documents(
+                    {'hero': hero['name'], 'win': 1, 'role': role})
+                losses = hero_output.count_documents(
+                    {'hero': hero['name'], 'win': 0, 'role': role})
+                picks = wins+losses
+                if picks > 0:
+                    winrate = math.floor(wins/picks*100)
                 else:
-                    total_winrate = (total_wins / picks) * 100
-
-                role_dict = {'hero': hero['name'],
-                             'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
-                for role in roles:
-                    wins = hero_output.count_documents(
-                        {'hero': hero['name'], 'win': 1, 'role': role})
-                    losses = hero_output.count_documents(
-                        {'hero': hero['name'], 'win': 0, 'role': role})
-                    picks = wins+losses
-                    if picks > 0:
-                        winrate = math.floor(wins/picks*100)
-                    else:
-                        winrate = 0
-                    role_dict[f"{role}_picks"] = picks
-                    role_dict[f"{role}_wins"] = wins
-                    role_dict[f"{role}_losses"] = losses
-                    role_dict[f"{role}_winrate"] = winrate
-                output.append(role_dict)
-                wins = sorted(output, key=itemgetter('hero'))
-            # db['wins'].insert_one({'stats': wins})
-            db['wins'].find_one_and_replace(
-                {}, {'stats': wins}, None, None, True)
+                    winrate = 0
+                role_dict[f"{role}_picks"] = picks
+                role_dict[f"{role}_wins"] = wins
+                role_dict[f"{role}_losses"] = losses
+                role_dict[f"{role}_winrate"] = winrate
+            output.append(role_dict)
+            wins = sorted(output, key=itemgetter('hero'))
+        # db['wins'].insert_one({'stats': wins})
+        db['wins'].find_one_and_replace(
+            {}, {'stats': wins}, None, None, True)
     except Exception as e:
         print(e, e.__class__)
 
@@ -433,11 +430,10 @@ def get_hero_name_colour(hero_name):
 
 
 def mongo_search(query):
-    with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
-        matches = [hero['name']
-                   for hero in data['heroes'] if query in hero['name']]
-        return matches
+    data = db['hero_list'].find_one({})
+    matches = [hero['name']
+               for hero in data['heroes'] if query in hero['name']]
+    return matches
 
 
 @ app.route('/cron')
@@ -447,25 +443,21 @@ def cron():
 
 @ app.route('/files/hero_ids')
 def hero_json():
-    with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
-        return data
+    data = db['hero_list'].find_one({}, {'_id': 0})
+    return data
 
 
 @ app.route('/files/abilities/<hero_name>')
 def hero_ability_json(hero_name):
-    with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
-        with open(f"json_files/detailed_ability_info/{hero_name}.json") as f:
-            data = json.load(f)
-            return json.dumps(data)
+    data = db['individual_abilities'].find_one(
+        {'hero': hero_name})['abilities']
+    return json.dumps(data)
 
 
 @ app.route('/files/items')
 def items_json():
-    with open('json_files/stratz_items.json', 'r') as f:
-        data = json.load(f)
-        return data
+    data = db['all_items'].find_one({}, {'_id': 0})
+    return data
 
 
 @ app.route('/files/colors')
@@ -521,19 +513,17 @@ def opendota_call():
     start = time.time()
     delete_old_urls()
     check_last_day()
-    with open('json_files/hero_ids.json', 'r') as f:
-        data = json.load(f)
-        for hero in data['heroes']:
-            hero = hero['name']
-            sleep = len(get_urls(hero))
-            asyncio.run(main(get_urls(hero), hero))
-            database_methods.insert_total_picks('hero', hero, 'hero_picks')
-            database_methods.insert_total_picks('bans', hero, 'hero_picks')
-            if sleep >= 60:
-                sleep = 60
-            print('sleeping for: ', sleep)
-            time.sleep(sleep)
-            pass
+    data = db['hero_list'].find_one({}, {'_id': 0})
+    for hero in data['heroes']:
+        hero = hero['name']
+        sleep = len(get_urls(hero))
+        asyncio.run(main(get_urls(hero), hero))
+        database_methods.insert_total_picks('hero', hero, 'hero_picks')
+        database_methods.insert_total_picks('bans', hero, 'hero_picks')
+        if sleep >= 60:
+            sleep = 60
+        print('sleeping for: ', sleep)
+        time.sleep(sleep)
     parse_request()
     get_winrate()
     update_pro_accounts()
@@ -557,10 +547,12 @@ def update_one_entry(hero, id):
 
 
 if __name__ == '__main__':
-    # manual_hero_update('lich')
+    # manual_hero_update('jakiro')
     # update_one_entry('batrider', 5965228394)
     # manual_hero_update('ancient_apparition')
     # parse_request()
     # get_winrate()
-    app.run(debug=False)
+    # app.run(debug=True)
+    # check_last_day()
+    opendota_call()
     pass

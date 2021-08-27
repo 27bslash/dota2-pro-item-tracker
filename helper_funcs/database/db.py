@@ -1,23 +1,12 @@
 import pymongo
 import json
 import time
-from helper_funcs.hero import Hero
-from helper_funcs.abilities import detailed_ability_info
+from ..hero import Hero
+from ..abilities import detailed_ability_info
 import traceback
 import os
-
-from dotenv import load_dotenv
-load_dotenv()
-connection = os.environ['DB_CONNECTION']
-
-cluster = pymongo.MongoClient(
-    f"{connection}?retryWrites=true&w=majority")
-db = cluster['pro-item-tracker']
-
-hero_urls = db['urls']
-hero_output = db['heroes']
-parse = db['parse']
-dead_games = db['dead_games']
+from .collection import db, hero_output
+all_talents = db['all_talents'].find_one({}, {'_id': 0})
 
 
 class Db_insert:
@@ -61,37 +50,33 @@ class Db_insert:
             {'hero': val}, {'total_bans': hero_output.count_documents({'bans': val})}, upsert=True)
 
     def insert_talent_order(self, hero_id):
-        with open('json_files/stratz_talents.json', 'r', encoding='utf8') as f:
-            data = json.load(f)
-            hero_methods = Hero()
-            data_talents = data[str(hero_id)]['talents']
-            start = time.perf_counter()
-            talents = [detailed_ability_info(
-                [x['abilityId']], hero_id)[0] for x in data_talents]
-            hero = hero_methods.hero_name_from_hero_id(hero_id)
-            db['talents'].find_one_and_update(
-                {'hero': hero}, {'$set': {'hero': hero, 'talents': talents}}, upsert=True)
+        hero_methods = Hero()
+        data_talents = all_talents[str(hero_id)]['talents']
+        talents = [detailed_ability_info(
+            [x['abilityId']], hero_id)[0] for x in data_talents]
+        hero = hero_methods.hero_name_from_hero_id(hero_id)
+        db['talents'].find_one_and_update(
+            {'hero': hero}, {'$set': {'hero': hero, 'talents': talents}}, upsert=True)
 
     def insert_best_games(self):
         print('INSERT BEST GAMES')
         start = time.perf_counter()
         db['best_games'].delete_many({})
-        with open('json_files/hero_ids.json', 'r') as f:
-            hero_data = json.load(f)
-            for hero in hero_data['heroes']:
-                roles = ['Hard Support', 'Roaming', 'Support',
-                         'Offlane', 'Midlane', 'Safelane']
-                # for hero in hero_data['heroes']:
-                data = hero_output.find({'hero': hero['name']})
-                sd = sorted(self.sum_benchmarks(data),
-                            key=lambda k: k['sum'], reverse=True)
-                self.add_best_games_to_db(sd, hero['name'], None)
-                for role in roles:
-                    data = hero_output.find(
-                        {'hero': hero['name'], 'role': role})
-                    queried = self.sum_benchmarks(data)
-                    sd = sorted(queried, key=lambda k: k['sum'], reverse=True)
-                    self.add_best_games_to_db(sd, hero['name'], role)
+        hero_data = db['hero_list'].find_one({})
+        for hero in hero_data['heroes']:
+            roles = ['Hard Support', 'Roaming', 'Support',
+                     'Offlane', 'Midlane', 'Safelane']
+            # for hero in hero_data['heroes']:
+            data = hero_output.find({'hero': hero['name']})
+            sd = sorted(self.sum_benchmarks(data),
+                        key=lambda k: k['sum'], reverse=True)
+            self.add_best_games_to_db(sd, hero['name'], None)
+            for role in roles:
+                data = hero_output.find(
+                    {'hero': hero['name'], 'role': role})
+                queried = self.sum_benchmarks(data)
+                sd = sorted(queried, key=lambda k: k['sum'], reverse=True)
+                self.add_best_games_to_db(sd, hero['name'], role)
 
     def sum_benchmarks(self, data):
         current_highest = 0

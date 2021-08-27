@@ -1,9 +1,9 @@
 import json
+from .database.collection import db
 
 class Hero:
     def __init__(self):
-        with open('json_files/hero_ids.json') as f:
-            self.data = json.load(f)
+        self.data = db['hero_list'].find_one({})
 
     def sanitise_name(self, name):
         self.name = name.lower()
