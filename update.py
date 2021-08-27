@@ -22,7 +22,7 @@ def update_hero_list():
         hero_dict['heroes'].append({'name': hero_name, 'id': hero_id})
 
     db['hero_list'].find_one_and_update(
-        {}, {"$set": hero_dict},upsert=True)
+        {}, {"$set": hero_dict}, upsert=True)
 
 
 # def upload_hero_list():
@@ -165,6 +165,14 @@ def update_app():
     print('updating account ids')
     update_pro_accounts()
     print('fini')
+
+
+def weekly_update():
+    update_stratz_json('https://api.stratz.com/api/v1/Item', 'all_items')
+    update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
+    update_stratz_json(
+        'https://api.stratz.com/api/v1/Ability', 'all_abilities')
+    update_talents()
 
 
 if __name__ == '__main__':

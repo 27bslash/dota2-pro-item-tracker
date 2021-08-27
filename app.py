@@ -16,6 +16,7 @@ from accounts.download_acount_ids import update_pro_accounts
 from helper_funcs.compute_engine import check_last_day
 from helper_funcs.helper_imports import *
 from opendota_api import main
+from update import weekly_update
 
 # TODO
 # show alex ads
@@ -514,6 +515,9 @@ def opendota_call():
     delete_old_urls()
     check_last_day()
     data = db['hero_list'].find_one({}, {'_id': 0})
+    today = datetime.datetime.today().weekday()
+    if today == 3:
+        weekly_update()
     for hero in data['heroes']:
         hero = hero['name']
         sleep = len(get_urls(hero))
