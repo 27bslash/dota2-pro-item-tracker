@@ -158,7 +158,7 @@ def chappie_get():
     data = [match for match in db['chappie'].find({})]
     times = [timeago.format(
         match['unix_time'], datetime.datetime.now()) for match in data]
-    return render_template('chappie.html', data=data, times=times)
+    return render_template('chappie.html', data=data, times=times, unix_times=[match['unix_time'] for match in data])
 
 
 def generate_table(func_name, query, template):
@@ -242,7 +242,7 @@ def generate_table(func_name, query, template):
             html_string += "<div class='purchases'>"
             for item in match['final_items']:
                 item_key = item['key']
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item['id']}' alt='{item_key}'data-hero=\"{match['hero']}\">"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item['id']}' alt='{item['key']}'data-hero=\"{match['hero']}\">"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
@@ -254,7 +254,7 @@ def generate_table(func_name, query, template):
                 html_string += "</div>"
 
             for item in match['backpack']:
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item['id']}' alt='{item_key}'data-hero=\"{match['hero']}\">"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item['id']}' alt='{item['key']}'data-hero=\"{match['hero']}\">"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
@@ -512,6 +512,7 @@ def clean_img(s):
 
 def opendota_call():
     start = time.time()
+    database_methods.insert_all()
     delete_old_urls()
     check_last_day()
     data = db['hero_list'].find_one({}, {'_id': 0})
@@ -531,7 +532,6 @@ def opendota_call():
     parse_request()
     get_winrate()
     update_pro_accounts()
-    database_methods.insert_all()
     print('end', (time.time()-start)/60, 'minutes')
 
 
@@ -556,7 +556,8 @@ if __name__ == '__main__':
     # manual_hero_update('ancient_apparition')
     # parse_request()
     # get_winrate()
-    # app.run(debug=True)
+    app.run(debug=True)
     # check_last_day()
-    opendota_call()
+    # opendota_call()
+    # database_methods.insert_worst_games()
     pass
