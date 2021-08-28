@@ -6,8 +6,9 @@ from ..abilities import detailed_ability_info
 import traceback
 import os
 from .collection import db, hero_output
-all_talents = db['all_talents'].find_one({}, {'_id': 0})
+from datetime import datetime
 
+all_talents = db['all_talents'].find_one({}, {'_id': 0})
 
 class Db_insert:
     def __init__(self):
@@ -112,12 +113,29 @@ class Db_insert:
 
     def insert_worst_games(self):
         data = hero_output.find({})
+        roles = ['Midlane', 'Safelane', 'Offlane']
         for doc in data:
             items = [item['key']
                      for item in doc['final_items']]
-            if 'shadow_amulet' in items and len(items) < 3:
-                db['chappie'].find_one_and_update(
-                    {'hero': doc['hero'], "id": doc['id']}, {"$set": doc}, upsert=True)
+            times = [item['time']
+                     for item in doc['final_items']]
+            if 'shadow_amulet' in items:
+                amulet_idx = items.index('shadow_amulet')
+                duration = doc['duration']
+                duration = self.convert_to_seconds(doc['duration'])
+                amulet_datetime = datetime.strptime(
+                    times[amulet_idx], "%H:%M:%S").time()
+                amulet_time = self.convert_to_seconds(amulet_datetime)
+                if 'shadow_amulet' in items and len(items) < 3 or 'shadow_amulet' in items and doc['role'] in roles and duration - amulet_time > 60:
+                    db['chappie'].find_one_and_update(
+                        {'hero': doc['hero'], "id": doc['id']}, {"$set": doc}, upsert=True)
+
+    def convert_to_seconds(self, time):
+        time = str(time)
+        hours = time.split(':')[0]
+        minutes = time.split(':')[1]
+        seconds = time.split(':')[2]
+        return int(hours) * 3600 + int(minutes)*60 + int(seconds)
 
     def insert_all(self):
         self.insert_worst_games()
@@ -126,4 +144,5 @@ class Db_insert:
 
 
 if __name__ == '__main__':
-    Db_insert.insert_talent_order('self', 1)
+    # Db_insert.insert_talent_order('self', 1)
+    Db_insert.insert_worst_games()
