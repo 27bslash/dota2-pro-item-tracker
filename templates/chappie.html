@@ -6,8 +6,8 @@
         { orderSequence: ["desc", "asc"] },
         { bSortable: false },
         { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["asc", "desc"] },
         { bSortable: false },
+        { orderSequence: ["asc", "desc"] },
         { orderSequence: ["asc", "desc"] },
         { orderSequence: ["desc", "asc"] },
         { orderSequence: ["desc", "asc"] },
@@ -70,7 +70,7 @@
             </div>
           </a>
         </td>
-        <td class="played">{{times[loop.index0]}}</td>
+        <td data-sort={{unix_times[loop.index0]}}>{{times[loop.index0]}}</td>
         <td class="hero">
           <a href='/hero/{{match["hero"]}}'
             ><i class="d2mh {{match['hero']}}"></i
