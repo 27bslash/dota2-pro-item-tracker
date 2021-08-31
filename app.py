@@ -42,13 +42,14 @@ compress.init_app(app)
 @cache.cached(timeout=600)
 def index():
     data = db['hero_list'].find_one({}, {'_id': 0})
+    links = [{'name': switcher(i['name']), 'id':i['id']}
+             for i in data['heroes']]
     links = sorted(
-        data['heroes'], key=itemgetter('name'))
+        links, key=itemgetter('name'))
     img_names = [switcher(i['name']) for i in links]
     win_data = db['wins'].find_one({})
     wins = [item for item in win_data['stats'] if 'stats' in win_data]
     total_games = hero_output.count_documents({})
-    # start_instance()
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
 
@@ -60,7 +61,7 @@ def handle_redirect(request):
         if hero_methods.get_hero_name(text):
             suggestion = hero_methods.get_hero_name(text)
             suggestion = sorted(suggestion)
-            return '/hero/'+suggestion[0]
+            return '/hero/'+switcher(suggestion[0])
         else:
             return request.url
 
@@ -81,9 +82,10 @@ def item_post(query=''):
 @app.route('/hero/<hero_name>/table', methods=['GET'])
 def hero_get(hero_name):
     start = time.perf_counter()
+    display_name = hero_name.replace('_', ' ').capitalize()
+    hero_name = switcher(hero_name)
     match_data = []
     best_games = []
-    display_name = hero_name.replace('_', ' ').capitalize()
     total = 0
     template = 'final_items.html'
     if 'starter_items' in request.url:
@@ -115,7 +117,7 @@ def hero_get(hero_name):
         misc = time.perf_counter()
         hero_colour = get_hero_name_colour(hero_name)
         template_time = time.perf_counter()
-        r_t = render_template(template, max=max_val, most_used=most_used, hero_img=clean_name(hero_name), display_name=display_name, hero_name=hero_name, data=match_data,
+        r_t = render_template(template, max=max_val, most_used=most_used, hero_img=hero_name, display_name=display_name, hero_name=switcher(hero_name), data=match_data,
                               time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles, best_games=best_games)
         return r_t
     else:
@@ -397,7 +399,7 @@ def get_winrate():
                 total_winrate = 0
             else:
                 total_winrate = (total_wins / picks) * 100
-            role_dict = {'hero': hero['name'],
+            role_dict = {'hero': switcher(hero['name']),
                          'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
             for role in roles:
                 wins = hero_output.count_documents(
@@ -445,7 +447,9 @@ def cron():
 @ app.route('/files/hero_ids')
 def hero_json():
     data = db['hero_list'].find_one({}, {'_id': 0})
-    return data
+    data = [{'name': switcher(i['name']), 'id': i['id']}
+            for i in data['heroes']]
+    return json.dumps({'heroes': data})
 
 
 @ app.route('/files/abilities/<hero_name>')
@@ -512,8 +516,6 @@ def clean_img(s):
 
 def opendota_call():
     start = time.time()
-    database_methods.insert_all()
-    delete_old_urls()
     check_last_day()
     data = db['hero_list'].find_one({}, {'_id': 0})
     today = datetime.datetime.today().weekday()
@@ -529,6 +531,8 @@ def opendota_call():
             sleep = 60
         print('sleeping for: ', sleep)
         time.sleep(sleep)
+    database_methods.insert_all()
+    delete_old_urls()
     parse_request()
     get_winrate()
     update_pro_accounts()
@@ -555,7 +559,6 @@ if __name__ == '__main__':
     # update_one_entry('batrider', 5965228394)
     # manual_hero_update('ancient_apparition')
     # parse_request()
-    # get_winrate()
     app.run(debug=True)
     # check_last_day()
     # opendota_call()

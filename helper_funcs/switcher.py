@@ -19,8 +19,13 @@ def switcher(name):
         'treant_protector': 'treant',
         'centaur_warrunner': 'centaur'
     }
-    # print(h, switch.get(h))
+    
     if switch.get(name):
         return switch.get(name)
+    else:
+        for key, value in switch.items():
+            if value == name:
+                return key
     return name
 
+switcher('magnataur')
