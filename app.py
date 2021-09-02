@@ -6,6 +6,7 @@ import math
 import time
 from operator import itemgetter
 
+import requests
 import timeago
 from flask import (Flask, after_this_request, redirect, render_template,
                    request, url_for)
@@ -340,7 +341,7 @@ def generate_table(func_name, query, template):
             match['unix_time'], datetime.datetime.now()))
         if func_name != 'player_get':
             row_string.append(
-                f"<a href='/player/{match['name']}'><p class='stats'>{match['name']}</p></a>")
+                f"<a href=\"/player/{match['name']}\"><p class='stats'>{match['name']}</p></a>")
         else:
             row_string.append(
                 f"<a href='/hero/{match['hero']}'><i class='d2mh {match['hero']}'></i></a>")
@@ -490,6 +491,13 @@ def acc_json():
 def wins_json():
     data = db['wins'].find_one({})
     return json.dumps(data['stats'])
+
+
+@ app.route('/files/hero-data/<hero_name>')
+def hero_data(hero_name):
+    url = f'https://www.dota2.com/datafeed/herodata?language=english&hero_id={hero_methods.get_id(hero_name)}'
+    req = requests.get(url)
+    return req.json()
 
 
 @ app.after_request
