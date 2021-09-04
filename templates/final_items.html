@@ -45,9 +45,12 @@
       <div>
         <a href="/hero/{{hero_name}}">
           <img
+          class="hero-img"
           src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/heroes/{{hero_img}}_hphover.png?v=5926546"
           alt='main {{hero_name}}'
-          /></a>
+          />
+            <div class="tooltip" id='hero-tooltip'>
+            </div></a>
           <a
           class="view-changer"
           onclick="window.location = '/hero/{{hero_name}}/starter_items'+window.location.search;"
