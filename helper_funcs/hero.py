@@ -1,6 +1,8 @@
 import json
 from .database.collection import db
 from .switcher import switcher
+
+
 class Hero:
     def __init__(self):
         self.data = db['hero_list'].find_one({})
@@ -14,7 +16,7 @@ class Hero:
         self.sanitise_name(name)
         if self.name is None:
             return False
-        return [hero['id'] for hero in self.data['heroes'] if self.name == switcher(hero['name'])][0]
+        return [hero['id'] for hero in self.data['heroes'] if self.name == switcher(hero['name']) or self.name == hero['name']][0]
 
     def get_hero_name(self, name):
         self.sanitise_name(name)

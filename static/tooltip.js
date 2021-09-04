@@ -3,11 +3,13 @@ const hero_name = window.location.href.split("/").pop();
 let files_downloaded = false;
 const file_set = new Set();
 let files_len = 0;
-let abilities = {};
+let abilities = {},
+  stats = {};
 async function get_json_data(hero_name) {
   // have to download files differently or just give up on shards for players
   if (hero_name) {
     abilities[hero_name] = await get_json("abilities", hero_name);
+    stats = await get_json("stats", hero_name);
   } else {
     items = await get_json("items");
     hero_colors = await get_json("ability_colours");
@@ -21,9 +23,7 @@ const download_limiter = (p, start) => {
     files_downloaded = true;
   }
 };
-
-get_json_data();
-window.addEventListener("mouseover", (event) => {
+const fetch_ability_json = () => {
   collection = document.getElementsByClassName("abilities");
   let start_point;
   for (let item of collection) {
@@ -35,14 +35,22 @@ window.addEventListener("mouseover", (event) => {
   }
   files_len = file_set.size;
   download_limiter(file_set, start_point);
+};
+get_json_data();
+window.addEventListener("mouseover", (event) => {
+  fetch_ability_json();
 
   let tooltipType;
+  let result;
   if (
     event.target.className === "item-img" ||
-    event.target.className === "table-img"
+    event.target.className === "table-img" ||
+    event.target.className === "hero-img"
   ) {
-    let result;
-    if (
+    if (event.target.className == "hero-img") {
+      result = stats["result"]["data"]["heroes"][0];
+      tooltipType = "hero";
+    } else if (
       event.target.className === "item-img" &&
       event.target.id !== "aghanims-shard" &&
       event.target.alt !== "ultimate_scepter"
@@ -63,7 +71,6 @@ window.addEventListener("mouseover", (event) => {
       if (_id == "5631") _id = "5625";
       imgSrc = event.target.getAttribute("src");
     }
-
     if (tooltip.id === "shard-tooltip" || tooltip.id === "scepter-tooltip") {
       aghanim_ability = extract_aghanim(
         result,
@@ -107,11 +114,18 @@ window.addEventListener("mouseover", (event) => {
       result,
       _id
     );
+    tooltip.style.display = "block";
     if (tooltip.id === "talent-tooltip") {
       tooltip_method.generateLineOne(event.target, "talent");
       return;
     }
-    tooltip.style.display = "block";
+    if (tooltip.id === "hero-tooltip") {
+      tooltip_method.generateLineOne(result, "hero");
+      tooltip_method.generateHeroContent(result, tooltipType);
+      const color = document.getElementById("hero-name").style.color;
+      tooltip.style.background = `radial-gradient(circle at top left, ${color}, #182127 190px)`;
+      return;
+    }
 
     const base = aghanim_ability || result[_id];
 
@@ -201,7 +215,6 @@ class Tooltip {
     this.tooltip.style.border = "3px solid black";
     let tooltipLineOne = document.createElement("div");
     tooltipLineOne.setAttribute("class", "tooltip-line-one");
-    let tooltipHeaderImg;
     // if (tooltipType === "aghanim-shard") {
     //   let subImg = document.createElement("div");
     //   subImg.setAttribute("class", "scepter-subicon");
@@ -221,14 +234,24 @@ class Tooltip {
     //     'url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_scepter.png")';
     //   tooltipHeaderImg.appendChild(subImg);
 
-    tooltipHeaderImg = document.createElement("img");
+    const tooltipHeaderImg = document.createElement("img");
     tooltipHeaderImg.setAttribute("class", "tooltip-img");
     tooltipHeaderImg.setAttribute("src", imgSrc);
-
     let headerText = document.createElement("h3");
     headerText.textContent = tooltipHeaderText;
-
-    tooltipTitle.appendChild(tooltipHeaderImg);
+    if (tooltipType === "hero") {
+      const imgWrapper = document.createElement("div");
+      imgWrapper.setAttribute("class", "hero-img-wrapper");
+      const hpBar = this.statBar(base, "health");
+      const manaBar = this.statBar(base, "mana");
+      tooltipHeaderImg.setAttribute("class", "tooltip-hero-img");
+      imgWrapper.appendChild(tooltipHeaderImg);
+      imgWrapper.appendChild(hpBar);
+      imgWrapper.appendChild(manaBar);
+      tooltipTitle.appendChild(imgWrapper);
+    } else {
+      tooltipTitle.appendChild(tooltipHeaderImg);
+    }
     tooltipTitle.appendChild(headerText);
     tooltipLineOne.appendChild(tooltipTitle);
     let aghanimText = "";
@@ -263,10 +286,146 @@ class Tooltip {
       costText.textContent = this.result[_id]["stat"]["cost"];
       costWrapper.appendChild(costImg);
       costWrapper.appendChild(costText);
-      tooltipLineOne.appendChild(costWrapper);
+      if (costText.textContent > 0) {
+        tooltipLineOne.appendChild(costWrapper);
+      }
     }
     if (!this.tooltip.children[0]) {
       this.tooltip.appendChild(tooltipLineOne);
+    }
+  }
+  statBar(base, stat) {
+    const statBar = document.createElement("div");
+    statBar.setAttribute("class", `stat-bar`);
+    statBar.setAttribute("id", `${stat}-bar`);
+    const statMax = document.createElement("p");
+    statMax.setAttribute("class", "max-stat");
+    statMax.innerHTML = parseInt(base[`max_${stat}`]);
+    const statRegen = document.createElement("p");
+    statRegen.setAttribute("class", "stat-regen");
+    statRegen.innerHTML = "+" + parseFloat(base[`${stat}_regen`]).toFixed(2);
+    statBar.appendChild(statMax);
+    statBar.appendChild(statRegen);
+    return statBar;
+  }
+  singleAttribute(base, attribute) {
+    const shrtAttr = attribute.substring(0, 3);
+    const attrWrapper = document.createElement("div");
+    attrWrapper.setAttribute("class", `attribute-wrapper`);
+    const attrImg = document.createElement("img");
+    attrImg.setAttribute(
+      "src",
+      `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/icons/hero_${attribute}.png`
+    );
+    attrImg.setAttribute("class", "attrImg");
+    const baseAttr = document.createElement("p");
+    baseAttr.setAttribute("class", "baseAttr");
+    baseAttr.textContent = base[`${shrtAttr}_base`];
+    const attrGain = document.createElement("p");
+    attrGain.setAttribute("class", "attrGain");
+    attrGain.textContent =
+      "+" + parseFloat(base[`${shrtAttr}_gain`]).toFixed(2);
+    attrWrapper.appendChild(attrImg);
+    attrWrapper.appendChild(baseAttr);
+    attrWrapper.appendChild(attrGain);
+    return attrWrapper;
+  }
+  heroAttributes(base) {
+    const attributes = document.createElement("div");
+    attributes.setAttribute("class", "hero-attributes");
+    const str = this.singleAttribute(base, "strength");
+    const agi = this.singleAttribute(base, "agility");
+    const int = this.singleAttribute(base, "intelligence");
+
+    attributes.appendChild(str);
+    attributes.appendChild(agi);
+    attributes.appendChild(int);
+    return attributes;
+  }
+  heroAghanimSubImg(imgSrc, type) {
+    let baseImg = document.createElement("div");
+    baseImg.setAttribute("class", "tooltip-aghanim-img");
+    baseImg.style.backgroundImage = `url(${imgSrc})`;
+    let subImg = document.createElement("img");
+    subImg.setAttribute("class", "scepter-subicon");
+    const subImgUrl = `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_${type}.png`;
+    subImg.style.cssText += `background-image:url(${subImgUrl})`;
+    // const subImg = document.createElement("div");
+    // subImg.setAttribute("class", "scepter-subicon");
+    // subImg.setAttribute(
+    //   "src",
+    //   "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_scepter.png"
+    // );
+    baseImg.appendChild(subImg);
+    baseImg.style.position = "relative";
+    return baseImg;
+  }
+  heroaghanim(base, type) {
+    const aghanim = extract_aghanim(base["abilities"], type);
+    const wrapper = document.createElement("div");
+    wrapper.setAttribute("class", "hero-aghanim-wrapper");
+    wrapper.setAttribute("id", `hero-${type}`);
+    const imgSrc = `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/${aghanim["name"]}.png`;
+    const spellImg = this.heroAghanimSubImg(imgSrc, type);
+    const spellDesc = document.createElement("p");
+    spellDesc.innerHTML = highlight_numbers(aghanim[`${type}_loc`]);
+    wrapper.appendChild(spellImg);
+    wrapper.appendChild(spellDesc);
+    return wrapper;
+  }
+  baseStats(base, stat) {
+    const statWrapper = document.createElement("div");
+    statWrapper.setAttribute("class", "stat-wrapper");
+    const statImg = document.createElement("img");
+    statImg.setAttribute("class", "stat-img");
+    statImg.setAttribute(
+      "src",
+      `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_${stat}.png`
+    );
+    const statText =
+      stat === "damage"
+        ? `${base["damage_min"]}-${base["damage_max"]}`
+        : parseInt(base[stat]);
+    const text = document.createElement("p");
+    text.innerHTML = statText;
+    statWrapper.appendChild(statImg);
+    statWrapper.appendChild(text);
+    return statWrapper;
+  }
+
+  heroAghanimContent(type) {}
+  generateHeroContent(base) {
+    let tooltipContent = document.createElement("div");
+    tooltipContent.setAttribute("class", "tooltip-content");
+    const attributes = this.heroAttributes(base);
+    let stats = document.createElement("div");
+    stats.setAttribute("class", "stats");
+    const aghanimWrapper = document.createElement("div");
+    aghanimWrapper.setAttribute("class", "hero-aghanim-upgrades");
+    const shard = this.heroaghanim(base, "shard");
+    const scepter = this.heroaghanim(base, "scepter");
+    aghanimWrapper.appendChild(shard);
+    aghanimWrapper.appendChild(scepter);
+
+    //stats
+    const statAttrWrapper = document.createElement("div");
+    statAttrWrapper.setAttribute("class", "stats-container");
+    const statsWrapper = document.createElement("div");
+    statsWrapper.setAttribute("class", "stats-wrapper");
+    const damage = this.baseStats(base, "damage");
+    const armor = this.baseStats(base, "armor");
+    const movementSpeed = this.baseStats(base, "movement_speed");
+    statsWrapper.appendChild(damage);
+    statsWrapper.appendChild(armor);
+    statsWrapper.appendChild(movementSpeed);
+
+    statAttrWrapper.appendChild(attributes);
+    statAttrWrapper.appendChild(statsWrapper);
+
+    tooltipContent.appendChild(statAttrWrapper);
+    tooltipContent.appendChild(aghanimWrapper);
+    if (!this.tooltip.children[1]) {
+      this.tooltip.appendChild(tooltipContent);
     }
   }
   generateContent(base, tooltipType) {

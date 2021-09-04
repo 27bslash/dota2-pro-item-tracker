@@ -16,6 +16,8 @@ async function get_json(search, hero_name) {
   let url = `${window.location.origin}/files/${search}`;
   if (search === "abilities") {
     url = `${window.location.origin}/files/abilities/${hero_name}`;
+  } else if (search === "stats") {
+    url = `${window.location.origin}/files/hero-data/${hero_name}`;
   }
   const res = await fetch(url);
   const data = await res.json();

@@ -632,6 +632,80 @@ label {
   position: absolute;
   width: 300px;
 }
+#hero-tooltip {
+  width: 330px;
+}
+.stat-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stat-bar p {
+  margin: 0;
+}
+#health-bar {
+  background: linear-gradient(to right, #286323, #7af03c);
+  position: relative;
+}
+#mana-bar {
+  background: linear-gradient(to right, #1056db, #73f5fe);
+}
+.stat-regen {
+  color: rgb(59, 59, 59);
+  margin-left: auto;
+  font-size: 11px;
+  text-shadow: none !important;
+}
+.stats-container {
+  display: flex;
+}
+
+.attribute-wrapper {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+}
+.attribute-wrapper * {
+  margin-right: 10px;
+}
+.attrImg {
+  height: 25px;
+  width: 25px;
+}
+.baseAttr {
+  font-size: 20px;
+}
+.baseAttr {
+  color: white;
+  margin: 0;
+}
+.attrGain {
+  color: grey;
+}
+.hero-aghanim-wrapper {
+  display: flex;
+  align-items: center;
+}
+.tooltip-aghanim-img {
+  flex-shrink: 0;
+}
+#hero-tooltip img {
+  flex-shrink: 0;
+}
+.stats-wrapper {
+  align-items: center;
+  justify-content: space-around;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.stat-wrapper {
+  display: flex;
+  align-items: center;
+}
+.stat-img {
+  height: 32px;
+  width: 32px;
+}
 #talent-tooltip img {
   border: solid 1px rgb(32, 31, 31);
 }
