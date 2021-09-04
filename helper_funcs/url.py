@@ -23,7 +23,7 @@ def get_urls(hero_name):
 
 
 def delete_old_urls():
-    data = hero_output.find({})
+    data = hero_output.find({}).sort('unix_time', 1)
     for d in data:
         # print(d['id'])
         time_since = time.time() - d["unix_time"]
