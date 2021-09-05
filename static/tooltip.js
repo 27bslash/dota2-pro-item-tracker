@@ -215,24 +215,6 @@ class Tooltip {
     this.tooltip.style.border = "3px solid black";
     let tooltipLineOne = document.createElement("div");
     tooltipLineOne.setAttribute("class", "tooltip-line-one");
-    // if (tooltipType === "aghanim-shard") {
-    //   let subImg = document.createElement("div");
-    //   subImg.setAttribute("class", "scepter-subicon");
-    //   subImg.setAttribute(
-    //     "src",
-    //     "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_scepter.png"
-    //   );
-    //   tooltipHeaderImg.appendChild(subImg);
-    //   tooltipHeaderImg.style.position = "relative";
-    // } else if (tooltipType === "aghanim-scepter") {
-    //   tooltipHeaderImg = document.createElement("div");
-    //   tooltipHeaderImg.setAttribute("class", "tooltip-aghanim-img");
-    //   tooltipHeaderImg.style.backgroundImage = `url(${imgSrc})`;
-    //   let subImg = document.createElement("img");
-    //   subImg.setAttribute("class", "scepter-subicon");
-    //   subImg.style.backgroundImage =
-    //     'url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_scepter.png")';
-    //   tooltipHeaderImg.appendChild(subImg);
 
     const tooltipHeaderImg = document.createElement("img");
     tooltipHeaderImg.setAttribute("class", "tooltip-img");
@@ -368,7 +350,11 @@ class Tooltip {
     const imgSrc = `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/${aghanim["name"]}.png`;
     const spellImg = this.heroAghanimSubImg(imgSrc, type);
     const spellDesc = document.createElement("p");
+    spellDesc.style.fontSize = "13px";
     spellDesc.innerHTML = highlight_numbers(aghanim[`${type}_loc`]);
+    if (aghanim[`${type}_loc`].length == 0) {
+      spellDesc.innerHTML = extract_hidden_values(aghanim, aghanim["desc_loc"]);
+    }
     wrapper.appendChild(spellImg);
     wrapper.appendChild(spellDesc);
     return wrapper;
@@ -393,7 +379,6 @@ class Tooltip {
     return statWrapper;
   }
 
-  heroAghanimContent(type) {}
   generateHeroContent(base) {
     let tooltipContent = document.createElement("div");
     tooltipContent.setAttribute("class", "tooltip-content");

@@ -3,6 +3,12 @@
   --table-row-odd-bg: rgb(42, 50, 53);
   --table-border: grey;
   --nav-bar: rgb(19, 18, 18);
+  --passive-description-background: linear-gradient(
+    84deg,
+    rgba(28, 38, 47, 1) 0%,
+    rgba(27, 39, 47, 1) 100%
+  );
+  --lore: rgb(12, 19, 22);
 }
 
 body {
@@ -663,7 +669,11 @@ label {
 .attribute-wrapper {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
   /* justify-content: space-around; */
+}
+.attribute-wrapper p {
+  margin: 0;
 }
 .attribute-wrapper * {
   margin-right: 10px;
@@ -686,6 +696,11 @@ label {
   display: flex;
   align-items: center;
 }
+.hero-aghanim-upgrades {
+  padding: 5px;
+  background: rgb(28, 38, 47);
+  background: var(--passive-description-background);
+}
 .tooltip-aghanim-img {
   flex-shrink: 0;
 }
@@ -701,6 +716,10 @@ label {
 .stat-wrapper {
   display: flex;
   align-items: center;
+  margin-bottom: 2px;
+}
+.stat-wrapper p {
+  margin: 0;
 }
 .stat-img {
   height: 32px;
@@ -733,11 +752,8 @@ label {
 .tooltip-aghanim-img {
   width: 55px;
   height: 55px;
-  margin: 0px 4px;
-  margin-bottom: 8px;
-  cursor: pointer;
+  margin-right: 6px;
   background-size: cover;
-  position: relative;
 }
 .scepter-subicon {
   position: absolute;
@@ -918,7 +934,7 @@ label {
 }
 .tooltip-lore {
   padding: 1px 3px 1px 3px;
-  background-color: rgb(12, 19, 22);
+  background-color: var(--lore);
   margin-top: 15px;
   font-style: italic;
 }
