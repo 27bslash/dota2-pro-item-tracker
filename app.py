@@ -4,6 +4,8 @@ import itertools
 import json
 import math
 import time
+import re
+from collections import Counter
 from operator import itemgetter
 
 import requests
@@ -159,9 +161,12 @@ def player_get(player_name):
 @app.route('/chappie')
 def chappie_get():
     data = [match for match in db['chappie'].find({})]
+    replaced = [re.sub(r"\(smurf \d\)", '', doc['name'])for doc in data]
     times = [timeago.format(
         match['unix_time'], datetime.datetime.now()) for match in data]
-    return render_template('chappie.html', data=data, times=times, unix_times=[match['unix_time'] for match in data])
+    d = dict(Counter(replaced))
+    count = {k: d[k] for k in sorted(d, key=d.get, reverse=True)}
+    return render_template('chappie.html', data=data, count=count, times=times, unix_times=[match['unix_time'] for match in data])
 
 
 def generate_table(func_name, query, template):
@@ -567,9 +572,10 @@ if __name__ == '__main__':
     # update_one_entry('batrider', 5965228394)
     # manual_hero_update('ancient_apparition')
     # parse_request()
-    # app.run(debug=True)
+    app.run(debug=True)
     # database_methods.insert_worst_games()
     # check_last_day()
     # opendota_call()
     # database_methods.insert_worst_games()
+    # manual_hero_update('shadow_demon')
     pass

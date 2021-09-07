@@ -33,7 +33,14 @@
 />
 <title>chappie</title>
 <body>
-  <h3 style="color: white">{{data|length}} FEEDING PROS THIS WEEK.</h3>
+  <div style="display: flex">
+    <h4 style="color: white">{{data|length}} feeding pros this week the worst offenders are:</h4>
+    {%for k,v in count.items()%} {%if v > 1%}
+    <h4 style="color: white; margin-left: 10px">
+      {{k}} ({{v}}){{"," if not loop.last else "." }}
+    </h4>
+    {%endif%} {%endfor%}
+  </div>
   <table role="main" class="item-table stripe">
     <thead>
       <th class="stats" id="win"></th>
@@ -70,7 +77,7 @@
             </div>
           </a>
         </td>
-        <td data-sort={{unix_times[loop.index0]}}>{{times[loop.index0]}}</td>
+        <td data-sort="{{unix_times[loop.index0]}}">{{times[loop.index0]}}</td>
         <td class="hero">
           <a href='/hero/{{match["hero"]}}'
             ><i class="d2mh {{match['hero']}}"></i
