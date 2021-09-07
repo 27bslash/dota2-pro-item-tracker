@@ -141,7 +141,7 @@ class Db_insert:
     def get_time(self, items, times, item_name):
         item_idx = items.index(item_name)
         item_datetime = datetime.strptime(times[item_idx], "%H:%M:%S").time()
-        return convert_to_seconds(item_datetime)
+        return self.convert_to_seconds(item_datetime)
 
     def convert_to_seconds(self, time):
         time = str(time)
