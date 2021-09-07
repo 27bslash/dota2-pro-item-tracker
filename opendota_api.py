@@ -72,7 +72,7 @@ async def async_get(m_id, hero_name):
                         dire_draft.append(
                             hero_methods.hero_name_from_hero_id(hero_id))
                     roles_arr = [(p['lane'], p['gold_per_min'],  p['lane_efficiency'], p['sen_placed'],
-                                  p['player_slot'], p['is_roaming']) for p in resp['players'] if 'lane_efficiency' in p and 'lane' in p]
+                                  p['player_slot'], p['is_roaming'], p['benchmarks']['lhten']['raw']) for p in resp['players'] if 'lane_efficiency' in p and 'lane' in p]
                     if hero_id == hero_methods.get_id(hero_name):
                         abilities = p['ability_upgrades_arr']
                         # check if one of the players matches search
@@ -148,7 +148,6 @@ def roles(s, p_slot):
     # take eff arr top 3 are core then label according to lane
     # convert dire lanes 1 to 3
     # print('sssssss',s,p_slot)
-    sen_count = [0, 0]
     start = 5
     end = 10
     side = []
@@ -164,37 +163,32 @@ def roles(s, p_slot):
             lane = s[i][0]
         except:
             return None
-        # print(lane)
         if not is_radiant:
-            # print('dire', lane)
             if lane == 1:
-                # print('off')
                 lane = 3
             elif lane == 3:
-                # print('safe')
                 lane = 1
-        gpm = s[i][1]
-        lane_eff = s[i][2]
         sen_placed = s[i][3]
         slot = s[i][4]
-        roles = [lane, gpm, lane_eff, sen_placed, slot, s[i][5]]
+        is_roaming = s[i][5]
+        lhten = s[i][6]
+        roles = [lane, sen_placed, slot, is_roaming, lhten]
         p_roles.append(roles)
     side.append(p_roles)
     # print('side',is_radiant,side)
-    eff = sorted(side[0], key=lambda x: x[2], reverse=True)
-    sen = sorted(side[0], key=lambda x: x[3], reverse=True)
+    eff = sorted(side[0], key=lambda x: x[4], reverse=True)
+    sen = sorted(side[0], key=lambda x: x[1], reverse=True)
     # print(sen[0][4])
     for i, player in enumerate(eff):
         # print('pro_player slot: ', p_slot, player[4], 'lane: ',player[0], i)
         # print('p', player[0], i)
         role = ''
         lane = player[0]
-        slot = player[4]
-        is_roaming = player[5]
-        lane_eff = player[2]
+        slot = player[2]
+        is_roaming = player[3]
         if i < 3:
             role = 'core'
-        if p_slot == sen[0][4]:
+        if p_slot == sen[0][1]:
             return 'Hard Support'
         elif p_slot == slot and is_roaming:
             return 'Roaming'
@@ -204,13 +198,13 @@ def roles(s, p_slot):
             return 'Offlane'
         elif p_slot == slot and lane == 1 and role == 'core':
             return 'Safelane'
-        elif lane == 3 and p_slot == player[4] and role is not 'core':
+        elif lane == 3 and p_slot == slot and role is not 'core':
             return 'Support'
 
 
 async def main(urls, hero_name):
     # urls = ['5527705678']
-    print(f"{hero_name}: {urls}" )
+    print(f"{hero_name}: {urls}")
     ret = await asyncio.gather(*[async_get(url, hero_name) for url in urls])
 
 
