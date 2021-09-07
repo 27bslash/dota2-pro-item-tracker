@@ -10,6 +10,7 @@ from datetime import datetime
 
 all_talents = db['all_talents'].find_one({}, {'_id': 0})
 
+
 class Db_insert:
     def __init__(self):
         pass
@@ -115,20 +116,32 @@ class Db_insert:
         data = hero_output.find({})
         roles = ['Midlane', 'Safelane', 'Offlane']
         for doc in data:
+            if doc['win'] == 1:
+                continue
             items = [item['key']
                      for item in doc['final_items']]
             times = [item['time']
                      for item in doc['final_items']]
-            if 'shadow_amulet' in items:
-                amulet_idx = items.index('shadow_amulet')
-                duration = doc['duration']
-                duration = self.convert_to_seconds(doc['duration'])
-                amulet_datetime = datetime.strptime(
-                    times[amulet_idx], "%H:%M:%S").time()
-                amulet_time = self.convert_to_seconds(amulet_datetime)
-                if 'shadow_amulet' in items and len(items) < 3 or 'shadow_amulet' in items and doc['role'] in roles and duration - amulet_time > 60:
+            if 'shadow_amulet' not in items:
+                continue
+            duration = doc['duration']
+            duration = self.convert_to_seconds(doc['duration'])
+            amulet_time = self.get_time(items, times, 'shadow_amulet')
+            if 'blink' in items:
+                blink_time = self.get_time(items, times, 'blink')
+                if abs(blink_time - amulet_time) < 60:
                     db['chappie'].find_one_and_update(
                         {'hero': doc['hero'], "id": doc['id']}, {"$set": doc}, upsert=True)
+            if len(items) - items.index('shadow_amulet') > 2:
+                continue
+            if 'shadow_amulet' in items and len(items) < 3 or 'shadow_amulet' in items and doc['role'] in roles and duration - amulet_time > 120:
+                db['chappie'].find_one_and_update(
+                    {'hero': doc['hero'], "id": doc['id']}, {"$set": doc}, upsert=True)
+
+    def get_time(self, items, times, item_name):
+        item_idx = items.index(item_name)
+        item_datetime = datetime.strptime(times[item_idx], "%H:%M:%S").time()
+        return convert_to_seconds(item_datetime)
 
     def convert_to_seconds(self, time):
         time = str(time)
