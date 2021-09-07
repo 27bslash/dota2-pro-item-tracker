@@ -44,7 +44,7 @@ async def async_get(m_id, hero_name):
     url = f'https://api.opendota.com/api/matches/{m_id}'
     dupe_check = hero_output.find_one({'hero': hero_name, 'id': m_id})
     bad_id_check = db['dead_games'].find_one(
-        {'id': m_id, 'count': {"$gt": 3}})
+        {'id': m_id, 'count': {"$gt": 5}})
     if dupe_check is not None or bad_id_check is not None:
         return
     try:
