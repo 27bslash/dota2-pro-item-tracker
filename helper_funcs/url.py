@@ -12,13 +12,10 @@ dead_games = db['dead_games']
 def get_urls(hero_name):
     urls = []
     data = hero_urls.find({'hero': hero_name})
-    try:
-        urls = [match['id'] for match in data if hero_output.find_one(
-            {'hero': hero_name, 'id': match['id']}) is None and parse.find_one(
-            {'hero': hero_name, 'id': match['id']}) is None and dead_games.find_one(
-            {'hero': hero_name, 'id': match['id']}) is None]
-    except Exception as e:
-        pass
+    urls = [match['id'] for match in data if hero_output.find_one(
+        {'hero': hero_name, 'id': match['id']}) is None and parse.find_one(
+        {'hero': hero_name, 'id': match['id']}) is None and dead_games.find_one(
+        {'hero': hero_name, 'id': match['id']}) is None]
     return list(reversed(urls[slice(0, 60)]))
 
 
