@@ -14,23 +14,24 @@ def get_urls(hero_name):
     data = hero_urls.find({'hero': hero_name})
     urls = [match['id'] for match in data if hero_output.find_one(
         {'hero': hero_name, 'id': match['id']}) is None and parse.find_one(
-        {'hero': hero_name, 'id': match['id']}) is None and dead_games.find_one(
-        {'hero': hero_name, 'id': match['id']}) is None]
+        {'hero': hero_name, 'id': match['id']}) is None and
+        dead_games.find_one({'id': match['id'], 'count': {"$lt": 6}})]
     return list(reversed(urls[slice(0, 60)]))
 
 
 def delete_old_urls():
-    data = hero_output.find({}).sort('unix_time', 1)
+    data = hero_output.find({}).sort('unix_time', -1)
+
     for d in data:
-        # print(d['id'])
         time_since = time.time() - d["unix_time"]
         # 8 days old
         if time_since > 690000:
             collections = db.list_collection_names()
             for collection in collections:
                 db[collection].delete_many(
-                    {'id': {"$lte": int(d["id"])}})
-            print(f"Deleted: {d['id']}")
+                    {'id': {"$lte": d["id"]}})
+            print('deleted: ', d['id'])
+            break
 
 
 def parse_request():
