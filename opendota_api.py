@@ -79,7 +79,6 @@ async def async_get(m_id, hero_name):
                         purchase_log = p['purchase_log']
                         if purchase_log:
                             role = roles(roles_arr, p['player_slot'])
-                            print(f"{hero_name} should reach here.")
                             aghanims_shard = None
                             starting_items = []
                             purchase_log = item_methods.bots(
@@ -105,6 +104,7 @@ async def async_get(m_id, hero_name):
                             if p['duration'] < 600:
                                 db['dead_games'].insert_one(
                                     {'id': match_id, 'count': 20})
+                                return
                             for k in p['benchmarks']:
                                 # round benchmarks to 2 decimal places add 0 to make it same length
                                 p['benchmarks'][k]['pct'] = f"{round(p['benchmarks'][k]['pct']*100, 2):.2f}"
@@ -126,6 +126,7 @@ async def async_get(m_id, hero_name):
                                  'final_items': main_items, 'backpack': bp_items, 'item_neutral': item_methods.get_item_name(p['item_neutral']), 'aghanims_shard': aghanims_shard,
                                  'abilities': detailed_ability_info(abilities, hero_id), 'items': purchase_log})
 
+                            print(f"{hero_name} should reach here.")
                         else:
                             add_to_dead_games(m_id)
 
