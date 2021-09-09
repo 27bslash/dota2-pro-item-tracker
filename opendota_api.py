@@ -71,6 +71,9 @@ async def async_get(m_id, hero_name):
                     if p['randomed'] and not p['isRadiant']:
                         dire_draft.append(
                             hero_methods.hero_name_from_hero_id(hero_id))
+                for i in range(10):
+                    p = resp['players'][i]
+                    hero_id = p['hero_id']
                     roles_arr = [(p['lane'], p['gold_per_min'],  p['lane_efficiency'], p['sen_placed'],
                                   p['player_slot'], p['is_roaming'], p['benchmarks']['lhten']['raw']) for p in resp['players'] if 'lane_efficiency' in p and 'lane' in p]
                     if hero_id == hero_methods.get_id(hero_name):
