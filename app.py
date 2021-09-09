@@ -160,7 +160,7 @@ def player_get(player_name):
 
 @app.route('/chappie')
 def chappie_get():
-    data = [match for match in db['chappie'].find({})]
+    data = [match['data'] for match in db['chappie'].find({})]
     replaced = [re.sub(r"\(smurf \d\)", '', doc['name'])for doc in data]
     times = [timeago.format(
         match['unix_time'], datetime.datetime.now()) for match in data]
@@ -537,6 +537,9 @@ def opendota_call():
     for hero in data['heroes']:
         hero = hero['name']
         sleep = len(get_urls(hero))
+        if sleep == 0:
+            print(hero)
+            continue
         asyncio.run(main(get_urls(hero), hero))
         database_methods.insert_total_picks('hero', hero, 'hero_picks')
         database_methods.insert_total_picks('bans', hero, 'hero_picks')
@@ -552,12 +555,12 @@ def opendota_call():
     print('end', (time.time()-start)/60, 'minutes')
 
 
-def manual_hero_update(name):
-    hero_output.delete_many({'hero': name})
-    # hero_urls.delete_many({'hero': name})
-    # hero_output.find_one_and_delete(
-    #     {'hero': 'batrider', 'id': 5947766247})
-    asyncio.run(main(get_urls(name), name))
+def manual_hero_update(hero):
+    hero_output.delete_many({'hero': hero})
+    asyncio.run(main(get_urls(hero), hero))
+    database_methods.insert_total_picks('hero', hero, 'hero_picks')
+    get_winrate()
+    parse_request()
 
 
 def update_one_entry(hero, id):
@@ -568,14 +571,7 @@ def update_one_entry(hero, id):
 
 
 if __name__ == '__main__':
-    # manual_hero_update('jakiro')
-    # update_one_entry('batrider', 5965228394)
-    # manual_hero_update('ancient_apparition')
-    # parse_request()
     app.run(debug=True)
+    # update_one_entry('furion', 6167957346)
     # database_methods.insert_worst_games()
-    # check_last_day()
-    # opendota_call()
-    # database_methods.insert_worst_games()
-    # manual_hero_update('shadow_demon')
-    pass
+    # manual_hero_update('jakiro')

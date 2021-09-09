@@ -114,6 +114,7 @@ class Db_insert:
 
     def insert_worst_games(self):
         data = hero_output.find({})
+        # db['chappie'].delete_many({})
         roles = ['Midlane', 'Safelane', 'Offlane']
         for doc in data:
             if doc['win'] == 1:
@@ -131,12 +132,12 @@ class Db_insert:
                 blink_time = self.get_time(items, times, 'blink')
                 if abs(blink_time - amulet_time) < 60:
                     db['chappie'].find_one_and_update(
-                        {'hero': doc['hero'], "id": doc['id']}, {"$set": doc}, upsert=True)
-            if len(items) - items.index('shadow_amulet') > 2:
+                        {'hero': doc['hero'], "id": doc['id']}, {"$set": {'data': doc}}, upsert=True)
+            if items.index('shadow_amulet') != 5:
                 continue
             if 'shadow_amulet' in items and len(items) < 3 or 'shadow_amulet' in items and doc['role'] in roles and duration - amulet_time > 120:
                 db['chappie'].find_one_and_update(
-                    {'hero': doc['hero'], "id": doc['id']}, {"$set": doc}, upsert=True)
+                    {'hero': doc['hero'], "id": doc['id']}, {"$set": {'data': doc}}, upsert=True)
 
     def get_time(self, items, times, item_name):
         item_idx = items.index(item_name)
