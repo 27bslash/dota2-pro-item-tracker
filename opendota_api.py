@@ -44,7 +44,7 @@ async def async_get(m_id, hero_name):
     url = f'https://api.opendota.com/api/matches/{m_id}'
     dupe_check = hero_output.find_one({'hero': hero_name, 'id': m_id})
     bad_id_check = db['dead_games'].find_one(
-        {'id': m_id, 'count': {"$gt": 5}})
+        {'id': m_id, 'count': {"$gt": 10}})
     if dupe_check is not None or bad_id_check is not None:
         return
     try:
@@ -102,6 +102,9 @@ async def async_get(m_id, hero_name):
                                 rev, 6, p)
                             bp_items = item_methods.get_most_recent_items(
                                 rev, 4, p)
+                            if p['duration'] < 600:
+                                db['dead_games'].insert_one(
+                                    {'id': match_id, 'count': 20})
                             for k in p['benchmarks']:
                                 # round benchmarks to 2 decimal places add 0 to make it same length
                                 p['benchmarks'][k]['pct'] = f"{round(p['benchmarks'][k]['pct']*100, 2):.2f}"
@@ -138,7 +141,7 @@ def add_to_dead_games(m_id):
     else:
         db['dead_games'].find_one_and_update(
             {'id': m_id}, {"$inc": {'count': +1}})
-    if db['dead_games'].find_one({'id': m_id})['count'] < 4:
+    if db['dead_games'].find_one({'id': m_id})['count'] < 10:
         db['parse'].insert_one({'id': m_id})
 
 
@@ -188,7 +191,7 @@ def roles(s, p_slot):
         is_roaming = player[3]
         if i < 3:
             role = 'core'
-        if p_slot == sen[0][1]:
+        if p_slot == sen[0][2]:
             return 'Hard Support'
         elif p_slot == slot and is_roaming:
             return 'Roaming'
