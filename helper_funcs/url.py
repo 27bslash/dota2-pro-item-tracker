@@ -15,7 +15,8 @@ def get_urls(hero_name):
     urls = [match['id'] for match in data if hero_output.find_one(
         {'hero': hero_name, 'id': match['id']}) is None and parse.find_one(
         {'hero': hero_name, 'id': match['id']}) is None and
-        dead_games.find_one({'id': match['id'], 'count': {"$lt": 6}})]
+        (dead_games.find_one({'id': match['id']}) is None or
+         dead_games.find_one({'id': match['id'], 'count': {"$lte": 10}}))]
     return list(reversed(urls[slice(0, 60)]))
 
 
@@ -47,4 +48,4 @@ def parse_request():
 
 
 if __name__ == "__main__":
-    delete_old_urls()
+    get_urls('jakiro')
