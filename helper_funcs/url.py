@@ -21,10 +21,9 @@ def get_urls(hero_name):
 
 
 def delete_old_urls():
-    data = hero_output.find({}).sort('unix_time', -1)
-
-    for d in data:
-        time_since = time.time() - d["unix_time"]
+    data = hero_urls.find({})
+    for d in list(data)[:: -1]:
+        time_since = time.time() - d["time_stamp"]
         # 8 days old
         if time_since > 690000:
             collections = db.list_collection_names()
@@ -48,4 +47,5 @@ def parse_request():
 
 
 if __name__ == "__main__":
-    get_urls('jakiro')
+    # get_urls('jakiro')
+    delete_old_urls()
