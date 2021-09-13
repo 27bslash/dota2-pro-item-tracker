@@ -218,7 +218,7 @@ def generate_table(func_name, query, template):
             for item in match['starting_items']:
                 item_key = item['key']
                 item_id = item_methods.get_item_id(item_key)
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += "<div class='tooltip' id='item-tooltip'></div>"
@@ -237,7 +237,7 @@ def generate_table(func_name, query, template):
                 if type(item['time']) is not int or item['time'] > 600:
                     break
                 if item['key'] not in consumables and item['time'] < 600 and item['time'] > 0:
-                    image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                    image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
                     overlay = f"<div class='overlay'>{str(datetime.timedelta(seconds=item['time']))}</div>"
                     html_string += "<div class='item-cell'>"
                     html_string += image
@@ -250,7 +250,7 @@ def generate_table(func_name, query, template):
             html_string += "<div class='purchases'>"
             for item in match['final_items']:
                 item_key = item['key']
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item['id']}' alt='{item['key']}'data-hero=\"{match['hero']}\">"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}.png' data_id='{item['id']}' alt='{item['key']}'data-hero=\"{match['hero']}\">"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
@@ -262,7 +262,7 @@ def generate_table(func_name, query, template):
                 html_string += "</div>"
 
             for item in match['backpack']:
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item['key']}_lg.png' data_id='{item['id']}' alt='{item['key']}'data-hero=\"{match['hero']}\">"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}.png' data_id='{item['id']}' alt='{item['key']}'data-hero=\"{match['hero']}\">"
                 overlay = f"<div class='overlay'>{item['time']}</div>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
@@ -278,7 +278,7 @@ def generate_table(func_name, query, template):
                 item_id = item_methods.get_item_id(item_key)
                 html_string += "<div class='neutral-cell'>"
                 html_string += f"<div class='circle'>"
-                html_string += f"<img class='item-img' id='neutral-item' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{item_key}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                html_string += f"<img class='item-img' id='neutral-item' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item_key}.png' data_id='{item_id}' alt='{item_key}'>"
                 html_string += "<div class='tooltip' id='item-tooltip'></div></div></div>"
 
             if match['aghanims_shard']:
@@ -570,8 +570,19 @@ def update_one_entry(hero, id):
     asyncio.run(main([id], hero))
 
 
-if __name__ == '__main__':
+def main():
     app.run(debug=True)
-    # update_one_entry('furion', 6167957346)
+
+
+if __name__ == '__main__':
+    # app.run(debug=True)
+    # update_one_entry('windrunner', 6171594476)
+    # delete_old_urls()
+    # database_methods.insert_all()
+    # parse_request()
+    # get_winrate()
+    # update_pro_accounts()
     # database_methods.insert_worst_games()
+    # print(hero_methods.hero_name_from_hero_id(39))
     # manual_hero_update('jakiro')
+    main()
