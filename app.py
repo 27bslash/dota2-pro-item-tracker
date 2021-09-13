@@ -218,7 +218,7 @@ def generate_table(func_name, query, template):
             for item in match['starting_items']:
                 item_key = item['key']
                 item_id = item_methods.get_item_id(item_key)
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}.png' data_id='{item_id}' alt='{item_key}'>"
                 html_string += "<div class='item-cell'>"
                 html_string += image
                 html_string += "<div class='tooltip' id='item-tooltip'></div>"
@@ -237,7 +237,7 @@ def generate_table(func_name, query, template):
                 if type(item['time']) is not int or item['time'] > 600:
                     break
                 if item['key'] not in consumables and item['time'] < 600 and item['time'] > 0:
-                    image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}_lg.png' data_id='{item_id}' alt='{item_key}'>"
+                    image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}.png' data_id='{item_id}' alt='{item_key}'>"
                     overlay = f"<div class='overlay'>{str(datetime.timedelta(seconds=item['time']))}</div>"
                     html_string += "<div class='item-cell'>"
                     html_string += image
