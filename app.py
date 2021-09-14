@@ -2,9 +2,8 @@ import asyncio
 import datetime
 import itertools
 import json
-import math
-import time
 import re
+import time
 from collections import Counter
 from operator import itemgetter
 
@@ -15,11 +14,9 @@ from flask import (Flask, after_this_request, redirect, render_template,
 from flask_caching import Cache
 from flask_compress import Compress
 
-from accounts.download_acount_ids import update_pro_accounts
-from helper_funcs.compute_engine import check_last_day
 from helper_funcs.helper_imports import *
-from opendota_api import main
-from update import weekly_update
+from helper_funcs.table import generate_table
+from opendota_api import opendota_call
 
 # TODO
 # show alex ads
@@ -84,18 +81,13 @@ def item_post(query=''):
 @app.route('/hero/<hero_name>/starter_items/table', methods=['GET'])
 @app.route('/hero/<hero_name>/table', methods=['GET'])
 def hero_get(hero_name):
-    start = time.perf_counter()
     display_name = hero_name.replace('_', ' ').capitalize()
     hero_name = switcher(hero_name)
-    match_data = []
-    best_games = []
-    total = 0
     template = 'final_items.html'
     if 'starter_items' in request.url:
         template = 'starter_items.html'
     if 'table' in request.url:
-        return generate_table(hero_get.__name__, hero_name, template)
-    r_start = time.perf_counter()
+        return generate_table('hero', hero_name, template, request)
     roles_db = db['hero_picks'].find_one({'hero': hero_name})
     roles = roles_db['roles']
     check_response_time = time.perf_counter()
@@ -117,14 +109,11 @@ def hero_get(hero_name):
         most_used = dict(itertools.islice(most_used.items(), 10))
         max_val = list(most_used.values())[0]
         talents = talent_methods.get_talent_order(match_data, hero_name)
-        misc = time.perf_counter()
         hero_colour = get_hero_name_colour(hero_name)
-        template_time = time.perf_counter()
-        r_t = render_template(template, max=max_val, most_used=most_used, hero_img=hero_name, display_name=display_name, hero_name=switcher(hero_name), data=match_data,
-                              time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles, best_games=best_games)
-        return r_t
+        return render_template(template, max=max_val, most_used=most_used, hero_img=hero_name, display_name=display_name, hero_name=switcher(hero_name), data=match_data,
+                               time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles, best_games=best_games)
     else:
-        return render_template(template, hero_name=hero_name, hero_img=clean_name(hero_name), display_name=display_name, data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
+        return render_template(template, hero_name=hero_name, hero_img=hero_name, display_name=display_name, data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
 
 
 @app.route('/player/<player_name>/starter_items', methods=['GET'])
@@ -138,7 +127,7 @@ def player_get(player_name):
     if 'starter_items' in request.url:
         template = 'player_starter_items.html'
     if 'table' in request.url:
-        return generate_table(player_get.__name__, player_name, template)
+        return generate_table('player', player_name, template, request)
     display_name = player_name.replace('%20', ' ')
     roles_db = db['player_picks'].find_one({'name': display_name})
     roles = roles_db['roles']
@@ -166,219 +155,7 @@ def chappie_get():
         match['unix_time'], datetime.datetime.now()) for match in data]
     d = dict(Counter(replaced))
     count = {k: d[k] for k in sorted(d, key=d.get, reverse=True)}
-    return render_template('chappie.html', data=data, count=count, times=times, unix_times=[match['unix_time'] for match in data])
-
-
-def generate_table(func_name, query, template):
-    # print(request.args)
-    display_name = query.replace('_', ' ').capitalize()
-    key = 'name' if func_name == 'player_get' else 'hero'
-    check_response = hero_output.find_one({key: query})
-    match_data = None
-    item_data = ''
-    img_cache = 'https://ailhumfakp.cloudimg.io/v7/'
-    columns = {'0': 'win', '1': None, '2': 'unix_time', '3': 'name', '4': None, '5': 'role', '6': 'lvl', '7': 'kills', '8': 'deaths', '9': 'assists',
-               '10': 'last_hits', '11': 'gold', '12': 'gpm', '13': 'xpm', '14': 'hero_damage', '15': 'tower_damage', '16': 'duration', '17': 'mmr'}
-    sort_direction = -1 if request.args['order[0][dir]'] == 'desc' else 1
-    column = columns[request.args['order[0][column]']]
-    searchable = request.args['search[value]']
-    search_value = mongo_search(searchable)
-    records_to_skip = int(request.args['start'])
-    length = int(request.args['length'])
-    total_entries = []
-    if 'start' in template and column == 'gold':
-        column = 'lane_efficiency'
-    if check_response:
-        if 'role' in request.args:
-            role = request.args.get('role').replace('%20', ' ').title()
-            data = hero_output.find(
-                {key: query, 'role': role}).sort(column, sort_direction).limit(length).skip(records_to_skip)
-            match_data = [match for match in data]
-            total_entries = [entry for entry in hero_output.find(
-                {key: query, 'role': role})]
-        else:
-            if len(searchable) > 0 and len(search_value) > 0:
-                aggregate = {key: query, 'hero': {"$in": search_value}}
-            else:
-                aggregate = {key: query}
-            data = hero_output.find(
-                aggregate).sort(column, sort_direction).limit(length).skip(records_to_skip)
-            match_data = [match for match in data]
-            total_entries = [
-                entry for entry in hero_output.find({key: query})]
-    result = {"draw": request.args['draw'],
-              "recordsTotal": len(total_entries), "recordsFiltered": len(total_entries), "data": []}
-    if len(total_entries) == 0:
-        return result
-    for match in match_data:
-        row_string = []
-        html_string = f"<a href=https://www.opendota.com/matches/{match['id']}>"
-        if 'start' in template:
-            html_string += "<div class='starting_items'>"
-            for item in match['starting_items']:
-                item_key = item['key']
-                item_id = item_methods.get_item_id(item_key)
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}.png' data_id='{item_id}' alt='{item_key}'>"
-                html_string += "<div class='item-cell'>"
-                html_string += image
-                html_string += "<div class='tooltip' id='item-tooltip'></div>"
-                html_string += "</div>"
-            html_string += "</div>"
-            html_string += "<div class='intermediate_items'>"
-            for item in match['items']:
-                intermediate_items = ['bottle', 'vanguard', 'hood_of_defiance', 'orb_of_corrosion',
-                                      'soul_ring', 'buckler', 'urn', 'fluffy_hat', 'wind_lace', 'infused_raindrop', 'crown', 'bracer', 'null_talisman', 'wraith_band',
-                                      'ring_of_basilius', 'headress', 'magic_wand']
-                consumables = ['tango', 'flask', 'ward_observer',
-                               'ward_sentry', 'smoke_of_deceit', 'enchanted_mango', 'clarity', 'tpscroll', 'dust']
-                item_key = item['key']
-                item_id = item_methods.get_item_id(item_key)
-                # print('ty', match['id'], item['time'], item)
-                if type(item['time']) is not int or item['time'] > 600:
-                    break
-                if item['key'] not in consumables and item['time'] < 600 and item['time'] > 0:
-                    image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}.png' data_id='{item_id}' alt='{item_key}'>"
-                    overlay = f"<div class='overlay'>{str(datetime.timedelta(seconds=item['time']))}</div>"
-                    html_string += "<div class='item-cell'>"
-                    html_string += image
-                    html_string += overlay
-                    html_string += "<div class='tooltip' id='item-tooltip'></div>"
-                    html_string += "</div>"
-            html_string += "</div></a>"
-
-        else:
-            html_string += "<div class='purchases'>"
-            for item in match['final_items']:
-                item_key = item['key']
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}.png' data_id='{item['id']}' alt='{item['key']}'data-hero=\"{match['hero']}\">"
-                overlay = f"<div class='overlay'>{item['time']}</div>"
-                html_string += "<div class='item-cell'>"
-                html_string += image
-                html_string += overlay
-                if item['key'] == 'ultimate_scepter':
-                    html_string += "<div class='tooltip' id='scepter-tooltip'></div>"
-                else:
-                    html_string += "<div class='tooltip' id='item-tooltip'></div>"
-                html_string += "</div>"
-
-            for item in match['backpack']:
-                image = f"<img class='item-img' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item['key']}.png' data_id='{item['id']}' alt='{item['key']}'data-hero=\"{match['hero']}\">"
-                overlay = f"<div class='overlay'>{item['time']}</div>"
-                html_string += "<div class='item-cell'>"
-                html_string += image
-                html_string += overlay
-                if item['key'] == 'ultimate_scepter':
-                    html_string += "<div class='tooltip' id='scepter-tooltip'></div>"
-                else:
-                    html_string += "<div class='tooltip' id='item-tooltip'></div>"
-                html_string += "</div>"
-
-            if match['item_neutral']:
-                item_key = match['item_neutral']
-                item_id = item_methods.get_item_id(item_key)
-                html_string += "<div class='neutral-cell'>"
-                html_string += f"<div class='circle'>"
-                html_string += f"<img class='item-img' id='neutral-item' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/items/{item_key}.png' data_id='{item_id}' alt='{item_key}'>"
-                html_string += "<div class='tooltip' id='item-tooltip'></div></div></div>"
-
-            if match['aghanims_shard']:
-                image = f"<img class='item-img' id='aghanims-shard' src='https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/aghanims_shard_lg.png' data_id='609' data-hero=\"{match['hero']}\" alt='aghanims_shard'>"
-                shard_time = match['aghanims_shard'][0]['time']
-                overlay = f"<div class='overlay' id='shard-overlay'>{shard_time}</div>"
-                html_string += f"<div class='item-cell' id='aghanims-shard-cell'>"
-                html_string += image
-                html_string += overlay
-                html_string += "<div class='tooltip' id='shard-tooltip'></div>"
-                html_string += "</div>"
-
-            html_string += "</div></a>"
-        html_string += f"<div class='abilities' data-hero=\"{match['hero']}\">"
-
-        for ability in match['abilities']:
-            ability_img = f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability['img']}.png"
-            ability_id = ability['id']
-            ability_key = ability['key']
-            html_string += "<div class='ability-img-wrapper'>"
-
-            if ability['type'] == 'talent':
-                image = f"<img class='table-img' src='/static/talent_img.png' data_id='{ability_id}'alt='{ability_key}'>"
-                html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
-                html_string += image
-                html_string += "<div class='tooltip' id='talent-tooltip'></div>"
-                html_string += "</div>"
-            else:
-                image = f"<img class='table-img' src='{ability_img}' data_id='{ability_id}' data-tooltip='{ability_key}' alt='{ability_key}'>"
-                html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
-                html_string += image
-                html_string += "<div class='tooltip' id='ability-tooltip'></div>"
-                html_string += "</div>"
-
-        html_string += "</div>"
-        html_string += "<div class='draft'>"
-        html_string += "<div class='radiant_draft'>"
-
-        for hero in match['radiant_draft']:
-            rep = hero.replace("'", '')
-            highlight = ''
-            if hero == query:
-                highlight = 'icon-highlight'
-            html_string += f"<a href='/hero/{hero}'><i class='d2mh {rep} {highlight}'></i></a>"
-
-        html_string += "</div>"
-        html_string += "<div class='dire_draft'>"
-        for hero in match['dire_draft']:
-            rep = hero.replace("'", '')
-            highlight = ''
-            if hero == query:
-                highlight = 'icon-highlight'
-            html_string += f"<a href='/hero/{hero}'><i class='d2mh {rep} {highlight}'></i></a>"
-        html_string += "</div>"
-
-        role_file_path = f"/static/icons/{match['role']}.png"
-        role_img = f"<img src='{role_file_path}'"
-        if match['win'] == 0:
-            row_string.append("<div id='loss-cell'></div>")
-        else:
-            row_string.append("<div id='win-cell'></div>")
-
-        row_string.append(html_string)
-        row_string.append(timeago.format(
-            match['unix_time'], datetime.datetime.now()))
-        if func_name != 'player_get':
-            row_string.append(
-                f"<a href=\"/player/{match['name']}\"><p class='stats'>{match['name']}</p></a>")
-        else:
-            row_string.append(
-                f"<a href='/hero/{match['hero']}'><i class='d2mh {match['hero']}'></i></a>")
-        row_string.append(f"<i class='fas fa-copy' id='{match['id']}'></i>")
-        row_string.append(
-            f"<a href=\'?role={match['role']}\'><img src='{role_file_path}'/></a>")
-        row_string.append(f"<p class='stats' id='level'>{match['lvl']}</p>")
-        row_string.append(f"<p class='stats' id='kills'>{match['kills']}</p>")
-        row_string.append(
-            f"<p class='stats' data-sort={match['deaths']} id='deaths'>{match['deaths']}</p>")
-        row_string.append(
-            f"<p class='stats' id='assists'>{match['assists']}</p>")
-        row_string.append(
-            f"<p class='stats' id='last-hits'>{match['last_hits']}</p>")
-        if 'start' not in template:
-            row_string.append(
-                f"<p class='stats' id='gold'>{match['gold']}</p>")
-        else:
-            row_string.append(
-                f"<p class='stats' id='gold'>{match['lane_efficiency']}%</p>")
-        row_string.append(f"<p class='stats' id ='gpm'>{match['gpm']}</p>")
-        row_string.append(f"<p class='stats' id ='xpm'>{match['xpm']}</p>")
-        row_string.append(
-            f"<p class='stats' id ='hero-d'>{match['hero_damage']}</p>")
-        row_string.append(
-            f"<p class='stats' id ='tower-d'>{match['tower_damage']}</p>")
-        row_string.append(
-            f"<p class='stats' id ='duration'>{match['duration']}</p>")
-        row_string.append(f"<p class='stats' id ='mmr'>{match['mmr']}</p>")
-
-        result['data'].append(row_string)
-    return result
+    return render_template('chappie.html', data=data, countget_info_from_url_dbtimes=times, unix_times=[match['unix_time'] for match in data])
 
 
 def find_hero(query, hero):
@@ -388,61 +165,12 @@ def find_hero(query, hero):
     return match_data
 
 
-def get_winrate():
-    print('get winrate...')
-    output = []
-    roles = ['Hard Support', 'Support', 'Safelane',
-             'Offlane', 'Midlane', 'Roaming']
-    try:
-        data = db['hero_list'].find_one({})
-        for i, hero in enumerate(data['heroes']):
-            picks = hero_output.count_documents({'hero': hero['name']})
-            total_wins = hero_output.count_documents(
-                {'hero': hero['name'], 'win': 1})
-            total_bans = hero_output.count_documents(
-                {'bans': hero['name']})
-            if total_wins == 0 or picks == 0:
-                total_winrate = 0
-            else:
-                total_winrate = (total_wins / picks) * 100
-            role_dict = {'hero': switcher(hero['name']),
-                         'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
-            for role in roles:
-                wins = hero_output.count_documents(
-                    {'hero': hero['name'], 'win': 1, 'role': role})
-                losses = hero_output.count_documents(
-                    {'hero': hero['name'], 'win': 0, 'role': role})
-                picks = wins+losses
-                if picks > 0:
-                    winrate = math.floor(wins/picks*100)
-                else:
-                    winrate = 0
-                role_dict[f"{role}_picks"] = picks
-                role_dict[f"{role}_wins"] = wins
-                role_dict[f"{role}_losses"] = losses
-                role_dict[f"{role}_winrate"] = winrate
-            output.append(role_dict)
-            wins = sorted(output, key=itemgetter('hero'))
-        # db['wins'].insert_one({'stats': wins})
-        db['wins'].find_one_and_replace(
-            {}, {'stats': wins}, None, None, True)
-    except Exception as e:
-        print(e, e.__class__)
-
-
 def get_hero_name_colour(hero_name):
     with open('colours/hero_colours.json', 'r') as f:
         data = json.load(f)
         for item in data['colors']:
             if item['hero'] == hero_name:
                 return tuple(item['color'])
-
-
-def mongo_search(query):
-    data = db['hero_list'].find_one({})
-    matches = [hero['name']
-               for hero in data['heroes'] if query in hero['name']]
-    return matches
 
 
 @ app.route('/cron')
@@ -512,54 +240,11 @@ def add_header(response):
     return response
 
 
-def clean_name(h_name):
-    h_name = h_name.replace(' ', '_')
-    h_name = h_name.lower()
-    h_name = switcher(h_name)
-    return h_name
-
-
-def clean_img(s):
-    x = s.split('/')[3]
-    x = x.replace('_', '')
-    x = x.replace('.png', '')
-    x = x.replace('pos', '')
-    return x
-
-
-def opendota_call():
-    start = time.time()
-    check_last_day()
-    data = db['hero_list'].find_one({}, {'_id': 0})
-    today = datetime.datetime.today().weekday()
-    if today == 3:
-        weekly_update()
-    for hero in data['heroes']:
-        hero = hero['name']
-        sleep = len(get_urls(hero))
-        if sleep == 0:
-            print(hero)
-            continue
-        asyncio.run(main(get_urls(hero), hero))
-        database_methods.insert_total_picks('hero', hero, 'hero_picks')
-        database_methods.insert_total_picks('bans', hero, 'hero_picks')
-        if sleep >= 60:
-            sleep = 60
-        print('sleeping for: ', sleep)
-        time.sleep(sleep)
-    delete_old_urls()
-    database_methods.insert_all()
-    parse_request()
-    get_winrate()
-    update_pro_accounts()
-    print('end', (time.time()-start)/60, 'minutes')
-
-
 def manual_hero_update(hero):
     hero_output.delete_many({'hero': hero})
-    asyncio.run(main(get_urls(hero), hero))
+    asyncio.run(opendota_call(get_urls(hero), hero))
     database_methods.insert_total_picks('hero', hero, 'hero_picks')
-    get_winrate()
+    database_methods.insert_winrates()
     parse_request()
 
 
@@ -567,7 +252,7 @@ def update_one_entry(hero, id):
     hero_output.delete_many({'hero': hero, 'id': id})
     # hero_output.find_one_and_delete(
     #     {'hero': hero, 'id': id})
-    asyncio.run(main([id], hero))
+    asyncio.run(opendota_call([id], hero))
 
 
 def main():
@@ -575,6 +260,8 @@ def main():
 
 
 if __name__ == '__main__':
+    main()
+    # manual_hero_update('hoodwink')
     # app.run(debug=True)
     # update_one_entry('windrunner', 6171594476)
     # delete_old_urls()
@@ -585,4 +272,3 @@ if __name__ == '__main__':
     # database_methods.insert_worst_games()
     # print(hero_methods.hero_name_from_hero_id(39))
     # manual_hero_update('jakiro')
-    main()

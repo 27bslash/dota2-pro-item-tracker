@@ -1,12 +1,16 @@
-import pymongo
 import json
-import time
-from ..hero import Hero
-from ..abilities import detailed_ability_info
-import traceback
 import os
-from .collection import db, hero_output
+import time
+import traceback
 from datetime import datetime
+from operator import itemgetter
+
+import pymongo
+
+from ..abilities import detailed_ability_info
+from ..hero import Hero
+from ..switcher import switcher
+from .collection import db, hero_output
 
 all_talents = db['all_talents'].find_one({}, {'_id': 0})
 
@@ -150,6 +154,47 @@ class Db_insert:
         minutes = time.split(':')[1]
         seconds = time.split(':')[2]
         return int(hours) * 3600 + int(minutes)*60 + int(seconds)
+
+    def insert_winrates(self):
+        print('insert winrate...')
+        output = []
+        roles = ['Hard Support', 'Support', 'Safelane',
+                 'Offlane', 'Midlane', 'Roaming']
+        try:
+            data = db['hero_list'].find_one({})
+            for i, hero in enumerate(data['heroes']):
+                picks = hero_output.count_documents({'hero': hero['name']})
+                total_wins = hero_output.count_documents(
+                    {'hero': hero['name'], 'win': 1})
+                total_bans = hero_output.count_documents(
+                    {'bans': hero['name']})
+                if total_wins == 0 or picks == 0:
+                    total_winrate = 0
+                else:
+                    total_winrate = (total_wins / picks) * 100
+                role_dict = {'hero': switcher(hero['name']),
+                             'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
+                for role in roles:
+                    wins = hero_output.count_documents(
+                        {'hero': hero['name'], 'win': 1, 'role': role})
+                    losses = hero_output.count_documents(
+                        {'hero': hero['name'], 'win': 0, 'role': role})
+                    picks = wins+losses
+                    if picks > 0:
+                        winrate = wins/picks*100
+                    else:
+                        winrate = 0
+                    role_dict[f"{role}_picks"] = picks
+                    role_dict[f"{role}_wins"] = wins
+                    role_dict[f"{role}_losses"] = losses
+                    role_dict[f"{role}_winrate"] = winrate
+                output.append(role_dict)
+                wins = sorted(output, key=itemgetter('hero'))
+            # db['wins'].insert_one({'stats': wins})
+            db['wins'].find_one_and_replace(
+                {}, {'stats': wins}, None, None, True)
+        except Exception as e:
+            print(e, e.__class__)
 
     def insert_all(self):
         self.insert_worst_games()

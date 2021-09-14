@@ -32,7 +32,7 @@ async def account_id(m_id, hero_name):
                             {'account_id': p['account_id']})
                         if check is None:
                             acc_ids.insert_one(
-                                {'name': get_info(
+                                {'name': get_info_from_url_db(
                                     resp['match_id'], 'name', hero_name), 'account_id': p['account_id']}
                             )
     except Exception as e:
@@ -82,8 +82,8 @@ async def async_get(m_id, hero_name):
                         purchase_log = p['purchase_log']
                         if purchase_log:
                             role = roles(roles_arr, p['player_slot'])
-                            aghanims_shard = None
                             starting_items = []
+                            aghanims_shard = None
                             purchase_log = item_methods.bots(
                                 purchase_log, p['purchase'])
                             for purchase in purchase_log:
@@ -120,7 +120,7 @@ async def async_get(m_id, hero_name):
                             hero_output.insert_one(
                                 {'unix_time': p['start_time'], 'hero': hero_name, 'duration': p['duration'],
                                  'radiant_draft': rad_draft, 'dire_draft': dire_draft, 'bans': hero_bans,
-                                 'name': get_info(match_id, 'name', hero_name), 'account_id': p['account_id'], 'role': role, 'mmr': get_info(match_id, 'mmr', hero_name),
+                                 'name': get_info_from_url_db(match_id, 'name', hero_name), 'account_id': p['account_id'], 'role': role, 'mmr': get_info_from_url_db(match_id, 'mmr', hero_name),
                                  'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
                                  'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
                                  'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'], 'lane_efficiency': round(p['lane_efficiency'] * 100, 2),
@@ -209,8 +209,7 @@ def roles(s, p_slot):
             return 'Support'
 
 
-async def main(urls, hero_name):
-    # urls = ['5527705678']
+async def opendota_call(urls, hero_name):
     print(f"{hero_name}: {urls}")
     ret = await asyncio.gather(*[async_get(url, hero_name) for url in urls])
 
@@ -219,7 +218,7 @@ async def get_acc_ids(urls, hero_name):
     ret = await asyncio.gather(*[account_id(url, hero_name) for url in urls])
 
 
-def get_info(m_id, search, hero):
+def get_info_from_url_db(m_id, search, hero):
     data = hero_urls.find_one({'id': m_id, 'hero': hero})
     return data[search]
 
