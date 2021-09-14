@@ -155,7 +155,7 @@ def chappie_get():
         match['unix_time'], datetime.datetime.now()) for match in data]
     d = dict(Counter(replaced))
     count = {k: d[k] for k in sorted(d, key=d.get, reverse=True)}
-    return render_template('chappie.html', data=data, countget_info_from_url_dbtimes=times, unix_times=[match['unix_time'] for match in data])
+    return render_template('chappie.html', data=data, count=count,times=times, unix_times=[match['unix_time'] for match in data])
 
 
 def find_hero(query, hero):
