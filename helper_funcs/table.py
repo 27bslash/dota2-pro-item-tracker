@@ -192,8 +192,8 @@ def stats(match, template):
     row_string = []
     stat_list = ['lvl', 'kills', 'deaths', 'assists', 'last_hits', 'gold',
                  'gpm', 'xpm', 'hero_damage', 'tower_damage', 'duration', 'mmr']
-    perc = ''
     for stat in stat_list:
+        perc = ''
         if 'start' in template and stat == 'gold':
             stat = 'lane_efficiency'
             perc = '%'
