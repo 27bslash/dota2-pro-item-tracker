@@ -4,7 +4,7 @@ from colorthief import ColorThief
 from helper_funcs.helper_imports import *
 from colours.contrast import compute_contrast
 from colours.dominant_colour import get_dominant_colours, get_dominant_color
-from accounts.download_acount_ids import update_pro_accounts
+from helper_funcs.accounts.download_acount_ids import update_pro_accounts
 import shutil
 import requests
 import traceback
@@ -66,7 +66,7 @@ def dl_dota2_abilities():
 
 
 def get_ability_img(ability_name, hero_name):
-    if ability_name.replace('_', '').startswith(switcher(hero_name).replace('_', '')):
+    if ability_name.replace('_', '').startswith(hero_name.replace('_', '')):
         with open(f'colours/ability_images/{hero_name}/{ability_name}.jpg', 'wb') as f:
             f.write(requests.get(
                 f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability_name}.png").content)
@@ -90,11 +90,15 @@ def chunk_stratz_abilites():
 
 
 def update_stratz_json(url, collection):
-    req = requests.get(url).json()
+    req = requests.get(url)
     db_data = db[collection].find_one({}, {'_id': 0})
-    if not db_data or not req == db_data and len(req) > len(db_data):
+    # print(req.status_code)
+    if req.status_code is not 200:
+        print('false')
+        return
+    if not db_data or not req.json() == db_data and len(req.json()) > len(db_data):
         db[collection].find_one_and_update(
-            {}, {"$set": req}, upsert=True)
+            {}, {"$set": req.json()}, upsert=True)
 
     update_basic_id_json('all_items', 'item_ids', 'items')
     # req = requests.get('https://api.stratz.com/api/v1/Hero').json()
@@ -148,16 +152,16 @@ def update_minimap_icons():
 
 def update_app():
     print('uploading hero list')
-    update_hero_list()
+    # update_hero_list()
     print('updating json....')
-    update_stratz_json('https://api.stratz.com/api/v1/Item', 'all_items')
-    update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
-    update_stratz_json(
-        'https://api.stratz.com/api/v1/Ability', 'all_abilities')
+    # update_stratz_json('https://api.stratz.com/api/v1/Item', 'all_items')
+    # update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
+    # update_stratz_json(
+    #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
     print('downloading abilities...')
     dl_dota2_abilities()
     print('updating_talents...')
-    update_talents()
+    # update_talents()
     print('updating hero colours....')
     compute_contrast()
     print('updating minimap icons...')
@@ -182,6 +186,8 @@ if __name__ == '__main__':
     #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
     # dl_dota2_abilities()
     update_app()
+    # dl_dota2_abilities()
     # chunk_stratz_abilites()
     # update_hero_list()
     # upload_hero_list()
+
