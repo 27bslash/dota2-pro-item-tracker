@@ -2,12 +2,13 @@ import timeago
 import datetime
 from .database.collection import db, hero_output
 from .items import Items
-
+from .switcher import switcher
 item_methods = Items()
 
 
 def generate_table(func_name, query, template, request):
     # print(request.args)
+    query = switcher(query)
     display_name = query.replace('_', ' ').capitalize()
     key = 'name' if func_name == 'player' else 'hero'
     check_response = hero_output.find_one({key: query})
