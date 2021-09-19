@@ -6,7 +6,6 @@ import re
 import time
 from collections import Counter
 from operator import itemgetter
-
 import requests
 import timeago
 from flask import (Flask, after_this_request, redirect, render_template,
@@ -17,7 +16,9 @@ from flask_compress import Compress
 from helper_funcs.helper_imports import *
 from helper_funcs.table import generate_table
 from opendota_api import opendota_call
-
+from route_logic.hero_view import HeroView
+from route_logic.player_view import PlayerView
+from route_logic.redirect import handle_redirect
 # TODO
 # show alex ads
 # make levels accurate
@@ -53,19 +54,6 @@ def index():
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
 
-def handle_redirect(request):
-    if request.method == 'POST':
-        text = request.form.get('search')
-        if db['account_ids'].find_one({'name': text}):
-            return '/player/'+text
-        if hero_methods.get_hero_name(text):
-            suggestion = hero_methods.get_hero_name(text)
-            suggestion = sorted(suggestion)
-            return '/hero/'+switcher(suggestion[0])
-        else:
-            return request.url
-
-
 @app.route('/', methods=['POST'])
 @app.route('/chappie', methods=['POST'])
 @app.route('/hero/<query>/starter_items', methods=['POST'])
@@ -81,39 +69,12 @@ def item_post(query=''):
 @app.route('/hero/<hero_name>/starter_items/table', methods=['GET'])
 @app.route('/hero/<hero_name>/table', methods=['GET'])
 def hero_get(hero_name):
-    display_name = hero_name.replace('_', ' ').capitalize()
-    hero_name = switcher(hero_name)
-    template = 'final_items.html'
-    if 'starter_items' in request.url:
-        template = 'starter_items.html'
+    hv = HeroView()
+    template = hv.templateSelector(request, '')
     if 'table' in request.url:
         return generate_table('hero', hero_name, template, request)
-    roles_db = db['hero_picks'].find_one({'hero': hero_name})
-    roles = roles_db['roles']
-    check_response_time = time.perf_counter()
-    check_response = hero_output.find_one({'hero': hero_name})
-    if check_response:
-        if request.args:
-            role = request.args.get('role').replace('%20', ' ').title()
-            data = hero_output.find(
-                {'hero': hero_name, 'role': role})
-            match_data = [hero for hero in data]
-            best_games = [match for match in db['best_games'].find(
-                {'hero': hero_name, 'display_role': role})]
-        else:
-            match_data = find_hero('hero', hero_name)
-            best_games = [match for match in db['best_games'].find(
-                {'hero': hero_name, 'display_role': None})]
-        total = roles_db['total_picks']
-        most_used = item_methods.pro_items(match_data)
-        most_used = dict(itertools.islice(most_used.items(), 10))
-        max_val = list(most_used.values())[0]
-        talents = talent_methods.get_talent_order(match_data, hero_name)
-        hero_colour = get_hero_name_colour(hero_name)
-        return render_template(template, max=max_val, most_used=most_used, hero_img=hero_name, display_name=display_name, hero_name=switcher(hero_name), data=match_data,
-                               time=time.time(), total=total, talents=talents, hero_colour=hero_colour, roles=roles, best_games=best_games)
-    else:
-        return render_template(template, hero_name=hero_name, hero_img=hero_name, display_name=display_name, data=[], time=time.time(), total=0, hero_colour=get_hero_name_colour(hero_name), roles=roles)
+    arggs = hv.hero_view(hero_name, request)
+    return render_template(template, **arggs)
 
 
 @app.route('/player/<player_name>/starter_items', methods=['GET'])
@@ -121,30 +82,12 @@ def hero_get(hero_name):
 @app.route('/player/<player_name>/starter_items/table', methods=['GET'])
 @app.route('/player/<player_name>/table', methods=['GET'])
 def player_get(player_name):
-    start = time.perf_counter()
-    total = 0
-    template = 'player_final_items.html'
-    if 'starter_items' in request.url:
-        template = 'player_starter_items.html'
+    pv = PlayerView()
+    template = pv.templateSelector(request, 'player_')
     if 'table' in request.url:
         return generate_table('player', player_name, template, request)
-    display_name = player_name.replace('%20', ' ')
-    roles_db = db['player_picks'].find_one({'name': display_name})
-    roles = roles_db['roles']
-    check_response_time = time.perf_counter()
-    check_response = hero_output.find_one({'name': display_name})
-    if check_response:
-        if request.args:
-            role = request.args.get('role').replace('%20', ' ').title()
-            data = hero_output.find(
-                {'name': display_name, 'role': role}).sort('unix_time', -1)
-            match_data = [hero for hero in data]
-        else:
-            match_data = find_hero('name', display_name)
-        total = len(match_data)
-        return render_template(template, display_name=display_name, data=match_data, time=time.time(), total=total, role_total=len(match_data), roles=roles)
-    else:
-        return render_template(template, display_name=display_name, data=[], time=time, roles=roles, total=0)
+    arggs = pv.player_view(player_name, request)
+    return render_template(template, **arggs)
 
 
 @app.route('/chappie')
@@ -155,22 +98,7 @@ def chappie_get():
         match['unix_time'], datetime.datetime.now()) for match in data]
     d = dict(Counter(replaced))
     count = {k: d[k] for k in sorted(d, key=d.get, reverse=True)}
-    return render_template('chappie.html', data=data, count=count,times=times, unix_times=[match['unix_time'] for match in data])
-
-
-def find_hero(query, hero):
-    data = hero_output.find({query: hero})
-    s = time.perf_counter()
-    match_data = [hero for hero in data]
-    return match_data
-
-
-def get_hero_name_colour(hero_name):
-    with open('colours/hero_colours.json', 'r') as f:
-        data = json.load(f)
-        for item in data['colors']:
-            if item['hero'] == hero_name:
-                return tuple(item['color'])
+    return render_template('chappie.html', data=data, count=count, times=times, unix_times=[match['unix_time'] for match in data])
 
 
 @ app.route('/cron')
@@ -196,6 +124,16 @@ def hero_ability_json(hero_name):
 @ app.route('/files/items')
 def items_json():
     data = db['all_items'].find_one({}, {'_id': 0})
+    with open('fin.json', 'r') as f:
+        data = json.load(f)
+    return data
+
+
+@ app.route('/files/item_attribs')
+def items_attribs_json():
+    data = db['all_items'].find_one({}, {'_id': 0})
+    with open('item.json', 'r') as f:
+        data = json.load(f)
     return data
 
 
@@ -261,6 +199,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # database_methods.insert_winrates()
     # manual_hero_update('hoodwink')
     # app.run(debug=True)
     # update_one_entry('windrunner', 6171594476)
