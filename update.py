@@ -101,26 +101,48 @@ def update_stratz_json(url, collection):
             {}, {"$set": req.json()}, upsert=True)
 
     update_basic_id_json('all_items', 'item_ids', 'items')
-    # req = requests.get('https://api.stratz.com/api/v1/Hero').json()
-    # b = req == json.load(open('json_files/stratz_talents.json'))
-    # if not b and len(req) > 2000:
-    #     db[collection].find_one_and_update(
-    #         {}, {"$set": {'talents': req}}, upsert=True)
 
-    # req = requests.get('https://api.stratz.com/api/v1/Item').json()
-    # b = req == json.load(open('json_files/stratz_abilities.json'))
-    # if not b and len(req) > 2000:
-    #     db['all_items'].find_one_and_update(
-    #         {}, {"$set": {'items': req}}, upsert=True)
-    # with open(f"json_files/stratz_talents.json", 'w') as f:
-    #     f.write(json.dumps(json.loads(requests.get(
-    #         'https://api.stratz.com/api/v1/Hero').text), indent=4))
-    # with open(f"json_files/stratz_abilities.json", 'w') as f:
-    #     f.write(json.dumps(json.loads(requests.get(
-    #         'https://api.stratz.com/api/v1/Ability').text), indent=4))
-    # with open(f"json_files/stratz_items.json", 'w') as f:
-    #     f.write(json.dumps(json.loads(requests.get(
-    #         'https://api.stratz.com/api/v1/Item').text), indent=4))
+
+def graphql():
+    query = """query {
+  constants{
+    items {
+    id
+      name
+      displayName
+      language {
+        description
+        lore
+      }
+      stat {
+        cost
+        manaCost
+        cooldown
+      }
+      attributes {
+        name
+        value
+      }
+    }
+  }
+}"""
+    url = 'https://api.stratz.com/graphql/'
+    r = requests.post(url, json={'query': query})
+    return r.json()['data']['constants']
+
+
+def insert_all_items():
+    stratz_data = graphql()
+    opend = requests.get('https://api.opendota.com/api/constants/items').json()
+    srt = dict(sorted(opend.items(), key=lambda k: k[1]['id']))
+    for k, v in srt.items():
+        _id = v['id']
+        for item in stratz_data['items']:
+            if item['id'] == _id:
+                item['attrib'] = v['attrib']
+                break
+    db['all_items'].find_one_and_update(
+        {}, {"$set": stratz_data}, upsert=True)
 
 
 def update_basic_id_json(input_collection, output_collection, dic_name):
@@ -152,16 +174,16 @@ def update_minimap_icons():
 
 def update_app():
     print('uploading hero list')
-    # update_hero_list()
+    update_hero_list()
     print('updating json....')
-    # update_stratz_json('https://api.stratz.com/api/v1/Item', 'all_items')
-    # update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
-    # update_stratz_json(
-    #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
+    insert_all_items()
+    update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
+    update_stratz_json(
+        'https://api.stratz.com/api/v1/Ability', 'all_abilities')
     print('downloading abilities...')
     dl_dota2_abilities()
     print('updating_talents...')
-    # update_talents()
+    update_talents()
     print('updating hero colours....')
     compute_contrast()
     print('updating minimap icons...')
@@ -172,7 +194,7 @@ def update_app():
 
 
 def weekly_update():
-    update_stratz_json('https://api.stratz.com/api/v1/Item', 'all_items')
+    insert_all_items()
     update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
     update_stratz_json(
         'https://api.stratz.com/api/v1/Ability', 'all_abilities')
@@ -190,4 +212,3 @@ if __name__ == '__main__':
     # chunk_stratz_abilites()
     # update_hero_list()
     # upload_hero_list()
-
