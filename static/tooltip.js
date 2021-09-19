@@ -6,7 +6,6 @@ let files_len = 0;
 let abilities = {},
   stats = {};
 async function get_json_data(hero_name) {
-  // have to download files differently or just give up on shards for players
   if (hero_name) {
     abilities[hero_name] = await get_json("abilities", hero_name);
     stats = await get_json("stats", hero_name);
@@ -108,12 +107,7 @@ window.addEventListener("mouseover", (event) => {
       tooltip.style.background = `#182127`;
     }
 
-    tooltip_method = new Tooltip(
-      tooltip,
-      event.target.parentNode.className,
-      result,
-      _id
-    );
+    tooltip_method = new Tooltip(tooltip);
     tooltip.style.display = "block";
     if (tooltip.id === "talent-tooltip") {
       tooltip_method.generateLineOne(event.target, "talent");
@@ -126,8 +120,14 @@ window.addEventListener("mouseover", (event) => {
       tooltip.style.background = `radial-gradient(circle at top left, ${color}, #182127 190px)`;
       return;
     }
-
-    const base = aghanim_ability || result[_id];
+    let base = aghanim_ability || result[_id];
+    if (tooltip.id === "item-tooltip") {
+      for (let i = 0; i < result["items"].length; i++) {
+        if (result["items"][i]["id"] === +_id) {
+          base = result["items"][i];
+        }
+      }
+    }
 
     tooltip_method.generateLineOne(base, tooltipType);
     tooltip_method.generateContent(base, tooltipType);
@@ -155,49 +155,17 @@ function extract_aghanim(result, s) {
     }
   }
 }
-function highlight_numbers(text) {
-  if (typeof text == "object" && text != null) text = text.join("");
-  return text
-    ? text
-        .replace(/<font(.*?)>/g, "")
-        .replace(/font/g, "")
-        .replace(
-          /([^a-z>]\d*\.?\d+%?)(\s\/)?/gm,
-          `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
-        )
-        .replace(/<h1>/g, "<h3 class='tooltip-text-highlight'>")
-        .replace(/<\/h1>/g, "</h3>")
-    : "";
-}
-function extract_hidden_values(base, text) {
-  let sp = text.split("%");
-  base["special_values"].forEach((x) => {
-    if (sp.indexOf(x["name"]) > -1) {
-      let float = x["values_float"].map((el) => parseFloat(el).toFixed(2) * 1),
-        int = x["values_int"];
-      if (x["is_percentage"]) {
-        float = float.map((el) => (el += "%"));
-        int = int.map((el) => (el += "%"));
-      }
-      sp[sp.indexOf(x["name"])] = `${float || ""}${int || ""}`;
-    }
-  });
-  return highlight_numbers(sp.join(""));
-}
 
 class Tooltip {
-  constructor(tooltip, parentNode, result, id) {
+  constructor(tooltip) {
     this.tooltip = tooltip;
-    this.parent = parentNode;
-    this.result = result;
-    this.id = id;
   }
   generateLineOne(base, tooltipType) {
     let tooltipHeaderText, imgSrc;
     if (tooltipType == "talent") {
       tooltipHeaderText = event.target.alt;
     } else if (tooltipType == "item") {
-      tooltipHeaderText = base["language"]["displayName"];
+      tooltipHeaderText = base["displayName"];
     } else {
       tooltipHeaderText = base["name_loc"];
     }
@@ -209,7 +177,6 @@ class Tooltip {
       imgSrc = `${ability_base}${base["name"]}.png`;
     }
 
-    const _id = this.id;
     let tooltipTitle = document.createElement("div");
     tooltipTitle.setAttribute("class", "tooltip-title");
     this.tooltip.style.border = "3px solid black";
@@ -265,7 +232,7 @@ class Tooltip {
       );
       let costText = document.createElement("h4");
       costText.setAttribute("class", "cost-text");
-      costText.textContent = this.result[_id]["stat"]["cost"];
+      costText.textContent = base["stat"]["cost"];
       costWrapper.appendChild(costImg);
       costWrapper.appendChild(costText);
       if (costText.textContent > 0) {
@@ -289,6 +256,275 @@ class Tooltip {
     statBar.appendChild(statMax);
     statBar.appendChild(statRegen);
     return statBar;
+  }
+
+  heroAghanimSubImg(imgSrc, type) {
+    let baseImg = document.createElement("div");
+    baseImg.setAttribute("class", "tooltip-aghanim-img");
+    baseImg.style.backgroundImage = `url(${imgSrc})`;
+    let subImg = document.createElement("img");
+    subImg.setAttribute("class", "scepter-subicon");
+    const subImgUrl = `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_${type}.png`;
+    subImg.style.cssText += `background-image:url(${subImgUrl})`;
+    // const subImg = document.createElement("div");
+    // subImg.setAttribute("class", "scepter-subicon");
+    // subImg.setAttribute(
+    //   "src",
+    //   "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_scepter.png"
+    // );
+    baseImg.appendChild(subImg);
+    baseImg.style.position = "relative";
+    return baseImg;
+  }
+  heroaghanim(base, type) {
+    const aghanim = extract_aghanim(base["abilities"], type);
+    const wrapper = document.createElement("div");
+    wrapper.setAttribute("class", "hero-aghanim-wrapper");
+    wrapper.setAttribute("id", `hero-${type}`);
+    const imgSrc = `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/${aghanim["name"]}.png`;
+    const spellImg = this.heroAghanimSubImg(imgSrc, type);
+    const spellDesc = document.createElement("p");
+    spellDesc.style.fontSize = "13px";
+    spellDesc.innerHTML = this.highlight_numbers(aghanim[`${type}_loc`]);
+    if (aghanim[`${type}_loc`].length == 0) {
+      spellDesc.innerHTML = this.extract_hidden_values(
+        aghanim,
+        aghanim["desc_loc"]
+      );
+    }
+    wrapper.appendChild(spellImg);
+    wrapper.appendChild(spellDesc);
+    return wrapper;
+  }
+  baseStats(base, stat) {
+    const statWrapper = document.createElement("div");
+    statWrapper.setAttribute("class", "stat-wrapper");
+    const statImg = document.createElement("img");
+    statImg.setAttribute("class", "stat-img");
+    statImg.setAttribute(
+      "src",
+      `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_${stat}.png`
+    );
+    const statText =
+      stat === "damage"
+        ? `${base["damage_min"]}-${base["damage_max"]}`
+        : parseInt(base[stat]);
+    const text = document.createElement("p");
+    text.innerHTML = statText;
+    statWrapper.appendChild(statImg);
+    statWrapper.appendChild(text);
+    return statWrapper;
+  }
+  generateHeroContent(base) {
+    let tooltipContent = document.createElement("div");
+    tooltipContent.setAttribute("class", "tooltip-content");
+    const attributes = new TooltipAttributes().heroAttributes(base);
+    let stats = document.createElement("div");
+    stats.setAttribute("class", "stats");
+    const aghanimWrapper = document.createElement("div");
+    aghanimWrapper.setAttribute("class", "hero-aghanim-upgrades");
+    const shard = this.heroaghanim(base, "shard");
+    const scepter = this.heroaghanim(base, "scepter");
+    aghanimWrapper.appendChild(shard);
+    aghanimWrapper.appendChild(scepter);
+
+    //stats
+    const statAttrWrapper = document.createElement("div");
+    statAttrWrapper.setAttribute("class", "stats-container");
+    const statsWrapper = document.createElement("div");
+    statsWrapper.setAttribute("class", "stats-wrapper");
+    const damage = this.baseStats(base, "damage");
+    const armor = this.baseStats(base, "armor");
+    const movementSpeed = this.baseStats(base, "movement_speed");
+    statsWrapper.appendChild(damage);
+    statsWrapper.appendChild(armor);
+    statsWrapper.appendChild(movementSpeed);
+
+    statAttrWrapper.appendChild(attributes);
+    statAttrWrapper.appendChild(statsWrapper);
+
+    tooltipContent.appendChild(statAttrWrapper);
+    tooltipContent.appendChild(aghanimWrapper);
+    if (!this.tooltip.children[1]) {
+      this.tooltip.appendChild(tooltipContent);
+    }
+  }
+
+  generateContent(base, tooltipType) {
+    let attributes, lore, aghanimDescriptionText;
+    let description = document.createElement("div");
+    description.setAttribute("class", "tooltip-description");
+    const tooltipAttributes = new TooltipAttributes();
+    if (tooltipType.includes("aghanim")) {
+      if (tooltipType === "aghanim-shard") {
+        aghanimDescriptionText = this.highlight_numbers(base["shard_loc"]);
+      } else {
+        aghanimDescriptionText = this.highlight_numbers(base["scepter_loc"]);
+      }
+      if (aghanimDescriptionText.length == 0) {
+        aghanimDescriptionText = this.extract_hidden_values(
+          base,
+          base["desc_loc"]
+        );
+      }
+      description.innerHTML = aghanimDescriptionText;
+    }
+    if (tooltipType === "item") {
+      attributes = tooltipAttributes.attributeGen(base);
+      description = new TooltipDescription().description(base);
+    } else if (tooltipType === "ability") {
+      description.innerHTML = this.extract_hidden_values(
+        base,
+        base["desc_loc"]
+      );
+      attributes = tooltipAttributes.attributeGen(base, null);
+    }
+    lore = this.genLore(base);
+    this.appendToContent(tooltipType, description, attributes, lore);
+  }
+  genLore(base) {
+    const lore = document.createElement("div");
+    lore.setAttribute("class", "tooltip-lore");
+    let loreText;
+    if ("language" in base) {
+      loreText =
+        typeof base["language"]["lore"][0] === "string"
+          ? base["language"]["lore"]
+          : base["language"]["lore"][0] || null;
+    } else {
+      loreText = base["lore_loc"];
+    }
+    if (loreText) {
+      let loreTextEl = document.createElement("p");
+      loreTextEl.textContent = loreText;
+      lore.appendChild(loreTextEl);
+    }
+    return lore;
+  }
+  appendToContent(tooltipType, description = [], attributes = [], lore = []) {
+    let tooltipContent = document.createElement("div");
+    tooltipContent.setAttribute("class", "tooltip-content");
+    if (tooltipType.includes("aghanim")) {
+      tooltipContent.appendChild(description);
+    } else if (event.target.className === "table-img") {
+      tooltipContent.appendChild(description);
+      tooltipContent.appendChild(attributes);
+      tooltipContent.appendChild(lore);
+    } else {
+      console.log(attributes);
+      tooltipContent.appendChild(attributes);
+      tooltipContent.appendChild(description);
+      tooltipContent.appendChild(lore);
+    }
+    if (!this.tooltip.children[1]) {
+      this.tooltip.appendChild(tooltipContent);
+    }
+  }
+  generateFooter(base, tooltipType) {
+    let tooltipFooter = document.createElement("div");
+    tooltipFooter.setAttribute("class", "tooltip-footer");
+    if (tooltipType === "item") {
+      return;
+    }
+    if ("mana_costs" in base && base["mana_costs"].some((x) => x > 0)) {
+      this.footerContent(tooltipFooter, base, "mana_costs", "mana");
+    }
+    if ("cooldowns" in base && base["cooldowns"].some((x) => x > 0)) {
+      this.footerContent(tooltipFooter, base, "cooldowns", "cooldown");
+    }
+    if (tooltipFooter.children.length == 0) {
+      tooltipFooter.style.padding = "0px";
+      tooltipFooter.style.borderTop = "0px";
+    }
+    if (!this.tooltip.children[2]) {
+      this.tooltip.appendChild(tooltipFooter);
+    }
+  }
+  footerContent(tooltipFooter, base, classname, img) {
+    const statWrapper = document.createElement("div");
+    statWrapper.setAttribute(`class`, `${classname.replace("_", "-")}`);
+    const statImg = document.createElement("img");
+    statImg.setAttribute("class", "tooltip-footer-img");
+    statImg.setAttribute(
+      "src",
+      `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/${img}.png`
+    );
+    const statText = document.createElement("p");
+    statText.setAttribute("class", "footer-text");
+    console.log(base);
+    statText.textContent = base[classname].join("/");
+    statWrapper.appendChild(statImg);
+    statWrapper.appendChild(statText);
+    if (event.target.className == "table-img") {
+      tooltipFooter.appendChild(statWrapper);
+    }
+  }
+  highlight_numbers(text) {
+    if (typeof text == "object" && text != null) text = text.join("");
+    return text
+      ? text
+          .replace(/<font(.*?)>/g, "")
+          .replace(/font/g, "")
+          .replace(
+            /([^a-z>]\d*\.?\d+%?)(\s\/)?/gm,
+            `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
+          )
+          .replace(/<h1>/g, "<h3 class='tooltip-text-highlight'>")
+          .replace(/<\/h1>/g, "</h3>")
+      : "";
+  }
+  extract_hidden_values(base, text) {
+    let sp = text.split("%");
+    base["special_values"].forEach((x) => {
+      if (sp.indexOf(x["name"]) > -1) {
+        let float = x["values_float"].map(
+            (el) => parseFloat(el).toFixed(2) * 1
+          ),
+          int = x["values_int"];
+        if (x["is_percentage"]) {
+          float = float.map((el) => (el += "%"));
+          int = int.map((el) => (el += "%"));
+        }
+        sp[sp.indexOf(x["name"])] = `${float || ""}${int || ""}`;
+      }
+    });
+    return this.highlight_numbers(sp.join(""));
+  }
+}
+
+class TooltipAttributes extends Tooltip {
+  attributeGen(base) {
+    const attribute_obj = [];
+    const attributes = document.createElement("div");
+    attributes.setAttribute("class", "attributes");
+    if (base["attrib"]) {
+      base["attrib"].forEach((x) => {
+        attribute_obj.push(`${x["header"]} ${x["value"]} ${x["footer"]}`);
+      });
+    } else {
+      base["special_values"].forEach((x) => {
+        let heading = x["heading_loc"],
+          float = x["values_float"].map((el) => parseFloat(el).toFixed(2)),
+          int = x["values_int"];
+        if (heading.length > 0) {
+          if (x["is_percentage"]) {
+            float = float.map((el) => (el += "%"));
+            int = int.map((el) => (el += "%"));
+          }
+          float = float.join("/");
+          int = int.join("/");
+          attribute_obj.push(heading + " " + float + int);
+        }
+      });
+    }
+    const attributesBody = attribute_obj
+      .join("<br>")
+      .replace(
+        /([^h]\d*\.?\d+%?)(\s\/)?/gi,
+        `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
+      );
+    attributes.innerHTML = `<p>${attributesBody}</p>`;
+    return attributes;
   }
   singleAttribute(base, attribute) {
     const shrtAttr = attribute.substring(0, 3);
@@ -324,340 +560,84 @@ class Tooltip {
     attributes.appendChild(int);
     return attributes;
   }
-  heroAghanimSubImg(imgSrc, type) {
-    let baseImg = document.createElement("div");
-    baseImg.setAttribute("class", "tooltip-aghanim-img");
-    baseImg.style.backgroundImage = `url(${imgSrc})`;
-    let subImg = document.createElement("img");
-    subImg.setAttribute("class", "scepter-subicon");
-    const subImgUrl = `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_${type}.png`;
-    subImg.style.cssText += `background-image:url(${subImgUrl})`;
-    // const subImg = document.createElement("div");
-    // subImg.setAttribute("class", "scepter-subicon");
-    // subImg.setAttribute(
-    //   "src",
-    //   "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/stats/aghs_scepter.png"
-    // );
-    baseImg.appendChild(subImg);
-    baseImg.style.position = "relative";
-    return baseImg;
-  }
-  heroaghanim(base, type) {
-    const aghanim = extract_aghanim(base["abilities"], type);
-    const wrapper = document.createElement("div");
-    wrapper.setAttribute("class", "hero-aghanim-wrapper");
-    wrapper.setAttribute("id", `hero-${type}`);
-    const imgSrc = `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/${aghanim["name"]}.png`;
-    const spellImg = this.heroAghanimSubImg(imgSrc, type);
-    const spellDesc = document.createElement("p");
-    spellDesc.style.fontSize = "13px";
-    spellDesc.innerHTML = highlight_numbers(aghanim[`${type}_loc`]);
-    if (aghanim[`${type}_loc`].length == 0) {
-      spellDesc.innerHTML = extract_hidden_values(aghanim, aghanim["desc_loc"]);
-    }
-    wrapper.appendChild(spellImg);
-    wrapper.appendChild(spellDesc);
-    return wrapper;
-  }
-  baseStats(base, stat) {
-    const statWrapper = document.createElement("div");
-    statWrapper.setAttribute("class", "stat-wrapper");
-    const statImg = document.createElement("img");
-    statImg.setAttribute("class", "stat-img");
-    statImg.setAttribute(
-      "src",
-      `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react//heroes/stats/icon_${stat}.png`
-    );
-    const statText =
-      stat === "damage"
-        ? `${base["damage_min"]}-${base["damage_max"]}`
-        : parseInt(base[stat]);
-    const text = document.createElement("p");
-    text.innerHTML = statText;
-    statWrapper.appendChild(statImg);
-    statWrapper.appendChild(text);
-    return statWrapper;
-  }
-
-  generateHeroContent(base) {
-    let tooltipContent = document.createElement("div");
-    tooltipContent.setAttribute("class", "tooltip-content");
-    const attributes = this.heroAttributes(base);
-    let stats = document.createElement("div");
-    stats.setAttribute("class", "stats");
-    const aghanimWrapper = document.createElement("div");
-    aghanimWrapper.setAttribute("class", "hero-aghanim-upgrades");
-    const shard = this.heroaghanim(base, "shard");
-    const scepter = this.heroaghanim(base, "scepter");
-    aghanimWrapper.appendChild(shard);
-    aghanimWrapper.appendChild(scepter);
-
-    //stats
-    const statAttrWrapper = document.createElement("div");
-    statAttrWrapper.setAttribute("class", "stats-container");
-    const statsWrapper = document.createElement("div");
-    statsWrapper.setAttribute("class", "stats-wrapper");
-    const damage = this.baseStats(base, "damage");
-    const armor = this.baseStats(base, "armor");
-    const movementSpeed = this.baseStats(base, "movement_speed");
-    statsWrapper.appendChild(damage);
-    statsWrapper.appendChild(armor);
-    statsWrapper.appendChild(movementSpeed);
-
-    statAttrWrapper.appendChild(attributes);
-    statAttrWrapper.appendChild(statsWrapper);
-
-    tooltipContent.appendChild(statAttrWrapper);
-    tooltipContent.appendChild(aghanimWrapper);
-    if (!this.tooltip.children[1]) {
-      this.tooltip.appendChild(tooltipContent);
-    }
-  }
-  generateContent(base, tooltipType) {
-    let _id = this.id,
-      result = this.result;
-    let tooltipContent = document.createElement("div");
-    tooltipContent.setAttribute("class", "tooltip-content");
-    let attributesBody,
-      attribute_obj = [],
-      descriptionBody,
-      attributes,
-      description,
-      lore,
-      aghanimDescriptionText;
-    if (tooltipType.includes("aghanim")) {
-      if (tooltipType === "aghanim-shard") {
-        aghanimDescriptionText = highlight_numbers(base["shard_loc"]);
-      } else {
-        aghanimDescriptionText = highlight_numbers(base["scepter_loc"]);
-      }
-      if (aghanimDescriptionText.length == 0) {
-        aghanimDescriptionText = extract_hidden_values(base, base["desc_loc"]);
-      }
-      let aghanimDescription = document.createElement("div");
-      aghanimDescription.setAttribute("class", "shard-description");
-      aghanimDescription.innerHTML = aghanimDescriptionText;
-      tooltipContent.appendChild(aghanimDescription);
-    }
-    if ("special_values" in base || "attributes" in base["language"]) {
-      attributes = document.createElement("div");
-      attributes.setAttribute("class", "attributes");
-      if ("language" in base) {
-        attribute_obj = base["language"]["attributes"];
-      } else {
-        base["special_values"].forEach((x) => {
-          let heading = x["heading_loc"],
-            float = x["values_float"].map((el) => parseFloat(el).toFixed(2)),
-            int = x["values_int"];
-          if (heading.length > 0) {
-            if (x["is_percentage"]) {
-              float = float.map((el) => (el += "%"));
-              int = int.map((el) => (el += "%"));
-            }
-            float = float.join("/");
-            int = int.join("/");
-            attribute_obj.push(heading + " " + float + int);
-          }
-        });
-      }
-      attributesBody = attribute_obj
-        .join("<br>")
-        .replace(
-          /([^h]\d*\.?\d+%?)(\s\/)?/gi,
-          `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
+}
+class TooltipDescription extends Tooltip {
+  description(base) {
+    const description = document.createElement("div");
+    description.setAttribute("class", "tooltip-description");
+    const activeDiv = document.createElement("div");
+    const passiveDiv = document.createElement("div");
+    const useDiv = document.createElement("div");
+    activeDiv.setAttribute("class", "active");
+    passiveDiv.setAttribute("class", "passive");
+    useDiv.setAttribute("class", "use");
+    base["language"]["description"].forEach((x) => {
+      let activeText = super.highlight_numbers(x.match(/.*<h1>Active:.*/g));
+      let toggleText = super.highlight_numbers(x.match(/.*<h1>Toggle:.*/g));
+      let passiveText = super.highlight_numbers(x.match(/.*<h1>Passive:.*/g));
+      let useText = super.highlight_numbers(x.match(/.*<h1>Use:.*/g));
+      if (activeText || toggleText) {
+        const activeHeader = x.replace(/<h1>(.*)<\/h1>.*/g, "$1");
+        const activeTxt = x.replace(/.*<\/h1>(.*)/g, "$1");
+        const headWrapper = document.createElement("div");
+        const head = document.createElement("h3");
+        const desc = document.createElement("p");
+        headWrapper.setAttribute("class", "test");
+        head.textContent = activeHeader;
+        desc.setAttribute("class", "description-text");
+        desc.innerHTML = super.highlight_numbers(activeTxt);
+        let statWrapper = document.createElement("div");
+        statWrapper.setAttribute("class", "statWrapper");
+        headWrapper.appendChild(head);
+        const mc = this.statTextGen(
+          base["stat"]["manaCost"],
+          "mana",
+          statWrapper
         );
-      attributes.innerHTML = `<p>${attributesBody}</p>`;
-    }
-    if ("desc_loc" in base || "description" in base["language"]) {
-      //   htmlString = base["description"].join(",");
-      description = document.createElement("div");
-      description.setAttribute("class", "tooltip-description");
+        const cd = this.statTextGen(
+          base["stat"]["cooldown"],
+          "cooldown",
+          statWrapper
+        );
 
-      let activeDiv = document.createElement("div");
-      let passiveDiv = document.createElement("div");
-      let useDiv = document.createElement("div");
-      let activeWrapper = document.createElement("div");
-      let passiveWrapper = document.createElement("div");
-      let useWrapper = document.createElement("div");
-
-      activeDiv.setAttribute("class", "active");
-      passiveDiv.setAttribute("class", "passive");
-      useDiv.setAttribute("class", "use");
-      if ("language" in base && "description" in base["language"]) {
-        base["language"]["description"].forEach((x) => {
-          let activeText = highlight_numbers(x.match(/.*<h1>Active:.*/g));
-          let toggleText = highlight_numbers(x.match(/.*<h1>Toggle:.*/g));
-          let passiveText = highlight_numbers(x.match(/.*<h1>Passive:.*/g));
-          let useText = highlight_numbers(x.match(/.*<h1>Use:.*/g));
-          if (activeText || toggleText) {
-            const activeHeader = x.replace(/<h1>(.*)<\/h1>.*/g, "$1");
-            const activeTxt = x.replace(/.*<\/h1>(.*)/g, "$1");
-            let headWrapper = document.createElement("div");
-            let head = document.createElement("h3");
-            let desc = document.createElement("p");
-            let statWrapper = document.createElement("div");
-            headWrapper.setAttribute("class", "test");
-            head.textContent = activeHeader;
-            desc.setAttribute("class", "description-text");
-            desc.innerHTML = highlight_numbers(activeTxt);
-            statWrapper.setAttribute("class", "statWrapper");
-
-            let mc = document.createElement("img");
-            mc.setAttribute(
-              "src",
-              "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/mana.png"
-            );
-            headWrapper.appendChild(head);
-
-            let mcText = document.createElement("p");
-            let manaCost = this.result[_id]["stat"]["manaCost"] || false;
-            if (manaCost) {
-              mcText.textContent = manaCost[0];
-              statWrapper.appendChild(mc);
-              statWrapper.appendChild(mcText);
-            }
-
-            let cd = document.createElement("img");
-            cd.setAttribute(
-              "src",
-              "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/cooldown.png"
-            );
-            let cdText = document.createElement("p");
-            let cooldown = result[_id]["stat"]["cooldown"] || false;
-
-            if (cooldown) {
-              cdText.textContent = cooldown[0];
-              statWrapper.appendChild(cd);
-              statWrapper.appendChild(cdText);
-            }
-            headWrapper.appendChild(statWrapper);
-            activeDiv.appendChild(headWrapper);
-            activeDiv.appendChild(desc);
-          }
-          if (passiveText) {
-            passiveText = passiveText.replace(
-              /(\/h3>)(.*)/g,
-              `$1<p class='description-text'>$2</p>`
-            );
-            passiveWrapper = document.createElement("div");
-            passiveWrapper.setAttribute("class", "passive-description");
-            passiveWrapper.innerHTML = passiveText;
-            passiveDiv.appendChild(passiveWrapper);
-          }
-          if (useText) {
-            useText = useText.replace(
-              /(\/h3>)(.*)/g,
-              `$1<p class='description-text'>$2</p>`
-            );
-            useWrapper = document.createElement("div");
-            useWrapper.setAttribute("class", "use-description");
-            useWrapper.innerHTML = useText;
-            useDiv.appendChild(useWrapper);
-          }
-        });
+        headWrapper.appendChild(cd);
+        headWrapper.appendChild(mc);
+        activeDiv.appendChild(headWrapper);
+        activeDiv.appendChild(desc);
+      }
+      if (passiveText) {
+        const useWrapper = this.descText(passiveText, "passive");
+        passiveDiv.appendChild(useWrapper);
+      }
+      if (useText) {
+        const useWrapper = this.descText(useText, "use");
+        useDiv.appendChild(useWrapper);
       }
       if (activeDiv.children.length > 0) description.appendChild(activeDiv);
       if (passiveDiv.children.length > 0) description.appendChild(passiveDiv);
       if (useDiv.children.length > 0) description.appendChild(useDiv);
-      if (event.target.className === "table-img") {
-        description.innerHTML = extract_hidden_values(base, base["desc_loc"]);
-      }
-      lore = document.createElement("div");
-      lore.setAttribute("class", "tooltip-lore");
-      let loreText;
-      if ("language" in base) {
-        loreText =
-          typeof base["language"]["lore"][0] === "string"
-            ? base["language"]["lore"]
-            : base["language"]["lore"][0] || null;
-      } else {
-        loreText = base["lore_loc"];
-      }
-      if (loreText) {
-        let loreTextEl = document.createElement("p");
-        loreTextEl.textContent = loreText;
-        lore.appendChild(loreTextEl);
-      }
-      if (tooltipType.includes("aghanim")) {
-      } else if (event.target.className === "table-img") {
-        tooltipContent.appendChild(description);
-        tooltipContent.appendChild(attributes);
-        tooltipContent.appendChild(lore);
-      } else {
-        tooltipContent.appendChild(attributes);
-        tooltipContent.appendChild(description);
-        tooltipContent.appendChild(lore);
-      }
-      if (!this.tooltip.children[1]) {
-        this.tooltip.appendChild(tooltipContent);
-      }
-    }
+    });
+    return description;
   }
-
-  generateFooter(base) {
-    let tooltipFooter = document.createElement("div");
-    tooltipFooter.setAttribute("class", "tooltip-footer");
-    let stat = base["stat"];
-    if (
-      ("mana_costs" in base && base["mana_costs"].some((x) => x > 0)) ||
-      ("stat" in base &&
-        "manaCost" in base["stat"] &&
-        base["stat"]["manaCost"].some((x) => x > 0))
-    ) {
-      let mcWrapper = document.createElement("div");
-      mcWrapper.setAttribute("class", "mana-costs");
-      let manaCosts = document.createElement("img");
-      manaCosts.setAttribute("class", "tooltip-footer-img");
-      manaCosts.setAttribute(
-        "src",
-        "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/mana.png"
-      );
-      let mcText = document.createElement("p");
-      mcText.setAttribute("class", "footer-text");
-      if ("stat" in base) {
-        mcText.textContent = stat["manaCost"].join("/");
-      } else {
-        mcText.textContent = base["mana_costs"].join("/");
-      }
-      mcWrapper.appendChild(manaCosts);
-      mcWrapper.appendChild(mcText);
-      if (event.target.className == "table-img") {
-        tooltipFooter.appendChild(mcWrapper);
-      }
+  descText(text, classText) {
+    text = text.replace(/(\/h3>)(.*)/g, `$1<p class='description-text'>$2</p>`);
+    const textWrapper = document.createElement("div");
+    textWrapper.setAttribute("class", `${classText}-description`);
+    textWrapper.innerHTML = text;
+    return textWrapper;
+  }
+  statTextGen(txt, stat, statWrapper) {
+    let img = document.createElement("img");
+    img.setAttribute(
+      "src",
+      `https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/${stat}.png`
+    );
+    let statText = document.createElement("p");
+    if (txt) {
+      statText.textContent = txt[0];
+      statWrapper.appendChild(img);
+      statWrapper.appendChild(statText);
     }
-    if (
-      ("cooldowns" in base && base["cooldowns"].some((x) => x > 0)) ||
-      ("stat" in base &&
-        "cooldown" in base["stat"] &&
-        base["stat"]["cooldown"].some((x) => x > 0))
-    ) {
-      let cdWrapper = document.createElement("div");
-      cdWrapper.setAttribute("class", "cooldowns");
-      let cooldowns = document.createElement("img");
-      cooldowns.setAttribute("class", "tooltip-footer-img");
-      cooldowns.setAttribute(
-        "src",
-        "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/tooltips/cooldown.png"
-      );
-      let cdText = document.createElement("p");
-      cdText.setAttribute("class", "footer-text");
-      if ("stat" in base) {
-        cdText.textContent = stat["cooldown"].join("/");
-      } else {
-        cdText.textContent = base["cooldowns"].join("/");
-      }
-      cdWrapper.appendChild(cooldowns);
-      cdWrapper.appendChild(cdText);
-      if (event.target.className == "table-img") {
-        tooltipFooter.appendChild(cdWrapper);
-      }
-    }
-    if (tooltipFooter.children.length == 0) {
-      tooltipFooter.style.padding = "0px";
-      tooltipFooter.style.borderTop = "0px";
-    }
-    if (!this.tooltip.children[2]) {
-      this.tooltip.appendChild(tooltipFooter);
-    }
+    return statWrapper;
   }
 }
