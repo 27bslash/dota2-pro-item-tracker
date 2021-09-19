@@ -123,18 +123,8 @@ def hero_ability_json(hero_name):
 
 @ app.route('/files/items')
 def items_json():
-    data = db['all_items'].find_one({}, {'_id': 0})
-    with open('fin.json', 'r') as f:
-        data = json.load(f)
-    return data
-
-
-@ app.route('/files/item_attribs')
-def items_attribs_json():
-    data = db['all_items'].find_one({}, {'_id': 0})
-    with open('item.json', 'r') as f:
-        data = json.load(f)
-    return data
+    data = db['all_items'].find_one({}, {'_id': 0, 'items': 1})
+    return json.dumps(data)
 
 
 @ app.route('/files/colors')
