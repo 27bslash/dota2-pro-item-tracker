@@ -27,8 +27,11 @@
       bfilter: false,
       searching: true,
       ajax: {},
-      processing: true, ajax:{},
-      "language": { processing: '<img src=\'../static/icons/loading.gif\'></img> '},
+      processing: true,
+      ajax: {},
+      language: {
+        processing: "<img src='../static/icons/loading.gif'></img> ",
+      },
       serverSide: true,
       deferRender: true,
       pageLength: 10,
@@ -40,13 +43,10 @@
     });
   });
 </script>
-<script
-src="{{ url_for('static', filename='copy-match-id.js') }}"
-
-></script>
+<script src="{{ url_for('static', filename='copy-match-id.js') }}"></script>
 <script
   src="{{ url_for('static', filename='tooltip.js') }}"
-  
+  type="module"
   defer
 ></script>
 <link

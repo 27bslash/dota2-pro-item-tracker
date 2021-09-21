@@ -34,22 +34,10 @@
       pageLength: 10,
       ajax: window.origin + window.location.pathname +'/table' + window.location.search
       });
-    var lastIdx = null;
-    $(".item-table tbody")
-      .on("mouseover", ".stats", function () {
-        var colIdx = table.cell(this).index().column;
-        if (colIdx !== lastIdx) {
-          $(table.cells().nodes()).removeClass("highlight");
-          $(table.column(colIdx).nodes()).addClass("highlight");
-        }
-      })
-      .on("mouseleave", function () {
-        $(table.cells().nodes()).removeClass("highlight");
-      });    
     });
 </script>
 <script src="{{ url_for('static', filename='copy-match-id.js') }} "defer ></script>
-<script src="{{ url_for('static', filename='tooltip.js') }}" defer ></script>
+<script src="{{ url_for('static', filename='tooltip.js') }}" type='module' defer ></script>
 <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}">
 <title>{{hero_name}}</title>
 <main>
@@ -194,7 +182,7 @@
         <img
           id="main-talent-img"
           height="70"
-          src="{{ url_for('static', filename='talent_img.png') }}"
+          src="{{ url_for('static', filename='images/talent_img.png') }}"
         />
         <div class="tooltip" id="talents" style="display: none">
           {%for talent in talents%} {%if talent.slot % 2 == 0 or talent.slot ==
