@@ -1,3 +1,4 @@
+import mimetypes
 import asyncio
 import datetime
 import itertools
@@ -37,6 +38,7 @@ compress.init_app(app)
 # minify(app=app, html=True, js=False, cssless=False)
 
 # classes
+mimetypes.add_type('application/javascript', '.js')
 
 
 @app.route('/', methods=['GET'])

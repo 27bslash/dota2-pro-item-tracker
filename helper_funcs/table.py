@@ -166,7 +166,7 @@ def item_text_str(items, img_host, type, hero):
 def ability_str(ability: object, img_host, type):
     ability_img = f"{img_host}/abilities/{ability['img']}.png"
     if type == 'talent':
-        ability_img = '/static/talent_img.png'
+        ability_img = '/static/images/talent_img.png'
     ability_id = ability['id']
     ability_key = ability['key']
     html_string = ''
