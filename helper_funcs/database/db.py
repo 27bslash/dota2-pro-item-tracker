@@ -5,8 +5,6 @@ import traceback
 from datetime import datetime
 from operator import itemgetter
 
-import pymongo
-
 from ..abilities import detailed_ability_info
 from ..hero import Hero
 from ..switcher import switcher
@@ -160,46 +158,42 @@ class Db_insert:
         output = []
         roles = ['Hard Support', 'Support', 'Safelane',
                  'Offlane', 'Midlane', 'Roaming']
-        try:
-            data = db['hero_list'].find_one({})
-            for i, hero in enumerate(data['heroes']):
-                picks = hero_output.count_documents({'hero': hero['name']})
-                total_wins = hero_output.count_documents(
-                    {'hero': hero['name'], 'win': 1})
-                total_bans = hero_output.count_documents(
-                    {'bans': hero['name']})
-                if total_wins == 0 or picks == 0:
-                    total_winrate = 0
+        data = db['hero_list'].find_one({})
+        for hero in data['heroes']:
+            picks = hero_output.count_documents({'hero': hero['name']})
+            total_wins = hero_output.count_documents(
+                {'hero': hero['name'], 'win': 1})
+            total_bans = hero_output.count_documents(
+                {'bans': hero['name']})
+            if total_wins == 0 or picks == 0:
+                total_winrate = 0
+            else:
+                total_winrate = (total_wins / picks) * 100
+            role_dict = {'hero':hero['name'],
+                         'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
+            for role in roles:
+                wins = hero_output.count_documents(
+                    {'hero': hero['name'], 'win': 1, 'role': role})
+                losses = hero_output.count_documents(
+                    {'hero': hero['name'], 'win': 0, 'role': role})
+                picks = wins+losses
+                if picks == 0:
+                    winrate = 0
                 else:
-                    total_winrate = (total_wins / picks) * 100
-                role_dict = {'hero': switcher(hero['name']),
-                             'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
-                for role in roles:
-                    wins = hero_output.count_documents(
-                        {'hero': hero['name'], 'win': 1, 'role': role})
-                    losses = hero_output.count_documents(
-                        {'hero': hero['name'], 'win': 0, 'role': role})
-                    picks = wins+losses
-                    if picks > 0:
-                        winrate = wins/picks*100
-                    else:
-                        winrate = 0
+                    winrate = wins/picks*100
                     role_dict[f"{role}_picks"] = picks
                     role_dict[f"{role}_wins"] = wins
                     role_dict[f"{role}_losses"] = losses
                     role_dict[f"{role}_winrate"] = winrate
-                output.append(role_dict)
-                wins = sorted(output, key=itemgetter('hero'))
-            # db['wins'].insert_one({'stats': wins})
-            db['wins'].find_one_and_replace(
-                {}, {'stats': wins}, None, None, True)
-        except Exception as e:
-            print(e, e.__class__)
+            output.append(role_dict)
+            db['wins'].find_one_and_replace({'hero': hero['name']},
+                                            role_dict, upsert=True)
 
     def insert_all(self):
         self.insert_worst_games()
         self.insert_best_games()
         self.insert_player_picks()
+        self.insert_winrates()
 
 
 if __name__ == '__main__':

@@ -220,9 +220,10 @@
         was picked {{total}} times. It's mostly played:
       </p>
       {%for k,v in roles.items()%}
-      <a href="/hero/{{hero_name}}/starter_items?role={{k}}">
+      {%set clean_key =k|replace('_picks', '')%}
+      <a href="/hero/{{hero_name}}?role={{clean_key}}">
         <p class="total-picks">
-          {{k}} ({{v}}){{"," if not loop.last else "." }}
+          {{clean_key}} ({{v}}){{"," if not loop.last else "." }}
         </p>
       </a>
       {%endfor%}

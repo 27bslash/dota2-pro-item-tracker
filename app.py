@@ -50,8 +50,11 @@ def index():
     links = sorted(
         links, key=itemgetter('name'))
     img_names = [switcher(i['name']) for i in links]
-    win_data = db['wins'].find_one({})
-    wins = [item for item in win_data['stats'] if 'stats' in win_data]
+    win_data = db['wins'].find()
+    wins = [item for item in win_data]
+    for entry in wins:
+        entry['hero'] = switcher(entry['hero'])
+    wins = sorted(wins, key=lambda k: k['hero'])
     total_games = hero_output.count_documents({})
     return render_template('index.html', hero_imgs=img_names, links=links, wins=wins, total_games=total_games)
 
@@ -75,8 +78,8 @@ def hero_get(hero_name):
     template = hv.templateSelector(request, '')
     if 'table' in request.url:
         return generate_table('hero', hero_name, template, request)
-    arggs = hv.hero_view(hero_name, request)
-    return render_template(template, **arggs)
+    kwargs = hv.hero_view(hero_name, request)
+    return render_template(template, **kwargs)
 
 
 @app.route('/player/<player_name>/starter_items', methods=['GET'])
@@ -88,8 +91,8 @@ def player_get(player_name):
     template = pv.templateSelector(request, 'player_')
     if 'table' in request.url:
         return generate_table('player', player_name, template, request)
-    arggs = pv.player_view(player_name, request)
-    return render_template(template, **arggs)
+    kwargs = pv.player_view(player_name, request)
+    return render_template(template, **kwargs)
 
 
 @app.route('/chappie')
@@ -99,7 +102,7 @@ def chappie_get():
     times = [timeago.format(
         match['unix_time'], datetime.datetime.now()) for match in data]
     d = dict(Counter(replaced))
-    count = {k: d[k] for k in sorted(d, key=d.get, reverse=True)}
+    count = {k: d[k] for k in sorted(d, key=d.get, reverse=True) if d[k] > 1}
     return render_template('chappie.html', data=data, count=count, times=times, unix_times=[match['unix_time'] for match in data])
 
 
@@ -152,8 +155,9 @@ def acc_json():
 
 @ app.route('/files/win-stats')
 def wins_json():
-    data = db['wins'].find_one({})
-    return json.dumps(data['stats'])
+    data = db['wins'].find({}, {'_id': 0})
+    wins = [item for item in data]
+    return json.dumps(wins)
 
 
 @ app.route('/files/hero-data/<hero_name>')
@@ -192,14 +196,3 @@ def main():
 if __name__ == '__main__':
     main()
     # database_methods.insert_winrates()
-    # manual_hero_update('hoodwink')
-    # app.run(debug=True)
-    # update_one_entry('windrunner', 6171594476)
-    # delete_old_urls()
-    # database_methods.insert_all()
-    # parse_request()
-    # get_winrate()
-    # update_pro_accounts()
-    # database_methods.insert_worst_games()
-    # print(hero_methods.hero_name_from_hero_id(39))
-    # manual_hero_update('jakiro')
