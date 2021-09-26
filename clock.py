@@ -23,8 +23,6 @@ def daily_update():
             print(hero)
             continue
         asyncio.run(opendota_call(get_urls(hero), hero))
-        database_methods.insert_total_picks('hero', hero, 'hero_picks')
-        database_methods.insert_total_picks('bans', hero, 'hero_picks')
         if sleep >= 60:
             sleep = 60
         print('sleeping for: ', sleep)
@@ -32,7 +30,6 @@ def daily_update():
     delete_old_urls()
     database_methods.insert_all()
     parse_request()
-    database_methods.insert_winrates()
     update_pro_accounts()
     print('end', (time.time()-start)/60, 'minutes')
 
