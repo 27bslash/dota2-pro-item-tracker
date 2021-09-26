@@ -40,13 +40,23 @@ async def account_id(m_id, hero_name):
             url, traceback.format_exc()))
 
 
-async def async_get(m_id, hero_name):
+def draft(resp, side):
+    hero_ids = [player['hero_id'] for player in resp['players']]
+    hero_methods = Hero()
+    return [hero_methods.hero_name_from_hero_id(
+        player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == side and player['hero_id'] in hero_ids]
+
+
+async def async_get(m_id, hero_name, testing=False):
+    if testing:
+        global hero_output
+        hero_output = db['test_heroes']
     url = f'https://api.opendota.com/api/matches/{m_id}'
     dupe_check = hero_output.find_one({'hero': hero_name, 'id': m_id})
     bad_id_check = db['dead_games'].find_one(
         {'id': m_id, 'count': {"$gt": 10}})
     if dupe_check is not None or bad_id_check is not None:
-        return
+        return 'Bad ID'
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(url=url) as response:
@@ -55,11 +65,8 @@ async def async_get(m_id, hero_name):
                 resp = await response.json()
                 match_id = int(resp['match_id'])
                 print(f"successfully got {match_id}")
-                hero_ids = [player['hero_id'] for player in resp['players']]
-                rad_draft = [hero_methods.hero_name_from_hero_id(
-                    player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 0 and player['hero_id'] in hero_ids]
-                dire_draft = [hero_methods.hero_name_from_hero_id(
-                    player['hero_id']) for player in resp['picks_bans'] if player['is_pick'] and player['team'] == 1 and player['hero_id'] in hero_ids]
+                rad_draft = draft(resp, 0)
+                dire_draft = draft(resp, 1)
                 hero_bans = [hero_methods.hero_name_from_hero_id(
                     ban['hero_id']) for ban in resp['picks_bans'] if ban['is_pick'] == False]
                 for i in range(10):
@@ -128,8 +135,8 @@ async def async_get(m_id, hero_name):
                                  'starting_items': starting_items, 'benchmarks': p['benchmarks'], 'gold_adv': resp['radiant_gold_adv'][-1],
                                  'final_items': main_items, 'backpack': bp_items, 'item_neutral': item_methods.get_item_name(p['item_neutral']), 'aghanims_shard': aghanims_shard,
                                  'abilities': detailed_ability_info(abilities, hero_id), 'items': purchase_log})
-
                             print(f"{hero_name} should reach here.")
+                            return 'No Errors'
                         else:
                             add_to_dead_games(m_id)
 
@@ -209,9 +216,10 @@ def roles(s, p_slot):
             return 'Support'
 
 
-async def opendota_call(urls, hero_name):
+async def opendota_call(urls, hero_name, testing=False):
     print(f"{hero_name}: {urls}")
-    ret = await asyncio.gather(*[async_get(url, hero_name) for url in urls])
+    ret = await asyncio.gather(*[async_get(url, hero_name, testing) for url in urls])
+    return ret
 
 
 async def get_acc_ids(urls, hero_name):
