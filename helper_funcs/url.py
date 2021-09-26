@@ -38,11 +38,7 @@ def parse_request():
     data = parse.find({})
     for match in data:
         url = f"https://api.opendota.com/api/request/{match['id']}"
-        try:
-            req = requests.post(url)
-        except Exception as e:
-            print(e)
-        print('parse', match['id'])
+        req = requests.post(url)
         parse.delete_one({'id': match['id']})
 
 
