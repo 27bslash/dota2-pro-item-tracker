@@ -25,7 +25,11 @@
     });
   });
 </script>
-<script src="{{ url_for('static', filename='tooltip.js') }}" defer></script>
+<script
+  src="{{ url_for('static', filename='tooltip.js') }}"
+  type="module"
+  defer
+></script>
 <link
   rel="stylesheet"
   type="text/css"
@@ -34,7 +38,10 @@
 <title>chappie</title>
 <body>
   <div style="display: flex">
-    <h4 style="color: white">{{data|length}} feeding pros this week the worst offenders are:</h4>
+    <h4 style="color: white">
+      {{data|length}} feeding pros this week {% if count|length > 0%} the worst
+      offenders are {%endif%}:
+    </h4>
     {%for k,v in count.items()%} {%if v > 1%}
     <h4 style="color: white; margin-left: 10px">
       {{k}} ({{v}}){{"," if not loop.last else "." }}
