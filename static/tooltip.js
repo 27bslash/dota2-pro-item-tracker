@@ -98,8 +98,8 @@ window.addEventListener("mouseover", (event) => {
       }
     }
   }
-  const tooltip_method = new Tooltip(tooltip, tooltipType, base);
   if (tooltip.id === "talent-tooltip") {
+    const tooltip_method = new Tooltip(tooltip, tooltipType, base);
     tooltip_method.generateLineOne();
     return;
   } else if (tooltipType === "hero") {
