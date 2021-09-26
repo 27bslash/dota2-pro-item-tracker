@@ -2,8 +2,7 @@ import json
 import traceback
 from collections import Counter, OrderedDict
 
-from .database.collection import db
-from .hero import Hero
+from helper_funcs.hero import Hero, db
 
 hero_methods = Hero()
 all_abilities = db['all_abilities'].find_one({}, {'_id': 0})
@@ -36,9 +35,6 @@ def convert_special_values(key, file):
 def detailed_ability_info(ability_list, hero_id):
     output = []
     talents = []
-    count = 0
-    stats_count = [i for i in ability_list[slice(0, 18)] if i == 730]
-    hero_name = hero_methods.hero_name_from_hero_id(hero_id)
     # print(len(stat_count))
     st_count = 0
     temp_st_count = 0
@@ -59,70 +55,11 @@ def detailed_ability_info(ability_list, hero_id):
                 d['img'] = all_abilities[_id]['name']
                 d['key'] = all_abilities[_id]['language']['displayName']
                 d['id'] = _id
-                level = i+1
-                if hero_name != 'invoker':
-                    if level+gap == 17:
-                        # print('17', d['key'], st_count)
-                        if temp_st_count == 0:
-                            gap += 1
-                        else:
-                            temp_st_count -= 1
-                        # print('17: ',d['key'], level, gap)
-                    # print(level+gap, d['key'])
-                    if level+gap == 19:
-                        if temp_st_count == 0:
-                            gap += 1
-                        else:
-                            temp_st_count -= 1
-                            # print('19: ',d['key'], level, gap)
-                    # if level > 17:
-                    #     stat_count = [
-                    #         _ for _ in ability_list[slice(0, i)] if _ == 730]
-                    #     # print('17', len(stat_count))
-                    #     if len(stat_count) < 1:
-                    #         gap += 1
-                    if level+gap == 20:
-                        # print(level,gap,d['key'])
-                        pass
-                    if level+gap > 20:
-                        # print(level+gap, gap, d['key'], st_count)
-                        if 'special_bonus' in all_abilities[_id]['name'] and st_count > 0:
-                            # print('llv: ', d['key'],level, temp_st_count, st_count,gap)
-                            gap += 25 - level
-                        if 25 - level + gap == temp_st_count:
-                            # print(d['key'],level+gap,temp_st_count)
-                            if 'special_bonus' in all_abilities[_id]['name']:
-                                gap += temp_st_count
-                        if st_count == 0:
-                            # print('gay')
-                            gap += 4
-                    # if level+gap == 21:
-                    #     # print('true')]
-                    #     # print(st_count)
-                    #     # print(level + gap,d['key'])
-                    #     if st_count < 6:
-                    #         temp = 4 - 7 - st_count
-                    #         # print('gap: ', temp)
-                    #         if temp < 0:
-                    #             gap += 4
-                    #     else:
-                    #         pass
-                    # if level + gap > 16:
-                    # if level >= 19:
-                    #     stat_count = [
-                    #         _ for _ in ability_list[slice(0, i+1)] if _ == 730]
-                    #     # print('18', 'stat_coutn: ',len(stat_count))
-                    #     if len(stat_count) < 2:
-                    #         gap += 4
-                    # if level > 20:
-                    #     if len(stat_count) >= 2:
-                    #         gap += 4
-                    d['level'] = level+gap
-                else:
-                    # invoker edge case
-                    # print('oiv',gap)
-                    level = i+1
-                    d['level'] = level+gap
+                # invoker edge case
+                if hero_id != 74:
+                    gap = skill_gap(gap, _id, temp_st_count,
+                                    st_count, level=i+1)
+                d['level'] = i+1+gap
                 if 'special_bonus' in all_abilities[_id]['name']:
                     d['type'] = 'talent'
                     talent_data = all_talents
@@ -135,12 +72,35 @@ def detailed_ability_info(ability_list, hero_id):
                 else:
                     d['type'] = 'ability'
                 output.append(d)
-                if hero_name != 'invoker':
+                if hero_id != 74:
                     output = output[slice(0, 19)]
             except Exception as e:
                 print(_id, traceback.format_exc())
-
     return output
+
+
+def skill_gap(gap, _id, temp_st_count, st_count, level):
+    if level+gap == 17:
+        if temp_st_count == 0:
+            gap += 1
+        else:
+            temp_st_count -= 1
+    if level+gap == 19:
+        if temp_st_count == 0:
+            gap += 1
+        else:
+            temp_st_count -= 1
+    if level+gap == 20:
+        pass
+    if level+gap > 20:
+        if 'special_bonus' in all_abilities[_id]['name'] and st_count > 0:
+            gap += 25 - level
+        if 25 - level + gap == temp_st_count:
+            if 'special_bonus' in all_abilities[_id]['name']:
+                gap += temp_st_count
+        if st_count == 0:
+            gap += 4
+    return gap
 
 
 class Talents():
@@ -182,8 +142,7 @@ class Talents():
 
 ab_arr = [
     # jugg start stats
-    [730, 5028, 5028, 5029, 5028, 5030, 5028, 5027, 5029, 5921,
-        730, 5030, 5027, 5029, 5906, 5027, 730, 5030, 5027, 5934]]
+    [5297, 5299, 5297, 5298, 5300, 5297, 5298, 5298, 5298, 5996, 5297, 5300, 5299, 5299, 5299, 6661, 5300, 6064]]
 # no stats
 if __name__ == "__main__":
     # insert_player_picks()
@@ -191,7 +150,7 @@ if __name__ == "__main__":
     # get_id('lih')
     # get_talent_order('jakiro')
     for lst in ab_arr:
-        detailed_ability_info(lst, 8)
+        detailed_ability_info(lst, 64)
 
     # loop_test()
     # parse_request()
