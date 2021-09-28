@@ -137,7 +137,7 @@ class Talents():
                 talents['talents'][i]['level'] = level
                 talents['talents'][i+1]['level'] = level
                 level += 5
-        return reversed(talents['talents'])
+        return list(reversed(talents['talents']))
 
 
 ab_arr = [

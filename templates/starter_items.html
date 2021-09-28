@@ -179,11 +179,16 @@
       {%endif%}
       {%if talents%}
       <div class="talent-wrapper">
-        <img
-          id="main-talent-img"
-          height="70"
-          src="{{ url_for('static', filename='images/talent_img.png') }}"
-        />
+        <div class="talents big-talent" style="height: 100px;">
+            {%for talent in talent_img%}
+            {%if talent=='EQUAL'%}
+            <div class="lvl{{(loop.index0+2)*5}} l-talent"></div>
+            <div class="lvl{{(loop.index0+2)*5}} r-talent"></div>
+            {%else%}
+            <div class="{{talent}}"></div>
+            {%endif%}
+            {%endfor%}
+    </div>
         <div class="tooltip" id="talents" style="display: none">
           {%for talent in talents%} {%if talent.slot % 2 == 0 or talent.slot ==
           0 %} {%set col = 3%} {%set class = 'talent-right'%} {%endif%} {%if

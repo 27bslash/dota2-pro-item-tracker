@@ -25,7 +25,7 @@ class HeroView(View):
                                          request=request, player='')
         pick_data = db['wins'].find_one({'hero': hero_name}, {'_id': 0, 'Hard Support_picks': 1, 'Support_picks': 1,
                                                               'Roaming_picks': 1, 'Offlane_picks': 1, 'Midlane_picks': 1, 'Safelane_picks': 1})
-        roles_db = db['hero_picks'].find_one({'hero': hero_name})
+        # roles_db = db['hero_picks'].find_one({'hero': hero_name})
         # roles = sorted(pick_data, key=itemgetter(1), reverse=True)
         roles = {k: pick_data[k] for k in sorted(
             pick_data, key=pick_data.get, reverse=True)}
@@ -38,9 +38,10 @@ class HeroView(View):
             most_used = dict(itertools.islice(most_used.items(), 10))
             max_val = list(most_used.values())[0]
             talents = talent_methods.get_talent_order(match_data, hero_name)
+            talent_img = [order_talents(talents, i) for i in range(10, 30, 5)]
             hero_colour = self.get_hero_name_colour(hero_name)
             return {'template': template, 'max': max_val, 'most_used': most_used, 'hero_img': hero_name, 'display_name': display_name, 'hero_name': switcher(hero_name), 'data': match_data,
-                    'time': time.time(), 'total': total, 'talents': talents, 'hero_colour': hero_colour, 'roles': roles, 'best_games': best_games}
+                    'time': time.time(), 'total': total, 'talents': talents, 'talent_img': talent_img, 'hero_colour': hero_colour, 'roles': roles, 'best_games': best_games}
         else:
             return {'template': template, 'hero_name': hero_name, 'hero_img': hero_name, 'display_name': display_name, 'data': [], 'time': time.time(), 'total': 0, 'hero_colour': get_hero_name_colour(hero_name), 'roles': roles}
 
@@ -50,3 +51,17 @@ class HeroView(View):
             for item in data['colors']:
                 if item['hero'] == hero_name:
                     return tuple(item['color'])
+
+
+def order_talents(lst, n):
+    temp = 0
+    ret = None
+    for tal in lst:
+        if tal['level'] == n:
+            if tal['talent_count'] > temp:
+                temp = tal['talent_count']
+                side = 'l-talent' if tal['slot'] % 2 != 0 else 'r-talent'
+                ret = f"lvl{n} {side}"
+            elif tal['talent_count'] == temp:
+                return 'EQUAL'
+    return ret

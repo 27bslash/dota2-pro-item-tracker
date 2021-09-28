@@ -71,23 +71,26 @@ window.addEventListener("mouseover", (event) => {
     event.target.className !== "item-img" &&
     event.target.className !== "table-img" &&
     event.target.className !== "hero-img" &&
-    !event.target.className.includes("talent") &&
-    event.target.id !== "main-talent-wrapper"
+    !event.target.className.includes("talent")
   ) {
     return;
   }
   let tooltip, _id, imgSrc, aghanim_ability, parent;
-  parent = event.target.parentNode.children;
-  if (event.target.className.includes("-talent")) {
-    parent = event.target.parentNode.parentNode.children;
+  parent = event.target.parentNode;
+  if (parent.className.includes("big")) {
+    document.getElementById("talents").style.display = "grid";
+    return;
+  } else if (event.target.className.includes("-talent")) {
+    parent = event.target.parentNode.parentNode;
   }
-  for (let element of parent) {
+  for (let element of parent.children) {
     if (element.className === "tooltip") tooltip = element;
     _id = event.target.getAttribute("data_id");
     if (_id == "5631") _id = "5625";
     imgSrc =
       event.target.getAttribute("src") || `/static/images/empty_talent.png`;
   }
+  if (!tooltip) return;
   const tooltipType = getTooltipType(tooltip);
   const hero =
     event.target.parentNode.parentNode.getAttribute("data-hero") ||
