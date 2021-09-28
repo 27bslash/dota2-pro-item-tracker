@@ -1,7 +1,7 @@
 import json
 import traceback
 from collections import Counter, OrderedDict
-
+from .switcher import switcher
 from helper_funcs.hero import Hero, db
 
 hero_methods = Hero()
@@ -62,13 +62,11 @@ def detailed_ability_info(ability_list, hero_id):
                 d['level'] = i+1+gap
                 if 'special_bonus' in all_abilities[_id]['name']:
                     d['type'] = 'talent'
-                    talent_data = all_talents
-                    talents = talent_data[str(hero_id)]['talents']
-                    for t in talents:
-                        # print(t)
-                        if int(_id) in t.values():
-                            # print(talent['slot'])
-                            d['slot'] = t['slot']
+                    talents = db['individual_abilities'].find_one(
+                        {'hero': switcher(hero_methods.hero_name_from_hero_id(hero_id))}, {'_id': 0, 'abilities': 1})
+                    for k in talents['abilities']:
+                        if _id== k:
+                            d['slot'] = talents['abilities'][k]['slot']
                 else:
                     d['type'] = 'ability'
                 output.append(d)
