@@ -103,14 +103,21 @@ def generate_table(func_name, query, template, request):
 
             html_string += "</div></a>"
         html_string += f"<div class='abilities' data-hero=\"{match['hero']}\">"
-
+        visited = []
         for ability in match['abilities']:
+            talent_wrapper = ''
             html_string += "<div class='ability-img-wrapper'>"
             if ability['type'] == 'talent':
-                html_string += ability_str(ability, img_host, 'talent')
+                visited.append(ability)
+                talents = f"<div class='talents' data-name=\'{ability['key']}\'>"
+                for tal in visited:
+                    talents += talent_img(tal)
+                if len(talent_wrapper) == 0:
+                    talent_wrapper = ''
+                    talent_wrapper += talents
+                html_string += talent_str(ability, talent_wrapper)
             else:
                 html_string += ability_str(ability, img_host, 'ability')
-
         html_string += "</div>"
 
         html_string += "<div class='draft'>"
@@ -165,17 +172,39 @@ def item_text_str(items, img_host, type, hero):
 
 def ability_str(ability: object, img_host, type):
     ability_img = f"{img_host}/abilities/{ability['img']}.png"
+    html_string = ''
     if type == 'talent':
         ability_img = '/static/images/talent_img.png'
     ability_id = ability['id']
     ability_key = ability['key']
-    html_string = ''
     image = f"<img class='table-img' src='{ability_img}' data_id='{ability_id}' data-tooltip='{ability_key}' alt='{ability_key}'>"
     html_string += f"<strong><p style='color:white; text-align:center;'>{ability['level']}</p></strong>"
     html_string += image
     html_string += f"<div class='tooltip' id='{type}-tooltip'></div>"
     html_string += "</div>"
     return html_string
+
+
+def talent_str(talent, talent_wrapper):
+    html_string = ''
+    html_string += f"<strong><p style='color:white; text-align:center;'>{talent['level']}</p></strong>"
+    html_string += talent_wrapper+'</div>'
+    html_string += f"<div class='tooltip' id='talent-tooltip'></div>"
+    html_string += "</div>"
+    return html_string
+
+
+def talent_img(talent):
+    side = 'r-talent' if talent['slot'] % 2 == 0 else 'l-talent'
+    if talent['slot'] < 2:
+        level = 10
+    elif talent['slot'] < 4:
+        level = 15
+    elif talent['slot'] < 6:
+        level = 20
+    else:
+        level = 25
+    return f"<div class=\"lvl{level} {side}\"></div>"
 
 
 def draft_string(match, side, query):

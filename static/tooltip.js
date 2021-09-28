@@ -70,15 +70,23 @@ window.addEventListener("mouseover", (event) => {
   if (
     event.target.className !== "item-img" &&
     event.target.className !== "table-img" &&
-    event.target.className !== "hero-img"
-  )
+    event.target.className !== "hero-img" &&
+    !event.target.className.includes("talent") &&
+    event.target.id !== "main-talent-wrapper"
+  ) {
     return;
-  let tooltip, _id, imgSrc, aghanim_ability;
-  for (let element of event.target.parentNode.children) {
+  }
+  let tooltip, _id, imgSrc, aghanim_ability, parent;
+  parent = event.target.parentNode.children;
+  if (event.target.className.includes("-talent")) {
+    parent = event.target.parentNode.parentNode.children;
+  }
+  for (let element of parent) {
     if (element.className === "tooltip") tooltip = element;
     _id = event.target.getAttribute("data_id");
     if (_id == "5631") _id = "5625";
-    imgSrc = event.target.getAttribute("src");
+    imgSrc =
+      event.target.getAttribute("src") || `/static/images/empty_talent.png`;
   }
   const tooltipType = getTooltipType(tooltip);
   const hero =
@@ -100,7 +108,7 @@ window.addEventListener("mouseover", (event) => {
   }
   if (tooltip.id === "talent-tooltip") {
     const tooltip_method = new Tooltip(tooltip, tooltipType, base);
-    tooltip_method.generateLineOne();
+    tooltip_method.generateLineOne(event.target.dataset.name);
     return;
   } else if (tooltipType === "hero") {
     const heroTooltip = new HeroTooltip(tooltip, tooltipType, base);

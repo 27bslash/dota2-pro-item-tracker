@@ -4,10 +4,10 @@ class Tooltip {
     this.tooltipType = tooltipType;
     this.base = base;
   }
-  gentooltipHeaderText() {
+  gentooltipHeaderText(text = "") {
     let tooltipHeaderText;
-    if (this.tooltipType == "talent") {
-      tooltipHeaderText = event.target.alt;
+    if (this.tooltipType === "talent") {
+      tooltipHeaderText = text || event.target.parentNode.dataset.name;
     } else if (this.tooltipType == "item") {
       tooltipHeaderText = this.base["displayName"];
     } else {
@@ -26,16 +26,16 @@ class Tooltip {
     }
     return imgSrc;
   }
-  generateLineOne() {
+  generateLineOne(text = "") {
     const tooltipLineOne = document.createElement("div");
     tooltipLineOne.setAttribute("class", "tooltip-line-one");
-    const tooltipHeaderText = this.gentooltipHeaderText();
+    const tooltipHeaderText = this.gentooltipHeaderText(text);
     const headerText = document.createElement("h3");
     headerText.textContent = tooltipHeaderText;
     const tooltipTitle = document.createElement("div");
     tooltipTitle.setAttribute("class", "tooltip-title");
 
-    const imgSrc = this.getImgSrc();
+    const imgSrc = this.getImgSrc() || `/static/images/empty_talent.png`;
     const tooltipHeaderImg = document.createElement("img");
     tooltipHeaderImg.setAttribute("class", "tooltip-img");
     tooltipHeaderImg.setAttribute("src", imgSrc);
@@ -47,6 +47,7 @@ class Tooltip {
       if (!this.tooltip.children[0]) {
         this.tooltip.appendChild(tooltipLineOne);
       }
+      this.tooltip.style.display = "block";
     }
     return tooltipLineOne;
   }

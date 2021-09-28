@@ -83,7 +83,8 @@ thead .stats:hover {
 #assists {
   color: grey;
 }
-#gold,#lane_efficiency {
+#gold,
+#lane_efficiency {
   color: gold;
 }
 #gpm {
@@ -533,6 +534,57 @@ label {
 .ability-img-wrapper .tooltip .tooltip-content .tooltip-description {
   margin-bottom: 10px;
 }
+.talents {
+  width: 55px;
+  height: 55px;
+  min-width: 20px;
+  position: relative;
+  background: url(/static/images/empty_talent.png);
+  background-size: cover;
+  cursor: help;
+}
+.lvl10 {
+  z-index: 1;
+  position: absolute;
+  background: url(/static/images/talent_selected.png);
+  background-position: 0 -40.889%;
+  height: 25.33333%;
+  width: 100%;
+  top: 70%;
+  background-size: cover;
+}
+.lvl15 {
+  z-index: 2;
+  position: absolute;
+  background: url(/static/images/talent_selected.png);
+  background-position: 0 -64.111%;
+  height: 20%;
+  width: 100%;
+  top: 50%;
+  background-size: cover;
+}
+.lvl20 {
+  z-index: 3;
+  position: absolute;
+  background: url(/static/images/talent_selected.png);
+  background-position: 0 -82.1111%;
+  height: 18%;
+  width: 100%;
+  top: 35%;
+  background-size: cover;
+}
+.lvl25 {
+  z-index: 4;
+  position: absolute;
+  background: url(/static/images/talent_selected.png);
+  width: 100%;
+  height: 35%;
+  top: 1%;
+  background-size: cover;
+}
+.r-talent {
+  transform: scaleX(-1);
+}
 .search-container {
   display: flex;
 }
@@ -634,7 +686,7 @@ label {
   max-width: 55px;
 }
 .tooltip {
-  z-index: 3;
+  z-index: 10;
   position: absolute;
   width: 300px;
 }
