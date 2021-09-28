@@ -72,9 +72,10 @@
       </p>
       <p style="color: white">has played {{total}} times. He mostly plays:</p>
       {%for k,v in roles.items()%}
-      <a href="/player/{{display_name}}?role={{k}}">
+      {%set clean_key =k|replace('_picks', '')%}
+      <a href="/player/{{display_name}}?role={{clean_key}}">
         <p class="total-picks">
-          {{k}} ({{v}}){{"," if not loop.last else "." }}
+          {{clean_key}} ({{v}}){{"," if not loop.last else "." }}
         </p>
       </a>
       {%endfor%}
