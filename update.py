@@ -58,7 +58,8 @@ def dl_dota2_abilities():
         for ability in ability_json['abilities']:
             hero_abilities[str(ability['id'])] = ability
             get_ability_img(ability['name'], hero['name'])
-        for talent in ability_json['talents']:
+        for i, talent in enumerate(ability_json['talents']):
+            talent['slot'] = i
             hero_abilities[str(talent['id'])] = talent
         db['individual_abilities'].find_one_and_update(
             {'hero': hero['name']}, {"$set": {"abilities": hero_abilities}}, upsert=True)
@@ -206,8 +207,8 @@ if __name__ == '__main__':
     # update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
     # update_stratz_json(
     #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
-    # dl_dota2_abilities()
-    update_app()
+    dl_dota2_abilities()
+    # update_app()
     # dl_dota2_abilities()
     # chunk_stratz_abilites()
     # update_hero_list()
