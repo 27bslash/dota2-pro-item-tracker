@@ -18,11 +18,12 @@ def daily_update():
         weekly_update()
     for hero in data['heroes']:
         hero = hero['name']
-        sleep = len(get_urls(hero))
+        urls = get_urls(hero)
+        sleep = len(urls)
         if sleep == 0:
             print(hero)
             continue
-        asyncio.run(opendota_call(get_urls(hero), hero))
+        asyncio.run(opendota_call(urls, hero))
         if sleep >= 60:
             sleep = 60
         print('sleeping for: ', sleep)
