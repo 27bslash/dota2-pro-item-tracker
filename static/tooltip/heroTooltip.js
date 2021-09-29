@@ -31,7 +31,6 @@ class HeroTooltip extends Tooltip {
     tooltipTitle.appendChild(headerText);
     tooltipLineOne.appendChild(tooltipTitle);
     this.tooltip.style.border = "3px solid black";
-    console.log(this.tooltip.style.border);
     if (!this.tooltip.children[0]) {
       this.tooltip.appendChild(tooltipLineOne);
     }
@@ -50,8 +49,12 @@ class HeroTooltip extends Tooltip {
     aghanimWrapper.setAttribute("class", "hero-aghanim-upgrades");
     const shard = this.heroaghanim("shard");
     const scepter = this.heroaghanim("scepter");
-    aghanimWrapper.appendChild(shard);
-    aghanimWrapper.appendChild(scepter);
+    if (shard) {
+      aghanimWrapper.appendChild(shard);
+    }
+    if (scepter) {
+      aghanimWrapper.appendChild(scepter);
+    }
 
     //stats
     const statAttrWrapper = document.createElement("div");
@@ -111,6 +114,7 @@ class HeroTooltip extends Tooltip {
   }
   heroaghanim(type) {
     const aghanim = extract_aghanim(this.base["abilities"], type);
+    if (!aghanim) return;
     const wrapper = document.createElement("div");
     wrapper.setAttribute("class", "hero-aghanim-wrapper");
     wrapper.setAttribute("id", `hero-${type}`);
@@ -118,11 +122,11 @@ class HeroTooltip extends Tooltip {
     const spellImg = this.heroAghanimSubImg(imgSrc, type);
     const spellDesc = document.createElement("p");
     spellDesc.style.fontSize = "13px";
-    spellDesc.innerHTML = this.highlight_numbers(aghanim[`${type}_loc`]);
+    spellDesc.innerHTML = super.highlight_numbers(aghanim[`${type}_loc`]);
     if (aghanim[`${type}_loc`].length == 0) {
-      spellDesc.innerHTML = this.extract_hidden_values(
-        aghanim,
-        aghanim["desc_loc"]
+      spellDesc.innerHTML = super.extract_hidden_values(
+        aghanim["desc_loc"],
+        aghanim
       );
     }
     wrapper.appendChild(spellImg);
