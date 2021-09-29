@@ -56,7 +56,9 @@ class AbilityTooltip extends Tooltip {
     );
     const statText = document.createElement("p");
     statText.setAttribute("class", "footer-text");
-    statText.textContent = this.base[classname].join("/");
+    statText.textContent = this.base[classname]
+      .map((x) => parseFloat(x).toFixed(1) * 1)
+      .join("/");
     statWrapper.appendChild(statImg);
     statWrapper.appendChild(statText);
     tooltipFooter.appendChild(statWrapper);
