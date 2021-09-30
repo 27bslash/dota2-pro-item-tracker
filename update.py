@@ -54,15 +54,16 @@ def dl_dota2_abilities():
         ability_json = json.loads(
             req.text)['result']['data']['heroes'][0]
         hero_abilities = {}
+        hero_talents = {}
         print(hero['name'])
         for ability in ability_json['abilities']:
             hero_abilities[str(ability['id'])] = ability
             get_ability_img(ability['name'], hero['name'])
         for i, talent in enumerate(ability_json['talents']):
             talent['slot'] = i
-            hero_abilities[str(talent['id'])] = talent
+            hero_talents[str(talent['id'])] = talent
         db['individual_abilities'].find_one_and_update(
-            {'hero': hero['name']}, {"$set": {"abilities": hero_abilities}}, upsert=True)
+            {'hero': hero['name']}, {"$set": {"abilities": hero_abilities, 'talents': hero_talents}}, upsert=True)
         # json.dump(hero_abilities, o, indent=4)
 
 
@@ -95,45 +96,50 @@ def update_stratz_json(url, collection):
     db_data = db[collection].find_one({}, {'_id': 0})
     # print(req.status_code)
     if req.status_code is not 200:
-        print('false')
-        return
+        raise Exception(f"request failed  {req.status_code} {url}")
     if not db_data or not req.json() == db_data and len(req.json()) > len(db_data):
         db[collection].find_one_and_update(
             {}, {"$set": req.json()}, upsert=True)
 
-    update_basic_id_json('all_items', 'item_ids', 'items')
-
 
 def graphql():
-    query = """query {
-  constants{
-    items {
-    id
-      name
-      displayName
-      language {
-        description
-        lore
-      }
-      stat {
-        cost
-        manaCost
-        cooldown
-      }
-      attributes {
-        name
-        value
-      }
+    query = """
+    query {
+        constants{
+            items {
+            id
+            name
+            displayName
+            language {
+                description
+                lore
+            }
+            
+            stat {
+                cost
+                cooldown
+                manaCost
+            }
+            attributes {
+                name
+                value
+            }
+            }
+        }
     }
-  }
-}"""
+    """
     url = 'https://api.stratz.com/graphql/'
     r = requests.post(url, json={'query': query})
-    return r.json()['data']['constants']
+    if r.status_code == 200:
+        return r.json()['data']['constants']
+    else:
+        print(f"query failed {r.status_code} {query}")
 
 
 def insert_all_items():
     stratz_data = graphql()
+    if not stratz_data:
+        return
     opend = requests.get('https://api.opendota.com/api/constants/items').json()
     srt = dict(sorted(opend.items(), key=lambda k: k[1]['id']))
     for k, v in srt.items():
@@ -178,7 +184,6 @@ def update_app():
     update_hero_list()
     print('updating json....')
     insert_all_items()
-    update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
     update_stratz_json(
         'https://api.stratz.com/api/v1/Ability', 'all_abilities')
     print('downloading abilities...')
@@ -196,7 +201,6 @@ def update_app():
 
 def weekly_update():
     insert_all_items()
-    update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
     update_stratz_json(
         'https://api.stratz.com/api/v1/Ability', 'all_abilities')
     update_talents()
@@ -207,7 +211,10 @@ if __name__ == '__main__':
     # update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
     # update_stratz_json(
     #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
-    dl_dota2_abilities()
+    weekly_update()
+    # db_methods = Db_insert()
+    # db_methods.insert_talent_order(66)
+
     # update_app()
     # dl_dota2_abilities()
     # chunk_stratz_abilites()
