@@ -55,12 +55,13 @@ class Db_insert:
 
     def insert_talent_order(self, hero_id):
         hero_methods = Hero()
-        data_talents = all_talents[str(hero_id)]['talents']
-        talents = [detailed_ability_info(
-            [x['abilityId']], hero_id)[0] for x in data_talents]
         hero = hero_methods.hero_name_from_hero_id(hero_id)
+        data_talents = db['individual_abilities'].find_one(
+            {'hero': hero})['talents']
+        talents = [detailed_ability_info(
+            [_id], hero_id)[0] for _id in data_talents]
         db['talents'].find_one_and_update(
-            {'hero': hero}, {'$set': {'hero': hero, 'talents': talents}}, upsert=True)
+            {'hero': hero}, {'$set': {'talents': talents}}, upsert=True)
 
     def insert_best_games(self):
         print('INSERT BEST GAMES')
@@ -169,7 +170,7 @@ class Db_insert:
                 total_winrate = 0
             else:
                 total_winrate = (total_wins / picks) * 100
-            role_dict = {'hero':hero['name'],
+            role_dict = {'hero': hero['name'],
                          'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
             for role in roles:
                 wins = hero_output.count_documents(
