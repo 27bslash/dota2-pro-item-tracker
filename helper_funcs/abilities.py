@@ -38,7 +38,6 @@ def detailed_ability_info(ability_list, hero_id):
     # print(len(stat_count))
     st_count = 0
     temp_st_count = 0
-
     gap = 0
     for i, _id in enumerate(ability_list):
         _id = str(_id)
@@ -63,10 +62,11 @@ def detailed_ability_info(ability_list, hero_id):
                 if 'special_bonus' in all_abilities[_id]['name']:
                     d['type'] = 'talent'
                     talents = db['individual_abilities'].find_one(
-                        {'hero': switcher(hero_methods.hero_name_from_hero_id(hero_id))}, {'_id': 0, 'abilities': 1})
-                    for k in talents['abilities']:
-                        if _id== k:
-                            d['slot'] = talents['abilities'][k]['slot']
+                        {'hero': hero_methods.hero_name_from_hero_id(hero_id)}, {'_id': 0, 'talents': 1})
+                    for k in talents['talents']:
+                        if _id == k:
+                            d['slot'] = talents['talents'][k]['slot']
+                            # update_talents_db(hero_id, d, _id)
                 else:
                     d['type'] = 'ability'
                 output.append(d)
