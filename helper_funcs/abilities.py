@@ -1,7 +1,6 @@
 import json
 import traceback
 from collections import Counter, OrderedDict
-from .switcher import switcher
 from helper_funcs.hero import Hero, db
 
 hero_methods = Hero()
@@ -67,7 +66,7 @@ def detailed_ability_info(ability_list, hero_id):
                         if _id == k:
                             d['slot'] = talents['talents'][k]['slot']
                             # update_talents_db(hero_id, d, _id)
-                else:
+                else: 
                     d['type'] = 'ability'
                 output.append(d)
                 if hero_id != 74:
