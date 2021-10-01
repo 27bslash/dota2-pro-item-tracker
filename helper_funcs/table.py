@@ -3,6 +3,7 @@ import datetime
 from .database.collection import db, hero_output
 from .items import Items
 from .switcher import switcher
+import time
 item_methods = Items()
 
 
@@ -11,7 +12,6 @@ def generate_table(func_name, query, template, request):
     query = switcher(query)
     display_name = query.replace('_', ' ').capitalize()
     key = 'name' if func_name == 'player' else 'hero'
-    check_response = hero_output.find_one({key: query})
     match_data = None
     img_cache = 'https://ailhumfakp.cloudimg.io/v7/'
     columns = {'0': 'win', '1': None, '2': 'unix_time', '3': 'name', '4': None, '5': 'role', '6': 'lvl', '7': 'kills', '8': 'deaths', '9': 'assists',
@@ -25,27 +25,25 @@ def generate_table(func_name, query, template, request):
     total_entries = []
     if 'start' in template and column == 'gold':
         column = 'lane_efficiency'
-    if check_response:
-        if 'role' in request.args:
-            role = request.args.get('role').replace('%20', ' ').title()
-            data = hero_output.find(
-                {key: query, 'role': role}).sort(column, sort_direction).limit(length).skip(records_to_skip)
-            match_data = [match for match in data]
-            total_entries = [entry for entry in hero_output.find(
-                {key: query, 'role': role})]
+    if 'role' in request.args:
+        role = request.args.get('role').replace('%20', ' ').title()
+        data = hero_output.find(
+            {key: query, 'role': role}).sort(column, sort_direction).limit(length).skip(records_to_skip)
+        match_data = [match for match in data]
+        total_entries = [entry for entry in hero_output.count_documents(
+            {key: query, 'role': role})]
+    else:
+        if len(searchable) > 0 and len(search_value) > 0:
+            aggregate = {key: query, 'hero': {"$in": search_value}}
         else:
-            if len(searchable) > 0 and len(search_value) > 0:
-                aggregate = {key: query, 'hero': {"$in": search_value}}
-            else:
-                aggregate = {key: query}
-            data = hero_output.find(
-                aggregate).sort(column, sort_direction).limit(length).skip(records_to_skip)
-            match_data = [match for match in data]
-            total_entries = [
-                entry for entry in hero_output.find({key: query})]
+            aggregate = {key: query}
+        data = hero_output.find(
+            aggregate).sort(column, sort_direction).limit(length).skip(records_to_skip)
+        match_data = [match for match in data]
+        total_entries = hero_output.count_documents({key: query})
     result = {"draw": request.args['draw'],
-              "recordsTotal": len(total_entries), "recordsFiltered": len(total_entries), "data": []}
-    if len(total_entries) == 0:
+              "recordsTotal": total_entries, "recordsFiltered": total_entries, "data": []}
+    if total_entries== 0:
         return result
     img_host = 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/'
     for match in match_data:
@@ -205,6 +203,7 @@ def talent_img(talent):
     else:
         level = 25
     return f"<div class=\"lvl{level} {side}\"></div>"
+
 
 
 def draft_string(match, side, query):
