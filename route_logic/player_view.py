@@ -1,12 +1,10 @@
-from .view import View
-from helper_funcs.database.collection import db, hero_output
-from helper_funcs.switcher import switcher
-from helper_funcs.items import Items
-from helper_funcs.abilities import Talents
-from helper_funcs.table import generate_table
-import itertools
 import json
 import time
+
+from helper_funcs.database.collection import db, hero_output
+from helper_funcs.switcher import switcher
+
+from .view import View
 
 
 class PlayerView(View):

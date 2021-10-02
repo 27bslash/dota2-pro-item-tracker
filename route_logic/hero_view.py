@@ -1,14 +1,12 @@
 import itertools
 import json
 import time
-from operator import itemgetter
 
-from flask import render_template
-from helper_funcs.talents import Talents
 from helper_funcs.database.collection import db, hero_output
 from helper_funcs.items import Items
 from helper_funcs.switcher import switcher
 from helper_funcs.table import generate_table
+from helper_funcs.talents import Talents
 
 from .view import View
 
