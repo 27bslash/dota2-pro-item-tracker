@@ -1,4 +1,4 @@
-from .abilities import Talents, detailed_ability_info
+from .talents import Talents
 from .database.collection import *
 from .database.db import Db_insert
 from .hero import Hero

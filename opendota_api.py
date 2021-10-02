@@ -3,7 +3,7 @@ import asyncio
 import aiohttp
 import traceback
 from helper_funcs.hero import Hero
-from helper_funcs.abilities import Talents, detailed_ability_info
+from helper_funcs.abilities import detailed_ability_info
 from helper_funcs.items import Items
 from helper_funcs.database.db import db
 import datetime

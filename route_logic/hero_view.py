@@ -4,7 +4,7 @@ import time
 from operator import itemgetter
 
 from flask import render_template
-from helper_funcs.abilities import Talents
+from helper_funcs.talents import Talents
 from helper_funcs.database.collection import db, hero_output
 from helper_funcs.items import Items
 from helper_funcs.switcher import switcher
