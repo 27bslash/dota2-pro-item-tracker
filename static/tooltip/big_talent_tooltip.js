@@ -1,6 +1,6 @@
 const bigTalent = async () => {
   const container = document.querySelector("#talents");
-  const talents = await getTalents(`talent-data/${heroName}`);
+  talents = await talents;
   for (let [i, talent] of talents.entries()) {
     let center, barContainer, clss, col;
     const slot = talent.slot;

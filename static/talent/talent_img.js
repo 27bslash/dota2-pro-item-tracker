@@ -4,6 +4,7 @@ const getTalents = async (search) => {
   data = await req.json();
   return data;
 };
+const talents = getTalents(`talent-data/${heroName}`);
 const order_talents = (arr, n) => {
   let temp = 0;
   let ret = null;
@@ -25,7 +26,7 @@ window.addEventListener("load", (e) => {
 });
 const createTalentImg = async () => {
   const talent_img = [];
-  const talents = await getTalents(`talent-data/${heroName}`);
+  talents = await talents;
   for (let i = 10; i < 30; i += 5) {
     talent_img.push(order_talents(talents, i));
   }
