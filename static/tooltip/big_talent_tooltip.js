@@ -1,7 +1,7 @@
 const bigTalent = async () => {
   const container = document.querySelector("#talents");
-  talents = await talents;
-  for (let [i, talent] of talents.entries()) {
+  let tals = await talents;
+  for (let [i, talent] of tals.entries()) {
     let center, barContainer, clss, col;
     const slot = talent.slot;
     if (slot % 2 === 0 || slot === 0) {

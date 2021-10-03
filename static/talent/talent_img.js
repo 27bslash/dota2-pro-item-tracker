@@ -26,9 +26,9 @@ window.addEventListener("load", (e) => {
 });
 const createTalentImg = async () => {
   const talent_img = [];
-  talents = await talents;
+  let tals = await talents;
   for (let i = 10; i < 30; i += 5) {
-    talent_img.push(order_talents(talents, i));
+    talent_img.push(order_talents(tals, i));
   }
   const container = document.querySelector(".big-talent");
   for (let [i, talent] of talent_img.entries()) {
