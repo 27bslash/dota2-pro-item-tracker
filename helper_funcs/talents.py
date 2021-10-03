@@ -1,14 +1,17 @@
 from .database.collection import db
 import traceback
 from collections import Counter
+import json
+
 
 class Talents():
 
     def count_talents(self, data):
+        # print(data)
         try:
+            data = json.loads(data)
             talents = [ability['key']
                        for item in data for ability in item['abilities'] if 'special_bonus' in ability['img']]
-            # print('counter',talents,dict(Counter(talents)))
             return dict(Counter(talents))
         except Exception as e:
             print('y', traceback.format_exc())

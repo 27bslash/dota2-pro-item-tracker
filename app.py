@@ -167,6 +167,30 @@ def hero_data(hero_name):
     return req.json()
 
 
+@ app.route('/files/match-data/<hero_name>')
+def match_data(hero_name, role=None):
+    hero_name = switcher(hero_name)
+    if 'role' in request.args:
+        role = request.args.get('role').replace('%20', ' ').title()
+    if role:
+        data = hero_output.find(
+            {'hero': hero_name, 'role': role}, {'_id': 0})
+    else:
+        data = hero_output.find({'hero': hero_name}, {'_id': 0})
+    data = [entry for entry in data]
+    return json.dumps(data)
+
+
+@ app.route('/files/talent-data/<hero_name>')
+def talent_data(hero_name):
+    m_data = match_data(hero_name, role=None)
+    if 'role' in request.args:
+        m_data = match_data(hero_name, role=request.args.get(
+            'role').replace('%20', ' ').title())
+    talents = talent_methods.get_talent_order(m_data, hero_name)
+    return json.dumps(talents)
+
+
 @ app.after_request
 def add_header(response):
     response.cache_control.max_age = 244800
@@ -175,11 +199,11 @@ def add_header(response):
 
 
 def manual_hero_update(hero):
-    hero_output.delete_many({'hero': hero})
+    # hero_output.delete_many({'hero': hero})
     asyncio.run(opendota_call(get_urls(hero), hero))
-    database_methods.insert_total_picks('hero', hero, 'hero_picks')
-    database_methods.insert_winrates()
-    parse_request()
+    # database_methods.insert_total_picks('hero', hero, 'hero_picks')
+    # database_methods.insert_winrates()
+    # parse_request()
 
 
 def update_one_entry(hero, id):
@@ -195,4 +219,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # manual_hero_update('sand_king')
     # database_methods.insert_winrates()
