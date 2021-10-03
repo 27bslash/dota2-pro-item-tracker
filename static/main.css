@@ -221,13 +221,17 @@ a {
   -moz-transition: height 0.5s;
   transition: height 0.5s;
 }
-
+.most-used-item {
+  width: 50px;
+}
 .most-used.closed {
   height: 0px;
 }
 .most-used-row {
   display: flex;
   border-bottom: 1px solid grey;
+  height: 40px;
+  padding: 1px;
 }
 .most-used-row:nth-child(odd) {
   background-color: var(--table-row-odd-bg);
@@ -350,7 +354,7 @@ i[class="fas fa-copy"]:hover {
   max-width: 200px;
 }
 .talent-bar {
-  height: 45px;
+  height: 45px !important;
   background-color: rgb(55, 67, 71);
 }
 .talent-left > .talent-bar {
@@ -592,6 +596,9 @@ label {
 .big-talent {
   width: 100px;
   margin-right: 80px;
+}
+.big-talent-tooltip-text {
+  /* z-index: 99; */
 }
 .search-container {
   display: flex;

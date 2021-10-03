@@ -32,11 +32,14 @@
       deferRender: true,
       pageLength: 10,
       ajax: window.origin + window.location.pathname +'/table' + window.location.search
-      });
     });
+});
 </script>
 <script src="{{ url_for('static', filename='copy-match-id.js') }}" defer ></script>
 <script  src="{{ url_for('static', filename='tooltip.js') }}"  type='module' defer></script>
+<script src="{{url_for('static', filename='most-used.js')}}" defer ></script>
+<script src="{{url_for('static', filename='talent/talent_img.js')}}" defer ></script>
+<script src="{{url_for('static', filename='tooltip/big_talent_tooltip.js')}}" defer ></script>
 <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}">
 <title>{{hero_name}}</title>
 <main>
@@ -62,29 +65,8 @@
           alt='show starter items'
           /></a>
           <div class="most-used-container">
-            {%if most_used%}
             <div class="most-used-wrapper">
-              <div class="most-used closed">
-                {%for key,value in most_used.items()%} {%set hue = 360/value/max*100%} {%
-                  set s = value/max*100%} {% set saturation = s|round(0,'ceil')|int %} {%
-                    set round = hue|round(0, 'ceil')|int%}
-                    <div class="most-used-row">
-                      <img
-                      class="most-used-item"
-                      src="//ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/items/{{
-                        key
-                      }}_lg.png"
-                      width="50"
-                      height="40"
-                      alt='{{key}}'
-                      />
-                      <div class="bar" style= "background-color: hsl(120, 100%,25%, {{saturation}}%);width:{{value/max * 80}}%;">
-                        <p class="bar-value">{{value}}</p>
-                      </div>
-                    </div>
-                    {%endfor%}
-                  </div>
-                  {%endif%}
+              <div class="most-used closed"></div>
                   <div class="arrow-button"onclick="toggleWindow()">
                     <i id="arrow" class="fas fa-caret-down" ></i>
                   </div>
@@ -171,50 +153,11 @@
             </table>
           </div>
           {%endif%}
-          {%if talents%}
           <div class="talent-wrapper">
               <div class="talents big-talent" style="height: 100px;">
-                  {%for talent in talent_img%}
-                  {%if talent=='EQUAL'%}
-                  <div class="lvl{{(loop.index0+2)*5}} l-talent"></div>
-                  <div class="lvl{{(loop.index0+2)*5}} r-talent"></div>
-                  {%else%}
-                  <div class="{{talent}}"></div>
-                  {%endif%}
-                  {%endfor%}
+
           </div>
             <div class="tooltip" id='talents' style='display: none'>
-              {%for talent in talents%}
-              {%if talent.slot % 2 == 0 or talent.slot == 0 %}
-              {%set col = 3%}
-              {%set class = 'talent-right'%}
-              {%endif%}
-              {%if talent.slot % 2 != 0 or talent.slot == 1 %}
-              {%set col = 1%}
-              {%set class = 'talent-left'%}
-              {%endif%}
-              {%set level = 25%}
-              {%if loop.index % 2 == 0%}
-              <div class="talent-center">
-                <div class="talent-level">
-                  <p>{{talent.level}}</p>
-                </div>
-                <div class="talent-picks">
-                  <p>Pick</p>
-                </div>
-              </div>
-              {%endif%}
-              <div class="{{class}}" style = 'grid-column: {{col}}'>
-                {%set width = 0%}
-                {%if talent.total_pick_count > 0%}
-                {%set width = talent.talent_count/talent.total_pick_count*100%}
-                {%endif%}
-                <p class='talent-text'>{{talent.key}}</p>
-                <div class="talent-bar" style='width: {{width}}%;'></div>
-                <p style='z-index: 99'>{{width|round(0, 'floor')|int}}%</p>
-              </div>
-              {%endfor%}
-              {%endif%}
             </div>
           </div>
         </div>
