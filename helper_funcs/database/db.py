@@ -10,9 +10,6 @@ from ..hero import Hero
 from ..switcher import switcher
 from .collection import db, hero_output
 
-all_talents = db['all_talents'].find_one({}, {'_id': 0})
-
-
 class Db_insert:
     def __init__(self):
         pass
