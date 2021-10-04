@@ -9,8 +9,8 @@ item_methods = Items()
 
 def generate_table(func_name, query, template, request):
     # print(request.args)
+    start = time.perf_counter()
     query = switcher(query)
-    display_name = query.replace('_', ' ').capitalize()
     key = 'name' if func_name == 'player' else 'hero'
     match_data = None
     img_cache = 'https://ailhumfakp.cloudimg.io/v7/'
@@ -19,33 +19,37 @@ def generate_table(func_name, query, template, request):
     sort_direction = -1 if request.args['order[0][dir]'] == 'desc' else 1
     column = columns[request.args['order[0][column]']]
     searchable = request.args['search[value]']
-    search_value = mongo_search(searchable)
+    start = time.perf_counter()
     records_to_skip = int(request.args['start'])
     length = int(request.args['length'])
     total_entries = []
+    aggregate = ''
     if 'start' in template and column == 'gold':
         column = 'lane_efficiency'
     if 'role' in request.args:
         role = request.args.get('role').replace('%20', ' ').title()
-        data = hero_output.find(
-            {key: query, 'role': role}).sort(column, sort_direction).limit(length).skip(records_to_skip)
-        match_data = [match for match in data]
-        total_entries = hero_output.count_documents(
-            {key: query, 'role': role})
+        aggregate = {key: query, 'role': role}
     else:
-        if len(searchable) > 0 and len(search_value) > 0:
+        if len(searchable) > 0:
+            search_value = mongo_search(searchable)
             aggregate = {key: query, 'hero': {"$in": search_value}}
         else:
             aggregate = {key: query}
-        data = hero_output.find(
-            aggregate).sort(column, sort_direction).limit(length).skip(records_to_skip)
-        match_data = [match for match in data]
-        total_entries = hero_output.count_documents({key: query})
+    print('if block: ', time.perf_counter()-start)
+    start = time.perf_counter()
+    data = hero_output.find(
+        aggregate).sort(column, sort_direction).limit(length).skip(records_to_skip)
+    print('find query: ', time.perf_counter()-start)
+    start = time.perf_counter()
+    match_data = list(data)
+    print('cursor conversion:', time.perf_counter()-start)
+    start = time.perf_counter()
+    total_entries = hero_output.count_documents(aggregate)
+    print('count documents: ', time.perf_counter() - start)
     result = {"draw": request.args['draw'],
               "recordsTotal": total_entries, "recordsFiltered": total_entries, "data": []}
     if total_entries == 0:
         return result
-
     return generate_table_string(func_name, match_data, template, result)
 
 
@@ -250,6 +254,10 @@ def stats(match, template):
 
 
 def mongo_search(query):
+    print(len(query))
+    if query is None:
+        print('none')
+        return
     data = db['hero_list'].find_one({})
     matches = [hero['name']
                for hero in data['heroes'] if query in hero['name']]
