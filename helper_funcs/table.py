@@ -50,7 +50,10 @@ def generate_table(func_name, query, template, request):
               "recordsTotal": total_entries, "recordsFiltered": total_entries, "data": []}
     if total_entries == 0:
         return result
-    return generate_table_string(func_name, match_data, template, result)
+    start = time.perf_counter()
+    res = generate_table_string(func_name, match_data, template, result)
+    print('tabel tr', time.perf_counter()-start)
+    return res
 
 
 def generate_table_string(func_name, match_data, template, result):
