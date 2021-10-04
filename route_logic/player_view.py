@@ -17,8 +17,7 @@ class PlayerView(View):
         roles_db = db['player_picks'].find_one({'name': player_name})
         roles = roles_db['roles']
         total = roles_db['total_picks']
-        check_response = hero_output.find_one({'name': player_name})
-        if check_response:
+        if total > 0:
             return {'template': template, 'display_name': display_name,  'time': time.time(), 'total': total, 'roles': roles}
         else:
             return {'template': template, 'display_name': display_name, 'data': [], 'time': time, 'roles': roles, 'total': 0}

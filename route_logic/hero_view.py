@@ -17,17 +17,19 @@ talent_methods = Talents()
 class HeroView(View):
 
     def hero_view(self, hero_name: str, request):
+
+        start = time.perf_counter()
         display_name = hero_name.replace('_', ' ').capitalize()
         hero_name = switcher(hero_name)
         template = View.templateSelector(self,
                                          request=request, player='')
         pick_data = db['wins'].find_one({'hero': hero_name}, {'_id': 0, 'Hard Support_picks': 1, 'Support_picks': 1,
                                                               'Roaming_picks': 1, 'Offlane_picks': 1, 'Midlane_picks': 1, 'Safelane_picks': 1})
+
         roles = {k: pick_data[k] for k in sorted(
             pick_data, key=pick_data.get, reverse=True)}
         total = hero_output.count_documents({'hero': hero_name})
-        check_response = hero_output.find_one({'hero': hero_name})
-        if check_response:
+        if total > 0:
             best_games = View.role(self, hero_name, request)['best_games']
             hero_colour = self.get_hero_name_colour(hero_name)
             return {'template': template, 'hero_img': hero_name, 'display_name': display_name, 'hero_name': switcher(hero_name),
