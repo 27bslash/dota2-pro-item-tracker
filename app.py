@@ -187,7 +187,7 @@ def talent_data(hero_name):
     if 'role' in request.args:
         m_data = match_data(hero_name, role=request.args.get(
             'role').replace('%20', ' ').title())
-    talents = talent_methods.get_talent_order(m_data, hero_name)
+    talents = talent_methods.get_talent_order(m_data, switcher(hero_name))
     return json.dumps(talents)
 
 
@@ -219,5 +219,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    # manual_hero_update('sand_king')
     # database_methods.insert_winrates()
