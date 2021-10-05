@@ -2,6 +2,7 @@ import json
 import traceback
 from helper_funcs.hero import Hero, db
 from helper_funcs.switcher import switcher
+import re
 hero_methods = Hero()
 # def get_hero_name_from_ability(ability_list):
 #     for ability in ability_list:
@@ -55,6 +56,7 @@ def detailed_ability_info(ability_list, hero_id):
 
                 if _id in talents:
                     d['type'] = 'talent'
+                    d['key'] = extract_special_values(all_abilities[_id])
                     for k in talents:
                         if _id == k:
                             d['slot'] = talents[k]['slot']
@@ -95,6 +97,17 @@ def skill_gap(gap, _id, temp_st_count, st_count, level, type):
         if st_count == 0:
             gap += 4
     return gap
+
+
+def extract_special_values(talent):
+    regex = r"{s:value}"
+    val = None
+    for lst in talent['special_values']:
+        if len(lst['values_float']) > 0:
+            val = round(lst['values_float'][0], 2)*1
+        else:
+            val = lst['values_int'][0]
+    return talent['name_loc'].replace(regex, str(val))
 
 
 ab_arr = [
