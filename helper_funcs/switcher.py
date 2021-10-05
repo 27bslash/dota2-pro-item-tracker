@@ -28,4 +28,3 @@ def switcher(name):
                 return key
     return name
 
-switcher('magnataur')
