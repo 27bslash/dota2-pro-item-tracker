@@ -31,8 +31,7 @@ def convert_special_values(key, file):
 def detailed_ability_info(ability_list, hero_id):
     output = []
     talents = []
-    # print(len(stat_count))
-    hero_name = switcher(hero_methods.hero_name_from_hero_id(hero_id))
+    hero_name = hero_methods.hero_name_from_hero_id(hero_id)
     st_count = 0
     temp_st_count = 0
     gap = 0
