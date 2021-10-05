@@ -3,6 +3,7 @@ import traceback
 from collections import Counter
 import json
 import re
+from .abilities import extract_special_values
 
 
 class Talents():
@@ -11,7 +12,7 @@ class Talents():
         # print(data)
         try:
             data = json.loads(data)
-            talents = [ability['key']
+            talents = [ability['img']
                        for item in data for ability in item['abilities'] if 'special_bonus' in ability['img']]
             return dict(Counter(talents))
         except Exception as e:
@@ -26,17 +27,13 @@ class Talents():
         for x in talents['talents']:
             d = {}
             talent = talents['talents'][x]
-            talent_name = self.extract_special_values(talent)
             d['img'] = talent['name']
-            d['key'] = talent_name
+            d['key'] = extract_special_values(talent)
             d['id'] = talent['id']
             d['type'] = 'talent'
             d['slot'] = talent['slot']
-
-            if talent['name_loc'] in count:
-                d['talent_count'] = count[talent['name_loc']]
-            else:
-                d['talent_count'] = 0
+            d['talent_count'] = count[talent['name']
+                                      ] if talent['name'] in count else 0
             all_talents.append(d)
         level = 10
         for i in range(0, 8, 2):
@@ -49,13 +46,3 @@ class Talents():
                 all_talents[i+1]['level'] = level
                 level += 5
         return list(reversed(all_talents))
-
-    def extract_special_values(self, talent):
-        regex = r"{s:value}"
-        val = None
-        for lst in talent['special_values']:
-            if len(lst['values_float']) > 0:
-                val = lst['values_float'][0]
-            else:
-                val = lst['values_int'][0]
-        return talent['name_loc'].replace(regex, str(val))
