@@ -57,7 +57,7 @@ def generate_table(func_name, query, template, request):
 
 
 def generate_table_string(func_name, match_data, template, result):
-    img_host = 'https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/'
+    img_host = 'https://ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/'
     for match in match_data:
         row_string = []
         html_string = f"<a href=https://www.opendota.com/matches/{match['id']}>"
