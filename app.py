@@ -1,12 +1,12 @@
-import mimetypes
 import asyncio
 import datetime
-import itertools
 import json
+import mimetypes
 import re
 import time
 from collections import Counter
 from operator import itemgetter
+
 import requests
 import timeago
 from flask import (Flask, after_this_request, redirect, render_template,
@@ -20,9 +20,9 @@ from opendota_api import opendota_call
 from route_logic.hero_view import HeroView
 from route_logic.player_view import PlayerView
 from route_logic.redirect import handle_redirect
+
 # TODO
 # show alex ads
-# make levels accurate
 
 COMPRESS_MIMETYPES = ['text/html', 'text/css', 'text/xml',
                       'application/json', 'application/javascript']
@@ -42,7 +42,7 @@ mimetypes.add_type('application/javascript', '.js')
 
 
 @app.route('/', methods=['GET'])
-@cache.cached(timeout=600)
+@cache.cached(timeout=86400)
 def index():
     data = db['hero_list'].find_one({}, {'_id': 0})
     links = [{'name': switcher(i['name']), 'id':i['id']}
@@ -73,6 +73,7 @@ def item_post(query=''):
 @app.route('/hero/<hero_name>', methods=['GET'])
 @app.route('/hero/<hero_name>/starter_items/table', methods=['GET'])
 @app.route('/hero/<hero_name>/table', methods=['GET'])
+@cache.cached(timeout=86400, query_string=True)
 def hero_get(hero_name):
     hv = HeroView()
     template = hv.templateSelector(request, '')
@@ -86,6 +87,7 @@ def hero_get(hero_name):
 @app.route('/player/<player_name>', methods=['GET'])
 @app.route('/player/<player_name>/starter_items/table', methods=['GET'])
 @app.route('/player/<player_name>/table', methods=['GET'])
+@cache.cached(timeout=86400, query_string=True)
 def player_get(player_name):
     pv = PlayerView()
     template = pv.templateSelector(request, 'player_')
@@ -96,6 +98,7 @@ def player_get(player_name):
 
 
 @app.route('/chappie')
+@cache.cached(timeout=86400)
 def chappie_get():
     data = [match['data'] for match in db['chappie'].find({})]
     replaced = [re.sub(r"\(smurf \d\)", '', doc['name'])for doc in data]
@@ -112,6 +115,7 @@ def cron():
 
 
 @ app.route('/files/hero_ids')
+@cache.cached(timeout=602000)
 def hero_json():
     data = db['hero_list'].find_one({}, {'_id': 0})
     data = [{'name': switcher(i['name']), 'id': i['id']}
@@ -120,6 +124,7 @@ def hero_json():
 
 
 @ app.route('/files/abilities/<hero_name>')
+@cache.cached(timeout=602000)
 def hero_ability_json(hero_name):
     data = db['individual_abilities'].find_one(
         {'hero': hero_name})['abilities']
@@ -127,12 +132,14 @@ def hero_ability_json(hero_name):
 
 
 @ app.route('/files/items')
+@cache.cached(timeout=602000)
 def items_json():
     data = db['all_items'].find_one({}, {'_id': 0, 'items': 1})
     return json.dumps(data)
 
 
 @ app.route('/files/colors')
+@cache.cached(timeout=602000)
 def color_json():
     with open('colours/hero_colours.json', 'r') as f:
         data = json.load(f)
@@ -140,6 +147,7 @@ def color_json():
 
 
 @ app.route('/files/ability_colours')
+@cache.cached(timeout=602000)
 def ability_color_json():
     with open('colours/ability_colours.json', 'r') as f:
         data = json.load(f)
@@ -147,6 +155,7 @@ def ability_color_json():
 
 
 @ app.route('/files/accounts')
+@cache.cached(timeout=86400)
 def acc_json():
     data = db['account_ids'].find({})
     players = [player['name'] for player in data]
@@ -154,6 +163,7 @@ def acc_json():
 
 
 @ app.route('/files/win-stats')
+@cache.cached(timeout=86400)
 def wins_json():
     data = db['wins'].find({}, {'_id': 0})
     wins = [item for item in data]
@@ -161,6 +171,7 @@ def wins_json():
 
 
 @ app.route('/files/hero-data/<hero_name>')
+@cache.cached(timeout=602000)
 def hero_data(hero_name):
     url = f'https://www.dota2.com/datafeed/herodata?language=english&hero_id={hero_methods.get_id(hero_name)}'
     req = requests.get(url)
@@ -168,6 +179,7 @@ def hero_data(hero_name):
 
 
 @ app.route('/files/match-data/<hero_name>')
+@cache.cached(timeout=86400, query_string=True)
 def match_data(hero_name, role=None):
     hero_name = switcher(hero_name)
     if 'role' in request.args:
@@ -182,6 +194,7 @@ def match_data(hero_name, role=None):
 
 
 @ app.route('/files/talent-data/<hero_name>')
+@cache.cached(timeout=86400, query_string=True)
 def talent_data(hero_name):
     m_data = match_data(hero_name, role=None)
     if 'role' in request.args:
@@ -193,7 +206,7 @@ def talent_data(hero_name):
 
 @ app.after_request
 def add_header(response):
-    response.cache_control.max_age = 244800
+    response.cache_control.max_age = 602000
     response.add_etag()
     return response
 
