@@ -42,7 +42,6 @@ mimetypes.add_type('application/javascript', '.js')
 
 
 @app.route('/', methods=['GET'])
-@cache.cached(timeout=86400)
 def index():
     data = db['hero_list'].find_one({}, {'_id': 0})
     links = [{'name': switcher(i['name']), 'id':i['id']}
