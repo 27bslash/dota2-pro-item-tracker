@@ -35,7 +35,7 @@ class HeroView(View):
             return {'template': template, 'hero_img': hero_name, 'display_name': display_name, 'hero_name': switcher(hero_name),
                     'time': time.time(), 'total': total, 'hero_colour': hero_colour, 'roles': roles, 'best_games': best_games}
         else:
-            return {'template': template, 'hero_name': hero_name, 'hero_img': hero_name, 'display_name': display_name, 'data': [], 'time': time.time(), 'total': 0, 'hero_colour': get_hero_name_colour(hero_name), 'roles': roles}
+            return {'template': template, 'hero_name': hero_name, 'hero_img': hero_name, 'display_name': display_name, 'data': [], 'time': time.time(), 'total': 0, 'hero_colour': self.get_hero_name_colour(hero_name), 'roles': roles}
 
     def get_hero_name_colour(self, hero_name):
         with open('colours/hero_colours.json', 'r') as f:
