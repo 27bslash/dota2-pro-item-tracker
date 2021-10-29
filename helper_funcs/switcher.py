@@ -14,13 +14,14 @@ def switcher(name):
         'anti-mage': 'antimage',
         'outworld_devourer': 'obsidian_destroyer',
         'outworld_destroyer': 'obsidian_destroyer',
+        'lifestealer': 'life_stealer',
         'windranger': 'windrunner',
         'zeus': 'zuus',
         'vengeful_spirit': 'vengefulspirit',
         'treant_protector': 'treant',
         'centaur_warrunner': 'centaur'
     }
-    
+
     if switch.get(name):
         return switch.get(name)
     else:
@@ -28,4 +29,3 @@ def switcher(name):
             if value == name:
                 return key
     return name
-
