@@ -13,6 +13,7 @@ def switcher(name):
         'underlord': 'abyssal_underlord',
         'anti-mage': 'antimage',
         'outworld_devourer': 'obsidian_destroyer',
+        'outworld_destroyer': 'obsidian_destroyer',
         'windranger': 'windrunner',
         'zeus': 'zuus',
         'vengeful_spirit': 'vengefulspirit',
