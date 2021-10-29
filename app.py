@@ -113,6 +113,11 @@ def cron():
     return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
 
+@ app.route('/robots.txt')
+def robots():
+    return "User-agent: *\nDisallow: /"
+
+
 @ app.route('/files/hero_ids')
 @cache.cached(timeout=602000)
 def hero_json():
@@ -230,5 +235,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
     # database_methods.insert_winrates()
+    main()
