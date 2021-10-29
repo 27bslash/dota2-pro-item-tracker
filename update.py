@@ -14,11 +14,11 @@ hero_list = db['hero_list'].find_one({}, {'_id': 0})
 
 def update_hero_list():
     data = json.loads(requests.get(
-        'https://api.stratz.com/api/v1/Hero').text)
+        'https://www.dota2.com/datafeed/herolist?language=english').text)
     hero_dict = {'heroes': []}
-    for k in data:
-        hero_name = data[k]['shortName']
-        hero_id = int(k)
+    for dic in data['result']['data']['heroes']:
+        hero_name = switcher(dic['name_loc'].lower().replace(' ', '_'))
+        hero_id = int(dic['id'])
         hero_dict['heroes'].append({'name': hero_name, 'id': hero_id})
 
     db['hero_list'].find_one_and_update(
@@ -211,7 +211,7 @@ if __name__ == '__main__':
     # update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
     # update_stratz_json(
     #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
-    weekly_update()
+    update_app()
     # db_methods = Db_insert()
     # db_methods.insert_talent_order(66)
 
