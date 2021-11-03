@@ -100,7 +100,6 @@ window.addEventListener("mouseover", (event) => {
     aghanim_ability = extract_aghanim(result, tooltipType);
   }
   styleBackground(tooltip, imgSrc, aghanim_ability);
-
   let base = aghanim_ability || result[_id] || result;
   if (tooltip.id === "item-tooltip") {
     for (let i = 0; i < result["items"].length; i++) {
@@ -146,10 +145,9 @@ const positionTooltip = (tooltip, event) => {
 
 function extract_aghanim(result, s) {
   for (let ability in result) {
-    const aghanim =
-      result[ability][`ability_is_granted_by_${s}`] ||
-      result[ability][`ability_has_${s}`];
-    if (aghanim || result[ability][`${s}_loc`].length > 0) {
+    if (result[ability][`ability_has_${s}`]) {
+      return result[ability];
+    } else if (result[ability][`ability_is_granted_by_${s}`]) {
       return result[ability];
     }
   }
@@ -159,6 +157,7 @@ const getResult = (tooltipType, hero) => {
   let result = [];
   if (tooltipType === "hero") {
     result = stats["result"]["data"]["heroes"][0];
+    // result = stats[hero]["result"]["data"]["heroes"][0];
   } else if (tooltipType === "item") {
     result = items;
   } else if (
@@ -166,6 +165,8 @@ const getResult = (tooltipType, hero) => {
     tooltipType === "shard" ||
     tooltipType === "scepter"
   ) {
+    // console.log(hero, stats[hero]["result"]["data"]["heroes"][0]);
+    // result = stats[hero]["result"]["data"]["heroes"][0]["abilities"];
     result = abilities[hero];
   }
   return result;
