@@ -17,7 +17,8 @@ def get_urls(hero_name):
         {'hero': hero_name, 'id': match['id']}) is None and
         (dead_games.find_one({'id': match['id']}) is None or
          dead_games.find_one({'id': match['id'], 'count': {"$lte": 10}}))]
-    return list(reversed(urls[slice(0, 60)]))
+    # return list(reversed(urls[slice(0, 60)]))
+    return list(reversed(urls))
 
 
 def delete_old_urls():
@@ -40,6 +41,8 @@ def parse_request():
         url = f"https://api.opendota.com/api/request/{match['id']}"
         req = requests.post(url)
         parse.delete_one({'id': match['id']})
+
+
 
 
 if __name__ == "__main__":
