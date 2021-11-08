@@ -167,7 +167,7 @@ def acc_json():
 
 
 @ app.route('/files/win-stats')
-@cache.cached(timeout=86400)
+# @cache.cached(timeout=86400)
 def wins_json():
     data = db['wins'].find({}, {'_id': 0})
     wins = [item for item in data]
@@ -217,10 +217,14 @@ def add_header(response):
 
 def manual_hero_update(hero):
     # hero_output.delete_many({'hero': hero})
-    asyncio.run(opendota_call(get_urls(hero), hero))
+    # all_urls(hero)
     # database_methods.insert_total_picks('hero', hero, 'hero_picks')
     # database_methods.insert_winrates()
     # parse_request()
+    return
+
+
+
 
 
 def update_one_entry(hero, id):
@@ -235,5 +239,4 @@ def main():
 
 
 if __name__ == '__main__':
-    # database_methods.insert_winrates()
     main()
