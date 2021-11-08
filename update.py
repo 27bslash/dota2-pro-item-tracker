@@ -128,7 +128,7 @@ def graphql():
         }
     }
     """
-    url = 'https://api.stratz.com/graphql/'
+    url = 'https://api.stratz.com/graphql'
     r = requests.post(url, json={'query': query})
     if r.status_code == 200:
         return r.json()['data']['constants']
