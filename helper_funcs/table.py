@@ -24,8 +24,21 @@ def generate_table(func_name, query, template, request):
     length = int(request.args['length'])
     total_entries = []
     aggregate = ''
-    if 'start' in template and column == 'gold':
-        column = 'lane_efficiency'
+    if 'start' in template:
+        if column == 'gold':
+            column = 'lane_efficiency'
+        elif column == 'kills':
+            column = 'kills_ten'
+        elif column == 'deaths':
+            column = 'deaths_ten'
+        elif column == 'lvl':
+            column = 'lvl_at_ten'
+        elif column == 'last_hits':
+            column = 'last_hits_ten'
+        elif column == 'xpm':
+            column = 'xpm_ten'
+        elif column == 'gpm':
+            column = 'gpm_ten'
     if 'role' in request.args:
         role = request.args.get('role').replace('%20', ' ').title()
         aggregate = {key: query, 'role': role}
@@ -51,26 +64,29 @@ def generate_table(func_name, query, template, request):
     if total_entries == 0:
         return result
     start = time.perf_counter()
-    res = generate_table_string(func_name, match_data, template, result)
+    res = append_table_string(func_name, match_data, template, result)
     print('tabel tr', time.perf_counter()-start)
     return res
 
 
-def generate_table_string(func_name, match_data, template, result):
+def append_table_string(func_name, match_data, template, result):
     img_host = 'https://ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/'
     for match in match_data:
         row_string = []
         html_string = f"<a href=https://www.opendota.com/matches/{match['id']}>"
-        html_string += generate_item_string(template, img_host, match)
+        html_string += append_item_string(template, img_host, match)
         # ability
-        html_string += generate_ability_string(match, img_host)
-        html_string += generate_draft_string(match)
+        html_string += append_ability_string(match, img_host)
+        html_string += append_draft_string(match)
         role_file_path = f"/static/icons/{match['role']}.png"
         role_img = f"<img src='{role_file_path}'"
+        large = ''
+        if 'start' in template:
+            large = ' large'
         if match['win'] == 0:
-            row_string.append("<div id='loss-cell'></div>")
+            row_string.append(f"<div class='loss-cell{large}'></div>")
         else:
-            row_string.append("<div id='win-cell'></div>")
+            row_string.append(f"<div class='win-cell{large}'></div>")
         row_string.append(html_string)
         row_string.append(timeago.format(
             match['unix_time'], datetime.datetime.now()))
@@ -88,7 +104,7 @@ def generate_table_string(func_name, match_data, template, result):
     return result
 
 
-def generate_item_string(template, img_host, match):
+def append_item_string(template, img_host, match):
     html_string = "<div class='purchases'>"
     if 'start' in template:
         html_string += item_text_str(match['starting_items'],
@@ -164,7 +180,7 @@ def item_text_str(items, img_host, type, hero):
     return html_string
 
 
-def generate_ability_string(match, img_host):
+def append_ability_string(match, img_host):
     html_string = f"<div class='abilities' data-hero=\"{match['hero']}\">"
     visited = []
     for ability in match['abilities']:
@@ -222,7 +238,7 @@ def talent_img(talent):
     return f"<div class=\"lvl{level} {side}\"></div>"
 
 
-def generate_draft_string(match):
+def append_draft_string(match):
     html_string = "<div class='draft'>"
     html_string += draft_string(match, 'radiant', match['hero'])
     html_string += "</div>"
@@ -248,11 +264,25 @@ def stats(match, template):
                  'gpm', 'xpm', 'hero_damage', 'tower_damage', 'duration', 'mmr']
     for stat in stat_list:
         perc = ''
-        if 'start' in template and stat == 'gold':
-            stat = 'lane_efficiency'
-            perc = '%'
+        id = stat
+        if 'start' in template:
+            if stat == 'gold':
+                stat = 'lane_efficiency'
+                perc = '%'
+            elif stat == 'kills':
+                stat = 'kills_ten'
+            elif stat == 'deaths':
+                stat = 'deaths_ten'
+            elif stat == 'lvl':
+                stat = 'lvl_at_ten'
+            elif stat == 'last_hits':
+                stat = 'last_hits_ten'
+            elif stat == 'xpm':
+                stat = 'xpm_ten'
+            elif stat == 'gpm':
+                stat = 'gpm_ten'
         row_string.append(
-            f"<p class='stats' data-sort='{match[stat]}' id='{stat}'>{match[stat]}{perc}</p>")
+            f"<p class='stats' data-sort='{match[stat]}' id='{id}'>{match[stat]}{perc}</p>")
     return row_string
 
 
