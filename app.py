@@ -1,9 +1,7 @@
-import asyncio
 import datetime
 import json
 import mimetypes
 import re
-import time
 from collections import Counter
 from operator import itemgetter
 
@@ -16,11 +14,9 @@ from flask_compress import Compress
 
 from helper_funcs.helper_imports import *
 from helper_funcs.table import generate_table
-from opendota_api import opendota_call
 from route_logic.hero_view import HeroView
 from route_logic.player_view import PlayerView
 from route_logic.redirect import handle_redirect
-
 # TODO
 # show alex ads
 
@@ -215,23 +211,6 @@ def add_header(response):
     return response
 
 
-def manual_hero_update(hero):
-    # hero_output.delete_many({'hero': hero})
-    # all_urls(hero)
-    # database_methods.insert_total_picks('hero', hero, 'hero_picks')
-    # database_methods.insert_winrates()
-    # parse_request()
-    return
-
-
-
-
-
-def update_one_entry(hero, id):
-    hero_output.delete_many({'hero': hero, 'id': id})
-    # hero_output.find_one_and_delete(
-    #     {'hero': hero, 'id': id})
-    asyncio.run(opendota_call([id], hero))
 
 
 def main():
@@ -239,4 +218,6 @@ def main():
 
 
 if __name__ == '__main__':
+    # update_one_entry('jakiro', 6288052800)
+    # manual_hero_update('jakiro')
     main()
