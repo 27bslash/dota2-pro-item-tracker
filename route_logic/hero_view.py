@@ -25,7 +25,7 @@ class HeroView(View):
                                          request=request, player='')
         pick_data = db['wins'].find_one({'hero': hero_name}, {'_id': 0, 'Hard Support_picks': 1, 'Support_picks': 1,
                                                               'Roaming_picks': 1, 'Offlane_picks': 1, 'Midlane_picks': 1, 'Safelane_picks': 1})
-
+        wins = db['wins'].find_one({'hero': hero_name})
         roles = {k: pick_data[k] for k in sorted(
             pick_data, key=pick_data.get, reverse=True)}
         total = hero_output.count_documents({'hero': hero_name})
@@ -33,7 +33,7 @@ class HeroView(View):
             best_games = View.role(self, hero_name, request)['best_games']
             hero_colour = self.get_hero_name_colour(hero_name)
             return {'template': template, 'hero_img': hero_name, 'display_name': display_name, 'hero_name': switcher(hero_name),
-                    'time': time.time(), 'total': total, 'hero_colour': hero_colour, 'roles': roles, 'best_games': best_games}
+                    'time': time.time(), 'total': total, 'hero_colour': hero_colour, 'roles': roles, 'wins': wins, 'best_games': best_games}
         else:
             return {'template': template, 'hero_name': hero_name, 'hero_img': hero_name, 'display_name': display_name, 'data': [], 'time': time.time(), 'total': 0, 'hero_colour': self.get_hero_name_colour(hero_name), 'roles': roles}
 
