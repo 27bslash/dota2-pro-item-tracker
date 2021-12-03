@@ -135,7 +135,7 @@ class Db_insert:
                         {'hero': doc['hero'], "id": doc['id']}, {"$set": {'data': doc}}, upsert=True)
             if items.index('shadow_amulet') != 5:
                 continue
-            if 'shadow_amulet' in items and len(items) < 3 or 'shadow_amulet' in items and doc['role'] in roles and duration - amulet_time > 120:
+            if 'shadow_amulet' in items and len(items) < 3 or 'shadow_amulet' in items and doc['role'] in roles and duration - amulet_time > 120 or 'shadow_amulet' in items and len(items) == 1 or len(items) == 0:
                 db['chappie'].find_one_and_update(
                     {'hero': doc['hero'], "id": doc['id']}, {"$set": {'data': doc}}, upsert=True)
 
@@ -167,6 +167,7 @@ class Db_insert:
                 total_winrate = 0
             else:
                 total_winrate = (total_wins / picks) * 100
+                total_winrate = self.clean_winrate(total_winrate)
             role_dict = {'hero': hero['name'],
                          'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
             for role in roles:
@@ -179,6 +180,7 @@ class Db_insert:
                     winrate = 0
                 else:
                     winrate = wins/picks*100
+                    winrate = self.clean_winrate(winrate)
                     role_dict[f"{role}_picks"] = picks
                     role_dict[f"{role}_wins"] = wins
                     role_dict[f"{role}_losses"] = losses
@@ -186,6 +188,12 @@ class Db_insert:
             output.append(role_dict)
             db['wins'].find_one_and_replace({'hero': hero['name']},
                                             role_dict, upsert=True)
+
+    def clean_winrate(self, winrate):
+        winrate = f'{winrate:.2f}'
+        winrate = f'{float(winrate):g}'
+        winrate = float(winrate) if '.' in winrate else int(winrate)
+        return winrate
 
     def insert_all(self):
         self.insert_worst_games()
