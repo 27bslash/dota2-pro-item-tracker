@@ -170,17 +170,33 @@
             </p></a
             >
             <p style="color: white;">
-              was picked {{total}} times. It's mostly played:
+              was picked {{total}} times with a winrate of (<span class=winrate>{{wins['winrate']}}%</span>). It's mostly played:
             </p>
             {%for k,v in roles.items()%}
-            {%set clean_key =k|replace('_picks', '')%}
+            {%set clean_key =k|replace('_picks', '') %}
             <a href="/hero/{{hero_name}}?role={{clean_key}}">
+              {%set win_key = clean_key + '_winrate'%}
               <p class="total-picks">
-                {{clean_key}} ({{v}}){{"," if not loop.last else "." }}
+                {{clean_key}} ({{v}}, <span class='winrate'>{{wins[win_key]}}%</span>){{"," if not loop.last else "." }}
               </p>
             </a>
             {%endfor%}
           </div>
+          <script>
+            winrates = document.querySelectorAll('.winrate')
+            winrates.forEach(x=> {
+              const winrate = x.innerText.replace('%', '')
+              if (+winrate < 50 && +winrate > 30) {
+                  x.style.color = `hsl(0, 100%, ${winrate}%)`;
+                } else if (+winrate <= 30) {
+                  x.style.color = "hsl(0,100%, 30%)";
+                } else if (+winrate > 80) {
+                  x.style.color = "rgb(120 255 152)";
+                } else {
+                  x.style.color = `hsl(134, 100%,${winrate}%)`;
+                }
+            })
+        </script>
           <table role="main" class="item-table stripe">
             <thead>
               <th class="stats" id="win"></th>
