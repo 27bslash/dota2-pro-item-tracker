@@ -167,6 +167,8 @@ def acc_json():
 def wins_json():
     data = db['wins'].find({}, {'_id': 0})
     wins = [item for item in data]
+    for win in wins:
+        win['hero'] = switcher(win['hero'])
     return json.dumps(wins)
 
 
