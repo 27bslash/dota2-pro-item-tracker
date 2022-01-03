@@ -8,7 +8,7 @@ from helper_funcs.accounts.download_acount_ids import update_pro_accounts
 import shutil
 import requests
 import traceback
-
+import re
 hero_list = db['hero_list'].find_one({}, {'_id': 0})
 
 
@@ -170,13 +170,62 @@ def update_talents():
 
 def update_minimap_icons():
     import subprocess
-    import shutil
     subprocess.check_call('npm install dota2-minimap-hero-sprites', shell=True)
     shutil.copy('node_modules/dota2-minimap-hero-sprites/assets/images/minimap_hero_sheet.png',
                 'static/minimap_icons/images/minimap_hero_sheet.png')
     shutil.copy('node_modules/dota2-minimap-hero-sprites/assets/stylesheets/dota2minimapheroes.css',
                 'static/minimap_icons/stylesheets/dota2minimapheroes.css')
     shutil.rmtree('node_modules')
+
+
+def update_talent_names():
+    hero_list = db['hero_list'].find_one()['heroes']
+    for hero in hero_list:
+        talents = db['individual_abilities'].find_one(
+            {'hero': hero['name']})['talents']
+        extract_special_values(talents, hero['name'])
+        # break
+
+
+def extract_special_values(talents, hero):
+    for talent in talents:
+        try:
+            special_values = talents[talent]['special_values']
+            test_string = talents[talent]['name_loc']
+
+            clean = val(test_string, special_values)
+
+            talents[talent]['name_loc'] = clean
+            db['individual_abilities'].find_one_and_update(
+                {'hero': hero},
+                {'$set': {'talents': talents}
+                 }, upsert=True)
+        except Exception as e:
+            print('Exception: ', hero, talent,
+                  talents[talent]['name_loc'], traceback.format_exc())
+
+
+def val(text, special_values):
+    # print(text)
+    pattern = re.compile("s:(\w*)")
+    result = ''
+    for value in special_values:
+        special_val = ''
+        if len(result) > 0:
+            text = result
+        if 's:' not in text:
+            return text
+        match = pattern.search(text).group(1)
+        if value['name'] == match:
+            if len(value['values_float']) > 0:
+                special_val += f"{round(value['values_float'][0], 2)}"
+            else:
+                special_val += str(value['values_int'][0])
+            if value['is_percentage']:
+                special_val += '%'
+            regex = '{s:' + value['name'] + '}'
+            result = re.sub(regex, special_val, text)
+    return result
 
 
 def update_app():
@@ -190,6 +239,7 @@ def update_app():
     dl_dota2_abilities()
     print('updating_talents...')
     update_talents()
+    update_talent_names()
     print('updating hero colours....')
     compute_contrast()
     print('updating minimap icons...')
@@ -211,7 +261,7 @@ if __name__ == '__main__':
     # update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
     # update_stratz_json(
     #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
-    update_app()
+    dl_dota2_abilities()
     # db_methods = Db_insert()
     # db_methods.insert_talent_order(66)
 
