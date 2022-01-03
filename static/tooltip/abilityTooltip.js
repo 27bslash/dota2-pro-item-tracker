@@ -9,9 +9,64 @@ class AbilityTooltip extends Tooltip {
       this.tooltip.appendChild(tooltipLineOne);
     }
   }
+  damageType() {
+    const text = document.createElement("p");
+    const dmgType = this.convertDamageType();
+    text.innerHTML = "DAMAGE TYPE: " + dmgType;
+    return text;
+  }
+  convertDamageType() {
+    let dmgType = this.base["damage"];
+    switch (dmgType) {
+      case 1:
+        dmgType = '<span style="color: red">PHYSICAL</span>';
+        break;
+      case 2:
+        dmgType = '<span style="color: #a3dcee">MAGICAL</span>';
+        break;
+      case 3:
+        dmgType = '<span style="color: #a3dcee">MAGICAL</span>';
+        break;
+      case 4:
+        dmgType = '<span style="color: orange">PURE</span>';
+        break;
+      default:
+        break;
+    }
+    return dmgType;
+  }
+  //   3 not dispellable
+  //   2 is dispellable
+  //   1 strong dispellable
+
+  spellImmunity() {
+    const text = document.createElement("p");
+    const immunity = this.base["immunity"];
+    const pierce = immunity === 3 ? "YES" : "NO";
+    text.innerHTML =
+      "PIERCES SPELL IMMUNITY: " +
+      `<strong><span style='color: white'>${pierce}</span></strong>`;
+    return text;
+  }
+  dispellable() {
+    const text = document.createElement("p");
+    let dispellable = this.base["dispellable"];
+    if (dispellable === 3) {
+      dispellable = "NO";
+    } else if (dispellable === 2) {
+      dispellable = "YES";
+    } else if (dispellable === 1) {
+      dispellable = "STRONG DISPELL ONLY";
+    }
+    text.innerHTML =
+      "DISPELLABLE: " +
+      `<strong><span style='color: white'>${dispellable}</span></strong>`;
+    return text;
+  }
   abilityTooltipContent() {
     let description = document.createElement("div");
     description.setAttribute("class", "tooltip-description");
+    const dmgType = this.damageType();
     const tooltipAttributes = new TooltipAttributes(
       this.tooltip,
       this.tooltipType,
@@ -19,6 +74,11 @@ class AbilityTooltip extends Tooltip {
     );
     description.innerHTML = this.extract_hidden_values(this.base["desc_loc"]);
     const attributes = tooltipAttributes.attributeGen();
+    if (!dmgType.innerHTML.includes(0)) {
+      attributes.appendChild(dmgType);
+      attributes.appendChild(this.spellImmunity());
+      attributes.appendChild(this.dispellable());
+    }
     const lore = super.genLore();
     super.appendToContent(description, attributes, lore);
   }
