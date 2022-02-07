@@ -7,7 +7,11 @@ class Tooltip {
   gentooltipHeaderText(text = "") {
     let tooltipHeaderText;
     if (this.tooltipType === "talent") {
-      tooltipHeaderText = text || event.target.parentNode.dataset.name;
+      let n = event.target.parentNode.dataset.name;
+      //   console.log(n);
+      //   n = n.replace(/{(.*)}/, "%$1%");
+      tooltipHeaderText =
+        text || event.target.parentNode.dataset.name || this.fix_talents(n);
     } else if (this.tooltipType == "item") {
       tooltipHeaderText = this.base["displayName"];
     } else {
@@ -50,6 +54,27 @@ class Tooltip {
       this.tooltip.style.display = "block";
     }
     return tooltipLineOne;
+  }
+  fix_talents(text, aghanim = null) {
+    let sp = text.split("%");
+    console.log(sp);
+    arr = aghanim || this.base;
+    console.log("dict", arr);
+    arr["special_values"].forEach((x) => {
+      if (sp.indexOf(x["name"]) > -1) {
+        let float = x["values_float"].map(
+            (el) => parseFloat(el).toFixed(2) * 1
+          ),
+          int = x["values_int"];
+        if (x["is_percentage"]) {
+          float = float.map((el) => (el += "%"));
+          int = int.map((el) => (el += "%"));
+        }
+        sp[sp.indexOf(x["name"])] = `${float || ""}${int || ""}`;
+      }
+    });
+    return sp.join("");
+    return text;
   }
   genLore() {
     const lore = document.createElement("div");
@@ -104,6 +129,7 @@ class Tooltip {
   }
   extract_hidden_values(text, aghanim = null) {
     let sp = text.split("%");
+    // console.log(sp);
     arr = aghanim || this.base;
     arr["special_values"].forEach((x) => {
       if (sp.indexOf(x["name"]) > -1) {

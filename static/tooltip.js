@@ -100,7 +100,7 @@ window.addEventListener("mouseover", (event) => {
     aghanim_ability = extract_aghanim(result, tooltipType);
   }
   styleBackground(tooltip, imgSrc, aghanim_ability);
-  let base = aghanim_ability || result[_id];
+  let base = aghanim_ability || result[_id] || result;
   if (tooltip.id === "item-tooltip") {
     for (let i = 0; i < result["items"].length; i++) {
       if (result["items"][i]["id"] === +_id) {
@@ -110,7 +110,6 @@ window.addEventListener("mouseover", (event) => {
   }
   if (tooltip.id === "talent-tooltip") {
     base = result.filter((x) => x.id === +event.target.dataset.id)[0];
-    console.log('base', base)
     const tooltip_method = new Tooltip(tooltip, tooltipType, base);
     tooltip_method.generateLineOne(event.target.dataset.name);
     return;
@@ -158,6 +157,7 @@ function extract_aghanim(result, s) {
 const getResult = (tooltipType, hero) => {
   let result = [];
   if (tooltipType === "hero") {
+    console.log(stats);
     result = stats["result"]["data"]["heroes"][0];
     // result = stats[hero]["result"]["data"]["heroes"][0];
   } else if (tooltipType === "item") {
