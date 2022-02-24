@@ -146,9 +146,9 @@ const positionTooltip = (tooltip, event) => {
 
 function extract_aghanim(result, s) {
   for (let ability in result) {
-    if (result[ability][`ability_has_${s}`]) {
+    if (result[ability][`ability_is_granted_by_${s}`]) {
       return result[ability];
-    } else if (result[ability][`ability_is_granted_by_${s}`]) {
+    } else if (result[ability][`ability_has_${s}`] && result[ability][`${s}_loc`]) {
       return result[ability];
     }
   }
