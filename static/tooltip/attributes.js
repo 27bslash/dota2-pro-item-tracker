@@ -18,16 +18,15 @@ class TooltipAttributes extends Tooltip {
     } else {
       this.base["special_values"].forEach((x) => {
         let heading = x["heading_loc"],
-          float = x["values_float"].map((el) => parseFloat(el).toFixed(2)),
-          int = x["values_int"];
+          float = x["values_float"].map((el) => parseFloat(el.toFixed(2)));
         if (heading.length > 0) {
           if (x["is_percentage"]) {
             float = float.map((el) => (el += "%"));
-            int = int.map((el) => (el += "%"));
           }
-          float = float.join("/");
-          int = int.join("/");
-          attribute_obj.push(heading + " " + float + int);
+          if (float) {
+            float = float.join("/");
+          }
+          attribute_obj.push(heading + " " + float);
         }
       });
     }
