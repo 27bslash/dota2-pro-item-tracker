@@ -37,7 +37,7 @@ const bigTalent = async () => {
       width = (talent.talent_count / talent.total_pick_count) * 100;
     }
     talentText = document.createElement("p");
-    talentText.innerText = talent.key;
+    talentText.innerText = talent.key.replace(/[+-]?{s:.*}\%?/g, "");
     talentText.setAttribute("class", "talent-text");
     talentBar = document.createElement("div");
     talentBar.setAttribute("class", "talent-bar");
