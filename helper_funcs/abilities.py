@@ -60,6 +60,7 @@ def detailed_ability_info(ability_list, hero_id):
                     for k in talents:
                         if _id == k:
                             d['slot'] = talents[k]['slot']
+                            break
                 else:
                     d['type'] = 'ability'
                 if hero_id != 74:
@@ -101,7 +102,7 @@ def skill_gap(gap, _id, temp_st_count, st_count, level, type):
 
 def extract_special_values(talent):
     regex = r"{s:value}"
-    val = None
+    val = ''
     for lst in talent['special_values']:
         if len(lst['values_float']) > 0:
             val = round(lst['values_float'][0], 2)*1
