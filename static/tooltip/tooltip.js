@@ -119,9 +119,10 @@ class Tooltip {
       ? text
           .replace(/<font(.*?)>/g, "")
           .replace(/font/g, "")
+          .replace(/\.0/gm, "")
           .replace(
-            /([^a-z>]\d*\.?\d+%?)(\s\/)?/gm,
-            `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
+            /([^a-z>]\d*\.?\d+%?)(\s\/)?(s?)/gm,
+            `<strong><span class='tooltip-text-highlight'>$1$2$3</span></strong>`
           )
           .replace(/<h1>/g, "<h3 class='tooltip-text-highlight'>")
           .replace(/<\/h1>/g, "</h3>")
