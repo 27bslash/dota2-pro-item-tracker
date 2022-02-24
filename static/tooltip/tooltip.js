@@ -11,7 +11,7 @@ class Tooltip {
       //   console.log(n);
       //   n = n.replace(/{(.*)}/, "%$1%");
       tooltipHeaderText =
-        text || event.target.parentNode.dataset.name || this.fix_talents(n);
+        text.replace(/[+-]?{s:.*}\%?/g, "")  || event.target.parentNode.dataset.name.replace(/[+-]?{s:.*}\%?/g, "") || this.fix_talents(n);
     } else if (this.tooltipType == "item") {
       tooltipHeaderText = this.base["displayName"];
     } else {
@@ -140,7 +140,7 @@ class Tooltip {
           int = x["values_int"];
         if (x["is_percentage"]) {
           float = float.map((el) => (el += "%"));
-          int = int.map((el) => (el += "%"));
+          if (int) int = int.map((el) => (el += "%"));
         }
         sp[sp.indexOf(x["name"])] = `${float || ""}${int || ""}`;
       }
