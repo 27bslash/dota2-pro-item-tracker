@@ -1,9 +1,7 @@
 import os
 import json
-from colorthief import ColorThief
 from helper_funcs.helper_imports import *
 from colours.contrast import compute_contrast
-from colours.dominant_colour import get_dominant_colours, get_dominant_color
 from helper_funcs.accounts.download_acount_ids import update_pro_accounts
 import shutil
 import requests
@@ -95,14 +93,15 @@ def update_stratz_json(url, collection):
     req = requests.get(url)
     db_data = db[collection].find_one({}, {'_id': 0})
     # print(req.status_code)
-    if req.status_code is not 200:
-        raise Exception(f"request failed  {req.status_code} {url}")
+    if req.status_code != 200:
+        print(f"request failed  {req.status_code} {url}")
     if not db_data or not req.json() == db_data and len(req.json()) > len(db_data):
         db[collection].find_one_and_update(
             {}, {"$set": req.json()}, upsert=True)
 
 
 def graphql():
+    token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJodHRwczovL3N0ZWFtY29tbXVuaXR5LmNvbS9vcGVuaWQvaWQvNzY1NjExOTgwNDk3MjMyNTAiLCJ1bmlxdWVfbmFtZSI6IkFkZHJlc3MgbWUgYnkgbXkgaHVzYmFuZCdzIHJhbmsiLCJTdWJqZWN0IjoiMzIyMzFkMDgtNzk0NS00YzNhLTg5ZGItMzc0NzFiMTg4NGYxIiwiU3RlYW1JZCI6Ijg5NDU3NTIyIiwibmJmIjoxNjMwODUwNzM1LCJleHAiOjE2NjIzODY3MzUsImlhdCI6MTYzMDg1MDczNSwiaXNzIjoiaHR0cHM6Ly9hcGkuc3RyYXR6LmNvbSJ9.DLh7iVwaTemZIo1BQ1o6ApGS-5AoYKBewCCqP4lDWa4'
     query = """
     query {
         constants{
@@ -129,11 +128,12 @@ def graphql():
     }
     """
     url = 'https://api.stratz.com/graphql'
-    r = requests.post(url, json={'query': query})
+    headers = {'Authorization': 'Bearer ' +token}
+    r = requests.post(url, headers=headers, json={'query': query})
     if r.status_code == 200:
         return r.json()['data']['constants']
     else:
-        print(f"query failed {r.status_code} {query}")
+        print(f"query failed {r.status_code} {r.text}")
 
 
 def insert_all_items():
@@ -251,9 +251,9 @@ def update_app():
 
 def weekly_update():
     insert_all_items()
-    update_stratz_json(
-        'https://api.stratz.com/api/v1/Ability', 'all_abilities')
-    update_talents()
+    # update_stratz_json(
+    #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
+    # update_talents()
 
 
 if __name__ == '__main__':
@@ -261,11 +261,9 @@ if __name__ == '__main__':
     # update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
     # update_stratz_json(
     #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
-    dl_dota2_abilities()
     # db_methods = Db_insert()
     # db_methods.insert_talent_order(66)
-
-    # update_app()
+    update_app()
     # dl_dota2_abilities()
     # chunk_stratz_abilites()
     # update_hero_list()
