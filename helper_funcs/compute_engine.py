@@ -32,8 +32,8 @@ def service_login():
 def check_last_day():
     sort = db['urls'].find({}).sort('time_stamp', -1)
     time_since = time.time() - sort[0]['time_stamp']
-    if time_since > 86400:
-        # print('shite')
+    if time_since > 3600:
         reset_instance()
+        
 if __name__ == "__main__":
     check_last_day()
