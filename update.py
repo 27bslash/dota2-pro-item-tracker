@@ -128,7 +128,7 @@ def graphql():
     }
     """
     url = 'https://api.stratz.com/graphql'
-    headers = {'Authorization': 'Bearer ' +token}
+    headers = {'Authorization': 'Bearer ' + token}
     r = requests.post(url, headers=headers, json={'query': query})
     if r.status_code == 200:
         return r.json()['data']['constants']
@@ -150,6 +150,16 @@ def insert_all_items():
                 break
     db['all_items'].find_one_and_update(
         {}, {"$set": stratz_data}, upsert=True)
+
+
+def update_item_ids():
+    items = db['all_items'].find_one({})['items']
+    item_ids = {'items': []}
+    for item in items:
+        _id = item['id']
+        name = item['name'].replace('item_', '')
+        item_ids['items'].append({'name': name, 'id': int(_id)})
+    db['item_ids'].find_one_and_update({}, {'$set': item_ids}, upsert=True)
 
 
 def update_basic_id_json(input_collection, output_collection, dic_name):
@@ -232,6 +242,7 @@ def update_app():
     print('uploading hero list')
     update_hero_list()
     print('updating json....')
+    update_item_ids()
     insert_all_items()
     update_stratz_json(
         'https://api.stratz.com/api/v1/Ability', 'all_abilities')
@@ -251,9 +262,10 @@ def update_app():
 
 def weekly_update():
     insert_all_items()
+    update_item_ids()
     # update_stratz_json(
     #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
-    # update_talents()
+    update_talents()
 
 
 if __name__ == '__main__':
