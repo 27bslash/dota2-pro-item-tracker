@@ -99,6 +99,8 @@ async def async_get(m_id, hero_name, testing=False):
                     abilities = p['ability_upgrades_arr']
                     # check if one of the players matches search
                     purchase_log = p['purchase_log']
+                    if not purchase_log:
+                        return add_to_dead_games(m_id)
                     if p['kills_log']:
                         kills_ten = calulate_kills_at_ten(p['kills_log'])
                     else:
@@ -107,8 +109,6 @@ async def async_get(m_id, hero_name, testing=False):
                     xpm_at_ten = int(float(p['xp_t'][9]/10))
                     gpm_at_ten = int(float(p['gold_t'][9]/10))
 
-                    if not purchase_log:
-                        return add_to_dead_games(m_id)
                     role = roles(roles_arr, p['player_slot'])
                     starting_items = []
                     aghanims_shard = None
@@ -147,8 +147,8 @@ async def async_get(m_id, hero_name, testing=False):
                             'unix_time': p['start_time'], 'hero': hero_name, 'duration': p['duration'],
                             'radiant_draft': rad_draft, 'dire_draft': dire_draft, 'bans': hero_bans, 'gold_adv': resp['radiant_gold_adv'][-1],
                             # player information
-                            'name': get_info_from_url_db(match_id, 'name', hero_name), 'account_id': p['account_id'],
-                            'role': role, 'mmr': get_info_from_url_db(match_id, 'mmr', hero_name),
+                            'name': get_info_from_url_db(match_id, 'name', hero_name, testing), 'account_id': p['account_id'],
+                            'role': role, 'mmr': get_info_from_url_db(match_id, 'mmr', hero_name, testing),
                             # game stats
                             'lvl': p['level'], 'gold': p['gold_t'].copy()[::-1][0], 'hero_damage': p['hero_damage'],
                             'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
@@ -266,7 +266,9 @@ async def get_acc_ids(urls, hero_name):
     ret = await asyncio.gather(*[account_id(url, hero_name) for url in urls])
 
 
-def get_info_from_url_db(m_id, search, hero):
+def get_info_from_url_db(m_id, search, hero, testing=False):
+    if testing:
+        return 0
     data = hero_urls.find_one({'id': m_id, 'hero': hero})
     return data[search]
 
