@@ -15,9 +15,8 @@ def odota_bulk_request(hero):
     asyncio.run(opendota_call(urls[slice(0, 60)], hero))
     if sleep >= 60:
         sleep = 60
-        print('sleeping for: ', sleep)
         time.sleep(sleep)
-        odota_bulk_request(hero)
+        return odota_bulk_request(hero)
     print('sleeping for: ', sleep)
     time.sleep(sleep)
 
@@ -27,9 +26,11 @@ def daily_update():
     check_last_day()
     data = db['hero_list'].find_one({}, {'_id': 0})
     today = datetime.datetime.today().weekday()
-    if today == 3:
+    hour = datetime.datetime.now().hour
+    # print(today)
+    if today == 3 and hour == 12:
         weekly_update()
-        pass
+        update_pro_accounts()
     for hero in data['heroes']:
         hero = hero['name']
         urls = get_urls(hero)
@@ -40,7 +41,6 @@ def daily_update():
     delete_old_urls()
     database_methods.insert_all()
     parse_request()
-    update_pro_accounts()
     print('end', (time.time()-start)/60, 'minutes')
 
 
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     # daily_update()
     try:
         scheduler.add_job(daily_update, 'cron', timezone='Europe/London',
-                          start_date=datetime.datetime.now(), hour='12', minute='10', day_of_week='mon-sun')
+                          start_date=datetime.datetime.now(), hour='*', minute='10', day_of_week='mon-sun')
         scheduler.start()
     except Exception as e:
         print(e, e.__class__)
