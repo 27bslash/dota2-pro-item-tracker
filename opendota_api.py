@@ -62,7 +62,12 @@ async def async_get(m_id, hero_name, testing=False):
                     if response.status == 404:
                         # game not over yet
                         return 404
-                    return
+                    if response.status == 429:
+                        # rate liimt
+                        return 429
+                    if response.status == 500:
+                        # server error
+                        return add_to_dead_games(m_id)
                 hero_methods = Hero()
                 item_methods = Items()
                 resp = await response.json()
