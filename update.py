@@ -204,7 +204,6 @@ def extract_special_values(talents, hero):
             test_string = talents[talent]['name_loc']
 
             clean = val(test_string, special_values)
-
             talents[talent]['name_loc'] = clean
             db['individual_abilities'].find_one_and_update(
                 {'hero': hero},
@@ -219,6 +218,8 @@ def val(text, special_values):
     # print(text)
     pattern = re.compile("s:(\w*)")
     result = ''
+    if len(special_values) == 0:
+        return text.replace(r"{s:.*}", '')
     for value in special_values:
         special_val = ''
         if len(result) > 0:
@@ -226,14 +227,14 @@ def val(text, special_values):
         if 's:' not in text:
             return text
         match = pattern.search(text).group(1)
-        if value['name'] == match:
+        if value['name'] == match or value['name'] == 'value' and len(special_values) == 1:
             if len(value['values_float']) > 0:
                 special_val += f"{round(value['values_float'][0], 2)}"
             else:
                 special_val += str(value['values_int'][0])
             if value['is_percentage']:
                 special_val += '%'
-            regex = '{s:' + value['name'] + '}'
+            regex = '{s:' + match + '}'
             result = re.sub(regex, special_val, text)
     return result
 
