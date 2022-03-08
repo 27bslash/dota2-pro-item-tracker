@@ -44,8 +44,9 @@ def make_dir():
         os.mkdir(f"colours/ability_images/{hero_name}")
 
 
-def dl_dota2_abilities():
-    make_dir()
+def dl_dota2_abilities(manual=False):
+    if manual:
+        make_dir()
     datafeed = 'https://www.dota2.com/datafeed/herodata?language=english&hero_id='
     for hero in hero_list['heroes']:
         req = requests.get(f"{datafeed}{hero['id']}")
@@ -56,7 +57,8 @@ def dl_dota2_abilities():
         print(hero['name'])
         for ability in ability_json['abilities']:
             hero_abilities[str(ability['id'])] = ability
-            get_ability_img(ability['name'], hero['name'])
+            if manual:
+                get_ability_img(ability['name'], hero['name'])
         for i, talent in enumerate(ability_json['talents']):
             talent['slot'] = i
             hero_talents[str(talent['id'])] = talent
@@ -176,6 +178,9 @@ def update_talents():
     db_methods = Db_insert()
     for hero in hero_list['heroes']:
         db_methods.insert_talent_order(hero['id'])
+        talents = db['individual_abilities'].find_one(
+            {'hero': hero['name']})['talents']
+        extract_special_values(talents, hero['name'])
 
 
 def update_minimap_icons():
@@ -186,15 +191,6 @@ def update_minimap_icons():
     shutil.copy('node_modules/dota2-minimap-hero-sprites/assets/stylesheets/dota2minimapheroes.css',
                 'static/minimap_icons/stylesheets/dota2minimapheroes.css')
     shutil.rmtree('node_modules')
-
-
-def update_talent_names():
-    hero_list = db['hero_list'].find_one()['heroes']
-    for hero in hero_list:
-        talents = db['individual_abilities'].find_one(
-            {'hero': hero['name']})['talents']
-        extract_special_values(talents, hero['name'])
-        # break
 
 
 def extract_special_values(talents, hero):
@@ -251,7 +247,6 @@ def update_app():
     dl_dota2_abilities()
     print('updating_talents...')
     update_talents()
-    update_talent_names()
     print('updating hero colours....')
     compute_contrast()
     print('updating minimap icons...')
@@ -262,6 +257,7 @@ def update_app():
 
 
 def weekly_update():
+    update_hero_list()
     insert_all_items()
     update_item_ids()
     # update_stratz_json(
@@ -270,14 +266,4 @@ def weekly_update():
 
 
 if __name__ == '__main__':
-    # update_stratz_json('https://api.stratz.com/api/v1/Item', 'all_items')
-    # update_stratz_json('https://api.stratz.com/api/v1/Hero', 'all_talents')
-    # update_stratz_json(
-    #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
-    # db_methods = Db_insert()
-    # db_methods.insert_talent_order(66)
     update_app()
-    # dl_dota2_abilities()
-    # chunk_stratz_abilites()
-    # update_hero_list()
-    # upload_hero_list()
