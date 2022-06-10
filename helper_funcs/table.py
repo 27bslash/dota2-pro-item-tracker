@@ -188,7 +188,8 @@ def append_ability_string(match, img_host):
         html_string += "<div class='ability-img-wrapper'>"
         if ability['type'] == 'talent':
             visited.append(ability)
-            talents = f"<div class='talents' data-id =\'{ability['id']}\'  data-name=\"{ability['key']}\">"
+            key = ability['key']
+            talents = f"<div class='talents' data-id =\'{ability['id']}\'  data-name=\"{key}\">"
             for tal in visited:
                 talents += talent_img(tal)
             if len(talent_wrapper) == 0:
@@ -225,7 +226,6 @@ def talent_str(talent, talent_wrapper):
     return html_string
 
 
-    
 def talent_img(talent):
     side = 'r-talent' if talent['slot'] % 2 == 0 else 'l-talent'
     if talent['slot'] < 2:
@@ -250,12 +250,15 @@ def append_draft_string(match):
 
 def draft_string(match, side, query):
     html_string = f"<div class='{side}_draft'>"
-    for hero in match[f"{side}_draft"]:
-        rep = hero.replace("'", '')
-        highlight = ''
-        if hero == query:
-            highlight = 'icon-highlight'
-        html_string += f"<a href='/hero/{hero}'><i class='d2mh {rep} {highlight}'></i></a>"
+    try:
+        for hero in match[f"{side}_draft"]:
+            rep = hero.replace("'", '')
+            highlight = ''
+            if hero == query:
+                highlight = 'icon-highlight'
+            html_string += f"<a href='/hero/{rep}'><img src='/static/images/minimap_icons/{hero}.jpg' class='{highlight}'></img></a>"
+    except Exception as e:
+        print(match, side, query)
     return html_string
 
 
