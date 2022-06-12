@@ -28,7 +28,7 @@ class AbilityTooltip extends Tooltip {
         dmgType = '<span style="color: #a3dcee">MAGICAL</span>';
         break;
       case 4:
-        dmgType = '<span style="color: orange">PURE</span>';
+        dmgType = '<span style="color: #FBDC98">PURE</span>';
         break;
       default:
         break;
@@ -73,7 +73,7 @@ class AbilityTooltip extends Tooltip {
       this.base
     );
     description.innerHTML = this.extract_hidden_values(this.base["desc_loc"]);
-    const attributes = tooltipAttributes.attributeGen();
+    const attributes = tooltipAttributes.attributeGen(this.base["damage"]);
     if (!dmgType.innerHTML.includes(0)) {
       attributes.appendChild(dmgType);
       attributes.appendChild(this.spellImmunity());

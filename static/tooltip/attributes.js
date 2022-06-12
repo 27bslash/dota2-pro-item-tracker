@@ -1,9 +1,22 @@
 import Tooltip from "./tooltip.js";
 class TooltipAttributes extends Tooltip {
-  attributeGen() {
+  attributeGen(dmgType = "") {
     const attribute_obj = [];
     const attributes = document.createElement("div");
     attributes.setAttribute("class", "attributes");
+    switch (dmgType) {
+      case 1:
+        dmgType = "red";
+        break;
+      case 2:
+        dmgType = "#a3dcee";
+        break;
+      case 3:
+        dmgType = "#a3dcee";
+        break;
+      case 4:
+        dmgType = "#FBDC98";
+    }
     if (this.base["attrib"]) {
       this.base["attrib"].forEach((x) => {
         if (x["footer"]) {
@@ -30,13 +43,18 @@ class TooltipAttributes extends Tooltip {
         }
       });
     }
-    const attributesBody = attribute_obj
-      .join("<br>")
-      .replace(
-        /([^h]\d*\.?\d+%?)(\s\/)?/gi,
-        `<strong><span class='tooltip-text-highlight'>$1$2</span></strong>`
-      );
-    attributes.innerHTML = `<p>${attributesBody}</p>`;
+    attribute_obj.forEach((x) => {
+      const attribute = document.createElement("p");
+      let label = x.split(":")[0];
+      let value = x.split(":")[1];
+      let color = "white";
+      if (label.includes("DAMAGE")) {
+        // console.log(label, value);
+        color = dmgType;
+      }
+      attribute.innerHTML = `${label}: <strong><span class='tooltip-text-highlight' style='color:${color}'>${value}</span></strong>`;
+      attributes.appendChild(attribute);
+    });
     return attributes;
   }
   singleAttribute(attribute) {
