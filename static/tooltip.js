@@ -109,7 +109,8 @@ window.addEventListener("mouseover", (event) => {
     }
   }
   if (tooltip.id === "talent-tooltip") {
-    base = result.filter((x) => x.id === +event.target.dataset.id)[0];
+    const res = Object.values(result);
+    base = res.filter((x) => x.id === +event.target.dataset.id)[0];
     const tooltip_method = new Tooltip(tooltip, tooltipType, base);
     tooltip_method.generateLineOne(event.target.dataset.name);
     return;
@@ -148,7 +149,10 @@ function extract_aghanim(result, s) {
   for (let ability in result) {
     if (result[ability][`ability_is_granted_by_${s}`]) {
       return result[ability];
-    } else if (result[ability][`ability_has_${s}`] && result[ability][`${s}_loc`]) {
+    } else if (
+      result[ability][`ability_has_${s}`] &&
+      result[ability][`${s}_loc`]
+    ) {
       return result[ability];
     }
   }
@@ -157,8 +161,7 @@ function extract_aghanim(result, s) {
 const getResult = (tooltipType, hero) => {
   let result = [];
   if (tooltipType === "hero") {
-    console.log(stats);
-    result = stats["result"]["data"]["heroes"][0];
+    result = stats;
     // result = stats[hero]["result"]["data"]["heroes"][0];
   } else if (tooltipType === "item") {
     result = items;
@@ -171,7 +174,7 @@ const getResult = (tooltipType, hero) => {
     // result = stats[hero]["result"]["data"]["heroes"][0]["abilities"];
     result = abilities[hero];
   } else {
-    result = stats.result.data.heroes[0].talents;
+    result = stats.talents;
   }
   return result;
 };

@@ -126,7 +126,7 @@ def hero_json():
 @ app.route('/files/abilities/<hero_name>')
 @cache.cached(timeout=602000)
 def hero_ability_json(hero_name):
-    data = db['individual_abilities'].find_one(
+    data = db['hero_stats'].find_one(
         {'hero': hero_name})['abilities']
     return json.dumps(data)
 
@@ -175,9 +175,8 @@ def wins_json():
 @ app.route('/files/hero-data/<hero_name>')
 @cache.cached(timeout=602000)
 def hero_data(hero_name):
-    url = f'https://www.dota2.com/datafeed/herodata?language=english&hero_id={hero_methods.get_id(hero_name)}'
-    req = requests.get(url)
-    return req.json()
+    req = db['hero_stats'].find_one({'hero': hero_name}, {'_id': 0})
+    return req
 
 
 @ app.route('/files/match-data/<hero_name>')
