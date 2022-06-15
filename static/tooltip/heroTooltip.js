@@ -47,8 +47,8 @@ class HeroTooltip extends Tooltip {
     stats.setAttribute("class", "stats");
     const aghanimWrapper = document.createElement("div");
     aghanimWrapper.setAttribute("class", "hero-aghanim-upgrades");
-    const shard = this.heroaghanim("shard");
-    const scepter = this.heroaghanim("scepter");
+    const shard = this.heroAghanim("shard");
+    const scepter = this.heroAghanim("scepter");
     if (shard) {
       aghanimWrapper.appendChild(shard);
     }
@@ -112,7 +112,7 @@ class HeroTooltip extends Tooltip {
     baseImg.style.position = "relative";
     return baseImg;
   }
-  heroaghanim(type) {
+  heroAghanim(type) {
     const aghanim = extract_aghanim(this.base["abilities"], type);
     if (!aghanim) return;
     const wrapper = document.createElement("div");
@@ -122,7 +122,7 @@ class HeroTooltip extends Tooltip {
     const spellImg = this.heroAghanimSubImg(imgSrc, type);
     const spellDesc = document.createElement("p");
     spellDesc.style.fontSize = "13px";
-    spellDesc.innerHTML = super.highlight_numbers(aghanim[`${type}_loc`]);
+    spellDesc.innerHTML = super.extract_hidden_values(aghanim[`${type}_loc`],aghanim);
     if (aghanim[`${type}_loc`].length == 0) {
       spellDesc.innerHTML = super.extract_hidden_values(
         aghanim["desc_loc"],
