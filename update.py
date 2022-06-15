@@ -62,8 +62,10 @@ def dl_dota2_abilities(manual=False):
         for i, talent in enumerate(ability_json['talents']):
             talent['slot'] = i
             hero_talents[str(talent['id'])] = talent
-        db['individual_abilities'].find_one_and_update(
-            {'hero': hero['name']}, {"$set": {"abilities": hero_abilities, 'talents': hero_talents}}, upsert=True)
+        ability_json['abilities'] = hero_abilities
+        ability_json['talents'] = hero_talents
+        db['hero_stats'].find_one_and_update(
+            {'hero': hero['name']}, {"$set": ability_json}, upsert=True)
         # json.dump(hero_abilities, o, indent=4)
 
 
@@ -178,7 +180,7 @@ def update_talents():
     db_methods = Db_insert()
     for hero in hero_list['heroes']:
         db_methods.insert_talent_order(hero['id'])
-        talents = db['individual_abilities'].find_one(
+        talents = db['hero_stats'].find_one(
             {'hero': hero['name']})['talents']
         extract_special_values(talents, hero['name'])
 
@@ -201,7 +203,7 @@ def extract_special_values(talents, hero):
 
             clean = val(test_string, special_values)
             talents[talent]['name_loc'] = clean
-            db['individual_abilities'].find_one_and_update(
+            db['hero_stats'].find_one_and_update(
                 {'hero': hero},
                 {'$set': {'talents': talents}
                  }, upsert=True)
@@ -232,6 +234,8 @@ def val(text, special_values):
                 special_val += '%'
             regex = '{s:' + match + '}'
             result = re.sub(regex, special_val, text)
+    if result == '':
+        return re.sub(r"{s:.*}s?%?", '', text)
     return result
 
 

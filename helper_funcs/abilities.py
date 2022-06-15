@@ -36,7 +36,7 @@ def detailed_ability_info(ability_list, hero_id):
     st_count = 0
     temp_st_count = 0
     gap = 0
-    data = db['individual_abilities'].find_one({'hero': hero_name})
+    data = db['hero_stats'].find_one({'hero': hero_name})
     abilities = data['abilities']
     talents = data['talents']
     all_abilities = {**abilities, **talents}

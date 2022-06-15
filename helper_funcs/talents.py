@@ -23,7 +23,7 @@ class Talents():
         count = self.count_talents(match_data)
         if count is None:
             return False
-        talents = db['individual_abilities'].find_one({'hero': hero})
+        talents = db['hero_stats'].find_one({'hero': hero})
         for x in talents['talents']:
             d = {}
             talent = talents['talents'][x]

@@ -53,7 +53,7 @@ class Db_insert:
     def insert_talent_order(self, hero_id):
         hero_methods = Hero()
         hero = hero_methods.hero_name_from_hero_id(hero_id)
-        data_talents = db['individual_abilities'].find_one(
+        data_talents = db['hero_stats'].find_one(
             {'hero': hero})['talents']
         talents = [detailed_ability_info(
             [_id], hero_id)[0] for _id in data_talents]
@@ -152,6 +152,7 @@ class Db_insert:
         return int(hours) * 3600 + int(minutes)*60 + int(seconds)
 
     def insert_winrates(self):
+        start = time.perf_counter()
         print('insert winrate...')
         output = []
         roles = ['Hard Support', 'Support', 'Safelane',
@@ -181,13 +182,14 @@ class Db_insert:
                 else:
                     winrate = wins/picks*100
                     winrate = self.clean_winrate(winrate)
-                    role_dict[f"{role}_picks"] = picks
-                    role_dict[f"{role}_wins"] = wins
-                    role_dict[f"{role}_losses"] = losses
-                    role_dict[f"{role}_winrate"] = winrate
+                role_dict[f"{role}_picks"] = picks
+                role_dict[f"{role}_wins"] = wins
+                role_dict[f"{role}_losses"] = losses
+                role_dict[f"{role}_winrate"] = winrate
             output.append(role_dict)
             db['wins'].find_one_and_replace({'hero': hero['name']},
                                             role_dict, upsert=True)
+        print('time taken: ',time.perf_counter()-start)
 
     def clean_winrate(self, winrate):
         winrate = f'{winrate:.2f}'
