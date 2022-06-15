@@ -45,6 +45,7 @@ class TooltipAttributes extends Tooltip {
     }
     attribute_obj.forEach((x) => {
       const attribute = document.createElement("p");
+      attribute.setAttribute("class", "attribute");
       let label = x.split(":")[0];
       let value = x.split(":")[1];
       let color = "white";
@@ -52,7 +53,19 @@ class TooltipAttributes extends Tooltip {
         // console.log(label, value);
         color = dmgType;
       }
-      attribute.innerHTML = `${label}: <strong><span class='tooltip-text-highlight' style='color:${color}'>${value}</span></strong>`;
+      let htmlString = `${label}: `;
+      if (value) {
+        const spl = value.split("/");
+        spl.forEach((el, i) => {
+          htmlString += `<strong><span class='tooltip-text-highlight' style='color:${color}'>${el}</span></strong>`;
+          if (i < spl.length - 1) {
+            htmlString += "/";
+          }
+        });
+        attribute.innerHTML = super.highlight_numbers(x);
+      } else {
+        attribute.innerHTML = super.highlight_numbers(x);
+      }
       attributes.appendChild(attribute);
     });
     return attributes;
