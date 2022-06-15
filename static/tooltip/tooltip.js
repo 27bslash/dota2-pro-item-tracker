@@ -129,11 +129,11 @@ class Tooltip {
       : "";
   }
   extract_hidden_values(text, aghanim = null) {
-    let sp = text.split("%");
-    // console.log(sp);
+    let sp = text.replace("bonus_", "").split("%");
     arr = aghanim || this.base;
     arr["special_values"].forEach((x) => {
-      if (sp.indexOf(x["name"]) > -1) {
+      x["name"] = x["name"].replace("bonus_", "");
+      if (sp.includes(x["name"])) {
         let float = x["values_float"].map(
             (el) => parseFloat(el).toFixed(2) * 1
           ),
