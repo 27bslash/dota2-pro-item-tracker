@@ -27,9 +27,9 @@ class AghanimTooltip extends Tooltip {
     description.setAttribute("class", "tooltip-description");
     let aghanimDescriptionText = "";
     if (this.tooltipType === "shard") {
-      aghanimDescriptionText = super.highlight_numbers(this.base["shard_loc"]);
+      aghanimDescriptionText = super.extract_hidden_values(this.base["shard_loc"]);
     } else {
-      aghanimDescriptionText = super.highlight_numbers(
+      aghanimDescriptionText = super.extract_hidden_values(
         this.base["scepter_loc"]
       );
     }
