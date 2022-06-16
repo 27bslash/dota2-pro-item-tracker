@@ -182,10 +182,10 @@ class Db_insert:
                 else:
                     winrate = wins/picks*100
                     winrate = self.clean_winrate(winrate)
-                role_dict[f"{role}_picks"] = picks
-                role_dict[f"{role}_wins"] = wins
-                role_dict[f"{role}_losses"] = losses
-                role_dict[f"{role}_winrate"] = winrate
+                    role_dict[f"{role}_picks"] = picks
+                    role_dict[f"{role}_wins"] = wins
+                    role_dict[f"{role}_losses"] = losses
+                    role_dict[f"{role}_winrate"] = winrate
             output.append(role_dict)
             db['wins'].find_one_and_replace({'hero': hero['name']},
                                             role_dict, upsert=True)
