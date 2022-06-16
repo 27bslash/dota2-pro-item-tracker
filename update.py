@@ -1,12 +1,15 @@
-import os
 import json
-from helper_funcs.helper_imports import *
+import os
+import re
+import shutil
+import traceback
+
+import requests
+from bs4 import BeautifulSoup
+
 from colours.contrast import compute_contrast
 from helper_funcs.accounts.download_acount_ids import update_pro_accounts
-import shutil
-import requests
-import traceback
-import re
+from helper_funcs.helper_imports import *
 hero_list = db['hero_list'].find_one({}, {'_id': 0})
 
 
@@ -195,6 +198,29 @@ def update_minimap_icons():
     shutil.rmtree('node_modules')
 
 
+def update_minimap_icon():
+    text = requests.get('https://dota2.fandom.com/wiki/Minimap').text
+    all_heroes = db['hero_list'].find_one()['heroes']
+    curr_list = []
+    for hero_name in all_heroes:
+        curr = switcher(hero_name['name'])
+        curr_list.append(curr)
+    curr_list = sorted(curr_list)
+    soup = BeautifulSoup(text, 'html.parser')
+    second_row = soup.find_all('tr')[1]
+    # print(first_row)
+    sprite_sheet = second_row.find('p')
+    # print(sprite_sheet)
+    fin = []
+    for i, img in enumerate(sprite_sheet.find_all('img')):
+        d = {}
+        # print(img['data-src'])
+        d['link'] = img['data-src']
+        # print(d)
+        fin.append(d)
+        with open(f'static/images/minimap_icons/{switcher(curr_list[i])}.jpg', 'wb') as o:
+            o.write(requests.get(
+                f"{img['data-src']}").content)
 def extract_special_values(talents, hero):
     for talent in talents:
         try:
@@ -254,7 +280,7 @@ def update_app():
     print('updating hero colours....')
     compute_contrast()
     print('updating minimap icons...')
-    update_minimap_icons()
+    update_minimap_icon()
     print('updating account ids')
     update_pro_accounts()
     print('fini')
