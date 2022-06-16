@@ -62,7 +62,7 @@ class TooltipAttributes extends Tooltip {
             htmlString += "/";
           }
         });
-        attribute.innerHTML = super.highlight_numbers(x);
+        attribute.innerHTML = htmlString;
       } else {
         attribute.innerHTML = super.highlight_numbers(x);
       }
