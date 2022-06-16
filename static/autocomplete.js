@@ -111,7 +111,6 @@ const hero_name_display = () => {
     displayArr = [],
     linkArr = [];
   ul.innerHTML = "";
-  console.log(window.location.pathname);
   if (window.location.pathname === "/") {
     document.querySelector(".sort-title").textContent = "";
     document.querySelector("#controls-arrow").classList.add("search-hide");
@@ -128,7 +127,6 @@ const hero_name_display = () => {
     displayArr = displayArr.slice(0, 15);
     linkArr = linkArr.slice(0, 15);
   }
-  displayArr = displayArr.sort();
   for (let i = 0; i < displayArr.length; i++) {
     let div = document.createElement("div"),
       a = document.createElement("a"),
