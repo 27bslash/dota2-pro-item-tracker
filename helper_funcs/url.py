@@ -29,8 +29,9 @@ def delete_old_urls():
         if time_since > 690000:
             collections = db.list_collection_names()
             for collection in collections:
+                # don't delete hero ids only match ids
                 db[collection].delete_many(
-                    {'id': {"$lte": d["id"]}})
+                    {'id': {"$lte": d["id"], "$gte": 4000}})
             print('deleted: ', d['id'])
             break
 
@@ -41,8 +42,6 @@ def parse_request():
         url = f"https://api.opendota.com/api/request/{match['id']}"
         req = requests.post(url)
         parse.delete_one({'id': match['id']})
-
-
 
 
 if __name__ == "__main__":
