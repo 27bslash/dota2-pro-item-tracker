@@ -15,10 +15,12 @@ def reset_instance():
     service = discovery.build('compute', 'v1', credentials=credentials)
     project = 'eastern-rain-283917'
     zone = 'us-central1-a'
-    instance = 'instance-1'
+    instance = 'pro-item-tracker'
     request = service.instances().reset(project=project, zone=zone, instance=instance)
     response = request.execute()
     pprint(response)
+
+
 
 def service_login():
     json_str = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
@@ -34,6 +36,6 @@ def check_last_day():
     time_since = time.time() - sort[0]['time_stamp']
     if time_since > 3600:
         reset_instance()
-        
+
 if __name__ == "__main__":
     check_last_day()
