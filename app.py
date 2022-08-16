@@ -7,8 +7,7 @@ from operator import itemgetter
 
 import requests
 import timeago
-from flask import (Flask, after_this_request, redirect, render_template,
-                   request, url_for)
+from flask import Flask, jsonify, redirect, render_template, request
 from flask_caching import Cache
 from flask_compress import Compress
 
@@ -17,6 +16,7 @@ from helper_funcs.table import generate_table
 from route_logic.hero_view import HeroView
 from route_logic.player_view import PlayerView
 from route_logic.redirect import handle_redirect
+from helper_funcs.database.collection import player_names, hero_list, all_items
 # TODO
 # show alex ads
 
@@ -117,9 +117,9 @@ def robots():
 @ app.route('/files/hero_ids')
 @cache.cached(timeout=602000)
 def hero_json():
-    data = db['hero_list'].find_one({}, {'_id': 0})
+    data = hero_list
     data = [{'name': switcher(i['name']), 'id': i['id']}
-            for i in data['heroes']]
+            for i in data]
     return json.dumps({'heroes': data})
 
 
@@ -134,8 +134,8 @@ def hero_ability_json(hero_name):
 @ app.route('/files/items')
 @cache.cached(timeout=602000)
 def items_json():
-    data = db['all_items'].find_one({}, {'_id': 0, 'items': 1})
-    return json.dumps(data)
+    data = all_items
+    return json.dumps({"items": data})
 
 
 @ app.route('/files/colors')
@@ -157,9 +157,9 @@ def ability_color_json():
 @ app.route('/files/accounts')
 @cache.cached(timeout=86400)
 def acc_json():
-    data = db['account_ids'].find({})
-    players = [player['name'] for player in data]
-    return json.dumps(players)
+    # data = db['account_ids'].find({})
+    # players = [player['name'] for player in data]
+    return json.dumps(player_names)
 
 
 @ app.route('/files/win-stats')
