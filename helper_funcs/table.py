@@ -1,6 +1,6 @@
 import timeago
 import datetime
-from .database.collection import db, hero_output
+from .database.collection import db, hero_output, item_ids, all_items, hero_list
 from .items import Items
 from .switcher import switcher
 import time
@@ -9,6 +9,7 @@ item_methods = Items()
 
 def generate_table(func_name, query, template, request):
     # print(request.args)
+    total_time = time.perf_counter()
     start = time.perf_counter()
     query = switcher(query)
     key = 'name' if func_name == 'player' else 'hero'
@@ -22,8 +23,12 @@ def generate_table(func_name, query, template, request):
     start = time.perf_counter()
     records_to_skip = int(request.args['start'])
     length = int(request.args['length'])
-    total_entries = []
+
+    total_entries = 0
     aggregate = ''
+    role = None
+    search_query = None
+
     if 'start' in template:
         if column == 'gold':
             column = 'lane_efficiency'
@@ -41,31 +46,42 @@ def generate_table(func_name, query, template, request):
             column = 'gpm_ten'
     if 'role' in request.args:
         role = request.args.get('role').replace('%20', ' ').title()
-        aggregate = {key: query, 'role': role}
+    if len(searchable) > 3 and func_name == 'player':
+        search_query = atlas_search_query('name', query, searchable, role, column=column,
+                                          sort_direction=sort_direction, records_to_skip=records_to_skip, limit=length)
+        total_entries_query = atlas_search_query(
+            'name', query, searchable, role, count=True)
+    elif len(searchable) > 3 and func_name == 'hero':
+        search_query = atlas_search_query('hero', query, searchable, role, column=column,
+                                          sort_direction=sort_direction, records_to_skip=records_to_skip, limit=length)
+        total_entries_query = atlas_search_query(
+            'hero', query, searchable, role, count=True)
     else:
-        if len(searchable) > 0:
-            search_value = mongo_search(searchable)
-            aggregate = {key: query, 'hero': {"$in": search_value}}
-        else:
-            aggregate = {key: query}
+        aggregate = {key: query}
     print('if block: ', time.perf_counter()-start)
     start = time.perf_counter()
-    data = hero_output.find(
-        aggregate).sort(column, sort_direction).limit(length).skip(records_to_skip)
+    if search_query:
+        data = hero_output.aggregate(search_query)
+        agg_result = list(hero_output.aggregate(total_entries_query))
+        if agg_result:
+            total_entries = list(agg_result)[0]['total_entries']
+    else:
+        data = hero_output.find(
+            aggregate).sort(column, sort_direction).limit(length).skip(records_to_skip)
+        total_entries = hero_output.count_documents(aggregate)
+
     print('find query: ', time.perf_counter()-start)
-    start = time.perf_counter()
     match_data = list(data)
     print('cursor conversion:', time.perf_counter()-start)
     start = time.perf_counter()
-    total_entries = hero_output.count_documents(aggregate)
-    print('count documents: ', time.perf_counter() - start)
+    print('count documents: ', time.perf_counter() - start, total_entries)
     result = {"draw": request.args['draw'],
               "recordsTotal": total_entries, "recordsFiltered": total_entries, "data": []}
     if total_entries == 0:
         return result
     start = time.perf_counter()
     res = append_table_string(func_name, match_data, template, result)
-    print('tabel tr', time.perf_counter()-start)
+    print('tabel tr', time.perf_counter()-total_time)
     return res
 
 
@@ -290,12 +306,82 @@ def stats(match, template):
     return row_string
 
 
-def mongo_search(query):
-    print(len(query))
+def atlas_search_query(key: str, value: str, search: str, role=None, **kwargs) -> dict:
+    match_query = {'$match': {key: value}}
+    if role is not None:
+        match_query = {'$match': {key: value, 'role': role}}
+
+    result_list = item_switcher(search)
+    hero_resu = hero_search(search)
+    result_list += hero_resu
+    result_list.append(search)
+
+    search_query = {'$search': {
+        'index': 'default',
+        'text': {
+            'query': result_list,
+            'path': {
+                    'wildcard': '*'
+                    }
+        }
+    }}
+    count_query = [
+        search_query,
+        match_query,
+        {'$count': 'total_entries'},
+    ]
+    if 'count' in kwargs:
+        return count_query
+
+    query = [
+        search_query,
+        match_query,
+        {"$sort": {
+            kwargs['column']: kwargs['sort_direction']
+        }},
+        {"$skip":
+            kwargs['records_to_skip']
+         },
+        {"$limit":
+            kwargs['limit']
+         }
+
+    ]
+
+    return query
+
+
+def hero_search(query):
     if query is None:
         print('none')
         return
-    data = db['hero_list'].find_one({})
-    matches = [hero['name']
-               for hero in data['heroes'] if query in hero['name']]
-    return matches
+    data = hero_list
+    ret = []
+    for term in query.split(','):
+        term = term.strip()
+        if not term or len(term) < 3:
+            continue
+        matches = [hero['name']
+                   for hero in data if term in hero['name']]
+        ret += matches
+    return ret
+
+
+def item_switcher(query):
+    l = set()
+    ret = []
+    all_searches = query.split(',')
+    for search in all_searches:
+        search = search.strip()
+        if not search or len(search) < 3:
+            continue
+        for item in all_items:
+            if search in item['name']:
+                l.add(item['id'])
+            elif search in item['displayName'].lower():
+                l.add(item['id'])
+        for _id in l:
+            for item in item_ids:
+                if _id == item['id']:
+                    ret.append(item['name'])
+    return ret
