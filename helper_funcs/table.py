@@ -358,12 +358,15 @@ def hero_search(query):
         return
     data = hero_list
     ret = []
+    switched = [{'name': switcher(i['name']), 'id': i['id']}
+                for i in data if switcher(i['name']) != i['name']]
+    data += switched
     for term in query.split(','):
         term = term.strip()
         if not term or len(term) < 3:
             continue
         matches = [hero['name']
-                   for hero in data if term in hero['name']]
+                   for hero in data if term in hero['name'] or term in switcher(hero['name'])]
         ret += matches
     return ret
 
