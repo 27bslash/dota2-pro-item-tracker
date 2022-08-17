@@ -1,6 +1,6 @@
 import timeago
 import datetime
-from .database.collection import db, hero_output, item_ids, all_items, hero_list
+from .database.collection import  hero_output, item_ids, all_items, hero_list
 from .items import Items
 from .switcher import switcher
 import time
@@ -13,7 +13,6 @@ def generate_table(func_name, query, template, request):
     start = time.perf_counter()
     query = switcher(query)
     key = 'name' if func_name == 'player' else 'hero'
-    match_data = None
     img_cache = 'https://ailhumfakp.cloudimg.io/v7/'
     columns = {'0': 'win', '1': None, '2': 'unix_time', '3': 'name', '4': None, '5': 'role', '6': 'lvl', '7': 'kills', '8': 'deaths', '9': 'assists',
                '10': 'last_hits', '11': 'gold', '12': 'gpm', '13': 'xpm', '14': 'hero_damage', '15': 'tower_damage', '16': 'duration', '17': 'mmr'}
@@ -46,12 +45,12 @@ def generate_table(func_name, query, template, request):
             column = 'gpm_ten'
     if 'role' in request.args:
         role = request.args.get('role').replace('%20', ' ').title()
-    if len(searchable) > 3 and func_name == 'player':
+    if len(searchable) > 0 and func_name == 'player':
         search_query = atlas_search_query('name', query, searchable, role, column=column,
                                           sort_direction=sort_direction, records_to_skip=records_to_skip, limit=length)
         total_entries_query = atlas_search_query(
             'name', query, searchable, role, count=True)
-    elif len(searchable) > 3 and func_name == 'hero':
+    elif len(searchable) > 0 and func_name == 'hero':
         search_query = atlas_search_query('hero', query, searchable, role, column=column,
                                           sort_direction=sort_direction, records_to_skip=records_to_skip, limit=length)
         total_entries_query = atlas_search_query(
@@ -87,6 +86,7 @@ def generate_table(func_name, query, template, request):
 
 def append_table_string(func_name, match_data, template, result):
     img_host = 'https://ailhumfakp.cloudimg.io/v7/https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/'
+    srt = time.perf_counter()
     for match in match_data:
         row_string = []
         html_string = f"<a href=https://www.opendota.com/matches/{match['id']}>"
@@ -122,6 +122,7 @@ def append_table_string(func_name, match_data, template, result):
 
 def append_item_string(template, img_host, match):
     html_string = "<div class='purchases'>"
+    strt = time.perf_counter()
     if 'start' in template:
         html_string += item_text_str(match['starting_items'],
                                      img_host, 'starter', match['hero'])
@@ -172,6 +173,7 @@ def append_item_string(template, img_host, match):
             html_string += "</div>"
 
         html_string += "</div></a>"
+    # print('item string timeing',time.perf_counter() - strt)
     return html_string
 
 
@@ -315,14 +317,13 @@ def atlas_search_query(key: str, value: str, search: str, role=None, **kwargs) -
     hero_resu = hero_search(search)
     result_list += hero_resu
     result_list.append(search)
-
+    fields = ['hero', 'name', 'items.key', 'key',
+              'item_neutral.key', 'aghanims_shard.key', 'backpack.key', 'radiant_draft', 'dire_draft']
     search_query = {'$search': {
         'index': 'default',
         'text': {
             'query': result_list,
-            'path': {
-                    'wildcard': '*'
-                    }
+            'path': fields
         }
     }}
     count_query = [
@@ -373,7 +374,7 @@ def item_switcher(query):
     all_searches = query.split(',')
     for search in all_searches:
         search = search.strip()
-        if not search or len(search) < 3:
+        if not search or len(search) <= 1:
             continue
         for item in all_items:
             if search in item['name']:
