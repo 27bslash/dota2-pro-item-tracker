@@ -1,49 +1,57 @@
-{% extends 'search.html' %} {%block content%}
-<script async>
-  $(document).ready(function () {
-    let table = $(".item-table").DataTable({
-      aoColumns: [
-        { orderSequence: ["desc", "asc"] },
-        { bSortable: false },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["asc", "desc"] },
-        { bSortable: false },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-      ],
-      order: [[0, "asc"]],
-      order: [[2, "desc"]],
-      bfilter: false,
-      processing: true, ajax:{},
-      "language": { processing: '<img src=\'../static/icons/loading.gif\'></img> '},
-      serverSide: true,
-      deferRender: true,
-      pageLength: 10,
-      ajax: window.origin + window.location.pathname +'/table' + window.location.search,
-      search: {
-        return: true,
-    }
+{% extends 'base_scripts.html' %}
+{%block header%}
+{{super()}}
+<head>
+    <script async>
+    $(document).ready(function () {
+        let table = $(".item-table").DataTable({
+        aoColumns: [
+            { orderSequence: ["desc", "asc"] },
+            { bSortable: false },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["asc", "desc"] },
+            { bSortable: false },
+            { orderSequence: ["asc", "desc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["asc", "desc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+        ],
+        order: [[0, "asc"]],
+        order: [[2, "desc"]],
+        searchBuilder: {
+            enterSearch: true
+        },
+        search: {
+            return: true
+        },
+        bfilter: false,
+        processing: true,
+        serverSide: true,
+        deferRender: true,
+        pageLength: 10,
+        ajax: window.origin + window.location.pathname +'/table' + window.location.search,
+        });
     });
-});
-</script>
-<script src="{{ url_for('static', filename='copy-match-id.js') }}" defer ></script>
-<script src="{{url_for('static', filename='most-used.js')}}" defer ></script>
-<script src="{{url_for('static', filename='talent/talent_img.js')}}" defer ></script>
-<script src="{{url_for('static', filename='tooltip/big_talent_tooltip.js')}}" defer ></script>
-<link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}">
-<script  src="{{ url_for('static', filename='tooltip.js') }}"  type='module' defer></script>
-<title>{{hero_name}}</title>
+    </script>
+
+    <script src="{{url_for('static', filename='most-used.js')}}" defer ></script>
+    <script src="{{url_for('static', filename='talent/talent_img.js')}}" defer ></script>
+    <script src="{{url_for('static', filename='tooltip/big_talent_tooltip.js')}}" defer ></script>
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}">
+    <title>{{hero_name}}</title>
+</head>
+{%endblock%}
+
+{%block content%}
 <main>
   <div class="content" style="margin-top: 40px;">
     <div class="top-layer">

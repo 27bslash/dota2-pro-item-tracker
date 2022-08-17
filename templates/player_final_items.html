@@ -1,5 +1,7 @@
-{% extends 'search.html' %} {%block content%}
-<script>
+{% extends 'base_scripts.html' %}
+{%block header%}
+{{super()}}
+<script async>
   $(document).ready(function () {
     let table = $(".item-table").DataTable({
       aoColumns: [
@@ -25,13 +27,10 @@
       order: [[0, "asc"]],
       order: [[2, "desc"]],
       bfilter: false,
-      searching: true,
-      ajax: {},
-      processing: true,
-      ajax: {},
-      language: {
-        processing: "<img src='../static/icons/loading.gif'></img> ",
+      search: {
+        return: true,
       },
+      processing: true,
       serverSide: true,
       deferRender: true,
       pageLength: 10,
@@ -55,6 +54,8 @@
   href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}"
 />
 <title>{{display_name}}</title>
+{%endblock%}
+{%block content%}
 <main>
   <div class="content" style="margin-top: 40px">
     <a
