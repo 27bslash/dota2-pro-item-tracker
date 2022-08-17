@@ -18,5 +18,5 @@ dead_games = db['dead_games']
 hero_list = db['hero_list'].find_one({}, {'_id': 0})['heroes']
 all_items = db['all_items'].find_one({})['items']
 item_ids = db['item_ids'].find_one({})['items']
-accounts = db['accounts_ids'].find({})
+accounts = db['account_ids'].find({})
 player_names = [player['name'] for player in accounts]
