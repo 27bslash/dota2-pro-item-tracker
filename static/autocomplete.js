@@ -27,8 +27,8 @@ const hero_data = get_json("hero_ids");
 const player_data = get_json("accounts");
 
 const hero_autocomplete = () => {
-  hero_data.then((result) => {
-    search.addEventListener("input", (e) => {
+  search.addEventListener("input", (e) => {
+    hero_data.then((result) => {
       if (e.target.value.length < 2) {
         reset();
         return;
@@ -197,7 +197,10 @@ const compWrap = (n) => {
 const autoFocus = (event) => {
   let keyCodes = [13, 27, 40, 38, 39, 37, 9];
   // focus search on keypress
-  if (!window.location.pathname.includes("player") && !window.location.pathname.includes("hero")) {
+  if (
+    !window.location.pathname.includes("player") &&
+    !window.location.pathname.includes("hero")
+  ) {
     if (!keyCodes.includes(event.keyCode)) {
       search.focus();
       document.querySelector(".suggestions").classList.add("hide");

@@ -82,7 +82,8 @@ function change_stat_text(data, currCell, role, heroCounter) {
   }
 }
 const colour_wins = () => {
-  for (let stat of statText) {
+  const stattext = document.querySelectorAll(".win-stats");
+  for (let stat of stattext) {
     // console.log(stat.children[2].innerHTML);
     let winrate = stat.children[2].innerHTML.replace("%", "");
     if (+winrate < 50 && +winrate > 30) {
