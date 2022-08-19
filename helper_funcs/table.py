@@ -1,6 +1,6 @@
 import timeago
 import datetime
-from .database.collection import  hero_output, item_ids, all_items, hero_list
+from .database.collection import hero_output, item_ids, all_items, hero_list
 from .items import Items
 from .switcher import switcher
 import time
@@ -56,7 +56,10 @@ def generate_table(func_name, query, template, request):
         total_entries_query = atlas_search_query(
             'hero', query, searchable, role, count=True)
     else:
-        aggregate = {key: query}
+        if role:
+            aggregate = {key: query, 'role': role}
+        else:
+            aggregate = {key: query}
     print('if block: ', time.perf_counter()-start)
     start = time.perf_counter()
     if search_query:
