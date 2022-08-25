@@ -68,7 +68,7 @@ def item_post(query=''):
 @app.route('/hero/<hero_name>', methods=['GET'])
 @app.route('/hero/<hero_name>/starter_items/table', methods=['GET'])
 @app.route('/hero/<hero_name>/table', methods=['GET'])
-@cache.cached(timeout=86400, query_string=True)
+
 def hero_get(hero_name):
     hv = HeroView()
     template = hv.templateSelector(request, '')
@@ -82,7 +82,7 @@ def hero_get(hero_name):
 @app.route('/player/<player_name>', methods=['GET'])
 @app.route('/player/<player_name>/starter_items/table', methods=['GET'])
 @app.route('/player/<player_name>/table', methods=['GET'])
-@cache.cached(timeout=86400, query_string=True)
+
 def player_get(player_name):
     pv = PlayerView()
     template = pv.templateSelector(request, 'player_')
@@ -207,8 +207,17 @@ def talent_data(hero_name):
 
 @ app.after_request
 def add_header(response):
-    response.cache_control.max_age = 602000
-    response.add_etag()
+    caching = False
+    cache_time = 602000
+    mimetype = response.mimetype
+    if mimetype == 'application/javascript' or mimetype == 'text/css':
+        caching = True
+    if mimetype == 'application/json' or mimetype == 'text/html':
+        cache_time = 86400
+        caching = True
+    if caching:
+        response.cache_control.max_age = cache_time
+        response.add_etag()
     return response
 
 
