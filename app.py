@@ -169,7 +169,9 @@ def wins_json():
     wins = [item for item in data]
     for win in wins:
         win['hero'] = switcher(win['hero'])
-    return json.dumps(wins)
+    resp = jsonify(wins)
+    resp.cache_control.max_age = 300
+    return resp
 
 
 @ app.route('/files/hero-data/<hero_name>')
@@ -216,8 +218,9 @@ def add_header(response):
         cache_time = 86400
         caching = True
     if caching:
-        response.cache_control.max_age = cache_time
-        response.add_etag()
+        if not response.cache_control.max_age:
+            response.cache_control.max_age = cache_time
+            response.add_etag()
     return response
 
 
