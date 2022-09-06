@@ -1,44 +1,44 @@
-{% extends 'base_scripts.html' %}
-{%block header%}
-{{super()}}
-<script async>
-  $(document).ready(function () {
-    let table = $(".item-table").DataTable({
-      aoColumns: [
-        { orderSequence: ["desc", "asc"] },
-        { bSortable: false },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["asc", "desc"] },
-        { bSortable: false },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-      ],
-      order: [[0, "asc"]],
-      order: [[2, "desc"]],
-      bfilter: false,
-      search: {
-        return: true,
-      },
-      processing: true,
-      serverSide: true,
-      deferRender: true,
-      pageLength: 10,
-      ajax:
-        window.origin +
-        window.location.pathname +
-        "/table" +
-        window.location.search,
+{% extends 'base_scripts.html' %} {%block header%} {{super()}}
+<script defer>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    $(document).ready(function () {
+      let table = $(".item-table").DataTable({
+        aoColumns: [
+          { orderSequence: ["desc", "asc"] },
+          { bSortable: false },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["asc", "desc"] },
+          { bSortable: false },
+          { orderSequence: ["asc", "desc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["asc", "desc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["desc", "asc"] },
+          { orderSequence: ["desc", "asc"] },
+        ],
+        order: [[0, "asc"]],
+        order: [[2, "desc"]],
+        bfilter: false,
+        search: {
+          return: true,
+        },
+        processing: true,
+        serverSide: true,
+        deferRender: true,
+        pageLength: 10,
+        ajax:
+          window.origin +
+          window.location.pathname +
+          "/table" +
+          window.location.search,
+      });
     });
   });
 </script>
@@ -54,8 +54,7 @@
   href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}"
 />
 <title>{{display_name}}</title>
-{%endblock%}
-{%block content%}
+{%endblock%} {%block content%}
 <main>
   <div class="content" style="margin-top: 40px">
     <a
@@ -72,8 +71,7 @@
         <strong style="text-transform: capitalize">{{display_name}}</strong>
       </p>
       <p style="color: white">has played {{total}} times. He mostly plays:</p>
-      {%for k,v in roles.items()%}
-      {%set clean_key =k|replace('_picks', '')%}
+      {%for k,v in roles.items()%} {%set clean_key =k|replace('_picks', '')%}
       <a href="/player/{{display_name}}?role={{clean_key}}">
         <p class="total-picks">
           {{clean_key}} ({{v}}){{"," if not loop.last else "." }}

@@ -1,5 +1,6 @@
 {% extends 'base_scripts.html' %} {%block header%} {{super()}}
-<script>
+<script defer>
+    document.addEventListener("DOMContentLoaded", function(event) { 
   $(document).ready(function () {
     let table = $(".item-table").DataTable({
       aoColumns: [
@@ -39,6 +40,7 @@
         window.location.search,
     });
   });
+})
 </script>
 <link
   rel="stylesheet"

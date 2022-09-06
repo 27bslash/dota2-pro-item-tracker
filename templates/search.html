@@ -9,15 +9,7 @@
     src="https://kit.fontawesome.com/452aecdbf8.js"
     crossorigin="anonymous"
     async defer></script>
-    <link 
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"
-  />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='main.css') }}"
-    />
+
     <script src="{{ url_for('static', filename='autocomplete.js') }}" defer></script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
@@ -58,6 +50,11 @@
       </div>
     </div>
   </nav>
+  <link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='main.css') }}"
+  defer
+/>
   {%block content%} {%endblock%}
   </body>
 </html>

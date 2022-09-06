@@ -2,8 +2,8 @@
 {%block header%}
 {{super()}}
 <head>
-    <script async>
-    $(document).ready(function () {
+    <script defer>
+    document.addEventListener("DOMContentLoaded", function(event) { 
         let table = $(".item-table").DataTable({
         aoColumns: [
             { orderSequence: ["desc", "asc"] },
@@ -40,13 +40,12 @@
         pageLength: 10,
         ajax: window.origin + window.location.pathname +'/table' + window.location.search,
         });
-    });
+});
     </script>
 
     <script src="{{url_for('static', filename='most-used.js')}}" defer ></script>
     <script src="{{url_for('static', filename='talent/talent_img.js')}}" defer ></script>
     <script src="{{url_for('static', filename='tooltip/big_talent_tooltip.js')}}" defer ></script>
-    <link rel="stylesheet" type="text/css"  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}">
     <title>{{hero_name}}</title>
 </head>
 {%endblock%}

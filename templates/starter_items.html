@@ -1,7 +1,8 @@
 {% extends 'base_scripts.html' %}
 {%block header%}
 {{super()}}
-<script>
+<script defer>
+    document.addEventListener("DOMContentLoaded", function(event) { 
   $(document).ready(function () {
     document.getElementsByTagName("html")[0].style.visibility = "visible";
     let table = $(".item-table").DataTable({
@@ -38,6 +39,7 @@
       ajax: window.origin + window.location.pathname +'/table' + window.location.search
       });
     });
+});
 </script>
 <script src="{{url_for('static', filename='most-used.js')}}" defer ></script>
 <script src="{{url_for('static', filename='talent/talent_img.js')}}" defer ></script>
