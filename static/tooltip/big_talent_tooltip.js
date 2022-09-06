@@ -1,6 +1,6 @@
 const bigTalent = async () => {
   const container = document.querySelector("#talents");
-  let tals = await getTalents(`talent-data/${heroName}`);
+  tals = await talents;
   if (!tals) {
     tals = await getTalents(`talent-data/${heroName}`);
   }
