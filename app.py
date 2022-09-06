@@ -199,10 +199,10 @@ def match_data(hero_name, role=None):
 @ app.route('/files/talent-data/<hero_name>')
 @cache.cached(timeout=86400, query_string=True)
 def talent_data(hero_name):
+    role = request.args.get('role')
     m_data = match_data(hero_name, role=None)
     if 'role' in request.args:
-        m_data = match_data(hero_name, role=request.args.get(
-            'role').replace('%20', ' ').title())
+        m_data = match_data(hero_name, role=role)
     talents = talent_methods.get_talent_order(m_data, switcher(hero_name))
     return json.dumps(talents)
 
