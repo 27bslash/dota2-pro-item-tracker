@@ -1,41 +1,47 @@
-{% extends 'search.html' %} {%block content%}
-<script>
-  $(document).ready(function () {
-    let table = $(".item-table").DataTable({
-      aoColumns: [
-        { orderSequence: ["desc", "asc"] },
-        { bSortable: false },
-        { orderSequence: ["desc", "asc"] },
-        { bSortable: false },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["desc", "asc"] },
-        { orderSequence: ["asc", "desc"] },
-        { orderSequence: ["desc", "asc"] },
-      ],
-      order: [[0, "asc"]],
-      order: [[2, "desc"]],
-      bfilter: false,
-      searching: false,
-      bPaginate: false,
-      bLengthChange: false,
-      bInfo: false,
-      bAutoWidth: false,
+{% extends 'base_scripts.html' %} {%block header%} {{super()}}
+<head>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      $(document).ready(function () {
+        let table = $(".item-table").DataTable({
+          aoColumns: [
+            { orderSequence: ["desc", "asc"] },
+            { bSortable: false },
+            { orderSequence: ["desc", "asc"] },
+            { bSortable: false },
+            { orderSequence: ["asc", "desc"] },
+            { orderSequence: ["asc", "desc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["desc", "asc"] },
+            { orderSequence: ["asc", "desc"] },
+            { orderSequence: ["desc", "asc"] },
+          ],
+          order: [[0, "asc"]],
+          order: [[2, "desc"]],
+          bfilter: false,
+          searching: false,
+          bPaginate: false,
+          bLengthChange: false,
+          bInfo: false,
+          bAutoWidth: false,
+        });
+      });
     });
-  });
-</script>
-<script
-  src="{{ url_for('static', filename='tooltip.js') }}"
-  type="module"
-  defer
-></script>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}"
-/>
-<title>chappie</title>
+  </script>
+  <script
+    src="{{ url_for('static', filename='tooltip.js') }}"
+    type="module"
+    defer
+  ></script>
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='minimap_icons/stylesheets/dota2minimapheroes.css') }}"
+  />
+  <title>chappie</title>
+</head>
+{%endblock %} {%block content%}
+
 <body>
   <div style="display: flex">
     <h4 style="color: white">
@@ -100,5 +106,5 @@
       {%endfor%}
     </tbody>
   </table>
+  {%endblock%}
 </body>
-{%endblock%}
