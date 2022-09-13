@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import time
 import traceback
 from datetime import datetime
@@ -18,33 +19,40 @@ class Db_insert:
         data = db['account_ids'].find({})
         print('inserting player picks')
         for player in data:
-            self.insert_total_picks('name', player['name'], 'player_picks')
+            if re.search(r"\(smurf.*\)", player['name']):
+                print('smurf name', player['name'])
+                continue
+            # change this back to player picks
+            self.insert_total_picks(
+                'name', player['name'], 'test_player_picks')
 
     def insert_total_picks(self, key, val, collection):
+        regex = {"$regex": fr"{val}?\b"}
         roles = {'Safelane': hero_output.count_documents(
-                {key: val, 'role': 'Safelane'}),
+            {key: regex, 'role': 'Safelane'}),
             'Midlane': hero_output.count_documents(
-            {key: val, 'role': 'Midlane'}),
+            {key: regex, 'role': 'Midlane'}),
             'Offlane': hero_output.count_documents(
-            {key: val, 'role': 'Offlane'}),
+            {key: regex, 'role': 'Offlane'}),
             'Support': hero_output.count_documents(
-            {key: val, 'role': 'Support'}),
+            {key: regex, 'role': 'Support'}),
             'Roaming': hero_output.count_documents(
-            {key: val, 'role': 'Roaming'}),
+            {key: regex, 'role': 'Roaming'}),
             'Hard Support': hero_output.count_documents(
-            {key: val, 'role': 'Hard Support'}),
+            {key: regex, 'role': 'Hard Support'}),
         }
         roles = {k: v for k, v in sorted(
             roles.items(), key=lambda item: item[1], reverse=True)}
         for k in list(roles.keys()):
             if roles[k] <= 0:
                 del roles[k]
+        cleaned = re.sub(r"\(smurf.*\)", '', val).strip()
         if key == 'bans':
             db[collection].find_one_and_update(
                 {'hero': val}, {"$set": {'total_bans': hero_output.count_documents({key: val})}}, upsert=True)
         else:
-            db[collection].find_one_and_replace({key: val},
-                                                {key: val, 'total_picks': hero_output.count_documents({key: val}), 'roles': roles}, upsert=True)
+            db[collection].find_one_and_replace({key: cleaned},
+                                                {key: cleaned, 'total_picks': hero_output.count_documents({key: regex}), 'roles': roles}, upsert=True)
 
     def insert_bans(self, val):
         db['hero_picks'].find_one_and_replace(
