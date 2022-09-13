@@ -375,7 +375,7 @@ def hero_search(query):
     if query is None:
         print('none')
         return
-    data = hero_list
+    data = hero_list.copy()
     ret = []
     switched = [{'name': switcher(i['name']), 'id': i['id']}
                 for i in data if switcher(i['name']) != i['name']]
