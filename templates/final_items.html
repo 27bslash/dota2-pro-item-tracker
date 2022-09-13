@@ -193,6 +193,8 @@
             </a>
             {%endfor%}
           </div>
+          <script src="{{url_for('static', filename='pickcounter.js')}}" defer></script>
+              
           <script>
             winrates = document.querySelectorAll('.winrate')
             winrates.forEach(x=> {
