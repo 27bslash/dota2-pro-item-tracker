@@ -10,11 +10,11 @@ from .view import View
 class PlayerView(View):
 
     def player_view(self, player_name: str, request):
-        player_name = switcher(player_name)
         template = View.templateSelector(self,
                                          request=request, player='player_')
         display_name = player_name.replace('%20', ' ')
-        roles_db = db['player_picks'].find_one({'name': player_name})
+        roles_db = db['test_player_picks'].find_one(
+            {'name': {"$regex": fr"{player_name}?\b"}})
         roles = roles_db['roles']
         total = roles_db['total_picks']
         if total > 0:

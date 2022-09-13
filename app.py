@@ -159,7 +159,13 @@ def ability_color_json():
 def acc_json():
     # data = db['account_ids'].find({})
     # players = [player['name'] for player in data]
-    return json.dumps(player_names)
+    se = set()
+    for name in player_names:
+        match = re.search(r".+(?=\()", name)
+        if match:
+            name = match.group(0).strip()
+        se.add(name)
+    return json.dumps(list(se))
 
 
 @ app.route('/files/win-stats')
