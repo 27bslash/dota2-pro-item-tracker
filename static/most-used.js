@@ -1,18 +1,21 @@
-let data,
+let matchData,
   appended = false,
   heroName = window.location.pathname
     .replace("/starter_items", "")
-    .replace(/.+\//, "");
+    .replace(/.+\//, ""),
+  filterItem = "";
+const itemSet = new Set();
+
 async function get_json_data(search) {
   const url = `${window.location.origin}/files/${search}${window.location.search}`;
   const req = await fetch(url);
-  data = await req.json();
-  return data;
+  matchData = await req.json();
+  return matchData;
 }
 
 const pro_items = async () => {
   sorted = [];
-  data = await get_json_data(`match-data/${heroName}`);
+  matchData = await get_json_data(`match-data/${heroName}`);
   const black_lst = [
     "ward_sentry",
     "ward_observer",
@@ -27,7 +30,7 @@ const pro_items = async () => {
     null,
   ];
   const output = [];
-  for (let x of data) {
+  for (let x of matchData) {
     for (let item of x["final_items"]) {
       if (!black_lst.includes(item["key"])) {
         output.push(item["key"]);
@@ -50,9 +53,13 @@ const populate_most_used = () => {
   pro_items().then((res) => {
     const container = document.querySelector(".most-used");
     const max = res[0][1];
+
     for (let arr of res) {
       const key = arr[0];
       const value = arr[1];
+      if (itemSet.has(key)) {
+        break
+      }
       if (value < 2) break;
       const s = (value / max) * 100;
       const saturation = parseInt(Math.round(s));
@@ -76,8 +83,18 @@ const populate_most_used = () => {
       bar.appendChild(barValue);
       row.appendChild(img);
       row.appendChild(bar);
-      if (row && container.childElementCount < 10) {
+      row.addEventListener("click", (e) => {
+        searchEl = document.querySelector("input[type=search]");
+        searchEl.value = key;
+        searchEl.focus();
+        filterItem = { key: key, winrate: value };
+
+      });
+      if (container.childElementCount === 10) {
+        break;
+      } else if (row) {
         container.appendChild(row);
+        itemSet.add(key);
       }
     }
     // appended = true;
