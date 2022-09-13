@@ -290,10 +290,6 @@ def weekly_update():
     update_hero_list()
     insert_all_items()
     update_item_ids()
-    dl_dota2_abilities()
-    # update_stratz_json(
-    #     'https://api.stratz.com/api/v1/Ability', 'all_abilities')
-    update_talents()
 
 
 if __name__ == '__main__':
