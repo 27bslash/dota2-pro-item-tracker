@@ -59,7 +59,8 @@ def generate_table(func_name, query, template, request):
         if role:
             aggregate = {key: query, 'role': role}
         else:
-            aggregate = {key: query}
+            regex = fr"{query}?\b"
+            aggregate = {key: {"$regex": regex}}
     print('if block: ', time.perf_counter()-start)
     start = time.perf_counter()
     if search_query:
@@ -312,15 +313,30 @@ def stats(match, template):
 
 
 def atlas_search_query(key: str, value: str, search: str, role=None, **kwargs) -> dict:
-    match_query = {'$match': {key: value}}
+    regex = f"{value}?"
+    match_query = {'$match': {key: {"$regex": regex}}}
     if role is not None:
-        match_query = {'$match': {key: value, 'role': role}}
+        match_query = {'$match': {key: {"$regex": regex}}, 'role': role}
 
     result_list = item_switcher(search)
+    fields = []
+    if result_list:
+        fields.append('final_items.key')
+        fields.append('item_neutral')
+        fields.append('aghanims_shard.key')
+        fields.append('backpack.key')
+    if key == 'name':
+        fields.append('hero')
+    else:
+        fields.append('name')
     hero_resu = hero_search(search)
+    if hero_resu:
+        fields.append('radiant_draft')
+        fields.append('dire_draft')
+
     result_list += hero_resu
     result_list.append(search)
-    fields = ['hero', 'name', 'items.key', 'key',
+
               'item_neutral.key', 'aghanims_shard.key', 'backpack.key', 'radiant_draft', 'dire_draft']
     search_query = {'$search': {
         'index': 'default',
