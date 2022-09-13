@@ -337,7 +337,6 @@ def atlas_search_query(key: str, value: str, search: str, role=None, **kwargs) -
     result_list += hero_resu
     result_list.append(search)
 
-              'item_neutral.key', 'aghanims_shard.key', 'backpack.key', 'radiant_draft', 'dire_draft']
     search_query = {'$search': {
         'index': 'default',
         'text': {
