@@ -24,7 +24,7 @@ class Db_insert:
                 continue
             # change this back to player picks
             self.insert_total_picks(
-                'name', player['name'], 'test_player_picks')
+                'name', player['name'], 'player_picks')
 
     def insert_total_picks(self, key, val, collection):
         regex = {"$regex": fr"{val}?\b"}
