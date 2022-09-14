@@ -15,7 +15,6 @@ async function get_json_data(search) {
 
 const pro_items = async () => {
   sorted = [];
-  matchData = await get_json_data(`match-data/${heroName}`);
   const black_lst = [
     "ward_sentry",
     "ward_observer",
@@ -44,11 +43,7 @@ const pro_items = async () => {
   sorted = Object.entries(counter).sort((a, b) => b[1] - a[1]);
   return sorted;
 };
-window.addEventListener("click", function (e) {
-  if (e.target.className === "arrow-button") {
-    populate_most_used();
-  }
-});
+
 const populate_most_used = () => {
   pro_items().then((res) => {
     const container = document.querySelector(".most-used");
@@ -58,7 +53,7 @@ const populate_most_used = () => {
       const key = arr[0];
       const value = arr[1];
       if (itemSet.has(key)) {
-        break
+        break;
       }
       if (value < 2) break;
       const s = (value / max) * 100;
@@ -88,7 +83,6 @@ const populate_most_used = () => {
         searchEl.value = key;
         searchEl.focus();
         filterItem = { key: key, winrate: value };
-
       });
       if (container.childElementCount === 10) {
         break;
@@ -97,7 +91,17 @@ const populate_most_used = () => {
         itemSet.add(key);
       }
     }
-    // appended = true;
-    // return;
   });
 };
+document.addEventListener("DOMContentLoaded", () => {
+  matchData = get_json_data(`match-data/${heroName}`);
+  document.addEventListener("click", function (e) {
+    console.log("clikc", e.target.className);
+    if (
+      e.target.className === "arrow-button" ||
+      e.target.className === "fas fa-caret-up"
+    ) {
+      populate_most_used();
+    }
+  });
+});
