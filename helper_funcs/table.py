@@ -316,7 +316,7 @@ def atlas_search_query(key: str, value: str, search: str, role=None, **kwargs) -
     regex = f"{value}?"
     match_query = {'$match': {key: {"$regex": regex}}}
     if role is not None:
-        match_query = {'$match': {key: {"$regex": regex}}, 'role': role}
+        match_query = {'$match': {key: {"$regex": regex}, 'role': role}}
 
     result_list = item_switcher(search)
     fields = []
