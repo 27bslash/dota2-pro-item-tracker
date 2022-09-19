@@ -185,8 +185,9 @@ def add_to_dead_games(m_id):
     else:
         db['dead_games'].find_one_and_update(
             {'id': m_id}, {"$inc": {'count': +1}})
-    if db['dead_games'].find_one({'id': m_id})['count'] < 10:
-        db['parse'].insert_one({'id': m_id})
+    if db['dead_games'].find_one({'id': m_id})['count'] < 20:
+        db['parse'].find_one_and_update(
+            {'id': m_id}, {"$set": {'id': m_id}}, upsert=True)
 
 
 def calculate_level_at_ten(exp):
