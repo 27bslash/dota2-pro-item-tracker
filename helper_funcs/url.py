@@ -41,9 +41,10 @@ def parse_request():
     for match in data:
         url = f"https://api.opendota.com/api/request/{match['id']}"
         req = requests.post(url)
-        parse.delete_one({'id': match['id']})
+        parse.delete_many({'id': match['id']})
 
 
 if __name__ == "__main__":
     # get_urls('jakiro')
-    delete_old_urls()
+    parse_request()
+    # delete_old_urls()
