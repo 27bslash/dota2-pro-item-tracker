@@ -14,7 +14,7 @@ def get_urls(hero_name):
     data = hero_urls.find({'hero': hero_name})
     urls = [match['id'] for match in data if hero_output.find_one(
         {'hero': hero_name, 'id': match['id']}) is None and parse.find_one(
-        {'hero': hero_name, 'id': match['id']}) is None and
+        {'id': match['id']}) is None and
         (dead_games.find_one({'id': match['id']}) is None or
          dead_games.find_one({'id': match['id'], 'count': {"$lte": 10}}))]
     # return list(reversed(urls[slice(0, 60)]))
