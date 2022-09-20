@@ -19,7 +19,7 @@ class Db_insert:
         data = db['account_ids'].find({})
         print('inserting player picks')
         for player in data:
-            if re.search(r"\(smurf.*\)", player['name']):
+            if re.search(r"\(smurf.*\)", player['name'], re.IGNORECASE):
                 print('smurf name', player['name'])
                 continue
             # change this back to player picks
@@ -27,7 +27,11 @@ class Db_insert:
                 'name', player['name'], 'player_picks')
 
     def insert_total_picks(self, key, val, collection):
-        regex = {"$regex": fr"{val}?\b"}
+        regex = r"(\W)"
+        subst = "\\\\\\1"
+        v = re.sub(regex, subst, val)
+        regex = f"{v}"
+        regex = {"$regex": regex}
         roles = {'Safelane': hero_output.count_documents(
             {key: regex, 'role': 'Safelane'}),
             'Midlane': hero_output.count_documents(

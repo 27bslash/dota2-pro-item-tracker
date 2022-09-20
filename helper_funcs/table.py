@@ -4,6 +4,7 @@ from .database.collection import hero_output, item_ids, all_items, hero_list
 from .items import Items
 from .switcher import switcher
 import time
+import re
 item_methods = Items()
 
 
@@ -28,6 +29,11 @@ def generate_table(func_name, query, template, request):
     role = None
     search_query = None
 
+    reg = r"(\W)"
+    subst = "\\\\\\1"
+    regex = re.sub(reg, subst, query)
+    print(regex)
+    regex = f"{regex}"
     if 'start' in template:
         if column == 'gold':
             column = 'lane_efficiency'
@@ -46,15 +52,15 @@ def generate_table(func_name, query, template, request):
     if 'role' in request.args:
         role = request.args.get('role').replace('%20', ' ').title()
     if len(searchable) > 0 and func_name == 'player':
-        search_query = atlas_search_query('name', query, searchable, role, column=column,
+        search_query = atlas_search_query('name', regex, searchable, role, column=column,
                                           sort_direction=sort_direction, records_to_skip=records_to_skip, limit=length)
         total_entries_query = atlas_search_query(
-            'name', query, searchable, role, count=True)
+            'name', regex, searchable, role, count=True)
     elif len(searchable) > 0 and func_name == 'hero':
-        search_query = atlas_search_query('hero', query, searchable, role, column=column,
+        search_query = atlas_search_query('hero', regex, searchable, role, column=column,
                                           sort_direction=sort_direction, records_to_skip=records_to_skip, limit=length)
         total_entries_query = atlas_search_query(
-            'hero', query, searchable, role, count=True)
+            'hero', regex, searchable, role, count=True)
     else:
         if role:
             aggregate = {key: query, 'role': role}
@@ -312,7 +318,7 @@ def stats(match, template):
     return row_string
 
 
-def atlas_search_query(key: str, value: str, search: str, role=None, **kwargs) -> dict:
+def atlas_search_query(key: str, regex: str, search: str, role=None, **kwargs) -> dict:
     regex = f"{value}?"
     match_query = {'$match': {key: {"$regex": regex}}}
     if role is not None:
