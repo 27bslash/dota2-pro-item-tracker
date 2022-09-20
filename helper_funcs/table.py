@@ -65,7 +65,7 @@ def generate_table(func_name, query, template, request):
         if role:
             aggregate = {key: query, 'role': role}
         else:
-            regex = fr"{query}?\b"
+            
             aggregate = {key: {"$regex": regex}}
     print('if block: ', time.perf_counter()-start)
     start = time.perf_counter()
