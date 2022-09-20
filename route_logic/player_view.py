@@ -1,9 +1,9 @@
 import json
 import time
 
-from helper_funcs.database.collection import db, hero_output
+from helper_funcs.database.collection import db
 from helper_funcs.switcher import switcher
-
+import re
 from .view import View
 
 
