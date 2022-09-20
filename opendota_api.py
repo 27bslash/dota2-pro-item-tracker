@@ -53,7 +53,8 @@ async def async_get(m_id, hero_name, testing=False):
     dupe_check = hero_output.find_one({'hero': hero_name, 'id': m_id})
     bad_id_check = db['dead_games'].find_one(
         {'id': m_id, 'count': {"$gt": 10}})
-    if dupe_check is not None or bad_id_check is not None:
+    parse_check = db['parse'].find_one({'id': m_id})
+    if dupe_check is not None or bad_id_check is not None or parse_check is not None:
         return 'Bad ID'
     try:
         async with aiohttp.ClientSession() as session:
@@ -110,7 +111,8 @@ async def async_get(m_id, hero_name, testing=False):
                     # check if one of the players matches search
                     purchase_log = p['purchase_log']
                     if not purchase_log:
-                        return add_to_dead_games(m_id)
+                        return db['parse'].find_one_and_update(
+                            {'id': m_id}, {"$set": {'id': m_id}}, upsert=True)
                     if p['kills_log']:
                         kills_ten = calulate_kills_at_ten(p['kills_log'])
                     else:
@@ -171,6 +173,7 @@ async def async_get(m_id, hero_name, testing=False):
                             'final_items': main_items, 'backpack': bp_items, 'item_neutral': item_methods.get_item_name(p['item_neutral']), 'aghanims_shard': aghanims_shard,
                             'abilities': detailed_ability_info(abilities, hero_id), 'items': purchase_log})
                     print(f"{hero_name} should reach here.")
+                    db['dead_games'].delete_many({'id': m_id})
                     return 'No Errors'
 
     except Exception as e:
