@@ -34,6 +34,7 @@ def generate_table(func_name, query, template, request):
     regex = re.sub(reg, subst, query)
     print(regex)
     regex = f"{regex}"
+
     if 'start' in template:
         if column == 'gold':
             column = 'lane_efficiency'
@@ -67,9 +68,11 @@ def generate_table(func_name, query, template, request):
         else:
             
             aggregate = {key: {"$regex": regex}}
+            print(key, regex, aggregate)
     print('if block: ', time.perf_counter()-start)
     start = time.perf_counter()
     if search_query:
+        print(search_query)
         data = hero_output.aggregate(search_query)
         agg_result = list(hero_output.aggregate(total_entries_query))
         if agg_result:
@@ -116,7 +119,8 @@ def append_table_string(func_name, match_data, template, result):
         row_string.append(html_string)
         row_string.append(timeago.format(
             match['unix_time'], datetime.datetime.now()))
-        if func_name != 'player':
+        # change back to player after tests
+        if func_name != 'g':
             row_string.append(
                 f"<a href=\"/player/{match['name']}\"><p class='stats'>{match['name']}</p></a>")
         else:
@@ -319,7 +323,6 @@ def stats(match, template):
 
 
 def atlas_search_query(key: str, regex: str, search: str, role=None, **kwargs) -> dict:
-    regex = f"{value}?"
     match_query = {'$match': {key: {"$regex": regex}}}
     if role is not None:
         match_query = {'$match': {key: {"$regex": regex}, 'role': role}}
@@ -342,7 +345,6 @@ def atlas_search_query(key: str, regex: str, search: str, role=None, **kwargs) -
 
     result_list += hero_resu
     result_list.append(search)
-
     search_query = {'$search': {
         'index': 'default',
         'text': {
