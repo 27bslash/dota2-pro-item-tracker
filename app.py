@@ -87,7 +87,11 @@ def player_get(player_name):
     pv = PlayerView()
     template = pv.templateSelector(request, 'player_')
     if 'table' in request.url:
-        return generate_table('player', player_name, template, request)
+        data_table = generate_table('player', player_name, template, request)
+        if data_table:
+          return data_table
+        else:
+          raise Exception("error no table")
     kwargs = pv.player_view(player_name, request)
     return render_template(template, **kwargs)
 
