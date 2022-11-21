@@ -10,12 +10,12 @@ headers = {
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36"}
 
 
-# def update_pro_accounts():
+def update_pro_accounts():
 #     output = []
 #     data = get_player_url_list()
 #     if data == None:
 #         print('pro tracker blocked')
-#         return
+    return
 #     url = 'http://www.dota2protracker.com/player/'
 #     for player_name in data:
 #         d = {}
