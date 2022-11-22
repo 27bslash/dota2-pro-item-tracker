@@ -8,6 +8,7 @@ from operator import itemgetter
 import requests
 import timeago
 from flask import Flask, jsonify, redirect, render_template, request
+from flask_cors import CORS
 from flask_caching import Cache
 from flask_compress import Compress
 import time
@@ -27,6 +28,7 @@ COMPRESS_LEVEL = 6
 COMPRESS_MIN_SIZE = 500
 compress = Compress()
 app = Flask(__name__)
+CORS(app)
 cache = Cache(config={
     'CACHE_TYPE': 'simple'
 })
