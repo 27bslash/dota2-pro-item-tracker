@@ -10,6 +10,7 @@ import timeago
 from flask import Flask, jsonify, redirect, render_template, request
 from flask_caching import Cache
 from flask_compress import Compress
+import time
 
 from helper_funcs.helper_imports import *
 from helper_funcs.table import generate_table
@@ -78,11 +79,69 @@ def hero_get(hero_name):
     return render_template(template, **kwargs)
 
 
-@app.route('/player/<player_name>/starter_items', methods=['GET'])
-@app.route('/player/<player_name>', methods=['GET'])
-@app.route('/player/<player_name>/starter_items/table', methods=['GET'])
-@app.route('/player/<player_name>/table', methods=['GET'])
+@app.route('/hero/<hero_name>/react-test', methods=['GET'])
+def react_hero_test(hero_name):
+    st = time.perf_counter()
+    count = 0
+    roles = ['Hard Support', 'Support',
+             'Roaming', 'Offlane', 'Midlane', 'Safelane']
+    role_picks = {}
+    pick_data = db['test_hero_picks'].find_one({'hero': hero_name}, {'_id': 0})
+    # for role in roles:
+    #     c = list(hero_output.find({'hero': hero_name, 'role': role}))
+    #     # wins = hero_output.count_documents(
+    #     #     {'hero': hero_name, 'role': role, 'win': 1})
+    #     wins = [0 for match in c if match['win'] == 1]
+    #     role_picks[role] = {'picks': len(c), 'wins': len(wins)}
 
+    # print(role_picks)
+    length = request.args.get('length')
+    skip = request.args.get('skip')
+    role = request.args.get('role')
+    query = {'hero': hero_name}
+    if role:
+        query = {'hero': hero_name, 'role': role}
+    if length or skip:
+        length = int(length)
+        skip = int(skip)
+        o = list(hero_output.find(query,
+                                  {'_id': 0}).sort('unix_time', -1).limit(length).skip(skip))
+    else:
+        o = list(hero_output.find(query,
+                                  {'_id': 0}).sort('unix_time', -1))
+
+    # print(d)
+    print(time.perf_counter() - st)
+    return jsonify({'data': o, 'picks': pick_data})
+
+@ app.route('/player/<player_name>/react-test')
+def react_player_test(player_name):
+    display_name = player_name.replace('%20', ' ')
+    print('in')
+    regex = r"(\W)"
+    subst = "\\\\\\1"
+    val = re.sub(regex, subst, display_name)
+    regex = f"{val}"
+    roles_db = db['tpp'].find_one(
+        {'name': player_name}, {'_id': 0})
+    length = request.args.get('length')
+    skip = request.args.get('skip')
+    role = request.args.get('role')
+    query = {'name': {"$regex": regex}}
+    if role:
+        query = {'name': {"$regex": regex}, 'role': role}
+    if length or skip:
+        length = int(length)
+        skip = int(skip)
+        o = list(hero_output.find(query,
+                                  {'_id': 0}).sort('unix_time', -1).limit(length).skip(skip))
+    else:
+        o = list(hero_output.find(query,
+                                  {'_id': 0}).sort('unix_time', -1))
+    # pick_data = db['player_picks'].find_one(
+    #     {'name': player_name}, {'_id': 0})
+    # print(roles_db)
+    return jsonify({'data': o, 'picks': roles_db})
 def player_get(player_name):
     pv = PlayerView()
     template = pv.templateSelector(request, 'player_')
@@ -146,6 +205,17 @@ def color_json():
         return data
 
 
+@ app.route('/files/<hero_name>/best-games')
+def best_games(hero_name):
+    if request.args:
+        role = request.args.get('role').replace('%20', ' ').title()
+        best_games = [match for match in db['best_games'].find(
+            {'hero': hero_name, 'display_role': role}, {'_id': 0})]
+        print(best_games)
+    else:
+        best_games = [match for match in db['best_games'].find(
+            {'hero': hero_name, 'display_role': None}, {'_id': 0})]
+    return {'best_games': best_games}
 @ app.route('/files/ability_colours')
 @cache.cached(timeout=602000)
 def ability_color_json():
