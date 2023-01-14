@@ -27,10 +27,6 @@ COMPRESS_MIN_SIZE = 500
 compress = Compress()
 app = Flask(__name__)
 CORS(app)
-cache = Cache(config={
-    'CACHE_TYPE': 'simple'
-})
-cache.init_app(app)
 compress.init_app(app)
 # minify(app=app, html=True, js=False, cssless=False)
 
@@ -112,10 +108,12 @@ def react_hero_test(hero_name):
 
     # print(d)
     print(time.perf_counter() - st)
-    res = make_response({'data': o, 'picks': pick_data})
-    res.cache_control.max_age = 602000
-    res.add_etag()
+    res = jsonify({'data': o, 'picks': pick_data})
+    res.cache_control.max_age = 1000
+    res.cache_control.public = True
+    print(res.cache_control)
     return res
+
 
 @ app.route('/player/<player_name>/react-test')
 def react_player_test(player_name):
@@ -144,7 +142,10 @@ def react_player_test(player_name):
     # pick_data = db['player_picks'].find_one(
     #     {'name': player_name}, {'_id': 0})
     # print(roles_db)
-    return jsonify({'data': o, 'picks': roles_db})
+    res = jsonify({'data': o, 'picks': roles_db})
+    res.cache_control.max_age = 1000
+    return res
+
 def player_get(player_name):
     pv = PlayerView()
     template = pv.templateSelector(request, 'player_')
@@ -202,7 +203,6 @@ def hero_ability_json(hero_name):
 
 
 @ app.route('/files/items')
-@ cache.cached(timeout=602000)
 def items_json():
     data = all_items
     res = make_response({'items': data})
@@ -212,7 +212,6 @@ def items_json():
 
 
 @ app.route('/files/colors')
-@cache.cached(timeout=602000)
 def color_json():
     with open('colours/hero_colours.json', 'r') as f:
         data = json.load(f)
@@ -242,10 +241,10 @@ def ability_color_json():
 
 
 @ app.route('/files/accounts')
-@cache.cached(timeout=86400)
 def acc_json():
     # data = db['account_ids'].find({})
     # players = [player['name'] for player in data]
+    # print(accounts)
     se = set()
     for name in player_names:
         match = re.search(r".+(?=\()", name)
@@ -253,9 +252,8 @@ def acc_json():
             name = match.group(0).strip()
         se.add(name)
     data = json.dumps(list(se))
-    res = make_response(data)
+    res = jsonify(data)
     res.cache_control.max_age = 602000
-    res.add_etag()
     return res
 
 
@@ -267,12 +265,11 @@ def wins_json():
     for win in wins:
         win['hero'] = switcher(win['hero'])
     resp = jsonify(wins)
-    resp.cache_control.max_age = 600
+    resp.cache_control.max_age = 1000
     return resp
 
 
 @ app.route('/files/hero-data/<hero_name>')
-@cache.cached(timeout=602000)
 def hero_data(hero_name):
     req = db['hero_stats'].find_one({'hero': hero_name}, {'_id': 0})
     res = make_response(req)
@@ -300,7 +297,6 @@ def match_data(hero_name, role=None):
 
 
 @ app.route('/files/talent-data/<hero_name>')
-@cache.cached(timeout=86400, query_string=True)
 def talent_data(hero_name):
     role = request.args.get('role')
     m_data = match_data(hero_name, role=None)
