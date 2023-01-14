@@ -5,9 +5,7 @@ import re
 from collections import Counter
 from operator import itemgetter
 
-import requests
-import timeago
-from flask import Flask, jsonify, redirect, render_template, request
+from flask import Flask, jsonify, make_response, redirect, render_template, request
 from flask_cors import CORS
 from flask_caching import Cache
 from flask_compress import Compress
@@ -114,7 +112,10 @@ def react_hero_test(hero_name):
 
     # print(d)
     print(time.perf_counter() - st)
-    return jsonify({'data': o, 'picks': pick_data})
+    res = make_response({'data': o, 'picks': pick_data})
+    res.cache_control.max_age = 602000
+    res.add_etag()
+    return res
 
 @ app.route('/player/<player_name>/react-test')
 def react_player_test(player_name):
@@ -176,27 +177,38 @@ def robots():
 
 
 @ app.route('/files/hero_ids')
-@cache.cached(timeout=602000)
+@cache.cached()
 def hero_json():
     data = hero_list
-    data = [{'name': switcher(i['name']), 'id': i['id']}
-            for i in data]
-    return json.dumps({'heroes': data})
+    print('hero_list len', len(hero_list))
+    hero_ids = [{'name': switcher(i['name']), 'id': i['id']}
+                for i in data]
+    data = json.dumps({'heroes': hero_ids})
+    res = make_response(json.dumps({'heroes': hero_ids}))
+    res.cache_control.max_age = 602000
+    res.add_etag()
+    return res
 
 
 @ app.route('/files/abilities/<hero_name>')
-@cache.cached(timeout=602000)
+@ cache.cached(timeout=602000)
 def hero_ability_json(hero_name):
     data = db['hero_stats'].find_one(
         {'hero': hero_name})['abilities']
-    return json.dumps(data)
+    res = make_response(data)
+    res.cache_control.max_age = 602000
+    res.add_etag()
+    return res
 
 
 @ app.route('/files/items')
-@cache.cached(timeout=602000)
+@ cache.cached(timeout=602000)
 def items_json():
     data = all_items
-    return json.dumps({"items": data})
+    res = make_response({'items': data})
+    res.cache_control.max_age = 602000
+    res.add_etag()
+    return res
 
 
 @ app.route('/files/colors')
@@ -204,7 +216,10 @@ def items_json():
 def color_json():
     with open('colours/hero_colours.json', 'r') as f:
         data = json.load(f)
-        return data
+        res = make_response(data)
+        res.cache_control.max_age = 602000
+        res.add_etag()
+        return res
 
 
 @ app.route('/files/<hero_name>/best-games')
@@ -237,7 +252,11 @@ def acc_json():
         if match:
             name = match.group(0).strip()
         se.add(name)
-    return json.dumps(list(se))
+    data = json.dumps(list(se))
+    res = make_response(data)
+    res.cache_control.max_age = 602000
+    res.add_etag()
+    return res
 
 
 @ app.route('/files/win-stats')
@@ -248,7 +267,7 @@ def wins_json():
     for win in wins:
         win['hero'] = switcher(win['hero'])
     resp = jsonify(wins)
-    resp.cache_control.max_age = 300
+    resp.cache_control.max_age = 600
     return resp
 
 
@@ -256,7 +275,10 @@ def wins_json():
 @cache.cached(timeout=602000)
 def hero_data(hero_name):
     req = db['hero_stats'].find_one({'hero': hero_name}, {'_id': 0})
-    return req
+    res = make_response(req)
+    res.cache_control.max_age = 602000
+    res.add_etag()
+    return res
 
 
 @ app.route('/files/match-data/<hero_name>')
@@ -271,7 +293,10 @@ def match_data(hero_name, role=None):
     else:
         data = hero_output.find({'hero': hero_name}, {'_id': 0})
     data = [entry for entry in data]
-    return json.dumps(data)
+    res = make_response(data)
+    res.cache_control.max_age = 1000
+    res.add_etag()
+    return res
 
 
 @ app.route('/files/talent-data/<hero_name>')
@@ -283,23 +308,6 @@ def talent_data(hero_name):
         m_data = match_data(hero_name, role=role)
     talents = talent_methods.get_talent_order(m_data, switcher(hero_name))
     return json.dumps(talents)
-
-
-@ app.after_request
-def add_header(response):
-    caching = False
-    cache_time = 602000
-    mimetype = response.mimetype
-    if mimetype == 'application/javascript' or mimetype == 'text/css':
-        caching = True
-    if mimetype == 'application/json' or mimetype == 'text/html':
-        cache_time = 86400
-        caching = True
-    if caching:
-        if not response.cache_control.max_age:
-            response.cache_control.max_age = cache_time
-            response.add_etag()
-    return response
 
 
 
