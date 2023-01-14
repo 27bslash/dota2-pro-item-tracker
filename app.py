@@ -247,7 +247,7 @@ def acc_json():
         if match:
             name = match.group(0).strip()
         se.add(name)
-    data = json.dumps(list(se))
+    data = list(se)
     res = jsonify(data)
     res.cache_control.max_age = 602000
     return res
