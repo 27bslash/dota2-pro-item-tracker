@@ -155,8 +155,7 @@ def player_get(player_name):
     return render_template(template, **kwargs)
 
 
-@app.route('/chappie')
-@cache.cached(timeout=86400)
+@ app.route('/chappie')
 def chappie_get():
     data = [match['data'] for match in db['chappie'].find({})]
     replaced = [re.sub(r"\(smurf \d\)", '', doc['name'])for doc in data]
@@ -178,7 +177,6 @@ def robots():
 
 
 @ app.route('/files/hero_ids')
-@cache.cached()
 def hero_json():
     data = hero_list
     print('hero_list len', len(hero_list))
@@ -192,7 +190,6 @@ def hero_json():
 
 
 @ app.route('/files/abilities/<hero_name>')
-@ cache.cached(timeout=602000)
 def hero_ability_json(hero_name):
     data = db['hero_stats'].find_one(
         {'hero': hero_name})['abilities']
@@ -233,7 +230,6 @@ def best_games(hero_name):
             {'hero': hero_name, 'display_role': None}, {'_id': 0})]
     return {'best_games': best_games}
 @ app.route('/files/ability_colours')
-@cache.cached(timeout=602000)
 def ability_color_json():
     with open('colours/ability_colours.json', 'r') as f:
         data = json.load(f)
@@ -279,7 +275,6 @@ def hero_data(hero_name):
 
 
 @ app.route('/files/match-data/<hero_name>')
-@cache.cached(timeout=86400, query_string=True)
 def match_data(hero_name, role=None):
     hero_name = switcher(hero_name)
     if 'role' in request.args:
