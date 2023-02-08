@@ -146,6 +146,30 @@ def react_player_test(player_name):
     res.cache_control.max_age = 1000
     return res
 
+@app.route('/hero/<hero_name>/skill_build', methods=['GET'])
+def skill_build(hero_name):
+    print('skill build', hero_name)
+    strt = time.perf_counter()
+    data = db['non-pro'].find({'hero': hero_name},
+                              {'_id': 0, 'abilities': 1, 'role': 1, 'id': 1})
+    res = jsonify(list(data))
+    res.cache_control.max_age = 86400
+    end = time.perf_counter()
+    print(end-strt, 'seconds')
+    return res
+
+
+@app.route('/hero/<hero_name>/item_build', methods=['GET'])
+def item_build(hero_name):
+    print('item build', hero_name)
+    strt = time.perf_counter()
+    data = db['non-pro'].find({'hero': hero_name},
+                              {'_id': 0, 'items': 1, 'starting_items': 1, 'role': 1})
+    res = jsonify(list(data))
+    res.cache_control.max_age = 86400
+    end = time.perf_counter()
+    print(end-strt, 'seconds')
+    return res
 def player_get(player_name):
     pv = PlayerView()
     template = pv.templateSelector(request, 'player_')
