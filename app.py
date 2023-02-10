@@ -97,7 +97,7 @@ def react_hero_test(hero_name):
     query = {'hero': hero_name}
     if role:
         query = {'hero': hero_name, 'role': role}
-    if length or skip:
+    if length and skip:
         length = int(length)
         skip = int(skip)
         o = list(hero_output.find(query,
@@ -146,6 +146,16 @@ def react_player_test(player_name):
     res.cache_control.max_age = 1000
     return res
 
+@app.route('/hero/<hero_name>/count_docs', methods=['GET'])
+def count_docs(hero_name):
+    strt = time.perf_counter()
+    collection = request.args.get('collection')
+    if collection:
+        data = db[collection].count_documents({'hero': hero_name})
+        print('count_docs', time.perf_counter()-strt, 'seconds')
+        return str(data)
+    return {'Internal server error': 500}
+
 @app.route('/hero/<hero_name>/skill_build', methods=['GET'])
 def skill_build(hero_name):
     print('skill build', hero_name)
@@ -163,8 +173,14 @@ def skill_build(hero_name):
 def item_build(hero_name):
     print('item build', hero_name)
     strt = time.perf_counter()
-    data = db['non-pro'].find({'hero': hero_name},
-                              {'_id': 0, 'items': 1, 'starting_items': 1, 'role': 1})
+    length = request.args.get('length')
+    skip = request.args.get('skip')
+    if length and skip:
+        data = db['non-pro'].find({'hero': hero_name},
+                                  {'_id': 0, 'items': 1, 'abilities': 1, 'starting_items': 1, 'role': 1}).limit(int(length)).skip(int(skip))
+    else:
+        data = db['non-pro'].find({'hero': hero_name},
+                                  {'_id': 0, 'items': 1, 'abilities': 1, 'starting_items': 1, 'role': 1})
     res = jsonify(list(data))
     res.cache_control.max_age = 86400
     end = time.perf_counter()
