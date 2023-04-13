@@ -11,6 +11,7 @@ from ..hero import Hero
 from ..switcher import switcher
 from .collection import db, hero_output
 
+
 class Db_insert:
     def __init__(self):
         pass
@@ -20,9 +21,7 @@ class Db_insert:
         print('inserting player picks')
         for player in data:
             if re.search(r"\(smurf.*\)", player['name'], re.IGNORECASE):
-                print('smurf name', player['name'])
                 continue
-            # change this back to player picks
             self.insert_total_picks(
                 'name', player['name'], 'player_picks')
 
@@ -50,13 +49,19 @@ class Db_insert:
         for k in list(roles.keys()):
             if roles[k] <= 0:
                 del roles[k]
-        cleaned = re.sub(r"\(smurf.*\)", '', val).strip()
+        cleaned = re.sub(r"\(smurf.*\)", '', val, re.IGNORECASE).strip()
+        if cleaned == "y'":
+            print(val, cleaned, roles)
+
+            pass
         if key == 'bans':
             db[collection].find_one_and_update(
                 {'hero': val}, {"$set": {'total_bans': hero_output.count_documents({key: val})}}, upsert=True)
+            pass
         else:
             db[collection].find_one_and_replace({key: cleaned},
                                                 {key: cleaned, 'total_picks': hero_output.count_documents({key: regex}), 'roles': roles}, upsert=True)
+            pass
 
     def insert_bans(self, val):
         db['hero_picks'].find_one_and_replace(
@@ -128,7 +133,8 @@ class Db_insert:
         data = hero_output.find({})
         # db['chappie'].delete_many({})
         roles = ['Midlane', 'Safelane', 'Offlane']
-        for doc in data:
+        data = list(data)
+        for i,doc in enumerate(data):
             if doc['win'] == 1:
                 continue
             items = [item['key']
@@ -163,7 +169,48 @@ class Db_insert:
         seconds = time.split(':')[2]
         return int(hours) * 3600 + int(minutes)*60 + int(seconds)
 
-    def insert_winrates(self):
+    def detailed(self,data, key ,collection):
+        output = []
+        roles = ['Hard Support', 'Support', 'Safelane',
+                'Offlane', 'Midlane', 'Roaming']
+        for x in data:
+            if re.search(r"\(smurf.*\)", x['name'], re.IGNORECASE):
+                continue
+            regex = r"(\W)"
+            subst = "\\\\\\1"
+            v = re.sub(regex, subst, x['name'])
+            regex = f"{v}"
+            regex = {"$regex": regex}
+            picks = hero_output.count_documents({key: regex})
+            cleaned = re.sub(r"\(smurf.*\)", '', x['name'], re.IGNORECASE).strip()
+            total_wins = hero_output.count_documents(
+                {key: regex, 'win': 1})
+            total_bans = hero_output.count_documents(
+                {'bans': x['name']})
+            if total_wins == 0 or picks == 0:
+                total_winrate = 0
+            else:
+                total_winrate = (total_wins / picks) * 100
+                total_winrate = self.clean_winrate(total_winrate)
+            role_dict = {key: cleaned,
+                        'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
+            for role in roles:
+                wins = hero_output.count_documents(
+                    {key: regex, 'win': 1, 'role': role})
+                losses = hero_output.count_documents(
+                    {key: regex, 'win': 0, 'role': role})
+                role_picks = wins+losses
+                if role_picks == 0:
+                    winrate = 0
+                else:
+                    winrate = wins/role_picks*100
+                    winrate = self.clean_winrate(winrate)
+                    role_dict[role] = {
+                        'picks': role_picks, 'wins': wins, 'losses': losses, 'winrate': winrate}
+            db[collection].find_one_and_replace({key: cleaned},
+                                                    role_dict, upsert=True)
+
+    def insert_winrates(self, key):
         start = time.perf_counter()
         print('insert winrate...')
         output = []
@@ -171,9 +218,9 @@ class Db_insert:
                  'Offlane', 'Midlane', 'Roaming']
         data = db['hero_list'].find_one({})
         for hero in data['heroes']:
-            picks = hero_output.count_documents({'hero': hero['name']})
+            picks = hero_output.count_documents({key: hero['name']})
             total_wins = hero_output.count_documents(
-                {'hero': hero['name'], 'win': 1})
+                {key: hero['name'], 'win': 1})
             total_bans = hero_output.count_documents(
                 {'bans': hero['name']})
             if total_wins == 0 or picks == 0:
@@ -181,27 +228,26 @@ class Db_insert:
             else:
                 total_winrate = (total_wins / picks) * 100
                 total_winrate = self.clean_winrate(total_winrate)
-            role_dict = {'hero': hero['name'],
+            role_dict = {key: hero['name'],
                          'picks': picks, 'wins': total_wins, 'winrate': total_winrate, 'bans': total_bans}
             for role in roles:
                 wins = hero_output.count_documents(
-                    {'hero': hero['name'], 'win': 1, 'role': role})
+                    {key: hero['name'], 'win': 1, 'role': role})
                 losses = hero_output.count_documents(
-                    {'hero': hero['name'], 'win': 0, 'role': role})
-                picks = wins+losses
+                    {key: hero['name'], 'win': 0, 'role': role})
                 if picks == 0:
                     winrate = 0
                 else:
                     winrate = wins/picks*100
                     winrate = self.clean_winrate(winrate)
-                    role_dict[f"{role}_picks"] = picks
+                    role_dict[f"{role}_picks"] = wins+losses
                     role_dict[f"{role}_wins"] = wins
                     role_dict[f"{role}_losses"] = losses
                     role_dict[f"{role}_winrate"] = winrate
             output.append(role_dict)
-            db['wins'].find_one_and_replace({'hero': hero['name']},
+            db['wins'].find_one_and_replace({key: hero['name']},
                                             role_dict, upsert=True)
-        print('time taken: ',time.perf_counter()-start)
+        print('time taken: ', time.perf_counter()-start)
 
     def clean_winrate(self, winrate):
         winrate = f'{winrate:.2f}'
@@ -210,12 +256,20 @@ class Db_insert:
         return winrate
 
     def insert_all(self):
+        print('insert worst games')
         self.insert_worst_games()
-        self.insert_best_games()
+        print('insert best games')
+        
+        # self.insert_best_games()
+        print('insert player picks')
+        
         self.insert_player_picks()
-        self.insert_winrates()
+        data = db['hero_list'].find_one()['heroes']
+        print('insert hero picks')
+        self.detailed(data,'hero', 'test_hero_picks')
+        self.insert_winrates('hero')
 
 
 if __name__ == '__main__':
     # Db_insert.insert_talent_order('self', 1)
-    Db_insert.insert_worst_games()
+    Db_insert().insert_worst_games()
