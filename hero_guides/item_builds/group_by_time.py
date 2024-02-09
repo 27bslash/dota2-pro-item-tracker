@@ -12,8 +12,9 @@ def convert_timestamp(secs: int):
 
 
 def group_by_time(data: list, item_data, starting_items: dict):
-    res = {'Early Core': {}, 'Early Situational': {}, 'Mid Core': {},
-           'Mid Situational': {}, 'Late Core': {}, 'Late Situational': {}}
+    # res = {'Early Core': {}, 'Early Situational': {}, 'Mid Core': {},
+    #        'Mid Situational': {}, 'Late Core': {}, 'Late Situational': {}}
+    res = {}
     tooltips = {}
     o = {'value': 48.69109947643979,
          'adjustedValue': 48.94736842105264,
@@ -63,19 +64,32 @@ def group_by_time(data: list, item_data, starting_items: dict):
             tooltips[f"item_{item[0]}"] = f'dissasemble {convert_string(item_data[i+1][0])} into {convert_string(item_data[i+2][0])}'
         if item[1]['adjustedValue'] >= 40:
             if item_time < 700:
-                res['Early Core'][f"item_{i}"] = f"item_{item[0]}"
+                res = add_key(res, 'Early Core',
+                              f"item_{i}", f"item_{item[0]}")
             elif item_time < 1800:
-                res['Mid Core'][f"item_{i}"] = f"item_{item[0]}"
+                res = add_key(res, 'Mid Core', f"item_{i}", f"item_{item[0]}")
             else:
-                res['Late Core'][f"item_{i}"] = f"item_{item[0]}"
+                res = add_key(res, 'Late Core', f"item_{i}", f"item_{item[0]}")
         else:
             if item_time < 700:
-                res['Early Situational'][f"item_{i}"] = f"item_{item[0]}"
+                res = add_key(res, 'Early Situational',
+                              f"item_{i}", f"item_{item[0]}")
             elif item_time < 1800:
-                res['Mid Situational'][f"item_{i}"] = f"item_{item[0]}"
+                res = add_key(res, 'Mid Situational',
+                              f"item_{i}", f"item_{item[0]}")
             else:
-                res['Late Situational'][f"item_{i}"] = f"item_{item[0]}"
+                res = add_key(res, 'Late Situational',
+                              f"item_{i}", f"item_{item[0]}")
+
     return {'ItemBuild': res, 'tooltip': tooltips}
+
+
+def add_key(dict: dict, key: str, item_index: str, item_key: str) -> dict:
+    try:
+        dict[key][item_index] = f"{item_key}"
+    except:
+        dict[key] = {item_index: f"{item_key}"}
+    return dict
 
 
 def convert_string(s: str):

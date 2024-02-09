@@ -17,9 +17,14 @@ def human_to_unix(time):
 
 
 def count_items(data, item_data):
+    # TODO
+    # implement double bracer
+    # implement neutral items
     consumables = [
         "tango",
         "flask",
+        "branches",
+        "blood_grenade",
         "ward_observer",
         "ward_sentry",
         "smoke_of_deceit",
@@ -29,24 +34,29 @@ def count_items(data, item_data):
         "dust",
         "tome_of_knowledge",
         "gem",
-        'faerie_fire'
+        'faerie_fire',
+        'great_famango',
+        'famango',
+        'dagon_2',
+        'dagon_3',
+        'dagon_4',
     ]
 
     items = []
+    seen_items = set()
     for match in data:
-        seen_items = set()
         for item in match['items']:
             time = item['time'] if isinstance(
                 item['time'], int) else human_to_unix(item['time'])
             time = 0 if time < 0 else time
             key = item['key']
-            if key not in consumables and key not in seen_items:
+            if key not in consumables:
                 items.append({key: time})
                 seen_items.add(key)
 
     item_values = {}
-    for i, x in enumerate(items):
-        key = list(x.keys())[0]
+    for i, x in enumerate(seen_items):
+        key = x
         filtered_item_times = [item[key]
                                for item in items if list(item.keys())[0] == key]
 

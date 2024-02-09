@@ -1,5 +1,4 @@
 import re
-from helper_funcs.database.collection import all_items as itemdata
 
 
 def recursive_remove(item, itemdata, components, data, keys, removed_components):
