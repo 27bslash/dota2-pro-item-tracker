@@ -1,4 +1,4 @@
-def switcher(name):
+def switcher(name: str) -> str:
     switch = {
         'necrophos': 'necrolyte',
         'clockwerk': 'rattletrap',
@@ -22,8 +22,9 @@ def switcher(name):
         'centaur_warrunner': 'centaur'
     }
 
-    if switch.get(name):
-        return switch.get(name)
+    v = switch.get(name)
+    if v:
+        return v
     else:
         for key, value in switch.items():
             if value == name:

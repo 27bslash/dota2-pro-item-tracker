@@ -10,5 +10,6 @@ from .compute_engine import check_last_day
 
 hero_methods = Hero()
 item_methods = Items()
-database_methods = Db_insert()
+hero_list = hero_methods.hero_list
+database_methods = Db_insert(hero_list, False) # type: ignore
 talent_methods = Talents()
