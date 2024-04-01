@@ -239,15 +239,17 @@ class Db_insert:
         else:
             role_dict["trends"] = db[collection].find_one({"hero": hero_name})["trends"]
         old_role_dict = db[collection].find_one({"hero": hero_name}, {"_id": 0})
-        old_hash = hash(str(old_role_dict))
-        new_hash = hash(str(role_dict))
+        old_hash = str(old_role_dict)
+        new_hash = str(role_dict)
         if old_hash != new_hash and not self.updated_version:
             version = db[collection].find_one({"version": {"$exists": True}})
             if version:
                 new_version = version["version"] + 1
-                db[collection].find_one_and_replace(
-                    {"version": version}, {"version": new_version}
+                result = db[collection].find_one_and_update(
+                    {"version": version},
+                    {"$set": {"version": new_version}},
                 )
+                print(f"updated version to: {new_version}, {result}")
             else:
                 db[collection].insert_one({"version": 0})
             self.updated_version = True
@@ -448,7 +450,12 @@ if __name__ == "__main__":
     # Db_insert().detailed("test_hero_picks")
     # Db_insert().insert_roles_pick_stats("viper", {}, "7.35b")
 
-    Db_insert().insert_all()
+    # Db_insert().insert_all()
+    # Db_insert(update_trends=False).detailed(collection="test_hero_picks")
+    db['test_hero_picks'].find_one_and_update({'version': 7} , {"$set": {'version': 8}})
+    version = db["test_hero_picks"].find({"version": {"$exists": True}})
+    for v in version:
+        print(v)
     # print(picks ,patch_wins,losses)
     # db["test_hero_picks"].update_many({}, {"$set": {"trends": []}})
     # for _ in range(0, 7):
