@@ -1,6 +1,5 @@
 import time
 import traceback
-from bs4 import BeautifulSoup
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -22,9 +21,10 @@ class DataFetcher:
                 element = WebDriverWait(chrome, 40).until(
                     EC.presence_of_element_located((By.CLASS_NAME, "data"))
                 )
-                print(time.perf_counter() - strt)
-                soup = BeautifulSoup(chrome.page_source, "html.parser")
-                json_data = json.loads(soup.find("div", class_="data").text)
+                print(f"data fetched for {hero_name} in :{time.perf_counter() - strt}")
+                # soup = BeautifulSoup(chrome.page_source, "html.parser")
+                # print(element.text)
+                json_data = json.loads(element.text)
                 # with open(
                 #     f"hero_guides/update_builds/site_guide_json/{hero_name}.json", "w"
                 # ) as f:

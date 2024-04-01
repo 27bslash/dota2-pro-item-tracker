@@ -25,17 +25,18 @@ class ItemParser:
         neutral_item_build = {}
         index = 0
         neutral_items = []
-        for itemGroup in build_data["neutral_items"]:
-            for item in itemGroup[0:2]:
-                neutral_items.append({f"item_{index}": f"item_{item[0]}"})
-                index += 1
-        neutral_item_build["Neutral Items"] = reduce(operator.ior, neutral_items, {})
-        for itemGroup in build_data["neutral_items"]:
-            for item in itemGroup[0:2]:
-                neutral_tooltips[
-                    f"item_{item[0]}"
-                ] = f"pick rate: {round(item[1]['perc'],2)}%"
 
+        for i, itemGroup in enumerate(build_data["neutral_items"]):
+            tier_str = f"Tier {i+1}"
+            tier_items = []
+            for item in itemGroup[0:4]:
+                tier_items.append({f"item_{index}": f"item_{item[0]}"})
+                # neutral_items.append({f"item_{index}": f"item_{item[0]}"})
+                neutral_tooltips[f"item_{item[0]}"] = (
+                    f"pick rate: {round(item[1]['perc'],2)}%"
+                )
+                index += 1
+            neutral_item_build[tier_str] = reduce(operator.ior, tier_items, {})
         return neutral_tooltips, neutral_item_build
 
     def parse_items(self, build_data):
@@ -56,9 +57,9 @@ class ItemParser:
                     for i, item in enumerate(item_group[item_priority])
                 ]
                 # example output:  Early Core = {}
-                item_build[
-                    f"{game_stages[i]} {convert_string(item_priority)}"
-                ] = reduce(operator.ior, core_items, {})
+                item_build[f"{game_stages[i]} {convert_string(item_priority)}"] = (
+                    reduce(operator.ior, core_items, {})
+                )
 
         return {"ItemBuild": item_build, "tooltip": tooltips}
 
@@ -66,13 +67,13 @@ class ItemParser:
     def item_tooltips(tooltips, data):
         for j, item in enumerate(data):
             if item["key"] == "repair_kit":
-                tooltips[
-                    f"item_{item['key']}"
-                ] = f"Disassemble {' and '.join([convert_string(s) for s in item['components']])} into {convert_string(item['combination'])}, Average time: {convert_timestamp(item['time'])}"
+                tooltips[f"item_{item['key']}"] = (
+                    f"Disassemble {' and '.join([convert_string(s) for s in item['components']])} into {convert_string(item['combination'])}, Average time: {convert_timestamp(item['time'])}"
+                )
             else:
-                tooltips[
-                    f'item_{item["key"]}'
-                ] = f"Pick rate: {round(item['adjustedValue'],2)}%, Average purchase time: {convert_timestamp(item['time'])}"
+                tooltips[f'item_{item["key"]}'] = (
+                    f"Pick rate: {round(item['adjustedValue'],2)}%, Average purchase time: {convert_timestamp(item['time'])}"
+                )
         return tooltips
 
     @staticmethod

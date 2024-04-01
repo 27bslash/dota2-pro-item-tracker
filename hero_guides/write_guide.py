@@ -129,9 +129,14 @@ def write_build_to_remote(data, hero, patch, debug=False):
 
 def add_to_build_file(guide_template, path, timestamp):
     guide_template = str(json.dumps(guide_template, indent=8))
+    # remove colon between key value pairs
     cleaned = re.sub(r'(?<="):(?!\d)', "\t\t", guide_template)
+    # remove commas between entries
     cleaned = re.sub(r",", "", cleaned)
+    # remove unique keys from json
     cleaned = re.sub(r"(?<=item)_\d+", "", cleaned)
+    # remove unique items from json
+    cleaned = re.sub(r"__\d", "", cleaned)
     files = glob.glob(f"{path}_*.build")
 
     for file in files:
@@ -281,7 +286,34 @@ def add_workhop_id_to_guides(list=[]):
                 pass
 
 
-def get_all_guides_from_steam():
+def build_stats(page_num):
+    req = requests.get(
+        f"https://steamcommunity.com/id/27bslash/myworkshopfiles/?section=guides&p={page_num}&numperpage=30"
+    )
+    soup = BeautifulSoup(req.text, "html.parser")
+    els = soup.find_all("a", "workshopItemCollection")
+    lst = []
+    for el in els:
+        title = el.find("div", "workshopItemTitle").text.strip()
+        link = el.get("href")
+        req = requests.get(link)
+        soup = BeautifulSoup(req.text, "html.parser")
+
+        stats = soup.find("table", class_="stats_table").find_all("tr")
+        d = {"title": title, "subscribers": 0, "favs": 0}
+        for i, stat in enumerate(stats):
+            if i == 0:
+                continue
+            cells = stat.find("td")
+            if i == 1:
+                d["subscribers"] = float(cells.text)
+            if i == 2:
+                d["favs"] = float(cells.text)
+        lst.append(d)
+        time.sleep(1)
+    return lst
+
+def get_all_guides_from_steam(build_subs=False):
     total_guides = len(
         [
             filename
@@ -291,13 +323,15 @@ def get_all_guides_from_steam():
         ]
     )
     l = len([i for i in range(0, total_guides, 30)])
-    lst = []
+    workshop_ids = []
+    dl_stats = []
     for i in range(1, l + 1):
-        lst += get_workshop_ids_of_page(i)
-
-    add_workhop_id_to_guides(list=lst)
-
-
+        workshop_ids += get_workshop_ids_of_page(i)
+        if build_subs:
+            dl_stats += build_stats(i)
+    add_workhop_id_to_guides(list=workshop_ids)
+    sorted_data = sorted(dl_stats, key=lambda x: int(x["subscribers"]), reverse=True)
+    print(sorted_data[0:10])
 if __name__ == "__main__":
     # write_build_to_remote({'json_data'}, 'drow_ranger', '7.32e')
     # modify_remote()

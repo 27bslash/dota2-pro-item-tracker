@@ -34,7 +34,7 @@ def uninstall_dota2():
         (103, 247, "secondary"),
         (209, 372, "primary"),
         (359, 372, ""),
-        (338, 505, "primary"),
+        (338, 535, "primary"),
         # finally click uninstall button
         (1050, 611, "primary"),
     ]
