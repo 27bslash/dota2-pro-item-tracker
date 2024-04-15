@@ -24,12 +24,13 @@
 import asyncio
 import datetime
 import logging
+import re
 import statistics
 import time
 import traceback
 from helper_funcs.abilities import detailed_ability_info
 from helper_funcs.database.db import db
-from helper_funcs.database.collection import current_patch
+from helper_funcs.database.collection import current_patch, all_items
 import json
 import aiohttp
 import requests
@@ -394,7 +395,8 @@ class Stratz_api(Api_request):
                         if not resp["data"]["match"]:
                             # match not over yet
                             return
-
+                        with open("t.json", "w") as f:
+                            json.dump(resp["data"]["match"], f, indent=4)
                         match_id = int(resp["data"]["match"]["id"])
                         print(
                             f"successfully got {match_id}",
@@ -489,7 +491,7 @@ class Stratz_api(Api_request):
                 return
                 # return db['parse'].find_one_and_update(
                 #     {'id': m_id}, {"$set": {'id': m_id}}, upsert=True)
-
+            purchase_log = self.fix_stratz_purchase_log(p)
             role = p["role"]
             lane = p["lane"]
             position = None
@@ -563,7 +565,7 @@ class Stratz_api(Api_request):
             if purchase["key"] == "aghanims_shard":
                 temp = purchase.copy()
                 aghanims_shard = self.item_methods.convert_time([temp])
-        self.add_missing_items(p['stats']['inventoryReport'], purchase_log)
+        self.add_missing_items(p["stats"]["inventoryReport"], purchase_log)
         starting_items = self.stratz_starting_items(stats["inventoryReport"][0])
         rev = purchase_log.copy()[::-1]
         main_items = self.item_methods.get_most_recent_items(rev, 6, p, opendota=False)
@@ -596,8 +598,6 @@ class Stratz_api(Api_request):
             "bans": hero_bans,
         }
         return parsed_match_result
-
-    
 
     def stratz_starting_items(self, invent):
         ret = [
@@ -684,6 +684,42 @@ class Stratz_api(Api_request):
             and player["isRadiant"] == side
             and player["heroId"] in hero_ids
         ]
+
+    def fix_stratz_purchase_log(self, player):
+        ignored_ids = [11, 30, 34, 36, 123]  # quelling blade, gem ,stick, wand , linken
+        # TODO potentially add atos , hex , bkb , orchid,satanic , veil
+        strt = time.perf_counter()
+        for purchase in player["stats"]["itemPurchases"]:
+            if purchase["itemId"] in ignored_ids:
+                continue
+            if not self.check_item_uses(purchase["itemId"]):
+                continue
+            itemUsed = self.check_item_used(player, purchase["itemId"])
+            if not itemUsed:
+                if purchase["itemId"] != 1:
+                    print(
+                        self.hero_methods.hero_name_from_hero_id(player["heroId"]),
+                        self.item_methods.get_item_name(purchase["itemId"]),
+                        purchase["itemId"],
+                    )
+                player["stats"]["itemPurchases"].remove(purchase)
+        return player["stats"]["itemPurchases"]
+
+    def check_item_uses(self, id: int):
+        try:
+            item = all_items[self.item_methods.get_item_name(id)]
+        except:
+            return None
+        if "hint" not in item:
+            return False
+        se = re.search("Active", "".join(item["hint"]))
+        return se
+
+    @staticmethod
+    def check_item_used(player, id: int):
+        for item in player["stats"]["itemUsed"]:
+            if item["itemId"] == id:
+                return True
 
     async def stratz_call(self, urls, hero_name, testing=False):
         print(f"{hero_name}: {urls}")
