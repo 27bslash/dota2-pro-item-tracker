@@ -1,21 +1,16 @@
 import datetime
 import logging
 import time
-import traceback
 import pyautogui
-import requests
 from hero_guides.update_builds.handle_dota2_install import (
     check_if_installed,
     install_dota2,
     uninstall_dota2,
 )
 from hero_guides.update_builds.remote.handle_remote import (
-    cut_folder,
-    modify_remote,
     handle_remote_folder,
 )
 from hero_guides.update_builds.handle_steam import (
-    check_if_program_running,
     close_program,
     open_program,
 )
@@ -24,10 +19,8 @@ from hero_guides.update_builds.publish_guides import (
     snapshot_pixel_colour,
 )
 from hero_guides.update_builds.parser.update_builds_from_site import Update_builds
-from hero_guides.write_guide import get_all_guides_from_steam, write_build_to_remote
 import os
-import requests
-from helper_funcs.database.collection import db, hero_list
+from helper_funcs.net_test import net_test
 
 logging.basicConfig(
     filename="D:\\projects\\python\\pro-item-builds\\hero_guides\\update_builds\\logging\\log.log",
@@ -127,7 +120,8 @@ class DotaManager:
 
     def main(self):
         running = False
-        self.clear_logs()
+        if not net_test():
+            return
         while True:
             if self.run_on_date and not running:
                 if datetime.date.today().weekday() != 0:
@@ -138,6 +132,7 @@ class DotaManager:
                     continue
                 else:
                     running = True
+                    self.clear_logs()
 
             if self.backup and not self.BACKED_UP:
                 self.backup_logic()
