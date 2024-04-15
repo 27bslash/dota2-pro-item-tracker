@@ -16,6 +16,7 @@ from helper_funcs.helper_imports import (
     parse_request,
 )
 from logs.logger_config import configure_logging
+from helper_funcs.net_test import net_test
 from update.update_app import update_app
 import asyncio
 from apis.opendota_api import Api_request
@@ -37,7 +38,7 @@ def bulk_api_request(
     #     Api_request().opendota_call(urls[slice(0, 60)], hero))
     global USE_OPENDOTA
     try:
-        if USE_OPENDOTA or use_odota:
+        if USE_OPENDOTA and use_odota:
             ret = asyncio.run(
                 Api_request().opendota_call(urls[slice(0, minute_limit)], hero)
             )
@@ -158,6 +159,7 @@ if __name__ == "__main__":
 
     print("starting up...")
     first_run = False
+    net_test()
     if datetime.datetime.now().hour < 16:
         first_run = True
         back_up_thread = Thread(target=back_up)

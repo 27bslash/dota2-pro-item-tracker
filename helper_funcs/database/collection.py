@@ -20,7 +20,7 @@ parse = db["parse"]
 dead_games = db["dead_games"]
 strt = time.perf_counter()
 hero_list = db["hero_list"].find_one({}, {"_id": 0})["heroes"]
-# all_items = db["all_items"].find_one({})["items"]
+all_items = db["all_items"].find_one({})["items"]
 item_ids = db["item_ids"].find_one({})["items"]
 hero_stats = list(db["hero_stats"].find({}))
 print(time.perf_counter()- strt)
