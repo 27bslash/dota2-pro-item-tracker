@@ -81,6 +81,9 @@ def merge_dicts(ret, data):
 
 def daily_update(first_run=False):
     os.system("cls")
+    if not net_test(60):
+        print("no internet")
+        return
     start = time.time()
     check_last_day()
     data = db["hero_list"].find_one({}, {"_id": 0})
@@ -159,7 +162,6 @@ if __name__ == "__main__":
 
     print("starting up...")
     first_run = False
-    net_test()
     if datetime.datetime.now().hour < 16:
         first_run = True
         back_up_thread = Thread(target=back_up)
