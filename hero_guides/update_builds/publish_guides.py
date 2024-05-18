@@ -1,5 +1,6 @@
 import time
 from random import randint, uniform
+import tkinter
 
 import pyautogui
 import pygetwindow as gw
@@ -12,19 +13,36 @@ def publish_guides():
     hc = HumanClicker()
     open_dota2(debug=False)
     activate_window("Dota 2")
-    hc.move((randint(0, 1920), randint(0, 1080)), uniform(0.1, 0.4))
+    hc.move((randint(0, 1920), randint(0, 500)), uniform(0.1, 0.4))
     hc.click()
     time.sleep(uniform(4, 9))
     # open heroes tab on dota 2
-    hc.move((randint(2325 - 1920, 2450 - 1920), randint(10, 55)), uniform(0.1, 0.4))
+    root = tkinter.Tk()
+    root.withdraw()
+    monitor_x, monitor_y = root.winfo_screenwidth(), root.winfo_screenheight()
+
+    lx = convert_coord_by_resolution(monitor_x, 2325 - 1920, 1920)
+    mx = convert_coord_by_resolution(monitor_x, 2450 - 1920, 1920)
+    ly = convert_coord_by_resolution(monitor_y, 10, 1080)
+    my = convert_coord_by_resolution(monitor_y, 55, 1080)
+
+    hc.move((randint(lx, mx), randint(ly, my)), uniform(0.1, 0.4))
     hc.click()
     time.sleep(uniform(1, 2))
     # open guides tab
-    hc.move((randint(2457 - 1920, 2589 - 1920), randint(87, 98)), uniform(0.05, 0.18))
+    lx = convert_coord_by_resolution(monitor_x, 2457 - 1920, 1920)
+    mx = convert_coord_by_resolution(monitor_x, 2589 - 1920, 1920)
+    ly = convert_coord_by_resolution(monitor_y, 87, 1080)
+    my = convert_coord_by_resolution(monitor_y, 98, 1080)
+    hc.move((randint(lx, mx), randint(ly, my)), uniform(0.05, 0.18))
     time.sleep(uniform(1, 2))
     hc.click()
     # click publish all button
-    hc.move((randint(3204 - 1920, 3388 - 1920), randint(897, 929)), uniform(0.05, 0.6))
+    lx = convert_coord_by_resolution(monitor_x, 3204 - 1920, 1920)
+    mx = convert_coord_by_resolution(monitor_x, 3388 - 1920, 1920)
+    ly = convert_coord_by_resolution(monitor_y, 897, 1080)
+    my = convert_coord_by_resolution(monitor_y, 929, 1080)
+    hc.move((randint(lx, mx), randint(ly, my)), uniform(0.05, 0.6))
     time.sleep(uniform(1, 3))
     hc.click()
     print("publishing guides...")
@@ -127,10 +145,27 @@ def move_group(coords: list, delay=0.5):
     # 775 664
     # 809 787
     # overwrite cloud save with local save
+    root = tkinter.Tk()
+    root.withdraw()
+    monitor_x, monitor_y = root.winfo_screenwidth(), root.winfo_screenheight()
+    print(monitor_x, monitor_y)
     for x, y, mouse_button in coords:
-        pyautogui.moveTo(x, y, delay)
+        if monitor_y != 1080:
+            ny = convert_coord_by_resolution(monitor_y, y, 1080)
+            nx = convert_coord_by_resolution(monitor_x, x, 1920)
+            print(y, ny, x, nx)
+        pyautogui.moveTo(nx, ny, delay)
         if mouse_button:
             pyautogui.click(button=mouse_button)
+
+
+def convert_coord_by_resolution(resolution, coord, default_resolution):
+    perc = (coord / default_resolution) * 100
+    updated_coord = int(resolution / 100 * perc)
+    return updated_coord
+    # pyautogui.moveTo(x, y, delay)
+    # if mouse_button:
+    #     pyautogui.click(button=mouse_button)
 
 
 if __name__ == "__main__":

@@ -30,13 +30,13 @@ def install_dota2():
 
 def uninstall_dota2():
     instructions = [
-        (185, 51, "primary"),
-        (103, 247, "secondary"),
-        (209, 372, "primary"),
-        (359, 372, ""),
-        (338, 535, "primary"),
+        (180, 51, "primary"),
+        (103, 240, "secondary"),
+        (209, 362, "primary"),
+        (359, 352, ""),
+        (338, 505, "primary"),
         # finally click uninstall button
-        (1050, 611, "primary"),
+        (1050, 611, ""),
     ]
     # instructions = [
     #     # library lcoation
