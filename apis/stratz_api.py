@@ -492,6 +492,7 @@ class Stratz_api(Api_request):
                 # return db['parse'].find_one_and_update(
                 #     {'id': m_id}, {"$set": {'id': m_id}}, upsert=True)
             purchase_log = self.fix_stratz_purchase_log(p)
+            p['stats']['itemPurchases'] = purchase_log
             role = p["role"]
             lane = p["lane"]
             position = None
@@ -530,11 +531,10 @@ class Stratz_api(Api_request):
         dire_draft = self.stratz_draft(resp, False)
 
         max_gold_in_laning_phase = 5444
-
         hero_bans = [
             self.hero_methods.hero_name_from_hero_id(ban["bannedHeroId"])
             for ban in resp["pickBans"]
-            if ban["bannedHeroId"] and ban["playerIndex"]
+            if ban["bannedHeroId"]
         ]
 
         if "kills_log" in stats:
@@ -688,6 +688,7 @@ class Stratz_api(Api_request):
     def fix_stratz_purchase_log(self, player):
         ignored_ids = [11, 30, 34, 36, 123]  # quelling blade, gem ,stick, wand , linken
         # TODO potentially add atos , hex , bkb , orchid,satanic , veil
+        # TODO if an item is purchased at the same time as someone else and it's not used remove
         strt = time.perf_counter()
         for purchase in player["stats"]["itemPurchases"]:
             if purchase["itemId"] in ignored_ids:
