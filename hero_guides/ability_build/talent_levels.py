@@ -5,7 +5,7 @@ from helper_funcs.database.collection import db
 import re
 
 
-def most_used_talents(match_data, hero):
+def most_used_talents(match_data):
     # talent_methods = Talents()
     # talents = talent_methods.get_talent_order(match_data, hero)
     # print(talents)
@@ -23,10 +23,11 @@ def most_used_talents(match_data, hero):
             if ability["type"] == "talent":
                 if ability["level"] > 30:
                     ability["level"] = 25
-                talents.append((ability["img"], ability["level"], ability["slot"]))
+                talents.append(
+                    (ability["img"], ability["level"], ability["slot"], ability["id"])
+                )
     talent_level_lookup_table = talent_levels(talents)
     for talent in talents:
-
         # print(talent,count)
         # m = re.search(
         #     r"special_bonus_unique_earthshaker$", talent[0])
@@ -38,9 +39,10 @@ def most_used_talents(match_data, hero):
                 "level": level,
                 "count": count[talent[0]]["count"] + 1,
                 "slot": talent[2],
+                "id": talent[3],
             }
         else:
-            count[talent[0]] = {"level": level, "count": 1, "slot": talent[2]}
+            count[talent[0]] = {"level": level, "count": 1, "slot": talent[2],'id': talent[3]}
 
     srt = sorted(count.items(), key=lambda x: x[1]["slot"])
     # print(srt)

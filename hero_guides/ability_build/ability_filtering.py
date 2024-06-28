@@ -5,7 +5,32 @@ import statistics
 import time
 
 
-def ability_filter(data, talent_build, count, build_data):
+def group_abilities(data):
+    abilities = []
+    a_count = {}
+
+    for match in data:
+        if "abilities" in match and len(match["abilities"]) > 9:
+            ability_array = [
+                ability["img"]
+                for ability in match["abilities"]
+                if ability["type"] != "talent"
+            ][:9]
+            abilities.append(ability_array)
+
+            key = "__".join(
+                [
+                    ability["img"]
+                    for ability in match["abilities"]
+                    if ability["type"] != "talent"
+                ][:9]
+            )
+            a_count[key] = a_count.get(key, 0) + 1
+
+    return {"a_count": a_count}
+
+
+def ability_filter(data,  count):
     abilities = []
     all_abilities = [
         ability["img"]
@@ -60,7 +85,7 @@ def ability_filter(data, talent_build, count, build_data):
         count = count_occurences(abilities)[0]
     # print(count)
     # print(talent_build)
-    ret = fill_abilities(count, talent_build, build_data=build_data)
+    # ret = fill_abilities(count, talent_build, build_data=build_data)
     return ret
 
 

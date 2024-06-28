@@ -52,12 +52,13 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
         )
         item_build["tooltip"] = item_build["tooltip"] | neutral_tooltips
         item_build["ItemBuild"] = item_build["ItemBuild"] | neutral_item_build
-
+        facet_build = site_data[role]["facet_builds"]
         ability_build = self.parse_abilities(site_data[role])
         o = {
             "starting_items": starting_items,
             "items": item_build,
             "abilities": ability_build,
+            "facets": facet_build,
         }
         return o
 
@@ -82,7 +83,7 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
                     write_build_to_remote(all_builds, hero["name"], patch, self.debug)
                 pass
             except Exception as e:
-                logging.warn(hero["name"], traceback.format_exc())
+                logging.warn(hero["name"], e)
                 continue
         print("update builds time taken: ", time.perf_counter() - strt)
 

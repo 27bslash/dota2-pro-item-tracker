@@ -9,7 +9,7 @@ from hero_guides.update_builds.publish_guides import move_group
 # from hero_guides.update_builds.update_builds import update_all_hero_guides
 
 
-game_location = [153, 244]
+game_location = [153, 234]
 # game_location = [135, 482]
 
 
@@ -18,7 +18,7 @@ def install_dota2():
     instructions = [
         (183, game_location[1], "primary"),
         # click steam install button
-        (375, 428, "primary"),
+        (375, 418, "primary"),
         # click drive choice
         (915, 675, "primary"),
         # click confirm button
@@ -36,7 +36,7 @@ def uninstall_dota2():
         (359, 352, ""),
         (338, 505, "primary"),
         # finally click uninstall button
-        (1050, 611, ""),
+        (1050, 611, "primary"),
     ]
     # instructions = [
     #     # library lcoation
@@ -90,5 +90,8 @@ if __name__ == "__main__":
     #     listener.join()
     # except Exception as e:
     #     raise Exception
-    uninstall_dota2()
+    # uninstall_dota2()
     # install_dota2()
+    move_group([(375, 418, "primary")])
+    move_group([(915, 675, "primary")])
+    move_group([(901, 767, "primary")])

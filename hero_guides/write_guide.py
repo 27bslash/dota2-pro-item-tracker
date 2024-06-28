@@ -12,6 +12,13 @@ from helper_funcs.switcher import switcher
 from bs4 import BeautifulSoup
 
 from hero_guides.update_builds.remote.handle_remote import cut_folder
+from helper_funcs.database.collection import hero_stats
+
+
+def facet_name(facets: list, hero_data):
+    srted = sorted(facets, key=lambda k: k["count"], reverse=True)[0]
+    key = srted["key"]
+    return hero_data["facets"][key - 1]["title_loc"]
 
 
 def write_build_to_remote(data, hero, patch, debug=False):
@@ -30,7 +37,9 @@ def write_build_to_remote(data, hero, patch, debug=False):
         "Roaming": "Roamer",
         "Midlane": "Core",
     }
+    hero_data = [doc for doc in hero_stats if doc["hero"] == hero][0]
     for role in data:
+        facet_title = facet_name(data[role]["facets"], hero_data)
         guide_template = {}
         # starting items
         itemBuild = {"ItemBuild": {}}
@@ -39,13 +48,16 @@ def write_build_to_remote(data, hero, patch, debug=False):
         itemBuild = itemBuild["ItemBuild"] | data[role]["items"]["ItemBuild"]
         item_tooltips = data[role]["items"]["tooltip"]
         timestamp = int(time.time())
+        guide_title = (
+            f"{re.sub('_', ' ', switcher(hero).title())} {role} {facet_title} Build"
+        )
 
         # role = 'Offlane'
         dota_role = f"#DOTA_HeroGuide_Role_{role_conversion[role]}"
         guide_template = {
             "guidedata": {
                 "Hero": f"{hero}",
-                "Title": f"{re.sub('_', ' ', switcher(hero).title())} {role} Build",
+                "Title": guide_title,
                 "GameplayVersion": patch,
                 "GuideRevision": "1",
                 "Role": dota_role,
@@ -96,7 +108,8 @@ def write_build_to_remote(data, hero, patch, debug=False):
                 if current_revision:
                     current_revision = re.search(r"\d+", current_revision).group()
                     if (
-                        json_data["guidedata"]["ItemBuild"]
+                        guide_title == json_data["guidedata"]["Title"]
+                        and json_data["guidedata"]["ItemBuild"]
                         == guide_template["guidedata"]["ItemBuild"]
                         and json_data["guidedata"]["AbilityBuild"]
                         == json_data["guidedata"]["AbilityBuild"]
@@ -313,6 +326,7 @@ def build_stats(page_num):
         time.sleep(1)
     return lst
 
+
 def get_all_guides_from_steam(build_subs=False):
     total_guides = len(
         [
@@ -332,8 +346,9 @@ def get_all_guides_from_steam(build_subs=False):
     add_workhop_id_to_guides(list=workshop_ids)
     sorted_data = sorted(dl_stats, key=lambda x: int(x["subscribers"]), reverse=True)
     print(sorted_data[0:10])
+
+
 if __name__ == "__main__":
-    # write_build_to_remote({'json_data'}, 'drow_ranger', '7.32e')
     # modify_remote()
     # update_from_json()
     # modify_remote()
@@ -341,7 +356,7 @@ if __name__ == "__main__":
     #     time.sleep(1)
     # print(pad_hex(2970840466))
 
-    get_all_guides_from_steam()
+    # get_all_guides_from_steam()
     # update_from_json()
     unpublished_guides()
     # modify_remote()

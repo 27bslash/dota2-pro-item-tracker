@@ -60,7 +60,7 @@ class DotaManager:
     @staticmethod
     def check_validating():
         """loops until play button is green"""
-        pyautogui.moveTo(416, 439)
+        pyautogui.moveTo(416, 539)
         while True:
             if snapshot_pixel_colour(2, 130):
                 print("in color band blue, validating")
@@ -69,9 +69,9 @@ class DotaManager:
                 print("in color band green, dota is playable")
                 return True
 
-    def handle_installed(self):
+    def handle_installed(self, run_from_exe=True):
         while True:
-            if not self.dota_playable():
+            if run_from_exe and not self.dota_playable():
                 continue
             logging.info("Updating builds...")
             Update_builds().main()
@@ -151,10 +151,11 @@ if __name__ == "__main__":
     # with open("hero_guides/update_builds/write_guide_test.json", "r") as f:
     #     ret = {"Offlane": json.load(f)}
     #     write_build_to_remote(ret, "doom_bringer", "6.43")
+
     current_dir = os.getcwd()
     if current_dir == "D:\\projects\\python\\pro-item-builds":
         print("Running from current dir: ", current_dir)
-        DotaManager().handle_installed()
+        DotaManager().handle_installed(run_from_exe=False)
         # DotaManager(backup=True, run_on_date=False, handle_install=True).main()
 
         # DotaManager(backup=False, run_on_date=False, handle_install=True).main()

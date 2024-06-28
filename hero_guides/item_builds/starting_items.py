@@ -1,3 +1,4 @@
+from typing import List, Dict, Any, Tuple
 from pprint import pprint
 from hero_guides.ability_build.ability_filtering import count_occurences
 from helper_funcs.database.collection import db, hero_list
@@ -29,7 +30,7 @@ def starting_items_filter(match_data, all_items, role):
     # for item in starting_items_list:
     #     item_cost = all_items[item.replace('item_', '')]['cost']
     #     print(item, item_cost)
-    return count_occurences(starting_items_list)[0]
+    return starting_items_list
 
 
 def fill_out_items(item_list, all_items):
@@ -83,6 +84,32 @@ def fill_out_items(item_list, all_items):
         lst[i] = "__".join(sorted(item_lst))
 
     return lst
+
+
+def count_starting_items(data: List[Dict[str, Any]]) -> List[Tuple[str, int]]:
+    wards = []
+
+    combo_count = {}
+    for match in data:
+        starting_items = [
+            item["key"] for item in match["starting_items"] if item["key"] not in wards
+        ]
+        key = "__".join(sorted(starting_items))
+        combo_count[key] = combo_count.get(key, 0) + 1
+
+    if not combo_count:
+        test = []
+        for match in data:
+            starting_items = [item["key"] for item in match["starting_items"]]
+            sorted_items = sorted(starting_items)
+            key = "__".join(sorted_items)
+            test.append(key)
+
+        for key in test:
+            combo_count[key] = combo_count.get(key, 0) + 1
+
+    count = sorted(combo_count.items(), key=lambda item: item[1], reverse=True)[:2]
+    return count
 
 
 if __name__ == "__main__":

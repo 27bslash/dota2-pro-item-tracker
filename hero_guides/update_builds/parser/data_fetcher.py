@@ -21,7 +21,7 @@ class DataFetcher:
                 element = WebDriverWait(chrome, 40).until(
                     EC.presence_of_element_located((By.CLASS_NAME, "data"))
                 )
-                print(f"data fetched for {hero_name} in :{time.perf_counter() - strt}")
+                print(f"data fetched for {hero_name} in: {time.perf_counter() - strt}")
                 # soup = BeautifulSoup(chrome.page_source, "html.parser")
                 # print(element.text)
                 json_data = json.loads(element.text)
