@@ -186,6 +186,7 @@ def parse_text_content(content: str):
     joined = "".join(ret)
     joined = re.sub(r'""', '","', joined)
     joined = re.sub(r'}"', '},"', joined)
+    joined = re.sub(r',"\w+":}', '}', joined)
     wrapped = f"{{{joined}}}"
     # pprint(ret)
     json_data = json.loads(wrapped)
@@ -280,14 +281,18 @@ def generate_opendota_items():
         if "IsObsolete" in item_stats and item_stats["IsObsolete"] == "1":
             continue
         filled_out_item_stats = fill_out_item_stats(
-            datamined_abilities['lang']['Tokens'], datamined_items, item_ids, neutral_items, key
+            datamined_abilities['lang']['Tokens'],
+            datamined_items,
+            item_ids,
+            neutral_items,
+            key,
         )
         if filled_out_item_stats:
             odota_items[final_key] = filled_out_item_stats
         # pprint(dic, indent=4)
     # with open("update/test_files/final_items.json", "w") as f:
     #     json.dump(dic, f, indent=4)
-    return odota_items
+    return odota_items, datamined_abilities
     db["all_items"].find_one_and_update(
         {}, {"$set": {"items": odota_items}}, upsert=True
     )

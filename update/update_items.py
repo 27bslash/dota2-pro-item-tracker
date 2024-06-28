@@ -41,7 +41,7 @@ def update_basic_id_json(input_collection, output_collection, dic_name):
     db[output_collection].find_one_and_update({}, {"$set": dictionary}, upsert=True)
 
 
-def create_item_description(desc:list, datamined_items, key:str):
+def create_item_description(desc: list, datamined_items, key: str):
     # datamined_items_url = 'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.json'
     # datamined_items = json.loads(requests.get(datamined_items_url).text)
 
@@ -57,7 +57,11 @@ def create_item_description(desc:list, datamined_items, key:str):
         if not re.search("--", string):
             string = re.sub(r"([A-Z][a-z]+\s(?=[a-z0-9%]))", "-- \\1", string, 1)
         # re.sub('(?<=[a-z])(?<!^)[A-Z]', r' \1', s
-        item = datamined_items["DOTAAbilities"][key]
+        item = (
+            datamined_items["DOTAAbilities"][key]
+            if 'DOTAAbilities' in datamined_items
+            else datamined_items['lang']['Tokens'][key]
+        )
         if "AbilitySpecial" in item:
             special_values = item["AbilitySpecial"]
         hint_vals = re.findall(r"(?<=%)\w+_?(?=%)", string)
@@ -87,7 +91,7 @@ def create_item_description(desc:list, datamined_items, key:str):
     return res if res else desc
 
 
-def update_item_attributes( datamined_items, all_abilities, key):
+def update_item_attributes(datamined_items, all_abilities, key):
     # desc = ["Active: Swift Blink Teleport to a target point up to %blink_range%%% units away.After teleportation, you gain %bonus_movement%%% phased movement speed and +%bonus_agi_active% Agility for %duration% seconds. Swift Blink cannot be used for %blink_damage_cooldown% seconds after taking damage from an enemy hero or Roshan."]
     # abilityValues = {"blink_range": "1200",
     #                  "blink_damage_cooldown": "3.0",
@@ -253,6 +257,7 @@ def update_json_data():
     with open("update/test_result.json", "r") as f:
         datamined_items = json.load(f)
     odota_items(odota_items_json, datamined_items, datamined_abilities)
+
 
 if __name__ == '__main__':
     update_json_data()
