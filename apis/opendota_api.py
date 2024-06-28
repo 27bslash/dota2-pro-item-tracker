@@ -23,6 +23,7 @@ class Api_request:
     def __init__(self) -> None:
         self.item_methods = Items()
         self.hero_methods = Hero()
+        self.match = None
 
     async def async_get(self, m_id, hero_name, testing=False):
         if testing:
@@ -69,7 +70,7 @@ class Api_request:
                         return db["dead_games"].insert_one(
                             {"id": match_id, "count": 20}
                         )
-
+                    self.match = resp
                     rad_draft = self.draft(resp, 0)
                     dire_draft = self.draft(resp, 1)
                     hero_bans = [
@@ -79,12 +80,17 @@ class Api_request:
                     ]
                     deaths_ten = 0
                     non_pro_games = []
+
                     if not current_patch:
                         return "no patch"
-                    match_patch = current_patch["patch"]
+                    for p_o in current_patch['patches'][::-1]:
+                        if resp['start_time'] >= p_o['patch_timestamp']:
+                            self.patch = p_o['patch_number']
+                            break
+
                     unparsed_match_result = {
                         "unix_time": resp["start_time"],
-                        "patch": match_patch,
+                        "patch": self.patch,
                         "duration": resp["duration"],
                         "radiant_draft": rad_draft,
                         "dire_draft": dire_draft,
@@ -108,14 +114,15 @@ class Api_request:
                             )
 
                     parsed_replay = self.parse_replay(
-                        hero_name, unparsed_match_result, resp, testing
+                        unparsed_match_result, resp, testing
                     )
-                    if parsed_replay:
-                        db["heroes"].find_one_and_update(
-                            {"id": match_id, "hero": hero_name},
-                            {"$set": parsed_replay[0]},
-                            upsert=True,
-                        )
+                    if parsed_replay[0]:
+                        for dict in parsed_replay[0]:
+                            db["heroes"].find_one_and_update(
+                                {"id": match_id, "hero": dict['hero']},
+                                {"$set": dict},
+                                upsert=True,
+                            )
                         try:
                             db["non-pro"].insert_many(parsed_replay[1], ordered=False)
                         except Exception as e:
@@ -130,13 +137,9 @@ class Api_request:
                         # )
                         ret["heroes"] = [unparsed_match_result]
 
-                    try:
-                        db["non-pro"].insert_many(non_pro_games, ordered=False)
-                    except Exception as e:
-                        # Handle duplicate key errors or other write errors
-                        pass
-                    print(f"{hero_name} should reach here.")
                     db["dead_games"].delete_many({"id": m_id})
+                    if parsed_replay[0]:
+                        print(f"{hero_name} should reach here.")
                     if int(response.headers["X-Rate-Limit-Remaining-Day"]) < 900:
                         return "use_strats"
 
@@ -146,36 +149,47 @@ class Api_request:
             logging.error(f"Unable to get url: {m_id} {traceback.format_exc()}")
             self.add_to_dead_games(m_id)
 
-    def parse_replay(self, hero_name, unparsed_match_result, resp, testing):
+    def parse_replay(self, unparsed_match_result, resp, testing):
         non_pro_games = []
+        parsed_matches = []
         match_data = None
         m_id = int(resp["match_id"])
+        usu = list(db['urls'].find({"id": resp['match_id']}))
+        hero_ids = [self.hero_methods.get_id(doc['hero']) for doc in usu]
+        added_to_parse = False
         for i in range(10):
             p = resp["players"][i]
             hero_id = p["hero_id"]
             purchase_log = p["purchase_log"] if "purchase_log" in p else None
-            if hero_id == self.hero_methods.get_id(hero_name):
+            player_hero = self.hero_methods.hero_name_from_hero_id(hero_id)
+
+            if hero_id in hero_ids:
                 unparsed_match_result = unparsed_match_result | self.unparsed(
                     p=p,
                     hero_id=hero_id,
-                    hero_name=hero_name,
+                    hero_name=player_hero,
                     match_id=resp["match_id"],
                     testing=testing,
                 )
+                # ret["parse"] = [{"id": m_id}]
+                # check if one of the players matches search
                 if not purchase_log:
-                    # ret["parse"] = [{"id": m_id}]
-                    # check if one of the players matches search
-                    print("add to parse: ", m_id)
+                    print("add to parse: ", m_id, hero_id)
                     db["heroes"].find_one_and_update(
-                        {"id": m_id, "hero": hero_name},
+                        {
+                            "id": m_id,
+                            "hero": player_hero,
+                        },
                         {"$set": unparsed_match_result},
                         upsert=True,
                     )
-                    self.add_to_dead_games(m_id)
-                    db["parse"].find_one_and_update(
-                        {"id": m_id}, {"$set": {"id": m_id}}, upsert=True
-                    )
-                    return None
+                    if not added_to_parse:
+                        self.add_to_dead_games(m_id)
+                        db["parse"].find_one_and_update(
+                            {"id": m_id}, {"$set": {"id": m_id}}, upsert=True
+                        )
+                        added_to_parse = True
+                    continue
             if not purchase_log:
                 continue
             roles_arr = [
@@ -195,13 +209,14 @@ class Api_request:
 
             non_pro_games.append(self.insert_non_pro_games(p, hero_id, m_id, role))
 
-            if hero_id != self.hero_methods.get_id(hero_name):
+            if hero_id not in hero_ids:
                 continue
             parsed_match_result = self.parsed(
-                p=p, hero_name=hero_name, role=role, resp=resp
+                p=p, hero_name=player_hero, role=role, resp=resp
             )
             match_data = unparsed_match_result | parsed_match_result
-        return match_data, non_pro_games
+            parsed_matches.append(match_data)
+        return parsed_matches, non_pro_games
 
     def unparsed(self, **kwargs):
         p = kwargs["p"]
@@ -285,6 +300,7 @@ class Api_request:
             "additional_units": additional_units,
             "item_neutral": self.item_methods.get_item_name(p["item_neutral"]),
             "aghanims_shard": aghanims_shard,
+            "variant": p['hero_variant'],
             "abilities": detailed_ability_info(abilities, kwargs["hero_id"]),
         }
         return unparsed_match_result
@@ -332,7 +348,7 @@ class Api_request:
             "backpack": bp_items,
             "additional_units": additional_units,
             "aghanims_shard": aghanims_shard,
-            "parsed": True,
+            "parsed": "opendota",
             "items": purchase_log,
             # laning stats
             "starting_items": starting_items,
@@ -445,8 +461,11 @@ class Api_request:
                         # return purchase
         return purchase_log
 
-    def insert_non_pro_games(self, p, hero_id, match_id, role, opendota=True):
+    def insert_non_pro_games(
+        self, p, hero_id, match_id, role, opendota=True, patch=None
+    ):
         hero_name = self.hero_methods.hero_name_from_hero_id(hero_id)
+
         if opendota:
             purchase_log = self.item_methods.bots(p["purchase_log"], p["purchase"])
         else:
@@ -483,10 +502,11 @@ class Api_request:
                 "id": match_id,
                 "role": role,
                 "win": p["win"],
-                "patch": current_patch["patch"],
+                "patch": self.patch,
                 "final_items": main_items,
                 "items": purchase_log,
                 "starting_items": starting_items,
+                "variant": p['hero_variant'],
                 "abilities": detailed_ability_info(p["ability_upgrades_arr"], hero_id),
                 "item_neutral": self.item_methods.get_item_name(p["item_neutral"]),
             }
@@ -513,10 +533,11 @@ class Api_request:
                 "id": match_id,
                 "role": role,
                 "win": 1 if p["isVictory"] else 0,
-                "patch": current_patch["patch"],
+                "patch": patch,
                 "items": purchase_log,
                 "final_items": main_items,
                 "starting_items": starting_items,
+                "variant": p['variant'],
                 "item_neutral": self.item_methods.get_item_name(p["neutral0Id"]),
                 "abilities": detailed_ability_info(
                     p["abilities"], hero_id, key="abilityId"

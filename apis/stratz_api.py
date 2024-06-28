@@ -24,6 +24,7 @@
 import asyncio
 import datetime
 import logging
+import os
 import re
 import statistics
 import time
@@ -38,14 +39,16 @@ from apis.opendota_api import Api_request
 from asyncio_throttle import Throttler
 
 from logs.logger_config import configure_logging
+from dotenv import load_dotenv
 
+load_dotenv()
+api_key = os.environ.get('STRATZ_API_KEY')
 throttler = Throttler(rate_limit=15, period=1)
 
 configure_logging()
 
 
 def graphql():
-    api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiJodHRwczovL3N0ZWFtY29tbXVuaXR5LmNvbS9vcGVuaWQvaWQvNzY1NjExOTgwNDk3MjMyNTAiLCJ1bmlxdWVfbmFtZSI6IkFkZHJlc3MgbWUgYnkgbXkgaHVzYmFuZCdzIHJhbmsiLCJTdWJqZWN0IjoiMzIyMzFkMDgtNzk0NS00YzNhLTg5ZGItMzc0NzFiMTg4NGYxIiwiU3RlYW1JZCI6Ijg5NDU3NTIyIiwibmJmIjoxNjY4MDM2NDQ4LCJleHAiOjE2OTk1NzI0NDgsImlhdCI6MTY2ODAzNjQ0OCwiaXNzIjoiaHR0cHM6Ly9hcGkuc3RyYXR6LmNvbSJ9.nycCBnzcNICIsBwoS7nBfap6swBJYPUA0wtaUG7nJsc"
     headers = {"content-type": "application/json", "Authorization": f"Bearer {api_key}"}
     id = "test"
     query = """query ($id: Long!){
@@ -251,6 +254,7 @@ class Stratz_api(Api_request):
         backpack1Id
         backpack2Id
         neutral0Id
+        variant
         abilities {
             abilityId
         }
@@ -348,16 +352,15 @@ class Stratz_api(Api_request):
     }
     }
     """
-
+        # variant is facet choice
         variables = {"id": m_id}
         requst_data = {"query": query, "variables": variables}
-        api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiMzIyMzFkMDgtNzk0NS00YzNhLTg5ZGItMzc0NzFiMTg4NGYxIiwiU3RlYW1JZCI6Ijg5NDU3NTIyIiwibmJmIjoxNzAxNjI4NTYwLCJleHAiOjE3MzMxNjQ1NjAsImlhdCI6MTcwMTYyODU2MCwiaXNzIjoiaHR0cHM6Ly9hcGkuc3RyYXR6LmNvbSJ9.s4PxRHlfbBXFYqkPQRHVaSKfgYzXwqL6nc7aJGIArhk"
-
         headers = {
             "content-type": "application/json",
             "Authorization": f"Bearer {api_key}",
         }
         url = "https://api.stratz.com/graphql"
+        # 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiMzIyMzFkMDgtNzk0NS00YzNhLTg5ZGItMzc0NzFiMTg4NGYxIiwiU3RlYW1JZCI6Ijg5NDU3NTIyIiwibmJmIjoxNzAxNjI4NTYwLCJleHAiOjE3MzMxNjQ1NjAsImlhdCI6MTcwMTYyODU2MCwiaXNzIjoiaHR0cHM6Ly9hcGkuc3RyYXR6LmNvbSJ9.s4PxRHlfbBXFYqkPQRHVaSKfgYzXwqL6nc7aJGIArhk'
         try:
             async with aiohttp.ClientSession() as session:
                 async with throttler:
@@ -392,9 +395,12 @@ class Stratz_api(Api_request):
                             )
                             time.sleep(5)
                             return
-                        if not resp["data"]["match"]:
-                            # match not over yet
-                            return
+                        try:
+                            if not resp["data"]["match"]:
+                                # match not over yet
+                                return
+                        except Exception as e:
+                            print(resp['message'])
                         with open("t.json", "w") as f:
                             json.dump(resp["data"]["match"], f, indent=4)
                         match_id = int(resp["data"]["match"]["id"])
@@ -406,15 +412,17 @@ class Stratz_api(Api_request):
                         if resp["data"]["match"]["durationSeconds"] < 600:
                             db["dead_games"].insert_one({"id": match_id, "count": 20})
                             return
+
                         parsed_replay = self.parse_replay(
-                            resp["data"]["match"], match_id, hero_name, testing=False
+                            resp["data"]["match"], match_id, testing=False
                         )
                         if parsed_replay and parsed_replay != "no patch":
-                            db["heroes"].find_one_and_update(
-                                {"id": match_id, "hero": hero_name},
-                                {"$set": parsed_replay[0]},
-                                upsert=True,
-                            )
+                            for dict in parsed_replay[0]:
+                                db["heroes"].find_one_and_update(
+                                    {'id': dict['id'], 'hero': dict['hero']},
+                                    {"$set": dict},
+                                    upsert=True,
+                                )
                             try:
                                 db["non-pro"].insert_many(
                                     parsed_replay[1], ordered=False
@@ -430,13 +438,9 @@ class Stratz_api(Api_request):
             logging.error(f"{m_id}, {hero_name}, {traceback.format_exc()}")
             pass
 
-    def parse_replay(self, resp, m_id, hero_name, testing=False):
-        if resp["durationSeconds"] < 600:
-            db["dead_games"].insert_one({"id": m_id, "count": 20})
-            return None
+    def parse_replay(self, resp, m_id, testing=False):
         if not current_patch:
             return "no patch"
-        match_patch = current_patch["patch"]
         rad_draft = [
             self.hero_methods.hero_name_from_hero_id(p["heroId"])
             for p in resp["players"]
@@ -447,48 +451,52 @@ class Stratz_api(Api_request):
             for p in resp["players"]
             if not p["isRadiant"]
         ]
+        for p_o in current_patch['patches'][::-1]:
+            if resp['startDateTime'] >= p_o['patch_timestamp']:
+                self.patch = p_o['patch_number']
+                break
         unparsed_match_result = {
             "unix_time": resp["startDateTime"],
-            "patch": match_patch,
+            "patch": self.patch,
             "duration": resp["durationSeconds"],
             "radiant_draft": rad_draft,
             "dire_draft": dire_draft,
         }
-        # this does nothing
-        # for i in range(10):
-        #     p = resp['players'][i]
-        #     hero_id = p['hero_id']
-        #     if p['randomed'] and p['isRadiant']:
-        #         rad_draft.append(
-        #             self.hero_methods.hero_name_from_hero_id(hero_id))
-        #     if p['randomed'] and not p['isRadiant']:
-        #         dire_draft.append(
-        #             self.hero_methods.hero_name_from_hero_id(hero_id))
+
         non_pro_games = []
+        parsed_matches = []
         match_data = None
+        usu = list(db['urls'].find({"id": resp['id']}))
+        hero_ids = [self.hero_methods.get_id(doc['hero']) for doc in usu]
+        added_to_parse = False
         for i in range(10):
             p = resp["players"][i]
             hero_id = p["heroId"]
+            player_hero = self.hero_methods.hero_name_from_hero_id(hero_id)
             unparsed_match_result = unparsed_match_result | self.stratz_unparsed(
                 p=p,
                 hero_id=hero_id,
-                hero_name=hero_name,
+                hero_name=player_hero,
                 match_id=m_id,
                 testing=testing,
             )
             # check if one of the players matches search
             purchase_log = p["stats"]["itemPurchases"]
             if not purchase_log:
-                if hero_id != self.hero_methods.get_id(hero_name):
+                if hero_id not in hero_ids:
                     continue
-                print("add to parse: ", m_id)
                 db["heroes"].find_one_and_update(
-                    {"id": m_id, "hero": hero_name},
+                    {"id": m_id, "hero": player_hero},
                     {"$set": unparsed_match_result},
                     upsert=True,
                 )
-                self.add_to_dead_games(m_id, stratz=True)
-                return
+                if not added_to_parse:
+                    print("add to parse: ", m_id)
+                    if not added_to_parse:
+                        self.add_to_dead_games(m_id, stratz=True)
+                    added_to_parse = True
+            if not purchase_log:
+                continue
                 # return db['parse'].find_one_and_update(
                 #     {'id': m_id}, {"$set": {'id': m_id}}, upsert=True)
             purchase_log = self.fix_stratz_purchase_log(p)
@@ -509,16 +517,19 @@ class Stratz_api(Api_request):
             else:
                 position = "Midlane"
             non_pro_games.append(
-                self.insert_non_pro_games(p, hero_id, m_id, position, opendota=False)
+                self.insert_non_pro_games(
+                    p, hero_id, m_id, position, opendota=False, patch=self.patch
+                )
             )
-            if hero_id != self.hero_methods.get_id(hero_name):
+            if hero_id not in hero_ids:
                 continue
             parsed_match_result = self.stratz_parsed(
-                p=p, hero_name=hero_name, role=position, resp=resp
+                p=p, hero_name=player_hero, role=position, resp=resp
             )
 
             match_data = unparsed_match_result | parsed_match_result
-        return match_data, non_pro_games
+            parsed_matches.append(match_data)
+        return parsed_matches, non_pro_games
 
     def stratz_parsed(self, **kwargs):
         p = kwargs["p"]
@@ -580,7 +591,7 @@ class Stratz_api(Api_request):
             "backpack": bp_items,
             "additional_units": additional_units,
             "aghanims_shard": aghanims_shard,
-            "parsed": True,
+            "parsed": 'stratz',
             "items": purchase_log,
             # laning stats
             "starting_items": starting_items,
@@ -669,6 +680,7 @@ class Stratz_api(Api_request):
             "backpack": bp_items,
             "item_neutral": self.item_methods.get_item_name(player["neutral0Id"]),
             "aghanims_shard": aghanims_shard,
+            "variant": player['variant'],
             "abilities": detailed_ability_info(
                 abilities, kwargs["hero_id"], key="abilityId"
             ),
@@ -697,12 +709,12 @@ class Stratz_api(Api_request):
                 continue
             itemUsed = self.check_item_used(player, purchase["itemId"])
             if not itemUsed:
-                if purchase["itemId"] != 1:
-                    print(
-                        self.hero_methods.hero_name_from_hero_id(player["heroId"]),
-                        self.item_methods.get_item_name(purchase["itemId"]),
-                        purchase["itemId"],
-                    )
+                # if purchase["itemId"] != 1:
+                # print(
+                #     self.hero_methods.hero_name_from_hero_id(player["heroId"]),
+                #     self.item_methods.get_item_name(purchase["itemId"]),
+                #     purchase["itemId"],
+                # )
                 player["stats"]["itemPurchases"].remove(purchase)
         return player["stats"]["itemPurchases"]
 
