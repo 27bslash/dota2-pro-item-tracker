@@ -244,10 +244,12 @@ class Db_insert:
         if old_hash != new_hash and not self.updated_version:
             version = db[collection].find_one({"version": {"$exists": True}})
             if version:
-                new_version = version["version"] + 1
+                current_version = version["version"]
+                new_version = current_version + 1
                 result = db[collection].find_one_and_update(
-                    {"version": version},
+                    {"version": current_version},
                     {"$set": {"version": new_version}},
+                    return_document=True  # Optional, to get the updated document
                 )
                 print(f"updated version to: {new_version}, {result}")
             else:
