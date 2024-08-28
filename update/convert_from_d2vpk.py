@@ -140,7 +140,7 @@ def contains_any(string, substrings):
     return any(substring in string for substring in substrings)
 
 
-def parse_text_content(content: str):
+def parse_text_content(content: str, facets=False):
     item_data = {}
     current_key = None
     # print(content)
@@ -150,39 +150,69 @@ def parse_text_content(content: str):
     #     if line.strip() == "{":
     #         lines[i - 1] = lines[i - 1].strip() + "{"
     #     pass
+
     ret = []
-    for i, line in enumerate(lines):
-        # Split each line into key and value
-        parsed_line = parse_line(line, ret)
-        if parsed_line == "break":
-            break
-        elif not parsed_line:
-            continue
-        # parts = line.split('"')
-        # if len(parts) >= 4:
-        #     key = parts[1].strip()
-        #     value = parts[3].strip()
-        # elif len(parts) >= 3:
-        #     key = parts[1].strip()
-        # else:
-        #     continue
-        #     # print(key, value)
-        #     # Handle nested keys
-        # if key.endswith("{"):
-        #     current_key = key[:-1].strip()
-        #     item_data[current_key] = {}
-        # elif key.endswith("}"):
-        #     current_key = None
-        # else:
-        #     # Add key-value pair to the dictionary
-        #     if current_key:
-        #         item_data[current_key][key] = value
-        #     else:
-        #         item_data[key] = value
-        # else:
-        #     for key in parts:
-        #         if key and key.strip() not in ["{", "}", ","]:
-        #             print(i, parts)
+    if facets:
+        facets_seen = False
+        open_brace_count = 0
+        closed_brace_count = 0
+        for i, line in enumerate(lines):
+            if 'Facets' in line:
+                hero_facets = []
+                facets_seen = True
+            if facets_seen:
+                parsed_line = parse_line(line, hero_facets)
+                open_brace_count += 1 if '{' in line else 0
+                closed_brace_count += 1 if '}' in line else 0
+            if open_brace_count == closed_brace_count and open_brace_count != 0:
+                facets_seen = False
+                closed_brace_count = 0
+                open_brace_count = 0
+                joined = "".join(hero_facets)
+                joined = re.sub(r'""', '","', joined)
+                joined = re.sub(r'}"', '},"', joined)
+                joined = re.sub(r',"\w+":}', '}', joined)
+                wrapped = f"{{{joined}}}"
+                j = json.loads(wrapped)
+                ret.append(j)
+
+        return {'all_hero_facets': ret}
+    else:
+        for i, line in enumerate(lines):
+            # if facets:
+
+            #     continue
+            # Split each line into key and value
+            parsed_line = parse_line(line, ret)
+            if parsed_line == "break":
+                break
+            elif not parsed_line:
+                continue
+            # parts = line.split('"')
+            # if len(parts) >= 4:
+            #     key = parts[1].strip()
+            #     value = parts[3].strip()
+            # elif len(parts) >= 3:
+            #     key = parts[1].strip()
+            # else:
+            #     continue
+            #     # print(key, value)
+            #     # Handle nested keys
+            # if key.endswith("{"):
+            #     current_key = key[:-1].strip()
+            #     item_data[current_key] = {}
+            # elif key.endswith("}"):
+            #     current_key = None
+            # else:
+            #     # Add key-value pair to the dictionary
+            #     if current_key:
+            #         item_data[current_key][key] = value
+            #     else:
+            #         item_data[key] = value
+            # else:
+            #     for key in parts:
+            #         if key and key.strip() not in ["{", "}", ","]:
+            #             print(i, parts)
     joined = "".join(ret)
     joined = re.sub(r'""', '","', joined)
     joined = re.sub(r'}"', '},"', joined)
@@ -203,7 +233,7 @@ def parse_line(line, ret):
     # remove spaces between quotes leave data untouched
     line = re.sub(r"\s+(?=\W+)", "", line)
     line = re.sub(r'""', '":"', line)
-    line = re.sub(r':""', f"0", line)
+    line = re.sub(r':""', "0", line)
     line = re.sub(r"\t", "", line)
     line = line.strip()
     parts = "".join(
@@ -269,7 +299,9 @@ def gen_ability_json(content: str):
 
 
 def generate_opendota_items():
-    item_ids, neutral_items, datamined_items, datamined_abilities = fetch_data()
+    item_ids, neutral_items, datamined_items, datamined_abilities, facets_json = (
+        fetch_data()
+    )
     odota_items = {}
     for key in datamined_items["DOTAAbilities"]:
         final_key = key.replace("item_", "")
@@ -292,7 +324,7 @@ def generate_opendota_items():
         # pprint(dic, indent=4)
     # with open("update/test_files/final_items.json", "w") as f:
     #     json.dump(dic, f, indent=4)
-    return odota_items, datamined_abilities
+    return odota_items, datamined_abilities, facets_json
     db["all_items"].find_one_and_update(
         {}, {"$set": {"items": odota_items}}, upsert=True
     )
@@ -411,13 +443,31 @@ def fetch_data():
     all_abilities = requests.get(
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.txt"
     ).text
-
+    hero_data_txt = requests.get(
+        'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.txt'
+    ).text
     item_ids_json = parse_text_content(item_ids)
     neutral_tiers_json = parse_text_content(neutral_tiers)
     item_data_json = parse_text_content(item_data)
+    facets_json = parse_text_content(hero_data_txt, facets=True)
     all_abilities_json = gen_ability_json(all_abilities)
-    return item_ids_json, neutral_tiers_json, item_data_json, all_abilities_json
-    pass
+    return (
+        item_ids_json,
+        neutral_tiers_json,
+        item_data_json,
+        all_abilities_json,
+        facets_json,
+    )
+
+
+def vdf_tets():
+    import vdf
+
+    hero_data_txt = requests.get(
+        'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.txt'
+    ).text
+    d = vdf.parse(hero_data_txt)
+    print(d)
 
 
 if __name__ == "__main__":
@@ -446,6 +496,6 @@ if __name__ == "__main__":
     # parse_items(text_file, json_file)
     # json_from_test()
 
-    generate_opendota_items()
+    fetch_data()
     # test_line()
     pass
