@@ -25,18 +25,19 @@ class ItemParser:
         neutral_item_build = {}
         index = 0
         neutral_items = []
-
-        for i, itemGroup in enumerate(build_data["neutral_items"]):
-            tier_str = f"Tier {i+1}"
+        for i, k in enumerate(build_data["neutral_items"]):
             tier_items = []
+            tier_str = f"Tier {i+1}"
+            itemGroup = build_data["neutral_items"][k]
             for item in itemGroup[0:4]:
-                tier_items.append({f"item_{index}": f"item_{item[0]}"})
+                tier_items.append({f"item_{index}": f"item_{item['key']}"})
                 # neutral_items.append({f"item_{index}": f"item_{item[0]}"})
-                neutral_tooltips[f"item_{item[0]}"] = (
-                    f"pick rate: {round(item[1]['perc'],2)}%"
+                neutral_tooltips[f"item_{item['key']}"] = (
+                    f"pick rate: {round(item['perc'],2)}%"
                 )
                 index += 1
             neutral_item_build[tier_str] = reduce(operator.ior, tier_items, {})
+
         return neutral_tooltips, neutral_item_build
 
     def parse_items(self, build_data):
@@ -95,3 +96,84 @@ class ItemParser:
         data.insert(index, d.copy())
         del item["dissassembledComponents"]
         return data
+
+
+if __name__ == "__main__":
+    d = {
+        "neutral_items": {
+            "tier_0": [
+                {"key": "mysterious_hat", "count": 2, "perc": 20, "tier": 1},
+                {"key": "seeds_of_serenity", "count": 2, "perc": 20, "tier": 1},
+                {"key": "trusty_shovel", "count": 2, "perc": 20, "tier": 1},
+                {"key": "arcane_ring", "count": 2, "perc": 20, "tier": 1},
+            ],
+            "tier_1": [
+                {
+                    "key": "whisper_of_the_dread",
+                    "count": 12,
+                    "perc": 36.36363636363637,
+                    "tier": 2,
+                },
+                {
+                    "key": "philosophers_stone",
+                    "count": 9,
+                    "perc": 27.27272727272727,
+                    "tier": 2,
+                },
+                {"key": "bullwhip", "count": 4, "perc": 12.121212121212121, "tier": 2},
+                {
+                    "key": "gossamer_cape",
+                    "count": 3,
+                    "perc": 9.090909090909092,
+                    "tier": 2,
+                },
+            ],
+            "tier_2": [
+                {
+                    "key": "ogre_seal_totem",
+                    "count": 9,
+                    "perc": 25.71428571428571,
+                    "tier": 3,
+                },
+                {
+                    "key": "psychic_headband",
+                    "count": 8,
+                    "perc": 22.857142857142858,
+                    "tier": 3,
+                },
+                {
+                    "key": "ceremonial_robe",
+                    "count": 8,
+                    "perc": 22.857142857142858,
+                    "tier": 3,
+                },
+                {
+                    "key": "dandelion_amulet",
+                    "count": 5,
+                    "perc": 14.285714285714285,
+                    "tier": 3,
+                },
+            ],
+            "tier_3": [
+                {
+                    "key": "trickster_cloak",
+                    "count": 7,
+                    "perc": 28.000000000000004,
+                    "tier": 4,
+                },
+                {
+                    "key": "timeless_relic",
+                    "count": 7,
+                    "perc": 28.000000000000004,
+                    "tier": 4,
+                },
+                {"key": "ninja_gear", "count": 5, "perc": 20, "tier": 4},
+                {"key": "spy_gadget", "count": 4, "perc": 16, "tier": 4},
+            ],
+            "tier_4": [
+                {"key": "pirate_hat", "count": 1, "perc": 50, "tier": 5},
+                {"key": "force_boots", "count": 1, "perc": 50, "tier": 5},
+            ],
+        }
+    }
+    ItemParser().parse_neutrals(d)

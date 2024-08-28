@@ -30,7 +30,7 @@ def publish_guides():
     hc.click()
     time.sleep(uniform(1, 2))
     # open guides tab
-    lx = convert_coord_by_resolution(monitor_x, 2457 - 1920, 1920)
+    lx = convert_coord_by_resolution(monitor_x, 2467 - 1920, 1920)
     mx = convert_coord_by_resolution(monitor_x, 2589 - 1920, 1920)
     ly = convert_coord_by_resolution(monitor_y, 87, 1080)
     my = convert_coord_by_resolution(monitor_y, 98, 1080)

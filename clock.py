@@ -19,7 +19,7 @@ from helper_funcs.helper_imports import (
     hero_list,
     all_items,
 )
-from hero_guides.ability_build.ability_filtering import group_abilities
+from hero_guides.ability_build.ability_filtering import ability_medians, group_abilities
 from hero_guides.ability_build.talent_levels import most_used_talents
 from hero_guides.item_builds.filter_items import count_items
 from hero_guides.item_builds.neutral_items import most_used_neutrals
@@ -27,21 +27,19 @@ from hero_guides.item_builds.starting_items import (
     count_starting_items,
 )
 from hero_guides.ability_build.facet_filtering import facet_filter
-from logs.logger_config import configure_logging
 from helper_funcs.net_test import net_test
 from update.update_app import update_app
 import asyncio
 from apis.opendota_api import Api_request
+from logs.logger_config import custom_logger
 
 scheduler = BlockingScheduler()
 amount_run = 0
 USE_OPENDOTA = True
-configure_logging()
-db_cache = {}
 
 
 def bulk_api_request(
-    hero, start_time=time.perf_counter(), minute_limit=60, use_odota=False
+    hero, start_time=time.perf_counter(), minute_limit: int = 60, use_odota=False
 ):
     urls = get_urls(hero)
     sleep = len(urls)
@@ -59,7 +57,7 @@ def bulk_api_request(
                 USE_OPENDOTA = False
         else:
             asyncio.run(Stratz_api().stratz_call(urls[slice(0, minute_limit)], hero))
-    except Exception as e:
+    except Exception:
         logging.error(
             f"Api Request failed for {hero} {traceback.format_exc()} use_opendota:{USE_OPENDOTA}"
         )
@@ -93,69 +91,75 @@ def merge_dicts(ret, data):
 
 
 def daily_update(first_run=False):
-    os.system("cls")
-    if not net_test(60):
-        print("no internet")
-        return
-    start = time.time()
-    check_last_day()
-    today = datetime.datetime.today().weekday()
-    hour = datetime.datetime.now().hour
-    # print(today)
-    # ret = {'heroes': [], 'dead_games': [], 'non-pro': [], 'parse': []}
-    # ret['dead_games'] = list(db['dead_games'].find({}, {'_id': 0}))
-    # ret['parse'] = list(db['parse'].find({}, {'_id': 0}))
-    update_app()
-    # current day == thursday
-    api_health = requests.get("https://api.opendota.com/api/health").json()
-    global USE_OPENDOTA
-    minute_limit = 60
-    global amount_run
-    print("times run: ", amount_run)
-    if api_health["parseDelay"]["metric"] > api_health["parseDelay"]["threshold"] * 2:
-        print("open dota api down")
-        minute_limit = 100
-        USE_OPENDOTA = False
-    if not hero_list:
-        print("no hero list")
-        return
-    for i, hero in enumerate(hero_list):
-        hero = hero["name"]
-        seen_urls = []
-        # urls = get_urls(hero, ret, seen_urls=seen_urls)
-        start_time = time.perf_counter()
-        # if len(urls) == 0:
-        #     print(hero)
-        #     continue
-        bulk_api_request(hero, start_time, minute_limit)
-        print(f"heroes remaining: {len(hero_list) -i+1}")
-        # if len(urls) > 0:
-        #     break
-    # insrt_all(ret)
-    delete_old_urls()
-    Db_insert(hero_list=hero_list, update_trends=first_run).insert_all()
-    if USE_OPENDOTA:
-        parse_request()
-    compute_builds()
-    amount_run += 1
-    print("end", (time.time() - start) / 60, "minutes")
+    try:
+        os.system("cls")
+        if not net_test(60):
+            print("no internet")
+            return
+        start = time.time()
+        check_last_day()
+        today = datetime.datetime.today().weekday()
+        hour = datetime.datetime.now().hour
+        # print(today)
+        # ret = {'heroes': [], 'dead_games': [], 'non-pro': [], 'parse': []}
+        # ret['dead_games'] = list(db['dead_games'].find({}, {'_id': 0}))
+        # ret['parse'] = list(db['parse'].find({}, {'_id': 0}))
+        update_app()
+        # current day == thursday
+        global USE_OPENDOTA
+        global amount_run
+        print("times run: ", amount_run)
+        try:
+            api_health = requests.get("https://api.opendota.com/api/health").json()
+            minute_limit = 60
+            if (
+                api_health["parseDelay"]["metric"]
+                > api_health["parseDelay"]["threshold"] * 2
+            ):
+                print("open dota api down")
+                minute_limit = 100
+                USE_OPENDOTA = False
+        except Exception:
+            print("open dota api down")
+            minute_limit = 100
+            USE_OPENDOTA = False
+        if not hero_list:
+            print("no hero list")
+            return
+        for i, hero in enumerate(hero_list):
+            hero = hero["name"]
+            seen_urls = []
+            # urls = get_urls(hero, ret, seen_urls=seen_urls)
+            start_time = time.perf_counter()
+            # if len(urls) == 0:
+            #     print(hero)
+            #     continue
+            bulk_api_request(hero, start_time, minute_limit)
+            print(f"heroes remaining: {len(hero_list) -i+1}")
+            # if len(urls) > 0:
+            #     break
+        # insrt_all(ret)
+        delete_old_urls()
+        Db_insert(hero_list=hero_list).insert_all()
+        if USE_OPENDOTA:
+            parse_request()
+        if first_run:
+            compute_builds()
+        amount_run += 1
+        print("end", (time.time() - start) / 60, "minutes")
+    except Exception:
+        custom_logger.warn(f'daily update failed: {traceback.format_exc()}')
 
 
-def get_data_from_db(hero_name, role, doc_len):
-    # Check if the result is in the cache
-    cache_key = (hero_name, role, doc_len)
-    if cache_key in db_cache:
-        return db_cache[cache_key]
-    # Perform the database call and store the result in the cache
+def get_data_from_db(hero_name, role):
     data = list(db["non-pro"].find({"hero": hero_name, "role": role}))
-    db_cache[cache_key] = data
     return data
 
 
 def compute_builds():
     update_hero_builds = []
     srtr = time.perf_counter()
-    with ThreadPoolExecutor() as executor:
+    with ThreadPoolExecutor(max_workers=3) as executor:
         update_hero_builds = list(executor.map(process_hero, hero_list))
 
     db["builds"].bulk_write(update_hero_builds)
@@ -167,19 +171,21 @@ def process_hero(hero):
     d = {"hero": hero["name"]}
     doc_len = db["non-pro"].count_documents({"hero": hero["name"]})
     for role in roles:
-        data = get_data_from_db(hero["name"], role, doc_len)
+        data = get_data_from_db(hero["name"], role)
         if not data:
             continue
-        print(hero["name"], role)
         if len(data) <= doc_len * 0.1:
             continue
         ret = count_items(data, all_items)
         if not ret:
             continue
+        print(hero["name"], role)
 
         starting_items = count_starting_items(data)
         starting_items_dict = {item[0]: item[1] for item in starting_items}
         abilities = group_abilities(data)
+        medians = ability_medians(data)
+        abilities["ability_medians"] = medians
         talents = most_used_talents(data)
         talents = {talent[0]: talent[1] for talent in talents}
         facets = facet_filter(data)
@@ -223,22 +229,13 @@ def back_up():
 
 
 if __name__ == "__main__":
-    # database_methods.insert_all()
-    # update_app(delete_urls=True)
-    # Db_insert(hero_list=hero_list, update_trends=True).insert_all()
-
-    # time.sleep(10000)
-
     print("starting up...")
     first_run = False
     if datetime.datetime.now().hour < 16:
         first_run = True
         back_up_thread = Thread(target=back_up)
         back_up_thread.start()
-    # data_heroes = db['heroes'].find({})
     print("first run: ", first_run)
-    # database_methods.insert_all()
-
     current_dir = os.getcwd()
     if current_dir == "D:\\projects\\python\\pro-item-builds":
         daily_update(first_run=False)
@@ -256,5 +253,7 @@ if __name__ == "__main__":
         )
         scheduler.start()
         pass
-    except Exception as e:
-        print(e, e.__class__)
+    except Exception:
+        custom_logger.error(
+            f'untracked error in main process:  {traceback.format_exc()}'
+        )

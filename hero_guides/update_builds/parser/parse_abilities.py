@@ -5,9 +5,9 @@ from hero_guides.ability_build.ability_filtering import fill_abilities
 
 class AbilityParser:
     @staticmethod
-    def parse_abilities(build_data):
-        abilities = build_data["ability_builds"][0]
-        talents = build_data["talents"]
+    def parse_abilities(site_data, build_data):
+        abilities = site_data["ability_builds"][0]
+        talents = site_data["talents"]
         talent_build = [
             {str((i + 2) * 5): talent[0]}
             if int(talent[1]["level"]) < (i + 2) * 5
@@ -17,7 +17,10 @@ class AbilityParser:
         # useless probably
 
         ability_build = fill_abilities(
-            talents=talent_build, count=abilities, build_data=build_data
+            talents=talent_build,
+            count=abilities,
+            site_data=site_data,
+            build_data=build_data,
         )
         # ability_build = [{str(i+1): ability}
         #                  for i, ability in enumerate(ability_build[0])]

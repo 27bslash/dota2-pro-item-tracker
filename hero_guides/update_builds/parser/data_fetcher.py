@@ -3,18 +3,21 @@ import traceback
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-
+from helper_funcs.database.collection import db
 from helper_funcs.switcher import switcher
 import json
 
 
 class DataFetcher:
     def fetch_guide_data(self, chrome, hero_name):
+        build_data = db["builds"].find_one({"hero": hero_name})
         hero_name = switcher(hero_name)
         retries = 0
         max_retries = 3
         while retries < max_retries:
             try:
+                if not build_data:
+                    continue
                 # chrome.get(f"https://dota2itemtracker.vercel.app/api/{hero['name']}/build")
                 chrome.get(f"https://dota2itemtracker.vercel.app/api/{hero_name}/build")
                 strt = time.perf_counter()
@@ -30,7 +33,7 @@ class DataFetcher:
                 # ) as f:
                 #     json.dump(json_data, f, indent=4)
                 retries += 1
-                return json_data
+                return json_data, build_data
             except Exception as e:
                 print("scrape error", traceback.format_exc())
                 retries += 5

@@ -30,7 +30,7 @@ def group_abilities(data):
     return {"a_count": a_count}
 
 
-def ability_filter(data,  count):
+def ability_medians(data):
     abilities = []
     all_abilities = [
         ability["img"]
@@ -38,7 +38,6 @@ def ability_filter(data,  count):
         for ability in match["abilities"]
         if ability["type"] == "ability"
     ]
-    print(len(all_abilities))
 
     second_occurance = {}
     for match in data:
@@ -64,29 +63,15 @@ def ability_filter(data,  count):
                         "count": 1,
                         "level": [ability["level"]],
                     }
-    meidans = [
+    medians = [
         {k: statistics.median(second_occurance[k]["level"])} for k in second_occurance
     ]
-    meidans = reduce(operator.ior, meidans, {})
+    medians = reduce(operator.ior, medians, {})
 
-    if not count:
-        # return None
-        for match in data:
-            if not "abilities" in match:
-                continue
-            ability_string = "__".join(
-                [
-                    ability["img"]
-                    for ability in match["abilities"]
-                    if ability["type"] == "ability"
-                ][:10]
-            )
-            abilities.append(ability_string)
-        count = count_occurences(abilities)[0]
     # print(count)
     # print(talent_build)
     # ret = fill_abilities(count, talent_build, build_data=build_data)
-    return ret
+    return medians
 
 
 def count_occurences(list):
@@ -122,12 +107,12 @@ def count_occurences(list):
 #     return ult
 
 
-def fill_abilities(count: tuple, talents: list, build_data):
+def fill_abilities(count: tuple, talents: list, site_data, build_data):
     spli = count[0].split("__")
     ret = [None for x in range(30)]
     # print(ret)
     # pprint(talents)
-    ult = build_data["ultimate_ability"] if "ultimate_ability" in build_data else None
+    ult = site_data["ultimate_ability"] if "ultimate_ability" in site_data else None
 
     avoid_levels = [int(list(talent.keys())[0]) - 1 for talent in talents]
     if avoid_levels[-1] > 30:
@@ -146,7 +131,7 @@ def fill_abilities(count: tuple, talents: list, build_data):
     #     spli.insert(idx, ult[0])
     #     ret.insert(idx,  ult[0])
     #     pass
-    medians = build_data["ability_medians"]
+    medians = build_data["abilities"]["ability_medians"]
     for k in medians:
         if k not in count[0]:
             ability_count.append((k, 0))
@@ -203,8 +188,8 @@ def fill_abilities(count: tuple, talents: list, build_data):
         #     ret.insert(idx,  talents[i][str(idx)])
         #     pass
     # pprint(spli)
-    ret = [{str(i + 1): x} for i, x in enumerate(ret) if x]
-    return ret
+    filled_abilities = [{str(i + 1): x} for i, x in enumerate(ret) if x]
+    return filled_abilities
 
 
 def main():

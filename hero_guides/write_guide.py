@@ -117,7 +117,7 @@ def write_build_to_remote(data, hero, patch, debug=False):
                     ):
                         print("true equal")
                         continue
-
+                           
                 guide_template["guidedata"]["TimePublished"] = time_published
                 guide_template["guidedata"]["AssociatedWorkshopItemID"] = workshop_id
                 guide_template["guidedata"]["GuideRevision"] = str(
@@ -226,7 +226,7 @@ def update_from_json():
     # copyanything(src, dst)
     # copy steam guides to backup location
     for filename in glob.glob(
-        f"D:\\projects\\python\\pro-item-builds\\hero_guides\\builds/*"
+        "D:\\projects\\python\\pro-item-builds\\hero_guides\\builds/*"
     ):
         print(filename)
         with open(filename, "r") as f:
@@ -238,7 +238,7 @@ def update_from_json():
                 try:
                     guide_file_path = f"D:\\projects\\python\\pro-item-builds\\hero_guides\\update_builds\\backup\\remote\\guides{hero_roels.group().lower()}"
                     add_to_build_file(data, guide_file_path, int(time.time()))
-                except Exception as e:
+                except Exception:
                     print(traceback.format_exc())
                     cut_folder(backup_folder, steam_guides)
 
@@ -336,15 +336,19 @@ def get_all_guides_from_steam(build_subs=False):
             )
         ]
     )
-    l = len([i for i in range(0, total_guides, 30)])
+    chunked_guides = len([i for i in range(0, total_guides, 30)])
     workshop_ids = []
     dl_stats = []
-    for i in range(1, l + 1):
+    pages = {}
+    for i in range(1, chunked_guides + 1):
         workshop_ids += get_workshop_ids_of_page(i)
+        pages[i%30] = workshop_ids
         if build_subs:
             dl_stats += build_stats(i)
     add_workhop_id_to_guides(list=workshop_ids)
     sorted_data = sorted(dl_stats, key=lambda x: int(x["subscribers"]), reverse=True)
+    hero_titles = [re.search(r"\) (.*)", x['title']).group(1) for x in workshop_ids]
+    hero_titles.sort()
     print(sorted_data[0:10])
 
 

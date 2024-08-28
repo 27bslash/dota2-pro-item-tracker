@@ -36,15 +36,13 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
         chrome_options = Options()
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("log-level=3")
-        driver = webdriver.Chrome(
-            ChromeDriverManager().install(), options=chrome_options
-        )
+        driver = webdriver.Chrome(options=chrome_options)
         return driver
 
     def reset_chrome_driver(self):
         self.chrome = self.setup_chrome_driver()
 
-    def parse_all(self, site_data, role: str):
+    def parse_all(self, site_data, build_data, role: str):
         item_build = self.parse_items(site_data[role])
         starting_items = self.parse_starting_items(build_data=site_data[role])
         neutral_tooltips, neutral_item_build = self.parse_neutrals(
@@ -53,7 +51,7 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
         item_build["tooltip"] = item_build["tooltip"] | neutral_tooltips
         item_build["ItemBuild"] = item_build["ItemBuild"] | neutral_item_build
         facet_build = site_data[role]["facet_builds"]
-        ability_build = self.parse_abilities(site_data[role])
+        ability_build = self.parse_abilities(site_data[role], build_data[role])
         o = {
             "starting_items": starting_items,
             "items": item_build,
@@ -83,7 +81,7 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
                     write_build_to_remote(all_builds, hero["name"], patch, self.debug)
                 pass
             except Exception as e:
-                logging.warn(hero["name"], e)
+                logging.warn(f"{hero['name']}, {e}")
                 continue
         print("update builds time taken: ", time.perf_counter() - strt)
 
@@ -94,6 +92,8 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
             print("no data", hero["name"])
             self.reset_chrome_driver()
             return False
+        build_data = data[1]
+        data = data[0]
         seen_roles = []
         for role in data:
             print(f"{i}/{len(hero_list)}", hero["name"], role)
@@ -105,7 +105,7 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
             ):
                 continue
             seen_roles.append(role)
-            ret[role] = self.parse_all(data, role)
+            ret[role] = self.parse_all(data, build_data, role)
         return ret
 
     def main(self):
