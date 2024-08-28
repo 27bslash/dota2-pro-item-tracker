@@ -1,12 +1,12 @@
 import json
 from os.path import exists
 from pprint import pprint
+import re
 
 import requests
 from bs4 import BeautifulSoup
 
 from helper_funcs.helper_imports import db, switcher
-from helper_funcs.database.collection import db, hero_list
 
 
 def update_hero_list():
@@ -24,7 +24,7 @@ def update_hero_list():
 
 
 def update_minimap_icon(hero_list=[]):
-    text = requests.get("https://dota2.fandom.com/wiki/Minimap").text
+    text = requests.get("https://liquipedia.net/dota2/Minimap").text
     curr_list = []
     for hero_name in hero_list:
         curr = switcher(hero_name["name"])
@@ -33,17 +33,28 @@ def update_minimap_icon(hero_list=[]):
     soup = BeautifulSoup(text, "html.parser")
     second_row = soup.find_all("tr")[1]
     # print(first_row)
-    sprite_sheet = second_row.find("p")
     # print(sprite_sheet)
     fin = []
-    for i, img in enumerate(sprite_sheet.find_all("img")):
+    for i, img in enumerate(second_row.find_all("img")):
         d = {}
         # print(img['data-src'])
-        d["link"] = img["data-src"]
+        d["link"] = img["src"]
+        hero_img_title = re.sub(r" ", "_", img.parent['title']).lower()
         # print(d)
         fin.append(d)
-        if not exists(f"static/images/minimap_icons/{switcher(curr_list[i])}.jpg"):
+        frontend_image_path = (
+            "D:\\projects\\python\\pro-item-frontend\\src\\images\\minimap_icons"
+        )
+        if not exists(f"static/images/minimap_icons/{switcher(hero_img_title)}.jpg"):
             with open(
-                f"static/images/minimap_icons/{switcher(curr_list[i])}.jpg", "wb"
+                f"static/images/minimap_icons/{switcher(hero_img_title)}.jpg", "wb"
             ) as o:
-                o.write(requests.get(f"{img['data-src']}").content)
+                o.write(requests.get(f"https://liquipedia.net{img['src']}").content)
+                pass
+
+
+if __name__ == "__main__":
+    from helper_funcs.database.collection import hero_list
+
+    update_minimap_icon(hero_list=hero_list)
+    pass

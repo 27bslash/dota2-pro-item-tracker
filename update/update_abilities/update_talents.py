@@ -1,6 +1,7 @@
 import re
 import traceback
 
+from pymongo import UpdateOne
 import requests
 from update.update_items import create_item_description
 
@@ -69,6 +70,7 @@ def talents_from_stratz(_id: int) -> str | None:
 
 
 def update_talents():
+    talent_updates = []
     for hero in hero_list:
         print(hero["name"])
         # db_methods.insert_talent_order(hero['id'])
@@ -89,7 +91,8 @@ def update_talents():
         #     upsert=True,
         # )
         # print(talents)
-        extract_special_values(talents, hero["name"])
+        talent_updates.append(extract_special_values(talents, hero["name"]))
+    db['hero_stats'].bulk_write(talent_updates)
 
 
 def extract_special_values(talents, hero):
@@ -105,9 +108,8 @@ def extract_special_values(talents, hero):
             print(
                 "Exception: ", hero, k, talents[k]["name_loc"], traceback.format_exc()
             )
-    db["hero_stats"].find_one_and_update(
-        {"hero": hero}, {"$set": {"talents": talents}}, upsert=True
-    )
+    return UpdateOne({"hero": hero}, {"$set": {"talents": talents}}, upsert=True)
+    
 
 
 def val(text, special_values):
