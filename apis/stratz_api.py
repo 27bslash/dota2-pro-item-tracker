@@ -42,7 +42,7 @@ from logs.logger_config import configure_logging
 from dotenv import load_dotenv
 
 load_dotenv()
-api_key = os.environ.get('STRATZ_API_KEY')
+api_key = os.environ.get("STRATZ_API_KEY")
 throttler = Throttler(rate_limit=15, period=1)
 
 configure_logging()
@@ -367,8 +367,10 @@ class Stratz_api(Api_request):
                     async with session.post(
                         url=url, headers=headers, json=requst_data
                     ) as response:
-                        resp = await response.json()
-
+                        try:
+                            resp = await response.json()
+                        except Exception:
+                            print(m_id, hero_name, traceback.format_exc())
                         if response.status == 404:
                             # game not over yet
                             pass
@@ -399,8 +401,8 @@ class Stratz_api(Api_request):
                             if not resp["data"]["match"]:
                                 # match not over yet
                                 return
-                        except Exception as e:
-                            print(resp['message'])
+                        except Exception:
+                            print(f"not match data{resp['message']}")
                         with open("t.json", "w") as f:
                             json.dump(resp["data"]["match"], f, indent=4)
                         match_id = int(resp["data"]["match"]["id"])
@@ -419,7 +421,7 @@ class Stratz_api(Api_request):
                         if parsed_replay and parsed_replay != "no patch":
                             for dict in parsed_replay[0]:
                                 db["heroes"].find_one_and_update(
-                                    {'id': dict['id'], 'hero': dict['hero']},
+                                    {"id": dict["id"], "hero": dict["hero"]},
                                     {"$set": dict},
                                     upsert=True,
                                 )
@@ -431,6 +433,7 @@ class Stratz_api(Api_request):
                                 # Handle duplicate key errors or other write errors
                                 pass
                             db["dead_games"].delete_many({"id": m_id})
+                            db["parse"].delete_many({"id": m_id})
                             print(f"{hero_name} should reach here")
 
         except Exception as e:
@@ -451,9 +454,9 @@ class Stratz_api(Api_request):
             for p in resp["players"]
             if not p["isRadiant"]
         ]
-        for p_o in current_patch['patches'][::-1]:
-            if resp['startDateTime'] >= p_o['patch_timestamp']:
-                self.patch = p_o['patch_number']
+        for p_o in current_patch["patches"][::-1]:
+            if resp["startDateTime"] >= p_o["patch_timestamp"]:
+                self.patch = p_o["patch_number"]
                 break
         unparsed_match_result = {
             "unix_time": resp["startDateTime"],
@@ -466,8 +469,8 @@ class Stratz_api(Api_request):
         non_pro_games = []
         parsed_matches = []
         match_data = None
-        usu = list(db['urls'].find({"id": resp['id']}))
-        hero_ids = [self.hero_methods.get_id(doc['hero']) for doc in usu]
+        usu = list(db["urls"].find({"id": resp["id"]}))
+        hero_ids = [self.hero_methods.get_id(doc["hero"]) for doc in usu]
         added_to_parse = False
         for i in range(10):
             p = resp["players"][i]
@@ -500,7 +503,7 @@ class Stratz_api(Api_request):
                 # return db['parse'].find_one_and_update(
                 #     {'id': m_id}, {"$set": {'id': m_id}}, upsert=True)
             purchase_log = self.fix_stratz_purchase_log(p)
-            p['stats']['itemPurchases'] = purchase_log
+            p["stats"]["itemPurchases"] = purchase_log
             role = p["role"]
             lane = p["lane"]
             position = None
@@ -591,7 +594,7 @@ class Stratz_api(Api_request):
             "backpack": bp_items,
             "additional_units": additional_units,
             "aghanims_shard": aghanims_shard,
-            "parsed": 'stratz',
+            "parsed": "stratz",
             "items": purchase_log,
             # laning stats
             "starting_items": starting_items,
@@ -680,7 +683,7 @@ class Stratz_api(Api_request):
             "backpack": bp_items,
             "item_neutral": self.item_methods.get_item_name(player["neutral0Id"]),
             "aghanims_shard": aghanims_shard,
-            "variant": player['variant'],
+            "variant": player["variant"],
             "abilities": detailed_ability_info(
                 abilities, kwargs["hero_id"], key="abilityId"
             ),

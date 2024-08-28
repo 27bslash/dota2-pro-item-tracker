@@ -137,7 +137,7 @@ class Api_request:
                         # )
                         ret["heroes"] = [unparsed_match_result]
 
-                    db["dead_games"].delete_many({"id": m_id})
+                    db["dead_games"].delete_many({"id": m_id})                    
                     if parsed_replay[0]:
                         print(f"{hero_name} should reach here.")
                     if int(response.headers["X-Rate-Limit-Remaining-Day"]) < 900:

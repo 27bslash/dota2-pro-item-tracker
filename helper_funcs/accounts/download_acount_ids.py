@@ -13,6 +13,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.chrome.options import Options
+from seleniumbase import SB
 
 headers = {
     "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36"
@@ -26,45 +28,47 @@ def update_pro_accounts(testing=False):
     #     data = data['players']
     if testing:
         with open("helper_funcs/accounts/new_accs.json", "r") as f:
-            data = json.load(f)['players']
+            data = json.load(f)["players"]
     else:
         data = get_player_url_list()
-    if data == None:
+    if not data:
         print("pro tracker blocked")
         return
     url = "http://www.dota2protracker.com/player/"
     for doc in data:
         d = {}
         try:
-            if type(doc) == dict:
+            if type(doc) is dict:
                 d["name"] = doc["name"]
                 d["account_id"] = doc["account_id"]
             if db["account_ids"].find_one({"name": doc["name"]}):
                 continue
             if "account_id" not in d:
-                if db["account_ids"].find_one({"name": doc}):
+                if db["account_ids"].find_one({"name": doc['name']}):
                     continue
-                req = requests.get(f"{url}{doc}", headers=headers)
-                text = req.text
-                soup = BeautifulSoup(text, "html.parser")
-                link = soup.find("a", href=re.compile(r"stratz.com/player/"))
-                if link is None:
-                    print(doc, "not found")
-                    continue
-                acc_id = re.search(r"\d+", link["href"])
-                if acc_id:
-                    acc_id = acc_id.group(0)
+
+                # req = requests.get(f"{url}{doc}", headers=headers)
+                # text = req.text
+                # soup = BeautifulSoup(text, "html.parser")
+                # link = soup.find("a", href=re.compile(r"stratz.com/player/"))
+                # if link is None:
+                #     print(doc, "not found")
+                #     continue
+                # acc_id = re.search(r"\d+", link["href"])
+                # if acc_id:
+                #     acc_id = acc_id.group(0)
+                
                 d["name"] = doc
-                d["account_id"] = acc_id
-            print("out db", d['name'], d['account_id'])    
+                d["account_id"] = str(doc['account_id'])
+            print("out db", d["name"], d["account_id"])
             time.sleep(1)
             output.append(d)
             db["account_ids"].find_one_and_update(
                 {"account_id": d["account_id"]},
-                {"$set": {"name": d["name"], "account_id": d["account_id"]}},
+                {"$set": d},
                 upsert=True,
             )
-        except Exception as e:
+        except Exception:
             print(traceback.format_exc(), doc)
     print(output)
 
@@ -87,38 +91,37 @@ def get_player_url_list():
 
 
 def get_player_url() -> str | None:
-    capabilities = DesiredCapabilities.CHROME.copy()
-    capabilities["goog:loggingPrefs"] = {"performance": "ALL"}
-    chrome = webdriver.Chrome(
-        ChromeDriverManager().install(), desired_capabilities=capabilities
-    )
+    with SB() as sb:
+        options = Options()
+        options.set_capability("goog:loggingPrefs", {"performance": "ALL"})
+        chrome = webdriver.Chrome(options=options)
 
-    # chrome.get('https://dota2itemtracker.vercel.app/')
-    chrome.get("http://www.dota2protracker.com")
-    button_available = WebDriverWait(chrome, 40).until(
-        EC.presence_of_element_located((By.CLASS_NAME, "fc-cta-consent"))
-    )
-    if button_available:
+        # chrome.get('https://dota2itemtracker.vercel.app/')
+        chrome.get("http://www.dota2protracker.com")
+        button_available = WebDriverWait(chrome, 40).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "fc-cta-consent"))
+        )
+        if button_available:
+            time.sleep(3)
+            try:
+                button_available.click()
+            except NoSuchElementException as e:
+                print("no cookie consent", e)
         time.sleep(3)
-        try:
-            button_available.click()
-        except NoSuchElementException as e:
-            print("no cookie consent", e)
-    time.sleep(3)
-    logs = chrome.get_log("performance")
-    for log in logs:
-        log = json.loads(log["message"])
-        if log["message"]["method"] != "Network.responseReceived":
-            continue
-        if log["message"]["params"]["response"]["mimeType"] != "application/json":
-            continue
-        url = log["message"]["params"]["response"]["url"]
-        print(url)
-        if "search" in url:
-            chrome.quit()
-            return url
-    chrome.quit()
-
+        logs = chrome.get_log("performance")
+        for log in logs:
+            log = json.loads(log["message"])
+            if log["message"]["method"] != "Network.responseReceived":
+                continue
+            if log["message"]["params"]["response"]["mimeType"] != "application/json":
+                continue
+            url = log["message"]["params"]["response"]["url"]
+            print(url)
+            if "search" in url:
+                chrome.quit()
+                return url
+        chrome.quit()
+        return None
     # networkScript = """
     #     let performance = window.performance || window.webkitPerformance || {};
     #     let network = performance.getEntries() || {};
@@ -158,4 +161,4 @@ def get_player_url() -> str | None:
 #     return re.sub(regex, '', string)
 
 if __name__ == "__main__":
-    update_pro_accounts(True)
+    update_pro_accounts(False)
