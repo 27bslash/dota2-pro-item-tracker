@@ -9,8 +9,7 @@ from helper_funcs.database.collection import hero_list as backup_hero_list
 
 
 class Db_insert:
-    def __init__(self, hero_list: list = [], update_trends: bool = False):
-        self.update_trends = update_trends
+    def __init__(self, hero_list: list = []):
         self.hero_list = hero_list if hero_list else backup_hero_list
         self.updated_version = False
         pass
@@ -233,11 +232,22 @@ class Db_insert:
     def insert_hero_pickstats(self, collection: str, patch: str, hero_name):
         role_dict = self.total_picks(patch, hero_name)
         role_dict = self.insert_roles_pick_stats(hero_name, role_dict, patch)
-        if self.update_trends:
+        hero_pick_data = db[collection].find_one({"hero": hero_name})
+        if (
+            hero_pick_data
+            and role_dict["entered_time"] - hero_pick_data['trends'][0]["entered_time"]
+            >= 86400
+        ):
             trends = self.insert_pickrate_trends(hero_name, role_dict)
-            role_dict["trends"] = trends
-        else:
-            role_dict["trends"] = db[collection].find_one({"hero": hero_name})["trends"]
+        elif (
+            hero_pick_data
+            and role_dict["entered_time"] - hero_pick_data['trends'][0]["entered_time"]
+            <= 86400
+        ):
+            trends = hero_pick_data["trends"]
+        elif not hero_pick_data:
+            trends = role_dict
+        role_dict["trends"] = trends
         old_role_dict = db[collection].find_one({"hero": hero_name}, {"_id": 0})
         old_hash = str(old_role_dict)
         new_hash = str(role_dict)
@@ -249,7 +259,7 @@ class Db_insert:
                 result = db[collection].find_one_and_update(
                     {"version": current_version},
                     {"$set": {"version": new_version}},
-                    return_document=True  # Optional, to get the updated document
+                    return_document=True,  # Optional, to get the updated document
                 )
                 print(f"updated version to: {new_version}, {result}")
             else:
@@ -293,6 +303,7 @@ class Db_insert:
             "wins": total_wins,
             "winrate": total_winrate,
             "bans": total_bans,
+            "entered_time": time.time(),
         }
 
         return role_dict
@@ -426,6 +437,20 @@ class Db_insert:
                 }
             },
         ]
+        # updated_doc = db["test_hero_picks"].find_one_and_update(
+        #     {"hero": hero},  # Match the document where "hero" is the specified hero
+        #     {
+        #         "$push": {
+        #             "trends": {
+        #                 "$each": [role_dict],
+        #                 "$position": 0,
+        #                 "$slice": threshold_length,
+        #             }
+        #         }
+        #     },
+        #     upsert=True,  # Create the document if it doesn't exist
+        #     return_document=ReturnDocument.AFTER,  # Return the updated document
+        # )
 
         result = list(db["test_hero_picks"].aggregate(pipeline))
         return result[0]["trends"]
@@ -449,16 +474,14 @@ class Db_insert:
 if __name__ == "__main__":
     # Db_insert.insert_talent_order('self', 1)
     strt = time.perf_counter()
+    # Db_insert(hero_list=backup_hero_list).insert_hero_pickstats(
+    #     'test_hero_picks', '7.37', 'antimage'
+    # )
     # Db_insert().detailed("test_hero_picks")
     # Db_insert().insert_roles_pick_stats("viper", {}, "7.35b")
 
-    # Db_insert().insert_all()
-    # Db_insert(update_trends=False).detailed(collection="test_hero_picks")
-    db['test_hero_picks'].find_one_and_update({'version': 7} , {"$set": {'version': 8}})
-    version = db["test_hero_picks"].find({"version": {"$exists": True}})
-    for v in version:
-        print(v)
-    # print(picks ,patch_wins,losses)
+    Db_insert().insert_all()
+    # Db_insert(update_trends=False).detailed(collection="test_hero_picks")    # print(picks ,patch_wins,losses)
     # db["test_hero_picks"].update_many({}, {"$set": {"trends": []}})
     # for _ in range(0, 7):
     #     Db_insert(update_trends=True).detailed("hero", "test_hero_picks")
