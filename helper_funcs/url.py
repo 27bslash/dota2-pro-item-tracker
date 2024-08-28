@@ -48,17 +48,20 @@ def parse_request():
     for i, match in enumerate(data):
         if "stratz" in match:
             continue
-        time.sleep(1)
         print(match["id"], f"{i}/{len(data)}")
-        url = f"https://api.opendota.com/api/request/{match['id']}"
-        req = requests.post(url)
-        if int(req.headers["X-Rate-Limit-Remaining-Minute"]) <= 0:
-            time.sleep(60)
-        if int(req.headers["X-Rate-Limit-Remaining-Day"]) <= 900:
-            parse.delete_many({})
+        try:
+            start = time.perf_counter()
+            url = f"https://api.opendota.com/api/request/{match['id']}"
+            req = requests.post(url)
+            print(time.perf_counter() - start)
+            req.raise_for_status()
+            time.sleep(1)
+        except Exception:
+            break
+        if i >= 60:
             break
         parse.delete_many({"id": match["id"]})
-    parse.delete_many({})
+
 
 
 if __name__ == "__main__":
