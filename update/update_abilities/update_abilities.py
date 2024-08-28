@@ -2,6 +2,7 @@ import json
 import re
 import traceback
 
+from pymongo import UpdateOne
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -39,17 +40,17 @@ def dl_dota2_abilities(manual=False, datamined_abilities=None):
     # driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
     if not hero_list:
         return
+    hero_stat_updates = []
     for hero in hero_list:
         print(hero["name"])
-        # if hero['name'] != 'chaos_knight':
+        # if hero['name'] != 'medusa':
         #     continue
         req = requests.get(f"{datafeed}{hero['id']}")
         ability_json = json.loads(req.text)["result"]["data"]["heroes"][0]
         for facet in ability_json['facet_abilities']:
             try:
                 ability_json['abilities'].append(facet['abilities'][0])
-            except Exception as e:
-                print(e)
+            except Exception:
                 pass
         hero_abilities = {}
         for ability in ability_json['abilities']:
@@ -59,7 +60,7 @@ def dl_dota2_abilities(manual=False, datamined_abilities=None):
                     hint, datamined_abilities, ability["name"]
                 )
                 ability["desc_loc"] = re.sub(r"-- ", "", desc[0])
-            except:
+            except Exception:
                 pass
             if manual:
                 get_ability_img(ability["name"], hero["name"])
@@ -101,10 +102,11 @@ def dl_dota2_abilities(manual=False, datamined_abilities=None):
         ability_json["abilities"] = hero_abilities
         ability_json["talents"] = hero_talents
         ability_json['facets'] = hero_facets
-        db["hero_stats"].find_one_and_update(
-            {"hero": hero["name"]}, {"$set": ability_json}, upsert=True
+        hero_stat_updates.append(
+            UpdateOne({"hero": hero["name"]}, {"$set": ability_json}, upsert=True)
         )
 
+    db['hero_stats'].bulk_write(hero_stat_updates)
     # driver.quit()
     # json.dump(hero_abilities, o, indent=4)
 
@@ -149,7 +151,7 @@ def update_short_talents(talents):
 
 
 if __name__ == "__main__":
-    with open('update/test_files/7.36a_abilities.json', 'r') as f:
+    with open('update/test_files/7.37_abilities.json', 'r') as f:
         data = json.load(f)
         dl_dota2_abilities(manual=False, datamined_abilities=data)
         update_talents()
