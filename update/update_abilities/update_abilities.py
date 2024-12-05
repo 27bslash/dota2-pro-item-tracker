@@ -42,7 +42,7 @@ def dl_dota2_abilities(manual=False, datamined_abilities=None):
         return
     hero_stat_updates = []
     for hero in hero_list:
-        print(hero["name"])
+        print("dl dota abilities", hero["name"])
         # if hero['name'] != 'medusa':
         #     continue
         req = requests.get(f"{datafeed}{hero['id']}")
@@ -65,7 +65,7 @@ def dl_dota2_abilities(manual=False, datamined_abilities=None):
             if manual:
                 get_ability_img(ability["name"], hero["name"])
             hero_abilities[str(ability["id"])] = ability
-        hero_talents = parse_talents(datamined_abilities, ability_json)
+        hero_talents = parse_talents(datamined_abilities, ability_json['talents'])
         hero_facets = update_facets(ability_json)
 
         # url = dota_link(hero["name"])
@@ -105,8 +105,10 @@ def dl_dota2_abilities(manual=False, datamined_abilities=None):
         hero_stat_updates.append(
             UpdateOne({"hero": hero["name"]}, {"$set": ability_json}, upsert=True)
         )
+    if hero_stat_updates:
+        print("hero ability updates length:", len(hero_stat_updates))
 
-    db['hero_stats'].bulk_write(hero_stat_updates)
+        db['hero_stats'].bulk_write(hero_stat_updates)
     # driver.quit()
     # json.dump(hero_abilities, o, indent=4)
 
@@ -132,7 +134,6 @@ def get_ability_img(ability_name, hero_name):
                     f"https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/abilities/{ability_name}.png"
                 ).content
             )
-            print(ability_name)
 
 
 def update_short_talents(talents):
@@ -151,7 +152,7 @@ def update_short_talents(talents):
 
 
 if __name__ == "__main__":
-    with open('update/test_files/7.37_abilities.json', 'r') as f:
+    with open('update/test_files/7.37d_abilities.json', 'r') as f:
         data = json.load(f)
         dl_dota2_abilities(manual=False, datamined_abilities=data)
         update_talents()

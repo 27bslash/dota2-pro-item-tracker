@@ -7,7 +7,10 @@ from helper_funcs.accounts.download_acount_ids import update_pro_accounts
 from helper_funcs.helper_imports import *
 from update.convert_from_d2vpk import generate_opendota_items
 from update.update_abilities.update_abilities import dl_dota2_abilities, update_talents
-from update.update_abilities.update_facets import add_deprecated_facets, update_facet_colours
+from update.update_abilities.update_facets import (
+    add_deprecated_facets,
+    update_facet_colours,
+)
 from update.update_heroes import update_hero_list, update_minimap_icon
 from update.update_items import update_item_ids, update_json_data
 
@@ -28,14 +31,20 @@ def update_app(delete_urls=False, force_update=False):
 
     print("updating hero list")
     hero_list = update_hero_list()
+    print('updating minimap icons')
+    update_minimap_icon(hero_list=hero_list['heroes'])
+    if len(hero_list['heroes']) != len(old_hero_list):
+        print('new hero found updating all')
+    else:
+        print('no new hero')
     print(patch, current_patch["patches"][-1]["patch_number"])
+    all_items, datamined_abilities, facets_json = update_item_json(patch)
     if (
         new_patch["patch_number"] != current_patch["patches"][-1]["patch_number"]
         or len(hero_list['heroes']) != len(old_hero_list)
         or force_update
     ):
         # delete all urls older than patch ignore sub patches
-        all_items, datamined_abilities, facets_json = update_item_json(patch)
 
         with open(
             f"D:\\projects\\python\\pro-item-builds\\update\\test_files\\{patch}_abilities.json",
@@ -55,19 +64,14 @@ def update_app(delete_urls=False, force_update=False):
         if not re.search(r"[a-z]", new_patch["patch_number"]):
             print("updating facet colours....")
             update_facet_colours(new_patch['patch_number'])
-        add_deprecated_facets(hero_list, facets_json)
-        print("updating minimap icons...")
-        if len(old_hero_list) < len(hero_list):
-            update_minimap_icon(hero_list=hero_list)
+        print('add deprecated facets')
+        add_deprecated_facets(hero_list['heroes'], facets_json)
         print("updating account ids")
         update_pro_accounts()
         req["patch"] = patch
         req["patch_timestamp"] = patch_time
         db["current_patch"].find_one_and_update({}, {"$set": req}, upsert=True)
     print("fini")
-
-
-
 
 
 def update_item_json(patch: str):
@@ -95,6 +99,8 @@ if __name__ == "__main__":
     strt = time.perf_counter()
     # add_deprecated_facets()
     update_app(force_update=True)
+    # all_items, datamined_abilities, facets_json = update_item_json("7.37d")
+    # add_deprecated_facets(hero_list, facets_json=facets_json)
     # with open('update/test_files/726_item.txt','r') as f:
     #     data = f.read()
     #     json.loads(data)

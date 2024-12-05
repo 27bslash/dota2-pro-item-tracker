@@ -43,11 +43,11 @@ def update_minimap_icon(hero_list=[]):
         # print(d)
         fin.append(d)
         frontend_image_path = (
-            "D:\\projects\\python\\pro-item-frontend\\src\\images\\minimap_icons"
+            "D:\\projects\\python\\pro-item-frontend\\public\\images\\minimap_icons"
         )
-        if not exists(f"static/images/minimap_icons/{switcher(hero_img_title)}.jpg"):
+        if not exists(f"{frontend_image_path}/{switcher(hero_img_title)}.jpg"):
             with open(
-                f"static/images/minimap_icons/{switcher(hero_img_title)}.jpg", "wb"
+                f"{frontend_image_path}/{switcher(hero_img_title)}.jpg", "wb"
             ) as o:
                 o.write(requests.get(f"https://liquipedia.net{img['src']}").content)
                 pass
