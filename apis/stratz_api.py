@@ -358,6 +358,7 @@ class Stratz_api(Api_request):
         headers = {
             "content-type": "application/json",
             "Authorization": f"Bearer {api_key}",
+            'User-Agent': 'STRATZ_API',
         }
         url = "https://api.stratz.com/graphql"
         # 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiMzIyMzFkMDgtNzk0NS00YzNhLTg5ZGItMzc0NzFiMTg4NGYxIiwiU3RlYW1JZCI6Ijg5NDU3NTIyIiwibmJmIjoxNzAxNjI4NTYwLCJleHAiOjE3MzMxNjQ1NjAsImlhdCI6MTcwMTYyODU2MCwiaXNzIjoiaHR0cHM6Ly9hcGkuc3RyYXR6LmNvbSJ9.s4PxRHlfbBXFYqkPQRHVaSKfgYzXwqL6nc7aJGIArhk'
@@ -402,7 +403,7 @@ class Stratz_api(Api_request):
                                 # match not over yet
                                 return
                         except Exception:
-                            print(f"not match data{resp['message']}")
+                            print(f"no match data{resp['message']}")
                         with open("t.json", "w") as f:
                             json.dump(resp["data"]["match"], f, indent=4)
                         match_id = int(resp["data"]["match"]["id"])
@@ -412,7 +413,8 @@ class Stratz_api(Api_request):
                             response.headers["X-RateLimit-Remaining-Day"],
                         )
                         if resp["data"]["match"]["durationSeconds"] < 600:
-                            db["dead_games"].insert_one({"id": match_id, "count": 20})
+                            print(match_id, 'duration below 10 minutes')
+                            db["dead_games"].insert_one({"id": match_id, "count": 200})
                             return
 
                         parsed_replay = self.parse_replay(
@@ -493,13 +495,12 @@ class Stratz_api(Api_request):
                     {"$set": unparsed_match_result},
                     upsert=True,
                 )
-                if not added_to_parse:
-                    print("add to parse: ", m_id)
-                    if not added_to_parse:
-                        self.add_to_dead_games(m_id, stratz=True)
-                    added_to_parse = True
-            if not purchase_log:
                 continue
+                # if not added_to_parse:
+                #     print("add to parse: ", m_id)
+                #     if not added_to_parse:
+                #         self.add_to_dead_games(m_id, stratz=True)
+                #     added_to_parse = True
                 # return db['parse'].find_one_and_update(
                 #     {'id': m_id}, {"$set": {'id': m_id}}, upsert=True)
             purchase_log = self.fix_stratz_purchase_log(p)
