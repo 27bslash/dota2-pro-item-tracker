@@ -47,20 +47,33 @@ def update_facets(ability_json):
     return hero_facets
 
 
-def add_deprecated_facets(hero_list, facets_json):
+def add_deprecated_facets(hero_list: list[dict], facets_json):
+    # db['hero_stats'].update_many(
+    #     {},  # Empty filter to apply to all documents
+    #     {
+    #         '$pull': {
+    #             'facets': {  # Replace with the field name of your array
+    #                 'Deprecated': True,
+    #             }
+    #         }
+    #     },
+    # )
     updates = []
     for hero_idx, hero in enumerate(hero_list):
         for j, facet_key in enumerate(
             facets_json['all_hero_facets'][hero_idx]['Facets']
         ):
-            if (
-                "Deprecated"
-                in facets_json['all_hero_facets'][hero_idx]['Facets'][facet_key]
-            ):
+            pot_facet = facets_json['all_hero_facets'][hero_idx]['Facets'][facet_key]
+            if "Deprecated" in pot_facet:
                 individual_stats = [x for x in hero_stats if x['hero'] == hero['name']][
                     0
                 ]
+                print('deprecated facets', hero['name'])
+                # {'Icon': 'nuke', 'Color': 'Gray', 'GradientID': '3', 'Deprecated': 'true', 'Abilities': {'Ability1': {...}}}
                 facets = individual_stats['facets']
+                string_facets = [str(x) for x in facets]
+                if str(pot_facet) in string_facets:
+                    continue
                 facets.insert(
                     j, facets_json['all_hero_facets'][hero_idx]['Facets'][facet_key]
                 )
@@ -68,7 +81,9 @@ def add_deprecated_facets(hero_list, facets_json):
                     {'hero': hero['name']}, {'$set': {'facets': facets}}
                 )
                 updates.append(update_op)
-    db['hero_stats'].bulk_write(updates)
+    if updates:
+        print("deprecated facets updated: ", len(updates))
+        db['hero_stats'].bulk_write(updates)
     return updates
 
 
