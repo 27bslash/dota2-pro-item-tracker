@@ -246,7 +246,7 @@ class Db_insert:
         ):
             trends = hero_pick_data["trends"]
         elif not hero_pick_data:
-            trends = role_dict
+            trends = [role_dict.copy()]
         role_dict["trends"] = trends
         old_role_dict = db[collection].find_one({"hero": hero_name}, {"_id": 0})
         old_hash = str(old_role_dict)
@@ -479,8 +479,10 @@ if __name__ == "__main__":
     # )
     # Db_insert().detailed("test_hero_picks")
     # Db_insert().insert_roles_pick_stats("viper", {}, "7.35b")
-
-    Db_insert().insert_all()
+    Db_insert().insert_hero_pickstats(
+        collection='test_hero_picks', patch='7.37d', hero_name='kez'
+    )
+    # Db_insert().insert_all()
     # Db_insert(update_trends=False).detailed(collection="test_hero_picks")    # print(picks ,patch_wins,losses)
     # db["test_hero_picks"].update_many({}, {"$set": {"trends": []}})
     # for _ in range(0, 7):
