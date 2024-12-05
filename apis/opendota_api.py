@@ -137,7 +137,7 @@ class Api_request:
                         # )
                         ret["heroes"] = [unparsed_match_result]
 
-                    db["dead_games"].delete_many({"id": m_id})                    
+                    db["dead_games"].delete_many({"id": m_id})
                     if parsed_replay[0]:
                         print(f"{hero_name} should reach here.")
                     if int(response.headers["X-Rate-Limit-Remaining-Day"]) < 900:
@@ -174,7 +174,6 @@ class Api_request:
                 # ret["parse"] = [{"id": m_id}]
                 # check if one of the players matches search
                 if not purchase_log:
-                    print("add to parse: ", m_id, hero_id)
                     db["heroes"].find_one_and_update(
                         {
                             "id": m_id,
@@ -184,14 +183,14 @@ class Api_request:
                         upsert=True,
                     )
                     if not added_to_parse:
+                        print("add to parse: ", m_id, hero_id)
                         self.add_to_dead_games(m_id)
                         db["parse"].find_one_and_update(
                             {"id": m_id}, {"$set": {"id": m_id}}, upsert=True
                         )
                         added_to_parse = True
                     continue
-            if not purchase_log:
-                continue
+      
             roles_arr = [
                 (
                     p["lane"],
@@ -561,6 +560,8 @@ class Api_request:
             db["parse"].find_one_and_update(
                 {"id": m_id}, {"$set": {"id": m_id}}, upsert=True
             )
+        if dead_game:
+            print(m_id, dead_game)
 
     def calculate_level_at_ten(self, exp):
         level_table = [
