@@ -48,7 +48,7 @@ def detailed_ability_info(ability_list, hero_id, key=None):
     talents = data["talents"]
     hero_abilities = {**abilities, **talents}
     for i, _id in enumerate(ability_list):
-        _id = str(_id)
+        _id = convert_for_kez(str(_id))
         if int(_id) == 730:
             # print(i,gap)
             st_count += 1
@@ -115,6 +115,25 @@ def extract_special_values(talent):
         else:
             val = lst["values_int"][0]
     return talent["name_loc"].replace(regex, str(val))
+
+
+def convert_for_kez(key: str):
+    # d = {
+    #     "kez_falcon_rush": "kez_echo_slash",
+    #     "kez_talon_toss": "kez_grappling_claw",
+    #     "kex_shodo_sai": "kez_kazurai_katana",
+    #     "kez_ravens_veil": "kez_raptor_dance",
+    # }
+    d = {
+        "1502": "1498",
+        "1503": "1499",
+        "1504": "1500",
+        "1506": "1501",
+    }
+    try:
+        return d[key]
+    except Exception:
+        return key
 
 
 ab_arr = [
