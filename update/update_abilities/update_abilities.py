@@ -17,7 +17,11 @@ from helper_funcs.helper_imports import db, switcher
 from helper_funcs.database.collection import hero_list
 
 from update.update_abilities.update_facets import update_facets
-from update.update_abilities.update_talents import parse_talents, update_talents
+from update.update_abilities.update_talents import (
+    parse_talents,
+    update_hero_talents,
+    update_talents,
+)
 from update.update_items import create_item_description
 from dotenv import load_dotenv
 import os
@@ -26,7 +30,7 @@ load_dotenv()
 api_key = os.environ.get('STRATZ_API_KEY')
 
 
-def dl_dota2_abilities(manual=False, datamined_abilities=None):
+def update_hero_stats(manual=False, facets_json=None, datamined_abilities=None):
     if manual:
         make_dir()
     datafeed = "https://www.dota2.com/datafeed/herodata?language=english&hero_id="
@@ -66,7 +70,9 @@ def dl_dota2_abilities(manual=False, datamined_abilities=None):
                 get_ability_img(ability["name"], hero["name"])
             hero_abilities[str(ability["id"])] = ability
         hero_talents = parse_talents(datamined_abilities, ability_json['talents'])
-        hero_facets = update_facets(ability_json)
+        hero_facets = update_facets(
+            facets_json=facets_json, ability_json=ability_json, hero=hero
+        )
 
         # url = dota_link(hero["name"])
         # driver.get(url)
@@ -100,10 +106,14 @@ def dl_dota2_abilities(manual=False, datamined_abilities=None):
         #         # print(hero['name'])
         #         break
         ability_json["abilities"] = hero_abilities
-        ability_json["talents"] = hero_talents
+        ability_json["talents"] = update_hero_talents(hero_talents)
         ability_json['facets'] = hero_facets
         hero_stat_updates.append(
-            UpdateOne({"hero": hero["name"]}, {"$set": ability_json}, upsert=True)
+            UpdateOne(
+                {"hero": hero["name"]},
+                {"$set": ability_json, '$inc': {'version': 1}},
+                upsert=True,
+            )
         )
     if hero_stat_updates:
         print("hero ability updates length:", len(hero_stat_updates))
@@ -152,8 +162,9 @@ def update_short_talents(talents):
 
 
 if __name__ == "__main__":
-    with open('update/test_files/7.37d_abilities.json', 'r') as f:
+    with open('update/test_files/7.38_abilities.json', 'r') as f:
         data = json.load(f)
-        dl_dota2_abilities(manual=False, datamined_abilities=data)
+        update_hero_stats(manual=False, datamined_abilities=data)
         update_talents()
+
         # talents_from_stratz(6607)

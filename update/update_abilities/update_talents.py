@@ -72,7 +72,14 @@ def talents_from_stratz(_id: int) -> str | None:
             return ability["language"]["displayName"]
     return None
 
-
+def update_hero_talents(talents):
+    for i, talent in enumerate(talents):
+        if i % 2 == 0:
+            talents[talent]["slot"] = i + 1
+        else:
+            talents[talent]["slot"] = i - 1
+    # talent slots: 1 0 3 2 5 4 7 6
+    return talents
 def update_talents():
     talent_updates = []
     for hero in hero_list:
@@ -96,7 +103,8 @@ def update_talents():
         # )
         # print(talents)
         talent_updates.append(extract_special_values(talents, hero["name"]))
-    db['hero_stats'].bulk_write(talent_updates)
+    if talent_updates:
+         db['hero_stats'].bulk_write(talent_updates)
 
 
 def extract_special_values(talents, hero):

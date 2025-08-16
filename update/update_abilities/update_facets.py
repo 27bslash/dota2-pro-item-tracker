@@ -9,9 +9,10 @@ from seleniumbase import SB, BaseCase
 from thefuzz import fuzz
 from helper_funcs.database.collection import hero_list, hero_stats, db
 from helper_funcs.switcher import switcher
+from logs.log_config import pro_item_logger as  custom_logger
 
 
-def update_facets(ability_json):
+def update_facets(facets_json, ability_json, hero):
     hero_facets = []
     for i, facet in enumerate(ability_json["facets"]):
         facet_found = False
@@ -44,6 +45,8 @@ def update_facets(ability_json):
                         pass
         if not facet_found:
             hero_facets.append(facet)
+    add_deprecated_facet(hero_facets, facets_json, hero)
+
     return hero_facets
 
 
@@ -58,33 +61,30 @@ def add_deprecated_facets(hero_list: list[dict], facets_json):
     #         }
     #     },
     # )
+    custom_logger.info("updating deprecated facets")
     updates = []
     for hero_idx, hero in enumerate(hero_list):
-        for j, facet_key in enumerate(
-            facets_json['all_hero_facets'][hero_idx]['Facets']
-        ):
-            pot_facet = facets_json['all_hero_facets'][hero_idx]['Facets'][facet_key]
-            if "Deprecated" in pot_facet:
-                individual_stats = [x for x in hero_stats if x['hero'] == hero['name']][
-                    0
-                ]
-                print('deprecated facets', hero['name'])
-                # {'Icon': 'nuke', 'Color': 'Gray', 'GradientID': '3', 'Deprecated': 'true', 'Abilities': {'Ability1': {...}}}
-                facets = individual_stats['facets']
-                string_facets = [str(x) for x in facets]
-                if str(pot_facet) in string_facets:
-                    continue
-                facets.insert(
-                    j, facets_json['all_hero_facets'][hero_idx]['Facets'][facet_key]
-                )
-                update_op = UpdateOne(
-                    {'hero': hero['name']}, {'$set': {'facets': facets}}
-                )
-                updates.append(update_op)
+        add_deprecated_facet(facets_json, hero_idx, hero)
     if updates:
-        print("deprecated facets updated: ", len(updates))
+        custom_logger.info(f"deprecated facets updated:  {len(updates)}")
         db['hero_stats'].bulk_write(updates)
     return updates
+
+
+def add_deprecated_facet(hero_facets, facets_json, hero):
+    hero_idx = [i for i, x in enumerate(hero_list) if x['name'] == hero['name']][0]
+
+    for j, facet_key in enumerate(facets_json['all_hero_facets'][hero_idx]['Facets']):
+        pot_facet = facets_json['all_hero_facets'][hero_idx]['Facets'][facet_key]
+        if "Deprecated" in pot_facet:
+            # {'Icon': 'nuke', 'Color': 'Gray', 'GradientID': '3', 'Deprecated': 'true', 'Abilities': {'Ability1': {...}}}
+            string_facets = [str(x) for x in hero_facets]
+            if str(pot_facet) in string_facets:
+                continue
+            hero_facets.insert(
+                j, facets_json['all_hero_facets'][hero_idx]['Facets'][facet_key]
+            )
+            custom_logger.info(f"deprecated facets, {hero['name']}")
 
 
 def update_facet_colours(patch: str) -> None:
@@ -164,7 +164,8 @@ def update_facet_colours(patch: str) -> None:
         except Exception as e:
             print(e, h_name)
             sb.driver.quit()
-        db["hero_stats"].bulk_write(facet_updates)
+        if facet_updates:
+            db["hero_stats"].bulk_write(facet_updates)
 
 
 def facet_notes(ability_json, i):

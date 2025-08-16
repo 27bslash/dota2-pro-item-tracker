@@ -71,7 +71,7 @@ def create_item_description(desc: list, datamined_items, key: str):
                 idx = lowercase_mods.index(word.lower())
                 try:
                     item_atrib = item[generic_mods[idx]]
-                except:
+                except Exception:
                     item_atrib = item["AbilityValues"][generic_mods[idx]]
                 if item_atrib:
                     string = re.sub(rf"%+{word}%+", item_atrib, string)
@@ -81,11 +81,15 @@ def create_item_description(desc: list, datamined_items, key: str):
                 if word and word.lower() in lowercase_vals:
                     word_idx = lowercase_vals.index(word)
                     d_key = list(item["AbilityValues"])[word_idx]
-                    repl = (
-                        special_values[d_key]
-                        if type(special_values[d_key]) == str
-                        else special_values[d_key]["value"]
-                    )
+                    try:
+                        repl = (
+                            special_values[d_key]
+                            if isinstance(special_values[d_key], str)
+                            else special_values[d_key]["value"]
+                        )
+                    except Exception:
+                        print(special_values, d_key)
+                        continue
                     string = re.sub(rf"%+{word}%?%", repl, string)
         res.append(string)
     return res if res else desc
@@ -170,13 +174,23 @@ def update_item_attributes(datamined_items, all_abilities, key):
             value += "%"
 
         footer = converted
-        symbol = "+" if not re.search(r"-", value) else "-"
-        attrib_dict = {
-            "key": stat,
-            "header": symbol,
-            "value": value,
-            "footer": footer,
-        }
+        if type(value) is str:
+            symbol = "+" if not re.search(r"-", value) else "-"
+            attrib_dict = {
+                "key": stat,
+                "header": symbol,
+                "value": value,
+                "footer": footer,
+            }
+        else:
+            symbol = "+" if not re.search(r"-", str(value['value'])) else "-"
+            attrib_dict = {
+                "key": stat,
+                "header": symbol,
+                "value": str(value),
+                "apply_curio_bonus": value['apply_curio_bonus'],
+                "footer": footer,
+            }
         attributes.append(attrib_dict)
     return attributes
 
