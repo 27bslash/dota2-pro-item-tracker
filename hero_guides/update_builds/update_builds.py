@@ -1,5 +1,4 @@
 import datetime
-import logging
 import time
 import pyautogui
 from hero_guides.update_builds.handle_dota2_install import (
@@ -21,14 +20,13 @@ from hero_guides.update_builds.publish_guides import (
 from hero_guides.update_builds.parser.update_builds_from_site import Update_builds
 import os
 from helper_funcs.net_test import net_test
-
-logging.basicConfig(
-    filename="D:\\projects\\python\\pro-item-builds\\hero_guides\\update_builds\\logging\\log.log",
-    encoding="utf-8",
-    level=logging.DEBUG,
-    format="%(asctime)s %(levelname)s:%(message)s",
-    filemode="w",
+from hero_guides.write_guide import (
+    get_all_guides_from_steam,
+    unpublished_guides,
+    delete_obsolete_guides,
 )
+
+from logs.log_config import update_builds_logger
 
 
 class DotaManager:
@@ -51,7 +49,7 @@ class DotaManager:
         if not check_if_installed():
             time.sleep(60)
             return False
-        logging.info("Dota 2 installed!")
+        update_builds_logger.info("Dota 2 installed!")
         pyautogui.screenshot(f"{self.image_log_path}/still_uninstalled_dota.jpg")
         self.check_validating()
         close_program("steam.exe", 10)
@@ -73,21 +71,24 @@ class DotaManager:
         while True:
             if run_from_exe and not self.dota_playable():
                 continue
-            logging.info("Updating builds...")
+            update_builds_logger.info("Updating builds...")
             Update_builds().main()
-            logging.info("Restoring Steam remote folders and Dota 2 CFG folders...")
-            handle_remote_folder(backup=False)
+            update_builds_logger.info(
+                "Restoring Steam remote folders and Dota 2 CFG folders..."
+            )
+            
+            # handle_remote_folder(backup=False)
             time.sleep(10)
             self.manage_steam()
             publish_guides()
-            logging.info("Published guides")
+            update_builds_logger.info("Published guides")
             return
 
     def manage_steam(self):
-        logging.info("Opening Steam")
+        update_builds_logger.info("Opening Steam")
         open_program(self.steam_path, 10)
-        close_program("steam.exe", 10)
-        open_program(self.steam_path, 60)
+        close_program("steam.exe", 5)
+        open_program(self.steam_path, 10)
 
     def backup_logic(self):
         print("Backing up folders...")
@@ -97,7 +98,7 @@ class DotaManager:
         self.BACKED_UP = True
 
     def install_logic(self):
-        logging.info("Uninstalling Dota 2...")
+        update_builds_logger.info("Uninstalling Dota 2...")
         uninstall_dota2()
         time.sleep(5)
         pyautogui.screenshot(f"{self.image_log_path}/uninstalled_dota.jpg")
@@ -105,7 +106,7 @@ class DotaManager:
             pyautogui.screenshot(f"{self.image_log_path}/still_installed.jpg")
             return False
         install_dota2()
-        logging.info("Installing Dota 2...")
+        update_builds_logger.info("Installing Dota 2...")
         self.handle_installed()
         return True
 
@@ -155,9 +156,24 @@ if __name__ == "__main__":
     current_dir = os.getcwd()
     if current_dir == "D:\\projects\\python\\pro-item-builds":
         print("Running from current dir: ", current_dir)
+        get_all_guides_from_steam(build_subs=False)
+        delete_obsolete_guides()
         DotaManager().handle_installed(run_from_exe=False)
+        unpublished_guides()
         # DotaManager(backup=True, run_on_date=False, handle_install=True).main()
 
         # DotaManager(backup=False, run_on_date=False, handle_install=True).main()
     else:
-        DotaManager().main()
+        while True:
+            if datetime.date.today().weekday() != 0:
+                break
+            elif not DotaManager().is_monday_710():
+                print("Sleeping until Monday 7:10 PM")
+                time.sleep(60)
+                continue
+
+            get_all_guides_from_steam()
+            delete_obsolete_guides()
+            DotaManager().handle_installed(run_from_exe=False)
+            unpublished_guides()
+            break

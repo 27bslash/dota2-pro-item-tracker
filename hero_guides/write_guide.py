@@ -12,7 +12,8 @@ from helper_funcs.switcher import switcher
 from bs4 import BeautifulSoup
 
 from hero_guides.update_builds.remote.handle_remote import cut_folder
-from helper_funcs.database.collection import hero_stats
+from helper_funcs.database.collection import hero_stats, current_patch
+from logs.log_config import update_builds_logger
 
 
 def facet_name(facets: list, hero_data):
@@ -37,6 +38,7 @@ def write_build_to_remote(data, hero, patch, debug=False):
         "Roaming": "Roamer",
         "Midlane": "Core",
     }
+    print("writing to remote", hero)
     hero_data = [doc for doc in hero_stats if doc["hero"] == hero][0]
     for role in data:
         facet_title = facet_name(data[role]["facets"], hero_data)
@@ -86,9 +88,9 @@ def write_build_to_remote(data, hero, patch, debug=False):
             guide_file_path = f"D:\\projects\\python\\pro-item-builds\\hero_guides\\test_builds\\builds/{hero}_{role.lower()}"
         else:
             role_path = f"D:\\projects\\python\\pro-item-builds\\hero_guides\\builds/{hero}_{role}"
-            guide_file_path = f"D:\\projects\\python\\pro-item-builds\\hero_guides\\update_builds\\backup\\remote\\guides/{hero}_{role.lower()}"
+            guide_file_path = f"C:\\Program Files (x86)\\Steam\\userdata\\89457522\\570\\remote\\guides/{hero}_{role.lower()}"
 
-        if os.path.exists(f"{role_path}.json"):
+        try:
             with open(f"{role_path}.json", "r") as f:
                 json_data = json.load(f)
                 timestamp = int(json_data["guidedata"]["TimeUpdated"], 16)
@@ -117,13 +119,17 @@ def write_build_to_remote(data, hero, patch, debug=False):
                     ):
                         print("true equal")
                         continue
-                           
-                guide_template["guidedata"]["TimePublished"] = time_published
+                if time_published:
+                    guide_template["guidedata"]["TimePublished"] = time_published
                 guide_template["guidedata"]["AssociatedWorkshopItemID"] = workshop_id
                 guide_template["guidedata"]["GuideRevision"] = str(
                     int(json_data["guidedata"]["GuideRevision"]) + 1
                 )
-
+        except FileNotFoundError:
+            update_builds_logger.error(
+                f"File not found: {role_path}.json , build file: {guide_file_path}"
+            )
+            return
         with open(f"{role_path}.json", "w") as f:
             json.dump(guide_template, f, indent=4)
         # add builds to backup folder
@@ -138,6 +144,7 @@ def write_build_to_remote(data, hero, patch, debug=False):
                 path=f"C:\\Program Files (x86)\\Steam\\userdata\\89457522\\570\\remote\\guides\\{hero}_{role.lower()}",
                 timestamp=timestamp,
             )
+            print("added to steam folder")
 
 
 def add_to_build_file(guide_template, path, timestamp):
@@ -199,10 +206,23 @@ def get_value_from_build_file(file_path, key):
                         return re.sub(key, "", line).strip()
 
 
+def add_value_to_build_file(file_path, key, value):
+    for file in glob.glob(f"{file_path}_*.build"):
+        with open(file, "r") as build_file:
+            lines = build_file.readlines()
+        with open(file, "w") as build_file:
+            for line in lines:
+                if key in line:
+                    line = f'"{key}" "{value}"\n'
+                build_file.write(line)
+
+
 def unpublished_guides():
+    files = []
     for file in glob.glob(
         f"C:\\Program Files (x86)\\Steam\\userdata\\89457522\\570\\remote\\guides\\*.build"
     ):
+
         with open(file, "r") as f:
             published = False
             for line in f:
@@ -215,8 +235,68 @@ def unpublished_guides():
                         published = True
                         break
             if not published:
-                print(file)
+                update_builds_logger.info(f"unpublished guide: {file}")
+                files.append(file)
+    pass
 
+
+def delete_obsolete_guides():
+    delete_files = []
+
+    with os.scandir(
+        "D:\\projects\\python\\pro-item-builds\\hero_guides\\builds"
+    ) as entries:
+        for file in entries:
+            with open(file, 'r', encoding='utf-8') as f:
+                try:
+                    data = json.load(f)
+                    r = ''.join(
+                        re.findall(
+                            r"\d+",
+                            current_patch['patches'][-1]['patch_number'],
+                        )
+                    )
+                    g = ''.join(
+                        re.findall(r"\d+", data['guidedata']['GameplayVersion'])
+                    )
+                    workshop_id_check = (
+                        data['guidedata']['AssociatedWorkshopItemID']
+                        != "0x0000000000000000"
+                    )
+                    number_patch_equal = r == g
+                    if (
+                        workshop_id_check
+                        or number_patch_equal
+                        or int(data['guidedata']['GuideRevision']) >= 10
+                    ):
+                        continue
+                    update_builds_logger.info(
+                        f"{file.name} workshop id check: {workshop_id_check} patch check: {number_patch_equal} guide revisions: {int(data['guidedata']['GuideRevision']) >= 10}"
+                    )
+                    delete_files.append(file)
+
+                    # "C:\\Program Files (x86)\\Steam\\userdata\\89457522\\570\\remote\\guides\\"
+                except Exception:
+                    update_builds_logger.error(
+                        f"error in file {file.name} {traceback.format_exc()}"
+                    )
+                    # print(file.name, traceback.format_exc())
+                    delete_files.append(file)
+
+            pass
+    # print(delete_files)
+
+    for file in delete_files:
+        with os.scandir(
+            "C:\\Program Files (x86)\\Steam\\userdata\\89457522\\570\\remote\\guides"
+        ) as guide_entries:
+            for f in guide_entries:
+                clean_json_name = file.name.replace('.json', '').lower()
+                if f.name.replace(r"_\d+.build", '').lower() == clean_json_name:
+                    delete_files.append(f)
+                    os.remove(f)
+                    os.remove(file)
+    print(len(delete_files), len(list(entries)))
     pass
 
 
@@ -257,7 +337,7 @@ def get_workshop_ids_of_page(page_num):
         if not _id:
             continue
         padded_hex = pad_hex(int(_id.group()))
-        lst.append({"title": title, "workshop_id": padded_hex})
+        lst.append({"title": title, "workshop_id": padded_hex, "link": link})
     return lst
     # print(titles)
 
@@ -268,35 +348,86 @@ def pad_hex(num=0):
     return padded_hex
 
 
-def add_workhop_id_to_guides(list=[]):
-    for d in list:
+def add_workhop_id_to_guides(guide_list=[]):
+    dic = {}
+    print('dfjk')
+    for steam_guide in guide_list:
         for filename in glob.glob(
             f"D:\\projects\\python\\pro-item-builds\\hero_guides\\builds/*"
         ):
             try:
                 with open(filename, "r") as f:
+                    strt = time.perf_counter()
                     data = json.load(f)
+                    if time.perf_counter() - strt > 1:
+                        print(filename, "time taken: ", time.perf_counter() - strt)
+
                     guide_title = data["guidedata"]["Title"]
-                    curr_workshop_id = data["guidedata"]["AssociatedWorkshopItemID"]
-                    if guide_title not in d["title"]:
+                    roles = [
+                        'Hard Support',
+                        'Support',
+                        'Offlane',
+                        'Safelane',
+                        'Midlane',
+                        'Roaming',
+                    ]
+                    regex = fr"\b{switcher(data['guidedata']['Hero'].lower()).replace('_' , ' ')}\b"
+
+                    if not re.search(
+                        regex,
+                        steam_guide['title'].lower(),
+                    ):
+                        # print('not found', d['title'].lower(), regex)
                         continue
-                if curr_workshop_id == d["workshop_id"]:
+                    # print(d['title'], data['guidedata']['Hero'])
+                    role_replaced = re.sub(r"\(.*\)", '', steam_guide['title'])
+
+                    for role in roles:
+                        found_role = re.search(role, role_replaced, re.IGNORECASE)
+                        if found_role:
+                            found_role = found_role.group()
+
+                            break
+                    if found_role == 'Support' and 'Hard Support' in f.name:
+                        continue
+                    role_file_search = re.search(found_role, f.name, re.IGNORECASE)
+                    if (found_role and not role_file_search) or not found_role:
+                        continue
+                    # print('rr', role_replaced,found_role)
+
+                    curr_workshop_id = data["guidedata"]["AssociatedWorkshopItemID"]
+                match = re.search(r"\\builds[\\/](.+).json$", filename)
+                if match:
+                    guide_name = match.group(1)
+                    build_name = f"C:\\Program Files (x86)\\Steam\\userdata\\89457522\\570\\remote\\guides\\{guide_name}"
+                    build_file_id = get_value_from_build_file(
+                        build_name, 'AssociatedWorkshopItemID'
+                    )
+                if (
+                    curr_workshop_id == steam_guide["workshop_id"]
+                    and build_file_id == steam_guide["workshop_id"]
+                    or not build_file_id
+                ):
                     continue
-                print(
-                    d["title"],
-                    "id in guide file: ",
-                    curr_workshop_id,
-                    "steam ID: ",
-                    d["workshop_id"],
+                update_builds_logger.info(
+                    f"{role_replaced}\n{filename} id in guide file: {curr_workshop_id} steam ID: {steam_guide['workshop_id']} link {steam_guide['link']}"
                 )
                 # print(d['title'])
-                data["guidedata"]["AssociatedWorkshopItemID"] = d["workshop_id"]
+                data["guidedata"]["AssociatedWorkshopItemID"] = steam_guide[
+                    "workshop_id"
+                ]
                 with open(filename, "w", encoding="utf-8") as o:
                     # print(filename)
                     json.dump(data, o, indent=4)
+                add_value_to_build_file(
+                    file_path=build_name,
+                    key="AssociatedWorkshopItemID",
+                    value=steam_guide["workshop_id"],
+                )
             except Exception as e:
                 print(filename, e)
                 pass
+    pprint(dic)
 
 
 def build_stats(page_num):
@@ -306,6 +437,7 @@ def build_stats(page_num):
     soup = BeautifulSoup(req.text, "html.parser")
     els = soup.find_all("a", "workshopItemCollection")
     lst = []
+    print("build_stats", "page_num=", page_num)
     for el in els:
         title = el.find("div", "workshopItemTitle").text.strip()
         link = el.get("href")
@@ -319,11 +451,11 @@ def build_stats(page_num):
                 continue
             cells = stat.find("td")
             if i == 1:
-                d["subscribers"] = float(cells.text)
+                d["subscribers"] = float(cells.text.replace(',', ''))
             if i == 2:
-                d["favs"] = float(cells.text)
+                d["favs"] = float(cells.text.replace(',', ''))
         lst.append(d)
-        time.sleep(1)
+        time.sleep(0.3)
     return lst
 
 
@@ -342,14 +474,14 @@ def get_all_guides_from_steam(build_subs=False):
     pages = {}
     for i in range(1, chunked_guides + 1):
         workshop_ids += get_workshop_ids_of_page(i)
-        pages[i%30] = workshop_ids
+        pages[i % 30] = workshop_ids
         if build_subs:
             dl_stats += build_stats(i)
-    add_workhop_id_to_guides(list=workshop_ids)
+    add_workhop_id_to_guides(guide_list=workshop_ids)
     sorted_data = sorted(dl_stats, key=lambda x: int(x["subscribers"]), reverse=True)
     hero_titles = [re.search(r"\) (.*)", x['title']).group(1) for x in workshop_ids]
     hero_titles.sort()
-    print(sorted_data[0:10])
+    print(sorted_data[0:10], sum([x['subscribers'] for x in sorted_data]))
 
 
 if __name__ == "__main__":
@@ -358,11 +490,12 @@ if __name__ == "__main__":
     # modify_remote()
     # while True:
     #     time.sleep(1)
+    # delete_obsolete_guides()
     # print(pad_hex(2970840466))
-
+    get_all_guides_from_steam()
     # get_all_guides_from_steam()
     # update_from_json()
-    unpublished_guides()
+    # unpublished_guides()
     # modify_remote()
     # print(get_workshop_ids_of_page(1))
 
