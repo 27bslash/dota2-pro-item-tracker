@@ -29,7 +29,7 @@ class ItemParser:
             tier_items = []
             tier_str = f"Tier {i+1}"
             itemGroup = build_data["neutral_items"][k]
-            for item in itemGroup[0:4]:
+            for item in itemGroup['neutral_items'][0:4]:
                 tier_items.append({f"item_{index}": f"item_{item['key']}"})
                 # neutral_items.append({f"item_{index}": f"item_{item[0]}"})
                 neutral_tooltips[f"item_{item['key']}"] = (

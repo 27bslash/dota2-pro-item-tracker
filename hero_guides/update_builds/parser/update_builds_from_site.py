@@ -16,14 +16,7 @@ from helper_funcs.database.collection import hero_list, db
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
-
-logging.basicConfig(
-    filename="D:\\projects\\python\\pro-item-builds\\hero_guides\\update_builds\\logging\\log.log",
-    encoding="utf-8",
-    level=logging.DEBUG,
-    format="%(asctime)s %(levelname)s:%(message)s",
-    filemode="w",
-)
+from logs.log_config import update_builds_logger
 
 
 class Update_builds(ItemParser, AbilityParser, DataFetcher):
@@ -68,22 +61,29 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
         patch = req["patches"][-1]["patch_number"]
 
         for i, hero in enumerate(hero_list):
-            doc_count = db["non-pro"].count_documents({"hero": hero["name"]})
-            print(hero["name"], doc_count)
-            if doc_count < 10:
-                print("not enough data")
-                continue
-            try:
-                all_builds = self.filter_guides_by_role(i, hero)
-                if not all_builds:
-                    continue
-                else:
-                    write_build_to_remote(all_builds, hero["name"], patch, self.debug)
-                pass
-            except Exception as e:
-                logging.warn(f"{hero['name']}, {e}")
+            updated_guide = self.update_hero_guide(i, hero, patch)
+            if not updated_guide:
                 continue
         print("update builds time taken: ", time.perf_counter() - strt)
+
+    def update_hero_guide(self, i: int, hero: dict, patch: str):
+        doc_count = db["heroes"].count_documents({"hero": hero["name"]})
+        print(hero["name"], doc_count)
+        # if hero['name'] != 'kez':
+        #     continue
+        if doc_count < 10:
+            print("not enough data")
+            return False
+        try:
+            all_builds = self.filter_guides_by_role(i, hero)
+            if not all_builds:
+                return False
+            else:
+                write_build_to_remote(all_builds, hero["name"], patch, self.debug)
+                return True
+        except Exception as e:
+            update_builds_logger.warning(f"{hero['name']}, {traceback.format_exc()}")
+            return False
 
     def filter_guides_by_role(self, i, hero):
         ret = {}
@@ -105,6 +105,11 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
             ):
                 continue
             seen_roles.append(role)
+            if role not in build_data:
+                update_builds_logger.warning(
+                    f"no role in buildData {hero['name']}, {role}, skipping"
+                )
+                continue
             ret[role] = self.parse_all(data, build_data, role)
         return ret
 
@@ -113,4 +118,6 @@ class Update_builds(ItemParser, AbilityParser, DataFetcher):
 
 
 if __name__ == "__main__":
-    Update_builds(debug=False).main()
+    Update_builds(debug=False).update_hero_guide(
+        i=0, hero={'name': 'ringmaster'}, patch='7.38c'
+    )
