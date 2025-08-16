@@ -31,7 +31,7 @@ from helper_funcs.net_test import net_test
 from update.update_app import update_app
 import asyncio
 from apis.opendota_api import Api_request
-from logs.logger_config import custom_logger
+from logs.log_config import pro_item_logger
 
 scheduler = BlockingScheduler()
 amount_run = 0
@@ -39,9 +39,13 @@ USE_OPENDOTA = True
 
 
 def bulk_api_request(
-    hero, start_time=time.perf_counter(), minute_limit: int = 60, use_odota=False
+    hero: int,
+    start_time=time.perf_counter(),
+    minute_limit: int = 60,
+    use_odota=False,
+    pro: bool = False,
 ):
-    urls = get_urls(hero)
+    urls = get_urls(hero, pro=pro)
     sleep = len(urls)
     print("urls: ", sleep)
     # tasks = asyncio.async(Api_request().opendota_call(urls[slice(0, 60)], hero))
@@ -58,7 +62,7 @@ def bulk_api_request(
         else:
             asyncio.run(Stratz_api().stratz_call(urls[slice(0, minute_limit)], hero))
     except Exception:
-        logging.error(
+        pro_item_logger.error(
             f"Api Request failed for {hero} {traceback.format_exc()} use_opendota:{USE_OPENDOTA}"
         )
 
@@ -127,18 +131,23 @@ def daily_update(first_run=False):
             print("no hero list")
             return
         for i, hero in enumerate(hero_list):
-            hero = hero["name"]
+            hero_id = hero["id"]
             seen_urls = []
             # urls = get_urls(hero, ret, seen_urls=seen_urls)
             start_time = time.perf_counter()
             # if len(urls) == 0:
             #     print(hero)
             #     continue
-            bulk_api_request(hero, start_time, minute_limit)
-            print(f"heroes remaining: {len(hero_list) -i+1}")
+            bulk_api_request(hero_id, start_time, minute_limit, pro=True)
+            print(f"pro heroes remaining: {len(hero_list) -i+1}")
             # if len(urls) > 0:
             #     break
         # insrt_all(ret)
+        for i, hero in enumerate(hero_list):
+            bulk_api_request(hero['id'], start_time, minute_limit, pro=False)
+            start_time = time.perf_counter()
+            print(f"non pro heroes remaining: {len(hero_list) -i+1}")
+
         delete_old_urls()
         Db_insert(hero_list=hero_list).insert_all()
         if USE_OPENDOTA:
@@ -148,11 +157,11 @@ def daily_update(first_run=False):
         amount_run += 1
         print("end", (time.time() - start) / 60, "minutes")
     except Exception:
-        custom_logger.warn(f'daily update failed: {traceback.format_exc()}')
+        pro_item_logger.warn(f'daily update failed: {traceback.format_exc()}')
 
 
 def get_data_from_db(hero_name, role):
-    data = list(db["non-pro"].find({"hero": hero_name, "role": role}))
+    data = list(db["heroes"].find({"hero": hero_name, "role": role}))
     return data
 
 
@@ -169,7 +178,7 @@ def compute_builds():
 def process_hero(hero):
     roles = ["Hard Support", "Support", "Roaming", "Offlane", "Midlane", "Safelane"]
     d = {"hero": hero["name"]}
-    doc_len = db["non-pro"].count_documents({"hero": hero["name"]})
+    doc_len = db["heroes"].count_documents({"hero": hero["name"]})
     for role in roles:
         data = get_data_from_db(hero["name"], role)
         if not data:
@@ -229,6 +238,7 @@ def back_up():
 
 
 if __name__ == "__main__":
+
     print("starting up...")
     first_run = False
     if datetime.datetime.now().hour < 16:
@@ -254,6 +264,6 @@ if __name__ == "__main__":
         scheduler.start()
         pass
     except Exception:
-        custom_logger.error(
+        pro_item_logger.error(
             f'untracked error in main process:  {traceback.format_exc()}'
         )
