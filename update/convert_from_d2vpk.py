@@ -1,6 +1,7 @@
 import json
 from pprint import pprint
 import re
+import traceback
 
 import requests
 
@@ -277,6 +278,7 @@ def gen_ability_json(content: str):
     for line in lines:
         # line = re.sub(r"\s+(?=\W+)", "", line)
         line = re.sub(r"//.*", "", line)
+        line = re.sub(r":n", "", line)
 
         # if (
         #     "description" not in line.lower()
@@ -325,9 +327,6 @@ def generate_opendota_items():
     # with open("update/test_files/final_items.json", "w") as f:
     #     json.dump(dic, f, indent=4)
     return odota_items, datamined_abilities, facets_json
-    db["all_items"].find_one_and_update(
-        {}, {"$set": {"items": odota_items}}, upsert=True
-    )
 
 
 def fill_out_item_stats(
@@ -377,11 +376,9 @@ def fill_out_item_stats(
         dic["cost"] = int(datamined_key["ItemCost"])
     if "ItemInitialCharges" in datamined_key:
         dic["charges"] = True
-    if (
-        "ItemIsNeutralDrop" in datamined_key
-        and datamined_key["ItemIsNeutralDrop"] == "1"
-    ):
-        dic["tier"] = int(get_neutral_item_tier(key, neutral_items))
+    neutral_tier = get_neutral_item_tier(key, neutral_items)
+    if neutral_tier:
+        dic["tier"] = int(neutral_tier)
     components = get_item_components(key, datamined_items)
     if components:
         dic["components"] = components
@@ -414,13 +411,16 @@ def clean_components_list(comp):
     return seen_items
 
 
-def get_neutral_item_tier(key: str, data) -> str:
-    for tier in data["neutral_items"]:
-        for item in data["neutral_items"][tier]["items"]:
-            if item == key:
-                return tier
-    return "0"
-    pass
+def get_neutral_item_tier(key: str, data) -> str | None:
+    try:
+        for tier in data["neutral_items"]['neutral_tiers']:
+            for item in data["neutral_items"]['neutral_tiers'][tier]["items"]:
+                if item == key:
+                    return tier
+        return None
+    except Exception:
+        print('neutral tier error', key, traceback.format_exc())
+        return None
 
 
 def parse_items(text_file, json_file):
@@ -437,14 +437,14 @@ def fetch_data():
     neutral_tiers = requests.get(
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/neutral_items.txt"
     ).text
-    item_data = requests.get(
-        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.txt"
-    ).text
     all_abilities = requests.get(
         "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/resource/localization/abilities_english.txt"
     ).text
     hero_data_txt = requests.get(
         'https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/npc_heroes.txt'
+    ).text
+    item_data = requests.get(
+        "https://raw.githubusercontent.com/dotabuff/d2vpkr/master/dota/scripts/npc/items.txt"
     ).text
     item_ids_json = parse_text_content(item_ids)
     neutral_tiers_json = parse_text_content(neutral_tiers)
@@ -496,6 +496,6 @@ if __name__ == "__main__":
     # parse_items(text_file, json_file)
     # json_from_test()
 
-    fetch_data()
+    generate_opendota_items()
     # test_line()
     pass
