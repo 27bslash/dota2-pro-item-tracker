@@ -15,7 +15,7 @@ def publish_guides():
     activate_window("Dota 2")
     hc.move((randint(0, 1920), randint(0, 500)), uniform(0.1, 0.4))
     hc.click()
-    time.sleep(uniform(4, 9))
+    time.sleep(uniform(10, 20))
     # open heroes tab on dota 2
     root = tkinter.Tk()
     root.withdraw()
