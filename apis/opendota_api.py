@@ -1,5 +1,4 @@
 import asyncio
-import logging
 import time
 import aiohttp
 import traceback
@@ -9,14 +8,11 @@ from helper_funcs.items import Items
 from helper_funcs.database.db import db
 from helper_funcs.database.collection import current_patch
 import datetime
-
-from logs.logger_config import configure_logging
+from logs.log_config import pro_item_logger
 
 hero_urls = db["urls"]
 hero_output = db["heroes"]
 acc_ids = db["account_ids"]
-
-configure_logging()
 
 
 class Api_request:
@@ -25,7 +21,7 @@ class Api_request:
         self.hero_methods = Hero()
         self.match = None
 
-    async def async_get(self, m_id, hero_name, testing=False):
+    async def async_get(self, m_id, heroid, testing=False):
         if testing:
             global hero_output
             hero_output = db["test_heroes"]
@@ -94,6 +90,10 @@ class Api_request:
                         "duration": resp["duration"],
                         "radiant_draft": rad_draft,
                         "dire_draft": dire_draft,
+                        "radiant_team": (
+                            resp['radiant_team'] if 'radiant_team' in resp else None
+                        ),
+                        "dire_team": resp['dire_team'] if 'dire_team' in resp else None,
                         "bans": hero_bans,
                     }
                     for i in range(10):
@@ -123,11 +123,11 @@ class Api_request:
                                 {"$set": dict},
                                 upsert=True,
                             )
-                        try:
-                            db["non-pro"].insert_many(parsed_replay[1], ordered=False)
-                        except Exception as e:
-                            # Handle duplicate key errors or other write errors
-                            pass
+                        # try:
+                        #     db["non-pro"].insert_many(parsed_replay[1], ordered=False)
+                        # except Exception as e:
+                        #    # Handle duplicate key errors or other write errors
+                        #     pass
                         # db["dead_games"].delete_many({"id": m_id})
                         # print(f"{hero_name} should reach here")
                         # db["heroes"].find_one_and_update(
@@ -137,16 +137,18 @@ class Api_request:
                         # )
                         ret["heroes"] = [unparsed_match_result]
 
-                    db["dead_games"].delete_many({"id": m_id})
                     if parsed_replay[0]:
-                        print(f"{hero_name} should reach here.")
+                        db["dead_games"].delete_many({"id": m_id})
+                        print(
+                            f"{self.hero_methods.hero_name_from_hero_id(heroid)} should reach here."
+                        )
                     if int(response.headers["X-Rate-Limit-Remaining-Day"]) < 900:
                         return "use_strats"
 
         except Exception as e:
             print("Unable to get url: ", m_id, traceback.format_exc())
             # ret['dead_games'] = m_id
-            logging.error(f"Unable to get url: {m_id} {traceback.format_exc()}")
+            pro_item_logger.error(f"Unable to get url: {m_id} {traceback.format_exc()}")
             self.add_to_dead_games(m_id)
 
     def parse_replay(self, unparsed_match_result, resp, testing):
@@ -154,67 +156,72 @@ class Api_request:
         parsed_matches = []
         match_data = None
         m_id = int(resp["match_id"])
-        usu = list(db['urls'].find({"id": resp['match_id']}))
-        hero_ids = [self.hero_methods.get_id(doc['hero']) for doc in usu]
+        matching_match_ids = list(db['urls'].find({"id": resp['match_id']}))
+        try:
+            hero_ids = [doc['hero'] for doc in matching_match_ids]
+        except KeyError:
+            hero_ids = [p['hero_id'] for p in resp['players']]
         added_to_parse = False
+        purchase_log_check = all(
+            ['purchase_log' in player for player in resp['players']]
+        )
+        pro_game = any(
+            [self.get_info_from_url_db(m_id, "pro", hero_id) for hero_id in hero_ids]
+        )
         for i in range(10):
             p = resp["players"][i]
             hero_id = p["hero_id"]
-            purchase_log = p["purchase_log"] if "purchase_log" in p else None
             player_hero = self.hero_methods.hero_name_from_hero_id(hero_id)
 
-            if hero_id in hero_ids:
-                unparsed_match_result = unparsed_match_result | self.unparsed(
-                    p=p,
-                    hero_id=hero_id,
-                    hero_name=player_hero,
-                    match_id=resp["match_id"],
-                    testing=testing,
-                )
-                # ret["parse"] = [{"id": m_id}]
-                # check if one of the players matches search
-                if not purchase_log:
-                    db["heroes"].find_one_and_update(
-                        {
-                            "id": m_id,
-                            "hero": player_hero,
-                        },
-                        {"$set": unparsed_match_result},
-                        upsert=True,
-                    )
-                    if not added_to_parse:
-                        print("add to parse: ", m_id, hero_id)
-                        self.add_to_dead_games(m_id)
-                        db["parse"].find_one_and_update(
-                            {"id": m_id}, {"$set": {"id": m_id}}, upsert=True
-                        )
-                        added_to_parse = True
-                    continue
-      
-            roles_arr = [
-                (
-                    p["lane"],
-                    p["gold_per_min"],
-                    p["lane_efficiency"],
-                    p["sen_placed"],
-                    p["player_slot"],
-                    p["is_roaming"],
-                    p["lh_t"][9],
-                )
-                for p in resp["players"]
-                if "lane_efficiency" in p and "lane" in p
-            ]
-            role = self.roles(roles_arr, p["player_slot"])
-
-            non_pro_games.append(self.insert_non_pro_games(p, hero_id, m_id, role))
-
-            if hero_id not in hero_ids:
-                continue
-            parsed_match_result = self.parsed(
-                p=p, hero_name=player_hero, role=role, resp=resp
+            unparsed_match_result = unparsed_match_result | self.unparsed(
+                p=p,
+                hero_id=hero_id,
+                hero_name=player_hero,
+                match_id=resp["match_id"],
+                testing=testing,
             )
-            match_data = unparsed_match_result | parsed_match_result
-            parsed_matches.append(match_data)
+            # ret["parse"] = [{"id": m_id}]
+            # check if one of the players matches search
+            if not purchase_log_check:
+                db["heroes"].find_one_and_update(
+                    {
+                        "id": m_id,
+                        "hero": player_hero,
+                    },
+                    {"$set": unparsed_match_result},
+                    upsert=True,
+                )
+                if not added_to_parse and not pro_game:
+                    print("add to parse: ", m_id, hero_id)
+                    self.add_to_dead_games(m_id)
+                    db["parse"].find_one_and_update(
+                        {"id": m_id}, {"$set": {"id": m_id}}, upsert=True
+                    )
+                    added_to_parse = True
+                continue
+            if purchase_log_check:
+                roles_arr = [
+                    (
+                        p["lane"],
+                        p["gold_per_min"],
+                        p["lane_efficiency"],
+                        p["sen_placed"],
+                        p["player_slot"],
+                        p["is_roaming"],
+                        p["lh_t"][9],
+                    )
+                    for p in resp["players"]
+                    if "lane_efficiency" in p and "lane" in p
+                ]
+                role = self.roles(roles_arr, p["player_slot"])
+                # non_pro_games.append(self.insert_non_pro_games(p, hero_id, m_id, role))
+                if hero_id not in hero_ids:
+                    continue
+                parsed_match_result = self.parsed(
+                    p=p, hero_name=player_hero, role=role, resp=resp
+                )
+                match_data = unparsed_match_result | parsed_match_result
+                parsed_matches.append(match_data)
         return parsed_matches, non_pro_games
 
     def unparsed(self, **kwargs):
@@ -266,17 +273,30 @@ class Api_request:
                 for k in additional_units[0]
                 if (key := self.item_methods.get_item_name(additional_units[0][k]))
             ]
+        name = self.get_info_from_url_db(
+            kwargs["match_id"], "name", kwargs["hero_id"], kwargs["testing"]
+        )
+        mmr = self.get_info_from_url_db(
+            kwargs["match_id"], "mmr", kwargs["hero_id"], kwargs["testing"]
+        )
+        pro = self.get_info_from_url_db(
+            kwargs["match_id"], "pro", kwargs["hero_id"], kwargs["testing"]
+        )
+        if not mmr:
+            pro_item_logger.error(
+                f"MMR not found for match {kwargs['match_id']} and hero {kwargs['hero_name']}"
+            )
+            raise Exception
         unparsed_match_result = {
             # match information
             "hero": kwargs["hero_name"],
             "parsed": False,
+            "pro": pro,
             # player information
-            "name": self.get_info_from_url_db(
-                kwargs["match_id"], "name", kwargs["hero_name"], kwargs["testing"]
-            ),
             "account_id": p["account_id"] if "account_id" in p else None,
-            "mmr": self.get_info_from_url_db(
-                kwargs["match_id"], "mmr", kwargs["hero_name"], kwargs["testing"]
+            "mmr": mmr,
+            "name": (
+                name if name else p["personaname"] if 'personaname' in p else 'unknown'
             ),
             # game stats
             "lvl": p["level"],
@@ -349,6 +369,7 @@ class Api_request:
             "aghanims_shard": aghanims_shard,
             "parsed": "opendota",
             "items": purchase_log,
+            "neutral_item_history": p['neutral_item_history'],
             # laning stats
             "starting_items": starting_items,
             "kills_ten": kills_ten,
@@ -495,9 +516,10 @@ class Api_request:
             starting_items = self.item_methods.clean_items(
                 starting_items, player_randomed
             )
+            account_name = self.get_info_from_url_db(match_id, "name", hero_name)
             o = {
                 "hero": hero_name,
-                "name": self.get_info_from_url_db(match_id, "name", hero_name),
+                "name": account_name if account_name else p.personaname,
                 "id": match_id,
                 "role": role,
                 "win": p["win"],
@@ -508,6 +530,7 @@ class Api_request:
                 "variant": p['hero_variant'],
                 "abilities": detailed_ability_info(p["ability_upgrades_arr"], hero_id),
                 "item_neutral": self.item_methods.get_item_name(p["item_neutral"]),
+                "neutral_item_history": p['neutral_item_history'],
             }
         else:
             main_items = [
@@ -772,10 +795,10 @@ class Api_request:
                 return "Offlane"
         return "Hard Support"
 
-    async def opendota_call(self, urls, hero_name, testing=False):
-        print(f"{hero_name}: {urls}")
+    async def opendota_call(self, urls, hero_id, testing=False):
+        print(f"{Hero().hero_name_from_hero_id(hero_id)}: {urls}")
         ret = await asyncio.gather(
-            *[self.async_get(url, hero_name, testing) for url in urls]
+            *[self.async_get(url, hero_id, testing) for url in urls]
         )
         return ret
 
@@ -785,9 +808,13 @@ class Api_request:
     def get_info_from_url_db(self, m_id, search, hero, testing=False):
         if testing:
             return 0
-        data = hero_urls.find_one({"id": m_id, "hero": hero})
-        if data:
+        try:
+            data = hero_urls.find_one(
+                {"id": m_id, "$or": [{"hero": hero}, {"heroes": hero}]}
+            )
             return data[search]
+        except Exception:
+            return None
 
     def lone_druid_bear_items(self, purchase_log, final_items):
         return self.item_methods.get_most_recent_items(purchase_log, 6, final_items)

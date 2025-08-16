@@ -1,29 +1,5 @@
-#     unparsed_match_result = {
-#         # match information
-#         'hero': kwargs['hero_name'],
-#         'parsed': False,
-#         # player information
-#         'name': self.get_info_from_url_db(kwargs['match_id'], 'name', kwargs['hero_name'], kwargs['testing']), 'account_id': p['account_id'],
-#         'mmr': self.get_info_from_url_db(kwargs['match_id'], 'mmr', kwargs['hero_name'], kwargs['testing']),
-#         # game stats
-#         'lvl': p['level'],  'hero_damage': p['hero_damage'], 'gold': p['total_gold'],
-#         'tower_damage': p['tower_damage'], 'gpm': p['gold_per_min'], 'xpm': p['xp_per_min'],
-#         'kills': p['kills'], 'deaths': p['deaths'], 'assists': p['assists'], 'last_hits': p['last_hits'],
-#         'win': p['win'], 'id': kwargs['match_id'],
-#         # laning phase stats
-#         'benchmarks': p['benchmarks'],
-#         # final items
-#         'final_items': main_items, 'backpack': bp_items, 'item_neutral': self.item_methods.get_item_name(p['item_neutral']), 'aghanims_shard': aghanims_shard,
-#         'abilities': detailed_ability_info(abilities, kwargs['hero_id'])}
-
-# parsed_match_result = {'gold_adv': resp['radiant_gold_adv'][-1], 'final_items': main_items, 'backpack': bp_items, 'additional_units': additional_units, 'aghanims_shard': aghanims_shard, 'parsed': True, 'items': purchase_log,
-#                            # laning stats
-#                            'starting_items': starting_items, 'kills_ten': kills_ten, 'deaths_ten': deaths_ten, 'lvl_at_ten': lvl_at_ten, 'role': role,
-#                            'last_hits_ten': int(float(p['benchmarks']['lhten']['raw'])), 'gpm_ten': gpm_at_ten,
-#                            'xpm_ten': xpm_at_ten, 'lane_efficiency': round(p['lane_efficiency'] * 100, 2)}
 import asyncio
 import datetime
-import logging
 import os
 import re
 import statistics
@@ -38,175 +14,16 @@ import requests
 from apis.opendota_api import Api_request
 from asyncio_throttle import Throttler
 
-from logs.logger_config import configure_logging
+from logs.log_config import pro_item_logger
 from dotenv import load_dotenv
 
 load_dotenv()
 api_key = os.environ.get("STRATZ_API_KEY")
 throttler = Throttler(rate_limit=15, period=1)
 
-configure_logging()
-
-
-def graphql():
-    headers = {"content-type": "application/json", "Authorization": f"Bearer {api_key}"}
-    id = "test"
-    query = """query ($id: Long!){
-  match(id: $id)
-  {
-    id
-    durationSeconds
-    startDateTime
-    pickBans {
-      isPick
-      heroId
-      isRadiant
-      bannedHeroId
-      wasBannedSuccessfully
-      playerIndex
-    }
-
-    players {
-      isRandom
-      steamAccountId
-      networth
-      heroId
-      isVictory
-      level
-      kills
-      deaths
-      assists
-      numLastHits
-      goldPerMinute
-      playerSlot
-      isRadiant
-      heroId
-      experiencePerMinute
-      goldPerMinute
-      heroDamage
-      role
-      lane
-      towerDamage
-      item0Id
-      item1Id
-      item2Id
-      item3Id
-      item4Id
-      item5Id
-      backpack0Id
-      backpack1Id
-      backpack2Id
-      neutral0Id
-      abilities {
-        abilityId
-      }
-
-      stats {
-        steamAccountId
-        matchPlayerBuffEvent {
-          abilityId
-          itemId
-          stackCount
-        }
-  	    level
-        experiencePerMinute
-        goldPerMinute
-        lastHitsPerMinute
-        killEvents {
-          time
-          target
-        }
-        itemPurchases {
-          time
-          itemId
-        }
-        spiritBearInventoryReport {
-          item0Id
-          item1Id
-          item2Id
-          item3Id
-          item4Id
-          item5Id
-          backPack0Id
-          backPack1Id
-          backPack2Id
-          neutral0Id
-        }
-				level
-        inventoryReport {
-        	item0 {
-        	  charges
-            itemId
-        	  secondaryCharges
-        	}
-          item1 {
-            charges
-            itemId
-            secondaryCharges
-          }
-          item2 {
-            charges
-            itemId
-            secondaryCharges
-          }
-          item3 {
-            charges
-            itemId
-            secondaryCharges
-          }
-          item4 {
-            charges
-            itemId
-            secondaryCharges
-          }
-          item5 {
-            charges
-            itemId
-            secondaryCharges
-          }
-          backPack0 {
-            charges
-            itemId
-            secondaryCharges
-          }
-          backPack1 {
-            charges
-            itemId
-            secondaryCharges
-          }
-          backPack2 {
-            charges
-            itemId
-            secondaryCharges
-          }
-          neutral0 {
-            charges
-            itemId
-            secondaryCharges
-          }
-        }
-      }
-    }
-  }
-}
-"""
-
-    variables = {"id": 7368619088}
-    requst_data = {"query": query, "variables": variables}
-    url = "https://api.stratz.com/graphql"
-    r = requests.post(url, headers=headers, json=requst_data)
-    # print(r.request.body)
-    # print(r.request.headers)
-    if r.status_code == 200:
-        print("nice")
-        with open("stratz_api_req.json", "w") as f:
-            json.dump(obj=r.json()["data"], fp=f, indent=4)
-    else:
-        print(f"query failed {r.status_code} ")
-
 
 class Stratz_api(Api_request):
-    async def stratz_api_request(self, m_id, hero_name, testing=False):
+    async def stratz_api_request(self, m_id, heroid, testing=False):
         query = """query ($id: Long!){
     match(id: $id)
     {
@@ -215,14 +32,23 @@ class Stratz_api(Api_request):
         durationSeconds
         startDateTime
         pickBans {
-        isPick
-        heroId
-        isRadiant
-        bannedHeroId
-        wasBannedSuccessfully
-        playerIndex
+            isPick
+            heroId
+            isRadiant
+            bannedHeroId
+            wasBannedSuccessfully
+            playerIndex
         }
-
+        radiantTeam {
+            name
+            isPro
+            logo
+        }
+        direTeam{
+            name
+            isPro
+            logo
+        }
         players {
         isRandom
         steamAccountId
@@ -361,7 +187,6 @@ class Stratz_api(Api_request):
             'User-Agent': 'STRATZ_API',
         }
         url = "https://api.stratz.com/graphql"
-        # 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiMzIyMzFkMDgtNzk0NS00YzNhLTg5ZGItMzc0NzFiMTg4NGYxIiwiU3RlYW1JZCI6Ijg5NDU3NTIyIiwibmJmIjoxNzAxNjI4NTYwLCJleHAiOjE3MzMxNjQ1NjAsImlhdCI6MTcwMTYyODU2MCwiaXNzIjoiaHR0cHM6Ly9hcGkuc3RyYXR6LmNvbSJ9.s4PxRHlfbBXFYqkPQRHVaSKfgYzXwqL6nc7aJGIArhk'
         try:
             async with aiohttp.ClientSession() as session:
                 async with throttler:
@@ -371,12 +196,15 @@ class Stratz_api(Api_request):
                         try:
                             resp = await response.json()
                         except Exception:
-                            print(m_id, hero_name, traceback.format_exc())
+                            text_body = await response.text()
+                            pro_item_logger.error(
+                                f"Status: {response.status}, m_id: {m_id}, heroid: {heroid}, body: {text_body}, traceback: {traceback.format_exc()}"
+                            )
                         if response.status == 404:
                             # game not over yet
                             pass
                         if response.status == 429:
-                            # rate liimt
+                            # rate limit
                             time.sleep(1)
                         if response.status == 500:
                             # server error
@@ -427,20 +255,27 @@ class Stratz_api(Api_request):
                                     {"$set": dict},
                                     upsert=True,
                                 )
-                            try:
-                                db["non-pro"].insert_many(
-                                    parsed_replay[1], ordered=False
-                                )
-                            except Exception as e:
-                                # Handle duplicate key errors or other write errors
-                                pass
+                            # try:
+                            # db["non-pro"].insert_many(
+                            #     parsed_replay[1], ordered=False
+                            # )
+                            # except Exception as e:
+                            #     # Handle duplicate key errors or other write errors
+                            #     pass
                             db["dead_games"].delete_many({"id": m_id})
                             db["parse"].delete_many({"id": m_id})
-                            print(f"{hero_name} should reach here")
-
+                            print(
+                                f"{self.hero_methods.hero_name_from_hero_id(heroid)} should reach here."
+                            )
         except Exception as e:
-            print(m_id, hero_name, traceback.format_exc())
-            logging.error(f"{m_id}, {hero_name}, {traceback.format_exc()}")
+            print(
+                m_id,
+                self.hero_methods.hero_name_from_hero_id(heroid),
+                traceback.format_exc(),
+            )
+            pro_item_logger.error(
+                f"{m_id}, {self.hero_methods.hero_name_from_hero_id(heroid)}, {traceback.format_exc()}"
+            )
             pass
 
     def parse_replay(self, resp, m_id, testing=False):
@@ -466,13 +301,18 @@ class Stratz_api(Api_request):
             "duration": resp["durationSeconds"],
             "radiant_draft": rad_draft,
             "dire_draft": dire_draft,
+            "radiant_team": resp["radiantTeam"] if resp['radiantTeam'] else None,
+            "dire_team": resp["direTeam"] if resp['direTeam'] else None,
         }
 
         non_pro_games = []
         parsed_matches = []
         match_data = None
-        usu = list(db["urls"].find({"id": resp["id"]}))
-        hero_ids = [self.hero_methods.get_id(doc["hero"]) for doc in usu]
+        matching_match_ids = list(db["urls"].find({"id": resp["id"]}))
+        try:
+            hero_ids = [doc['hero'] for doc in matching_match_ids]
+        except KeyError:
+            hero_ids = [p['heroId'] for p in resp['players']]
         added_to_parse = False
         for i in range(10):
             p = resp["players"][i]
@@ -520,13 +360,12 @@ class Stratz_api(Api_request):
                     position = "Support"
             else:
                 position = "Midlane"
-            non_pro_games.append(
-                self.insert_non_pro_games(
-                    p, hero_id, m_id, position, opendota=False, patch=self.patch
-                )
-            )
-            if hero_id not in hero_ids:
-                continue
+            # non_pro_games.append(
+            #     self.insert_non_pro_games(
+            #         p, hero_id, m_id, position, opendota=False, patch=self.patch
+            #     )
+            # )
+
             parsed_match_result = self.stratz_parsed(
                 p=p, hero_name=player_hero, role=position, resp=resp
             )
@@ -654,18 +493,27 @@ class Stratz_api(Api_request):
         #                     'time': buff['time']}
         #             aghanims_shard = self.item_methods.convert_time([
         #                 temp])
+        name = self.get_info_from_url_db(
+            kwargs["match_id"], "name", kwargs["hero_id"], kwargs["testing"]
+        )
+        mmr = self.get_info_from_url_db(
+            kwargs["match_id"], "mmr", kwargs["hero_id"], kwargs["testing"]
+        )
+        pro = self.get_info_from_url_db(
+            kwargs["match_id"], "pro", kwargs["hero_id"], kwargs["testing"]
+        )
+        if not mmr:
+            pro_item_logger.error(f'{kwargs["match_id"]} no mmr should never see this')
+            raise Exception
         unparsed_match_result = {
             # match information
             "hero": kwargs["hero_name"],
             "parsed": False,
             # player information
-            "name": self.get_info_from_url_db(
-                kwargs["match_id"], "name", kwargs["hero_name"], kwargs["testing"]
-            ),
+            "name": name if name else "unknown",
             "account_id": player["steamAccountId"],
-            "mmr": self.get_info_from_url_db(
-                kwargs["match_id"], "mmr", kwargs["hero_name"], kwargs["testing"]
-            ),
+            "mmr": mmr,
+            "pro": pro,
             # game stats
             "lvl": player["level"],
             "hero_damage": player["heroDamage"],
