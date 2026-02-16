@@ -27,7 +27,7 @@ Data‑driven system that automatically updates Dota 2 Steam guides using high�
   Detects Dota 2 game patches and refreshes datasets to prevent outdated builds.
 
 * **Weekly Steam guide updates**
-  Guides are regenerated once per week using only high‑MMR matches to reduce noise.
+  Guides are regenerated once per week using only high‑MMR matches to maintain accurate builds
 
 * **High‑skill data only**
   Filters matches to focus on competitive‑level decision making.
